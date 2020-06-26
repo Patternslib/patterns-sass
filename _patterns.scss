@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+// Each pattern comes with a mixin. They may also be included seperately 
+// in a project and applied on custom markup.
+
+@import "animations";
+@import "mixins";
+
+// Font
+$body-font-colour: black !default;
+$body-font-family: 'Source Sans Pro', sans-serif !default;
+
+// Grid
+$break-large: 769px !default;
+$break-small: 768px !default;
+
+// Colours
+$colour-accent: #5d91ff !default;
+$colour-alert: red !default;
+$colour-base-light: #efefef !default;
+$colour-base: #efefef !default;
+$colour-dark-blue-l: #cce0f1 !default;
+$colour-dark-blue-xl: #e5f0f9 !default;
+$colour-dark-blue: #01689b !default;
+$colour-error: red !default;
+$colour-header-elements: #666 !default;
+$colour-info: #d9edf7 !default;
+$colour-light-grey: #e8e8e8 !default;
+$colour-link: #5d91ff !default;
+$colour-notice: #fdfdc8 !default;
+$colour-orange: #e17000 !default;
+$colour-post: #e4f2f8 !default;
+$colour-primary: black !default;
+$colour-ruby: red !default;
+$colour-success: #5bb75b !default;
+$colour-warning: #faa732 !default;
+$colour-workspace-default: #869EBF !default;
+
+// Glyphs
+$glyph-checkbox-active: '\e821' !default;
+$glyph-checkbox: '\e822' !default;
+$glyph-close: '\e883' !default;
+$glyph-radio-button-active: '\e848' !default;
+$glyph-radio-button: '\e823' !default;
+$glyph-remove-tag: '\e808' !default;
+$glyph-throbber: '\e800' !default;
+$grid-gutter: '1em' !default;
+$glyph-down-thin: '\e851' !default;
+
+// Individual scss files are imported for each Pattern. These files may
+// also be imported seperately in a project, but always require the Patterns
+// mixins
+
+@import "components/avatar";
+@import "components/auto-scale";
+@import "components/auto-suggest";
+@import "components/button";
+@import "components/button-bar";
+@import "components/breadcrumbs";
+@import "components/checklist";
+@import "components/collapsible";
+@import "components/date-picker";
+@import "components/gallery";
+@import "components/grid";
+@import "components/grid-list";
+@import "components/form";
+@import "components/injection";
+@import "components/message";
+@import "components/modal";
+@import "components/notifications";
+@import "components/bumper";
+@import "components/select";
+@import "components/tooltip";
+@import "components/well";
