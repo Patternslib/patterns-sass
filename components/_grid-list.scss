@@ -1,50 +1,57 @@
-@charset "UTF-8";
-
 .pat-grid-list {
   margin-bottom: 2em;
+  margin-top: 0;
   float: left;
   width: 100%;
   border-bottom: 1px solid $colour-base;
 
-  @include clear;
-
   dt {
-    @include screen-size(medium-large) {
-      width: 40%;
-      float: left;
-      border-top: 1px solid $colour-base;
-      padding-right: 5%;
-      padding-bottom: 0.5em;
-      padding-top: 0.5em;
-    }
-    @include screen-size(small) {
-      margin-top: 0.5em;
-    }
+    float: left;
     font-weight: bold;
     clear: left;
-    color: rgba(0,0,0,0.5);
-    @include box-sizing;
+    border-top: 1px solid $colour-base;
+    padding-top: 0.5em;
+
+    @include screen-size(medium-large) {
+      padding-right: 5%;
+      padding-bottom: 0.5em;
+      color: rgba(0,0,0,0.5);
+      width: 35%;
+    }
+
+    @include screen-size(small) {
+      width: 100%;
+      float: none;
+      display: block;
+      margin: 0;
+      overflow: hidden;
+    }
   }
 
   dd {
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
     @include screen-size(medium-large) {
       width: 60%;
-      margin-right: -100%;
       display: inline-block;
       float: left;
+      margin-right: -100%;
       border-top: 1px solid $colour-base;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      margin-bottom: 0;
     }
-    @include screen-size(small) {
-      margin-bottom: 0.5em;
-    }
-    margin-left: 0;
-    @include box-sizing;
-  }
 
-  & + h2 {
-    clear: both;
+    @include screen-size(small) {
+      width: 100%;
+      float: none;
+      display: block;
+      border: none;
+      overflow: hidden;
+
+      #user-data-view & {
+        padding-left: 30px;
+        box-sizing: border-box;
+      }
+    }
   }
 }

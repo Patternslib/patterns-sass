@@ -2,9 +2,9 @@
 
 .pat-collapsible {
   display: none;
+  animation: fadeIn 1s;
 
-  &.open,
-  &.closed {
+  .patterns-loaded & {
     display: inherit;
   }
 }

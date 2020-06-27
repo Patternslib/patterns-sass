@@ -6,49 +6,37 @@
 @import "animations";
 @import "mixins";
 
-// Typography
-$body-font-colour: black !default;
+// Variable defaults
+
 $body-font-family: 'Source Sans Pro', sans-serif !default;
-$baseline: 26px;
 
-// Grid
-$break-large: 769px !default;
 $break-small: 768px !default;
+$break-large: 1280px !default;
 
-$border-radii: 10px;
+$grid-gutter: '1em' !default;
 
-// Colours
-$colour-accent: #5d91ff !default;
-$colour-alert: red !default;
-$colour-base-light: #efefef !default;
 $colour-base: #efefef !default;
-$colour-dark-blue-l: #cce0f1 !default;
-$colour-dark-blue-xl: #e5f0f9 !default;
-$colour-dark-blue: #01689b !default;
-$colour-error: red !default;
-$colour-header-elements: #666 !default;
-$colour-info: #d9edf7 !default;
-$colour-light-grey: #e8e8e8 !default;
-$colour-link: #5d91ff !default;
-$colour-notice: #fdfdc8 !default;
-$colour-orange: #e17000 !default;
-$colour-post: #e4f2f8 !default;
 $colour-primary: black !default;
-$colour-ruby: red !default;
+$colour-header-elements: #666 !default;
+$colour-post: #e4f2f8 !default;
+$colour-alert: red !default;
+$colour-workspace-default: #869EBF !default;
+$colour-accent: #5d91ff !default;
+
 $colour-success: #5bb75b !default;
 $colour-warning: #faa732 !default;
-$colour-workspace-default: #869EBF !default;
+$colour-notice: #fdfdc8 !default;
+$colour-info: #d9edf7 !default;
+$colour-error: red !default;
 
-// Glyphs
-$glyph-checkbox-active: '\e821' !default;
-$glyph-checkbox: '\e822' !default;
-$glyph-close: '\e883' !default;
-$glyph-radio-button-active: '\e848' !default;
-$glyph-radio-button: '\e823' !default;
-$glyph-remove-tag: '\e808' !default;
-$glyph-throbber: '\e800' !default;
-$grid-gutter: '1em' !default;
-$glyph-down-thin: '\e851' !default;
+$glyph-checkbox: \e808 !default;
+$glyph-checkbox-active: \e809 !default;
+$glyph-radio-button: \e807 !default;
+$glyph-radio-button-active: \e806 !default;
+$glyph-close: '\e813' !default;
+
+// Background symbols
+$arrow-down-dark: "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA4LjQgNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOC40IDc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtvcGFjaXR5OjAuNjt9DQo8L3N0eWxlPg0KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIwLDAgNC4yLDcgOC40LDAgIi8+DQo8L3N2Zz4=" !default;
 
 // Individual scss files are imported for each Pattern. These files may
 // also be imported seperately in a project, but always require the Patterns
@@ -57,8 +45,6 @@ $glyph-down-thin: '\e851' !default;
 @import "components/avatar";
 @import "components/auto-scale";
 @import "components/auto-suggest";
-@import "components/button";
-@import "components/button-bar";
 @import "components/breadcrumbs";
 @import "components/checklist";
 @import "components/collapsible";
@@ -71,6 +57,7 @@ $glyph-down-thin: '\e851' !default;
 @import "components/message";
 @import "components/modal";
 @import "components/notifications";
+// @import "components/pat-raptor";
 @import "components/bumper";
 @import "components/select";
 @import "components/tooltip";

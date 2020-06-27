@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@include injection();
-
 .pat-inject {
     &[action],
     &[formaction],
