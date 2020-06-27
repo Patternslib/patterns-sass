@@ -6,13 +6,16 @@
 @import "animations";
 @import "mixins";
 
-// Font
+// Typography
 $body-font-colour: black !default;
 $body-font-family: 'Source Sans Pro', sans-serif !default;
+$baseline: 26px;
 
 // Grid
 $break-large: 769px !default;
 $break-small: 768px !default;
+
+$border-radii: 10px;
 
 // Colours
 $colour-accent: #5d91ff !default;
