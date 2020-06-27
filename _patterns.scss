@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
-// Each pattern comes with a mixin. They may also be included seperately 
-// in a project and applied on custom markup.
+// Assets
 
-@import "animations";
-@import "mixins";
+@import "assets/animations";
+@import "assets/glyphs";
+@import "assets/colours";
+@import "assets/symbols";
+@import "assets/mixins";
 
-// Variable defaults
+// Parameters
 
 $body-font-family: 'Source Sans Pro', sans-serif !default;
 
@@ -15,32 +17,12 @@ $break-large: 1280px !default;
 
 $grid-gutter: '1em' !default;
 
-$colour-base: #efefef !default;
-$colour-primary: black !default;
-$colour-header-elements: #666 !default;
-$colour-post: #e4f2f8 !default;
-$colour-alert: red !default;
-$colour-workspace-default: #869EBF !default;
-$colour-accent: #5d91ff !default;
+$default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) !default;
+$default-box-shadow-hover: 0 0 15px rgba(0,0,0,0.2) !default;
+$default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4) !default;
+$default-focus-marking: 0 0 2px rgba(0,0,0,0.5) !default;
 
-$colour-success: #5bb75b !default;
-$colour-warning: #faa732 !default;
-$colour-notice: #fdfdc8 !default;
-$colour-info: #d9edf7 !default;
-$colour-error: red !default;
-
-$glyph-checkbox: \e808 !default;
-$glyph-checkbox-active: \e809 !default;
-$glyph-radio-button: \e807 !default;
-$glyph-radio-button-active: \e806 !default;
-$glyph-close: '\e813' !default;
-
-// Background symbols
-$arrow-down-dark: "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA4LjQgNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOC40IDc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtvcGFjaXR5OjAuNjt9DQo8L3N0eWxlPg0KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIwLDAgNC4yLDcgOC40LDAgIi8+DQo8L3N2Zz4=" !default;
-
-// Individual scss files are imported for each Pattern. These files may
-// also be imported seperately in a project, but always require the Patterns
-// mixins
+// Mixins
 
 @import "components/avatar";
 @import "components/auto-scale";
