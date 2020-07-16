@@ -217,7 +217,7 @@ $bullet-space: 22px !default;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     // font-size: 0.8em;
     line-height: 1.5em;
-    border-radius: 4px;
+    border-radius: $border-radii;
     width: 300px;
   }
 
@@ -235,7 +235,7 @@ $bullet-space: 22px !default;
     overflow: auto;
     overflow-x: hidden;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: $border-radii;
 
     &:after {
       content: "";
