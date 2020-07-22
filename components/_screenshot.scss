@@ -7,13 +7,13 @@ $browser-window-border-radii: 8px !default;
 
   object {
   	background-color: $colour-base;
-	width: 1280px;
-	height: 800px;
-	-webkit-user-select: none;
-	user-select: none;
-	pointer-events: none;
-	box-shadow: $default-box-shadow;
-	margin: 0;
+  	width: 1280px;
+  	height: 800px;
+  	-webkit-user-select: none;
+  	user-select: none;
+  	pointer-events: none;
+  	box-shadow: $default-box-shadow;
+  	margin: 0;
   }
 
   &.browser-window {
