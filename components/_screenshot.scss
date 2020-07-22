@@ -66,8 +66,10 @@ $browser-window-border-radii: 8px !default;
   		background-color: white;
   		left: 120px;
   		right: 120px;
-  		font-size: 13px;
+  		font-size: 15px;
   		padding: 0 25px;
+  		overflow: hidden;
+  		white-space: nowrap;
   	}
   }
 }
