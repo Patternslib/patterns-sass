@@ -19,7 +19,7 @@ $browser-window-border-radii: 8px !default;
   &.browser-window {
   	background-color: white;
   	border-radius: $browser-window-border-radii;
-  	box-shadow: $default-box-shadow;
+  	box-shadow: 0 3px 16px rgba(0, 0, 0, 0.20);
   	position: relative;
   	overflow: hidden;
 
