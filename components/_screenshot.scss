@@ -22,8 +22,10 @@ $browser-window-border-radii: 8px !default;
   	box-shadow: 0 3px 16px rgba(0, 0, 0, 0.20);
   	position: relative;
   	overflow: hidden;
+    border: 1px solid silver;
 
-  	.auto-scale-wrapper {
+  	.auto-scale-wrapper,
+    img {
   		border-bottom-left-radius: $browser-window-border-radii;
   		border-bottom-right-radius: $browser-window-border-radii;
   		overflow: hidden;
