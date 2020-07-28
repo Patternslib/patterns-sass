@@ -73,6 +73,12 @@ div.pat-modal {
       backdrop-filter: blur(100px);
     }
 
+    &#document-content {
+      body > & {
+        background: transparent;
+      }
+    }
+
     @include box-sizing();
     position: absolute;
     z-index: 9998;
