@@ -94,6 +94,12 @@ form {
     }
   }
 
+  .select2-container .select2-choices, 
+  .select2-container .select2-choice {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+  }
+
   textarea {
     @media print {
       display: block;
@@ -445,6 +451,10 @@ form {
               margin-left: 0;
               float: left;
               line-height: 1.4;
+            }
+
+            .select2-container {
+              width: 170%;
             }
 
             .colour-chooser-launcher {
