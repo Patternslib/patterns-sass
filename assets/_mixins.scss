@@ -367,6 +367,10 @@
         background-color: $colour-notice;
     }
 
+    &.info {
+        background-color: $colour-info;
+    }
+
     &.warning {
         background-color: $colour-warning;
         color: darken($colour-warning, 30%);
