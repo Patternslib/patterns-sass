@@ -38,6 +38,7 @@ label.pat-checklist {
 }
 
 .pat-checklist:not(.free-form) {
+	line-height: 1.3;
 
 	> br {
 		display: none;
@@ -50,6 +51,8 @@ label.pat-checklist {
 			position: relative;
 			@include checkbox();
 			@include clear-fix();
+			margin-top: 0.2em;
+			margin-bottom: 0.2em;
 		}
 	}
 
