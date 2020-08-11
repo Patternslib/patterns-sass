@@ -61,7 +61,7 @@
       display: inline-block;
       content: attr(data-option);
       float: left; // Needed for IE
-      max-height: 1.5em;
+      max-height: 100%;
 
       // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       //   margin-right: 2.6em;
