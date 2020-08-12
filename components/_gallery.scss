@@ -12,7 +12,7 @@ $pswp__assets-path: '/assets/quaive/style/photoswipe/';
 .pswp__bg {
 	.backdropfilter & {
 		background: none;
-		-webkit-backdrop-filter: blur(100px);
-		backdrop-filter: blur(100px);
+		-webkit-backdrop-filter: blur(100px) saturate(2);
+		backdrop-filter: blur(100px) saturate(2);
 	}
 }
