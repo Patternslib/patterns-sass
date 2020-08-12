@@ -39,7 +39,7 @@ $bullet-space: 22px !default;
         color: #666;
         line-height: 1.5em;
         cursor: default;
-        padding: 0.2em 0 0.1em $bullet-space;
+        padding: 0.1em 0 0.1em $bullet-space;
 
         &:hover {
           text-decoration: none;
@@ -65,17 +65,27 @@ $bullet-space: 22px !default;
       button:before {
         margin-left: -1 * $bullet-space;
         float: left;
+        margin-top: 0.1em;
         line-height: 1.5em;
       }
 
-      &.current a {
-        &:before {
-          content: "✓";
-          float: left;
-          margin-left: -1.5em;
-          font: 1em fontello;
+      &.current {
+        // &:before {
+        //   content: "✓";
+        //   float: left;
+        //   margin-left: -1.5em;
+        //   font: 1em fontello;
+        // }
+
+        color: white;
+        background-color: $colour-accent;
+        margin: 0 -10px;
+        padding: 0 10px;
+        border-radius: $border-radii;
+
+        a {
+          color: white;
         }
-        color: black;
       }
 
       &:hover {
