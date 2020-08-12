@@ -33,6 +33,10 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
     @include screen-size(medium-large) {
       width: 60%;
       display: inline-block;
