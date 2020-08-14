@@ -6,8 +6,8 @@ $backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
 $arrow-size: 15px;
 $bullet-space: 22px !default;
 
-@import "../tippyjs/index";
-@import "../tippyjs/themes/patterns-tooltip";
+@import "../libraries/tippyjs/index";
+@import "../libraries/tippyjs/themes/patterns-tooltip";
 
 .tippy-tooltip {
   overflow: visible;

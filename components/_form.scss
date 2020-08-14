@@ -348,6 +348,7 @@ form {
   }
 
   .currency-field {
+    display: inline-block;
     position: relative;
     &:after {
       content: " ";
