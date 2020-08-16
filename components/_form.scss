@@ -43,8 +43,8 @@ form {
     font-family: $body-font-family;
     display: inline-block;
     @include box-sizing();
-    padding: 0.2em 0.5em;
-    margin: -0.2em 0;
+    padding: 3px 0.5em;
+    margin: -3px 0;
     border: none;
     color: inherit;
     font-size: 100%;
@@ -140,7 +140,7 @@ form {
   input[type=range] {
       /*removes default webkit styles*/
       -webkit-appearance: none;
-      padding: 0.2em 0;
+      padding: 3px 0;
 
       background: transparent;
       
@@ -573,7 +573,7 @@ form {
     .group.md-editor,
     .colour-chooser-launcher {
       display: block;
-      margin-top: 0.2em;
+      margin-top: 3px;
       width: 100%;
       font-weight: normal;
     }
@@ -598,7 +598,7 @@ form {
     .currency-field {
       display: block;
 
-      abbr {font-weight: normal; top: 0.2em}
+      abbr {font-weight: normal; top: 3px}
     }
   }
 
