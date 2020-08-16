@@ -38,7 +38,7 @@
 
     &:after {
       content: ' ';
-      padding-right: 1em;
+      padding-right: 1.5em;
       box-shadow: none !important;
 
       position: absolute; // Added to avoid dropdowns to push open display table elements such as the contextual button bar of item selector/sidebar.
@@ -52,7 +52,7 @@
       text-overflow: ellipsis;
 
       background-repeat: no-repeat;
-      background-position: right 0 center;
+      background-position: calc(100% - 10px) center;
       background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
       background-size: auto 10px;
     }

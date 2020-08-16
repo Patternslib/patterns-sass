@@ -373,11 +373,11 @@ form {
     text-indent: 0.01px;
     text-overflow: '';
     
-    border-right: 0.35em solid rgba(0, 0, 0, 0);
-    padding-right: 1em;
+    // border-right: 0.35em solid rgba(0, 0, 0, 0);
+    padding-right: 1.5em;
 
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: calc(100% - 10px) center;
     background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
     background-size: auto 10px;
 
