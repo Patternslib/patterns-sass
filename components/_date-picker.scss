@@ -10,6 +10,7 @@
     color: gray;
     background: #fff;
     border: 1px solid silver;
+    border-radius: $border-radii;
 
     &.is-hidden {
         display: none;
