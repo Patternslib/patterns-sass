@@ -73,8 +73,8 @@ div.pat-modal {
 
     .backdropfilter & {
       background-color: rgba(255,255,255,0.15);
-      -webkit-backdrop-filter: blur(100px) saturate(4) brightness(2);
-      backdrop-filter: blur(100px) saturate(4) brightness(2);
+      -webkit-backdrop-filter: blur(100px) saturate(4) brightness(1.2);
+      backdrop-filter: blur(100px) saturate(4) brightness(1.2);
     }
 
     @include box-sizing();
