@@ -11,8 +11,8 @@ div.pat-modal {
     top: 50% !important;
     left: 50% !important;  
     transform: translate(-50%, -50%);
-    background: white;
     animation: bounceInCentred 0.5s;
+    background-color: transparent;
 
     > .header {
       position: absolute;
@@ -36,10 +36,16 @@ div.pat-modal {
     }
 
     .panel-content {
+      background: white;
       box-shadow: 0 2px 20px rgba(0,0,0,0.15);
       border: 1px solid rgba(0,0,0,0.15);
       padding-top: 60px;
       border-radius: $border-radii;
+
+      .button-bar {
+        margin: 0;
+        padding-bottom: 5px;
+      }
     }
 
     &:after {
