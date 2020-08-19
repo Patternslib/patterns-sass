@@ -4,6 +4,7 @@ $form-proportion-ceiling: 170% !default;
 $form-proportion-name: 30% !default;
 $form-proportion-value: 100% !default;
 $form-proportion-gutter: 15px !default;
+$form-input-field-padding-top-bottom: 0.2em !default;
 
 form {
   section.help .panel-content {  
@@ -48,7 +49,7 @@ form {
     font-family: $body-font-family;
     display: inline-block;
     @include box-sizing();
-    padding: 0.2em 0.5em;
+    padding: $form-input-field-padding-top-bottom 0.5em;
     margin: -0.2em 0;
     border: none;
     color: inherit;
