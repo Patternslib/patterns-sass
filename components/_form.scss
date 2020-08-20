@@ -366,6 +366,8 @@ form {
     abbr {
       position: absolute;
       left: 0.5em;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     input,
@@ -572,26 +574,34 @@ form {
       position: relative;
       display: block;
 
+      &.columns,
+      &.column {
+        display: inline-block;
+      }
+
       img {
         max-width: 100%;
       }
     }
 
-    input,
-    textarea,
-    select,
-    .sortable-items-list,
-    .select2-container,
-    .button-field,
-    .group.textarea,
-    .field-value,
-    .group.md-editor,
-    .colour-chooser-launcher {
-      display: block;
-      margin-top: 0.2em;
-      width: 100%;
-      font-weight: normal;
-    }
+    > label {
+      input,
+      textarea,
+      select,
+      .sortable-items-list,
+      .select2-container,
+      .button-field,
+      .group.textarea,
+      .field-value,
+      .group.md-editor,
+      .colour-chooser-launcher {
+        display: block;
+        margin-top: 0.2em;
+        width: 100%;
+        font-weight: normal;
+      }
+        
+      }
 
     textarea.pat-content-mirror,
     .group.md-editor .md-render {
@@ -610,11 +620,11 @@ form {
       margin-bottom: 0em;
     }
 
-    .currency-field {
-      display: block;
+    // .currency-field {
+    //   display: block;
 
-      abbr {font-weight: normal; top: 0.2em}
-    }
+    //   abbr {font-weight: normal; top: 0.2em}
+    // }
   }
 
 
