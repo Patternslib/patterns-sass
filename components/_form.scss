@@ -584,8 +584,8 @@ form {
       }
     }
 
-    label,
-    .group {
+    label >,
+    .group > {
       input,
       textarea,
       select,
