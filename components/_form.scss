@@ -100,6 +100,22 @@ form {
     }
   }
 
+  .group {
+    &.layout-date {
+      label {
+        display: inline-block;
+
+        &.day {
+          width: 80px;
+        }
+
+        &.year {
+          width: 83px;
+        }
+      }
+    }
+  }
+
   .select2-container .select2-choices, 
   .select2-container .select2-choice {
     padding-top: 1px;
