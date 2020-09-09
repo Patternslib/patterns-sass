@@ -3,28 +3,26 @@
 
 @mixin hidden-transform($placement) {
   @if ($placement == 'top') {
-    transform: translateY(1.25rem);
+    transform: translateY(20px);
   } @else if ($placement == 'bottom') {
-    transform: translateY(-1.25rem);
+    transform: translateY(-20px);
   } @else if ($placement == 'left') {
-    transform: translateX(1.25rem);
+    transform: translateX(20px);
   } @else if ($placement == 'right') {
-    transform: translateX(-1.25rem);
+    transform: translateX(-20px);
   }
 }
 
-.#{$namespace-prefix}-tooltip {
+.#{$namespace-prefix}-box {
   &[data-animation='shift-away-extreme'] {
-    @each $placement in $placements {
-      &[data-placement^='#{$placement}'] {
-        &[data-state='hidden'] {
+    &[data-state='hidden'] {
+      opacity: 0;
+
+      @each $placement in $placements {
+        &[data-placement^='#{$placement}'] {
           @include hidden-transform($placement);
         }
       }
-    }
-
-    &[data-state='hidden'] {
-      opacity: 0;
     }
   }
 }
