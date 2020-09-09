@@ -1,17 +1,26 @@
 @import '../_mixins.scss';
-@import '../_vars.scss';
-
+// @import '../_vars.scss';
+$namespace-prefix: '__NAMESPACE_PREFIX__' !default;
+$placements: 'top', 'bottom', 'left', 'right' !default;
+$origins: bottom, top, right, left !default;
+$backdrop-origins: 0% 25%, 0% -50%, 50% 0%, -50% 0% !default;
+$backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0 !default;
 $color: white;
 $transparent-light: rgba(0, 8, 16, 0.08);
 $transparent-dark: rgba(0, 8, 16, 0.15);
 $transparent-darker: rgba(0, 8, 16, 0.2);
 
+$arrow-size: 16px;
+
 .#{$namespace-prefix}-box {
   background-color: $color;
   background-clip: padding-box;
   border: 1px solid $transparent-dark;
-  color: #333;
+  color: black;
   box-shadow: 0 4px 14px -2px $transparent-light;
+  color: $body-font-color;
+  font-size: $base-font-size;
+  border-radius: $border-radii;
 
   > .#{$namespace-prefix}-backdrop {
     background-color: $color;
@@ -24,6 +33,12 @@ $transparent-darker: rgba(0, 8, 16, 0.2);
       position: absolute;
       z-index: -1;
     }
+  }
+
+  .tippy-content {
+    padding: 18px;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
   }
 
   > .#{$namespace-prefix}-arrow::after {
