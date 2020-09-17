@@ -10,7 +10,9 @@ $transparent-light: rgba(0, 8, 16, 0.08);
 $transparent-dark: rgba(0, 8, 16, 0.15);
 $transparent-darker: rgba(0, 8, 16, 0.2);
 
-$arrow-size: 16px;
+$arrow-size: 8px;
+$arrow-box-size: 22px;
+$arrow-distance: 3px;
 
 .#{$namespace-prefix}-box {
   background-color: $color;
@@ -47,6 +49,11 @@ $arrow-size: 16px;
     overflow: auto;
   }
 
+  .tippy-arrow {
+    width: $arrow-box-size;
+    height: $arrow-box-size;
+  }
+
   > .#{$namespace-prefix}-arrow::after {
     border-color: transparent;
     border-style: solid;
@@ -60,7 +67,7 @@ $arrow-size: 16px;
 
       &::after {
         border-top-color: $transparent-darker;
-        border-width: 7px 7px 0;
+        border-width: $arrow-size $arrow-size 0;
         top: $arrow-size + 1;
         left: 1px;
       }
@@ -81,24 +88,26 @@ $arrow-size: 16px;
     > .#{$namespace-prefix}-arrow {
       &::before {
         border-bottom-color: $color;
-        bottom: $arrow-size;
+        bottom: $arrow-box-size;
+        left: $arrow-distance;
+        border-width: 0 $arrow-size $arrow-size;
       }
 
       &::after {
         border-bottom-color: $transparent-darker;
-        border-width: 0 7px 7px;
-        bottom: $arrow-size + 1;
-        left: 1px;
+        border-width: 0 $arrow-size $arrow-size;
+        bottom: $arrow-box-size + 1;
+        left: $arrow-distance;
       }
     }
 
     > .#{$namespace-prefix}-svg-arrow {
       > svg {
-        bottom: $arrow-size;
+        bottom: $arrow-box-size;
       }
 
       &::after {
-        bottom: $arrow-size + 1;
+        bottom: $arrow-box-size + 1;
       }
     }
   }
@@ -111,7 +120,7 @@ $arrow-size: 16px;
 
       &::after {
         border-left-color: $transparent-darker;
-        border-width: 7px 0 7px 7px;
+        border-width: $arrow-size 0 $arrow-size $arrow-size;
         left: $arrow-size + 1;
         top: 1px;
       }
@@ -132,13 +141,14 @@ $arrow-size: 16px;
     > .#{$namespace-prefix}-arrow {
       &::before {
         border-right-color: $color;
-        right: $arrow-size;
+        right: $arrow-box-size;
+        top: $arrow-distance;
       }
 
       &::after {
-        border-width: 7px 7px 7px 0;
-        right: $arrow-size + 1;
-        top: 1px;
+        border-width: $arrow-size $arrow-size $arrow-size 0;
+        right: $arrow-box-size + 1;
+        top: $arrow-distance;
         border-right-color: $transparent-darker;
       }
     }
