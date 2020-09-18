@@ -14,9 +14,10 @@
 
     a {
       color: black;
+      font-weight: normal;
 
       &[href] {
-        color: $colour-accent;
+        color: $colour-link;
 
         &:after {
           content: ' > ';
@@ -68,10 +69,12 @@
         height: 2em;
         display: inline-block;
         color: gray;
+        font-weight: normal;
       }
 
       &.shift-left:before {
         content: "\e4a2";
+        font-weight: normal;
       }
 
       &.shift-right,
@@ -97,13 +100,15 @@
         content: '#{$glyph-angle-right}';
         padding: 0 0.5em;
         font-family: fontello;
+        font-weight: normal;
       }
 
       color: black;
       text-decoration: none;
 
       &[href] {
-        color: $colour-accent;
+        color: $colour-link;
+        font-weight: normal;
 
         &:hover {
           text-align: underline;
