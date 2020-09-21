@@ -15,6 +15,15 @@ $body-font-family: 'Source Sans Pro', sans-serif !default;
 $break-small: 768px !default;
 $break-large: 1280px !default;
 
+// Buttons
+
+$button-border: none !default;
+$button-border-radius: $border-radii !default;
+$button-height: 35px !default;
+$button-small-height: inherit;
+$button-background-image: none !default;
+$button-font-weight: bold !default;
+
 $grid-gutter: '1em' !default;
 
 $default-screen-padding: 40px !default;

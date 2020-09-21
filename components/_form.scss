@@ -58,6 +58,7 @@ form {
     max-width: 100%;
     background-color: $colour-form-fields-background;
     border-radius: $form-fields-border-radius;
+    line-height: inherit;
     
     &:focus {
       outline: none;
