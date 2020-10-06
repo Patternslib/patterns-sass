@@ -68,8 +68,8 @@ $bullet-space: 22px !default;
       button:before {
         margin-left: -1 * $bullet-space;
         float: left;
-        margin-top: 0.1em;
-        line-height: 1.5em;
+        // margin-top: 0.1em;
+        // line-height: 1.5em;
       }
 
       &.current {
