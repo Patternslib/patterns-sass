@@ -451,8 +451,8 @@
   white-space: nowrap;
 
   &.small {
-    font-size: 1em;
-    padding: $form-input-field-padding-top-bottom 0.5em;
+    font-size: $button-small-font-size;
+    padding: $button-small-paddings;
     line-height: $button-small-height;
     vertical-align: baseline;
   }
