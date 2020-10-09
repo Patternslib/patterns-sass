@@ -40,9 +40,9 @@ $bullet-space: 22px !default;
         background: none;
         display: block;
         color: #666;
-        line-height: 1.5em;
+        // line-height: 1.5em;
         cursor: default;
-        padding: 0.1em 0 0.1em $bullet-space;
+        // padding: 0.1em 0 0.1em $bullet-space;
 
         &:hover {
           text-decoration: none;
