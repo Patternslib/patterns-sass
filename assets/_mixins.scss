@@ -377,6 +377,11 @@
         background-color: $colour-info;
     }
 
+    &.error {
+      background-color: $colour-error-background;
+      color: $colour-error;
+    }
+
     &.warning {
         background-color: $colour-warning;
         color: darken($colour-warning, 30%);
