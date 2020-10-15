@@ -4,6 +4,7 @@ $origins: bottom, top, right, left;
 $backdrop-origins: 0% 25%, 0% -50%, 50% 0%, -50% 0%;
 $backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
 $bullet-space: 22px !default;
+$tooltip-border-radii: $border-radii !default;
 
 @import "../libraries/tippyjs/index";
 @import "../libraries/tippyjs/themes/patterns-tooltip";
@@ -20,7 +21,7 @@ $bullet-space: 22px !default;
 
   .tippy-content {
     min-width: 250px;
-    border-radius: $border-radii;
+    border-radius: $tooltip-border-radii;
 
     > *:last-child {
       margin-bottom: 0;
@@ -84,7 +85,7 @@ $bullet-space: 22px !default;
         background-color: $colour-accent;
         margin: 0 -10px;
         padding: 0 10px;
-        border-radius: $border-radii;
+        border-radius: $tooltip-border-radii;
 
         a {
           color: white;

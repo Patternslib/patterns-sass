@@ -14,6 +14,8 @@ $arrow-size: 8px;
 $arrow-box-size: 22px;
 $arrow-distance: 3px;
 
+$tooltip-border-radii: $border-radii !default;
+
 .#{$namespace-prefix}-box {
   background-color: $color;
   background-clip: padding-box;
@@ -22,7 +24,7 @@ $arrow-distance: 3px;
   box-shadow: 0 4px 14px -2px $transparent-light;
   color: $body-font-color;
   font-size: $base-font-size;
-  border-radius: $border-radii;
+  border-radius: $tooltip-border-radii;
 
   > .#{$namespace-prefix}-backdrop {
     background-color: $color;
