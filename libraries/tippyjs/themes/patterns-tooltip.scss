@@ -47,7 +47,7 @@ $tooltip-border-radii: $border-radii !default;
 
   .tippy-content {
     padding: 18px;
-    max-height: calc(100vh - 100px);
+    max-height: calc(50vh - 100px);
     overflow: auto;
   }
 
@@ -70,8 +70,8 @@ $tooltip-border-radii: $border-radii !default;
       &::after {
         border-top-color: $transparent-darker;
         border-width: $arrow-size $arrow-size 0;
-        top: $arrow-size + 1;
-        left: 1px;
+        top: 22px;
+        left: 0;
       }
     }
 

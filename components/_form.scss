@@ -438,7 +438,7 @@ form {
         .legend {
           width: $form-proportion-name;
           margin: 0;
-          padding: 0;
+          padding: 0 0 1em 0;
           font-weight: bold;
           letter-spacing: 0;
           text-transform: none;
@@ -534,7 +534,7 @@ form {
           width: 100% - $form-proportion-name;
           clear: left;
           border-style: none;
-          margin: 0 0 1em 0;
+          margin: 0 0 0.5em 0;
           padding-left: #{$form-proportion-name};
           position: relative;
           padding-bottom: 0;
@@ -552,7 +552,8 @@ form {
             width: $form-proportion-name * 100% / (100% - $form-proportion-name);
             display: inline;
             text-align: left;
-            padding: 0;
+            padding: 0 1em 0 0;
+            box-sizing: border-box;
             position: relative;
             display: block;
             font-weight: normal;

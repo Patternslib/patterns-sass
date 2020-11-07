@@ -40,8 +40,8 @@ $transparent-darker: rgba(0, 8, 16, 0.2);
       &::after {
         border-top-color: $transparent-darker;
         border-width: 7px 7px 0;
-        top: $arrow-size + 1;
-        left: 1px;
+        top: -1 * $arrow-size + 1;
+        left: 0;
       }
     }
 
