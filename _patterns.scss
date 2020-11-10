@@ -50,6 +50,11 @@ $default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4) !default;
 $default-focus-marking: 0 0 2px rgba(0,0,0,0.5) !default;
 $form-fields-border-radius: $border-radii !default;
 
+// Libraries
+
+@import "libraries/reset";
+@import "libraries/animate";
+
 // Mixins
 
 @import "components/avatar";
