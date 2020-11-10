@@ -3,6 +3,14 @@
 .pat-notification-panel {
   width: 380px;
 
+  button {
+    @include pat-button;
+    font-size: $button-small-font-size;
+    padding: $button-small-paddings;
+    line-height: $button-small-height;
+    vertical-align: baseline;
+  }
+
   @include screen-size(small) {
     width: 100%;
     @include box-sizing;
