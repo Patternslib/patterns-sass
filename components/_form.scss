@@ -102,7 +102,6 @@ form {
     }
   }
 
-
   .file-upload-button,
   fieldset.horizontal fieldset.group .file-upload-button{
     margin: -1 * $form-input-field-padding-top-bottom 0 0;
@@ -124,10 +123,14 @@ form {
     }
   }
 
-  .select2-container .select2-choices, 
   .select2-container .select2-choice {
     padding-top: $form-input-field-padding-top-bottom;
     padding-bottom: $form-input-field-padding-top-bottom;
+  }
+
+  .select2-container .select2-choices {
+    padding-top: 1px;
+    padding-bottom: 1px;
   }
 
   textarea {
