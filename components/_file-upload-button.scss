@@ -4,6 +4,13 @@
   @include pat-button;
   position: relative;
   overflow: hidden;
+  width: auto;
+  display: inline-block;
+
+  form fieldset.vertical .group & {
+    width: auto;
+    display: inline-block;
+  }
 
   input {
     position: absolute;
