@@ -262,9 +262,9 @@ $colour-auto-suggest-pills: $colour-accent !default;
 }
 
 .select2-dropdown-open {
-  .select2-choice {
+  .select2-choice,
+  .select2-choices {
     border-bottom-color: transparent;
-    -webkit-box-shadow: 0 1px 0 #fff inset;
     box-shadow: 0 1px 0 #fff inset;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
@@ -272,7 +272,8 @@ $colour-auto-suggest-pills: $colour-accent !default;
   }
 
   &.select2-drop-above {
-    .select2-choice, .select2-choices {
+    .select2-choice, 
+    .select2-choices {
       border-top-color: transparent;
       @include box-sizing();
       border-bottom-left-radius: $form-fields-border-radius !important;
