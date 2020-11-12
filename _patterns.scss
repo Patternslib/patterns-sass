@@ -25,9 +25,12 @@ $button-border: none !default;
 $button-border-radius: $border-radii !default;
 $button-background-image: none !default;
 $button-font-weight: bold !default;
-$button-text-colour: rgba(0,0,0,0.6) !default;
-$button-text-colour-hover: rgba(0,0,0,1) !default;
-$button-background-colour: rgba(0, 0, 0, 0.15) !default;
+$button-text-colour: white !default;
+$button-text-colour-hover: white !default;
+$button-text-colour-subdued: rgba(0,0,0,0.6) !default;
+$button-text-colour-subdued-hover: rgba(0,0,0,1) !default;
+$button-background-colour-subdued: rgba(0, 0, 0, 0.15) !default;
+$button-background-colour: $colour-accent;
 
 $button-height: 35px !default;
 $button-font-size: 1em !default;
