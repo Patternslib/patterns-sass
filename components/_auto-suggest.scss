@@ -266,35 +266,21 @@ $colour-auto-suggest-pills: $colour-accent !default;
     border-bottom-color: transparent;
     -webkit-box-shadow: 0 1px 0 #fff inset;
     box-shadow: 0 1px 0 #fff inset;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
     background-color: #eee;
-    // background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
-    // background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
-    // background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
-    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
-    // background-image: linear-gradient(top, white 0%, #eeeeee 50%);
   }
+
   &.select2-drop-above {
     .select2-choice, .select2-choices {
-      // border: 1px solid #5897fb;
       border-top-color: transparent;
       @include box-sizing();
-      // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(0.5, #eeeeee));
-      // background-image: -webkit-linear-gradient(center top, white 0%, #eeeeee 50%);
-      // background-image: -moz-linear-gradient(center top, white 0%, #eeeeee 50%);
-      // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
-      // background-image: linear-gradient(bottom, white 0%, #eeeeee 50%);
+      border-bottom-left-radius: $form-fields-border-radius !important;
+      border-bottom-right-radius: $form-fields-border-radius !important;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
     }
   }
-  // .select2-choice .select2-arrow {
-  //   background: transparent;
-  //   border-left: none;
-  //   filter: none;
-  //   b {
-  //     background-position: -18px 1px;
-  //   }
-  // }
 }
 
 /* results */
