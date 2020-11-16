@@ -421,6 +421,15 @@
   }
 }
 
+@mixin button-colouration-subdued() {
+  color: $button-text-colour-subdued;
+  background-color: $button-background-colour-subdued;
+  
+  &:hover {
+    color: $button-text-colour-subdued-hover;
+  }
+}
+
 @mixin pat-button() {
   font-family: $body-font-family;
   margin: 0 0.5em 0 0;
