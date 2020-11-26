@@ -40,6 +40,8 @@ $button-small-height: 20px !default;
 $button-small-font-size: 0.8em !default;
 $button-small-paddings: 0 0.8em !default;
 
+$canvas-toolbar-button-height: $button-height !default;
+
 $grid-gutter: '1em' !default;
 
 $default-screen-padding: 40px !default;
@@ -58,7 +60,7 @@ $form-fields-border-radius: $border-radii !default;
 @import "libraries/reset";
 @import "libraries/animate";
 
-// Mixins
+// Components
 
 @import "components/avatar";
 @import "components/auto-scale";
@@ -78,6 +80,7 @@ $form-fields-border-radius: $border-radii !default;
 @import "components/message";
 @import "components/modal";
 @import "components/notifications";
+@import "components/rich-editor";
 @import "components/screenshot";
 @import "components/sortable-table";
 @import "components/syntax-highlight";
