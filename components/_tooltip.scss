@@ -44,6 +44,7 @@ $tooltip-border-radii: $border-radii !default;
         // line-height: 1.5em;
         cursor: default;
         // padding: 0.1em 0 0.1em $bullet-space;
+        box-shadow: none;
 
         &:hover {
           text-decoration: none;
@@ -60,7 +61,8 @@ $tooltip-border-radii: $border-radii !default;
           }
         }
 
-        &:active {
+        &:active,
+        &.active {
           box-shadow: none;
         }
       }
