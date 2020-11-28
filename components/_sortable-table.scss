@@ -73,48 +73,7 @@
 .pat-sortable-table {
     thead {
       th {
-        &.sorting,
-        &.sorting_asc,
-        &.sorting-asc,
-        &.sorting_desc,
-        &.sorting-desc {
-          position: relative;
-          padding-right: 30px;
-          top: 0;
-
-          &:focus {
-            outline: none;
-            cursor: default;
-            // background-color: rgba(0,0,0,0.1);
-          }
-
-          &:after {
-            font-family: fontello;
-            position: absolute;
-            top: 50%;
-            right: 0.5em;
-            display: block;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            text-align: right;
-            transform: translateY(-50%);
-          }
-        }
-
-        &.sorting_asc,
-        &.sorting-asc {
-          &:after {
-            content: '#{$glyph-icon-up-circle}';
-          }
-        }
-
-        &.sorting_desc,
-        &.sorting-desc {
-          &:after {
-            content: '#{$glyph-icon-down-circle}';
-          }
-        }
-      }
+        @include sortable-table-cell;
+      }  
     }
 }
