@@ -667,6 +667,7 @@ disabled look for disabled choices in the results dropdown
   outline: 0 !important;
   left: 0px !important;
   top: 0px !important;
+  min-width: 0px !important;
   &:focus {
     clip: rect(0 0 0 0) !important;
     width: 1px !important;
