@@ -320,6 +320,11 @@
     border-radius: $border-radii;
     @include clear-fix;
 
+    .panel-content {
+      padding: 1em 0 0 0;
+      box-sizing: border-box;
+    }
+
     > *:last-child {
       margin-bottom: 0;
     }
