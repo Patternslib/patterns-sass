@@ -3,6 +3,14 @@
 $glyph-remove-tag: $glyph-remove;
 $colour-auto-suggest-pills: $colour-accent !default;
 
+.select2-hidden-accessible {
+  opacity: 0;
+  position: absolute;
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  bottom: 0;
+}
+
 .select2-container {
   margin: 0;
   position: relative;
