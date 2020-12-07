@@ -14,6 +14,7 @@ $body-font-family: 'Source Sans Pro', sans-serif !default;
 
 $break-small: 768px !default;
 $break-large: 1280px !default;
+$pat-tail-white: 15px !default;
 
 // Menu list
 
@@ -67,6 +68,7 @@ $form-fields-border-radius: $border-radii !default;
 @import "components/auto-suggest";
 @import "components/breadcrumbs";
 @import "components/bumper";
+@import "components/button-cluster";
 @import "components/checklist";
 @import "components/carousel";
 @import "components/collapsible";
@@ -86,6 +88,7 @@ $form-fields-border-radius: $border-radii !default;
 @import "components/sortable-table";
 @import "components/syntax-highlight";
 @import "components/select";
+@import "components/toolbar";
 @import "components/tiptap";
 @import "components/tooltip";
 @import "components/well";
