@@ -502,7 +502,7 @@
     display: none;
   }
 
-  &:hover {
+  &:not(.active):not([disabled]):hover {
     text-decoration: none;
     -webkit-filter: brightness(1.15);
     filter: brightness(1.15);
@@ -526,8 +526,7 @@
     box-shadow: none;
   }
 
-  &:active, 
-  &.active {
+  &:active {
     box-shadow: inset 0 0 0.3em rgba(0, 0, 0, 0.4);
   }
 

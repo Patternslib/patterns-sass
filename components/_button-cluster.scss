@@ -14,20 +14,31 @@ $pat-toolbar-button-height: $button-height !default;
   .pat-button,
   label,
   > a {
-      margin: 0;
-      border-radius: 0;
-      border-left-style: none;
-      float: left;
-      border: none;
-      background: transparent;
-      padding: 0 1.2em;
-      color: rgba(0,0,0,0.7);
-      cursor: default;
-      line-height: $pat-toolbar-button-height;
-      height: $pat-toolbar-button-height;
-      box-shadow: none;
+    margin: 0;
+    border-radius: 0;
+    border-left-style: none;
+    float: left;
+    border: none;
+    background: transparent;
+    padding: 0 1.2em;
+    color: rgba(0,0,0,0.7);
+    cursor: default;
+    line-height: $pat-toolbar-button-height;
+    height: $pat-toolbar-button-height;
+    box-shadow: none;
     font-size: $base-font-size;
     font-weight: normal;
+
+    &.select-all[disabled],
+    &.deselect-all[disabled] {
+      background-color: $colour-accent;
+      color: white;
+
+      &:hover {
+        background-color: $colour-accent;
+        color: white;
+      }
+    }
 
     &.icon {
       padding: 0 5px;
@@ -38,11 +49,11 @@ $pat-toolbar-button-height: $button-height !default;
         opacity: 0;
       }
 
-      &[href]:not(.current):hover {
+      &[href]:not(.current):not(.active):not(.current):hover {
         color: black;
       }
 
-      &:not(.active):not(.current):not(.checked):hover {
+      &:not(.active):not(.current):not(.checked):not([disabled]):hover {
         text-decoration: none;;
         background-color: rgba(255,255,255,0.4);
         color: black;
