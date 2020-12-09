@@ -10,6 +10,8 @@ $transparent-light: rgba(0, 8, 16, 0.08);
 $transparent-dark: rgba(0, 8, 16, 0.15);
 $transparent-darker: rgba(0, 8, 16, 0.2);
 
+$tooltip-padding: 18px !default;
+
 $arrow-size: 8px;
 $arrow-box-size: 22px;
 $arrow-distance: 3px;
@@ -46,7 +48,7 @@ $tooltip-border-radii: $border-radii !default;
   }
 
   .tippy-content {
-    padding: 18px;
+    padding: $tooltip-padding;
     max-height: calc(50vh - 100px);
     overflow: auto;
   }
