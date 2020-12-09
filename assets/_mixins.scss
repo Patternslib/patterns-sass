@@ -407,8 +407,8 @@
     color: rgba(0,0,0,0.75);
     padding: 0.8em;
     margin-bottom: 1em;
-    // border: rgba(0,0,0,0.05) solid 0.2rem;
     background-color: #efefef;
+    border-radius: $border-radii;
 
     > *:last-child {
       margin-bottom: 0;
@@ -436,8 +436,8 @@
         background-color: $colour-warning;
         color: darken($colour-warning, 30%);
 
-        a { 
-          color: darken($colour-warning, 30%); 
+        a:not(.pat-button) { 
+          color: rgba(0,0,0,0.6); 
           text-decoration: underline;
         }
     }
