@@ -502,7 +502,7 @@
     display: none;
   }
 
-  &:hover {
+  &:not(.active):not([disabled]):hover {
     text-decoration: none;
     -webkit-filter: brightness(1.15);
     filter: brightness(1.15);
