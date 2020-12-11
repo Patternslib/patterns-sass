@@ -3,6 +3,15 @@
 .pat-rich-editor {
 	form & {
 		padding-top: calc(#{$canvas-toolbar-button-height} + 15px);
+		// padding-bottom: 8px;
+
+		// .redactor-styles {
+		// 	> * {
+		// 		&:last-child {
+		// 			margin-bottom: 0;
+		// 		}
+		// 	}
+		// }
 	}
 	position: relative;
 
