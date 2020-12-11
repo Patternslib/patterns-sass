@@ -7,6 +7,7 @@ $form-proportion-value: 100% !default;
 $form-proportion-gutter: 15px !default;
 $form-input-field-padding-top-bottom: 0.2em !default;
 $form-input-field-padding-left-right: 0.5em !default;
+$form-field-tail-white: 1em !default;
 
 form {
   section.help .panel-content {  
@@ -420,7 +421,7 @@ form {
           position: relative;
           display: block;
           padding-right: calc(100% - #{$form-proportion-name});
-          margin-bottom: 1em;
+          margin-bottom: $form-field-tail-white;
           left: 0;
 
           &:after {
@@ -508,7 +509,7 @@ form {
           width: 100% - $form-proportion-name;
           clear: left;
           border-style: none;
-          margin: 0 0 0.5em 0;
+          margin: 0 0 $form-field-tail-white 0;
           padding-left: #{$form-proportion-name};
           position: relative;
           padding-bottom: 0;
