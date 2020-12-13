@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 .pat-rich-editor {
+	width: 100%;
+
 	form & {
 		padding-top: calc(#{$canvas-toolbar-button-height} + 15px);
 		// padding-bottom: 8px;
