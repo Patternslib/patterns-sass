@@ -475,7 +475,7 @@
   color: $button-text-colour-subdued;
   background-color: $button-background-colour-subdued;
   
-  &:hover {
+  &:not([disabled]):hover {
     color: $button-text-colour-subdued-hover;
   }
 }
