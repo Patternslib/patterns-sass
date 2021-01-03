@@ -404,7 +404,7 @@
 }
 
 @mixin pat-message() {
-    color: rgba(0,0,0,0.75);
+    color: black;
     padding: 0.8em;
     margin-bottom: 1em;
     background-color: #efefef;
@@ -416,7 +416,6 @@
 
     &.success {
         background-color: $colour-success;
-        color: darken($colour-success, 50%);
     }
 
     &.notice {
@@ -434,7 +433,7 @@
 
     &.warning {
         background-color: $colour-warning;
-        color: darken($colour-warning, 30%);
+        color: black;
 
         a:not(.pat-button) { 
           color: rgba(0,0,0,0.6); 
