@@ -64,7 +64,8 @@ label.pat-checklist {
 
 	&:not(.free-form) {
 		> label,
-		.label {
+		.label,
+		li > label {
 			display: block;
 			position: relative;
 			@include checkbox();
