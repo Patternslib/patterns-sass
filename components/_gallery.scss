@@ -16,3 +16,13 @@ $pswp__assets-path: '/assets/quaive/style/photoswipe/' !default;
 		backdrop-filter: blur(100px) saturate(2);
 	}
 }
+
+.pswp__ui--fit .pswp__top-bar, 
+.pswp__ui--fit .pswp__caption {
+	background: none;
+
+	.pswp__caption__center {
+		text-align: center;
+		color: black;
+	}
+}
