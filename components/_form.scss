@@ -45,7 +45,8 @@ form {
   .select2-container .select2-choice,
   .select2-container .select2-choices,
   .md-editor .md-render,
-  .pat-rich-editor
+  .pat-rich-editor,
+  .output-field
    {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -592,7 +593,8 @@ form {
       .colour-chooser-launcher,
       .read-only-field,
       .pat-rich-editor,
-      .pat-miller-columns {
+      .pat-miller-columns,
+      .output-field {
         display: block;
         margin-top: 0.2em;
         width: 100%;
