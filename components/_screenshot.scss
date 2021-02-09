@@ -6,6 +6,7 @@ $browser-window-border-radii: 8px !default;
 	margin-bottom: 2em;
   overflow: hidden;
   position: relative;
+  padding: 0 10px;
 
   &:before {
     position: absolute;
