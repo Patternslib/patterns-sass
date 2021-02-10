@@ -4,11 +4,12 @@ $back-button-border-radius-left: 8px !default;
 $back-button-background-colour: $button-background-colour-subdued;
 $back-button-text-colour: $button-text-colour-subdued;
 $back-button-text-colour-hover: $button-text-colour-subdued-hover;
+$back-button-height: $button-height;
 
 .pat-back-button {
 	display: inline-block;
-	line-height: $button-height;
-	height: $button-height;
+	line-height: $back-button-height;
+	height: $back-button-height;
 	// background: $colour-button;
 	color: $back-button-text-colour;
 	font-size: 18px;
