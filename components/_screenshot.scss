@@ -29,6 +29,13 @@ $browser-window-border-radii: 8px !default;
   	margin: 0;
   }
 
+  &.type-app-icon {
+    object {
+      height: 400px;
+      box-shadow: none;
+    }
+  }
+
   &.browser-window {
   	background-color: white;
   	border-radius: $browser-window-border-radii;
