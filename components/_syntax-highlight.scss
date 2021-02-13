@@ -13,7 +13,9 @@
 
   // XXX For other styles, see src/bower_components/google-code-prettify/styles
   
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.75);
+  -webkit-user-select: auto;
+  user-select: auto;
 
   .str,
   .str {
