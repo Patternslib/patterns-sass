@@ -1,10 +1,11 @@
   pre.pat-syntax-highlight {
     padding: 10px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.75);
     color: white;
     padding: 10px 15px;
     overflow: auto;
     font-size: 18px;
+    border-radius: $border-radii;
   }
 
 .pat-syntax-highlight {
