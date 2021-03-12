@@ -10,11 +10,7 @@ $pswp__assets-path: '/assets/quaive/style/photoswipe/' !default;
 }
 
 .pswp__bg {
-	.backdropfilter & {
-		background: none;
-		-webkit-backdrop-filter: blur(100px) saturate(2);
-		backdrop-filter: blur(100px) saturate(2);
-	}
+	@include modal-background;
 }
 
 .pswp__counter {
