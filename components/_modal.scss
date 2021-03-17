@@ -77,6 +77,14 @@ div.pat-modal {
       padding-bottom: 20px;
     }
 
+    .panel-footer {
+      .container { 
+        .float-after {
+          margin-right: 0;
+        }
+      }
+    }
+
     .container {
       padding: 0 30px;
     }
