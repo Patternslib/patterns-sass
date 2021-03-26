@@ -31,7 +31,7 @@ $button-text-colour-hover: white !default;
 $button-text-colour-subdued: rgba(0,0,0,0.6) !default;
 $button-text-colour-subdued-hover: rgba(0,0,0,1) !default;
 $button-background-colour-subdued: rgba(0, 0, 0, 0.15) !default;
-$button-background-colour: $colour-accent;
+$button-background-colour: $colour-accent !default;
 
 $button-height: 35px !default;
 $button-font-size: 1em !default;
@@ -71,6 +71,7 @@ $form-input-field-line-height: inherit !default;
 @import "components/back-button";
 @import "components/breadcrumbs";
 @import "components/bumper";
+@import "components/button";
 @import "components/button-cluster";
 @import "components/checklist";
 @import "components/carousel";
