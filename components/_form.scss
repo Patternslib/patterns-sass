@@ -560,6 +560,11 @@ form {
             border-style: none;
             width: auto;
             margin: 0;
+
+            & + .pat-checklist {
+              margin-top: 0.5em; // Gives some whitespace between an input field and a tickbox that's underneath it.
+              display: block;
+            }
           }
       }  
 
