@@ -91,6 +91,13 @@ div.pat-modal {
 
     .panel-footer {
       .container { 
+        &:before {
+          content: ' ';
+          height: 1px;
+          display: block;
+          margin-bottom: 20px;
+          background: silver;
+        }
         .float-after {
           margin-right: 0;
         }
