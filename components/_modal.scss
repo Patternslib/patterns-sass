@@ -11,9 +11,13 @@ div.pat-modal {
     top: 50% !important;
     left: 50% !important;  
     transform: translate(-50%, -50%);
-    animation: bounceInCentred 0.5s;
+    animation: fadeIn 0.2s;
     background-color: transparent;
     border-radius: $border-radii;
+
+    &.small {
+      animation: bounceInCentred 0.5s;
+    }
 
     &.medium {
       width: 900px !important;
