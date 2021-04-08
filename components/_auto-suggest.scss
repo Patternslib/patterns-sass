@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "../common";
 
 $glyph-remove-tag: $glyph-remove;
 $colour-auto-suggest-pills: $colour-accent !default;
@@ -22,11 +23,6 @@ $colour-auto-suggest-pills: $colour-accent !default;
   vertical-align: middle;
   width: 100%;
   font-weight: normal;
-}
-
-.lt-ie10 .select2-container {
-  width: 100% !important;
-  height: auto !important;
 }
 
 .select2-container, .select2-drop {
@@ -103,7 +99,7 @@ $colour-auto-suggest-pills: $colour-accent !default;
       font-size: 1px;
       text-decoration: none;
       border: 0;
-      background: url('select2.png') right top no-repeat;
+      //background: url('select2.png') right top no-repeat;
       cursor: pointer;
       outline: 0;
     }
