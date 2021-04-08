@@ -1,0 +1,9 @@
+{
+  "name": "patterns-sass",
+  "version": "1.0.0",
+  "description": "Styles for patternslib.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patternslib/patterns-sass.git"
+  }
+}
