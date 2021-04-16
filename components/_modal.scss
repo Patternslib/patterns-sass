@@ -46,7 +46,7 @@ div.pat-modal {
 
     .panel-content {
       background: white;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 50px rgba(0,0,0,0.4);
       border: 1px solid rgba(0,0,0,0.15);
       padding-top: 60px;
       border-radius: $border-radii;
@@ -82,7 +82,7 @@ div.pat-modal {
       left: -2000px;
       content: ' ';
       z-index: -1;
-      background-color: rgba(0,0,0,0.4);
+      background-color: rgba(0,0,0,0.3);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
       animation: fadeIn 1s;
