@@ -11,6 +11,7 @@ $form-input-field-padding-left-right: 0.5em !default;
 $form-field-tail-white: 1em !default;
 $colour-form-fields-background: #efefef !default;
 $form-fields-border-radius: $border-radii !default;
+$colour-placeholder: rgba(0,0,0,0.35);
 
 form {
   section.help .panel-content {  
@@ -88,30 +89,22 @@ form {
       background-color: transparent;
     }
 
-    &::-webkit-input-placeholder { 
-      color: rgba(0,0,0,0.35); 
-    }
-
-    &::-moz-placeholder { 
-      color: rgba(0,0,0,0.35); 
-    } /* firefox 19+ */
-
-    &:-ms-input-placeholder { 
-      color: rgba(0,0,0,0.35); 
-    } /* ie */
-
-    &input:-moz-placeholder { 
-      color: rgba(0,0,0,0.35); 
-    }
-
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder,
     &::placeholder { 
-      color: rgba(0,0,0,0.35); 
+      color: $colour-placeholder; 
     }
   }
 
   .output-field {
     position: relative;
     padding-right: 12px;
+
+    span.placeholder {
+      color: $colour-placeholder;
+    }
 
     &:after {
       content: ' ';
