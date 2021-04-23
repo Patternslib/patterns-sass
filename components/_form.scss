@@ -88,14 +88,14 @@ form {
       padding: 0;
       background-color: transparent;
     }
+  }
 
-    &::-webkit-input-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder,
-    &:-moz-placeholder,
-    &::placeholder { 
-      color: $colour-placeholder; 
-    }
+  ::-webkit-input-placeholder {
+    color: $colour-placeholder; 
+  }
+
+  ::placeholder {
+    color: $colour-placeholder; 
   }
 
   .output-field {
