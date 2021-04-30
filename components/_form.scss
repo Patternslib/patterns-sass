@@ -12,6 +12,8 @@ $form-field-tail-white: 1em !default;
 $colour-form-fields-background: #efefef !default;
 $form-fields-border-radius: $border-radii !default;
 $colour-placeholder: rgba(0,0,0,0.35);
+$colour-form-panel: $colour-portlet-background !default;
+$form-panel-collapsible-button-height: 26px;
 
 form {
   section.help .panel-content {  
@@ -25,6 +27,79 @@ form {
   .form-separation-title,
   .form-separation-header {
     margin: 2em 0 1em;
+  }
+
+  &.panel-style .form-panel {   
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: $default-box-shadow;
+    border-radius: $border-radii;
+    background-color: $colour-form-panel;
+
+    .form-separation-header {
+      margin-top: 0;
+      transition: padding 0.4s;
+    }
+
+    &.pat-collapsible {
+      transition: padding 0.4s;
+      padding: 0;
+
+      .form-separation-header {
+        padding-right: 50px;
+        padding-left: 40px;
+        position: relative;
+        margin: 0;
+
+        &:after {
+          font-family: fontello;
+          content: '#{$glyph-minus}';
+          font-size: 0.65em;
+          background-color: $button-background-colour-subdued;
+          color: $button-text-colour-subdued;
+          position: absolute;
+          right: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+          width: $form-panel-collapsible-button-height;
+          height: $form-panel-collapsible-button-height;
+          text-align: center;
+          line-height: $form-panel-collapsible-button-height;
+          border-radius: $border-radii;
+        }
+
+        &:hover:after {
+          color: $button-text-colour-subdued-hover;
+        }
+      }
+
+      &.open,
+      &.closed.in-progress {
+        .form-separation-header {
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+      }
+
+      &.closed,
+      &.open.in-progress {
+        .form-separation-header {
+          padding-top: 20px;
+          padding-bottom: 20px;
+
+          &:after {
+            content: '#{$glyph-plus-1}';
+          }
+
+        }
+      }
+
+      .panel-content {
+        padding: 0 40px 40px;
+        box-sizing: border-box;
+      }
+    }
   }
 
   .pat-message,
@@ -431,7 +506,8 @@ form {
         margin: 0 0 2em;
       }
    
-      &.horizontal {
+      &.horizontal,
+      &.horizontal .panel-content {
         @include screen-size(medium-large) { 
         width: 100%;
 
