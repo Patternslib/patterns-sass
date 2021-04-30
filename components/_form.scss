@@ -76,17 +76,27 @@ form {
 
       &.open,
       &.closed.in-progress {
+        transition: box-shadow 2s;
+
         .form-separation-header {
           padding-top: 40px;
           padding-bottom: 40px;
         }
       }
 
+      &.closed {
+        &:hover {
+          box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+        }
+      }
+
       &.closed,
       &.open.in-progress {
+
         .form-separation-header {
           padding-top: 20px;
           padding-bottom: 20px;
+          border-radius: $border-radii;
 
           &:after {
             content: '#{$glyph-plus-1}';
