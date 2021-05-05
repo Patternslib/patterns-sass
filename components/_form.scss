@@ -1,6 +1,7 @@
 @import "../components/checklist";
 @import "../components/file-upload-button";
 
+$colour-portlet-background: rgba(255,255,255,0.5) !default;
 $form-proportion-ceiling: 170% !default;
 $form-proportion-name: 30% !default;
 $form-proportion-value: 100% !default;
