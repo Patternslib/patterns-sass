@@ -518,7 +518,7 @@ form {
       }
    
       &.horizontal,
-      &.horizontal .panel-content {
+      &.horizontal > .panel-content {
         @include screen-size(medium-large) { 
         width: 100%;
 
