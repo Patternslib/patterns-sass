@@ -11,7 +11,15 @@
 		float: left;
 		position: absolute;
 		left: 0;
-		top: 0em;
+		top: 49.5%;
+		transform: translateY(-50%);
+		line-height: 17px;
+		font-size: 20px;
+
+		background-color: white;
+		height: 15px;
+		width: 15px;
+		border-radius: 3px;
 	}
 
 	&.disabled {
@@ -69,10 +77,14 @@ label.pat-checklist {
 			display: block;
 			position: relative;
 			@include checkbox();
-			@include clear-fix();
+			// @include clear-fix();
 			margin-top: 0.2em;
 			margin-bottom: 0.2em;
 			white-space: normal;
+
+			&:first-of-type { 
+				margin-top: 0;
+			}	
 		}
 	}
 
@@ -84,11 +96,16 @@ label.pat-checklist {
 	}
 
 	&.radio label {
+
 		&.unchecked:before {
 			content: '#{$glyph-radio-button}';
+			border-radius: 50%;
+			font-size: 20px;
 		}
 		&.checked:before {
 			content: '#{$glyph-radio-button-active}';
+			border-radius: 50%;
+			font-size: 20px;
 		}
 	}
 
