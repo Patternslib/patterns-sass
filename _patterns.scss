@@ -33,6 +33,11 @@ $button-text-colour-subdued-hover: rgba(0,0,0,1) !default;
 $button-background-colour-subdued: rgba(0, 0, 0, 0.15) !default;
 $button-background-colour: $colour-accent !default;
 
+$button-background-colour-default: $colour-accent !default;
+$button-background-colour-default-hover: $colour-accent !default;
+$button-text-colour-default: white !default;
+$button-text-colour-default-hover: white !default;
+
 $button-height: 35px !default;
 $button-font-size: 1em !default;
 $button-paddings: 0 1em !default;
