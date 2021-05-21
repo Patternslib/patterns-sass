@@ -10,7 +10,7 @@ form.pat-form {
 		margin: 40px 0;
 		display: inline-block;
 		padding: 0 0 0 0;
-		clip-path: fill-box;
+		clip-path: inset(0 0 0 0);
 
 		input.code {
 			border: none !important;
