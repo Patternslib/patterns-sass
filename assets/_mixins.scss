@@ -510,7 +510,6 @@
   &.default {
     color: $button-text-colour-default;
     background-color: $button-background-colour-default;
-    background-color: $button-text-colour-default;
     
     &:not([disabled]):hover {
     background-color: $button-background-colour-default-hover;
