@@ -62,7 +62,7 @@ div.pat-modal {
           bottom: -20px;
           margin-bottom: -20px;
           background: white;
-          padding-bottom: 25px;
+          padding-bottom: 10px;
           padding-top: 20px;
           border-top: 1px solid silver;
           z-index: 10;
@@ -89,12 +89,13 @@ div.pat-modal {
       animation: fadeIn 1s;
     }
 
-    .panel-footer,
     .panel-body {
       padding-bottom: 20px;
     }
 
     .panel-footer {
+      padding-bottom: 10px;
+
       .container { 
         &:before {
           content: ' ';
@@ -103,6 +104,11 @@ div.pat-modal {
           margin-bottom: 20px;
           background: silver;
         }
+
+        .pat-button {
+          margin: 0 10px 10px 0;
+        }
+
         .float-after {
           margin-right: 0;
         }
