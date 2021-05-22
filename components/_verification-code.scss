@@ -8,7 +8,7 @@ form.pat-form {
 		background-position: 0 0;
 		position: relative;
 		margin: 40px 0;
-		display: inline-block;
+		display: block;
 		padding: 0 0 0 0;
 		clip-path: inset(0 0 0 0);
 
@@ -35,6 +35,8 @@ form.pat-form {
 			resize: none;
 			white-space: nowrap;
 			overflow: hidden;
+			caret-color: $colour-header;
+			caret-shape: underscore;
 
 			&::selection {
 				background: transparent;
