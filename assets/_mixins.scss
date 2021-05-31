@@ -524,7 +524,7 @@
     display: none;
   }
 
-  &:not(.icon):not(.iconified):not(.active):not(.default):not([disabled]):hover {
+  &:not(.icon):not(.iconified):not(.link):not(.active):not(.default):not([disabled]):hover {
     text-decoration: none;
     -webkit-filter: brightness(1.15);
     filter: brightness(1.15);
@@ -559,6 +559,23 @@
     &:before {
       width: 100%;
       text-align: center;
+    }
+  }
+
+  &.link {
+    padding: 0;
+    display: inline;
+    background: none;
+    color: $colour-link;
+    line-height: inherit;
+    text-decoration: underline;
+    vertical-align: baseline;
+    cursor: pointer;
+
+    &:hover {
+      background: none;
+      text-decoration: underline !important;
+      color: $colour-link-hover;
     }
   }
 
