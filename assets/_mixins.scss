@@ -344,7 +344,7 @@
     }
 
     background-color: rgba(255,255,255,0.5);
-    margin-bottom: 2em;
+    margin-bottom: $default-tail-white;
     display: block;
     box-sizing: border-box;
     border-radius: $border-radii;
@@ -510,7 +510,6 @@
   &.default {
     color: $button-text-colour-default;
     background-color: $button-background-colour-default;
-    background-color: $button-text-colour-default;
     
     &:not([disabled]):hover {
     background-color: $button-background-colour-default-hover;

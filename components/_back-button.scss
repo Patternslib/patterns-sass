@@ -22,7 +22,7 @@ $back-button-height: $button-height;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	box-sizing: border-box;
-	text-decoration: none;
+	text-decoration: none !important;
 
 	.overflow-protector {
 		width: 100%;
