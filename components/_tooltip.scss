@@ -55,6 +55,8 @@ $tooltip-border-radii: $border-radii !default;
         &.disabled {
           color: silver;
           cursor: default;
+          -webkit-pointer-events: none;
+          pointer-events: none;
 
           &:hover,
           &:active {
