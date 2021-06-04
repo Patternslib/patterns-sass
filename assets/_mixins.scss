@@ -483,8 +483,10 @@
 @mixin button-colouration-subdued() {
   color: $button-text-colour-subdued;
   background-color: $button-background-colour-subdued;
+
+  // This mixin becomes obsolete when all default button have gotten a class 'default'.
   
-  &:not([disabled]):not(.link):not(.iconified):hover {
+  &:not([disabled]):not(.link):not(.icon):not(.iconified):not(.default):not(.active):hover {
     color: $button-text-colour-subdued-hover;
   }
 }
