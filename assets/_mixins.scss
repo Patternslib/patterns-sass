@@ -506,16 +506,23 @@
   font-size: $button-font-size;
   vertical-align: text-bottom;
   font-weight: $button-font-weight;
+    
+  &:not([disabled]):hover {
+    background-color: $button-background-colour-hover;
+    color: $button-text-colour-hover;
+    // -webkit-filter: brightness(1.15);
+    // filter: brightness(1.15);
+  }
 
   &.default {
     color: $button-text-colour-default;
     background-color: $button-background-colour-default;
     
     &:not([disabled]):hover {
-    background-color: $button-background-colour-default-hover;
+      background-color: $button-background-colour-default-hover;
       color: $button-text-colour-default-hover;
-      -webkit-filter: brightness(1.15);
-      filter: brightness(1.15);
+      // -webkit-filter: brightness(1.15);
+      // filter: brightness(1.15);
     }
   }
 
