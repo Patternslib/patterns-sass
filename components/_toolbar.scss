@@ -7,7 +7,7 @@ $pat-tail-white: 15px !default;
 
 .pat-toolbar {
 	@include clear-fix();
-	color: rgba(0,0,0,0.6);
+	color: $button-text-colour;
 	position: relative;
 	z-index: 1;
 	flex-wrap: nowrap;
