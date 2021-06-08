@@ -507,12 +507,13 @@
   font-size: $button-font-size;
   vertical-align: text-bottom;
   font-weight: $button-font-weight;
+  
   color: $button-text-colour;
   background-color: $button-background-colour;
     
   &:not([disabled]):hover {
-    background-color: $button-background-colour-hover;
     color: $button-text-colour-hover;
+    background-color: $button-background-colour-hover;
     // -webkit-filter: brightness(1.15);
     // filter: brightness(1.15);
   }
