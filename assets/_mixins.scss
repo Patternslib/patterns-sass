@@ -496,19 +496,19 @@
   font-family: $body-font-family;
   margin: 0 0.5em 0 0;
   border: $button-border;
-  color: $button-text-colour;
   cursor: default;
   border-radius: $button-border-radius;
   background-image: $button-background-image;
   text-decoration: none;
   line-height: $button-height;
   white-space: nowrap;
-  background-color: $button-background-colour;
   display: inline-block;
   padding: $button-paddings;
   font-size: $button-font-size;
   vertical-align: text-bottom;
   font-weight: $button-font-weight;
+  color: $button-text-colour;
+  background-color: $button-background-colour;
     
   &:not([disabled]):hover {
     background-color: $button-background-colour-hover;
@@ -526,6 +526,17 @@
       color: $button-text-colour-default-hover;
       // -webkit-filter: brightness(1.15);
       // filter: brightness(1.15);
+    }
+  }
+
+  &[disabled],
+  &.disabled {
+    color: $button-text-colour-disabled;
+    background-color: $button-background-colour-disabled;
+
+    &:hover {
+      color: $button-text-colour-disabled-hover;
+      background-color: $button-background-colour-disabled-hover;
     }
   }
 
