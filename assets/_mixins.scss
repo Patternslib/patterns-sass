@@ -399,8 +399,13 @@
     border: $border;
     height: $height;
     width: $width;
+
     img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -webkit-clip-path: circle($border-radius);
+        clip-path: circle($border-radius);
     }
 }
 
