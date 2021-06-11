@@ -108,9 +108,9 @@ div.pat-modal {
         .pat-button {
           margin: 0 10px 10px 0;
 
-          &.icon-cancel-circle {
-            @include button-colouration-subdued; // Remove this line when all the classes 'default' are in place.
-          }
+          // &.icon-cancel-circle {
+          //   @include button-colouration-subdued; // Remove this line when all the classes 'default' are in place.
+          // }
         }
 
         .float-after {
