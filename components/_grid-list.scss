@@ -5,6 +5,12 @@
   width: 100%;
   border-bottom: 1px solid $colour-base;
 
+  @include screen-size(medium-large) {
+    display: grid;
+    grid-column-gap: 0;
+    grid-template-columns: 40% 60%;
+  }
+
   dt {
     float: left;
     font-weight: bold;
@@ -13,10 +19,11 @@
     padding-top: 0.5em;
 
     @include screen-size(medium-large) {
-      padding-right: 5%;
+      padding-right: 2%;
       padding-bottom: 0.5em;
       // color: rgba(0,0,0,0.7);
-      width: 35%;
+      // width: 40%;
+      // box-sizing: border-box;
     }
 
     @include screen-size(small) {
@@ -37,6 +44,7 @@
     margin-bottom: 0;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    margin-left: 0;
 
     @media print {
       display: block;
@@ -49,10 +57,10 @@
     }
 
     @include screen-size(medium-large) {
-      width: 60%;
-      display: inline-block;
-      float: left;
-      margin-right: -100%;
+      // width: 60%;
+      // display: inline-block;
+      // float: left;
+      // margin-right: -100%;
       border-top: 1px solid $colour-base;
     }
 
