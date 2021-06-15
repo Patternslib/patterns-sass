@@ -352,11 +352,6 @@
 
     &.success {
         background-color: $colour-success;
-        color: white;
-
-        a {
-          color: white;
-        }
 
         input { color: $body-font-color};
     }
@@ -367,11 +362,6 @@
 
     &.warning {
         background-color: $colour-warning;
-        color: white;
-
-        a {
-          color: white;
-        }
 
         input { color: $body-font-color};
         // select { border: white, color: white;}
