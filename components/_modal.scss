@@ -57,15 +57,19 @@ div.pat-modal {
         padding-top: 5px;       
 
         .button-bar:last-child {
-          position: -webkit-sticky;
-          position: sticky;
-          bottom: -20px;
+          position: -webkit-sticky !important;
+          position: sticky !important;
+          bottom: -21px;
           margin-bottom: -20px;
           background: white;
           padding-bottom: 10px;
           padding-top: 20px;
-          border-top: 1px solid silver;
+          border-top: 1px solid white;
           z-index: 10;
+
+          &.bumped {
+            border-top: 1px solid silver;
+          }
         }
       }
 
