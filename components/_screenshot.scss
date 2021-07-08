@@ -19,17 +19,53 @@ $browser-window-border-radii: 8px !default;
   }
 
   object {
-  	background-color: $colour-base;
   	width: 1280px;
   	height: 800px;
   	-webkit-user-select: none;
   	user-select: none;
   	pointer-events: none;
-  	box-shadow: $default-box-shadow;
   	margin: 0;
   }
 
+  .passe-partout {
+    width: 1280px;
+    height: 800px;
+    overflow: hidden;
+    box-shadow: $default-box-shadow;
+    background-color: $colour-base;
+
+    &.cutout {
+      object {
+        transform: scale(2);
+      }
+    }
+
+    &.cut-tl {
+      object {
+        transform-origin: top left;
+      }
+    }
+    &.cut-tr {
+      object {
+        transform-origin: top right;
+      }
+    }
+
+    &.cut-br {
+      object {
+        transform-origin: bottom right;
+      }
+    }
+
+    &.cut-bl {
+      object {
+        transform-origin: bottom left;
+      }
+    }
+  }
+
   &.type-app-icon {
+    .passe-partout,
     object {
       height: 480px;
       box-shadow: none;
