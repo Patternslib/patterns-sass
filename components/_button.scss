@@ -2,5 +2,9 @@
 
 .pat-button {
   @include pat-button();
+
+  .button-bar & {
+    margin-bottom: 5px;
+  }
 }
 
