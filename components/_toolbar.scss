@@ -33,7 +33,7 @@ $pat-tail-white: 15px !default;
 			backdrop-filter: blur(50px) saturate(4) brightness(1.2);
 		}
 
-	    #document-body:not(.scroll-position-top) & {
+	    .document-body:not(.scroll-position-top) & {
 	      box-shadow: $default-box-shadow;
 	    }
 	}
