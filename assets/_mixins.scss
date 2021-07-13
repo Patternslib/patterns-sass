@@ -540,10 +540,8 @@
     display: none;
   }
 
-  &:not(.icon):not(.iconified):not(.link):not(.active):not(.default):not([disabled]):hover {
+  &:not(.icon):not(.iconified):not(.link):not(.active):not(.default):not(.current):not(.checked):not([disabled]):hover {
     text-decoration: none;
-    // -webkit-filter: brightness(1.15);
-    // filter: brightness(1.15);
     color: $button-text-colour-hover;
   }
 
