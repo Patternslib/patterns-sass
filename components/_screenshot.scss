@@ -32,7 +32,7 @@ $browser-window-border-radii: 8px !default;
     width: 1280px;
     height: 800px;
     overflow: hidden;
-    box-shadow: $default-box-shadow;
+    box-shadow: 0 0 1px 1px rgba(black, 0.3);
     background-color: $colour-base;
 
     &.cutout {
