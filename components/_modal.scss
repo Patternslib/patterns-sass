@@ -23,6 +23,14 @@ div.pat-modal {
       width: 900px !important;
     }
 
+    &.large {
+      width: 1200px !important;
+
+      &.object {
+        height: calc(100vh - 80px) !important;
+      }
+    }
+
     > .header {
       position: absolute;
       top: 0;
@@ -41,6 +49,14 @@ div.pat-modal {
 
       .close-panel {
         display: none;
+      }
+    }
+
+    &.object {
+      > .header {
+        .close-panel {
+          display: block;
+        }
       }
     }
 
