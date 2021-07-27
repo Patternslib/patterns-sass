@@ -28,6 +28,18 @@ div.pat-modal {
 
       &.object {
         height: calc(100vh - 80px) !important;
+        height: 100%;
+        box-sizing: border-box;
+
+        object {
+          height: 100%;
+          width: 100%;
+        }
+
+        .panel-content {
+          box-sizing: border-box;
+          height: 100%;
+        }
       }
     }
 
@@ -49,6 +61,24 @@ div.pat-modal {
 
       .close-panel {
         display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        background-color: $button-background-colour-default;
+        color: transparent;
+
+        &:before {
+          font-family: fontello;
+          content: '#{$glyph-close}';
+          color: #{$button-text-colour-default};
+          font-size: 24px;
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
       }
     }
 
@@ -64,7 +94,7 @@ div.pat-modal {
       background: white;
       box-shadow: 0 2px 50px rgba(0,0,0,0.7);
       border: 1px solid rgba(0,0,0,0.15);
-      padding-top: 60px;
+      padding-top: 68px;
       border-radius: $border-radii;
 
       .panel-body {
