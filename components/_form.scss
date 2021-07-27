@@ -271,6 +271,13 @@ form {
     }    
   }
 
+ input[type=file]::-webkit-file-upload-button {
+     -webkit-appearance: button;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    // line-height: 26px;
+  }
+
   input[type=range] {
       /*removes default webkit styles*/
       -webkit-appearance: none;
