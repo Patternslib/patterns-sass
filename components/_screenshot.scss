@@ -3,7 +3,7 @@
 $browser-window-border-radii: 8px !default;
 
 .pat-screenshot {
-	margin-bottom: 2em;
+	margin: 0 -10px 2em;
   overflow: hidden;
   position: relative;
   padding: 0 10px;
@@ -16,6 +16,11 @@ $browser-window-border-radii: 8px !default;
     bottom: 0;
     content: ' ';
     z-index: 1;
+  }
+
+  figcaption {
+    position: relative;
+    z-index: 2;
   }
 
   object {
