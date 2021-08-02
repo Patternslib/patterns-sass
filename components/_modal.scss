@@ -70,6 +70,10 @@ div.pat-modal {
         background-color: $button-background-colour-default;
         color: transparent;
 
+        &:hover {
+           background-color: $button-background-colour-default-hover;
+        }
+
         &:before {
           font-family: fontello;
           content: '#{$glyph-close}';
