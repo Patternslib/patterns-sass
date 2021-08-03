@@ -59,11 +59,11 @@ div.pat-modal {
         overflow: hidden;
       }
 
+      .button-fullscreen,
       .close-panel {
         display: none;
         position: absolute;
         top: 15px;
-        right: 15px;
         height: 40px;
         width: 40px;
         line-height: 40px;
@@ -84,13 +84,53 @@ div.pat-modal {
           text-align: center;
         }
       }
+
+      .button-fullscreen {
+        right: 65px;
+
+        &:before {
+          content: '#{$glyph-resize-full}';
+        }
+      }
+
+      .close-panel {
+        right: 15px;
+
+        &:before {
+          content: '#{$glyph-close}';
+        }
+      }
     }
 
     &.object {
       > .header {
-        .close-panel {
+        .close-panel,
+        .button-fullscreen {
           display: block;
         }
+      }
+
+      @mixin fullscreen {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &:-webkit-full-screen {
+        @include fullscreen;
+      }
+
+      &:-ms-fullscreen {
+        @include fullscreen;
+      }
+
+      &:fullscreen {
+        @include fullscreen;
       }
     }
 

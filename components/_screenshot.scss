@@ -18,6 +18,18 @@ $browser-window-border-radii: 8px !default;
     z-index: 1;
   }
 
+  &.allow-interaction {
+    &:before {
+      display: none;
+    }
+
+    object {
+      -webkit-user-select: auto;
+      user-select: auto;
+      pointer-events: auto;
+    }
+  }
+
   figcaption {
     position: relative;
     z-index: 2;
