@@ -25,6 +25,7 @@
     white-space: nowrap; // Used to be commented out. Check if this doesn't give trouble anywhere.
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
 
     &:hover,
     &.focus { 
