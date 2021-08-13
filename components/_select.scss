@@ -22,7 +22,9 @@
     cursor: default;
     @include box-sizing();
     padding: 0 29px 0 0;
-    // white-space: nowrap;
+    white-space: nowrap; // Used to be commented out. Check if this doesn't give trouble anywhere.
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:hover,
     &.focus { 
@@ -38,7 +40,6 @@
       content: ' ';
       padding-right: 1.5em;
       box-shadow: none !important;
-
       position: absolute; // Added to avoid dropdowns to push open display table elements such as the contextual button bar of item selector/sidebar.
       top: 2%; // Added to avoid dropdowns to push open display table elements such as the contextual button bar of item selector/sidebar.
       right: 0; // Added to avoid dropdowns to push open display table elements such as the contextual button bar of item selector/sidebar.
@@ -60,6 +61,8 @@
       content: attr(data-option);
       float: left; // Needed for IE
       max-height: 100%;
+      max-width: 100%;
+      font-weight: normal;
 
       // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       //   margin-right: 2.6em;

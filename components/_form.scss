@@ -177,6 +177,33 @@ form {
     }
   }
 
+  input[type=time] {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  ::-webkit-datetime-edit {
+    padding-top: $form-input-field-padding-top-bottom;
+    padding-bottom: $form-input-field-padding-top-bottom;
+    margin-bottom: -1.5 * $form-input-field-padding-top-bottom;
+    line-height: $form-input-field-line-height;
+    font-size: inherit;
+
+    > * {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  ::-webkit-datetime-edit-minute-field,
+  ::-webkit-datetime-edit-hour-field,
+  ::-webkit-datetime-edit-text {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   ::-webkit-input-placeholder {
     color: $colour-placeholder; 
   }
@@ -734,8 +761,25 @@ form {
         margin-top: 0.2em;
         width: 100%;
         font-weight: normal;
+      }   
+    }
+
+    .row {
+      margin: 0 -5px 0.8em;
+
+      .column,
+      .columns {
+        margin-bottom: 0;
+        padding: 0 5px;
+
+        > * {
+          margin-bottom: 0;
+        }
       }
-        
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     label >,
