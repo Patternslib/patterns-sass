@@ -325,7 +325,7 @@
 }
 
 @mixin pat-well() {
-    color: rgba(0,0,0,0.6);
+    // color: rgba(0,0,0,0.6);
     padding: 40px;
     border-radius: $border-radii;
     @include clear-fix;
