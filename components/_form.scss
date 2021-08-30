@@ -15,6 +15,8 @@ $form-fields-border-radius: $border-radii !default;
 $colour-placeholder: rgba(0,0,0,0.35);
 $colour-form-panel: $colour-portlet-background !default;
 $form-panel-collapsible-button-height: 26px;
+$form-input-field-border: none !default
+$form-input-field-border-focus: none !default
 
 form {
   section.help .panel-content {  
@@ -147,7 +149,7 @@ form {
     @include box-sizing();
     padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
     margin: -0.5 * $form-input-field-padding-top-bottom 0;
-    border: none;
+    border: $form-input-field-border;
     color: inherit;
     font-size: 100%;
     border-radius: 0;
@@ -157,7 +159,7 @@ form {
     line-height: $form-input-field-line-height;
     
     &:focus {
-      outline: none;
+      outline: $form-input-field-border-focus;
     }
 
     &:disabled,
