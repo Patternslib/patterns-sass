@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+div.ProseMirror {
+	outline: none !important;
+}
+
 .pat-rich-editor {
 	width: 100%;
 
