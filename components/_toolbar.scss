@@ -21,7 +21,7 @@ $pat-toolbar-font-size: 18px !default;
 	}
 
 	@include screen-size(small) {
-		margin: 0;
+		margin: 0 -10px;
 	}
 
 	&.inline {

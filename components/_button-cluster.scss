@@ -20,12 +20,16 @@ $pat-toolbar-button-height: $button-height !default;
     max-width: 100%;
     font-size: 0;
     vertical-align: top;
-    display: inline-block;
     border-radius: $border-radii;
     background: rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 6px rgba(0,0,0,0.12);
     // white-space: nowrap;
     padding: 0 6px;
+    display: inline-block;
+
+    @include screen-size(small) {
+      display: block;
+    }
 
     button, 
     a.button,
@@ -246,7 +250,7 @@ $pat-toolbar-button-height: $button-height !default;
 
         &:before {
           font-family: fontello;
-          content: '\e87b';
+          content: '#{$glyph-angle-double-right}';
           display: block;
           height: $button-height;
           lie-height: $button-height + 1px;
