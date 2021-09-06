@@ -34,6 +34,7 @@
 
     @media print {
       display: block;
+      width: 100%;
       border: none;
     }
   }
@@ -48,6 +49,7 @@
       display: block;
       border: none;
       clear: both;
+      width: 100%;
     }
 
     > *:last-child {
