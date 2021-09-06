@@ -526,7 +526,9 @@
   }
 
   &[disabled],
-  &.disabled {
+  &.disabled,
+  &.default[disabled],
+  &.default.disabled {
     color: $button-text-colour-disabled;
     background-color: $button-background-colour-disabled;
 
@@ -562,7 +564,7 @@
     box-shadow: none;
   }
 
-  &:active {
+  &:not[disabled]:active {
     box-shadow: inset 0 0 0.3em rgba(0, 0, 0, 0.4);
   }
 
