@@ -97,6 +97,7 @@ $browser-window-border-radii: 8px !default;
   	position: relative;
   	overflow: hidden;
     border: 1px solid silver;
+    padding: 0;
 
   	.auto-scale-wrapper,
     img {
