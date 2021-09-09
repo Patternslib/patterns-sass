@@ -83,6 +83,9 @@ $browser-window-border-radii: 8px !default;
   }
 
   &.type-app-icon {
+    margin-bottom: -30px;
+    margin-top: 20px;
+
     .passe-partout,
     object {
       height: 480px;
