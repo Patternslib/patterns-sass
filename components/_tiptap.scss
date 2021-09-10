@@ -4,12 +4,10 @@ textarea.pat-tiptap {
    opacity: 0
 }
 
-.tiptap-editor {
-   .tiptap-editor__content {
-      animation: fadeIn 0.4s;
+tiptap-container {
+   animation: fadeIn 0.4s;
 
-      .ProseMirror {
-         outline: none;
-      }
+   .ProseMirror {
+      outline: none;
    }
 }
