@@ -46,6 +46,7 @@ $tooltip-border-radii: $border-radii !default;
         // padding: 0.1em 0 0.1em $bullet-space;
         box-shadow: none;
         font-size: 1em;
+        font-family: $body-font-family;
 
         &:hover {
           text-decoration: none;
