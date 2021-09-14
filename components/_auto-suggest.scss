@@ -641,7 +641,7 @@ disabled look for disabled choices in the results dropdown
     // margin-bottom: -2px;
   }
   &.users .select2-choices .select2-search-choice.group div:before {
-    content: "\1f465";
+    content: "$glyph-icon-users";
     display: inline-block;
     margin-right: 3px;
     font: 0.8em / 2.1em fontello;
