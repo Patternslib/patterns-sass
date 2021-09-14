@@ -10,6 +10,12 @@
     grid-template-columns: 40% 60%;
   }
 
+  @media print {
+    display: grid;
+    grid-column-gap: 0;
+    grid-template-columns: 40% 60%;
+  }
+
   dt {
     font-weight: bold;
     border-top: 1px solid rgba(0, 0, 0, 0.15);
@@ -34,6 +40,7 @@
 
     @media print {
       display: block;
+      width: 100%;
       border: none;
     }
   }
@@ -48,6 +55,7 @@
       display: block;
       border: none;
       clear: both;
+      width: 100%;
     }
 
     > *:last-child {
