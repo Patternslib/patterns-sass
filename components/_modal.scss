@@ -4,6 +4,90 @@ $glyph-resize-full: '\e832' !default;
 
 div.pat-modal {
 
+  @keyframes show-sheet {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &.sheet {
+    position: absolute;
+    left: 50%;
+    max-width: 840px;
+    width: 90%;
+    bottom: 0;
+    top: 80px !important;
+    z-index: 10000; 
+    animation: show-sheet 0.4s;
+    box-sizing: border-box;
+    transform: translate(-50%, 0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    .close-panel {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 1;
+      color: transparent;
+
+      &:hover {
+        &:before {
+          background-color: rgba(black, 0.4);
+        }
+      }
+
+      &:before {
+        font-family: fontello;
+        content: '#{$glyph-cancel}';
+        color: white;
+        border-radius: 50%;
+        background-color: rgba(black, 0.3);
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        display: block;
+        font-size: 31px;
+      }
+    }
+
+    .panel-content {
+      overflow: auto;
+      padding: 80px;
+      background-color: white;
+      border-top-left-radius: $border-radii;
+      border-top-right-radius: $border-radii; 
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-sizing: border-box;
+      box-shadow: 0 0 70px rgba(black, 0.5);
+    }
+
+    &:before {
+      position: absolute;
+      top: -2000px;
+      right: -2000px;
+      bottom: -2000px;
+      left: -2000px;
+      content: ' ';
+      z-index: -1;
+      background-color: rgba(0,0,0,0.15);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      animation: fadeIn 1s;
+    }
+  }
+
   &.panel {
     position: fixed;
     z-index: 9998;
@@ -220,8 +304,8 @@ div.pat-modal {
     }
   }
 
-  &:not(.panel),
-  &.document-content:not(.panel) {
+  &:not(.panel):not(.sheet),
+  &.document-content:not(.panel):not(.sheet) {
 
     @include modal-background;
 
