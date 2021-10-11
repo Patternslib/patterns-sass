@@ -3,10 +3,10 @@
 $browser-window-border-radii: 8px !default;
 
 .pat-screenshot {
-	margin: 0 0 2em;
+	margin: -10px -10px 2em;
   overflow: hidden;
   position: relative;
-  padding: 0 10px;
+  padding: 11px 11px 0;
 
   &:before {
     position: absolute;
