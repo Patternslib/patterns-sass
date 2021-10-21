@@ -330,6 +330,13 @@
     border-radius: $border-radii;
     @include clear-fix;
 
+    .well-header {
+      margin-bottom: 1.5em;
+      line-height: 1.3;
+      font-size: 1.2em;
+      color: black;
+    }
+
     .panel-content {
       padding: 1em 0 0 0;
       box-sizing: border-box;
