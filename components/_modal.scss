@@ -2,6 +2,14 @@
 
 $glyph-resize-full: '\e832' !default;
 
+body.modal-active {
+  @media print {
+    > *:not(.pat-modal) {
+      display: none;
+    }
+  }
+}
+
 div.pat-modal {
 
   @keyframes show-sheet {
@@ -17,18 +25,24 @@ div.pat-modal {
   }
 
   &.sheet {
-    position: absolute;
-    left: 50%;
-    max-width: 840px;
-    width: 90%;
-    bottom: 0;
-    top: 80px !important;
-    z-index: 10000; 
-    animation: show-sheet 0.4s;
-    box-sizing: border-box;
-    transform: translate(-50%, 0);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+    @media screen {
+      position: absolute;
+      left: 50%;
+      max-width: 840px;
+      width: 90%;
+      bottom: 0;
+      top: 80px !important;
+      z-index: 10000; 
+      animation: show-sheet 0.4s;
+      box-sizing: border-box;
+      transform: translate(-50%, 0);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    @media print {
+      transform: translate(0, 0) !important;
+    }
 
     .close-panel {
       position: absolute;
@@ -56,35 +70,47 @@ div.pat-modal {
         display: block;
         font-size: 31px;
       }
+
+      @media print {
+        display: none !important;
+      }
     }
 
     .panel-content {
-      overflow: auto;
-      padding: 80px;
-      background-color: white;
-      border-top-left-radius: $border-radii;
-      border-top-right-radius: $border-radii; 
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      box-sizing: border-box;
-      box-shadow: 0 0 70px rgba(black, 0.5);
+      @media screen {
+        overflow: auto;
+        padding: 80px;
+        background-color: white;
+        border-top-left-radius: $border-radii;
+        border-top-right-radius: $border-radii; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-sizing: border-box;
+        box-shadow: 0 0 70px rgba(black, 0.5);
+      }
+
+      @media print {
+        overflow: visible;
+      }
     }
 
-    &:before {
-      position: absolute;
-      top: -2000px;
-      right: -2000px;
-      bottom: -2000px;
-      left: -2000px;
-      content: ' ';
-      z-index: -1;
-      background-color: rgba(0,0,0,0.15);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-      animation: fadeIn 1s;
+    @media screen {
+      &:before {
+        position: absolute;
+        top: -2000px;
+        right: -2000px;
+        bottom: -2000px;
+        left: -2000px;
+        content: ' ';
+        z-index: -1;
+        background-color: rgba(0,0,0,0.15);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        animation: fadeIn 1s;
+      }
     }
   }
 
