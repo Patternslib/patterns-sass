@@ -274,14 +274,15 @@ form {
     }
   }
 
-  .select2-container .select2-choice {
-    padding-top: $form-input-field-padding-top-bottom;
-    padding-bottom: $form-input-field-padding-top-bottom;
-  }
+  .select2-container {
+    margin: -0.5 * $form-input-field-padding-top-bottom 0;
 
-  .select2-container .select2-choices {
-    padding-top: 1px;
-    padding-bottom: 1px;
+    .select2-choice,
+    .select2-choices {
+      padding-top: $form-input-field-padding-top-bottom;
+      padding-bottom: $form-input-field-padding-top-bottom;
+      margin: 0 0 -8px 0;
+    }
   }
 
   textarea {
