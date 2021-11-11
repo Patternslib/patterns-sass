@@ -539,29 +539,29 @@ disabled look for disabled choices in the results dropdown
   }
 }
 
-// .select2-search-choice-close {
-//   display: block;
-//   width: 1em;
-//   height: 1em;
-//   position: absolute;
-//   right: 0.3em;
-//   top: 0em;
-//   font-size: 1em;
-//   text-decoration: none;
-//   opacity: 0.8;
-//   outline: none;
+.select2-search-choice-close {
+  display: block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  right: 0.3em;
+  top: 0em;
+  font-size: 1em;
+  text-decoration: none;
+  opacity: 0.8;
+  outline: none;
 
-//   &:hover {
-//     text-decoration: none;
-//     opacity: 1;
-//   }
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
   
-//   &:before {
-//     content: "#{$glyph-remove-tag}";
-//     color: white;
-//     font: 1em fontello;
-//   }
-// }
+  &:before {
+    content: "#{$glyph-remove-tag}";
+    color: white;
+    font: 1em fontello;
+  }
+}
 
 .select2-container-multi {
   .select2-search-choice-close {
