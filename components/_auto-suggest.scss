@@ -182,27 +182,24 @@ $colour-auto-suggest-pills: $colour-accent !default;
   // border-top: 1px solid #5897fb;
 }
 
-// .select2-container .select2-choice .select2-arrow {
-//   display: inline-block;
-//   width: 18px;
-//   height: 100%;
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   border-left: 1px solid #aaa;
-//   background-clip: padding-box;
-//   background: #ccc;
-//   // background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(0.6, #eeeeee));
-//   // background-image: -webkit-linear-gradient(center bottom, #cccccc 0%, #eeeeee 60%);
-//   // background-image: -moz-linear-gradient(center bottom, #cccccc 0%, #eeeeee 60%);
-//   // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0);
-//   // background-image: linear-gradient(top, #cccccc 0%, #eeeeee 60%);
-//   b {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
+.select2-container .select2-choice .select2-arrow {
+  display: inline-block;
+  width: 18px;
+  height: 100%;
+  position: absolute;
+  right: 7px;
+  top: 0;
+  background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+  background-size: auto 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  b {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .select2-search {
   display: inline-block;
@@ -542,29 +539,29 @@ disabled look for disabled choices in the results dropdown
   }
 }
 
-.select2-search-choice-close {
-  display: block;
-  width: 1em;
-  height: 1em;
-  position: absolute;
-  right: 0.3em;
-  top: 0em;
-  font-size: 1em;
-  text-decoration: none;
-  opacity: 0.8;
-  outline: none;
+// .select2-search-choice-close {
+//   display: block;
+//   width: 1em;
+//   height: 1em;
+//   position: absolute;
+//   right: 0.3em;
+//   top: 0em;
+//   font-size: 1em;
+//   text-decoration: none;
+//   opacity: 0.8;
+//   outline: none;
 
-  &:hover {
-    text-decoration: none;
-    opacity: 1;
-  }
+//   &:hover {
+//     text-decoration: none;
+//     opacity: 1;
+//   }
   
-  &:before {
-    content: "#{$glyph-remove-tag}";
-    color: white;
-    font: 1em fontello;
-  }
-}
+//   &:before {
+//     content: "#{$glyph-remove-tag}";
+//     color: white;
+//     font: 1em fontello;
+//   }
+// }
 
 .select2-container-multi {
   .select2-search-choice-close {
