@@ -18,4 +18,12 @@ textarea.pat-tiptap {
          }
       }
    }
+   .ProseMirror-focused {
+      p[data-placeholder] {
+
+         &:before {
+             display: none;
+         }
+      }
+   }
 }
