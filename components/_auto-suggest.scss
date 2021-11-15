@@ -137,7 +137,8 @@ $colour-auto-suggest-pills: $colour-accent !default;
 
 .select2-drop {
   width: 100%;
-  margin-top: -6px;
+  // margin-top: -6px;
+  margin-top: -1px;
   position: absolute;
   z-index: 9999;
   top: 100%;
