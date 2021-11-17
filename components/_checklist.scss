@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-$checklist-label-line-height: 0.9 * $base-line-height !default;
+$checklist-label-line-height: 0.9em !default;
 
 @mixin checkbox() {
 	padding-left: 1.5em;
