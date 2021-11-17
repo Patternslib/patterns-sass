@@ -745,6 +745,13 @@ form {
       }
     }
 
+    .group.pat-checklist {
+      legend,
+      .legend {
+        margin-bottom: 0.2em;
+      }
+    }
+
     label >,
     .group > {
       input,
