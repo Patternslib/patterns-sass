@@ -36,8 +36,8 @@ $pat-toolbar-font-size: 18px !default;
 		top: -40px;
 		transition: all 1s;
 
-	    #content:not(.scroll-position-top) &,
-	    #content:not(.scroll-position-top) & {
+	    :not(.scroll-position-top) &,
+	    :not(.scroll-position-top) & {
 	      	box-shadow: $default-box-shadow;
 
 			background-color: rgba(255,255,255,0.9);
