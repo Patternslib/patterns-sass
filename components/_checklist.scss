@@ -26,16 +26,24 @@ $checklist-label-line-height: 1.2em !default;
 		border-radius: 7%;
 	}
 
+	&.disabled,
+	&.disabled .label-fragment-description {
+		color: rgba(0,0,0,0.3);
+	}
+
 	.label-fragment-title {
 		margin: 0;
 	}
 
 	.label-fragment-description {
 		margin: 0 0 0.5em 0;
-	}
+		color: rgba(0,0,0,0.7);
+		font-size: 0.9em;
+		line-height: 1.4;
 
-	&.disabled {
-		color: rgba(0,0,0,0.3);
+		> * {
+			color: black;
+		}
 	}
 
 	&.checked:before {
