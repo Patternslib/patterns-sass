@@ -394,7 +394,7 @@
     overflow: hidden;
     border-radius: $border-radius;
     border: $border;
-    height: $height;
+    aspect-ratio: 1 / 1;
     width: $width;
 
     img {
@@ -403,6 +403,7 @@
         object-fit: cover;
         -webkit-clip-path: circle($border-radius);
         clip-path: circle($border-radius);
+        display: block;
     }
 }
 
