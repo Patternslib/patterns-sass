@@ -125,7 +125,7 @@ form {
     clear: both;
     margin-top: 0.5em;
     font-style: normal;
-    font-weight: normal;
+    font-weight: $font-weight-normal;
   }
 
   h2 {
@@ -680,7 +680,7 @@ form {
           legend {
             position: absolute;
             left: 0;
-            font-weight: normal;
+            font-weight: $font-weight-normal;
             font-style: normal;
             top: 0;
           }
@@ -693,7 +693,7 @@ form {
             box-sizing: border-box;
             position: relative;
             display: block;
-            font-weight: normal;
+            font-weight: $font-weight-normal;
             font-style: normal;
             margin: 0 0 0 $form-proportion-name * 100% / (100% - $form-proportion-name) * -1;
             text-transform: none;
@@ -701,7 +701,7 @@ form {
           }
 
           label {
-            font-weight: normal;
+            font-weight: $font-weight-normal;
             font-style: normal;
             position: relative;
             border-style: none;
@@ -773,7 +773,7 @@ form {
         display: block;
         margin-top: 0.2em;
         width: 100%;
-        font-weight: normal;
+        font-weight: $font-weight-normal;
       }   
     }
 
