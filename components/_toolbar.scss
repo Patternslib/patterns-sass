@@ -108,7 +108,8 @@ $pat-toolbar-font-size: 18px !default;
 			text-align: right;
 			grid-area: right;
 
-			.icon {
+			.icon,
+			.pat-button {
 				margin-left: 20px;
 				margin-right: 0;
 			}
@@ -173,6 +174,7 @@ $pat-toolbar-font-size: 18px !default;
 		border: none;
 		background-color: $colour-toolbar-button;
 		float: none;
+		white-space: nowrap;
 
 		&.meta-data-toggle {
 			transition: transform 0.3s;
