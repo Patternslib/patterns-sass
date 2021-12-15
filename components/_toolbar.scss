@@ -107,7 +107,8 @@ $pat-toolbar-font-size: 18px !default;
 			text-align: right;
 			grid-area: right;
 
-			.icon {
+			.icon,
+			.pat-button {
 				margin-left: 20px;
 				margin-right: 0;
 			}
@@ -172,6 +173,7 @@ $pat-toolbar-font-size: 18px !default;
 		border: none;
 		background-color: $colour-toolbar-button;
 		float: none;
+		white-space: nowrap;
 
 		&.meta-data-toggle {
 			transition: transform 0.3s;
@@ -189,7 +191,7 @@ $pat-toolbar-font-size: 18px !default;
 			box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
 		}
 
-		&:not(.active):not([disabled]):hover {
+		&:not(.active):not([disabled]):not(.default):hover {
 			color: black
 		}
 	}
