@@ -9,6 +9,7 @@ textarea.pat-tiptap {
 
    .ProseMirror {
       outline: none;
+      cursor: text;
 
       p[data-placeholder] {
 
