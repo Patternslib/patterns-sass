@@ -161,34 +161,34 @@ $tooltip-border-radii: $border-radii !default;
       background-color: $colour-notice;
     }
 
-    &[data-placement^='bottom'] .tippy-arrow {
+    [data-placement^='bottom'] .tippy-arrow {
       border-bottom-color: $colour-notice;
 
-      &::after {
+      &::before {
         border-bottom-color: $colour-notice;
       }
     }
 
-    &[data-placement^='left'] .tippy-arrow {
+    [data-placement^='left'] .tippy-arrow {
       border-left-color: $colour-notice;
 
-      &::after {
+      &::before {
         border-left-color: $colour-notice;
       }
     }
 
-    &[data-placement^='right'] .tippy-arrow {
+    [data-placement^='right'] .tippy-arrow {
       border-right-color: $colour-notice;
 
-      &::after {
+      &::before {
         border-right-color: $colour-notice;
       }
     }
 
-    &[data-placement^='top'] .tippy-arrow {
+    [data-placement^='top'] .tippy-arrow {
       border-top-color: $colour-notice;
 
-      &::after {
+      &::before {
         border-top-color: $colour-notice;
       }
     }
