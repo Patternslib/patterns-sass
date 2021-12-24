@@ -198,7 +198,7 @@ $tooltip-border-radii: $border-radii !default;
     .tippy-content {
       @include pat-rich();
 
-      > *:last-child {
+      > *:not(.footer):last-child {
         margin-bottom: 0;
       }
     }
