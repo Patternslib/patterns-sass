@@ -7,6 +7,7 @@ $colour-post: #e4f2f8 !default;
 $colour-alert: red !default;
 $colour-workspace-default: #869EBF !default;
 $colour-accent: #5d91ff !default;
+:root { --colour-accent: #{$colour-accent}; }
 $colour-success: #5bb75b !default;
 $colour-warning: #faa732 !default;
 $colour-notice: #fdfdc8 !default;

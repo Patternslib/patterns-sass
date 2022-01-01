@@ -238,7 +238,7 @@ $pat-toolbar-font-size: 18px !default;
 			}
 
 			&.pat-tooltip.tooltip-active-click {
-				background-color: $colour-accent;
+				background-color: var(--colour-accent);
 
 				.pie-graph {
 					border-color: white;;
@@ -272,11 +272,11 @@ $pat-toolbar-font-size: 18px !default;
 		}
 
 		&.active {
-			color: $colour-accent;
+			color: var(--colour-accent);
 	    	box-shadow: none;
 
 			&:before {
-				color: $colour-accent;
+				color: var(--colour-accent);
 			}
 		}
 
@@ -284,7 +284,7 @@ $pat-toolbar-font-size: 18px !default;
 
 
 			&:before {
-				background-color: $colour-accent;
+				background-color: var(--colour-accent);
 				color: white;
 			}
 		}
