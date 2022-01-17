@@ -79,7 +79,7 @@ $pat-toolbar-button-height: $button-height !default;
         }
 
         &:after {
-          background: $colour-accent;
+          background: var(--colour-accent);
           position: absolute;
           top: 3px;
           right: -3px;
@@ -305,7 +305,7 @@ $pat-toolbar-button-height: $button-height !default;
           }
 
           &.current {
-            background: $colour-accent;
+            background: var(--colour-accent);
             color: white;
           }
         }
@@ -335,11 +335,11 @@ $pat-toolbar-button-height: $button-height !default;
 
     &.select-all[disabled],
     &.deselect-all[disabled] {
-      background-color: $colour-accent;
+      background-color: var(--colour-accent);
       color: white;
 
       &:hover {
-        background-color: $colour-accent;
+        background-color: var(--colour-accent);
         color: white;
       }
     }
@@ -372,7 +372,7 @@ $pat-toolbar-button-height: $button-height !default;
       &.checked,
       &.active,
       &.current {
-        background: $colour-accent;
+        background: var(--colour-accent);
         color: white;
         text-decoration: none;
         box-shadow: none;
