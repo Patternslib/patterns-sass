@@ -2,6 +2,11 @@
 
 div.ProseMirror {
 	outline: none !important;
+
+	body & {
+		-webkit-user-select: text;
+		user-select: text;
+	}
 }
 
 .pat-rich-editor {
