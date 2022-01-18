@@ -182,6 +182,14 @@ form {
     }
   }
 
+  .pat-rich-editor {
+    .ProseMirror {
+      > *:last-child {
+        margin: 0;
+      }
+    }
+  }
+
   input[type=time] {
     padding-top: 0;
     padding-bottom: 0;
