@@ -36,7 +36,8 @@ $pat-toolbar-font-size: 18px !default;
 		top: -40px;
 		transition: all 1s;
 
-	    .pat-scroll-box:not(.scroll-position-top) & {
+	    .pat-scroll-box:not(.scroll-position-top) &,
+	    &.tiptap-focus {
 	      	box-shadow: $default-box-shadow;
 
 			background-color: rgba(255,255,255,0.9);
@@ -46,6 +47,21 @@ $pat-toolbar-font-size: 18px !default;
 				backdrop-filter: blur(50px) saturate(4) brightness(1.2);
 			}
 	    }
+	}
+
+	.editor-toolbar {
+		opacity: 0;
+		transition: opacity 0.4s;
+
+		&.tiptap-focus {
+			opacity: 1;
+		}
+	}
+
+	&.tiptap-focus {
+		.editor-toolbar {
+			opacity: 1;
+		}
 	}
 
 	.toolbar-navigation-area,
