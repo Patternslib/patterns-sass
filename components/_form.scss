@@ -184,9 +184,10 @@ form {
 
   .pat-rich-editor {
     .ProseMirror {
-      > *:last-child {
-        margin: 0;
-      }
+      // > *:last-child {
+      //   margin: 0;
+      // }
+      overflow: hidden;
     }
   }
 
