@@ -11,19 +11,11 @@ textarea.pat-tiptap {
       outline: none;
       cursor: text;
 
-      p[data-placeholder] {
+      > p:first-child[data-placeholder] {
 
          &:before {
             content: attr(data-placeholder);
             color: silver;
-         }
-      }
-   }
-   .ProseMirror-focused {
-      p[data-placeholder] {
-
-         &:before {
-             display: none;
          }
       }
    }
