@@ -15,6 +15,10 @@ $pat-toolbar-font-size: 18px !default;
 	border-radius: $border-radii;
 	font-size: $pat-toolbar-font-size;
 
+	&:focus {
+		outline: none;
+	}
+
 	@include screen-size(medium-large) {
 		margin: 0 -10px 40px;
 		height: $pat-toolbar-button-height;
