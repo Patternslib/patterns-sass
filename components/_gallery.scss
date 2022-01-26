@@ -9,6 +9,11 @@ $pswp__assets-path: '/assets/quaive/style/photoswipe/' !default;
 	}
 }
 
+.pswp__button--arrow--left:before, 
+.pswp__button--arrow--right:before {
+	border-radius: $border-radii;
+}
+
 .pswp__bg {
 	@include modal-background;
 }
