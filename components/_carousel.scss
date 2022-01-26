@@ -3,12 +3,37 @@
 $carousel-button-distance: 10px !default;
 $carousel-button-width: 40px !default;
 $carousel-button-height: 40px !default;
+$carousel-default-height: 400px !default;
 
 @import "../libraries/slick/slick.scss";
 
 .pat-carousel {
+    background-color: $colour-base;
+
+    &[data-pat-carousel*="height: fixed"] {
+        .slick-slide {
+            height: $carousel-default-height;
+
+            img {
+                height: 100% !important;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                object-fit: cover;
+            }
+        }
+    }
+
     .slick-slide {
         position: relative;
+
+        div {
+            li {
+                display: block !important; // Prevents unwanted bottom margin because of carrier returns in the markup.
+            }
+        }
 
         img {
             width: 100%;
