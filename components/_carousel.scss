@@ -4,6 +4,7 @@ $carousel-button-distance: 10px !default;
 $carousel-button-width: 40px !default;
 $carousel-button-height: 40px !default;
 $carousel-default-height: 400px !default;
+$carousel-default-dot-colour: #f73558 !default;
 
 @import "../libraries/slick/slick.scss";
 
@@ -200,7 +201,7 @@ $carousel-default-height: 400px !default;
 
         &.slick-active {
             button {
-                background-color: $colour-accent;
+                background-color: $carousel-default-dot-colour;
                 border: 2px solid white;
             }
         }
