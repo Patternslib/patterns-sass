@@ -8,7 +8,11 @@ $carousel-default-height: 400px !default;
 @import "../libraries/slick/slick.scss";
 
 .pat-carousel {
-    background-color: $colour-base;
+    &:hover {
+        .slick-dots {
+            opacity: 1;
+        }
+    }
 
     &[data-pat-carousel*="height: fixed"] {
         .slick-slide {
@@ -37,6 +41,7 @@ $carousel-default-height: 400px !default;
 
         img {
             width: 100%;
+            background-color: $colour-base;
         }
 
         .icon-zoom-in {
@@ -149,14 +154,20 @@ $carousel-default-height: 400px !default;
 
 .slick-dots {
     list-style: none;
-    text-align: center;
+    // text-align: center;
+    text-align: left;
     bottom: 15px;
     // margin-top: -50px;
     position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 30px;
+    // left: 10px;
+    // right: 10px;
+    // bottom: 30px;
     line-height: 15px;
+    left: 14px;
+    top: 10px;
+    right: 160px;
+    opacity: 0;
+    transition: opacity 0.5s;
 
     li {
         padding: 10px 8px;
@@ -170,14 +181,14 @@ $carousel-default-height: 400px !default;
         &:hover {
             button {
                 // border: 1px solid black;
-                background-color: rgba(255,255,255,0.3);
+                background-color: rgba(0,0,0,0.8);
             }
         }
 
         button {
             border-radius: 50%;
-            border: 1px white solid;
-            background-color: rgba(0,0,0,0.5);
+            border: 2px white solid;
+            background-color: rgba(0,0,0,0.4);
             width: 15px;
             height: 15px;
             color: transparent;
@@ -189,8 +200,8 @@ $carousel-default-height: 400px !default;
 
         &.slick-active {
             button {
-                background-color: rgba(255,255,255,0.9);
-                border: 1px solid white;
+                background-color: $colour-accent;
+                border: 2px solid white;
             }
         }
     }
