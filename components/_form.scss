@@ -42,6 +42,14 @@ form {
     background-color: $colour-form-panel;
     margin-bottom: $default-tail-white;
 
+    .panel-content > *:last-child {
+      margin-bottom: 0;
+    }
+
+    .panel-content > .button-bar:last-child {
+      margin-bottom: -10px;
+    }
+
     .form-separation-header {
       margin-top: 0;
       transition: padding 0.4s;
