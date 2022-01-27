@@ -106,6 +106,7 @@ $carousel-default-height: 400px !default;
     .slick-prev:before
     {
         content: '#{$glyph-left-big}';
+        font-size: 15px;
     }
     [dir='rtl'] .slick-prev:before
     {
@@ -124,6 +125,7 @@ $carousel-default-height: 400px !default;
     .slick-next:before
     {
         content: '#{$glyph-right-big}';
+        font-size: 15px;
     }
     [dir='rtl'] .slick-next:before
     {
