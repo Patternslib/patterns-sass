@@ -3,7 +3,8 @@
 $carousel-button-distance: 10px !default;
 $carousel-button-width: 40px !default;
 $carousel-button-height: 40px !default;
-$carousel-default-height: 400px !default;
+$carousel-default-height-large: 500px !default;
+$carousel-default-height-small: 200px !default;
 $carousel-default-dot-colour: #f73558 !default;
 
 @import "../libraries/slick/slick.scss";
@@ -17,15 +18,11 @@ $carousel-default-dot-colour: #f73558 !default;
 
     &[data-pat-carousel*="height: fixed"] {
         .slick-slide {
-            height: $carousel-default-height;
-
             img {
-                height: 100% !important;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
+                height: $carousel-default-height-large;
+                @include screen-size(small) {
+                    height: $carousel-default-height-small;
+                }
                 object-fit: cover;
             }
         }
@@ -50,6 +47,10 @@ $carousel-default-dot-colour: #f73558 !default;
             transition: opacity 0.4s;
             transition-delay: 0.5s;
             right: $carousel-button-distance + $carousel-button-width + $carousel-button-distance + $carousel-button-width + $carousel-button-distance;
+        
+            @include screen-size(small) {
+                display: none;
+            }
         }
 
         &.slick-current .icon-zoom-in {
@@ -60,6 +61,7 @@ $carousel-default-dot-colour: #f73558 !default;
             color: rgba(0,0,0,0.5);
             font-size: 0.8em;
             padding-top: 0.5em;
+            line-height: 1.5;
         }
     }
 
@@ -169,6 +171,10 @@ $carousel-default-dot-colour: #f73558 !default;
     right: 160px;
     opacity: 0;
     transition: opacity 0.5s;
+
+    @include screen-size(small) {
+        display: none !important;
+    }
 
     li {
         padding: 10px 8px;
