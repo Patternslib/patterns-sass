@@ -49,6 +49,12 @@ $carousel-default-height: 400px !default;
         &.slick-current .icon-zoom-in {
             opacity: 0.5;
         }
+
+        figcaption {
+            color: rgba(0,0,0,0.5);
+            font-size: 0.8em;
+            padding-top: 0.5em;
+        }
     }
 
     .icon,
