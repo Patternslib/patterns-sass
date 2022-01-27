@@ -53,8 +53,14 @@ $carousel-default-dot-colour: #f73558 !default;
             }
         }
 
-        &.slick-current .icon-zoom-in {
-            opacity: 0.5;
+        &.slick-current {
+            figcaption {
+                opacity: 1;
+            }
+
+            .icon-zoom-in {
+                opacity: 0.5;
+            }
         }
 
         figcaption {
@@ -62,6 +68,9 @@ $carousel-default-dot-colour: #f73558 !default;
             font-size: 0.8em;
             padding-top: 0.5em;
             line-height: 1.5;
+            opacity: 0;
+            transition: opacity 0.5s;
+            transition-delay: 0.5s;
         }
     }
 
