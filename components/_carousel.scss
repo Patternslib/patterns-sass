@@ -10,6 +10,9 @@ $carousel-default-dot-colour: #f73558 !default;
 @import "../libraries/slick/slick.scss";
 
 .pat-carousel {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
     &:hover {
         .slick-dots {
             opacity: 1;
