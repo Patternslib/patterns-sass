@@ -337,6 +337,7 @@ $pat-toolbar-button-height: $button-height !default;
     &.deselect-all[disabled] {
       background-color: var(--colour-accent);
       color: white;
+      opacity: 1;
 
       &:hover {
         background-color: var(--colour-accent);
