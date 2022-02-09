@@ -342,6 +342,12 @@ $pat-toolbar-font-size: 18px !default;
 			}
 		}
 
+		&.upload {
+			&:before {
+				content: "#{$glyph-upload}";
+			}
+		}
+
 	}
 
 	.pat-toolbar-search-field {
