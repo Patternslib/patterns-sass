@@ -20,12 +20,16 @@ $gallery-default-height: 400px !default;
 	height: $gallery-button-height;
 	line-height: $gallery-button-height;
     box-shadow: 0 0 0 2px rgba(white, 0.7); 
-    background: rgba(0, 0, 0, 0.6) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
 	border-radius: $border-radii;
 	color: white;
 	text-align: center;
 	font-size: 15px;
 	font-family: fontello;
+
+	&:hover {
+	  background: rgba(0, 0, 0, 0.6) !important;
+	}
 }
 
 .pswp__button--arrow--left:before {
