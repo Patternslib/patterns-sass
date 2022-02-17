@@ -19,7 +19,9 @@ textarea.pat-tiptap {
          }
       }
    }
-   .ProseMirror-trailingBreak {
-      display: none;
+   .ProseMirror-separator + .ProseMirror-trailingBreak,
+   .ProseMirror-separator {
+      display: none !important;
+      // Hiding the unwanted elements like this for the moment. We don't fully understand this yet.
    }
 }
