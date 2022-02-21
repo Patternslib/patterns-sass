@@ -177,6 +177,7 @@ $pat-toolbar-font-size: 18px !default;
 		vertical-align: top;
 		height:  $canvas-toolbar-button-height;
 		line-height: $canvas-toolbar-button-height;
+		font-size: $base-font-size;
 
 		select {
 			line-height: $pat-toolbar-button-height;
@@ -359,6 +360,7 @@ $pat-toolbar-font-size: 18px !default;
 		z-index: 1;
 		margin-left: 1em;
 		vertical-align: top;
+		font-size: $base-font-size;
 
 		&:after {
 			position: absolute;
