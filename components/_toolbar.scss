@@ -15,6 +15,11 @@ $pat-toolbar-font-size: 18px !default;
 	border-radius: $border-radii;
 	font-size: $pat-toolbar-font-size;
 
+	.text-button {
+		line-height: $pat-toolbar-button-height;
+		display: inline-block;
+	}
+
 	&:focus {
 		outline: none;
 	}
