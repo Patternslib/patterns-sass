@@ -32,6 +32,7 @@ $button-text-colour: white !default;
 $button-text-colour-hover: white !default;
 $button-background-colour: $colour-accent !default;
 $button-background-colour-hover: darken($colour-accent, 10%) !default;
+$button-shadow: none !default;
 
 $button-text-colour-subdued: rgba(0,0,0,0.6) !default;
 $button-text-colour-subdued-hover: rgba(0,0,0,1) !default;
@@ -42,6 +43,7 @@ $button-background-colour-default: $colour-accent !default;
 $button-background-colour-default-hover: darken($colour-accent, 10%) !default;
 $button-text-colour-default: white !default;
 $button-text-colour-default-hover: white !default;
+$button-shadow-default: none !default;
 
 $button-text-colour-disabled: rgba(black, 0.3) !default;
 $button-text-colour-disabled-hover: rgba(black, 0.3) !default;
@@ -56,6 +58,7 @@ $button-paddings: 0 1em !default;
 $button-small-height: 20px !default;
 $button-small-font-size: 0.8em !default;
 $button-small-paddings: 0 0.8em !default;
+$button-small-box-shadow: none !default;
 
 $canvas-toolbar-button-height: $button-height !default;
 
