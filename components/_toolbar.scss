@@ -197,7 +197,6 @@ $pat-toolbar-font-size: 18px !default;
 		vertical-align: top;
 		line-height: $pat-toolbar-button-height;
 		border: none;
-		background-color: $colour-toolbar-button;
 		float: none;
 		white-space: nowrap;
 		font-size: $pat-toolbar-font-size;
@@ -254,6 +253,7 @@ $pat-toolbar-font-size: 18px !default;
 		border-radius: $button-border-radius;
 		display: inline-block;
 		text-align: left;
+		background-color: transparent;
 
 		&.progress {
 			.pie-graph {
