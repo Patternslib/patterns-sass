@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 $pat-toolbar-button-height: $button-height !default;
+$pat-toolbar-button-line-height: $button-line-height !default;
 $colour-toolbar-button: transparent !default;
 $pat-toolbar-element-separation: 10px !default;
 $pat-tail-white: 15px !default;
@@ -181,11 +182,11 @@ $pat-toolbar-font-size: 18px !default;
 		display: inline-block;
 		vertical-align: top;
 		height:  $pat-toolbar-button-height;
-		line-height: $pat-toolbar-button-height;
+		line-height: $pat-toolbar-button-line-height;
 		font-size: $base-font-size;
 
 		select {
-			line-height: $pat-toolbar-button-height;
+			line-height: $pat-toolbar-button-line-height;
 			padding-top: 0;
 			padding-bottom: 0;
 		}
@@ -195,7 +196,7 @@ $pat-toolbar-font-size: 18px !default;
 	.icon {
 		display: inline-block;
 		vertical-align: top;
-		line-height: $pat-toolbar-button-height;
+		line-height: $pat-toolbar-button-line-height;
 		border: none;
 		float: none;
 		white-space: nowrap;
@@ -248,7 +249,7 @@ $pat-toolbar-font-size: 18px !default;
 		position: relative;
 		color: rgba(0,0,0,0.6);
 		cursor: default;
-		line-height: $pat-toolbar-button-height;
+		line-height: $pat-toolbar-button-line-height;
 		// float: left;
 		border-radius: $button-border-radius;
 		display: inline-block;
@@ -275,7 +276,7 @@ $pat-toolbar-font-size: 18px !default;
 		&:before {
 			font-family: fontello;
 			text-indent: 0;
-			line-height: $pat-toolbar-button-height + 1px;
+			line-height: $pat-toolbar-button-line-height + 1px;
 			text-align: center;
 			position: absolute;
 			margin: 0;
@@ -371,7 +372,7 @@ $pat-toolbar-font-size: 18px !default;
 			position: absolute;
 			top: 0;
 			left: 0;
-			line-height: $pat-toolbar-button-height;
+			line-height: $pat-toolbar-button-line-height;
 			width: $pat-toolbar-button-height;
 			text-align: center;
 			font-family: fontello;
