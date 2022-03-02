@@ -15,7 +15,7 @@ div.ProseMirror {
 
 	&:not(.toolbar-detached) {
 		.pat-form & {
-			padding-top: calc(#{$canvas-toolbar-button-height} + 15px);
+			padding-top: calc(#{$pat-toolbar-button-height} + 15px);
 		}
 	}
 

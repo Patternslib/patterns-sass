@@ -180,8 +180,8 @@ $pat-toolbar-font-size: 18px !default;
 	.toolbar-section label.pat-checklist {
 		display: inline-block;
 		vertical-align: top;
-		height:  $canvas-toolbar-button-height;
-		line-height: $canvas-toolbar-button-height;
+		height:  $pat-toolbar-button-height;
+		line-height: $pat-toolbar-button-height;
 		font-size: $base-font-size;
 
 		select {
@@ -243,12 +243,12 @@ $pat-toolbar-font-size: 18px !default;
 	.icon {
 		font-family: fontello;
 		text-indent: -1000em;
-		width: $canvas-toolbar-button-height;
-		height: $canvas-toolbar-button-height;
+		width: $pat-toolbar-button-height;
+		height: $pat-toolbar-button-height;
 		position: relative;
 		color: rgba(0,0,0,0.6);
 		cursor: default;
-		line-height: $canvas-toolbar-button-height;
+		line-height: $pat-toolbar-button-height;
 		// float: left;
 		border-radius: $button-border-radius;
 		display: inline-block;
@@ -275,7 +275,7 @@ $pat-toolbar-font-size: 18px !default;
 		&:before {
 			font-family: fontello;
 			text-indent: 0;
-			line-height: $canvas-toolbar-button-height + 1px;
+			line-height: $pat-toolbar-button-height + 1px;
 			text-align: center;
 			position: absolute;
 			margin: 0;
