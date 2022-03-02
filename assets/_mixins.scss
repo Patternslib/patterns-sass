@@ -565,7 +565,8 @@
   &.small {
     font-size: $button-small-font-size;
     padding: $button-small-paddings;
-    line-height: $button-small-height;
+    height: $button-small-height;
+    line-height: $button-small-line-height;
     vertical-align: baseline;
     box-shadow: $button-small-shadow;
   }
