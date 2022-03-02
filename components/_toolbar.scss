@@ -17,7 +17,7 @@ $pat-toolbar-font-size: 18px !default;
 	font-size: $pat-toolbar-font-size;
 
 	.text-button {
-		line-height: $pat-toolbar-button-height;
+		line-height: $pat-toolbar-button-line-height;
 		display: inline-block;
 	}
 
