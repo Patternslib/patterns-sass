@@ -162,7 +162,7 @@ $pat-toolbar-font-size: 18px !default;
 		margin-left: 1em;
 
 		&:before {
-			top: 15px;
+			top: 0.5 * $pat-toolbar-button-height;
 		}
 		
 		&:hover {
