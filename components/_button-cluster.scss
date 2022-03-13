@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-$pat-toolbar-button-height: $button-height !default;
-$button-cluster-toggle-margin: 3px !default;
+$pat-button-cluster-toggle-margin: 3px !default;
+$pat-button-cluster-button-height: $button-height !default;
+$pat-button-cluster-button-line-height: $button-line-height !default;
 
 .pat-button-cluster {
   display: inline-block;
@@ -25,7 +26,7 @@ $button-cluster-toggle-margin: 3px !default;
     background: rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 6px rgba(0,0,0,0.12);
     // white-space: nowrap;
-    padding: 0 calc(2 * #{$button-cluster-toggle-margin});
+    padding: 0 calc(2 * #{$pat-button-cluster-toggle-margin});
     display: inline-block;
 
     @include screen-size(small) {
@@ -46,8 +47,8 @@ $button-cluster-toggle-margin: 3px !default;
         padding: 0 12px;
         color: rgba(0,0,0,0.7);
         cursor: default;
-        line-height: $canvas-toolbar-button-height;
-        height: $canvas-toolbar-button-height;
+        line-height: $pat-button-cluster-button-line-height;
+        height: $pat-button-cluster-button-height;
         box-shadow: none;
         font-size: $base-font-size;
         font-weight: normal;
@@ -82,10 +83,10 @@ $button-cluster-toggle-margin: 3px !default;
         &:after {
           background: var(--colour-accent);
           position: absolute;
-          top: $button-cluster-toggle-margin;
-          right: calc(-1 * #{$button-cluster-toggle-margin});
-          bottom: $button-cluster-toggle-margin;
-          left: calc(-1 * #{$button-cluster-toggle-margin});
+          top: $pat-button-cluster-toggle-margin;
+          right: calc(-1 * #{$pat-button-cluster-toggle-margin});
+          bottom: $pat-button-cluster-toggle-margin;
+          left: calc(-1 * #{$pat-button-cluster-toggle-margin});
           z-index: -1;
           display: block;
           content: ' ';
@@ -328,8 +329,8 @@ $button-cluster-toggle-margin: 3px !default;
     padding: 0 1.2em;
     color: rgba(0,0,0,0.7);
     cursor: default;
-    line-height: $pat-toolbar-button-height;
-    height: $pat-toolbar-button-height;
+    line-height: $pat-button-cluster-button-height;
+    height: $pat-button-cluster-button-height;
     box-shadow: none;
     font-size: $base-font-size;
     font-weight: normal;

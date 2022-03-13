@@ -511,7 +511,7 @@
   font-size: $button-font-size;
   vertical-align: text-bottom;
   font-weight: $button-font-weight;
-  
+  box-shadow: $button-shadow;
   color: $button-text-colour;
   background-color: $button-background-colour;
     
@@ -525,6 +525,7 @@
   &.default {
     color: $button-text-colour-default;
     background-color: $button-background-colour-default;
+    box-shadow: $button-shadow-default;
     
     &:not([disabled]):hover {
       background-color: $button-background-colour-default-hover;
@@ -564,8 +565,10 @@
   &.small {
     font-size: $button-small-font-size;
     padding: $button-small-paddings;
-    line-height: $button-small-height;
+    height: $button-small-height;
+    line-height: $button-small-line-height;
     vertical-align: baseline;
+    box-shadow: $button-small-shadow;
   }
 
   &:focus {

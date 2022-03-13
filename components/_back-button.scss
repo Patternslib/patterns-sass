@@ -1,10 +1,14 @@
-$back-button-border-radius: $border-radii;
+$back-button-border-radius: $border-radii !default;
 $back-button-border-radius-left: 8px !default;
 
 $back-button-background-colour: $button-background-colour-subdued;
 $back-button-text-colour: $button-text-colour-subdued;
 $back-button-text-colour-hover: $button-text-colour-subdued-hover;
-$back-button-height: $button-height;
+$back-button-height: $button-height !default;
+$back-button-line-height: $button-line-height !default;
+
+$back-button-arrow-height-top: (0.5 * $back-button-height) - (0.26 * $back-button-border-radius-left) !default;
+$back-button-arrow-height-bottom: (0.5 * $back-button-height) - (0.26 * $back-button-border-radius-left) !default;
 
 $back-button-background-colour-dp: rgba(255,255,255,0.5);
 $back-button-text-colour-dp: rgba(255,255,255,0.9);
@@ -12,7 +16,7 @@ $back-button-text-colour-dp-hover: white;
 
 .pat-back-button {
 	display: inline-block;
-	line-height: $back-button-height;
+	line-height: $back-button-line-height;
 	height: $back-button-height;
 	// background: $colour-button;
 	color: $back-button-text-colour;
@@ -46,11 +50,11 @@ $back-button-text-colour-dp-hover: white;
 		width: 0;
 		height: 0;
 		border-style: solid;
-		border-width: 15px 15px 15px 0;
+		border-width: $back-button-arrow-height-top 15px $back-button-arrow-height-bottom 0;
 		border-color: transparent $back-button-background-colour transparent transparent;
 		position: absolute;
 		left: 0;
-		top: 2.5px;
+		top: 0.3 * $back-button-border-radius-left;
 	}
 
 	&:after {
