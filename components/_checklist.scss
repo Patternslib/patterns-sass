@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+$pat-checklist-item-separation: 0.2em !default;
 $checklist-label-line-height: 1.2em !default;
 
 @mixin checkbox() {
@@ -75,6 +76,11 @@ label.pat-checklist {
 .pat-checklist:not(.free-form) {
 	line-height: $checklist-label-line-height;
 
+	> legend,
+	> .legend {
+		margin-bottom: $pat-checklist-item-separation;
+	}
+
 	.pat-checklist-sub {
 		padding-left: 1em;
 		padding-bottom: 1em;
@@ -86,8 +92,8 @@ label.pat-checklist {
 			position: relative;
 			@include checkbox();
 			@include clear-fix();
-			margin-top: 0.2em;
-			margin-bottom: 0.2em;
+			margin-top: $pat-checklist-item-separation;
+			margin-bottom: $pat-checklist-item-separation;
 			white-space: normal;
 		}
 	}
@@ -104,8 +110,8 @@ label.pat-checklist {
 			position: relative;
 			@include checkbox();
 			// @include clear-fix();
-			margin-top: 0.2em;
-			margin-bottom: 0.2em;
+			margin-top: $pat-checklist-item-separation;
+			margin-bottom: $pat-checklist-item-separation;
 			white-space: normal;
 			font-weight: $font-weight-normal;
 
