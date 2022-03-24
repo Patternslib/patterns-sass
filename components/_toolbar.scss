@@ -19,6 +19,23 @@ $pat-toolbar-font-size: 18px !default;
 	.text-button {
 		line-height: $pat-toolbar-button-line-height;
 		display: inline-block;
+		cursor: default;
+		border-radius: $button-border-radius;
+		padding: $button-paddings;
+		margin: 0 -15px;
+
+		&:before {
+			margin-left: -7px;
+		}
+
+		&:hover {
+			color: black;
+		}
+
+		&.tooltip-active-click {
+			background-color: $colour-accent;
+			color: white;
+		}
 	}
 
 	&:focus {
