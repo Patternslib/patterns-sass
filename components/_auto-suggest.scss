@@ -607,7 +607,9 @@ disabled look for disabled choices in the results dropdown
 /* @group Icons */
 
 .select2-container {
-  &.users .select2-choices .select2-search-choice div:before {
+  &.users .select2-choices .select2-search-choice div:before,
+  &.user-groups .select2-choices .select2-search-choice.user div:before,
+  .select2-choices .select2-search-choice.user div:before {
     content: "#{$glyph-icon-user}";
     display: inline-block;
     margin-right: 3px;
@@ -615,7 +617,9 @@ disabled look for disabled choices in the results dropdown
     margin-left: 5px;
     float: left;
   }
-  &.user-groups .select2-choices .select2-search-choice div:before {
+  &.user-groups .select2-choices .select2-search-choice div:before,
+  &.users .select2-choices .select2-search-choice.user-group div:before,
+  .select2-choices .select2-search-choice.user-group div:before {
     content: "#{$glyph-icon-user-group}";
     display: inline-block;
     margin-right: 3px;
