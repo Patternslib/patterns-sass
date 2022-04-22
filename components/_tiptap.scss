@@ -16,6 +16,8 @@ textarea.pat-tiptap {
          &:before {
             content: attr(data-placeholder);
             color: silver;
+            float: left;
+            height: 0;
          }
       }
    }
