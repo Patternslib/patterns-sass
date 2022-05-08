@@ -1,9 +1,11 @@
+$pat-container-width: 1280px !default;
+
 @charset "UTF-8";
 
 @mixin container {
    display: block;
    margin: 0 auto;
-   max-width: 1280px;
+   max-width: $pat-container-width;
    padding: 0 $default-screen-padding;
 
    @include screen-size(small) {
