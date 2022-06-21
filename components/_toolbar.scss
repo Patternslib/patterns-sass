@@ -203,6 +203,13 @@ $pat-toolbar-font-size: 18px !default;
 		line-height: $pat-toolbar-button-line-height;
 		font-size: $base-font-size;
 
+		&.bare {
+			&:before {
+				height:  $pat-toolbar-button-height;
+				line-height: $pat-toolbar-button-line-height;
+			}
+		}
+
 		select {
 			line-height: $pat-toolbar-button-line-height;
 			height: $pat-toolbar-button-height;
@@ -348,7 +355,7 @@ $pat-toolbar-font-size: 18px !default;
 			// float: right;
 
 			&:before {
-				content: "#{$glyph-icon-edit}";
+				content: "#{$glyph-edit}";
 			}
 		}
 
