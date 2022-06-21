@@ -134,6 +134,7 @@ $pat-toolbar-font-size: 18px !default;
 
 		&.view-options {
 			grid-area: left;
+			overflow: hidden; // Required for truncation of .pat-select.bare
 
 			.pat-button-cluster,
 			.pat-buttton,
@@ -204,6 +205,7 @@ $pat-toolbar-font-size: 18px !default;
 
 		select {
 			line-height: $pat-toolbar-button-line-height;
+			height: $pat-toolbar-button-height;
 			padding-top: 0;
 			padding-bottom: 0;
 		}
