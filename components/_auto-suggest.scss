@@ -86,6 +86,40 @@ $colour-auto-suggest-pills: $colour-accent !default;
   .select2-choice {
     text-decoration: none;
 
+    abbr.select2-search-choice-close {
+      width: 16px;
+      height: 16px; 
+      background: none;
+      cursor: default;
+      right: 34px;
+      display: none;
+      position: absolute;
+      top: 8px;
+      font-size: 1px;
+      text-decoration: none;
+      border: 0;
+      outline: 0;
+
+      &:before {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        content: '#{$glyph-cancel}';
+        font-family: fontello;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #666;
+        font-size: 16px;
+        cursor: default;
+      }
+
+      &:hover:before {
+        color: black;
+      }
+    }
+
     > .select2-chosen {
       margin-right: 26px;
       display: block;
@@ -93,27 +127,10 @@ $colour-auto-suggest-pills: $colour-accent !default;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-    abbr {
-      display: none;
-      width: 12px;
-      height: 12px;
-      position: absolute;
-      right: 24px;
-      top: 8px;
-      font-size: 1px;
-      text-decoration: none;
-      border: 0;
-      background: url('select2.png') right top no-repeat;
-      cursor: pointer;
-      outline: 0;
-    }
+
   }
   &.select2-allowclear .select2-choice abbr {
     display: inline-block;
-  }
-  .select2-choice abbr:hover {
-    background-position: right -11px;
-    cursor: pointer;
   }
 }
 
@@ -551,28 +568,30 @@ disabled look for disabled choices in the results dropdown
   }
 }
 
-.select2-search-choice-close {
-  display: block;
-  width: 1em;
-  height: 1em;
-  position: absolute;
-  right: 0.3em;
-  top: 0em;
-  font-size: 1em;
-  text-decoration: none;
-  opacity: 0.8;
-  outline: none;
-  cursor: default;
-
-  &:hover {
+.select2-choices {
+  .select2-search-choice-close {
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    right: 0.3em;
+    top: 0em;
+    font-size: 1em;
     text-decoration: none;
-    opacity: 1;
-  }
-  
-  &:before {
-    content: "#{$glyph-remove-tag}";
-    color: white;
-    font: 1em fontello;
+    opacity: 0.8;
+    outline: none;
+    cursor: default;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+    }
+    
+    &:before {
+      content: "#{$glyph-remove-tag}";
+      color: white;
+      font: 1em fontello;
+    }
   }
 }
 
