@@ -53,6 +53,10 @@
 				&[href] {
 					cursor: pointer;
 					color: $colour-link;
+
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}
 
