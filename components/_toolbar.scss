@@ -372,6 +372,14 @@ $pat-toolbar-font-size: 18px !default;
 			}
 		}
 
+		&.preview {
+			// float: right;
+
+			&:before {
+				content: "#{$glyph-eye}";
+			}
+		}
+
 		&.modify {
 			// float: right;
 
