@@ -33,6 +33,12 @@ $browser-window-border-radii: 8px !default;
   figcaption {
     position: relative;
     z-index: 2;
+
+    .icon {
+      height: 1em;
+      margin-right: 0.2em;
+      vertical-align: middle;
+    }
   }
 
   object {
