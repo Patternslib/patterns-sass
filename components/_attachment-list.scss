@@ -12,6 +12,7 @@
 			padding: 0.6em 0.4em 0.4em;
 			padding-top: 0.5em;
 			font-size: 0.8em;
+			box-sizing: border-box;
 		}
 	}
 
@@ -43,8 +44,21 @@
 
 		.label {
 			display: table-cell;
-			cursor: pointer;
+			cursor: default;
 			font-weight: bold;
+
+			a {
+				color: $body-font-color;
+
+				&[href] {
+					cursor: pointer;
+					color: $colour-link;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
 
 			*[class~=icon-] {
 				display: block;
