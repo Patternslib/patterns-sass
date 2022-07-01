@@ -22,6 +22,19 @@ $pat-toolbar-font-size: 18px !default;
 		margin: 0;
 		font-weight: bold;
 
+		&.select {	
+		    /* Next 2 lines is a bizarre patch to make misbehaving FF hide the original dropdown button*/
+		    text-indent: 0.01px;
+		    text-overflow: '';
+
+		    padding-right: 1.5em;
+		    background-repeat: no-repeat;
+		    background-position: calc(100% - 10px) center;
+		    background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+		    background-size: auto 10px;
+		    @media print { background-image: none; }
+		}
+
 		.icon {
 			height: 0.6 * $pat-toolbar-button-height;
 			width: auto;
