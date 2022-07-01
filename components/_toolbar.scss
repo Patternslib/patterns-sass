@@ -27,12 +27,20 @@ $pat-toolbar-font-size: 18px !default;
 		    text-indent: 0.01px;
 		    text-overflow: '';
 
+		    text-decoration: none;
+		    color: rgba(0, 0, 0, 0.6);
+		    cursor: default;
 		    padding-right: 1.5em;
 		    background-repeat: no-repeat;
 		    background-position: calc(100% - 10px) center;
 		    background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
 		    background-size: auto 10px;
 		    @media print { background-image: none; }
+
+		    &:hover {
+		    	text-decoration: none;
+		    	color: black;
+		    }
 		}
 
 		.icon {
