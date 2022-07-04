@@ -21,13 +21,15 @@ $pat-toolbar-font-size: 18px !default;
 		line-height: $pat-toolbar-button-line-height;
 		margin: 0;
 		font-weight: bold;
+		white-space: nowrap !important;
+		max-width: 100%;
+		box-sizing: border-box;
+	    text-overflow: ellipsis;
+	    text-decoration: none;
+	    display: inline-block;
 
 		&.select {	
-		    /* Next 2 lines is a bizarre patch to make misbehaving FF hide the original dropdown button*/
-		    text-indent: 0.01px;
-		    text-overflow: '';
-
-		    text-decoration: none;
+		    overflow: hidden;
 		    color: rgba(0, 0, 0, 0.6);
 		    cursor: default;
 		    padding-right: 1.5em;
