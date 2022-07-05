@@ -170,7 +170,8 @@ $pat-toolbar-font-size: 18px !default;
 
 		&.view-options {
 			grid-area: left;
-			overflow: hidden; // Required for truncation of .pat-select.bare
+			// overflow: hidden; // Required for truncation of .pat-select.bare
+			min-width: 0; // Required for truncation of .pat-select.bare
 
 			.pat-button-cluster,
 			.pat-buttton,
