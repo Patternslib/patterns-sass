@@ -15,8 +15,12 @@ $form-fields-border-radius: $border-radii !default;
 $colour-placeholder: rgba(0,0,0,0.35);
 $colour-form-panel: $colour-portlet-background !default;
 $form-panel-collapsible-button-height: 26px;
+$form-input-field-outline: none !default;
+$form-input-field-outline-focus: none !default;
 $form-input-field-border: none !default;
 $form-input-field-border-focus: none !default;
+$form-input-field-box-shadow: none !default;
+$form-input-field-box-shadow-focus: none !default;
 $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 
 form {
@@ -142,6 +146,12 @@ form {
     margin-bottom: 1em;
   }
 
+  .field-cluster {
+    margin: -0.5 * $form-input-field-padding-top-bottom 0;
+    max-width: 100%;
+    line-height: $form-input-field-line-height;
+  }
+
   input,
   textarea,
   .textarea.group,
@@ -150,8 +160,8 @@ form {
   .select2-container .select2-choices,
   .md-editor .md-render,
   .pat-rich-editor,
-  .output-field
-   {
+  .output-field,
+    {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -159,8 +169,10 @@ form {
     display: inline-block;
     @include box-sizing();
     padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
-    margin: -0.5 * $form-input-field-padding-top-bottom 0;
+    margin: -1 * $form-input-field-padding-top-bottom 0;
     border: $form-input-field-border;
+    box-shadow: $form-input-field-box-shadow;
+    outline: $form-input-field-outline;
     color: inherit;
     font-size: 100%;
     border-radius: 0;
@@ -170,12 +182,16 @@ form {
     line-height: $form-input-field-line-height;
     
     &:focus {
-      outline: $form-input-field-border-focus;
+      outline: $form-input-field-outline-focus;
+      border: $form-input-field-border-focus;
+      box-shadow: $form-input-field-box-shadow-focus;
     }
 
     &:disabled,
     &.disabled {
       border: transparent;
+      box-shadow: none;
+      outline: none;
       opacity: 1;
       padding: 0;
       background-color: transparent;
@@ -187,6 +203,32 @@ form {
       opacity: 1;
       padding: 0;
       background-color: transparent;
+    }
+  }
+
+  .field-cluster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px,1fr));
+    grid-column-gap: 10px;
+
+    label {
+      position: relative;
+      color: transparent;
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.layout-address-line-nl {  
+      grid-template-columns: auto 100px 60px;    
+    }
+
+    &.layout-postal-code-place-line-nl {
+      grid-template-columns: 100px auto;   
     }
   }
 
@@ -582,6 +624,10 @@ form {
         @include screen-size(medium-large) { 
         width: 100%;
 
+        .field-cluster {
+          width: $form-proportion-value;
+        }
+
         > br {
           display: none;
         }
@@ -788,6 +834,7 @@ form {
       .pat-miller-columns,
       .output-field,
       .composed,
+      .field-cluster,
       .attachment-list {
         // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
         display: block;
