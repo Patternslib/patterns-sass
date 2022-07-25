@@ -115,6 +115,7 @@ $pat-toolbar-font-size: 18px !default;
 	.editor-toolbar {
 		opacity: 0;
 		transition: opacity 0.4s;
+		pointer-events: none;
 
 		&.tiptap-focus {
 			opacity: 1;
@@ -124,6 +125,7 @@ $pat-toolbar-font-size: 18px !default;
 	&.tiptap-focus {
 		.editor-toolbar {
 			opacity: 1;
+			pointer-events: all;
 		}
 	}
 
