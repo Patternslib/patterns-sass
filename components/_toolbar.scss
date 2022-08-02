@@ -428,6 +428,18 @@ $pat-toolbar-font-size: 18px !default;
 			}
 		}
 
+		&.card-view {
+			&:before {
+				content: "#{$glyph-grid-large}";
+			}
+		}
+
+		&.list-view {
+			&:before {
+				content: "#{$glyph-list-large}";
+			}
+		}
+
 	}
 
 	.pat-toolbar-search-field {
