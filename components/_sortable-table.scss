@@ -74,6 +74,7 @@
     thead {
       th {
         @include sortable-table-cell;
+        cursor: default;
       }  
     }
 }
