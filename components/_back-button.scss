@@ -17,6 +17,11 @@ $back-button-text-colour-dp-hover: white;
 .pat-back-button {
 	display: inline-block;
 	line-height: $back-button-line-height;
+
+	.pat-toolbar & {
+		line-height: $pat-toolbar-button-line-height;
+	}
+
 	height: $back-button-height;
 	// background: $colour-button;
 	color: $back-button-text-colour;
@@ -71,6 +76,7 @@ $back-button-text-colour-dp-hover: white;
 		border-bottom-right-radius: $back-button-border-radius;
 		border-top-left-radius: $back-button-border-radius-left;
 		border-bottom-left-radius: $back-button-border-radius-left;
+		z-index: -1;
 	}
 
 	&.dp {
