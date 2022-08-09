@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 $glyph-resize-full: '\e832' !default;
+$modal-panel-body-top-padding: 5px !default;
 
 body.modal-active {
   @media print {
@@ -260,7 +261,7 @@ div.pat-modal {
       .panel-body {
         max-height: calc(100vh - 250px);
         overflow-y: auto; 
-        padding-top: 5px;       
+        padding-top: $modal-panel-body-top-padding;       
 
         > .button-bar:last-child,
         .container > .button-bar:last-child,
