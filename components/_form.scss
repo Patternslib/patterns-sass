@@ -35,7 +35,8 @@ form {
   .form-separation-title,
   .form-separation-header {
     margin: 2em 0 1em;
-    font-size: 21px;
+    font-size: 28px;
+    font-weight: normal;
   }
 
   &.panel-style .form-panel {   
@@ -150,6 +151,10 @@ form {
     margin-bottom: 1em;
     margin-top: 1.5em;
     font-size: 1.1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   .field-cluster {
