@@ -73,7 +73,7 @@ form {
 
         &:after {
           font-family: fontello;
-          content: '#{$glyph-minus}';
+          content: '#{$glyph-up-open}';
           font-size: 0.65em;
           background-color: $button-background-colour-subdued;
           color: $button-text-colour-subdued;
@@ -119,7 +119,7 @@ form {
           border-radius: $border-radii;
 
           &:after {
-            content: '#{$glyph-plus-1}';
+            content: '#{$glyph-down-open}';
           }
 
         }
