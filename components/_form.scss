@@ -16,6 +16,7 @@ $colour-placeholder: rgba(0,0,0,0.35);
 $colour-form-panel: $colour-portlet-background !default;
 $form-panel-collapsible-button-height: 26px;
 $form-input-field-outline: none !default;
+$form-input-field-outline-offset: 0 !default;
 $form-input-field-outline-focus: none !default;
 $form-input-field-border: none !default;
 $form-input-field-border-focus: none !default;
@@ -184,6 +185,7 @@ form {
     border: $form-input-field-border;
     box-shadow: $form-input-field-box-shadow;
     outline: $form-input-field-outline;
+    outline-offset: $form-input-field-outline-offset;
     color: inherit;
     font-size: 100%;
     border-radius: 0;
@@ -214,6 +216,15 @@ form {
       opacity: 1;
       padding: 0;
       background-color: transparent;
+    }
+  }
+
+  .select2-container-active {
+    .select2-choice, 
+    .select2-choices {
+      outline: $form-input-field-outline-focus;
+      border: $form-input-field-border-focus;
+      box-shadow: $form-input-field-box-shadow-focus;
     }
   }
 

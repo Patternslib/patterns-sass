@@ -1,4 +1,9 @@
-@charset "UTF-8";
+$form-input-field-outline: none !default;
+$form-input-field-outline-focus: none !default;
+$form-input-field-border: none !default;
+$form-input-field-border-focus: none !default;
+$form-input-field-box-shadow: none !default;
+$form-input-field-box-shadow-focus: none !default;
 
 $glyph-remove-tag: $glyph-remove;
 $colour-auto-suggest-pills: $colour-accent !default;
@@ -272,15 +277,10 @@ $colour-auto-suggest-pills: $colour-accent !default;
 }
 
 .select2-container-active {
-  .select2-choice, .select2-choices {
-    // border: 1px solid #5897fb;
-
+  .select2-choice, 
+  .select2-choices {
     background-color: rgba(0,0,0,0.09);
-
     @include box-sizing();
-    outline: none;
-    // -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -468,7 +468,7 @@ disabled look for disabled choices in the results dropdown
   }
   &.select2-container-active .select2-choices {
     // border: 1px solid #5897fb;
-    outline: none;
+    outline: $form-input-field-outline-focus;
     // -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
