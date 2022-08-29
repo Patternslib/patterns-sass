@@ -426,8 +426,9 @@
     line-height: 1.3;
     font-family: $body-font-family;
 
+    > p,
     .message-title {
-      margin-bottom: 0.2em;
+      margin-bottom: 0.5em;
     }
 
     > *:last-child {
