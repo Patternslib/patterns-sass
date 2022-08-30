@@ -53,22 +53,29 @@ $tooltip-border-radii: $border-radii !default;
           color: black;
         }
 
-        &.disabled {
-          color: silver;
+        &:active,
+        &.active {
+          box-shadow: none;
+        }
+      }
+
+      > *,
+      > form > *,
+      > form > label > * {
+
+        &.disabled,
+        &[disabled] {
+          color: rgba(0, 0, 0, 0.2);
           cursor: default;
           -webkit-pointer-events: none;
           pointer-events: none;
 
           &:hover,
           &:active {
-            color: silver;
+            color: rgba(0, 0, 0, 0.2) !important;
           }
         }
 
-        &:active,
-        &.active {
-          box-shadow: none;
-        }
       }
 
       a:before, 
