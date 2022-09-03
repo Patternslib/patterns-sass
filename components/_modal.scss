@@ -2,6 +2,7 @@
 
 $glyph-resize-full: '\e832' !default;
 $modal-panel-body-top-padding: 5px !default;
+$modal-panel-body-left-right-padding: 30px !default;
 
 body.modal-active {
   @media print {
@@ -127,6 +128,42 @@ div.pat-modal {
     animation: fadeIn 0.2s;
     background-color: transparent;
     border-radius: $border-radii;
+
+    &.carousel {
+
+      .panel-content {
+        .panel-body {
+          overflow-y: visible;
+          max-height: auto;
+
+          .pat-toolbar {
+            margin-bottom: 30px;
+            margin-top: -10px;
+          }
+
+          .panel-sheets {
+            &.pat-carousel {
+              margin-left: -1 * $modal-panel-body-left-right-padding;
+              margin-right: -1 * $modal-panel-body-left-right-padding;
+              margin-top: 0;
+              margin-bottom: 0;
+
+              .slick-slide {
+                padding: 0 $modal-panel-body-left-right-padding;
+                max-height: calc(100vh - 390px);
+                overflow-y: auto;
+              }
+            }
+          }
+
+          .container > .button-bar:last-child {
+            position: relative !important;
+            bottom: 0;
+            border-top: 1px solid silver;
+          }
+        }
+      }
+    }
 
     &.small {
       animation: bounceInCentred 0.5s;
@@ -335,7 +372,7 @@ div.pat-modal {
     }
 
     .container {
-      padding: 0 30px;
+      padding: 0 $modal-panel-body-left-right-padding;
     }
   }
 
