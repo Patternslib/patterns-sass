@@ -656,6 +656,7 @@ $collapsible-button-height: 31px !default;
     line-height: $button-small-line-height;
     vertical-align: baseline;
     box-shadow: $button-small-shadow;
+    font-weight: 600;
   }
 
   &:focus {
