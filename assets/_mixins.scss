@@ -1,3 +1,9 @@
+$well-box-shadow: $default-box-shadow !default;
+$well-box-shadow-hover: $default-box-shadow-hover !default;
+$well-headers: $colour-link !default;
+$well-background: $colour-portlet-background !default;
+$default-tail-white: 25px !default;
+
 @mixin screen-size($media) {
   @if $media == small {
     @media only screen and (max-width: $break-small) { @content; }
@@ -325,21 +331,94 @@
 }
 
 @mixin pat-well() {
-    // color: rgba(0,0,0,0.6);
     padding: 40px;
+    box-sizing: border-box;
+    box-shadow: $default-box-shadow;
     border-radius: $border-radii;
-    @include clear-fix;
+    background-color: $colour-form-panel;
+    margin-bottom: $default-tail-white;
 
     .well-header {
-      margin-bottom: 1.5em;
+      margin-bottom: 40px;
       line-height: 1.3;
-      font-size: 1.2em;
+      font-size: 28px;
+      font-weight: normal;
       color: black;
     }
 
-    .panel-content {
-      padding: 1em 0 0 0;
-      box-sizing: border-box;
+    &.pat-collapsible {
+      transition: padding 0.4s;
+      padding: 0;
+
+      > .well-header {
+        padding-right: 50px;
+        padding-left: 40px;
+        position: relative;
+        margin: 0;
+
+        &:after {
+          font-family: fontello;
+          content: '#{$glyph-up-open}';
+          font-size: 0.65em;
+          background-color: $button-background-colour-subdued;
+          color: $button-text-colour-subdued;
+          position: absolute;
+          right: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+          width: $form-panel-collapsible-button-height;
+          height: $form-panel-collapsible-button-height;
+          text-align: center;
+          line-height: $form-panel-collapsible-button-height;
+          border-radius: $border-radii;
+        }
+
+        &:hover:after {
+          color: $button-text-colour-subdued-hover;
+        }
+      }
+
+      &.open,
+      &.closed.in-progress {
+        transition: box-shadow 2s;
+
+        > .well-header {
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+      }
+
+      &.closed {
+        &:hover {
+          box-shadow: $form-panels-box-shadow-hover;
+        }
+      }
+
+      &.closed,
+      &.open.in-progress {
+
+        > .well-header {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border-radius: $border-radii;
+
+          &:after {
+            content: '#{$glyph-down-open}';
+          }
+
+        }
+      }
+
+      > .panel-content {
+        padding: 0 40px 40px;
+        box-sizing: border-box;
+      }
+    }
+
+    > .well-header {
+      margin-top: 0;
+      transition: padding 0.4s;
     }
 
     > *:last-child {
@@ -349,13 +428,6 @@
     @include screen-size(small) {
       padding: 20px;
     }
-
-    background-color: rgba(255,255,255,0.5);
-    margin-bottom: $default-tail-white;
-    display: block;
-    box-sizing: border-box;
-    border-radius: $border-radii;
-    box-shadow: $default-box-shadow;
 
     &.success {
         background-color: $colour-success;
