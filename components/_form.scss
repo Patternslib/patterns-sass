@@ -768,7 +768,7 @@ form {
             letter-spacing: 0;
           }
 
-          &:not(.free-form) {
+          :not(.free-form) {
             label {
               width: auto;
             }
