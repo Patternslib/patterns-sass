@@ -3,6 +3,7 @@ $well-box-shadow-hover: $default-box-shadow-hover !default;
 $well-headers: $colour-link !default;
 $well-background: $colour-portlet-background !default;
 $default-tail-white: 25px !default;
+$collapsible-button-height: 31px !default;
 
 @mixin screen-size($media) {
   @if $media == small {
@@ -25,6 +26,32 @@ $default-tail-white: 25px !default;
   }
   @else if $media == large {
     @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+@mixin pat-collapsible-button() {
+  &:after {
+    font-family: fontello;
+    content: '#{$glyph-up-open}';
+    font-size: 0.65em;
+    background-color: $button-background-colour-subdued;
+    color: $colour-link;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: $collapsible-button-height;
+    height: $collapsible-button-height;
+    text-align: center;
+    line-height: $collapsible-button-height;
+    border-radius: $border-radii;
+    transition: all 0.2s ease-out;
+    display: inline-block;
+  }
+
+  &:hover:after {
+    transform: scale(1.2) translateY(-42%);
   }
 }
 
@@ -357,27 +384,7 @@ $default-tail-white: 25px !default;
         margin: 0;
         transition: padding 0.4s;
 
-        &:after {
-          font-family: fontello;
-          content: '#{$glyph-up-open}';
-          font-size: 0.65em;
-          background-color: $button-background-colour-subdued;
-          color: $button-text-colour-subdued;
-          position: absolute;
-          right: 40px;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 1;
-          width: $form-panel-collapsible-button-height;
-          height: $form-panel-collapsible-button-height;
-          text-align: center;
-          line-height: $form-panel-collapsible-button-height;
-          border-radius: $border-radii;
-        }
-
-        &:hover:after {
-          color: $button-text-colour-subdued-hover;
-        }
+        @include pat-collapsible-button;
       }
 
       &.open,

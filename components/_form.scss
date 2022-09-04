@@ -14,7 +14,7 @@ $colour-form-fields-background: #efefef !default;
 $form-fields-border-radius: $border-radii !default;
 $colour-placeholder: rgba(0,0,0,0.35);
 $colour-form-panel: $colour-portlet-background !default;
-$form-panel-collapsible-button-height: 26px;
+$form-panel-collapsible-button-height: $collapsible-button-height !default;
 $form-input-field-outline: none !default;
 $form-input-field-outline-offset: 0 !default;
 $form-input-field-outline-focus: none !default;
@@ -72,27 +72,7 @@ form {
         position: relative;
         margin: 0;
 
-        &:after {
-          font-family: fontello;
-          content: '#{$glyph-up-open}';
-          font-size: 0.65em;
-          background-color: $button-background-colour-subdued;
-          color: $button-text-colour-subdued;
-          position: absolute;
-          right: 40px;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 1;
-          width: $form-panel-collapsible-button-height;
-          height: $form-panel-collapsible-button-height;
-          text-align: center;
-          line-height: $form-panel-collapsible-button-height;
-          border-radius: $border-radii;
-        }
-
-        &:hover:after {
-          color: $button-text-colour-subdued-hover;
-        }
+        @include pat-collapsible-button;
       }
 
       &.open,
