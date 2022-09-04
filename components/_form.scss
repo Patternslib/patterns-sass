@@ -768,12 +768,17 @@ form {
             letter-spacing: 0;
           }
 
+          &:not(.free-form) {
+            label {
+              width: auto;
+            }
+          }
+
           label {
             font-weight: $font-weight-normal;
             font-style: normal;
             position: relative;
             border-style: none;
-            width: auto;
             // margin: 0;
 
             & + .pat-checklist {
