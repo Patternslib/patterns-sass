@@ -355,6 +355,7 @@ $default-tail-white: 25px !default;
         padding-left: 40px;
         position: relative;
         margin: 0;
+        transition: padding 0.4s;
 
         &:after {
           font-family: fontello;
@@ -416,9 +417,9 @@ $default-tail-white: 25px !default;
       }
     }
 
-    > .well-header {
-      margin-top: 0;
-      transition: padding 0.4s;
+    form > fieldset:last-child,
+    form > fieldset:last-child > .button-bar:last-child {
+      margin-bottom: 0;
     }
 
     > *:last-child {
