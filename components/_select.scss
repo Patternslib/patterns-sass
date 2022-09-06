@@ -15,8 +15,8 @@
     background-size: auto 10px;
     @media print { background-image: none; }
 
-    option {
-      color: initial;
+    option:disabled {
+      color: silver;
     }
   }
 
