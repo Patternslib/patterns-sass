@@ -525,7 +525,7 @@ disabled look for disabled choices in the results dropdown
     height: 1.6em;
     color: white;
     cursor: default;
-    border-radius: 1.2em;
+    border-radius: $border-radii;
     background-clip: padding-box;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
