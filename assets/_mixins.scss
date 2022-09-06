@@ -4,6 +4,8 @@ $well-headers: $colour-link !default;
 $well-background: $colour-portlet-background !default;
 $default-tail-white: 25px !default;
 $collapsible-button-height: 31px !default;
+$default-box-shadow-hover: 0 0 15px rgba(0,0,0,0.2) !default;
+$default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4) !default;
 
 @mixin screen-size($media) {
   @if $media == small {
