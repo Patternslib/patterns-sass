@@ -1,11 +1,13 @@
+$colour-well-background: rgba(255,255,255,0.5) !default;
+$default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) !default;
+$default-box-shadow-hover: 0 0 15px rgba(0,0,0,0.2) !default;
+$default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4) !default;
 $well-box-shadow: $default-box-shadow !default;
 $well-box-shadow-hover: $default-box-shadow-hover !default;
 $well-headers: $colour-link !default;
-$well-background: $colour-portlet-background !default;
+$well-background: $colour-well-background !default;
 $default-tail-white: 25px !default;
 $collapsible-button-height: 31px !default;
-$default-box-shadow-hover: 0 0 15px rgba(0,0,0,0.2) !default;
-$default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4) !default;
 
 @mixin screen-size($media) {
   @if $media == small {
