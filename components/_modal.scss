@@ -135,6 +135,16 @@ div.pat-modal {
         .panel-body {
           overflow-y: visible;
           max-height: auto;
+          padding-bottom: 0;
+
+          * {
+            -webkit-user-select: none;
+            user-select: none;
+          }
+
+          &.has-button-bar {
+            padding-bottom: 20px;
+          }
 
           .pat-toolbar {
             margin-bottom: 30px;
@@ -156,10 +166,15 @@ div.pat-modal {
             }
           }
 
-          .container > .button-bar:last-child {
+          .container > .button-bar:last-child,
+          .container .main.button-bar {
             position: relative !important;
             bottom: 0;
             border-top: 1px solid silver;
+          }
+
+          .slick-slide:not(.slick-active) .sheet-content > .button-bar:last-child {
+            opacity: 0;
           }
         }
       }
