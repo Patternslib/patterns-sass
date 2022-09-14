@@ -374,14 +374,14 @@ form {
   }
 
   input[type="file"]::file-selector-button {
-    font-size: 18px;
+    font-size: 16px;
     padding: $button-small-paddings;
-    height: 27px;
-    line-height: 27px;
+    height: 22px;
+    line-height: 21px;
     box-shadow: $button-small-shadow;
     font-weight: 600;
     vertical-align: middle;
-    margin: 0;
+    margin: 3px 0 2px 0;
     display: inline-block;
   }
 
