@@ -159,7 +159,7 @@ form {
     -moz-appearance: none;
     appearance: none;
     font-family: $body-font-family;
-    display: inline-flex;
+    display: block;
     @include box-sizing();
     padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
     margin: -1 * $form-input-field-padding-top-bottom 0;
@@ -371,6 +371,7 @@ form {
   input[type="file"] {
     align-items: center;
     column-gap: 15px;
+    display: inline-flex !important; // !important can go after the next rewrite ofr form.scss
   }
 
   input[type="file"]::file-selector-button {
@@ -855,7 +856,7 @@ form {
       .field-cluster,
       .attachment-list {
         // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
-        display: flex;
+        display: block;
         margin-top: 0.2em;
         width: 100%;
         font-weight: $font-weight-normal;
