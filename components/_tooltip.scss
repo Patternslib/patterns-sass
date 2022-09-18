@@ -5,6 +5,7 @@ $backdrop-origins: 0% 25%, 0% -50%, 50% 0%, -50% 0%;
 $backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
 $bullet-space: 22px !default;
 $tooltip-border-radii: $border-radii !default;
+$tooltip-background-colour: white !default;
 
 @import "../libraries/tippyjs/index";
 @import "../libraries/tippyjs/themes/patterns-tooltip";
@@ -160,6 +161,42 @@ $tooltip-border-radii: $border-radii !default;
       text-align: center;
       min-width: 0;
       padding: 6px 10px;
+    }
+  }
+
+  .tippy-content {
+    background-color: $tooltip-background-colour;
+  }
+
+  [data-placement^='bottom'] .tippy-arrow {
+    border-bottom-color: $tooltip-background-colour;
+
+    &::before {
+      border-bottom-color: $tooltip-background-colour;
+    }
+  }
+
+  [data-placement^='left'] .tippy-arrow {
+    border-left-color: $tooltip-background-colour;
+
+    &::before {
+      border-left-color: $tooltip-background-colour;
+    }
+  }
+
+  [data-placement^='right'] .tippy-arrow {
+    border-right-color: $tooltip-background-colour;
+
+    &::before {
+      border-right-color: $tooltip-background-colour;
+    }
+  }
+
+  [data-placement^='top'] .tippy-arrow {
+    border-top-color: $tooltip-background-colour;
+
+    &::before {
+      border-top-color: $tooltip-background-colour;
     }
   }
 
