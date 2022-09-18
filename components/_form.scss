@@ -218,12 +218,18 @@ form {
       position: relative;
       color: transparent;
 
-      input {
+      input,
+      .output-field {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
+        color: initial;
       }
+    }
+
+    &.layout-date-time {
+      grid-template-columns: auto 100px;
     }
 
     &.layout-address-line-nl {  
