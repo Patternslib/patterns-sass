@@ -200,6 +200,13 @@ $pat-toolbar-font-size: 18px !default;
 		&.navigation {
 			grid-area: middle;
 
+
+			@include screen-size(small) {
+				.pat-tabs {
+					z-index: 2;
+				}
+			}
+
 			@include screen-size(medium-large) {
 				text-align: center;
 			}
