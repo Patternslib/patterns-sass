@@ -36,8 +36,8 @@ $button-shadow: none !default;
 
 $button-text-colour-subdued: rgba(0,0,0,0.6) !default;
 $button-text-colour-subdued-hover: rgba(0,0,0,1) !default;
-$button-background-colour-subdued: rgba(0, 0, 0, 0.15) !default;
-$button-background-colour-subdued-hover: rgba(0, 0, 0, 0.25) !default;
+$button-background-colour-subdued: rgba(0, 0, 0, 0.1) !default;
+$button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15) !default;
 
 $button-background-colour-default: $colour-accent !default;
 $button-background-colour-default-hover: darken($colour-accent, 10%) !default;
@@ -70,7 +70,7 @@ $grid-gutter: '1em' !default;
 $default-screen-padding: 40px !default;
 $default-screen-padding-small: 15px !default;
 
-$default-tail-white: 1.5em !default;
+$default-tail-white: 25px !default;
 
 $border-radii: 10px !default;
 $tooltip-border-radii: $border-radii !default;
@@ -81,6 +81,8 @@ $default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4) !default;
 $default-focus-marking: 0 0 2px rgba(0,0,0,0.5) !default;
 $form-fields-border-radius: $border-radii !default;
 $form-input-field-line-height: inherit !default;
+
+$collapsible-button-height: 31px !default;
 
 // Libraries
 

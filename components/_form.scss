@@ -14,7 +14,7 @@ $colour-form-fields-background: #efefef !default;
 $form-fields-border-radius: $border-radii !default;
 $colour-placeholder: rgba(0,0,0,0.35);
 $colour-form-panel: $colour-portlet-background !default;
-$form-panel-collapsible-button-height: 26px;
+$form-panel-collapsible-button-height: $collapsible-button-height !default;
 $form-input-field-outline: none !default;
 $form-input-field-outline-offset: 0 !default;
 $form-input-field-outline-focus: none !default;
@@ -24,6 +24,7 @@ $form-input-field-box-shadow: none !default;
 $form-input-field-box-shadow-focus: none !default;
 $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 
+.pat-form,
 form {
   section.help .panel-content {  
     padding-bottom: 2em;
@@ -71,27 +72,7 @@ form {
         position: relative;
         margin: 0;
 
-        &:after {
-          font-family: fontello;
-          content: '#{$glyph-up-open}';
-          font-size: 0.65em;
-          background-color: $button-background-colour-subdued;
-          color: $button-text-colour-subdued;
-          position: absolute;
-          right: 40px;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 1;
-          width: $form-panel-collapsible-button-height;
-          height: $form-panel-collapsible-button-height;
-          text-align: center;
-          line-height: $form-panel-collapsible-button-height;
-          border-radius: $border-radii;
-        }
-
-        &:hover:after {
-          color: $button-text-colour-subdued-hover;
-        }
+        @include pat-collapsible-button;
       }
 
       &.open,
@@ -178,7 +159,7 @@ form {
     -moz-appearance: none;
     appearance: none;
     font-family: $body-font-family;
-    display: inline-block;
+    display: block;
     @include box-sizing();
     padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
     margin: -1 * $form-input-field-padding-top-bottom 0;
@@ -237,12 +218,18 @@ form {
       position: relative;
       color: transparent;
 
-      input {
+      input,
+      .output-field {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
+        color: initial;
       }
+    }
+
+    &.layout-date-time {
+      grid-template-columns: auto 100px;
     }
 
     &.layout-address-line-nl {  
@@ -387,11 +374,22 @@ form {
     }    
   }
 
- input[type=file]::-webkit-file-upload-button {
-     -webkit-appearance: button;
-    position: relative;
-    -webkit-box-sizing: border-box;
-    // line-height: 26px;
+  input[type="file"] {
+    align-items: center;
+    column-gap: 15px;
+    display: inline-flex !important; // !important can go after the next rewrite ofr form.scss
+  }
+
+  input[type="file"]::file-selector-button {
+    font-size: 16px;
+    padding: $button-small-paddings;
+    height: 22px;
+    line-height: 21px;
+    box-shadow: $button-small-shadow;
+    font-weight: 600;
+    vertical-align: middle;
+    margin: 3px 0 2px 0;
+    display: inline-block;
   }
 
   input[type=range] {
@@ -787,12 +785,17 @@ form {
             letter-spacing: 0;
           }
 
+          :not(.free-form) {
+            label {
+              width: auto;
+            }
+          }
+
           label {
             font-weight: $font-weight-normal;
             font-style: normal;
             position: relative;
             border-style: none;
-            width: auto;
             // margin: 0;
 
             & + .pat-checklist {
@@ -908,6 +911,7 @@ form {
 
     .legend {
       margin-bottom: 0em;
+      margin-top: 8px;
     }
 
     // .currency-field {

@@ -2,6 +2,7 @@
 
 $glyph-resize-full: '\e832' !default;
 $modal-panel-body-top-padding: 5px !default;
+$modal-panel-body-left-right-padding: 30px !default;
 
 body.modal-active {
   @media print {
@@ -127,6 +128,57 @@ div.pat-modal {
     animation: fadeIn 0.2s;
     background-color: transparent;
     border-radius: $border-radii;
+
+    &.carousel {
+
+      .panel-content {
+        .panel-body {
+          overflow-y: visible;
+          max-height: auto;
+          padding-bottom: 0;
+
+          * {
+            -webkit-user-select: none;
+            user-select: none;
+          }
+
+          &.has-button-bar {
+            padding-bottom: 20px;
+          }
+
+          .pat-toolbar {
+            margin-bottom: 30px;
+            margin-top: -10px;
+          }
+
+          .panel-sheets {
+            &.pat-carousel {
+              margin-left: -1 * $modal-panel-body-left-right-padding;
+              margin-right: -1 * $modal-panel-body-left-right-padding;
+              margin-top: 0;
+              margin-bottom: 0;
+
+              .slick-slide {
+                padding: 0 $modal-panel-body-left-right-padding;
+                max-height: calc(100vh - 390px);
+                overflow-y: auto;
+              }
+            }
+          }
+
+          .container > .button-bar:last-child,
+          .container .main.button-bar {
+            position: relative !important;
+            bottom: 0;
+            border-top: 1px solid silver;
+          }
+
+          .slick-slide:not(.slick-active) .sheet-content > .button-bar:last-child {
+            opacity: 0;
+          }
+        }
+      }
+    }
 
     &.small {
       animation: bounceInCentred 0.5s;
@@ -265,7 +317,8 @@ div.pat-modal {
 
         > .button-bar:last-child,
         .container > .button-bar:last-child,
-        .container > form > .button-bar:last-child {
+        .container > form > .button-bar:last-child
+        .container > .panel-sheets > .sheet-content > form > .button-bar:last-child {
           position: -webkit-sticky !important;
           position: sticky !important;
           bottom: -21px;
@@ -335,7 +388,7 @@ div.pat-modal {
     }
 
     .container {
-      padding: 0 30px;
+      padding: 0 $modal-panel-body-left-right-padding;
     }
   }
 
