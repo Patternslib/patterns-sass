@@ -184,7 +184,9 @@ $pat-toolbar-font-size: 18px !default;
 
 			@include screen-size(small) {
 				float: left;
-				width: auto;			}
+				width: auto;	
+				margin-bottom: 15px;		
+			}
 		}
 
 		&.quick-functions {
