@@ -509,6 +509,10 @@ $pat-toolbar-font-size: 18px !default;
 				@include screen-size(medium-large) {
 					width: 350px;
 				}
+
+				@include screen-size(small) {
+					width: 350px;
+				}
 			}
 
 			&:after {
@@ -517,6 +521,11 @@ $pat-toolbar-font-size: 18px !default;
 				left: -270px;
 
 				@include screen-size(medium-large) {
+					left: -350px;
+					padding-left: 40px;
+				}
+
+				@include screen-size(small) {
 					left: -350px;
 					padding-left: 40px;
 				}
