@@ -762,6 +762,12 @@ form {
           padding-bottom: 0;
           padding-top: 0;
 
+          &.layout-inline {
+            label {
+              display: inline-block;
+            }
+          }
+
           legend {
             position: absolute;
             left: 0;
