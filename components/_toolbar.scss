@@ -266,6 +266,13 @@ $pat-toolbar-font-size: 18px !default;
 			padding-bottom: 0;
 		}
 	}
+
+	> .pat-select,
+	.toolbar-section > .pat-select {
+		&:not(.bare) {
+			
+		}
+	}
 	
 	.pat-button,
 	.icon {
