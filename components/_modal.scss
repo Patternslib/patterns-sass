@@ -3,9 +3,12 @@
 $glyph-resize-full: '\e832' !default;
 $modal-panel-body-top-padding: 5px !default;
 $modal-panel-body-left-right-padding: 30px !default;
+$modal-panel-width-small: 640px !default;
+$modal-panel-width-medium: 840px !default;
+$modal-panel-width-large: 1100px !default;
 
 .modal-panel {
-  
+
   // This is code for the new, experimental, dialog tag based modals.
 
   position: fixed;
