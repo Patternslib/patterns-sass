@@ -70,6 +70,10 @@ $modal-panel-width-large: 1100px !default;
     max-height: calc(100vh - 270px);
     padding: 20px 30px;
     box-sizing: border-box;
+
+    > .modal-panel-main-button-bar {
+      margin: 0;
+    }
   }
 
   .sliding-sheets {
