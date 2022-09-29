@@ -329,6 +329,7 @@ form {
   .file-upload-button,
   fieldset.horizontal fieldset.group .file-upload-button{
     margin: -1 * $form-input-field-padding-top-bottom 0 0;
+    display: inline-block !important; // Temporary !important till rewrite of form.scss.
   }
 
   .group {
@@ -378,19 +379,19 @@ form {
     align-items: center;
     column-gap: 15px;
     display: inline-flex !important; // !important can go after the next rewrite ofr form.scss
-  }
 
-  input[type="file"]::file-selector-button {
-    @include pat-button();
-    font-size: 16px;
-    padding: $button-small-paddings;
-    height: 22px;
-    line-height: 21px;
-    box-shadow: $button-small-shadow;
-    font-weight: 600;
-    vertical-align: middle;
-    margin: 3px 0 2px 0;
-    display: inline-block;
+    &::file-selector-button {
+      @include pat-button();
+      font-size: 16px;
+      padding: $button-small-paddings;
+      height: 22px;
+      line-height: 21px;
+      box-shadow: $button-small-shadow;
+      font-weight: 600;
+      vertical-align: middle;
+      margin: 3px 0 2px 0;
+      display: inline-block;
+    }
   }
 
   input[type=range] {
