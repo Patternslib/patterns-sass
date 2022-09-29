@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-.pat-button,
-input[type="file"]::file-selector-button {
+.pat-button {
   @include pat-button();
 
   .button-bar & {

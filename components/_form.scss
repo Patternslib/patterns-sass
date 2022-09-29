@@ -381,6 +381,7 @@ form {
   }
 
   input[type="file"]::file-selector-button {
+    @include pat-button();
     font-size: 16px;
     padding: $button-small-paddings;
     height: 22px;
