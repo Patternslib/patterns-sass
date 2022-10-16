@@ -111,6 +111,11 @@ $modal-panel-width-large: 1100px !default;
     }
 
     .modal-panel-footer {
+      display: none;
+    }
+
+    .modal-panel-footer,
+    & + .modal-panel-footer {
       position: absolute;
       bottom: 0;
       right: 30px;
@@ -119,7 +124,6 @@ $modal-panel-width-large: 1100px !default;
       padding-top: 20px;
       border-top: 1px silver solid;
       background-color: white;
-      display: none;
     }
 
     .modal-panel-body {
@@ -131,7 +135,8 @@ $modal-panel-width-large: 1100px !default;
           display: block;
         }
       }
-    }
+    } 
+
   }
 
   &.large {
