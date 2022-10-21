@@ -9,6 +9,23 @@ $well-background: $colour-well-background !default;
 $default-tail-white: 25px !default;
 $collapsible-button-height: 31px !default;
 
+@mixin select-box() {
+  /*Next 2 lines is a bizarre patch to make misbehaving FF hide the original dropdown button*/
+  text-indent: 0.01px;
+  text-overflow: '';
+
+  padding-right: 1.5em;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+  background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+  background-size: auto 10px;
+  @media print { background-image: none; }
+
+  option:disabled {
+    color: silver;
+  }
+}
+
 @mixin screen-size($media) {
   @if $media == small {
     @media only screen and (max-width: $break-small) { @content; }
