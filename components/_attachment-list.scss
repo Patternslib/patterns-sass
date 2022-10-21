@@ -31,16 +31,9 @@
 	}
 
 	.attached-file {
-		display: none;
+		display: table;
 		width: 100%;
 		margin-bottom: 0.5em;
-
-		&:first-child,
-		&:nth-child(2),
-		&:nth-child(3),
-		&:nth-child(4) {
-			display: table;
-		}
 
 		.label {
 			display: table-cell;
