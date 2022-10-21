@@ -158,10 +158,46 @@ div.pat-modal {
               margin-top: 0;
               margin-bottom: 0;
 
-              .slick-slide {
-                padding: 0 $modal-panel-body-left-right-padding;
-                max-height: calc(100vh - 390px);
-                overflow-y: auto;
+              .slick-list {
+                position: static;
+
+                .slick-track {
+                  position: static;
+                  transform: none !important;
+
+                  .slick-slide {
+                    padding: 0 $modal-panel-body-left-right-padding;
+                    max-height: calc(100vh - 390px);
+                    overflow-y: auto;
+                    position: static;
+
+                    .sheet-content {
+                      &.has-button-bar {
+                        padding-bottom: 80px;
+                      }
+
+                      .modal-panel-main-button-bar {  
+                        position: absolute;
+                        bottom: 0;
+                        right: 30px;
+                        left: 30px;
+                        margin: 0;
+                        padding-top: 20px;
+                        border-top: 1px silver solid;
+                        background-color: white;
+                        display: none;
+                      }
+                    }
+
+                    &.slick-current {
+                      .sheet-content {
+                        .modal-panel-main-button-bar {  
+                          display: block;
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
