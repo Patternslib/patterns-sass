@@ -16,6 +16,10 @@ $pat-toolbar-font-size: 18px !default;
 	border-radius: $border-radii;
 	font-size: $pat-toolbar-font-size;
 
+	.pat-select:not(.bare) {	
+	    @include select-box;
+	}
+
 	.toolbar-title {
 		font-size: 0.6 * $pat-toolbar-button-height;
 		line-height: $pat-toolbar-button-line-height;
@@ -84,7 +88,8 @@ $pat-toolbar-font-size: 18px !default;
 	}
 
 	@include screen-size(small) {
-		margin: 0 -10px;
+		margin: 0;
+		padding: 0;
 	}
 
 	&.inline {
@@ -129,7 +134,7 @@ $pat-toolbar-font-size: 18px !default;
 		}
 	}
 
-	.toolbar-navigation-area,
+	.toolbar-area,
 	.toolbar-functions-area {
 		@include screen-size(medium-large) {
 			display: grid;
@@ -158,7 +163,7 @@ $pat-toolbar-font-size: 18px !default;
 		}
 
 		@include screen-size(small) {
-			margin-bottom: 25px;
+			margin-bottom: 15px;
 		}
 	}
 
@@ -183,7 +188,9 @@ $pat-toolbar-font-size: 18px !default;
 
 			@include screen-size(small) {
 				float: left;
-				width: auto;			}
+				width: auto;	
+				margin-bottom: 15px;		
+			}
 		}
 
 		&.quick-functions {
@@ -199,6 +206,13 @@ $pat-toolbar-font-size: 18px !default;
 
 		&.navigation {
 			grid-area: middle;
+
+
+			@include screen-size(small) {
+				.pat-tabs {
+					z-index: 2;
+				}
+			}
 
 			@include screen-size(medium-large) {
 				text-align: center;
@@ -254,6 +268,13 @@ $pat-toolbar-font-size: 18px !default;
 			height: $pat-toolbar-button-height;
 			padding-top: 0;
 			padding-bottom: 0;
+		}
+	}
+
+	> .pat-select,
+	.toolbar-section > .pat-select {
+		&:not(.bare) {
+			
 		}
 	}
 	
@@ -501,6 +522,10 @@ $pat-toolbar-font-size: 18px !default;
 				@include screen-size(medium-large) {
 					width: 350px;
 				}
+
+				@include screen-size(small) {
+					width: 350px;
+				}
 			}
 
 			&:after {
@@ -509,6 +534,11 @@ $pat-toolbar-font-size: 18px !default;
 				left: -270px;
 
 				@include screen-size(medium-large) {
+					left: -350px;
+					padding-left: 40px;
+				}
+
+				@include screen-size(small) {
 					left: -350px;
 					padding-left: 40px;
 				}

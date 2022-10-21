@@ -159,7 +159,7 @@ form {
     -moz-appearance: none;
     appearance: none;
     font-family: $body-font-family;
-    display: inline-block;
+    display: block;
     @include box-sizing();
     padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
     margin: -1 * $form-input-field-padding-top-bottom 0;
@@ -218,12 +218,18 @@ form {
       position: relative;
       color: transparent;
 
-      input {
+      input,
+      .output-field {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
+        color: initial;
       }
+    }
+
+    &.layout-date-time {
+      grid-template-columns: auto 100px;
     }
 
     &.layout-address-line-nl {  
@@ -323,6 +329,7 @@ form {
   .file-upload-button,
   fieldset.horizontal fieldset.group .file-upload-button{
     margin: -1 * $form-input-field-padding-top-bottom 0 0;
+    display: inline-block !important; // Temporary !important till rewrite of form.scss.
   }
 
   .group {
@@ -368,11 +375,23 @@ form {
     }    
   }
 
- input[type=file]::-webkit-file-upload-button {
-     -webkit-appearance: button;
-    position: relative;
-    -webkit-box-sizing: border-box;
-    // line-height: 26px;
+  input[type="file"] {
+    align-items: center;
+    column-gap: 15px;
+    display: inline-flex !important; // !important can go after the next rewrite ofr form.scss
+
+    &::file-selector-button {
+      @include pat-button();
+      font-size: 16px;
+      padding: $button-small-paddings;
+      height: 22px;
+      line-height: 21px;
+      box-shadow: $button-small-shadow;
+      font-weight: 600;
+      vertical-align: middle;
+      margin: 3px 0 2px 0;
+      display: inline-block;
+    }
   }
 
   input[type=range] {
@@ -575,17 +594,26 @@ form {
       width: 1px;
     }
 
-    // abbr {
-    //   position: absolute;
-    //   left: 0.5em;
-    //   top: 50%;
-    //   transform: translateY(-50%);
-    // }
+    .currency {
+      position: absolute;
+      left: 0.5em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     input,
     output {
       padding-left: 1.5em;
+      display: inline-block;
     } 
+  }
+
+  .percentage-field {
+    display: inline-block;
+
+    input {
+      display: inline-block;
+    }
   }
 
   select {
@@ -745,6 +773,12 @@ form {
           padding-bottom: 0;
           padding-top: 0;
 
+          &.layout-inline {
+            label {
+              display: inline-block;
+            }
+          }
+
           legend {
             position: absolute;
             left: 0;
@@ -894,6 +928,7 @@ form {
 
     .legend {
       margin-bottom: 0em;
+      margin-top: 8px;
     }
 
     // .currency-field {
