@@ -1,11 +1,13 @@
 $caret-colour: black !default;
 
+$verification-code-background-6-pos: "code-digits-6.svg" !default;
+
 form,
 form.pat-form {
 	.pat-verification-code {
 		width: 352px;
 		height: 80px;
-		background: url(../../quaive/style/code-digits-6.svg) no-repeat;
+		background: url($verification-code-background-6-pos) no-repeat;
 		background-size: 352px 100%;
 		background-position: 0 0;
 		position: relative;
