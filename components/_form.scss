@@ -616,6 +616,63 @@ form {
     }
   }
 
+  .button-field {
+    position: relative;
+
+    input,
+    select {
+      width: calc(100% - 40px) !important;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    > .follow {
+      border-radius: 0;
+      border-top-right-radius: $border-radii;
+      border-bottom-right-radius: $border-radii;
+      width: 40px;
+      overflow: hidden;
+      color: transparent;
+      position: absolute;
+      top: -0.5 * $form-input-field-padding-top-bottom;
+      right: 0;
+      bottom: -0.5 * $form-input-field-padding-top-bottom;
+      border: 0;
+      color: transparent;
+      background-color: var(--colour-accent);
+      cursor: default;
+
+      &[href] {
+
+        &:before {
+          opacity: 1;
+        }
+
+        &:hover {
+          filter: brightness(1.1);
+        }
+      }
+
+      &:before {
+        opacity: 0.5;
+        content: ' ';
+        font-family: fontello;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        position: absolute;
+        color: white;
+        text-align: center;
+      }
+    }
+
+    &.type-url > .follow:before {
+      content: '#{$glyph-icon-right-circled}';
+    }
+  }
+
   select {
     /*Next 2 lines is a bizarre patch to make misbehaving FF hide the original dropdown button*/
     text-indent: 0.01px;
