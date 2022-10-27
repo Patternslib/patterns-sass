@@ -634,9 +634,9 @@ form {
       overflow: hidden;
       color: transparent;
       position: absolute;
-      top: -0.5 * $form-input-field-padding-top-bottom;
+      top: 0;
       right: 0;
-      bottom: -0.5 * $form-input-field-padding-top-bottom;
+      bottom: 0;
       border: 0;
       color: transparent;
       background-color: var(--colour-accent);
