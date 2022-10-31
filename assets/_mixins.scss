@@ -30,8 +30,9 @@ $collapsible-button-height: 31px !default;
 
   &:before {
     font-size: 20px;
-      content: attr(data-option);
-      color: $button-text-colour;
+    content: attr(data-option);
+    color: $button-text-colour;
+    white-space: nowrap;
   }
 
   select {
