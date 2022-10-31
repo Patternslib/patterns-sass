@@ -236,7 +236,7 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 
 			.icon,
 			.pat-button {
-				margin-left: 20px;
+				margin-left: $pat-toolbar-element-separation;
 				margin-right: 0;
 			}
 		}
@@ -509,7 +509,7 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 		// float: left;
 		display: inline-block;
 		z-index: 1;
-		margin-left: 1em;
+		margin-left: $pat-toolbar-element-separation;
 		vertical-align: top;
 		font-size: $base-font-size;
 		background-color: $pat-toolbar-icon-background-colour;
