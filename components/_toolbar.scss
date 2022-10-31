@@ -16,10 +16,6 @@ $pat-toolbar-font-size: 18px !default;
 	border-radius: $border-radii;
 	font-size: $pat-toolbar-font-size;
 
-	.pat-select:not(.bare) {	
-	    @include select-box;
-	}
-
 	.toolbar-title {
 		font-size: 0.6 * $pat-toolbar-button-height;
 		line-height: $pat-toolbar-button-line-height;
@@ -95,6 +91,26 @@ $pat-toolbar-font-size: 18px !default;
 	&.inline {
 		margin: 0;
 		padding: 0;
+	}
+
+	&.pat-bumper {
+		-webkit-position: sticky;
+		position: sticky;
+		transition: box-shadow 1s;
+		top: -40px;
+		transition: all 1s;
+
+	    &.bumped,
+	    &.tiptap-focus {
+	      	box-shadow: $default-box-shadow;
+			background-color: rgba(255,255,255,0.9);
+
+			.backdropfilter & {
+				background-color: rgba(255,255,255,0.8);
+				-webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
+				backdrop-filter: blur(10px) saturate(4) brightness(1.2);
+			}
+	    }
 	}
 
 	&.sticky {
@@ -271,11 +287,9 @@ $pat-toolbar-font-size: 18px !default;
 		}
 	}
 
-	> .pat-select,
-	.toolbar-section > .pat-select {
-		&:not(.bare) {
-			
-		}
+	> .pat-select:not(.bare),
+	.toolbar-section > .pat-select:not(.bare) {	
+	    @include select-box;
 	}
 	
 	.pat-button,
@@ -310,6 +324,7 @@ $pat-toolbar-font-size: 18px !default;
 	}
 
 	>,
+	.toolbar-section >,
 	.pat-toolbar-section > {
 		.pat-button,
 		.pat-icon,
