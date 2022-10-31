@@ -234,8 +234,9 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 			text-align: right;
 			grid-area: right;
 
-			.icon,
-			.pat-button {
+			> .icon,
+			> .pat-button,
+			> .context-menu > .pat-button {
 				margin-left: $pat-toolbar-element-separation;
 				margin-right: 0;
 				position: relative; // Raise above the :before element of bumpy toolbars.
