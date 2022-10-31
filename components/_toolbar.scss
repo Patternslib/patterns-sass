@@ -238,6 +238,7 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 			.pat-button {
 				margin-left: $pat-toolbar-element-separation;
 				margin-right: 0;
+				position: relative; // Raise above the :before element of bumpy toolbars.
 			}
 		}
 
