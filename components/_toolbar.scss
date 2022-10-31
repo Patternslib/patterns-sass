@@ -6,6 +6,9 @@ $colour-toolbar-button: transparent !default;
 $pat-toolbar-element-separation: 10px !default;
 $pat-tail-white: 15px !default;
 $pat-toolbar-font-size: 18px !default;
+$pat-toolbar-icon-background-colour: transparent !default;
+$pat-toolbar-icon-text-colour: rgba(0,0,0,0.6) !default;
+$pat-toolbar-icon-text-colour-hover: black !default;
 
 .pat-toolbar {
 	@include clear-fix();
@@ -355,7 +358,8 @@ $pat-toolbar-font-size: 18px !default;
 		border-radius: $button-border-radius;
 		display: inline-block;
 		text-align: left;
-		background-color: transparent;
+		background-color: $pat-toolbar-icon-background-colour;
+		color: $pat-toolbar-icon-text-colour;
 
 		&.progress {
 			.pie-graph {
@@ -391,11 +395,12 @@ $pat-toolbar-font-size: 18px !default;
 		}
 
 		&:hover {
-			color: black;
+			color: $pat-toolbar-icon-text-colour-hover;
 			text-decoration: none;
+			background-color: $pat-toolbar-icon-background-colour-hover;
 
 			&:before {
-				// border: black 1px solid;
+				color: $pat-toolbar-icon-text-colour-hover;
 			}
 		}
 
@@ -417,7 +422,8 @@ $pat-toolbar-font-size: 18px !default;
 			}
 		}
 
-		&.create {
+		&.create,
+		&.new {
 			// float: right;
 
 			&:before {
@@ -488,6 +494,7 @@ $pat-toolbar-font-size: 18px !default;
 		margin-left: 1em;
 		vertical-align: top;
 		font-size: $base-font-size;
+		background-color: $pat-toolbar-icon-background-colour;
 
 		&:after {
 			position: absolute;
@@ -500,10 +507,15 @@ $pat-toolbar-font-size: 18px !default;
 			content: '#{$glyph-icon-search}';
 			font-size: 22px;
 			transition: left 0.5s, padding-left 0.5s, transform 1s;
+			color: $pat-toolbar-icon-text-colour;
 		}
 
 		&:hover {
-			color: black;
+			background-color: $pat-toolbar-icon-background-colour-hover;
+
+			&:after {
+				color: $pat-toolbar-icon-text-colour-hover;
+			}
 		}
 
 		input {
