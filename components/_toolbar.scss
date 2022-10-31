@@ -96,23 +96,41 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 		padding: 0;
 	}
 
+	$pat-toolbar-bump-distance: 100px !default;
+
 	&.pat-bumper {
 		-webkit-position: sticky;
 		position: sticky;
-		transition: box-shadow 1s;
-		top: -40px;
-		transition: all 1s;
+		top: -1px;
+		padding-top: $pat-toolbar-bump-distance;
+		margin-top: -1 * $pat-toolbar-bump-distance;
 
-	    &.bumped,
-	    &.tiptap-focus {
-	      	box-shadow: $default-box-shadow;
+		&:before {
+			position: absolute;
+			left: -5px;
+			right: -5px;
+			top: $pat-toolbar-bump-distance - 15px;
+			bottom: -4px;
+			border-radius: $border-radii;
+			transition: all 1s;
+	      	box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+	      	content: ' ';
+	      	display: block;
 			background-color: rgba(255,255,255,0.9);
+			opacity: 0;
 
 			.backdropfilter & {
 				background-color: rgba(255,255,255,0.8);
 				-webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
 				backdrop-filter: blur(10px) saturate(4) brightness(1.2);
 			}
+		}
+
+	    &.bumped,
+	    &.tiptap-focus {
+	    	&:before {
+	    		opacity: 1;
+	    	}
 	    }
 	}
 
