@@ -291,6 +291,14 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 			background-color: $pat-toolbar-icon-background-colour;
 			color: $pat-toolbar-icon-text-colour;
 		}
+
+		&:hover {
+			&.no-label:before {
+				color: $pat-toolbar-icon-text-colour-hover;
+				text-decoration: none;
+				background-color: $pat-toolbar-icon-background-colour-hover;
+			}
+		}
 	}
 
 	> .pat-select,
