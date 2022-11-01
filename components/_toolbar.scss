@@ -118,6 +118,7 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 	      	display: block;
 			background-color: rgba(255,255,255,0.9);
 			opacity: 0;
+			z-index: -1;
 
 			.backdropfilter & {
 				background-color: rgba(255,255,255,0.8);
@@ -158,9 +159,12 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 		opacity: 0;
 		transition: opacity 0.4s;
 		pointer-events: none;
+		position: relative;
+		z-index: 1;
 
 		&.tiptap-focus {
 			opacity: 1;
+			pointer-events: initial;
 		}
 	}
 
@@ -282,6 +286,11 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 
 	.pat-context-menu {
 		display: inline-block;
+
+		&.no-label:before {
+			background-color: $pat-toolbar-icon-background-colour;
+			color: $pat-toolbar-icon-text-colour;
+		}
 	}
 
 	> .pat-select,
