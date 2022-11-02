@@ -13,6 +13,7 @@ $pat-toolbar-bump-distance: 100px !default;
 $pat-toolbar-bump-distance-scroll-down: 100px !default;
 $pat-toolbar-top-distance: -1px !default;
 $pat-toolbar-top-distance-scroll-down: -1px !default;
+$pat-toolbar-hiding-speed: 0.3s !default;
 
 .pat-toolbar {
 	@include clear-fix();
@@ -106,7 +107,7 @@ $pat-toolbar-top-distance-scroll-down: -1px !default;
 		padding-top: $pat-toolbar-bump-distance;
 		margin-top: -1 * $pat-toolbar-bump-distance;
 		top: $pat-toolbar-top-distance;
-		transition: top 0.3s;
+		transition: top $pat-toolbar-hiding-speed;
 
 		.scrolling-down &,
 		.scroll-down & {
