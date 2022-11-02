@@ -9,6 +9,10 @@ $pat-toolbar-font-size: 18px !default;
 $pat-toolbar-icon-background-colour: transparent !default;
 $pat-toolbar-icon-text-colour: rgba(0,0,0,0.6) !default;
 $pat-toolbar-icon-text-colour-hover: black !default;
+$pat-toolbar-bump-distance: 100px !default;
+$pat-toolbar-bump-distance-scroll-down: 100px !default;
+$pat-toolbar-top-distance: -1px !default;
+$pat-toolbar-top-distance-scroll-down: -1px !default;
 
 .pat-toolbar {
 	@include clear-fix();
@@ -96,14 +100,19 @@ $pat-toolbar-icon-text-colour-hover: black !default;
 		padding: 0;
 	}
 
-	$pat-toolbar-bump-distance: 100px !default;
-
 	&.pat-bumper {
 		-webkit-position: sticky;
 		position: sticky;
-		top: -1px;
 		padding-top: $pat-toolbar-bump-distance;
 		margin-top: -1 * $pat-toolbar-bump-distance;
+		top: $pat-toolbar-top-distance;
+		transition: top 0.3s;
+
+		.scrolling-down &,
+		.scroll-down & {
+			top: $pat-toolbar-top-distance-scroll-down;
+			padding-top: $pat-toolbar-bump-distance-scroll-down;
+		}
 
 		&:before {
 			position: absolute;
