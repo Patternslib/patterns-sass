@@ -208,7 +208,7 @@ $context-menu-text-colour-hover: black !default;
 		left: 0;
 		display: none;
 		background-color: white;
-		padding: 1em !important; // !important overrules inline styles by .js
+		padding: 15px !important; // !important overrules inline styles by .js
 		width: 250px;
 		z-index: 10;
 		border-radius: $border-radii;
@@ -222,7 +222,15 @@ $context-menu-text-colour-hover: black !default;
 		li {
 			button,
 			.button {
-				margin: 0;
+				display: block;
+				padding: 8px 15px;
+				margin: 0 -15px;
+				width: calc(100% + 30px);
+				font-size: 18px;
+
+				&:hover {
+					background-color: #efefef;
+				}
 			}
 		}
 
