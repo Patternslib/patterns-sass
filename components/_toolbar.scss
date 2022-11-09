@@ -123,11 +123,10 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 			bottom: -4px;
 			border-radius: $border-radii;
 			transition: all 1s;
-	      	box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+	      	box-shadow: 0 0 3px rgba(0, 0, 0, 0);
 	      	content: ' ';
 	      	display: block;
 			background-color: rgba(255,255,255,0.9);
-			opacity: 0;
 			z-index: -1;
 
 			.backdropfilter & {
@@ -140,7 +139,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 	    &.bumped,
 	    &.tiptap-focus {
 	    	&:before {
-	    		opacity: 1;
+	    		box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 	    	}
 	    }
 	}
