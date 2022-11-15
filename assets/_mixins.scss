@@ -8,16 +8,21 @@ $well-headers: $colour-link !default;
 $well-background: $colour-well-background !default;
 $default-tail-white: 25px !default;
 $collapsible-button-height: 31px !default;
-$colour-select-box-arrow-background: transparent !default;
 $colour-select-box-arrow: black !default;
 
-@mixin select-box() {
+:root {
   --select-box-arrow-width: 35px;
-  --select-box-padding-top-bottom: $form-input-field-padding-top-bottom;
-  --select-box-padding-right-left: 1em;
+  --select-box-padding-top-bottom: #{$form-input-field-padding-top-bottom};
+  --select-box-padding-right-left: 22px;
+  --select-box-box-shadow: #{$form-input-field-box-shadow};
+  --select-box-background-color: #{$colour-form-fields-background};
+  --select-box-arrow-background-colour: rgba(0,0,0,0.1);
+  --select-box-arrow-text-colour: inherit;
+}
+
+@mixin select-box() {
 
   padding: 0 75px 0 12px;
-  background: $button-background-colour;
   display: inline-block;
   height: var(--select-box-height);
   line-height: var(--select-box-height);  
@@ -29,22 +34,22 @@ $colour-select-box-arrow: black !default;
   font-weight: normal !important;
   font-size: 0;
   position: relative;
-
-  @include box-sizing();
+  box-sizing: border-box;
   border: $form-input-field-border;
-  box-shadow: $form-input-field-box-shadow;
+  box-shadow: var(--select-box-box-shadow);
   outline: $form-input-field-outline;
   outline-offset: $form-input-field-outline-offset;
-  color: inherit;
+  color: var(--select-box-arrow-text-colour);
   font-size: 100%;
   border-radius: 0;
   max-width: 100%;
-  background-color: $colour-form-fields-background;
+  background-color: var(--select-box-background-color);
   border-radius: $form-fields-border-radius;
 
   &[data-value="draft"] {
     &:after {
       background-color: $colour-warning;
+      color: var(--select-box-background-color);
     }
 
     &:hover:after {
@@ -58,16 +63,11 @@ $colour-select-box-arrow: black !default;
 
   &:hover {
     background: $button-background-colour-hover;
-
-    &:after {
-      background: $button-background-colour-hover;
-    }
   }
 
   &:before {
     font-size: 20px;
     content: attr(data-option);
-    color: black;
     padding-right: var(--select-box-arrow-width);
     white-space: nowrap;
     overflow: hidden;
@@ -98,8 +98,7 @@ $colour-select-box-arrow: black !default;
     content: '#{$glyph-down-open}';
     height: var(--select-box-height);
     width: var(--select-box-arrow-width);
-    color: $colour-select-box-arrow;
-    background-color: $colour-select-box-arrow-background;
+    background-color: var(--select-box-arrow-background-colour);
     display: block;
     position: absolute;
     top: 0;
