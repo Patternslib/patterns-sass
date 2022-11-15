@@ -13,13 +13,18 @@ $colour-select-box-arrow: black !default;
 
 @mixin select-box() {
   --select-box-arrow-width: 35px;
+  --select-box-padding-top-bottom: $form-input-field-padding-top-bottom;
+  --select-box-padding-right-left: 1em;
 
   padding: 0 75px 0 12px;
   background: $button-background-colour;
   display: inline-block;
   height: var(--select-box-height);
   line-height: var(--select-box-height);  
-  padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
+  padding-top: var(--select-box-padding-top-bottom);
+  padding-bottom: var(--select-box-padding-top-bottom);
+  padding-left: var(--select-box-padding-right-left);
+  padding-right: var(--select-box-padding-right-left);
   position: relative;
   font-weight: normal !important;
   font-size: 0;
@@ -105,7 +110,7 @@ $colour-select-box-arrow: black !default;
     border-top-right-radius: $form-fields-border-radius;
     border-bottom-right-radius: $form-fields-border-radius;
     line-height: var(--select-box-height);  
-    padding: $form-input-field-padding-top-bottom 0;
+    padding: var(--select-box-padding-top-bottom) 0;
   }
 
   option:disabled {

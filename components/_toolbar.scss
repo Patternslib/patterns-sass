@@ -340,6 +340,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 	> .pat-select:not(.bare),
 	.toolbar-section > .pat-select:not(.bare) {	
 	    @include select-box;
+	    overflow: hidden;
 	}
 	
 	.pat-button,
