@@ -85,6 +85,10 @@ $pat-toolbar-font-size: 18px !default;
 	@include screen-size(medium-large) {
 		margin: 0 -10px 40px;
 		height: $pat-toolbar-button-height;
+
+		.pat-modal & {
+			margin-bottom: 15px;
+		}
 	}
 
 	@include screen-size(small) {
