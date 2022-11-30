@@ -8,30 +8,71 @@ $well-headers: $colour-link !default;
 $well-background: $colour-well-background !default;
 $default-tail-white: 25px !default;
 $collapsible-button-height: 31px !default;
+$colour-select-box-arrow: black !default;
+
+:root {
+  --select-box-arrow-width: 35px;
+  --select-box-padding-top-bottom: #{$form-input-field-padding-top-bottom};
+  --select-box-padding-right-left: 22px;
+  --select-box-box-shadow: #{$form-input-field-box-shadow};
+  --select-box-background-color: #{$colour-form-fields-background};
+  --select-box-arrow-background-colour: rgba(0,0,0,0.1);
+  --select-box-arrow-text-colour: inherit;
+}
 
 @mixin select-box() {
+
   padding: 0 75px 0 12px;
-  background: $button-background-colour;
   display: inline-block;
   height: var(--select-box-height);
-  line-height: var(--select-box-height);
+  line-height: var(--select-box-height);  
+  padding-top: var(--select-box-padding-top-bottom);
+  padding-bottom: var(--select-box-padding-top-bottom);
+  padding-left: var(--select-box-padding-right-left);
+  padding-right: var(--select-box-padding-right-left);
   position: relative;
   font-weight: normal !important;
   font-size: 0;
   position: relative;
+  box-sizing: border-box;
+  border: $form-input-field-border;
+  box-shadow: var(--select-box-box-shadow);
+  outline: $form-input-field-outline;
+  outline-offset: $form-input-field-outline-offset;
+  color: var(--select-box-arrow-text-colour);
+  font-size: 100%;
+  border-radius: 0;
+  max-width: 100%;
+  background-color: var(--select-box-background-color);
+  border-radius: $form-fields-border-radius;
+
+  &[data-value="draft"] {
+    &:after {
+      background-color: $colour-warning;
+      color: var(--select-box-background-color);
+    }
+
+    &:hover:after {
+      background: darken($colour-warning, 10%);
+    }
+
+    &:before {
+      color: $colour-warning;
+    }
+  }
 
   &:hover {
     background: $button-background-colour-hover;
-
-    &:after {
-      background: $button-background-colour-default-hover;
-    }
   }
 
   &:before {
     font-size: 20px;
-      content: attr(data-option);
-      color: $button-text-colour;
+    content: attr(data-option);
+    padding-right: var(--select-box-arrow-width);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
 
   select {
@@ -55,16 +96,20 @@ $collapsible-button-height: 31px !default;
   &:after {
     font-family: fontello;
     content: '#{$glyph-down-open}';
-    height: var(--select-box-height);
-    width: var(--select-box-height);
-    color: white;
-    background-color: $colour-link;
+    width: var(--select-box-arrow-width);
+    background-color: var(--select-box-arrow-background-colour);
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    text-align: center;
-    font-size: 22px;
+    bottom: 0;
+    font-size: 18px;
+    border-top-right-radius: $form-fields-border-radius;
+    border-bottom-right-radius: $form-fields-border-radius;
+    padding: 0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
   }
 
   option:disabled {
