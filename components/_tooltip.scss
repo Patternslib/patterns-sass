@@ -38,6 +38,7 @@ $tooltip-background-colour: white !default;
 
       > button,
       > form > button,
+      > fieldset.pat-checklist label,
       > a {
         background: none;
         display: block;
@@ -48,6 +49,7 @@ $tooltip-background-colour: white !default;
         box-shadow: none;
         font-size: 1em;
         font-family: $body-font-family;
+        padding-left: 22px;
 
         &:hover {
           text-decoration: none;
