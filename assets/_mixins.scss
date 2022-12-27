@@ -11,6 +11,7 @@ $collapsible-button-height: 31px !default;
 $colour-select-box-arrow: black !default;
 $form-input-field-box-shadow: none !default;
 $form-input-field-padding-top-bottom: 0.2em !default;
+$button-small-font-weight: 600 !default;
 
 :root {
   --select-box-arrow-width: 35px;
@@ -770,7 +771,7 @@ $form-input-field-padding-top-bottom: 0.2em !default;
     line-height: $button-small-line-height;
     vertical-align: baseline;
     box-shadow: $button-small-shadow;
-    font-weight: 600;
+    font-weight:  $button-small-font-weight;
   }
 
   &:focus {
