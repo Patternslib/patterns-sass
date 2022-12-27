@@ -50,7 +50,7 @@ $form-input-field-padding-top-bottom: 0.2em !default;
 
   &[data-value="draft"] {
     &:after {
-      background-color: $colour-warning;
+      // background-color: $colour-warning;
       color: var(--select-box-background-color);
     }
 
