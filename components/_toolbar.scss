@@ -526,6 +526,12 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 			}
 		}
 
+		&.download {
+			&:before {
+				content: "#{$glyph-download}";
+			}
+		}
+
 		&.card-view {
 			&:before {
 				content: "#{$glyph-grid-large}";
