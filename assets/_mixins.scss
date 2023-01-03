@@ -64,6 +64,21 @@ $button-small-font-weight: 600 !default;
     }
   }
 
+  &[data-value="for-review"] {
+    &:after {
+      background-color: $colour-for-review;
+      color: var(--select-box-background-color);
+    }
+
+    &:hover:after {
+      background: darken($colour-for-review, 10%);
+    }
+
+    &:before {
+      color: $colour-for-review;
+    }
+  }
+
   &:hover {
     background: $button-background-colour-hover;
   }
