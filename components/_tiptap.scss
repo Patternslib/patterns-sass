@@ -4,6 +4,20 @@ textarea.pat-tiptap {
    opacity: 0
 }
 
+.ProseMirror-gapcursor {
+   position: relative;
+   display: block !important;
+
+   &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: -2px;
+      width: 20px;
+      border-top: 1px solid black;
+   }
+}
+
 .tiptap-container {
    animation: fadeIn 0.4s;
 
