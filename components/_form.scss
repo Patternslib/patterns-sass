@@ -743,7 +743,8 @@ form {
         .group.image-upload > input,
         .group.video-upload > video,
         .group.video-upload > input,
-        .group > .pat-rich-editor {
+        .group > .pat-rich-editor,
+        .help .help-content {
             max-width: $form-proportion-value;
 
         }
