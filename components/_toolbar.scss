@@ -482,7 +482,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		&.new {
 			&:before {
 				content: "#{$glyph-plus}";
-				font-size: 25px;
+				// font-size: 25px;
 			}
 		}
 
