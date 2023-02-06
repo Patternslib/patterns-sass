@@ -9,10 +9,15 @@ $form-proportion-gutter: 15px !default;
 $form-input-field-line-height: inherit !default;
 $form-input-field-padding-top-bottom: 0.2em !default;
 $form-input-field-padding-left-right: 0.5em !default;
+$form-input-field-padding-top-bottom-disabled: 0 !default;
+$form-input-field-padding-left-right-disabled: 0 !default;
 $form-field-tail-white: 1em !default;
 $colour-form-fields-background: #efefef !default;
+$colour-form-fields-background-disabled: transparent !default;
 $form-fields-border-radius: $border-radii !default;
 $colour-placeholder: rgba(0,0,0,0.35);
+$colour-input-field-text: inherit !default;
+$colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
 $colour-form-panel: $colour-portlet-background !default;
 $form-panel-collapsible-button-height: $collapsible-button-height !default;
 $form-input-field-outline: none !default;
@@ -21,6 +26,7 @@ $form-input-field-outline-focus: none !default;
 $form-input-field-border: none !default;
 $form-input-field-border-focus: none !default;
 $form-input-field-box-shadow: none !default;
+$form-input-field-box-shadow-disabled: none !default;
 $form-input-field-box-shadow-focus: none !default;
 $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 
@@ -146,7 +152,8 @@ form {
     }
   }
 
-  .field-cluster {
+  .field-cluster,
+  .field-list {
     margin: -0.5 * $form-input-field-padding-top-bottom 0;
     max-width: 100%;
     line-height: $form-input-field-line-height;
@@ -174,7 +181,7 @@ form {
     box-shadow: $form-input-field-box-shadow;
     outline: $form-input-field-outline;
     outline-offset: $form-input-field-outline-offset;
-    color: inherit;
+    color: $colour-input-field-text;
     font-size: 100%;
     border-radius: 0;
     max-width: 100%;
@@ -191,12 +198,15 @@ form {
     &:disabled,
     &.disabled {
       border: transparent;
-      box-shadow: none;
       outline: none;
       opacity: 1;
-      padding: 0;
-      background-color: transparent;
-      background: none;
+      padding-left: $form-input-field-padding-left-right-disabled;
+      padding-right: $form-input-field-padding-left-right-disabled;
+      padding-top: $form-input-field-padding-top-bottom-disabled;
+      padding-bottom: $form-input-field-padding-top-bottom-disabled;
+      background: $colour-form-fields-background-disabled;
+      box-shadow: $form-input-field-box-shadow-disabled;
+      color: $colour-input-field-text-disabled;
     }
 
     @media print { 
@@ -213,6 +223,28 @@ form {
       outline: $form-input-field-outline-focus;
       border: $form-input-field-border-focus;
       box-shadow: $form-input-field-box-shadow-focus;
+    }
+  }
+
+  .field-list {
+    > label {
+      position: relative;
+      color: transparent;
+      display: block;
+      margin-bottom: 24px;
+      
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > input,
+      > .output-field {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
     }
   }
 
@@ -719,7 +751,8 @@ form {
         @include screen-size(medium-large) { 
         width: 100%;
 
-        .field-cluster {
+        .field-cluster,
+        .field-list {
           width: $form-proportion-value;
         }
 
