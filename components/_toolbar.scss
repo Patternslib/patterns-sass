@@ -480,8 +480,6 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 
 		&.create,
 		&.new {
-			// float: right;
-
 			&:before {
 				content: "#{$glyph-plus}";
 				font-size: 25px;
@@ -489,32 +487,30 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		}
 
 		&.edit {
-			// float: right;
-
 			&:before {
 				content: "#{$glyph-edit}";
 			}
 		}
 
 		&.preview {
-			// float: right;
-
 			&:before {
 				content: "#{$glyph-eye}";
 			}
 		}
 
-		&.modify {
-			// float: right;
+		&.settings {
+			&:before {
+				content: "#{$glyph-cog}";
+			}
+		}
 
+		&.modify {
 			&:before {
 				content: "#{$glyph-icon-cog}";
 			}
 		}
 
 		&.more {
-			// float: right;
-
 			&:before {
 				content: "#{$glyph-icon-ellipsis}";
 			}
