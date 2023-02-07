@@ -50,32 +50,65 @@ $button-small-font-weight: 600 !default;
   border-radius: $form-fields-border-radius;
 
   &[data-value="draft"] {
+    background-color: $colour-orange-xl;
+
     &:after {
-      background-color: $colour-warning;
-      color: var(--select-box-background-color);
+      background-color: $colour-orange-l;
     }
 
-    &:hover:after {
-      background: darken($colour-warning, 10%);
+    &:before,
+    &:after {
+      color: darken($colour-orange, 20%);
     }
 
-    &:before {
-      color: $colour-warning;
+    &:hover {
+      background-color: darken($colour-orange-xl, 5%);
+
+      &:after {
+        background-color: darken($colour-orange-l, 5%);
+      }
     }
   }
 
   &[data-value="for-review"] {
+    background-color: $colour-violette-xl;
+
     &:after {
-      background-color: $colour-for-review;
-      color: var(--select-box-background-color);
+      background-color: $colour-violette-l;
     }
 
-    &:hover:after {
-      background: darken($colour-for-review, 10%);
+    &:before,
+    &:after {
+      color: darken($colour-violette, 15%);
     }
 
-    &:before {
-      color: $colour-for-review;
+    &:hover {
+      background-color: darken($colour-violette-xl, 5%);
+
+      &:after {
+        background-color: darken($colour-violette-l, 5%);
+      }
+    }
+  }
+
+  &[data-value="published"] {
+    background-color: $colour-green-xl;
+
+    &:after {
+      background-color: $colour-green-l;
+    }
+
+    &:before,
+    &:after {
+      color: darken($colour-green, 15%);
+    }
+
+    &:hover {
+      background-color: darken($colour-green-xl, 5%);
+
+      &:after {
+        background-color: darken($colour-green-l, 5%);
+      }
     }
   }
 
