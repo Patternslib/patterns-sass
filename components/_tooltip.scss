@@ -6,6 +6,7 @@ $backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
 $bullet-space: 22px !default;
 $tooltip-border-radii: $border-radii !default;
 $tooltip-background-colour: white !default;
+$bullet-space: 22px !default;
 
 @import "../libraries/tippyjs/index";
 @import "../libraries/tippyjs/themes/patterns-tooltip";
@@ -49,7 +50,7 @@ $tooltip-background-colour: white !default;
         box-shadow: none;
         font-size: 1em;
         font-family: $body-font-family;
-        padding-left: 22px;
+        padding-left: $bullet-space;
 
         &:hover {
           text-decoration: none;
