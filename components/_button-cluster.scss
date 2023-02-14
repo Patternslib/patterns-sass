@@ -3,6 +3,7 @@
 $pat-button-cluster-toggle-margin: 3px !default;
 $pat-button-cluster-button-height: $button-height !default;
 $pat-button-cluster-button-line-height: $button-line-height !default;
+$pat-button-cluster-background-colour-active: var(--colour-accent) !default;
 
 .pat-button-cluster {
   display: inline-block;
@@ -81,7 +82,7 @@ $pat-button-cluster-button-line-height: $button-line-height !default;
         }
 
         &:after {
-          background: var(--colour-accent);
+          background: $pat-button-cluster-background-colour-active;
           position: absolute;
           top: $pat-button-cluster-toggle-margin;
           right: calc(-1 * #{$pat-button-cluster-toggle-margin});
