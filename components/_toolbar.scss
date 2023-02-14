@@ -153,8 +153,23 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		-webkit-position: sticky;
 		position: sticky;
 		transition: box-shadow 1s;
-		top: -40px;
 		transition: all 1s;
+		top: -40px;
+
+		&.auto-hide {
+			top: -150px;
+			transition: all 0.4s;
+
+			&.tiptap-focus {
+				top: -40px;
+			}
+
+			@media screen and ( min-height: 601px ) {
+				.scroll-up & {
+					top: -40px;
+				}
+			}
+		}
 
 	    .pat-scroll-box:not(.scroll-position-top) &,
 	    &.tiptap-focus {
