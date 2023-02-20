@@ -1026,7 +1026,7 @@ form {
 
     .legend,
     > label,
-    .group > label {
+    .group:not(.pat-checklist) > label {
       font-weight: bold;
       display: block;
       margin-bottom: 1em;
