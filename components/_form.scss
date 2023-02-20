@@ -258,7 +258,8 @@ form {
       color: transparent;
 
       input,
-      .output-field {
+      .output-field,
+      select {
         position: absolute;
         top: 0;
         left: 0;
