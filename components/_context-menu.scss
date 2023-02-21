@@ -214,36 +214,33 @@ $context-menu-text-colour-hover: black !default;
 		border-radius: $border-radii;
 		font-size: $base-font-size;
 		height: auto !important; // !important overrules inline styles by .js
+	    border: 1px solid silver;
+	    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 
 		*:last-child {
 			margin-bottom: 0;
 		}
 			
-		li {
-			button,
-			.button {
-				display: block;
-				padding: 8px 15px;
-				margin: 0 -15px;
-				width: calc(100% + 30px);
-				font-size: 18px;
+		// li {
+		// 	button,
+		// 	.button {
+		// 		display: block;
+		// 		padding: 8px 15px;
+		// 		margin: 0 -15px;
+		// 		width: calc(100% + 30px);
+		// 		font-size: 18px;
 
-				&:hover {
-					background-color: #efefef;
-				}
-			}
-		}
+		// 		&:hover {
+		// 			background-color: #efefef;
+		// 		}
+		// 	}
+		// }
 
 		.batch-functions & {
 			width: 85%;
 			right: 0;
 			left: inherit;
 		}
-
-	    border: 1px solid silver;
-	    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-	    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-	    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 	}
 
 	&.align-right {
