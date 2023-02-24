@@ -248,7 +248,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 			.pat-button-cluster,
 			.pat-buttton,
 			> .icon {
-				margin-right: 30px;
+				margin-right: var(--pat-toolbar-element-separation);
 			}
 
 			@include screen-size(small) {
@@ -381,7 +381,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		}
 
 		@include screen-size(small) {
-			margin: 0 20px 0 0;
+			margin: 0 var(--pat-toolbar-element-separation) 0 0;
 		}
 
 		&:active {
