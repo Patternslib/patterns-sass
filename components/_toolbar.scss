@@ -17,6 +17,16 @@ $pat-toolbar-top-distance-scroll-down: -1px !default;
 $pat-toolbar-hiding-speed: 0.3s !default;
 
 .pat-toolbar {
+	@include screen-size(small) {
+		--toolbar-auto-hide-offset: -15px;
+		--pat-toolbar-element-separation: 0;
+	}
+
+	@include screen-size(medium-large) {
+		--toolbar-auto-hide-offset: -40px;
+		--pat-toolbar-element-separation: #{$pat-toolbar-element-separation};
+	}
+
 	@include clear-fix();
 	color: rgba(0,0,0,0.6);
 	position: relative;
@@ -24,6 +34,8 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 	padding: 10px;
 	border-radius: $border-radii;
 	font-size: $pat-toolbar-font-size;
+	margin: 0 -10px 40px;
+	height: $pat-toolbar-button-height;
 
 	.toolbar-title {
 		font-size: 0.6 * $pat-toolbar-button-height;
@@ -87,18 +99,8 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		outline: none;
 	}
 
-	@include screen-size(medium-large) {
-		margin: 0 -10px 40px;
-		height: $pat-toolbar-button-height;
-
-		.pat-modal & {
-			margin-bottom: 15px;
-		}
-	}
-
-	@include screen-size(small) {
-		margin: 0;
-		padding: 0;
+	.pat-modal & {
+		margin-bottom: 15px;
 	}
 
 	&.inline {
@@ -155,14 +157,6 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		transition: box-shadow 1s;
 		transition: all 1s;
 
-		@include screen-size(small) {
-  			--toolbar-auto-hide-offset: -10px;
-   	    }
-
-		@include screen-size(medium-large) {
-  			--toolbar-auto-hide-offset: -40px;
-   	    }
-
 		top: var(--toolbar-auto-hide-offset);
 
 		&.auto-hide {
@@ -215,24 +209,16 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 
 	.toolbar-navigation-area,
 	.toolbar-functions-area {
-		@include screen-size(medium-large) {
-			display: grid;
-			grid-template-columns: 1fr 4fr 1fr;
-			grid-template-areas: "left middle right";
-		}
-
-		@include screen-size(small) {
-			margin-bottom: 15px;
-		}
+		display: grid;
+		grid-template-columns: 1fr 4fr 1fr;
+		grid-template-areas: "left middle right";
 	}
 
 	&.type-document {
 		.toolbar-navigation-area,
 		.toolbar-functions-area {
-			@include screen-size(medium-large) {
-				grid-template-columns: 1fr 0fr 4fr;
-				grid-template-areas: "left middle right";
-			}
+			grid-template-columns: 1fr 0fr 4fr;
+			grid-template-areas: "left middle right";
 		}
 	}
 
@@ -279,7 +265,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 			> .icon,
 			> .pat-button,
 			> .context-menu > .pat-button {
-				margin-left: $pat-toolbar-element-separation;
+				margin-left: var(--pat-toolbar-element-separation);
 				margin-right: 0;
 				position: relative; // Raise above the :before element of bumpy toolbars.
 			}
@@ -415,7 +401,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		.pat-back-button,
 		.pat-select,
 		.pat-context-menu {
-			margin-right: $pat-toolbar-element-separation;
+			margin-right: var(--pat-toolbar-element-separation);
 		}
 	}
 
@@ -585,7 +571,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		// float: left;
 		display: inline-block;
 		z-index: 1;
-		margin-left: $pat-toolbar-element-separation;
+		margin-left: var(--pat-toolbar-element-separation);
 		vertical-align: top;
 		font-size: $base-font-size;
 		background-color: $pat-toolbar-icon-background-colour;

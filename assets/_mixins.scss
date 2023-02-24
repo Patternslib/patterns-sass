@@ -12,6 +12,9 @@ $colour-select-box-arrow: black !default;
 $form-input-field-box-shadow: none !default;
 $form-input-field-padding-top-bottom: 0.2em !default;
 $button-small-font-weight: 600 !default;
+$pat-form-panel-padding-large: 40px !default;
+$pat-form-panel-padding-medium: 30px !default;
+$pat-form-panel-padding-small: 20px !default;
 
 :root {
   --select-box-arrow-width: 35px;
@@ -200,7 +203,7 @@ $button-small-font-weight: 600 !default;
     background-color: $button-background-colour-subdued;
     color: $colour-link;
     position: absolute;
-    right: 40px;
+    right: var(--pat-form-pane-padding);
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;

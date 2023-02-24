@@ -29,6 +29,9 @@ $form-input-field-box-shadow: none !default;
 $form-input-field-box-shadow-disabled: none !default;
 $form-input-field-box-shadow-focus: none !default;
 $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
+$pat-form-panel-padding-large: 40px !default;
+$pat-form-panel-padding-medium: 30px !default;
+$pat-form-panel-padding-small: 20px !default;
 
 @mixin form-field-width {
   max-width: (100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value;
@@ -39,6 +42,19 @@ $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 
 .pat-form,
 form {
+
+  @include screen-size(small) {
+    --pat-form-pane-padding: #{$pat-form-panel-padding-small};
+  }
+
+  @include screen-size(medium) {
+    --pat-form-pane-padding: #{$pat-form-panel-padding-medium};
+  }
+
+  @include screen-size(large) {
+    --pat-form-pane-padding: #{$pat-form-panel-padding-large};
+  }
+
   section.help .panel-content {  
     padding-bottom: 2em;
   }
@@ -55,7 +71,7 @@ form {
   }
 
   &.panel-style .form-panel {   
-    padding: 40px;
+    padding: var(--pat-form-pane-padding);
     box-sizing: border-box;
     box-shadow: $default-box-shadow;
     border-radius: $border-radii;
@@ -81,7 +97,7 @@ form {
 
       .form-separation-header {
         padding-right: 50px;
-        padding-left: 40px;
+        padding-left: var(--pat-form-pane-padding);
         position: relative;
         margin: 0;
 
@@ -93,8 +109,8 @@ form {
         transition: box-shadow 2s;
 
         .form-separation-header {
-          padding-top: 40px;
-          padding-bottom: 40px;
+          padding-top: var(--pat-form-pane-padding);
+          padding-bottom: var(--pat-form-pane-padding);
         }
       }
 
@@ -120,7 +136,7 @@ form {
       }
 
       .panel-content {
-        padding: 0 40px 40px;
+        padding: 0 var(--pat-form-pane-padding) var(--pat-form-pane-padding);
         box-sizing: border-box;
       }
     }

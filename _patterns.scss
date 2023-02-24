@@ -84,6 +84,18 @@ $form-input-field-line-height: inherit !default;
 
 $collapsible-button-height: 31px !default;
 
+@include screen-size(small) {
+  --pat-form-pane-padding: #{$pat-form-panel-padding-small};
+}
+
+@include screen-size(medium) {
+  --pat-form-pane-padding: #{$pat-form-panel-padding-medium};
+}
+
+@include screen-size(large) {
+  --pat-form-pane-padding: #{$pat-form-panel-padding-large};
+}
+
 // Libraries
 
 @import "libraries/reset";
