@@ -154,19 +154,28 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		position: sticky;
 		transition: box-shadow 1s;
 		transition: all 1s;
-		top: -40px;
+
+		@include screen-size(small) {
+  			--toolbar-auto-hide-offset: -10px;
+   	    }
+
+		@include screen-size(medium-large) {
+  			--toolbar-auto-hide-offset: -40px;
+   	    }
+
+		top: var(--toolbar-auto-hide-offset);
 
 		&.auto-hide {
 			top: -150px;
 			transition: all 0.4s;
 
 			&.tiptap-focus {
-				top: -40px;
+				top: var(--toolbar-auto-hide-offset);
 			}
 
 			@media screen and ( min-height: 601px ) {
 				.scroll-up & {
-					top: -40px;
+					top: var(--toolbar-auto-hide-offset);
 				}
 			}
 		}
@@ -174,8 +183,8 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 	    .pat-scroll-box:not(.scroll-position-top) &,
 	    &.tiptap-focus {
 	      	box-shadow: $default-box-shadow;
-
 			background-color: rgba(255,255,255,0.9);
+
 			.backdropfilter & {
 				background-color: rgba(255,255,255,0.8);
 				-webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
