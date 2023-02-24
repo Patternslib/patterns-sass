@@ -561,6 +561,12 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 			}
 		}
 
+		&.menu {
+			&:before {
+				content: "#{$glyph-menu}";
+			}
+		}
+
 	}
 
 	.pat-toolbar-search-field {
