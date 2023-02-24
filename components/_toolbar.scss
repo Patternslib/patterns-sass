@@ -237,7 +237,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		}
 
 		@include screen-size(small) {
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 			grid-template-columns: 0 auto 0;
 		}
 	}
@@ -633,7 +633,6 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 		&.has-value,
 		&.fixed {
 			input {
-				width: 270px;
 				opacity: 1;
 
 				@include screen-size(medium-large) {
@@ -641,14 +640,13 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 				}
 
 				@include screen-size(small) {
-					width: 350px;
+					width: calc(100vw - 40px);
 				}
 			}
 
 			&:after {
 				color: gray;
 				transform: scale(0.8);
-				left: -270px;
 
 				@include screen-size(medium-large) {
 					left: -350px;
@@ -656,7 +654,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 				}
 
 				@include screen-size(small) {
-					left: -350px;
+					left: calc(-1 * (100vw - 40px));
 					padding-left: 40px;
 				}
 			}
