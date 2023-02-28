@@ -1,3 +1,16 @@
+$colour-green: #39870c !default; 										
+$colour-green-d: #2b6709 !default;	 							
+$colour-green-l: #c4dbb6 !default;						
+$colour-green-xl: #e1eddb !default; 						
+
+$colour-orange: #e17000 !default;  										
+$colour-orange-l: #f6d4b2 !default; 
+$colour-orange-xl: #fbead9 !default; 
+
+$colour-violette: #a90061 !default;
+$colour-violette-l: #e5b3d0 !default; 
+$colour-violette-xl: #f2d9e7 !default;
+
 $colour-link: DodgerBlue !default;
 $colour-link-hover: navy !default;
 $colour-base: #efefef !default;
@@ -9,7 +22,9 @@ $colour-workspace-default: #869EBF !default;
 $colour-accent: #5d91ff !default;
 :root { --colour-accent: #{$colour-accent}; }
 $colour-success: #5bb75b !default;
+$colour-success-background: #e1eddb !default;
 $colour-warning: #faa732 !default;
+$colour-warning-background: #fbead9 !default; 
 $colour-for-review: #a90061 !default;
 $colour-notice: #fdfdc8 !default;
 $colour-info: #d9edf7 !default;
@@ -20,15 +35,3 @@ $colour-chooser-default: $colour-accent !default;
 $colour-form-fields-background: rgba(0,0,0,0.1) !default;
 $colour-well-background: rgba(255,255,255,0.5) !default;
 
-$colour-green: #39870c; 										
-$colour-green-d: #2b6709;	 							
-$colour-green-l: #c4dbb6;						
-$colour-green-xl: #e1eddb; 						
-
-$colour-orange: #e17000;  										
-$colour-orange-l: #f6d4b2; 
-$colour-orange-xl: #fbead9; 
-
-$colour-violette: #a90061;
-$colour-violette-l: #e5b3d0; 
-$colour-violette-xl: #f2d9e7;

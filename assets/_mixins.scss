@@ -604,7 +604,7 @@ $pat-form-panel-padding-small: 20px !default;
     }
 
     &.success {
-        background-color: $colour-success;
+        background-color: $colour-success-background;
 
         input { color: $body-font-color};
     }
@@ -614,7 +614,7 @@ $pat-form-panel-padding-small: 20px !default;
     }
 
     &.warning {
-        background-color: $colour-warning;
+        background-color: $colour-warning-background;
 
         input { color: $body-font-color};
         // select { border: white, color: white;}
