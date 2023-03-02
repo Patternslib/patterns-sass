@@ -672,6 +672,18 @@ $pat-form-panel-padding-small: 20px !default;
     line-height: 1.3;
     font-family: $body-font-family;
 
+    &[class*=icon-] {
+      display: flex;
+      align-items: center;
+
+      &:before {
+        width: 80px;
+        font-size: 30px;
+        opacity: 0.5;
+        margin-right: 0.4em;
+      }
+    }
+
     > p,
     .message-title {
       margin-bottom: 0.5em;
