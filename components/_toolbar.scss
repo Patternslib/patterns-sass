@@ -16,6 +16,9 @@ $pat-toolbar-top-distance: -1px !default;
 $pat-toolbar-top-distance-scroll-down: -1px !default;
 $pat-toolbar-hiding-speed: 0.3s !default;
 
+$pat-button-cluster-toggle-margin: 3px !default;
+$pat-button-cluster-button-height: $button-height !default;
+
 .pat-toolbar {
 	@include screen-size(small) {
 		--toolbar-auto-hide-offset: -15px;
@@ -39,6 +42,34 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 	padding: 10px;
 	border-radius: $border-radii;
 	font-size: $pat-toolbar-font-size;
+
+	.abecedary {
+		box-shadow: none;
+		background-color: transparent;
+		z-index: 1;
+
+		&:after {
+			content: ' ';
+			position: absolute;
+			z-index: -2;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: $button-background-colour;
+		}
+
+		> a {
+			width: $pat-button-cluster-button-height - 4 * $pat-button-cluster-toggle-margin;
+			box-sizing: border-box;
+			text-align: center;
+			padding: 0;
+
+			&:after {
+				box-shadow: none;
+			}
+		}
+	}
 
 	.toolbar-title {
 		font-size: 0.6 * $pat-toolbar-button-height;
