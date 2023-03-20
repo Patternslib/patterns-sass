@@ -46,7 +46,7 @@ $pat-button-cluster-background-colour-active: var(--colour-accent) !default;
         border: none;
         background: transparent;
         padding: 0 12px;
-        color: rgba(0,0,0,0.7);
+        color: $colour-link;
         cursor: default;
         line-height: $pat-button-cluster-button-line-height;
         height: $pat-button-cluster-button-height;
@@ -64,16 +64,19 @@ $pat-button-cluster-background-colour-active: var(--colour-accent) !default;
           opacity: 0;
         }
 
-        &[href]:not(.current):hover {
-          color: black;
-          background-color: transparent;
-        }
-
         &:not(.active):not(.current):not(.checked):hover {
           text-decoration: none;;
           // background-color: rgba(255,255,255,0.4);
           color: black;
         } 
+
+        &[href]:not(.current):hover {
+          color: darken($colour-link, 10%);
+          text-decoration: underline !important;
+          text-underline-offset: 3px;
+          cursor: pointer;
+          background-color: transparent;
+        }
 
         &:before {
           margin-right: 5px;
@@ -312,6 +315,34 @@ $pat-button-cluster-background-colour-active: var(--colour-accent) !default;
             color: white;
           }
         }
+      }
+    }
+  }
+
+  &.abecedary {
+    box-shadow: none;
+    background-color: transparent;
+    z-index: 1;
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $button-background-colour;
+    }
+
+    > a {
+      width: $pat-button-cluster-button-height - 4 * $pat-button-cluster-toggle-margin;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 0;
+
+      &:after {
+        box-shadow: none;
       }
     }
   }
