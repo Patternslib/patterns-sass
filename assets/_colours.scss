@@ -23,11 +23,13 @@ $colour-accent: #5d91ff !default;
 :root { --colour-accent: #{$colour-accent}; }
 $colour-success: #5bb75b !default;
 $colour-success-background: #e1eddb !default;
-$colour-warning: #faa732 !default;
+$colour-warning: orange !default;
 $colour-warning-background: #fbead9 !default; 
 $colour-for-review: #a90061 !default;
 $colour-notice: #fdfdc8 !default;
+$colour-notice-background: #fdfdc8 !default;
 $colour-info: #d9edf7 !default;
+$colour-info-background: #d9edf7 !default;
 $colour-error: red !default;
 $colour-error-background: rgba(255,0,0,0.1) !default;
 $colour-base-light: #efefef !default;

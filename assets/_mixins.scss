@@ -15,6 +15,7 @@ $button-small-font-weight: 600 !default;
 $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
 $pat-form-panel-padding-small: 20px !default;
+$pat-message-box-shadow: 0 0 0 2px white !default;
 
 :root {
   --select-box-arrow-width: 35px;
@@ -671,6 +672,7 @@ $pat-form-panel-padding-small: 20px !default;
     border-radius: $border-radii;
     line-height: 1.3;
     font-family: $body-font-family;
+    box-shadow: $pat-message-box-shadow;
 
     &[class*=icon-] {
       display: flex;
@@ -679,7 +681,7 @@ $pat-form-panel-padding-small: 20px !default;
       &:before {
         width: 80px;
         font-size: 30px;
-        opacity: 0.5;
+        // opacity: 0.5;
         margin-right: 0.4em;
       }
     }
@@ -694,15 +696,19 @@ $pat-form-panel-padding-small: 20px !default;
     }
 
     &.success {
-        background-color: $colour-success;
+        background-color: $colour-success-background;
+
+        &:before {
+          color: $colour-success;
+        }
     }
 
     &.notice {
-        background-color: $colour-notice;
+        background-color: $colour-notice-background;
     }
 
     &.info {
-        background-color: $colour-info;
+        background-color: $colour-info-background;
     }
 
     &.error {
@@ -713,6 +719,10 @@ $pat-form-panel-padding-small: 20px !default;
     &.warning {
         background-color: $colour-warning-background;
         color: black;
+
+        &:before {
+          color: $colour-warning;
+        }
 
         a:not(.pat-button) { 
           color: rgba(0,0,0,0.6); 
