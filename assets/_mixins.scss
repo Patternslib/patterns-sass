@@ -677,6 +677,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     &[class*=icon-] {
       display: flex;
       align-items: center;
+      padding-right: 40px;
 
       &:before {
         width: 80px;
