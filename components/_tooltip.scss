@@ -205,38 +205,38 @@ $bullet-space: 22px !default;
 
   &.info {
     .tippy-content {
-      background-color: $colour-notice;
+      background-color: $colour-notice-background;
     }
 
     [data-placement^='bottom'] .tippy-arrow {
-      border-bottom-color: $colour-notice;
+      border-bottom-color: $colour-notice-background;
 
       &::before {
-        border-bottom-color: $colour-notice;
+        border-bottom-color: $colour-notice-background;
       }
     }
 
     [data-placement^='left'] .tippy-arrow {
-      border-left-color: $colour-notice;
+      border-left-color: $colour-notice-background;
 
       &::before {
-        border-left-color: $colour-notice;
+        border-left-color: $colour-notice-background;
       }
     }
 
     [data-placement^='right'] .tippy-arrow {
-      border-right-color: $colour-notice;
+      border-right-color: $colour-notice-background;
 
       &::before {
-        border-right-color: $colour-notice;
+        border-right-color: $colour-notice-background;
       }
     }
 
     [data-placement^='top'] .tippy-arrow {
-      border-top-color: $colour-notice;
+      border-top-color: $colour-notice-background;
 
       &::before {
-        border-top-color: $colour-notice;
+        border-top-color: $colour-notice-background;
       }
     }
   }
