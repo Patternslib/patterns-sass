@@ -611,7 +611,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
 
     &.notice {
-        background-color: $colour-notice;
+        background-color: $colour-notice-background;
     }
 
     &.warning {
@@ -706,6 +706,10 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
 
     &.notice {
         background-color: $colour-notice-background;
+
+        &:before {
+          color: $colour-notice;
+        }
     }
 
     &.info {
