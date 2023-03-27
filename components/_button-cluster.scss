@@ -71,7 +71,8 @@ $pat-button-cluster-font-size: 18px !default;
           color: black;
         } 
 
-        &[href]:not(.current):hover {
+        &[href]:not(.current):hover,
+        &.unchecked:hover {
           color: darken($colour-link, 10%);
           text-decoration: underline !important;
           text-underline-offset: 3px;
