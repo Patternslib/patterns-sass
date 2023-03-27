@@ -54,10 +54,17 @@ $pat-button-cluster-button-height: $button-height !default;
 	    text-overflow: ellipsis;
 	    text-decoration: none;
 	    display: inline-block;
+	    padding: 0 10px;
+	    color: black;
+
+	    &.auto-hide {
+	    	opacity: 0;
+	    	transition: all 1s;
+	    }
 
 		&.select {	
 		    overflow: hidden;
-		    color: rgba(0, 0, 0, 0.6);
+		    color: rgba(0, 0, 0, 0.8);
 		    cursor: default;
 		    padding-right: 1.5em;
 		    background-repeat: no-repeat;
@@ -153,6 +160,10 @@ $pat-button-cluster-button-height: $button-height !default;
 	    &.tiptap-focus {
 	    	&:before {
 	    		box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+	    	}
+
+	    	.toolbar-title.auto-hide {
+	    		opacity: 1;
 	    	}
 	    }
 	}
