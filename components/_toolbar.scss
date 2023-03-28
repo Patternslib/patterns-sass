@@ -417,6 +417,39 @@ $pat-button-cluster-button-height: $button-height !default;
 		}
 	}
 
+	.pat-button {
+		&.locked {
+			position: relative;
+			padding-right: 3em;
+			// border: 1px $colour-orange solid;
+			color: $colour-orange;
+
+			&:after {
+				display: block;
+				font-family: fontello;
+				content: '#{$glyph-lock}';
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				height: 100%;
+				width: 2em;
+				text-align: center;
+				background: $colour-orange;
+				color: white;
+				// border-top-right-radius: 10px;
+				// border-bottom-right-radius: 10px;
+				line-height: $canvas-toolbar-button-height;
+			}
+
+			&.active, {
+				&:after {
+					content: '#{$glyph-lock-open}';
+				}
+			}
+		}
+	}
+
 	>,
 	.toolbar-section >,
 	.pat-toolbar-section > {
