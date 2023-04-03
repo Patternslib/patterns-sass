@@ -120,7 +120,6 @@ $pat-button-cluster-font-size: 18px !default;
 
           .counter {
             background: red;
-            // border: 1px solid white;
           }
       }
 
@@ -138,11 +137,11 @@ $pat-button-cluster-font-size: 18px !default;
 
       .counter {
         display: inline-block;
-        margin: 0.8em 0em 0.5em 0.5em;
+        margin: -0.9em 0em 0 0.5em;
         background-color: red;
         color: white;
         border-radius: 1em;
-          border: 1px solid rgba(255,255,255,1);
+        border: 1px solid rgba(255,255,255,1);
         height: 1.8em;
         min-width: 1.8em;
         @include box-sizing;
@@ -155,6 +154,9 @@ $pat-button-cluster-font-size: 18px !default;
         font-size: 0.6em;
         text-align: center;
         font-weight: normal;
+
+        position: relative;
+        top: 50%;
 
         &.disabled {
           opacity: 0.2;
