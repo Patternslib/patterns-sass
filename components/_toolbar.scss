@@ -632,7 +632,7 @@ $pat-button-cluster-button-height: $button-height !default;
 			width: $pat-toolbar-button-height;
 			padding-top: $pat-toolbar-button-height + 16px;
 			padding-right: 10px;
-			padding-bottom: 10px;
+			padding-bottom: 6px;
 			padding-left: 10px;
 			float: right;
 			margin: -54px -25px;
@@ -645,7 +645,9 @@ $pat-button-cluster-button-height: $button-height !default;
 				opacity: 0;
 
 				a {
-					text-decoration: underline;
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 
 				@include screen-size(medium-large) {
