@@ -621,13 +621,74 @@ $pat-button-cluster-button-height: $button-height !default;
 
 	}
 
+	.pat-toolbar-local-search-box {
+		width: $pat-toolbar-button-height;
+		margin-right: var(--pat-toolbar-element-separation);
+		display: inline-block;
+		padding: 0;
+
+		.spotlight-sentinel {
+			overflow: hidden;
+			width: $pat-toolbar-button-height;
+			padding-top: $pat-toolbar-button-height + 16px;
+			padding-right: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			float: right;
+			margin: -54px -25px;
+			transition: all 0.5s;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+
+			.instance-counter {
+				margin-top: -1 * $pat-toolbar-button-height;
+				transition: all 0.5s;
+				opacity: 0;
+
+				a {
+					text-decoration: underline;
+				}
+
+				@include screen-size(medium-large) {
+					width: 350px;
+				}
+
+				@include screen-size(small) {
+					width: calc(100vw - 40px);
+				}
+			}
+		}
+
+		&.focus,
+		&.has-value,
+		&.fixed {
+
+			.instance-counter {
+				margin-top: 0;
+				opacity: 1;
+			}
+
+			.spotlight-sentinel {
+				background-color: white;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+				@include screen-size(medium-large) {
+					width: 350px;
+				}
+
+				@include screen-size(small) {
+					width: calc(100vw - 40px);
+				}
+			}
+		}
+	}
+
 	.pat-toolbar-search-field {
 		width: $pat-toolbar-button-height;
 		height: $pat-toolbar-button-height;
 		position: relative;
 		// float: left;
 		display: inline-block;
-		z-index: 1;
+		z-index: 10;
 		margin-left: var(--pat-toolbar-element-separation);
 		vertical-align: top;
 		font-size: $base-font-size;
