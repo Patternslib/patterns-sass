@@ -78,7 +78,12 @@ label.pat-checklist {
 
 	> legend,
 	> .legend {
-		margin-bottom: $pat-checklist-item-separation;
+		margin-bottom: 2 * $pat-checklist-item-separation;
+
+		form.vertical &,
+		form fieldset.vertical & {
+			margin-bottom: 2 * $pat-checklist-item-separation;
+		}
 	}
 
 	.pat-checklist-sub {
