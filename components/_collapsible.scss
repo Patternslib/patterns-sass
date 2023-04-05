@@ -2,13 +2,15 @@
 
 .pat-collapsible {
 
-.js {
-	display: none;	  
+	.js {
+		display: none;	  
 
-	.patterns-loaded & {
-	  	display: inherit;
+		.patterns-loaded & {
+		  	display: inherit;
+		}
 	}
-}
 
-  	animation: fadeIn 1s;
+    #content:not(.spotlight-on) & {
+  		animation: fadeIn 1s;
+  	}
 }
