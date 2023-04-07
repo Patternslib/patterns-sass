@@ -34,10 +34,9 @@ $pat-form-panel-padding-medium: 30px !default;
 $pat-form-panel-padding-small: 20px !default;
 
 @mixin form-field-width {
-  max-width: (100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value;
-  min-width: (100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value;
-  width: (100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value;
-
+  max-width: calc((100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value);
+  min-width: calc((100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value);
+  width: calc((100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value);
 }
 
 .pat-form,
