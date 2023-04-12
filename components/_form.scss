@@ -814,24 +814,21 @@ $pat-form-panel-padding-small: 20px !default;
               grid-area: message;
             }
 
-            .select2-container {
-              width: $form-proportion-ceiling;
-            }
-
             .colour-chooser-launcher {
               height: 0.6em;
             }
           }
 
-          &.checkbox:before, &[data-option]:after {
-            position: relative;
-            vertical-align: top;
-            max-width: $form-proportion-ceiling;
-            left: 100%;
-            margin-right: -200%;
-            margin-left: 0;
-            float: left;
-          }
+          // &.checkbox:before, 
+          // &[data-option]:after {
+          //   position: relative;
+          //   vertical-align: top;
+          //   max-width: $form-proportion-ceiling;
+          //   left: 100%;
+          //   margin-right: -200%;
+          //   margin-left: 0;
+          //   float: left;
+          // }
         }
 
         label {
