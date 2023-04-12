@@ -36,7 +36,7 @@ $pat-form-panel-padding-small: 20px !default;
 .pat-form {
 
   --pat-form-horizontal-label-width: 30%;
-  --pat-form-horizontal-extra-width: 10%;
+  --pat-form-horizontal-extra-width: 26px;
 
   @include screen-size(small) {
     --pat-form-pane-padding: #{$pat-form-panel-padding-small};
@@ -747,14 +747,43 @@ $pat-form-panel-padding-small: 20px !default;
     padding: 0;
     min-width: inherit;
 
-    &:after {
-      display: table;
-      clear: both;
-      content: ' ';
-    }
-
       &.section {
         margin: 0 0 2em;
+      }
+
+      .help-icon {
+        width: 26px;
+        height: 35px;
+        overflow: hidden;
+        background-color: $colour-dark-blue;
+        color: transparent;
+        padding: 0;
+        content: '#{$glyph-vraagteken}';
+        font-family: fontello;
+        transition: translate 0.25s;
+        transform: translateY(0%);
+
+        &:before {
+          content: '#{$glyph-vraagteken}';
+          background-color: transparent;
+          transform: none;
+          margin: 0;
+          font-family: fontello;
+          color: white;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          line-height: 35px;
+          text-align: center;
+          font-weight: normal;
+          font-style: normal;
+          font-size: 0.8em;
+          transition: opacity 0.8s;
+          transition-delay: 0.3s;
+        }
+        
       }
    
       &.horizontal,
@@ -783,16 +812,10 @@ $pat-form-panel-padding-small: 20px !default;
             "label field   extra"
             "label message extra";
           grid-auto-rows: auto;
+          column-gap: 25px;
           clear: left;
           border-style: none;
           margin: 0 0 $form-field-tail-white 0;
-
-          &:after {
-            content: " ";
-            height: 0;
-            display: block;
-            clear: both;
-          }
 
           > {
             * {
@@ -845,8 +868,9 @@ $pat-form-panel-padding-small: 20px !default;
           // padding-left: var(--pat-form-horizontal-label-width);
           display: grid;
           grid-template-areas: 
-            "label field   extra";
+            "label field extra";
           grid-auto-flow: column;
+          column-gap: 25px;
           grid-auto-columns: var(--pat-form-horizontal-label-width) auto var(--pat-form-horizontal-extra-width);
 
           &.image-selection,
@@ -870,11 +894,15 @@ $pat-form-panel-padding-small: 20px !default;
             grid-column-start: 2;
           } 
 
+          .help-icon {
+            grid-area: extra;
+          }
+
           > .legend,
           legend {
             display: inline;
             text-align: left;
-            padding: 0 1em 0 0;
+            padding: 0;
             box-sizing: border-box;
             position: relative;
             display: block;
