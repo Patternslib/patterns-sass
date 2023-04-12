@@ -864,7 +864,8 @@ $pat-form-panel-padding-small: 20px !default;
         }
 
         fieldset.group,
-        div.group {
+        div.group,
+        > .pat-checklist {
           // padding-left: var(--pat-form-horizontal-label-width);
           display: grid;
           grid-template-areas: 
