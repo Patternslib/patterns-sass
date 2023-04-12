@@ -33,12 +33,6 @@ $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
 $pat-form-panel-padding-small: 20px !default;
 
-@mixin form-field-width {
-  max-width: calc((100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value);
-  min-width: calc((100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value);
-  width: calc((100% - $form-proportion-name) / $form-proportion-name * $form-proportion-value);
-}
-
 .pat-form {
 
   --pat-form-horizontal-label-width: 30%;
@@ -855,6 +849,23 @@ $pat-form-panel-padding-small: 20px !default;
           grid-auto-flow: column;
           grid-auto-columns: var(--pat-form-horizontal-label-width) auto var(--pat-form-horizontal-extra-width);
 
+          &.image-selection,
+          &.image-upload,
+          &.video-upload {
+            .pat-button {
+                margin: 0 0 -9px 0;
+            }
+          }
+
+          &.image-selection,
+          &.video-upload,
+          &.image-upload {
+            input,
+            video,
+            img {
+              width: 100%;
+            }
+          }
           > * {
             grid-column-start: 2;
           } 
