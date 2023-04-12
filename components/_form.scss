@@ -760,17 +760,18 @@ $pat-form-panel-padding-small: 20px !default;
         background-color: $button-background-colour-default;
         color: transparent;
         padding: 0;
-        content: '#{$glyph-vraagteken}';
+        content: '#{$glyph-question-mark}';
         font-family: fontello;
         transition: translate 0.25s;
         transform: translateY(0%);
+        border-radius: $border-radii;
 
         &:hover {
           background-color: $button-background-colour-default-hover;
         }
 
         &:before {
-          content: '#{$glyph-vraagteken}';
+          content: '#{$glyph-question-mark}';
           background-color: transparent;
           transform: none;
           margin: 0;
@@ -830,6 +831,7 @@ $pat-form-panel-padding-small: 20px !default;
 
             .help-icon {
               grid-area: extra;
+              grid-row: 1 / last;
             }
 
             .message,
@@ -905,6 +907,7 @@ $pat-form-panel-padding-small: 20px !default;
 
           .help-icon {
             grid-area: extra;
+            grid-row: 1 / last;
           }
 
           > .legend,
