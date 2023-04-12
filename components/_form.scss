@@ -828,8 +828,8 @@ $pat-form-panel-padding-small: 20px !default;
               grid-area: field;
             }
 
-            .help {
-              grid-area: help;
+            .help-icon {
+              grid-area: extra;
             }
 
             .message,
@@ -873,6 +873,7 @@ $pat-form-panel-padding-small: 20px !default;
         div.group,
         > .pat-checklist {
           // padding-left: var(--pat-form-horizontal-label-width);
+          margin: 0 0 $form-field-tail-white 0;
           display: grid;
           grid-template-areas: 
             "label field . extra";
