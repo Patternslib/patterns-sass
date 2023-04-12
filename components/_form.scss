@@ -147,7 +147,6 @@ $pat-form-panel-padding-small: 20px !default;
   .message {
     @include pat-message();
     @include box-sizing();
-
     display: block;
     clear: both;
     margin-top: 0.5em;
@@ -787,7 +786,8 @@ $pat-form-panel-padding-small: 20px !default;
           display: grid;
           grid-template-columns: var(--pat-form-horizontal-label-width) auto var(--pat-form-horizontal-extra-width);
           grid-template-areas: 
-            "label field   extra";
+            "label field   extra"
+            "label message extra";
           grid-auto-rows: auto;
           clear: left;
           border-style: none;
@@ -809,7 +809,8 @@ $pat-form-panel-padding-small: 20px !default;
               grid-area: help;
             }
 
-            .message {
+            .message,
+            .pat-message {
               grid-area: message;
             }
 
