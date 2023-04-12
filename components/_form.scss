@@ -884,20 +884,26 @@ $pat-form-panel-padding-small: 20px !default;
           grid-auto-columns: var(--pat-form-horizontal-label-width) auto 0 var(--pat-form-horizontal-extra-width);
 
           &.image-selection,
+          &.object-upload,
           &.image-upload,
           &.video-upload {
+            justify-items: start;
+
             .pat-button {
                 margin: 0 0 -9px 0;
             }
-          }
 
-          &.image-selection,
-          &.video-upload,
-          &.image-upload {
             input,
+            .pat-screenshot,
             video,
             img {
               width: 100%;
+            }
+
+            input,
+            video,
+            img {
+              margin-bottom: 5px;
             }
           }
 
