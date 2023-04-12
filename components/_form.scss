@@ -35,8 +35,9 @@ $pat-form-panel-padding-small: 20px !default;
 
 .pat-form {
 
-  --pat-form-horizontal-label-width: 30%;
+  --pat-form-horizontal-label-width: 27%;
   --pat-form-horizontal-extra-width: 26px;
+  --pat-form-horizontal-column-gap: 25px;
 
   @include screen-size(small) {
     --pat-form-pane-padding: #{$pat-form-panel-padding-small};
@@ -141,6 +142,7 @@ $pat-form-panel-padding-small: 20px !default;
   .message {
     @include pat-message();
     @include box-sizing();
+    margin-bottom: 0;
     display: block;
     clear: both;
     margin-top: 0.5em;
@@ -755,13 +757,17 @@ $pat-form-panel-padding-small: 20px !default;
         width: 26px;
         height: 35px;
         overflow: hidden;
-        background-color: $colour-dark-blue;
+        background-color: $button-background-colour-default;
         color: transparent;
         padding: 0;
         content: '#{$glyph-vraagteken}';
         font-family: fontello;
         transition: translate 0.25s;
         transform: translateY(0%);
+
+        &:hover {
+          background-color: $button-background-colour-default-hover;
+        }
 
         &:before {
           content: '#{$glyph-vraagteken}';
@@ -807,12 +813,12 @@ $pat-form-panel-padding-small: 20px !default;
           position: relative;
           display: block;
           display: grid;
-          grid-template-columns: var(--pat-form-horizontal-label-width) auto var(--pat-form-horizontal-extra-width);
+          grid-template-columns: var(--pat-form-horizontal-label-width) auto 0 var(--pat-form-horizontal-extra-width);
           grid-template-areas: 
-            "label field   extra"
-            "label message extra";
+            "label field   . extra"
+            "label message . extra";
           grid-auto-rows: auto;
-          column-gap: 25px;
+          column-gap: var(--pat-form-horizontal-column-gap);
           clear: left;
           border-style: none;
           margin: 0 0 $form-field-tail-white 0;
@@ -869,10 +875,10 @@ $pat-form-panel-padding-small: 20px !default;
           // padding-left: var(--pat-form-horizontal-label-width);
           display: grid;
           grid-template-areas: 
-            "label field extra";
+            "label field . extra";
           grid-auto-flow: column;
           column-gap: 25px;
-          grid-auto-columns: var(--pat-form-horizontal-label-width) auto var(--pat-form-horizontal-extra-width);
+          grid-auto-columns: var(--pat-form-horizontal-label-width) auto 0 var(--pat-form-horizontal-extra-width);
 
           &.image-selection,
           &.image-upload,
@@ -891,6 +897,7 @@ $pat-form-panel-padding-small: 20px !default;
               width: 100%;
             }
           }
+
           > * {
             grid-column-start: 2;
           } 
@@ -912,6 +919,11 @@ $pat-form-panel-padding-small: 20px !default;
             text-transform: none;
             letter-spacing: 0;
             grid-column-start: 1;
+          }
+
+          &.button-bar {
+            display: block;
+            padding-left: calc(var(--pat-form-horizontal-label-width) + var(--pat-form-horizontal-column-gap));
           }
 
           &.layout-inline {
