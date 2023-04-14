@@ -836,6 +836,7 @@ $pat-form-panel-padding-small: 20px !default;
           > {
             * {
               grid-area: field;
+              overflow: hidden; // Prevents long items from stretching open the grid cell
             }
 
             .help-icon {
