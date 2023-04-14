@@ -280,6 +280,16 @@ $pat-form-panel-padding-small: 20px !default;
       }
     }
 
+    &.layout-inline {
+      grid-auto-columns: auto;
+      justify-self: start;
+    }
+
+    &.layout-amount-per-timespan {
+      grid-template-columns: 100px 200px;
+      justify-self: start;
+    }
+
     &.layout-title-names {
       grid-template-columns: 50px auto auto;
     }
