@@ -851,9 +851,10 @@ $pat-form-panel-padding-small: 20px !default;
           > {
             * {
               grid-area: field;
+              min-width: 0; // Prevents long items from stretching open the grid cell.
 
               &[size] {
-                overflow: hidden; // Prevents long items from stretching open the grid cell
+                overflow: hidden; // Prevents long items from stretching open the grid cell.
               }
             }
 
