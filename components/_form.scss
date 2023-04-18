@@ -146,7 +146,7 @@ $pat-form-panel-padding-small: 20px !default;
   .message {
     @include pat-message();
     @include box-sizing();
-    margin-bottom: 0;
+    // margin-bottom: 0;
     display: block;
     clear: both;
     margin-top: 0.5em;
@@ -284,8 +284,26 @@ $pat-form-panel-padding-small: 20px !default;
       }
     }
 
+    &.layout-inline {
+      grid-auto-columns: auto;
+      justify-self: start;
+    }
+
+    &.layout-amount-per-timespan {
+      grid-template-columns: 100px 200px;
+      justify-self: start;
+    }
+
+    &.layout-title-names {
+      grid-template-columns: 50px auto auto;
+    }
+
     &.layout-date-time {
       grid-template-columns: auto 100px;
+    }
+
+    &.layout-date {
+      grid-template-columns: 100px 150px 100px;
     }
 
     &.layout-address-line-nl {  
@@ -823,6 +841,7 @@ $pat-form-panel-padding-small: 20px !default;
             "label field   . extra"
             "label message . extra";
           grid-auto-rows: auto;
+          align-items: flex-start;
           column-gap: var(--pat-form-horizontal-column-gap);
           clear: left;
           border-style: none;
@@ -831,6 +850,7 @@ $pat-form-panel-padding-small: 20px !default;
           > {
             * {
               grid-area: field;
+              overflow: hidden; // Prevents long items from stretching open the grid cell
             }
 
             .help-icon {
@@ -933,6 +953,7 @@ $pat-form-panel-padding-small: 20px !default;
             text-transform: none;
             letter-spacing: 0;
             grid-column-start: 1;
+            grid-row: 1 / last;
           }
 
           &.button-bar {
