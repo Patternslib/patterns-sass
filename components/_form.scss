@@ -31,6 +31,7 @@ $form-input-field-box-shadow-focus: none !default;
 $form-help-button-height: 37px !default;
 $form-help-button-width: 26px !default;
 $form-help-button-icon-height: 37px !default;
+$form-help-button-icon-glyph: $glyph-question-mark !default;
 $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
@@ -771,7 +772,7 @@ $pat-form-panel-padding-small: 20px !default;
         }
 
         &:before {
-          content: '#{$glyph-question-mark}';
+          content: '#{$form-help-button-icon-glyph}';
           border-radius: $border-radii;
           background-color: $button-background-colour-default;
           transform: none;
