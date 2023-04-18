@@ -418,6 +418,10 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     margin-bottom: 1em;
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   ul,
   ol {
     counter-reset: oli;
