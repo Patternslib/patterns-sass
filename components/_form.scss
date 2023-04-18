@@ -785,7 +785,8 @@ $pat-form-panel-padding-small: 20px !default;
         height: $form-help-button-height;
         width: $form-help-button-width;
 
-        &:hover:before {
+        &:hover:before,
+        &.tooltip-active-click:before {
           background-color: $button-background-colour-default-hover;
         }
 
