@@ -244,7 +244,7 @@ $bullet-space: 22px !default;
   &.rich {
     .tippy-content {
       @include pat-rich();
-      p,h1,h2,h3,h4,h5,ul,ol,table {
+      p,h1,h2,h3,ul,ol,table {
         margin-bottom: 0.5em;
       }
 
@@ -261,13 +261,13 @@ $bullet-space: 22px !default;
     }
   }
 
-  h4 {
-    color: #3b3b3b;
-    /* font-size: 12px; */
-    font-size: 1em;
-    /* line-height: 18px; */
-    margin-bottom: 5px;
-  }
+  // h4 {
+  //   color: #3b3b3b;
+  //   /* font-size: 12px; */
+  //   font-size: 1em;
+  //   /* line-height: 18px; */
+  //   margin-bottom: 5px;
+  // }
 
   .item-selector {
     position: static;
