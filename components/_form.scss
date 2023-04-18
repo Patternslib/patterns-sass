@@ -28,6 +28,9 @@ $form-input-field-border-focus: none !default;
 $form-input-field-box-shadow: none !default;
 $form-input-field-box-shadow-disabled: none !default;
 $form-input-field-box-shadow-focus: none !default;
+$form-help-button-height: 37px !default;
+$form-help-button-width: 26px !default;
+$form-help-button-icon-height: 37px !default;
 $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
@@ -754,41 +757,41 @@ $pat-form-panel-padding-small: 20px !default;
       }
 
       .help-icon {
-        width: 26px;
-        height: 35px;
-        overflow: hidden;
-        background-color: $button-background-colour-default;
         color: transparent;
-        padding: 0;
         content: '#{$glyph-question-mark}';
         font-family: fontello;
-        transition: translate 0.25s;
-        transform: translateY(0%);
-        border-radius: $border-radii;
+        position: relative;
+        margin: -1 * $form-input-field-padding-top-bottom 0;
+        line-height: $form-input-field-line-height;
+        height: $form-help-button-height;
+        width: $form-help-button-width;
 
-        &:hover {
+        &:hover:before {
           background-color: $button-background-colour-default-hover;
         }
 
         &:before {
           content: '#{$glyph-question-mark}';
-          background-color: transparent;
+          border-radius: $border-radii;
+          background-color: $button-background-colour-default;
           transform: none;
           margin: 0;
           font-family: fontello;
           color: white;
           position: absolute;
-          top: 0;
+          top: 50%;
           right: 0;
+          transform: translateY(-50%);
+          line-height: $form-help-button-icon-height;
+          height: $form-help-button-icon-height;
           width: 100%;
-          height: 100%;
-          line-height: 35px;
           text-align: center;
           font-weight: normal;
           font-style: normal;
           font-size: 0.8em;
           transition: opacity 0.8s;
           transition-delay: 0.3s;
+          overflow: hidden;
         }
         
       }
