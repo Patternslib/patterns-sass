@@ -1040,7 +1040,8 @@ $pat-form-panel-padding-small: 20px !default;
       .output-field,
       .composed,
       .field-cluster,
-      .attachment-list {
+      .attachment-list,
+      .pat-checklist {
         // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
         display: block;
         margin-top: 0.2em;
