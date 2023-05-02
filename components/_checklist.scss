@@ -75,6 +75,7 @@ label.pat-checklist {
 
 .pat-checklist:not(.free-form) {
 	line-height: $checklist-label-line-height;
+	min-height: 0.7em; // Important for single checkboxes with the class pat-checklist on the label.
 
 	> legend,
 	> .legend {
