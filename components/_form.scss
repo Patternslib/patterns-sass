@@ -784,6 +784,7 @@ $pat-form-panel-padding-small: 20px !default;
         line-height: $form-input-field-line-height;
         height: $form-help-button-height;
         width: $form-help-button-width;
+        overflow: hidden; // Prevents click surface stretching out too much because of its content.
 
         &:hover:before,
         &.tooltip-active-click:before {
