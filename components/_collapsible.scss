@@ -11,6 +11,8 @@
 	}
 
     #content:not(.spotlight-on) & {
-  		animation: fadeIn 1s;
+  		&:not(.pat-modal-pop-over) {
+  			animation: fadeIn 1s;
+  		}
   	}
 }
