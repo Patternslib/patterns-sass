@@ -9,6 +9,9 @@ $glyph-remove-tag: $glyph-remove;
 $colour-auto-suggest-pills: $colour-accent !default;
 $colour-input-field-text: inherit !default;
 $colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
+$form-input-field-padding-top-bottom: 0.2em !default;
+$form-input-field-padding-left-right: 0.5em !default;
+$form-input-field-outline-offset: 0 !default;
 
 .select2-hidden-accessible {
   opacity: 0;
