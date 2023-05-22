@@ -7,6 +7,8 @@ $form-input-field-box-shadow-focus: none !default;
 $pat-auto-suggest-search-field-colour: $colour-form-fields-background !default;
 $glyph-remove-tag: $glyph-remove;
 $colour-auto-suggest-pills: $colour-accent !default;
+$colour-input-field-text: inherit !default;
+$colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
 
 .select2-hidden-accessible {
   opacity: 0;
@@ -174,6 +176,15 @@ $colour-auto-suggest-pills: $colour-accent !default;
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   border-bottom-left-radius: $form-fields-border-radius;
   border-bottom-right-radius: $form-fields-border-radius;
+
+  .select2-search input {
+    padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
+    border: $form-input-field-border;
+    box-shadow: $form-input-field-box-shadow;
+    outline: $form-input-field-outline;
+    outline-offset: $form-input-field-outline-offset;
+    color: $colour-input-field-text;
+  }
 }
 
 .select2-drop-auto-width {
