@@ -897,7 +897,7 @@ $pat-form-panel-padding-small: 20px !default;
           }
 
           textarea {
-            width: $form-proportion-ceiling;
+            resize: vertical;
           }
         }
 
