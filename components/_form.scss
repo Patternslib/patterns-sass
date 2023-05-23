@@ -264,7 +264,7 @@ $pat-form-panel-padding-small: 20px !default;
     }
   }
 
-  .field-cluster {
+  .field-cluster:not(.layout-inline) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20px,1fr));
     grid-column-gap: 10px;
@@ -285,8 +285,8 @@ $pat-form-panel-padding-small: 20px !default;
     }
 
     &.layout-inline {
-      grid-auto-columns: auto;
-      justify-self: start;
+      // grid-auto-columns: auto;
+      // justify-self: start;
     }
 
     &.layout-amount-per-timespan {
