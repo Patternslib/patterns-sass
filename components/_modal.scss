@@ -24,6 +24,14 @@ $modal-panel-width-large: 1100px !default;
   z-index: 9998;
   border: none;
 
+  &.small {
+    width: $modal-panel-width-small;
+
+    .modal-panel-body {
+      width: $modal-panel-width-small;
+    }
+  }
+
   &:after {
     position: fixed;
     top: -2000px;
