@@ -214,7 +214,12 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     line-height: $collapsible-button-height;
     border-radius: $border-radii;
     transition: all 0.2s ease-out;
-    display: inline-block;
+    display: inline-block;    
+
+    body[dir=rtl] & {
+      left: var(--pat-form-pane-padding);
+      right: auto;
+    }
   }
 
   &:hover:after {
