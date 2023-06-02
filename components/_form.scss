@@ -98,6 +98,10 @@ $pat-form-panel-padding-small: 20px !default;
       .form-separation-header {
         padding-right: 50px;
         padding-left: var(--pat-form-pane-padding);
+        body[dir=rtl] & { 
+            padding-left: 50px;
+            padding-right: var(--pat-form-pane-padding); 
+        }
         position: relative;
         margin: 0;
 
@@ -162,6 +166,10 @@ $pat-form-panel-padding-small: 20px !default;
     margin-bottom: 1em;
     margin-top: 1.5em;
     font-size: 1.1em;
+
+    body[dir=rtl] & {
+        text-align: right;
+    }
 
     &:first-child {
       margin-top: 0;
@@ -607,10 +615,10 @@ $pat-form-panel-padding-small: 20px !default;
       }
 
       &:first-child {
-        text-align: left;
+        text-align: left; body[dir=rtl] & { text-align: right; }
 
         .iconified {
-          text-align: left;
+          text-align: left; body[dir=rtl] & { text-align: right; }
         }
       }
 
@@ -949,7 +957,7 @@ $pat-form-panel-padding-small: 20px !default;
           > .legend,
           legend {
             display: inline;
-            text-align: left;
+            text-align: left; body[dir=rtl] & { text-align: right; }
             padding: 0;
             box-sizing: border-box;
             position: relative;

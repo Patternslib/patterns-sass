@@ -52,6 +52,11 @@ $bullet-space: 22px !default;
         font-family: $body-font-family;
         padding-left: $bullet-space;
 
+        body[dir=rtl] & { 
+          padding-left: 0;
+          padding-right: $bullet-space;
+        }
+
         &:hover {
           text-decoration: none;
           color: black;
@@ -88,6 +93,12 @@ $bullet-space: 22px !default;
         float: left;
         // margin-top: 0.1em;
         // line-height: 1.5em;
+
+        body[dir=rtl] & { 
+          float: right;
+          margin-right: -1 * $bullet-space;
+          margin-left: 0;
+        }
       }
 
       &.current {

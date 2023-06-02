@@ -480,7 +480,7 @@ $pat-button-cluster-button-height: $button-height !default;
 		// float: left;
 		border-radius: $button-border-radius;
 		display: inline-block;
-		text-align: left;
+		text-align: left; body[dir=rtl] & { text-align: right; }
 		background-color: $pat-toolbar-icon-background-colour;
 		color: $pat-toolbar-icon-text-colour;
 

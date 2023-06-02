@@ -345,7 +345,7 @@ a.pswp__share--download {
 }
 
 .pswp__caption__center {
-	text-align: left;
+	text-align: left; body[dir=rtl] & { text-align: right; }
 	max-width: 420px;
 	margin: 0 auto;
 	font-size: 13px;

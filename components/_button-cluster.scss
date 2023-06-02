@@ -44,7 +44,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
         margin: 0;
         border-radius: 0;
         border-left-style: none;
-        float: left;
+        float: left; body[dir=rtl] & { float: right }
         border: none;
         background: transparent;
         padding: 0 12px;
@@ -302,7 +302,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
           float: none;
           padding: 0.4em 0.7em;
           line-height: 1.5;
-          text-align: left;
+          text-align: left; body[dir=rtl] & { text-align: right; }
           color: black;
           position: relative;
           z-index: 1;
@@ -360,7 +360,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
     margin: 0;
     border-radius: 0;
     border-left-style: none;
-    float: left;
+    float: left; body[dir=rtl] & { float: right }
     border: none;
     background: transparent;
     padding: 0 1.2em;
@@ -452,7 +452,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
       padding: 0 0.5em;
       transition: opacity 0.5s;
       animation: zoomIn 0.6s;
-      float: right;
+      float: right; body[dir=rtl] & { float: left }
       vertical-align: baseline;
       line-height: 1.7em;
       font-size: 0.6em;
