@@ -36,7 +36,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   padding-top: var(--select-box-padding-top-bottom);
   padding-bottom: var(--select-box-padding-top-bottom);
   padding-left: var(--select-box-padding-right-left);
-  padding-right: var(--select-box-padding-right-left);
+  padding-right: var(--select-box-padding-right-right);
   position: relative;
   font-weight: normal !important;
   font-size: 0;
@@ -52,6 +52,11 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   max-width: 100%;
   background-color: var(--select-box-background-color);
   border-radius: $form-fields-border-radius;
+
+  body[dir=rtl] & {
+    padding-left: var(--select-box-padding-right-right);
+    padding-right: var(--select-box-padding-right-left);
+  }
 
   &[data-value="draft"] {
     background-color: $colour-orange-xl;
@@ -165,6 +170,11 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     display: flex;
     align-items:center;
     justify-content:center;
+
+    body[dir=rtl] & {
+      left: 0;
+      right: auto;
+    }
   }
 
   option:disabled {

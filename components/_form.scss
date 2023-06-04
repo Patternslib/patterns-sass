@@ -768,6 +768,10 @@ $pat-form-panel-padding-small: 20px !default;
     background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
     background-size: auto 10px;
 
+    body[dir=rtl] & { 
+      background-position: 10px center;
+    }
+
     &::-ms-expand{
       display:none;
     }
