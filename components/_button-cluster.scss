@@ -190,7 +190,12 @@ $pat-button-cluster-text-colour: $colour-link !default;
     }
 
     &.tabs-wrapped {
-      padding-right: 60px;
+      padding-right: 60px;      
+
+      body[dir=rtl] & { 
+        padding-left: 60px;
+        padding-right: 0;
+      }
     }
 
     a {
@@ -257,6 +262,12 @@ $pat-button-cluster-text-colour: $colour-link !default;
         box-shadow: none !important;
         box-sizing: border-box;
 
+        body[dir=rtl] & { 
+          right: auto;
+          left: 0;
+          float: left;
+        }
+
         -webkit-transition: all 0.1s;
 
         &:before {
@@ -272,6 +283,12 @@ $pat-button-cluster-text-colour: $colour-link !default;
           right: 0;
           border-top-right-radius: $border-radii;
           border-bottom-right-radius: $border-radii;
+
+          body[dir=rtl] & { 
+            content: '#{$glyph-angle-double-left}';
+            right: auto;
+            left: 0;
+          }
         }
 
         &:after {
@@ -282,12 +299,16 @@ $pat-button-cluster-text-colour: $colour-link !default;
           right: 0;
           bottom: 0;
           left: 0;
-            border: 1px solid rgba(0,0,0,0);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-            border-radius: $border-radii;
-            background: white;
+          border: 1px solid rgba(0,0,0,0);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+          border-radius: $border-radii;
+          background: white;
+          transition: border 0.2s;
 
-            transition: border 0.2s;
+          body[dir=rtl] & { 
+            right: auto;
+            left: 0;
+          }
         }
 
         &:hover {
