@@ -384,6 +384,7 @@ $pat-button-cluster-button-height: $button-height !default;
 
 	    @include select-box;
 	    overflow: hidden;
+	    padding-right: 10px;
 	}
 	
 	.pat-button,
