@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+$pat-select-arrow-edge-distance: 10px !default;
+$pat-select-arrow-space: 29px !default;
+
 .js { 
   select.pat-select,
   label.pat-select select {
@@ -11,7 +14,7 @@
     position: relative;
     cursor: default;
     @include box-sizing();
-    padding: 0 29px 0 0;
+    padding: 0 $pat-select-arrow-space 0 0;
     white-space: nowrap; // Used to be commented out. Check if this doesn't give trouble anywhere.
     overflow: hidden;
     text-overflow: ellipsis;
@@ -42,7 +45,7 @@
       text-overflow: ellipsis;
 
       background-repeat: no-repeat;
-      background-position: calc(100% - 10px) center;
+      background-position: calc(100% - $pat-select-arrow-edge-distance) center;
       background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
       background-size: auto 10px;
     }
