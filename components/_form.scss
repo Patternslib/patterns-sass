@@ -36,6 +36,9 @@ $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
 $pat-form-panel-padding-small: 20px !default;
+$pat-select-arrow-edge-distance: 10px !default;
+$pat-select-arrow-space: 29px !default;
+$pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
 .pat-form {
 
@@ -389,7 +392,7 @@ $pat-form-panel-padding-small: 20px !default;
     .select2-search-choice-close {
       position: absolute;
       top: 50%;
-      right: 8px;
+      right: $pat-auto-suggest-cancel-button-edge-distance;
       transform: translateY(-50%);
 
       &:before {
@@ -761,15 +764,15 @@ $pat-form-panel-padding-small: 20px !default;
     text-overflow: '';
     
     // border-right: 0.35em solid rgba(0, 0, 0, 0);
-    padding-right: 1.5em;
+    padding-right: $pat-select-arrow-space;
 
     background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
+    background-position: calc(100% - #{$pat-select-arrow-edge-distance}) center;
     background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
     background-size: auto 10px;
 
     body[dir=rtl] & { 
-      background-position: 10px center;
+      background-position: $pat-select-arrow-edge-distance center;
     }
 
     &::-ms-expand{
