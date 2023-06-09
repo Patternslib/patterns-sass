@@ -15,7 +15,7 @@ $form-field-tail-white: 1em !default;
 $colour-form-fields-background: #efefef !default;
 $colour-form-fields-background-disabled: transparent !default;
 $form-fields-border-radius: $border-radii !default;
-$colour-placeholder: rgba(0,0,0,0.35);
+$colour-placeholder: rgba(0,0,0,0.35) !default;
 $colour-input-field-text: inherit !default;
 $colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
 $colour-form-panel: $colour-portlet-background !default;
