@@ -126,7 +126,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   }
 
   &:before {
-    font-size: 20px;
+    font-size: $button-font-size;
     content: attr(data-option);
     padding-right: var(--select-box-arrow-width);
     white-space: nowrap;
