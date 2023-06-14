@@ -330,11 +330,11 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     // font-size: 20px;
   }
 
-  &:active {
-    box-shadow: inherit;
-    transform: scale(0.6);
-    box-shadow: none;
-  }
+  // &:active {
+  //   box-shadow: inherit;
+  //   transform: scale(0.6);
+  //   box-shadow: none;
+  // }
 
   &:hover {
     opacity: 1;
