@@ -119,6 +119,17 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
   }
 
+  &.locked {
+    &:before {
+      font-family: fontello;
+      content: "#{$glyph-lock}";
+      display: inline-block;
+      margin-right: 5px;
+      float: left;
+      font-size: inherit;
+    }
+  }
+
   &:hover {
     background-color: $button-background-colour-hover;
   }
