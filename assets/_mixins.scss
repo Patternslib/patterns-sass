@@ -36,7 +36,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   padding-top: var(--select-box-padding-top-bottom);
   padding-bottom: var(--select-box-padding-top-bottom);
   padding-left: var(--select-box-padding-right-left);
-  padding-right: var(--select-box-padding-right-left);
+  padding-right: calc(var(--select-box-arrow-width) + var(--select-box-padding-right-left));
   position: relative;
   font-weight: normal !important;
   font-size: 0;
@@ -95,8 +95,10 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
   }
 
-  &[data-value="published"] {
+  &[data-value="published"],
+  &.success {
     background-color: $colour-green-xl;
+    color: darken($colour-green, 15%);
 
     &:after {
       background-color: $colour-green-l;
@@ -107,7 +109,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       color: darken($colour-green, 15%);
     }
 
-    &:hover {
+    &:hover,
+    &.tooltip-active-click {
       background-color: darken($colour-green-xl, 5%);
 
       &:after {
@@ -123,7 +126,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   &:before {
     font-size: 20px;
     content: attr(data-option);
-    padding-right: var(--select-box-arrow-width);
+    // padding-right: var(--select-box-arrow-width);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
