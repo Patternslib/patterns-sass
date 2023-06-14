@@ -12,6 +12,9 @@ $colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
 $form-input-field-padding-top-bottom: 0.2em !default;
 $form-input-field-padding-left-right: 0.5em !default;
 $form-input-field-outline-offset: 0 !default;
+$pat-auto-suggest-cancel-button-edge-distance: 12px !default;
+$colour-input-field-text: inherit !default;
+$colour-placeholder: rgba(0,0,0,0.35) !default;
 
 .select2-hidden-accessible {
   opacity: 0;
@@ -225,7 +228,7 @@ $form-input-field-outline-offset: 0 !default;
   width: 18px;
   height: 100%;
   position: absolute;
-  right: 7px;
+  right: $pat-auto-suggest-cancel-button-edge-distance;
   top: 0;
   background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
   background-size: auto 10px;
@@ -485,6 +488,8 @@ disabled look for disabled choices in the results dropdown
   &.select2-container-disabled {
     .select2-choices {
       overflow: visible; // Allow for selection rings to be visible.
+
+      @include clear;
     }
   }
 
@@ -506,6 +511,7 @@ disabled look for disabled choices in the results dropdown
       height: 1.6em;
       /*The following line is a patch to make IE8 show the actual input field that's within this LI element*/
       // min-width: 200px;
+
       input {
         padding: 0;
         margin: 0;
@@ -519,6 +525,12 @@ disabled look for disabled choices in the results dropdown
         display: inline;
         width: 20px;
         background-color: transparent;
+        color: $colour-placeholder;
+
+        &.has-value {
+          color: $colour-input-field-text;
+        }
+
         &.select2-active {
           // background: white url('select2-spinner.gif') no-repeat 100% !important;
         }

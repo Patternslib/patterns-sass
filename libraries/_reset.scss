@@ -31,6 +31,9 @@ abbr {
 	padding: 0;
 	list-style: none;
 	text-align: left;
+    body[dir=rtl] & { 
+      text-align: right;
+    }
 	text-decoration: none;
 	// vertical-align: top; // TODO Remove and let the browser/developer use this when required - not even https://github.com/necolas/normalize.css/blob/master/normalize.css uses it
 }

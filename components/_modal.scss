@@ -7,7 +7,7 @@ $modal-panel-width-small: 640px !default;
 $modal-panel-width-medium: 840px !default;
 $modal-panel-width-large: 1100px !default;
 
-.modal-panel {
+.pat-modal-panel {
 
   // This is code for the new, experimental, dialog tag based modals.
 
@@ -23,6 +23,14 @@ $modal-panel-width-large: 1100px !default;
   margin: 0;
   z-index: 9998;
   border: none;
+
+  &.small {
+    width: $modal-panel-width-small;
+
+    .modal-panel-body {
+      width: $modal-panel-width-small;
+    }
+  }
 
   &:after {
     position: fixed;
@@ -86,7 +94,7 @@ $modal-panel-width-large: 1100px !default;
       border-top: 1px solid white;
       z-index: 10;
 
-      &.bumped {
+      &.bumped-bottom {
         border-top: 1px solid silver;
       }
     }

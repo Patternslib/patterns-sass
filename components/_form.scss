@@ -15,7 +15,7 @@ $form-field-tail-white: 1em !default;
 $colour-form-fields-background: #efefef !default;
 $colour-form-fields-background-disabled: transparent !default;
 $form-fields-border-radius: $border-radii !default;
-$colour-placeholder: rgba(0,0,0,0.35);
+$colour-placeholder: rgba(0,0,0,0.35) !default;
 $colour-input-field-text: inherit !default;
 $colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
 $colour-form-panel: $colour-portlet-background !default;
@@ -36,6 +36,9 @@ $form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
 $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
 $pat-form-panel-padding-small: 20px !default;
+$pat-select-arrow-edge-distance: 10px !default;
+$pat-select-arrow-space: 29px !default;
+$pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
 .pat-form {
 
@@ -98,6 +101,10 @@ $pat-form-panel-padding-small: 20px !default;
       .form-separation-header {
         padding-right: 50px;
         padding-left: var(--pat-form-pane-padding);
+        body[dir=rtl] & { 
+            padding-left: 50px;
+            padding-right: var(--pat-form-pane-padding); 
+        }
         position: relative;
         margin: 0;
 
@@ -162,6 +169,10 @@ $pat-form-panel-padding-small: 20px !default;
     margin-bottom: 1em;
     margin-top: 1.5em;
     font-size: 1.1em;
+
+    body[dir=rtl] & {
+        text-align: right;
+    }
 
     &:first-child {
       margin-top: 0;
@@ -264,7 +275,7 @@ $pat-form-panel-padding-small: 20px !default;
     }
   }
 
-  .field-cluster {
+  .field-cluster:not(.layout-inline) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20px,1fr));
     grid-column-gap: 10px;
@@ -285,8 +296,8 @@ $pat-form-panel-padding-small: 20px !default;
     }
 
     &.layout-inline {
-      grid-auto-columns: auto;
-      justify-self: start;
+      // grid-auto-columns: auto;
+      // justify-self: start;
     }
 
     &.layout-amount-per-timespan {
@@ -381,7 +392,7 @@ $pat-form-panel-padding-small: 20px !default;
     .select2-search-choice-close {
       position: absolute;
       top: 50%;
-      right: 8px;
+      right: $pat-auto-suggest-cancel-button-edge-distance;
       transform: translateY(-50%);
 
       &:before {
@@ -607,10 +618,10 @@ $pat-form-panel-padding-small: 20px !default;
       }
 
       &:first-child {
-        text-align: left;
+        text-align: left; body[dir=rtl] & { text-align: right; }
 
         .iconified {
-          text-align: left;
+          text-align: left; body[dir=rtl] & { text-align: right; }
         }
       }
 
@@ -753,12 +764,16 @@ $pat-form-panel-padding-small: 20px !default;
     text-overflow: '';
     
     // border-right: 0.35em solid rgba(0, 0, 0, 0);
-    padding-right: 1.5em;
+    padding-right: $pat-select-arrow-space;
 
     background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
+    background-position: calc(100% - #{$pat-select-arrow-edge-distance}) center;
     background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
     background-size: auto 10px;
+
+    body[dir=rtl] & { 
+      background-position: $pat-select-arrow-edge-distance center;
+    }
 
     &::-ms-expand{
       display:none;
@@ -897,7 +912,7 @@ $pat-form-panel-padding-small: 20px !default;
           }
 
           textarea {
-            width: $form-proportion-ceiling;
+            resize: vertical;
           }
         }
 
@@ -949,7 +964,7 @@ $pat-form-panel-padding-small: 20px !default;
           > .legend,
           legend {
             display: inline;
-            text-align: left;
+            text-align: left; body[dir=rtl] & { text-align: right; }
             padding: 0;
             box-sizing: border-box;
             position: relative;
