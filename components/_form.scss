@@ -153,7 +153,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   .message {
     @include pat-message();
     @include box-sizing();
-    // margin-bottom: 0;
+    margin-bottom: 2em;
     display: block;
     clear: both;
     margin-top: 0.5em;
