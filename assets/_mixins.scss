@@ -698,10 +698,12 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       padding-right: 40px;
 
       &:before {
+        font-family: fontello;
         width: 80px;
         font-size: 30px;
         // opacity: 0.5;
         margin-right: 0.4em;
+        text-align: center;
       }
     }
 
