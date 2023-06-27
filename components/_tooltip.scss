@@ -218,6 +218,8 @@ $bullet-space: 22px !default;
   &.info {
     .tippy-content {
       background-color: $colour-notice-background;
+      -webkit-hyphens: auto;
+      hyphens: auto
     }
 
     [data-placement^='bottom'] .tippy-arrow {
