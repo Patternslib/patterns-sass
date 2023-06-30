@@ -220,6 +220,13 @@ $bullet-space: 22px !default;
       background-color: $colour-notice-background;
       -webkit-hyphens: auto;
       hyphens: auto
+
+      .pat-button.read-more {
+        clear: both;
+        margin-top: 14px;
+        margin-bottom: -5px;
+      }
+
     }
 
     [data-placement^='bottom'] .tippy-arrow {
