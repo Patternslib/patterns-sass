@@ -382,6 +382,7 @@ $pat-button-cluster-button-height: $button-height !default;
 		--select-box-background-color: #{$button-background-colour};
 		--select-box-arrow-text-colour: #{$colour-link};
 		--select-box-height: $pat-toolbar-button-line-height;
+		--select-box-padding-right-left: 20px;
 
 	    @include select-box;
 	    line-height: $pat-toolbar-button-line-height;
