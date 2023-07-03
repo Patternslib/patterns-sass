@@ -36,7 +36,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   padding-top: var(--select-box-padding-top-bottom);
   padding-bottom: var(--select-box-padding-top-bottom);
   padding-left: var(--select-box-padding-right-left);
-  padding-right: calc(var(--select-box-arrow-width) + var(--select-box-padding-right-left) - 4%); // -5px to put the text a little closer to the arrow on the right hand side.
+  padding-right: calc((var(--select-box-arrow-width) + var(--select-box-padding-right-left) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
   position: relative;
   font-weight: normal !important;
   font-size: 0;
