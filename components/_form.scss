@@ -105,7 +105,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
         .buttons {
           position: absolute;
-          right: calc(var(--pat-form-pane-padding) + $collapsible-button-height + 15px);
+          right: calc(var(--pat-form-pane-padding) + #{$collapsible-button-height} + 15px);
           top: 50%;
           transform: translateY(-50%);
         
