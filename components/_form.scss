@@ -67,7 +67,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   }
 
   .form-separation-title,
-  .form-separation-header {
+  .form-separation-header,
+  .form-panel-title {
     margin: 2rem 0 1rem;
     font-size: 28px;
     font-weight: normal;
@@ -89,7 +90,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       margin-bottom: -10px;
     }
 
-    .form-separation-header {
+    .form-separation-header,
+    .form-panel-title {
       margin-top: 0;
       transition: padding 0.4s;
     }
@@ -98,7 +100,60 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       transition: padding 0.4s;
       padding: 0;
 
-      .form-separation-header {
+      .form-panel-title-group {
+        position: relative;
+
+        .buttons {
+          position: absolute;
+          right: calc(var(--pat-form-pane-padding) + $collapsible-button-height + 15px);
+          top: 50%;
+          transform: translateY(-50%);
+        
+          .icon {
+            overflow: hidden;
+            display: inline-block;
+            width: $collapsible-button-height;
+            height: $collapsible-button-height;
+            cursor: default;
+            background-color: $button-background-colour;
+            color: transparent;
+            position: relative;
+            float: right;
+            margin-left: 15px;
+            border-radius: $border-radii;
+
+            &:after {
+              font-family: fontello;
+              font-size: 1em;
+              z-index: 1;
+              width: $collapsible-button-height;
+              height: $collapsible-button-height;
+              text-align: center;
+              line-height: $collapsible-button-height;
+              display: block;
+              position: absolute;
+              color: $button-text-colour;
+              top: 0;
+              left: 0;
+            }
+
+            &:hover {
+              background-color: $button-background-colour-hover;
+              
+              &:after {
+                color: $button-text-colour-hover;
+              }
+            }
+
+            &.help:after {
+              content: '#{$glyph-help}';
+            }
+          }
+        }
+      }
+
+      .form-separation-header,
+      .form-panel-title {
         padding-right: 50px;
         padding-left: var(--pat-form-pane-padding);
         body[dir=rtl] & { 
@@ -115,7 +170,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       &.closed.in-progress {
         transition: box-shadow 2s;
 
-        .form-separation-header {
+        .form-separation-header,
+        .form-panel-title {
           padding-top: var(--pat-form-pane-padding);
           padding-bottom: var(--pat-form-pane-padding);
         }
@@ -130,7 +186,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       &.closed,
       &.open.in-progress {
 
-        .form-separation-header {
+        .form-separation-header,
+        .form-panel-title {
           padding-top: 20px;
           padding-bottom: 20px;
           border-radius: $border-radii;

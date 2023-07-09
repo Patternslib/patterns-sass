@@ -215,8 +215,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     font-family: fontello;
     content: '#{$glyph-up-open}';
     font-size: 0.65em;
-    background-color: $button-background-colour-subdued;
-    color: $colour-link;
+    background-color: $button-background-colour;
+    color: $button-text-colour;
     position: absolute;
     right: var(--pat-form-pane-padding);
     top: 50%;
@@ -227,12 +227,12 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     text-align: center;
     line-height: $collapsible-button-height;
     border-radius: $border-radii;
-    transition: all 0.2s ease-out;
     display: inline-block;
   }
 
   &:hover:after {
-    transform: scale(1.2) translateY(-42%);
+    background-color: $button-background-colour-hover;
+    color: $button-text-colour-hover;
   }
 }
 
