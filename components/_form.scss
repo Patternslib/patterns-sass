@@ -1061,7 +1061,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       dfn.help {
         @include box-sizing;
         margin: 0;
-        width: calc($form-proportion-name * 100% / (100% - $form-proportion-name));
+        width: calc(#{$form-proportion-name} * 100% / (100% - #{$form-proportion-name}));
         width: 80%;
       }
 
