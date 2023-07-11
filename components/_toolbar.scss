@@ -539,6 +539,15 @@ $pat-button-cluster-button-height: $button-height !default;
 				color: var(--colour-accent);
 			}
 		}
+	
+		&.warning {
+			color: $colour-warning;
+			box-shadow: none;
+		
+			&:before {
+				color: $colour-warning;
+			}
+		}
 
 		&.pat-tooltip.tooltip-active-click {
 
