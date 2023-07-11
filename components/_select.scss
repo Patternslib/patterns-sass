@@ -45,7 +45,7 @@ $pat-select-arrow-space: 29px !default;
       text-overflow: ellipsis;
 
       background-repeat: no-repeat;
-      background-position: calc(100% - $pat-select-arrow-edge-distance) center;
+      background-position: calc(100% - #{$pat-select-arrow-edge-distance}) center;
       background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
       background-size: auto 10px;
     }

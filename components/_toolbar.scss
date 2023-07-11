@@ -565,6 +565,27 @@ $pat-button-cluster-button-height: $button-height !default;
 				// font-size: 25px;
 			}
 		}
+		
+		&.back {
+			&:before {
+				content: "#{$glyph-left-open}";
+			}
+		
+			& + .toolbar-title {
+				padding-left: 0;
+			}
+		}
+
+		&.level-up {
+			&:before {
+				content: "#{$glyph-level-up}";
+				transform: scaleX(-100%);
+			}
+
+			& + .toolbar-title {
+				padding-left: 0;
+			}
+		}
 
 		&.edit {
 			&:before {
