@@ -358,7 +358,6 @@ $pat-button-cluster-button-height: $button-height !default;
 		vertical-align: top;
 		height:  $pat-toolbar-button-height;
 		line-height: $pat-toolbar-button-line-height;
-		font-size: $base-font-size;
 
 		&.bare {
 			&:before {
@@ -388,6 +387,7 @@ $pat-button-cluster-button-height: $button-height !default;
 	    line-height: $pat-toolbar-button-line-height;
 		white-space: nowrap;
 	    overflow: hidden;
+		height: $pat-toolbar-button-line-height;
 	}
 	
 	.pat-button,
