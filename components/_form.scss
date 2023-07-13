@@ -111,13 +111,13 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
         
           .icon {
             overflow: hidden;
-            display: inline-block;
             width: $collapsible-button-height;
             height: $collapsible-button-height;
             cursor: default;
             background-color: $button-background-colour;
             color: transparent;
             position: relative;
+            // display: inline-block; // Float below
             float: right;
             margin-left: 15px;
             border-radius: $border-radii;
@@ -251,7 +251,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   .select2-container .select2-choices,
   .md-editor .md-render,
   .pat-rich-editor,
-  .output-field,
+  .output-field
     {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -352,10 +352,10 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       }
     }
 
-    &.layout-inline {
+    // &.layout-inline {
       // grid-auto-columns: auto;
       // justify-self: start;
-    }
+    // }
 
     &.layout-amount-per-timespan {
       grid-template-columns: 100px 200px;
@@ -539,6 +539,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   input[type=range] {
       /*removes default webkit styles*/
       -webkit-appearance: none;
+      appearance: none;
       padding: 0.2em 0;
 
       background: transparent;

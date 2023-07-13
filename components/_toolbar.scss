@@ -446,7 +446,7 @@ $pat-button-cluster-button-height: $button-height !default;
 				line-height: $pat-toolbar-button-height;
 			}
 
-			&.active, {
+			&.active {
 				&:after {
 					content: '#{$glyph-lock-open}';
 				}
