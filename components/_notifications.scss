@@ -53,7 +53,7 @@
   &.error {
     background-color: $colour-error-background;
     * {
-      color: white !important;
+      color: $colour-error !important;
     }
   }
 
