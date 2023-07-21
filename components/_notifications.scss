@@ -50,13 +50,17 @@ $pat-notifications-top-distance: 0 !default;
 
   &.warning {
     background-color: $colour-warning-background;
+
+    * {
+      color: darken($colour-warning, 40%) !important;
+    }
   }
 
   &.error {
     background-color: $colour-error-background;
 
     * {
-      color: darken($colour-error, 50%) !important;
+      color: darken($colour-error, 20%) !important;
     }
   }
 
@@ -64,6 +68,7 @@ $pat-notifications-top-distance: 0 !default;
     background-color: $colour-info-background;
     color: #247fad;
   }
+
   p:last-of-type {
     margin-bottom: 0;
   }
