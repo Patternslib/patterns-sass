@@ -20,14 +20,14 @@
 
   padding: 13px;
   margin-bottom: 1em;
-  //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.2);
   display: block;
-  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
   border-radius: $border-radii;
-  background-color: rgba(254,255,255,0.98);
+  background-color: rgba(255,255,255,0.5);
   color: rgba(0,0,0,0.8);
-  // border: 1px solid white;
+  border: 1px solid white;
+  -webkit-backdrop-filter: blur(3px) saturate(0.5);
+  backdrop-filter: blur(3px) saturate(0.5);
 
   a {
     text-decoration: underline;
@@ -40,6 +40,7 @@
   &.success {
     background-color: $colour-success-background;
     color: darken($colour-success, 50%);
+    
     * {
       color: darken($colour-success, 50%) !important;
       //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
@@ -52,8 +53,9 @@
 
   &.error {
     background-color: $colour-error-background;
+
     * {
-      color: $colour-error !important;
+      color: darken($colour-error, 50%) !important;
     }
   }
 
