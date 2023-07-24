@@ -542,6 +542,62 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
 }
 
+@mixin panel-title-group {
+  position: relative;
+
+  .buttons {
+    position: absolute;
+    right: calc(var(--pat-form-pane-padding) + #{$collapsible-button-height} + 15px);
+    top: 50%;
+    transform: translateY(-50%);
+  
+    .icon {
+      overflow: hidden;
+      width: $collapsible-button-height;
+      height: $collapsible-button-height;
+      cursor: default;
+      background-color: $button-background-colour;
+      color: transparent;
+      position: relative;
+      // display: inline-block; // Float below
+      float: right;
+      margin-left: 15px;
+      border-radius: $border-radii;
+
+      &:after {
+        font-family: fontello;
+        font-size: 1em;
+        z-index: 1;
+        width: $collapsible-button-height;
+        height: $collapsible-button-height;
+        text-align: center;
+        line-height: $collapsible-button-height;
+        display: block;
+        position: absolute;
+        color: $button-text-colour;
+        top: 0;
+        left: 0;
+      }
+
+      &:hover {
+        background-color: $button-background-colour-hover;
+        
+        &:after {
+          color: $button-text-colour-hover;
+        }
+      }
+
+      &.help:after {
+        content: '#{$glyph-help}';
+      }
+
+      &.download:after {
+        content: '#{$glyph-download}';
+      }
+    }
+  }
+}
+
 @mixin pat-well() {
     padding: 40px;
     box-sizing: border-box;
@@ -549,6 +605,10 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     border-radius: $border-radii;
     background-color: $colour-form-panel;
     margin-bottom: $default-tail-white;
+
+    .well-title-group {
+      @include panel-title-group;
+    }
 
     .well-header {
       margin-bottom: 40px;
@@ -573,7 +633,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       transition: padding 0.4s;
       padding: 0;
 
-      > .well-header {
+      > .well-header,
+      > .well-title-group > .well-header {
         padding-right: 50px;
         padding-left: 40px;
         position: relative;
@@ -587,7 +648,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       &.closed.in-progress {
         transition: box-shadow 2s;
 
-        > .well-header {
+        > .well-header,
+        > .well-title-group > .well-header {
           padding-top: 40px;
           padding-bottom: 40px;
         }
@@ -602,7 +664,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       &.closed,
       &.open.in-progress {
 
-        > .well-header {
+        > .well-header,
+        > .well-title-group > .well-header {
           padding-top: 20px;
           padding-bottom: 20px;
           border-radius: $border-radii;

@@ -101,55 +101,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       padding: 0;
 
       .form-panel-title-group {
-        position: relative;
-
-        .buttons {
-          position: absolute;
-          right: calc(var(--pat-form-pane-padding) + #{$collapsible-button-height} + 15px);
-          top: 50%;
-          transform: translateY(-50%);
-        
-          .icon {
-            overflow: hidden;
-            width: $collapsible-button-height;
-            height: $collapsible-button-height;
-            cursor: default;
-            background-color: $button-background-colour;
-            color: transparent;
-            position: relative;
-            // display: inline-block; // Float below
-            float: right;
-            margin-left: 15px;
-            border-radius: $border-radii;
-
-            &:after {
-              font-family: fontello;
-              font-size: 1em;
-              z-index: 1;
-              width: $collapsible-button-height;
-              height: $collapsible-button-height;
-              text-align: center;
-              line-height: $collapsible-button-height;
-              display: block;
-              position: absolute;
-              color: $button-text-colour;
-              top: 0;
-              left: 0;
-            }
-
-            &:hover {
-              background-color: $button-background-colour-hover;
-              
-              &:after {
-                color: $button-text-colour-hover;
-              }
-            }
-
-            &.help:after {
-              content: '#{$glyph-help}';
-            }
-          }
-        }
+        @include panel-title-group;
       }
 
       .form-separation-header,
