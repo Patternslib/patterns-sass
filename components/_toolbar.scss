@@ -264,6 +264,129 @@ $pat-button-cluster-button-height: $button-height !default;
 			white-space: normal;
 		}
 
+		.pat-button-cluster {
+			&.cal-controls {
+				box-shadow: none;
+
+				button {
+					&:not(.active) {
+						&:hover {
+							// background: #e3e3e3;
+						}
+					}
+
+					&.view-month,
+					&.view-week,
+					&.view-day,
+					&.view-listDay,
+					&.view-listMonth {
+						@include toggle-button-iconified;
+					}
+
+					&.view-month:before {
+						content: '#{$glyph-month-view}'
+					}
+
+					&.view-day:before {
+						content: '#{$glyph-day-view}'
+					}
+
+					&.view-week:before {
+						content: '#{$glyph-week-view}'
+					}
+
+					&.view-listDay:before,
+					&.view-listMonth:before {
+						content: '#{$glyph-list}';
+						margin-right: 4px;
+					}
+
+					&.jump-today {
+						@include screen-size(small) {
+							width: 0.6em;
+							color: transparent;
+							line-height: 1.4;
+
+							&:before {
+								font-family: fontello;
+								content: '#{$glyph-icon-circle}';
+								text-align: center;
+								color: black;
+								font-size: 0.6em;
+							}
+						}
+					}
+
+					&.jump-prev,
+					&.jump-next {
+						padding-left: 0;
+						padding-right: 0;
+						color: transparent;
+						font-size: 0;
+						width: 32px;
+						text-align: center;
+
+						&:before {
+							content: '';
+							font-family: fontello;
+							font-size: 15px;
+							display: block;
+							margin: 0;
+							text-align: center;
+						}
+					}
+
+					&.jump-prev {
+						text-align: left; body[dir=rtl] & { text-align: right; }
+
+						&:before {
+							content: '#{$glyph-icon-arrow-left}';
+						}
+					}
+
+					&.jump-next {
+						text-align: right;
+
+						&:before {
+							content: '#{$glyph-icon-arrow-right}';
+						}
+					}
+
+					&.jump-today {
+						position: relative;
+						width: 32px;
+						padding-left: 0;
+						padding-right: 0;
+						color: transparent !important;
+
+						&:before {
+							content: ' ';
+							display: block;
+							border-radius: 50%;
+							width: 8px;
+							height: 8px;
+							background-color: black;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%,-50%);
+						}
+
+						&:after {
+							left: 0;
+							right: 0;
+						}
+
+						&.active {
+							&:before {
+								background-color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+
 		&.view-options {
 			grid-area: left;
 			// overflow: hidden; // Required for truncation of .pat-select.bare
