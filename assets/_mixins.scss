@@ -616,6 +616,13 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       font-size: 28px;
       font-weight: normal;
       color: black;
+
+      .pat-avatar {
+        float: left; 
+        width: 36px; 
+        height: 36px;
+        margin-right: 10px;
+      }
     }
 
     .well-separation-header {
