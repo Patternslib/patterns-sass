@@ -309,7 +309,7 @@ $pat-button-cluster-button-height: $button-height !default;
 
 							&:before {
 								font-family: fontello;
-								content: '#{$glyph-icon-circle}';
+								content: '#{$glyph-circle}';
 								text-align: center;
 								color: black;
 								font-size: 0.6em;
@@ -340,7 +340,7 @@ $pat-button-cluster-button-height: $button-height !default;
 						text-align: left; body[dir=rtl] & { text-align: right; }
 
 						&:before {
-							content: '#{$glyph-icon-arrow-left}';
+							content: '#{$glyph-arrow-left}';
 						}
 					}
 
@@ -348,7 +348,7 @@ $pat-button-cluster-button-height: $button-height !default;
 						text-align: right;
 
 						&:before {
-							content: '#{$glyph-icon-arrow-right}';
+							content: '#{$glyph-arrow-right}';
 						}
 					}
 
