@@ -392,6 +392,27 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   animation: spin 2s infinite linear;
 }
 
+@mixin toggle-button-iconified {
+  &:before {
+    font-family: fontello;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  @include screen-size(small-medium) {
+    width: 40px;
+    overflow: hidden;
+    padding: 0;
+    color: transparent;
+
+    &:before {
+      // color: white;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
 // Mixins for individual components
 
 @mixin injection() {
