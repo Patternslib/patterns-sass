@@ -617,7 +617,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       }
 
       &.settings:after {
-        content: '#{$glyph-settings}';
+        content: '#{$glyph-cog}';
       }
     }
   }
