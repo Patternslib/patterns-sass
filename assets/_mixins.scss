@@ -615,6 +615,10 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       &.download:after {
         content: '#{$glyph-download}';
       }
+
+      &.settings:after {
+        content: '#{$glyph-settings}';
+      }
     }
   }
 }
