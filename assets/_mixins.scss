@@ -629,7 +629,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
 
       &.more:after {
         content: '#{$glyph-icon-ellipsis}';
-        line-height: calc(#{$collapsible-button-height} + 2px);
+        line-height: calc(#{$collapsible-button-height} + 3px);
       }
     }
   }
