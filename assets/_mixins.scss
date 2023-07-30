@@ -608,6 +608,13 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
         }
       }
 
+      &.tooltip-active-click {
+        background-color: $colour-accent;
+        &:after {
+          color: white
+        }
+      }
+
       &.help:after {
         content: '#{$glyph-help}';
       }
@@ -622,6 +629,7 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
 
       &.more:after {
         content: '#{$glyph-icon-ellipsis}';
+        line-height: calc(#{$collapsible-button-height} + 2px);
       }
     }
   }
