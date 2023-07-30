@@ -619,6 +619,10 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       &.settings:after {
         content: '#{$glyph-cog}';
       }
+
+      &.more:after {
+        content: '#{$glyph-icon-ellipsis}';
+      }
     }
   }
 }
