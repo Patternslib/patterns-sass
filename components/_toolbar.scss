@@ -15,7 +15,7 @@ $pat-toolbar-bump-distance-scroll-down: 100px !default;
 $pat-toolbar-top-distance: -1px !default;
 $pat-toolbar-top-distance-scroll-down: -1px !default;
 $pat-toolbar-hiding-speed: 0.3s !default;
-
+$pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0) !default;
 $pat-button-cluster-toggle-margin: 3px !default;
 $pat-button-cluster-button-height: $button-height !default;
 
@@ -159,7 +159,7 @@ $pat-button-cluster-button-height: $button-height !default;
 	    &.bumped,
 	    &.tiptap-focus {
 	    	&:before {
-	    		box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+	    		box-shadow: $pat-toolbar-box-shadow;
 	    	}
 
 	    	.toolbar-title.auto-hide {
@@ -193,7 +193,7 @@ $pat-button-cluster-button-height: $button-height !default;
 
 	    .pat-scroll-box:not(.scroll-position-top) &,
 	    &.tiptap-focus {
-	      	box-shadow: $default-box-shadow;
+	      	box-shadow: $pat-toolbar-box-shadow;
 			background-color: rgba(255,255,255,0.9);
 
 			.backdropfilter & {
