@@ -48,7 +48,11 @@
 					color: $colour-link;
 
 					&:hover {
-						text-decoration: underline;
+						text-decoration: none;
+						
+						.title {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
