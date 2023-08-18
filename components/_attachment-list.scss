@@ -34,13 +34,16 @@
 		width: 100%;
 		margin-bottom: 0.5em;
 		position: relative;
+		display: grid;
+		grid-template-columns: auto 90px;
+		grid-template-areas: 
+			"title functions"
+			"description description";
 
 		.label {
-			cursor: default;
-			font-weight: bold;
-
-			a {
+			.title {
 				color: $body-font-color;
+				grid-area: title;
 
 				.name {
 					display: block;
@@ -78,36 +81,26 @@
 				}
 			}
 
-			*[class~=icon-] {
-				display: block;
-				padding-left: 25px;
-
-				&:hover {
-					text-decoration: none;
-
-					.title .name {
-						text-decoration: underline;
-					}
-				}
-
-				&:before {
-					margin-left: -25px;
-				}
-			}
-
 			.description {
 				display: block;
 				color: black;
 				font-weight: normal;
 				font-size: 0.9em;
 				line-height: 1.25;
+				grid-area: description;
 			}
 		}
-
+		
 		.functions {
-			position: absolute;
-			top: 0;
-			right: 0;
+			grid-area: functions;
+
+			&[data-value="on"] {
+				display: none;
+
+				& + .label {
+					display: none;
+				}
+			}
 
 			.icon {
 				width: 30px;
@@ -117,6 +110,13 @@
 				overflow: hidden;
 				display: inline-block;
 				color: transparent;
+				padding: 0;
+				float: left;
+
+				input {
+					position: absolute;
+					opacity: 0;
+				}
 
 				&::before {
 					color:rgba(black, 0.5);
@@ -124,8 +124,9 @@
 					display: block;
 					width: 30px;
 					line-height: 30px;
+					margin: 0;
 				}
-	
+
 				&:hover:before {
 					color: black;
 					text-decoration: none;
