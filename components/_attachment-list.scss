@@ -40,42 +40,84 @@
 			"title functions"
 			"description description";
 
-		.title {
-			color: $body-font-color;
-			grid-area: title;
+		.preview-link {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 0;
+			display: block;
+		}
 
-			.name {
-				display: block;
-				padding-right: 90px;
+		&.mode-edit {
+			.preview-link {
+				display: none;
 			}
 
-			.time-stamp {
-				color: rgba(black, 0.4);
-				font-size: 0.8em;
-				clear: both;
-				display: block;
-				line-height: 1.3;
-				margin-bottom: 7px;
-
-				// &:before {
-				// 	content: '(';
-				// }
-
-				// &:after {
-				// 	content: ')';
-				// }
+			.icon.icon-rename:before,
+			.icon.icon-rename:hover:before {
+				color: $colour-accent;
 			}
 
-			&[href] {
-				cursor: pointer;
-				color: $colour-link;
+			.flex-field {
+				&:before {
+					color: transparent;
+				}
+			}
+		}
+
+		&.mode-view {
+			.title-group {
+				.name:before {	
+					color: $colour-link;
+				}
 
 				&:hover {
-					text-decoration: none;
-					
-					.name {
+					.name:before {
 						text-decoration: underline;
 					}
+				}
+			}
+
+			.flex-field {
+				&:before,
+				textarea {
+					background-color: transparent;
+					padding: 0;
+					white-space: normal;
+				}
+
+				textarea {
+					display: none;
+				}
+
+				&:before {
+					color: inherit
+				}
+			}
+		}
+
+		.title-group {
+			color: $body-font-color;
+			grid-area: title;
+			position: relative;
+
+			.title {
+				margin: 0;
+
+				.name {
+					display: block;
+				}
+	
+				.time-stamp {
+					color: rgba(black, 0.4);
+					font-size: 0.8em;
+					clear: both;
+					display: block;
+					line-height: 1.3;
+					margin-bottom: 7px;
 				}
 			}
 		}
@@ -87,15 +129,56 @@
 			font-size: 0.9em;
 			line-height: 1.25;
 			grid-area: description;
+			-webkit-user-select: all;
+			user-select: all;
+		}
+
+		.flex-field {
+			position: relative;
+
+			.field-name {
+				position: absolute;
+				opacity: 0;
+			}
+	
+			&:before {
+				content: attr(data-value);
+				padding-bottom: 5px;
+				display: block;
+				min-height: calc(1em + 10px);
+			}
+	
+			&:before,
+			textarea {
+				// background-color: transparent;
+				// padding: 0;
+				// line-height: inherit;
+				// font-size: inherit;
+				white-space: pre-wrap;
+			}
+	
+			textarea {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				color: black;
+				margin: 0;
+				resize: none;
+				overflow: hidden;
+				
+			}
 		}
 		
 		.functions {
 			grid-area: functions;
+			z-index: 1;
 
 			&[data-value="on"] {
 				display: none;
 
-				& + .title,
+				& + .title-group,
 				& ~ .description {
 					display: none;
 				}
