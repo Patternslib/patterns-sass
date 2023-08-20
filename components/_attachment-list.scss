@@ -1,26 +1,6 @@
 .attachment-list {
-	// display: table;
 	display: block;
-	// width: 100%;
-
-	fieldset.vertical &,
-	fieldset.horizontal {
-
-		&:not(.read-only-field) {
-			background-color: $colour-form-fields-background;
-			border-radius: $form-fields-border-radius;
-			padding: 0.6em 0.4em 0.4em;
-			padding-top: 0.5em;
-			font-size: 0.8em;
-			box-sizing: border-box;
-		}
-	}
-
 	margin-bottom: 0;
-
-	.attached-file {
-		margin-bottom: 0;
-	}
 
 	.meta {
 		top: 0.3em;
