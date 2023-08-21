@@ -410,6 +410,7 @@ $pat-button-cluster-button-height: $button-height !default;
 			grid-area: right;
 
 			> .icon,
+			> .pat-subform .icon,
 			> .pat-button,
 			> .context-menu > .pat-button {
 				margin-left: var(--pat-toolbar-element-separation);
