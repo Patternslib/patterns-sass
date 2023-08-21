@@ -32,7 +32,7 @@ $pat-select-arrow-space: 29px !default;
 
     &:after {
       content: ' ';
-      padding-right: 1.5em;
+      padding-right: $pat-select-arrow-space;
       box-shadow: none !important;
       position: absolute; // Added to avoid dropdowns to push open display table elements such as the contextual button bar of item selector/sidebar.
       top: 2%; // Added to avoid dropdowns to push open display table elements such as the contextual button bar of item selector/sidebar.
