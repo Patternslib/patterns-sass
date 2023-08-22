@@ -700,6 +700,21 @@ $pat-button-cluster-button-height: $button-height !default;
 			}
 		}
 
+		&.expand-all-sections,
+		&.collapse-all-sections {
+			&:before {
+				font-family: fontello;
+				content: '#{$glyph-angle-right}';
+				transform: rotate(90deg);;
+			}
+		}
+		
+		&.collapse-all-sections {
+			&:before {
+				transform: rotate(-90deg);
+			}
+		}
+
 		&.level-up {
 			&:before {
 				content: "#{$glyph-level-up}";
