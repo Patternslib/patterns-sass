@@ -426,6 +426,10 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     display: inline-block !important; // Temporary !important till rewrite of form.scss.
   }
 
+  .attachment-list + .file-upload-button {
+    margin-top: 2px;
+  }
+
   .group {
     &.layout-date {
       label {
@@ -1066,7 +1070,6 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       .output-field,
       .composed,
       .field-cluster,
-      .attachment-list,
       .pat-checklist {
         // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
         display: block;

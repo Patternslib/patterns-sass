@@ -1,6 +1,5 @@
 .attachment-list {
 	display: block;
-	margin-bottom: 0;
 
 	.meta {
 		top: 0.3em;
@@ -12,7 +11,7 @@
 
 	.attached-file {
 		width: 100%;
-		margin-bottom: 0.5em;
+		margin-bottom: 0;
 		position: relative;
 		display: grid;
 		grid-template-columns: auto 90px;
@@ -83,6 +82,7 @@
 			color: $body-font-color;
 			grid-area: title;
 			position: relative;
+			margin-bottom: 15px;
 
 			.title {
 				margin: 0;
@@ -111,6 +111,8 @@
 			grid-area: description;
 			-webkit-user-select: all;
 			user-select: all;
+			margin-bottom: 15px;
+			margin-top: -15px;
 		}
 
 		.flex-field {
