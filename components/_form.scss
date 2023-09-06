@@ -424,6 +424,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   fieldset.horizontal fieldset.group .file-upload-button{
     margin: -1 * $form-input-field-padding-top-bottom 0 0;
     display: inline-block !important; // Temporary !important till rewrite of form.scss.
+    justify-self: start;
   }
 
   .attachment-list + .file-upload-button {
@@ -1025,6 +1026,24 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     }
   }
 
+  .row {
+    margin: 0 -5px 0.8em;
+
+    .column,
+    .columns {
+      margin-bottom: 0;
+      padding: 0 5px;
+
+      > * {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @mixin form-vertical () {
     > br,
     .group > br {
@@ -1077,24 +1096,6 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
         width: 100%;
         font-weight: $font-weight-normal;
       }   
-    }
-
-    .row {
-      margin: 0 -5px 0.8em;
-
-      .column,
-      .columns {
-        margin-bottom: 0;
-        padding: 0 5px;
-
-        > * {
-          margin-bottom: 0;
-        }
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
 
     label >,
