@@ -431,6 +431,18 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     margin-top: 2px;
   }
 
+  .schedules {
+    overflow: hidden;
+
+    // .day-title {
+    //   display: block;
+    // }
+
+    // .scheduler ~ .day-title {
+    //   margin-top: 10px;
+    // }
+  }
+
   .group {
     &.layout-date {
       label {
