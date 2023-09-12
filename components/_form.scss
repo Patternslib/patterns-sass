@@ -1015,7 +1015,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
             }
           }
 
-          label {
+          > label { // Add child selector to prevent collisions with deper nested labels. Test thouroughly.
             font-weight: $font-weight-normal;
             font-style: normal;
             position: relative;
