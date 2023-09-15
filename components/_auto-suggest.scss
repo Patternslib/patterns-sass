@@ -661,6 +661,24 @@ disabled look for disabled choices in the results dropdown
 
 /* disabled styles */
 
+// States
+
+.select2-container-multi .select2-choices .select2-search-choice {
+  &.state-archived {
+		opacity: 0.5;
+    background-color: gray;
+
+    div {
+      text-decoration: line-through;
+    }
+  }
+
+  &.state-draft {
+		background-color: $colour-orange;
+    color: white;
+  }
+}
+
 /* @group Icons */
 
 .select2-container {

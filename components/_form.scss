@@ -424,6 +424,23 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   fieldset.horizontal fieldset.group .file-upload-button{
     margin: -1 * $form-input-field-padding-top-bottom 0 0;
     display: inline-block !important; // Temporary !important till rewrite of form.scss.
+    justify-self: start;
+  }
+
+  .attachment-list + .file-upload-button {
+    margin-top: 2px;
+  }
+
+  .schedules {
+    overflow: hidden;
+
+    // .day-title {
+    //   display: block;
+    // }
+
+    // .scheduler ~ .day-title {
+    //   margin-top: 10px;
+    // }
   }
 
   .group {
@@ -998,7 +1015,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
             }
           }
 
-          label {
+          > label { // Add child selector to prevent collisions with deper nested labels. Test thouroughly.
             font-weight: $font-weight-normal;
             font-style: normal;
             position: relative;
@@ -1018,6 +1035,24 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
         width: 80%;
       }
 
+    }
+  }
+
+  .row {
+    margin: 0 -5px 0.8em;
+
+    .column,
+    .columns {
+      margin-bottom: 0;
+      padding: 0 5px;
+
+      > * {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -1066,7 +1101,6 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       .output-field,
       .composed,
       .field-cluster,
-      .attachment-list,
       .pat-checklist {
         // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
         display: block;
@@ -1074,24 +1108,6 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
         width: 100%;
         font-weight: $font-weight-normal;
       }   
-    }
-
-    .row {
-      margin: 0 -5px 0.8em;
-
-      .column,
-      .columns {
-        margin-bottom: 0;
-        padding: 0 5px;
-
-        > * {
-          margin-bottom: 0;
-        }
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
 
     label >,

@@ -3,7 +3,8 @@
 $canvas-toolbar-button-height: $button-height !default;
 
 #editor-toolbar,
-.editor-toolbar {
+.editor-toolbar,
+.canvas-toolbar.editor-toolbar {
 	@media print { display: none; }
 
 	&.redactor {

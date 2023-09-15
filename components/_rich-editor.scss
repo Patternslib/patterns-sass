@@ -27,7 +27,8 @@ div.ProseMirror {
 
 	}
 
-	.canvas-toolbar.inline {
+	.canvas-toolbar.inline,
+	.pat-toolbar.inline {
 		background-color: rgba(0,0,0,0.06);
 		position: absolute;
 		top: 0;
@@ -39,6 +40,10 @@ div.ProseMirror {
 		font-size: 18px;
 
 		.canvas-toolbar-section.editor {
+			font-size: 0.8em;
+		}
+
+		.pat-toolbar-section.editor {
 			font-size: 0.8em;
 		}
 	}

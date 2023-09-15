@@ -217,7 +217,8 @@ $pat-button-cluster-button-height: $button-height !default;
 		}
 	}
 
-	&.tiptap-focus {
+	&.tiptap-focus,
+	&.inline {
 		.editor-toolbar {
 			opacity: 1;
 			pointer-events: all;
