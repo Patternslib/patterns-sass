@@ -52,6 +52,10 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   max-width: 100%;
   background-color: var(--select-box-background-color);
   border-radius: $form-fields-border-radius;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
 
   &[data-value="draft"] {
     background-color: $colour-orange-xl;
@@ -65,7 +69,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
       color: darken($colour-orange, 20%);
     }
 
-    &:hover {
+    &:hover,
+    &.tooltip-active-click {
       background-color: darken($colour-orange-xl, 5%);
 
       &:after {
@@ -130,7 +135,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
   }
 
-  &:hover {
+  &:hover,
+  &.tooltip-active-click {
     background-color: $button-background-colour-hover;
   }
 
