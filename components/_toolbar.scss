@@ -793,6 +793,12 @@ $pat-button-cluster-button-height: $button-height !default;
 			}
 		}
 
+		&.select {
+			&:before {
+				content: "#{$glyph-checkboxes-double-checked}";
+			}
+		}
+
 	}
 
 	.pat-toolbar-local-search-box {
