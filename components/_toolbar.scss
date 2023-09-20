@@ -797,6 +797,14 @@ $pat-button-cluster-button-height: $button-height !default;
 			&:before {
 				content: "#{$glyph-checkboxes-double-checked}";
 			}
+
+			#content.mode-select & {
+				background-color: $colour-accent;
+				
+				&:before {
+					color: white;
+				}
+			}
 		}
 
 	}
