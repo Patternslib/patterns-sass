@@ -459,6 +459,7 @@ $pat-button-cluster-button-height: $button-height !default;
 
 	.pat-context-menu {
 		display: inline-block;
+		vertical-align: top;
 
 		&.no-label:before {
 			background-color: $pat-toolbar-icon-background-colour;
