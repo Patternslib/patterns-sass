@@ -463,6 +463,7 @@ $pat-button-cluster-button-height: $button-height !default;
 		&.no-label:before {
 			background-color: $pat-toolbar-icon-background-colour;
 			color: $pat-toolbar-icon-text-colour;
+			border-radius: $border-radii;
 		}
 
 		&:hover {
@@ -869,6 +870,7 @@ $pat-button-cluster-button-height: $button-height !default;
 		vertical-align: top;
 		font-size: $base-font-size;
 		background-color: $pat-toolbar-icon-background-colour;
+		border-radius: $border-radii;
 
 		&:after {
 			position: absolute;
