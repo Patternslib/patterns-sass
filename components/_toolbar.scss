@@ -459,6 +459,7 @@ $pat-button-cluster-button-height: $button-height !default;
 
 	.pat-context-menu {
 		display: inline-block;
+		vertical-align: top;
 
 		&.no-label:before {
 			background-color: $pat-toolbar-icon-background-colour;
@@ -791,6 +792,20 @@ $pat-button-cluster-button-height: $button-height !default;
 		&.menu {
 			&:before {
 				content: "#{$glyph-menu}";
+			}
+		}
+
+		&.select {
+			&:before {
+				content: "#{$glyph-checkboxes-double-checked}";
+			}
+
+			#content.mode-select & {
+				background-color: $colour-accent;
+				
+				&:before {
+					color: white;
+				}
 			}
 		}
 

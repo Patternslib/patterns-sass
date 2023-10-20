@@ -50,7 +50,7 @@ $bullet-space: 22px !default;
         box-shadow: none;
         font-size: 1em;
         font-family: $body-font-family;
-        padding-left: $bullet-space;
+        padding-left: calc(#{$bullet-space} + 8px);
 
         body[dir=rtl] & { 
           padding-left: 0;

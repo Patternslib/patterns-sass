@@ -2,6 +2,7 @@
 
 $context-menu-text-colour: rgba(0,0,0,0.6) !default;
 $context-menu-text-colour-hover: black !default;
+$context-menu-max-height: calc(100vh - 170px) !default;
 
 .pat-context-menu {
 	position: relative;
@@ -216,6 +217,8 @@ $context-menu-text-colour-hover: black !default;
 		height: auto !important; // !important overrules inline styles by .js
 	    border: 1px solid silver;
 	    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+		max-height: $context-menu-max-height;
+		overflow: auto;
 
 		*:last-child {
 			margin-bottom: 0;
