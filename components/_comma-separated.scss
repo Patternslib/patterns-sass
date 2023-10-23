@@ -1,0 +1,13 @@
+.pat-comma-separated {
+	> .segment {
+		&:after {
+			content: ', ';
+		}
+
+		&:last-child {
+			&:after {
+				content: '.';
+			}
+		}
+	}
+}
