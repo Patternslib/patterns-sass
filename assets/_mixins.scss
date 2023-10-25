@@ -100,7 +100,29 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
   }
 
+    &[data-value="approved"] {
+      background-color: $colour-green-xl;
+  
+      &:after {
+        background-color: $colour-green-l;
+      }
+  
+      &:before,
+      &:after {
+        color: darken($colour-green, 15%);
+      }
+  
+      &:hover {
+        background-color: darken($colour-green-xl, 5%);
+  
+        &:after {
+          background-color: darken($colour-green-l, 5%);
+        }
+      }
+    }
+
   &[data-value="published"],
+  &[data-value="sent"],
   &.success {
     background-color: $colour-green-xl;
     color: darken($colour-green, 15%);
