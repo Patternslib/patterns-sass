@@ -57,7 +57,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   text-overflow: ellipsis;
   cursor: default;
 
-  &[data-value="draft"] {
+  &[data-value="draft"],
+  &.state-draft {
     background-color: $colour-orange-xl;
 
     &:after {
@@ -79,7 +80,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
   }
 
-  &[data-value="for-review"] {
+  &[data-value="for-review"],
+  &.state-for-review {
     background-color: $colour-violette-xl;
 
     &:after {
@@ -100,7 +102,8 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
     }
   }
 
-    &[data-value="approved"] {
+    &[data-value="approved"],
+    &.state-approved {
       background-color: $colour-green-xl;
   
       &:after {
@@ -123,7 +126,9 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
 
   &[data-value="published"],
   &[data-value="sent"],
-  &.success {
+  &.success,
+  &.state-published,
+  &.state-sent {
     background-color: $colour-green-xl;
     color: darken($colour-green, 15%);
 
