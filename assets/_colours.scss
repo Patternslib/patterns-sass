@@ -6,10 +6,22 @@ $colour-green-xl: #e1eddb !default;
 $colour-orange: #e17000 !default;  										
 $colour-orange-l: #f6d4b2 !default; 
 $colour-orange-xl: #fbead9 !default; 
+$colour-orange-d: darken($colour-orange, 10%); 
+$colour-orange-xd: darken($colour-orange, 20%);
 
 $colour-violette: #a90061 !default;
 $colour-violette-l: #e5b3d0 !default; 
 $colour-violette-xl: #f2d9e7 !default;
+
+$colour-purple-l: #c6b8cf; 
+$colour-purple-xl: #e3dce7; 
+$colour-purple: #42145f; 
+
+$colour-dark-blue: #01689b; 
+$colour-dark-blue-d: darken($colour-dark-blue, 10%);
+$colour-dark-blue-l: #cce0f1; 
+$colour-dark-blue-xd: darken($colour-dark-blue, 30%);
+$colour-dark-blue-xl: #e5f0f9; 
 
 $colour-link: DodgerBlue !default;
 $colour-link-hover: navy !default;

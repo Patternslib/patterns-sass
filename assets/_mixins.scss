@@ -16,6 +16,7 @@ $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
 $pat-form-panel-padding-small: 20px !default;
 $pat-message-box-shadow: 0 0 0 2px white !default;
+$mutation-sentinel-colour: rgb(104, 192, 255) !default;
 
 :root {
   --select-box-arrow-width: 35px;
@@ -25,6 +26,20 @@ $pat-message-box-shadow: 0 0 0 2px white !default;
   --select-box-background-color: #{$colour-form-fields-background};
   --select-box-arrow-background-colour: rgba(0,0,0,0.1);
   --select-box-arrow-text-colour: inherit;
+}
+
+@mixin mutation-sentinel() {
+  width: 10px;
+  height: 10px;
+  color: transparent !important;
+  overflow: hidden;
+  border: 2px solid white;
+  padding: 0;
+  border-radius: 50%;
+  background-color: $mutation-sentinel-colour;
+  background: linear-gradient(to bottom, #8fcae7 0%, #007bc7 100%);
+  display: inline-block;
+  margin-top: 0;
 }
 
 @mixin select-box() {
