@@ -89,6 +89,7 @@ $pat-table-icon-colour: gray !default;
     vertical-align: top;
     width: 100%;
 
+
     @include screen-size(small) {
         background-color: transparent;
     }
@@ -150,25 +151,37 @@ $pat-table-icon-colour: gray !default;
             box-shadow: $default-box-shadow;
             background-color: white;
             box-sizing: border-box;
+
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-areas: 
+                "card-title card-functions"
+                "card-content card-content";
+            grid-auto-rows: auto;
+            align-items: flex-start;
+            justify-content: space-between;
         }
 
         &.folder {
-            .item-name a {    
-                padding-left: 30px !important;
-                position: relative;
+            .item-name {
 
-                .mode-select & {
-                    -webkit-pointer-events: none;
-                    pointer-events: none;
-                }
+                a {    
+                    padding-left: 30px !important;
+                    position: relative;
 
-                &:before {
-                    position: absolute;
-                    left: 8px;
-                    display: inline-block;
-                    margin-right: 5px;
-                    font-family: fontello;
-                    content: '#{$glyph-folder}';
+                    .mode-select & {
+                        -webkit-pointer-events: none;
+                        pointer-events: none;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        left: 8px;
+                        display: inline-block;
+                        margin-right: 5px;
+                        font-family: fontello;
+                        content: '#{$glyph-folder}';
+                    }
                 }
             }
         }
@@ -229,6 +242,7 @@ $pat-table-icon-colour: gray !default;
                 padding: 0;
                 margin-bottom: 0;
                 border: 0;
+                grid-area: card-content;
 
                 &:last-child {
                     margin-bottom: 0;
@@ -300,6 +314,18 @@ $pat-table-icon-colour: gray !default;
                     .classification-tags {
                         line-height: 19px;
                     }
+                }
+            }
+
+            &.item-name {
+                &:before {
+                    display: none;
+                }
+
+                @include screen-size(small) {
+                    grid-area: card-title;
+                    font-size: 1.3em;
+                    padding-top: 15px; // Align with icons.
                 }
             }
 
@@ -495,9 +521,14 @@ $pat-table-icon-colour: gray !default;
             }
 
             &.functions {
-                padding: 0 !important;
                 white-space: nowrap;
-                text-align: right;
+                text-align: right;@include screen-size(small) {
+                        grid-area: card-functions;
+                    }
+
+                @include screen-size (medium-large) {
+                    padding: 0 !important;
+                }
 
                 .icon {
                     padding-top: $pat-table-cell-padding-top;
@@ -604,11 +635,7 @@ $pat-table-icon-colour: gray !default;
                     
                 }
 
-                
 
-                @include screen-size(small) {
-                    grid-area: functions;
-                }
             }
 
             &.item-state {
