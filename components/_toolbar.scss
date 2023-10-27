@@ -676,7 +676,8 @@ $pat-button-cluster-button-height: $button-height !default;
 			}
 		}
 
-		&.pat-tooltip.tooltip-active-click {
+		&.pat-tooltip.tooltip-active-click,
+		&.collapsible-open {
 
 
 			&:before {
@@ -792,6 +793,12 @@ $pat-button-cluster-button-height: $button-height !default;
 		&.menu {
 			&:before {
 				content: "#{$glyph-menu}";
+			}
+		}
+
+		&.search {
+			&:before {
+				content: "#{$glyph-search}";
 			}
 		}
 
