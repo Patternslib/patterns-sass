@@ -1057,6 +1057,10 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
     vertical-align: baseline;
     box-shadow: $button-small-shadow;
     font-weight:  $button-small-font-weight;
+
+    &:before {
+      font-size: 15px;
+    }
   }
 
   &:focus {
