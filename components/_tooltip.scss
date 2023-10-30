@@ -7,6 +7,8 @@ $bullet-space: 22px !default;
 $tooltip-border-radii: $border-radii !default;
 $tooltip-background-colour: white !default;
 $bullet-space: 22px !default;
+$menu-background-colour-current: $colour-accent !default;
+$menu-text-colour-current: white !default;
 
 @import "../libraries/tippyjs/index";
 @import "../libraries/tippyjs/themes/patterns-tooltip";
@@ -110,8 +112,8 @@ $bullet-space: 22px !default;
         //   font: 1em fontello;
         // }
 
-        color: white;
-        background-color: $colour-accent;
+        color: $menu-text-colour-current;
+        background-color: $menu-background-colour-current;
         margin: 0 -10px;
         padding: 0 10px;
         border-radius: $tooltip-border-radii;
@@ -282,13 +284,18 @@ $bullet-space: 22px !default;
     }
   }
 
-  // h4 {
-  //   color: #3b3b3b;
-  //   /* font-size: 12px; */
-  //   font-size: 1em;
-  //   /* line-height: 18px; */
-  //   margin-bottom: 5px;
-  // }
+  .tooltip-separation-header {
+    color: black;
+    font-weight: bold;
+    /* font-size: 12px; */
+    font-size: 1em;
+    /* line-height: 18px; */
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   .item-selector {
     position: static;

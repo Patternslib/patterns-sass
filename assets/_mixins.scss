@@ -75,6 +75,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   &[data-value="draft"],
   &.state-draft {
     background-color: $colour-orange-xl;
+    color: $colour-orange-xd;
 
     &:after {
       background-color: $colour-orange-l;
@@ -98,6 +99,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   &[data-value="for-review"],
   &.state-for-review {
     background-color: $colour-violette-xl;
+    color: $colour-violette;
 
     &:after {
       background-color: $colour-violette-l;
@@ -108,7 +110,8 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
       color: darken($colour-violette, 15%);
     }
 
-    &:hover {
+    &:hover,
+    &.tooltip-active-click {
       background-color: darken($colour-violette-xl, 5%);
 
       &:after {
@@ -120,6 +123,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
     &[data-value="approved"],
     &.state-approved {
       background-color: $colour-green-xl;
+      color: $colour-green-d;
   
       &:after {
         background-color: $colour-green-l;
@@ -130,7 +134,8 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
         color: darken($colour-green, 15%);
       }
   
-      &:hover {
+      &:hover,
+      &.tooltip-active-click {
         background-color: darken($colour-green-xl, 5%);
   
         &:after {
