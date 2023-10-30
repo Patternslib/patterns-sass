@@ -28,6 +28,25 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   --select-box-arrow-text-colour: inherit;
 }
 
+@mixin button-drop-down-segment {
+  font-family: fontello;
+  content: '#{$glyph-down-open}';
+  width: var(--select-box-arrow-width);
+  background-color: var(--select-box-arrow-background-colour);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 18px;
+  border-top-right-radius: $form-fields-border-radius;
+  border-bottom-right-radius: $form-fields-border-radius;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin mutation-sentinel() {
   width: 10px;
   height: 10px;
@@ -215,22 +234,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   }
 
   &:after {
-    font-family: fontello;
-    content: '#{$glyph-down-open}';
-    width: var(--select-box-arrow-width);
-    background-color: var(--select-box-arrow-background-colour);
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 18px;
-    border-top-right-radius: $form-fields-border-radius;
-    border-bottom-right-radius: $form-fields-border-radius;
-    padding: 0;
-    display: flex;
-    align-items:center;
-    justify-content:center;
+    @include button-drop-down-segment;
   }
 
   option:disabled {
