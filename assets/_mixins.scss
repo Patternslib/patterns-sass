@@ -146,27 +146,26 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 
   &[data-value="published"],
   &[data-value="sent"],
-  &.success,
   &.state-published,
   &.state-sent {
-    background-color: $colour-green-xl;
-    color: darken($colour-green, 15%);
+    background-color: $colour-dark-blue-xl;
+    color: darken($colour-dark-blue, 15%);
 
     &:after {
-      background-color: $colour-green-l;
+      background-color: $colour-dark-blue-l;
     }
 
     &:before,
     &:after {
-      color: darken($colour-green, 15%);
+      color: darken($colour-dark-blue, 15%);
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: darken($colour-green-xl, 5%);
+      background-color: darken($colour-dark-blue-xl, 5%);
 
       &:after {
-        background-color: darken($colour-green-l, 5%);
+        background-color: darken($colour-dark-blue-l, 5%);
       }
     }
   }
