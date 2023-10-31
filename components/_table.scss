@@ -325,7 +325,7 @@ $pat-table-icon-colour: gray !default;
                 @include screen-size(small) {
                     grid-area: card-title;
                     font-size: 1.3em;
-                    padding-top: 15px; // Align with icons.
+                    padding-top: 8px; // Align with icons.
                 }
             }
 
