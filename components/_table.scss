@@ -594,13 +594,13 @@ $pat-table-icon-colour: gray !default;
 
                     &.locked {
                         &:before {
-                            content: '#{$glyph-icon-lock}'
+                            content: '#{$glyph-lock}'
                         }
                     }
 
                     &.validated {
                         &:before {
-                            content: '#{$glyph-icon-lock}';
+                            content: '#{$glyph-lock}';
                             color: $colour-success;
                         }
 
@@ -629,7 +629,7 @@ $pat-table-icon-colour: gray !default;
 
                     &.unlocked {
                         &:before {
-                            content: '#{$glyph-icon-lock-open}'
+                            content: '#{$glyph-lock-open}'
                         }
                     }
                     

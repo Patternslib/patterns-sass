@@ -28,6 +28,25 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   --select-box-arrow-text-colour: inherit;
 }
 
+@mixin button-drop-down-segment {
+  font-family: fontello;
+  content: '#{$glyph-down-open}';
+  width: var(--select-box-arrow-width);
+  background-color: var(--select-box-arrow-background-colour);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 18px;
+  border-top-right-radius: $form-fields-border-radius;
+  border-bottom-right-radius: $form-fields-border-radius;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin mutation-sentinel() {
   width: 10px;
   height: 10px;
@@ -75,6 +94,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   &[data-value="draft"],
   &.state-draft {
     background-color: $colour-orange-xl;
+    color: $colour-orange-xd;
 
     &:after {
       background-color: $colour-orange-l;
@@ -98,6 +118,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   &[data-value="for-review"],
   &.state-for-review {
     background-color: $colour-violette-xl;
+    color: $colour-violette;
 
     &:after {
       background-color: $colour-violette-l;
@@ -108,7 +129,8 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
       color: darken($colour-violette, 15%);
     }
 
-    &:hover {
+    &:hover,
+    &.tooltip-active-click {
       background-color: darken($colour-violette-xl, 5%);
 
       &:after {
@@ -120,6 +142,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
     &[data-value="approved"],
     &.state-approved {
       background-color: $colour-green-xl;
+      color: $colour-green-d;
   
       &:after {
         background-color: $colour-green-l;
@@ -130,7 +153,8 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
         color: darken($colour-green, 15%);
       }
   
-      &:hover {
+      &:hover,
+      &.tooltip-active-click {
         background-color: darken($colour-green-xl, 5%);
   
         &:after {
@@ -141,27 +165,26 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 
   &[data-value="published"],
   &[data-value="sent"],
-  &.success,
   &.state-published,
   &.state-sent {
-    background-color: $colour-green-xl;
-    color: darken($colour-green, 15%);
+    background-color: $colour-dark-blue-xl;
+    color: darken($colour-dark-blue, 15%);
 
     &:after {
-      background-color: $colour-green-l;
+      background-color: $colour-dark-blue-l;
     }
 
     &:before,
     &:after {
-      color: darken($colour-green, 15%);
+      color: darken($colour-dark-blue, 15%);
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: darken($colour-green-xl, 5%);
+      background-color: darken($colour-dark-blue-xl, 5%);
 
       &:after {
-        background-color: darken($colour-green-l, 5%);
+        background-color: darken($colour-dark-blue-l, 5%);
       }
     }
   }
@@ -211,22 +234,7 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
   }
 
   &:after {
-    font-family: fontello;
-    content: '#{$glyph-down-open}';
-    width: var(--select-box-arrow-width);
-    background-color: var(--select-box-arrow-background-colour);
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 18px;
-    border-top-right-radius: $form-fields-border-radius;
-    border-bottom-right-radius: $form-fields-border-radius;
-    padding: 0;
-    display: flex;
-    align-items:center;
-    justify-content:center;
+    @include button-drop-down-segment;
   }
 
   option:disabled {
@@ -1052,6 +1060,10 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
     vertical-align: baseline;
     box-shadow: $button-small-shadow;
     font-weight:  $button-small-font-weight;
+
+    &:before {
+      font-size: 15px;
+    }
   }
 
   &:focus {

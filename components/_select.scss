@@ -9,6 +9,17 @@ $pat-select-arrow-space: 29px !default;
     @include select-box;
   }
 
+  a.pat-select {
+    display: inline-block;
+    position: relative;
+    padding-right: 35px;
+
+    &:after {
+      @include button-drop-down-segment;
+      width: 30px;
+    }
+  }
+
   label.pat-select.bare,
   a.pat-select.bare {
     position: relative;
