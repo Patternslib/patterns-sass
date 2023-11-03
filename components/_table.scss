@@ -6,6 +6,7 @@ $pat-table-cell-padding-bottom: 10px !default;
 $pat-table-cell-padding-left: 15px !default;
 $pat-table-line-height: 1.5 !default;
 $pat-table-padding: 5px 10px 5px 10px !default;
+$pat-table-padding-hd: 5px 10px 5px 10px !default;
 $pat-table-border-bottom: 3px solid $colour-base !default;
 $pat-table-cell-border-top: 3px solid $colour-base !default;
 $pat-table-background-colour: white !default;
@@ -522,7 +523,10 @@ $pat-table-icon-colour: gray !default;
 
             &.functions {
                 white-space: nowrap;
-                text-align: right;@include screen-size(small) {
+                text-align: right;
+                vertical-align: middle !important;
+                
+                @include screen-size(small) {
                         grid-area: card-functions;
                     }
 
@@ -537,13 +541,16 @@ $pat-table-icon-colour: gray !default;
                     padding-left: $pat-table-cell-padding-left;
                     margin: 0;
                     padding: 0;
-                    width: 47px;
-                    height: 47px;
+                    width: 48px;
+                    height: 48px;
                     overflow: hidden;
                     color: transparent;
                     cursor: default;
                     text-decoration: none;
                     float: left;
+                    // top: calc(50% - 24px);
+                    // position: relative;
+                    border-radius: $border-radii;
 
                     &:hover {
                         background-color: rgba($color: #000000, $alpha: 0.05);
@@ -557,7 +564,7 @@ $pat-table-icon-colour: gray !default;
                     &:before {
                         font-family: fontello;
                         display: block;
-                        line-height: 47px;
+                        line-height: 48px;
                         width: 100%;
                         text-align: center;
                         color: $pat-table-icon-colour;
@@ -829,7 +836,7 @@ $pat-table-icon-colour: gray !default;
             .item-name a,
             .item-state > a {
                 @include screen-size (medium-large) { 
-                    padding: 5px 10px 5px 10px;
+                    padding: $pat-table-padding-hd;
                 }
             }
             
