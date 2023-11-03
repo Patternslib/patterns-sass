@@ -18,6 +18,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 $pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0) !default;
 $pat-button-cluster-toggle-margin: 3px !default;
 $pat-button-cluster-button-height: $button-height !default;
+$pat-toolbar-z-index: 2 !default;
 
 .pat-toolbar {
 	@include screen-size(small) {
@@ -38,7 +39,7 @@ $pat-button-cluster-button-height: $button-height !default;
 	@include clear-fix();
 	color: rgba(0,0,0,0.6);
 	position: relative;
-	z-index: 2;
+	z-index: $pat-toolbar-z-index;
 	padding: 10px;
 	border-radius: $border-radii;
 	font-size: $pat-toolbar-font-size;
