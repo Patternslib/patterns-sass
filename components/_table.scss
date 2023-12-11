@@ -1,26 +1,30 @@
 @charset "UTF-8";
 
-$pat-table-cell-padding-top:        10px !default;
-$pat-table-cell-padding-right:      15px !default;
-$pat-table-cell-padding-bottom:     10px !default;
-$pat-table-cell-padding-left:       15px !default;
-$pat-table-cell-padding-hd-top:     8px  !default;
-$pat-table-cell-padding-hd-right:   8px  !default;
-$pat-table-cell-padding-hd-bottom:  8px  !default;
-$pat-table-cell-padding-hd-left:    8px  !default;
-$pat-table-line-height:             1.5 !default;
-$pat-table-padding:                 5px 10px 5px 10px !default;
-$pat-table-padding-hd:              5px 10px 5px 10px !default;
-$pat-table-row-outline:             none !default;
-$pat-table-border-bottom:           none !default;
-$pat-table-border-spacing:          0 !default;
-$pat-table-cell-border-top:         none !default;
-$pat-table-background-colour:       transparent !default;
-$pat-table-cell-border-bottom:      none !default;
-$pat-table-cell-background-colour:white !default;
-$pat-table-cell-icons:            rgba(0, 0, 0, 0.6) !default;
-$pat-table-cell-icons-hover:      black !default;
-$pat-table-icon-colour:           gray !default;
+$pat-table-cell-padding-top:                10px !default;
+$pat-table-cell-padding-right:              15px !default;
+$pat-table-cell-padding-bottom:             10px !default;
+$pat-table-cell-padding-left:               15px !default;
+$pat-table-cell-padding-hd-top:             8px  !default;
+$pat-table-cell-padding-hd-right:           8px  !default;
+$pat-table-cell-padding-hd-bottom:          8px  !default;
+$pat-table-cell-padding-hd-left:            8px  !default;
+$pat-table-thead-cell-padding-top:          0 !default;
+$pat-table-thead-cell-padding-bottom:       0 !default;
+$pat-table-line-height:                     1.5 !default;
+$pat-table-padding:                         5px 10px 5px 10px !default;
+$pat-table-padding-hd:                      5px 10px 5px 10px !default;
+$pat-table-row-outline:                     none !default;
+$pat-table-thead-row-outline:               none !default;
+$pat-table-border-bottom:                   none !default;
+$pat-table-border-spacing:                  0 !default;
+$pat-table-cell-border-top:                 none !default;
+$pat-table-background-colour:               transparent !default;
+$pat-table-cell-border-bottom:              none !default;
+$pat-table-cell-background-colour:          white !default;
+$pat-table-thead-cell-background-colour:    transparent !default;
+$pat-table-cell-icons:                      rgba(0, 0, 0, 0.6) !default;
+$pat-table-cell-icons-hover:                black !default;
+$pat-table-icon-colour:                     gray !default;
 
 @mixin table-row-selection-mechanism {
     overflow: hidden;
@@ -150,6 +154,18 @@ $pat-table-icon-colour:           gray !default;
     tr {
         width: 100%;
         outline: $pat-table-row-outline;
+        border-radius: calc(1.1 * #{$border-radii});
+        overflow: hidden;
+
+        > *:last-child {
+            border-top-right-radius: calc(1.1 * #{$border-radii});
+            border-bottom-right-radius: calc(1.1 * #{$border-radii});
+        }
+
+        > *:first-child {
+            border-top-left-radius: calc(1.1 * #{$border-radii});
+            border-bottom-left-radius: calc(1.1 * #{$border-radii});
+        }
 
         @include screen-size(small) {
             display: block;
@@ -799,12 +815,18 @@ $pat-table-icon-colour:           gray !default;
 			display: none;
 		}
 
+        tr {
+            outline: $pat-table-thead-row-outline;
+        }
+
         th {
             vertical-align: bottom;
             text-align: left;
-            // color: $colour-green;
             hyphens: none;
             position: relative;
+            padding-bottom: $pat-table-thead-cell-padding-bottom;
+            padding-top: $pat-table-thead-cell-padding-top;
+            background-color: $pat-table-thead-cell-background-colour;
 
             .select-all-items {
                 padding: 0;
@@ -852,7 +874,6 @@ $pat-table-icon-colour:           gray !default;
             padding: $pat-table-padding-hd;
         }
 
-        thead,
         tbody,
         tfoot {
             font-size: 0.8em;
@@ -870,6 +891,17 @@ $pat-table-icon-colour:           gray !default;
             }
             
         }  
+
+        thead {
+            font-size: 0.8em;
+
+            th {
+                padding-top: $pat-table-thead-cell-padding-top;
+                padding-right: $pat-table-cell-padding-hd-right;
+                padding-bottom: $pat-table-thead-cell-padding-bottom;
+                padding-left: $pat-table-cell-padding-hd-left;
+            }
+        }
         
         tbody td.functions .icon {
             width: 34px;
