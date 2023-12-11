@@ -1,20 +1,26 @@
 @charset "UTF-8";
 
-$pat-table-cell-padding-top: 10px !default;
-$pat-table-cell-padding-right: 15px !default;
-$pat-table-cell-padding-bottom: 10px !default;
-$pat-table-cell-padding-left: 15px !default;
-$pat-table-line-height: 1.5 !default;
-$pat-table-padding: 5px 10px 5px 10px !default;
-$pat-table-padding-hd: 5px 10px 5px 10px !default;
-$pat-table-border-bottom: 3px solid $colour-base !default;
-$pat-table-cell-border-top: 3px solid $colour-base !default;
-$pat-table-background-colour: white !default;
-$pat-table-cell-border-bottom: none !default;
-$pat-table-cell-background-colour: transparent !default;
-$pat-table-cell-icons: rgba(0, 0, 0, 0.6) !default;
-$pat-table-cell-icons-hover: black !default;
-$pat-table-icon-colour: gray !default;
+$pat-table-cell-padding-top:        10px !default;
+$pat-table-cell-padding-right:      15px !default;
+$pat-table-cell-padding-bottom:     10px !default;
+$pat-table-cell-padding-left:       15px !default;
+$pat-table-cell-padding-hd-top:     8px  !default;
+$pat-table-cell-padding-hd-right:   8px  !default;
+$pat-table-cell-padding-hd-bottom:  8px  !default;
+$pat-table-cell-padding-hd-left:    8px  !default;
+$pat-table-line-height:             1.5 !default;
+$pat-table-padding:                 5px 10px 5px 10px !default;
+$pat-table-padding-hd:              5px 10px 5px 10px !default;
+$pat-table-row-outline:             none !default;
+$pat-table-border-bottom:           none !default;
+$pat-table-border-spacing:          0 !default;
+$pat-table-cell-border-top:         none !default;
+$pat-table-background-colour:       transparent !default;
+$pat-table-cell-border-bottom:      none !default;
+$pat-table-cell-background-colour:white !default;
+$pat-table-cell-icons:            rgba(0, 0, 0, 0.6) !default;
+$pat-table-cell-icons-hover:      black !default;
+$pat-table-icon-colour:           gray !default;
 
 @mixin table-row-selection-mechanism {
     overflow: hidden;
@@ -86,10 +92,11 @@ $pat-table-icon-colour: gray !default;
 }
 
 .pat-table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: $pat-table-border-spacing;
     vertical-align: top;
     width: 100%;
-
+    margin: calc(-1 * #{$pat-table-border-spacing});
 
     @include screen-size(small) {
         background-color: transparent;
@@ -142,6 +149,7 @@ $pat-table-icon-colour: gray !default;
 
     tr {
         width: 100%;
+        outline: $pat-table-row-outline;
 
         @include screen-size(small) {
             display: block;
@@ -839,6 +847,11 @@ $pat-table-icon-colour: gray !default;
     }
 
     &.hd {
+        
+        @include screen-size (medium-large) { 
+            padding: $pat-table-padding-hd;
+        }
+
         thead,
         tbody,
         tfoot {
@@ -849,7 +862,10 @@ $pat-table-icon-colour: gray !default;
             .item-name a,
             .item-state > a {
                 @include screen-size (medium-large) { 
-                    padding: $pat-table-padding-hd;
+                    padding-top: $pat-table-cell-padding-hd-top;
+                    padding-right: $pat-table-cell-padding-hd-right;
+                    padding-bottom: $pat-table-cell-padding-hd-bottom;
+                    padding-left: $pat-table-cell-padding-hd-left;
                 }
             }
             
