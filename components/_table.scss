@@ -536,7 +536,7 @@ $pat-table-icon-colour: gray !default;
                     }
 
                 @include screen-size (medium-large) {
-                    padding: 0 !important;
+                    padding: 0 4px 0 0 !important;
                 }
 
                 .icon {
@@ -552,7 +552,9 @@ $pat-table-icon-colour: gray !default;
                     color: transparent;
                     cursor: default;
                     text-decoration: none;
-                    float: left;
+                    // float: left;
+                    display: inline-block;
+                    vertical-align: middle;
                     // top: calc(50% - 24px);
                     // position: relative;
                     border-radius: $border-radii;
