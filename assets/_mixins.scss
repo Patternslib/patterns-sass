@@ -17,6 +17,7 @@ $pat-form-panel-padding-medium: 30px !default;
 $pat-form-panel-padding-small: 20px !default;
 $pat-message-box-shadow: 0 0 0 2px white !default;
 $mutation-sentinel-colour: rgb(104, 192, 255) !default;
+$pat-table-sorting-icon-position: right !default;
 
 :root {
   --select-box-arrow-width: 35px;
@@ -329,6 +330,17 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
         line-height: 30px;
         text-align: right;
         transform: translateY(-50%);
+      }
+      
+      @if $pat-table-sorting-icon-position =="inline" {
+        &:after {
+          position: static;
+          display: inline-block;
+          vertical-align: middle;
+          transform: none;
+          line-height: 28px;
+          width: 25px;
+        }
       }
     }
 
