@@ -826,6 +826,10 @@ $pat-table-sorting-icon-position: right !default;
         // select { border: white, color: white;}
     }
 
+    &.info {
+        background-color: $colour-info-background;
+    }
+
     &.success,
     &.warning {
       input,
