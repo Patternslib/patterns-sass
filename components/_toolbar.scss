@@ -93,7 +93,7 @@ $pat-toolbar-z-index: 2 !default;
 		cursor: default;
 		border-radius: $button-border-radius;
 		padding: $button-paddings;
-		margin: 0 -15px;
+		// margin: 0 -15px;
 
 		&:before {
 			margin-left: 0;
