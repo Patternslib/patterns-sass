@@ -12,6 +12,7 @@ $menu-text-colour-current: white !default;
 $menu-list-item-background-colour-hover: rgba(0, 0, 0, 0.08) !default;
 $menu-list-item-text-colour: #666 !default;
 $menu-list-item-text-colour-hover: black !default;
+$menu-list-item-margin: 2px 0 !default;
 
 @import "../libraries/tippyjs/index";
 @import "../libraries/tippyjs/themes/patterns-tooltip";
@@ -41,6 +42,7 @@ $menu-list-item-text-colour-hover: black !default;
     
     li {
       line-height: 1.5em;
+      margin: $menu-list-item-margin;
 
       > button,
       > form > button,
@@ -56,6 +58,7 @@ $menu-list-item-text-colour-hover: black !default;
         font-size: 1em;
         font-family: $body-font-family;
         padding-left: calc(#{$bullet-space} + 8px);
+        border-radius: $tooltip-border-radii;
 
         body[dir=rtl] & { 
           padding-left: 0;
@@ -118,14 +121,9 @@ $menu-list-item-text-colour-hover: black !default;
         //   font: 1em fontello;
         // }
 
-        color: $menu-text-colour-current;
-        background-color: $menu-background-colour-current;
-        margin: 0 -10px;
-        padding: 0 10px;
-        border-radius: $tooltip-border-radii;
-
         a {
-          color: white;
+          color: $menu-text-colour-current;
+          background-color: $menu-background-colour-current;
         }
       }
 
@@ -228,6 +226,7 @@ $menu-list-item-text-colour-hover: black !default;
       background-color: $colour-notice-background;
       -webkit-hyphens: auto;
       hyphens: auto;
+      padding: 18px;
 
       .pat-button.read-more {
         clear: both;
