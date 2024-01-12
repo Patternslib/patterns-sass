@@ -13,6 +13,7 @@ $menu-list-item-background-colour-hover: rgba(0, 0, 0, 0.08) !default;
 $menu-list-item-text-colour: #666 !default;
 $menu-list-item-text-colour-hover: black !default;
 $menu-list-item-margin: 2px 0 !default;
+$menu-list-line-height: 22px !default;
 
 @import "../libraries/tippyjs/index";
 @import "../libraries/tippyjs/themes/patterns-tooltip";
@@ -103,8 +104,8 @@ $menu-list-item-margin: 2px 0 !default;
       button:before {
         margin-left: -1 * $bullet-space;
         float: left;
-        // margin-top: 0.1em;
-        // line-height: 1.5em;
+        width: $bullet-space;
+        line-height: $menu-list-line-height;
 
         body[dir=rtl] & { 
           float: right;
