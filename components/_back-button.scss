@@ -1,9 +1,10 @@
 $back-button-border-radius: $border-radii !default;
 $back-button-border-radius-left: 8px !default;
 
-$back-button-background-colour: $button-background-colour-subdued;
-$back-button-text-colour: $button-text-colour-subdued;
-$back-button-text-colour-hover: $button-text-colour-subdued-hover;
+$back-button-background-colour: $button-background-colour;
+$back-button-background-colour-hover: $button-background-colour-hover;
+$back-button-text-colour: $button-text-colour;
+$back-button-text-colour-hover: $button-text-colour-hover;
 $back-button-height: $button-height !default;
 $back-button-line-height: $button-line-height !default;
 
@@ -13,6 +14,8 @@ $back-button-arrow-height-bottom: (0.5 * $back-button-height) - (0.26 * $back-bu
 $back-button-background-colour-dp: rgba(255,255,255,0.5);
 $back-button-text-colour-dp: rgba(255,255,255,0.9);
 $back-button-text-colour-dp-hover: white;
+
+$back-button-font-weight: bold !default;
 
 .pat-back-button {
 	display: inline-block;
@@ -29,13 +32,14 @@ $back-button-text-colour-dp-hover: white;
 	padding: 0 1.5em 0 2em;
 	position: relative;
 	margin-left: 0;
-	font-weight: bold;
+	font-weight: $back-button-font-weight;
 	max-width: 100%;
 	white-space: nowrap !important;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	box-sizing: border-box;
 	text-decoration: none !important;
+	cursor: default;
 
 	.overflow-protector {
 		width: 100%;
@@ -96,7 +100,15 @@ $back-button-text-colour-dp-hover: white;
 	}
 
 	&:hover {
-		color: black;
+		color: $button-text-colour-hover;
 		text-decoration: none;
+
+		&:before {
+			border-color: transparent $back-button-background-colour-hover transparent transparent;
+		}
+
+		&:after {
+			background: $back-button-background-colour-hover;
+		}
 	}
 }
