@@ -7,6 +7,7 @@ $back-button-text-colour: $button-text-colour;
 $back-button-text-colour-hover: $button-text-colour-hover;
 $back-button-height: $button-height !default;
 $back-button-line-height: $button-line-height !default;
+$back-button-font-size: 18px !default;
 
 $back-button-arrow-height-top: (0.5 * $back-button-height) - (0.26 * $back-button-border-radius-left) !default;
 $back-button-arrow-height-bottom: (0.5 * $back-button-height) - (0.26 * $back-button-border-radius-left) !default;
@@ -28,7 +29,7 @@ $back-button-font-weight: bold !default;
 	height: $back-button-height;
 	// background: $colour-button;
 	color: $back-button-text-colour;
-	font-size: 18px;
+	font-size: $back-button-font-size;
 	padding: 0 1.5em 0 2em;
 	position: relative;
 	margin-left: 0;
