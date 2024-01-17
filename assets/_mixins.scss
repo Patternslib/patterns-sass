@@ -206,14 +206,23 @@ $pat-table-sorting-icon-position: right !default;
     background-color: $button-background-colour-hover;
   }
 
-  &:before {
-    font-size: 20px;
-    content: attr(data-option);
-    // padding-right: var(--select-box-arrow-width);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+  &:not([class*="icon-"]) {
+    &:before {
+      font-size: 20px;
+      content: attr(data-option);
+      // padding-right: var(--select-box-arrow-width);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+  }
+
+  &[class*=icon-] {
+    &:before {
+      margin-left: -5px;
+      margin-right: 8px;
+    }
   }
 
   select {
