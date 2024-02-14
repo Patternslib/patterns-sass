@@ -649,7 +649,7 @@ $pat-toolbar-z-index: 2 !default;
 			box-sizing: border-box;
 		}
 
-		&:not(.active):not(.current):not([disabled]):not(.default):hover {
+		&:not(.active):not(.icon):not([disabled]):not(.default):hover {
 			color: $pat-toolbar-icon-text-colour-hover;
 			text-decoration: none;
 			background-color: $pat-toolbar-icon-background-colour-hover;
