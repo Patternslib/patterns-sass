@@ -544,7 +544,7 @@ $pat-toolbar-z-index: 2 !default;
 			box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
 		}
 
-		&:not(.active):not([disabled]):not(.default):hover {
+		&:not(.active):not(.current):not([disabled]):not(.default):hover {
 			color: black
 		}
 	}
@@ -649,7 +649,7 @@ $pat-toolbar-z-index: 2 !default;
 			box-sizing: border-box;
 		}
 
-		&:hover {
+		&:not(.active):not(.icon):not([disabled]):not(.default):hover {
 			color: $pat-toolbar-icon-text-colour-hover;
 			text-decoration: none;
 			background-color: $pat-toolbar-icon-background-colour-hover;

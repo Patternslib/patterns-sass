@@ -8,7 +8,7 @@ $pat-button-cluster-font-size: 18px !default;
 $pat-button-cluster-text-colour: $colour-link !default;
 
 .pat-button-cluster {
-  display: inline-block;
+  display: inline-flex;
   border-radius: $border-radii;
   background: $button-background-colour-subdued;
   box-shadow: inset 0 1px 6px rgba(0,0,0,0.15);
