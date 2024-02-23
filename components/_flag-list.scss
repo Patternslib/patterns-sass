@@ -1,13 +1,27 @@
 .flag-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 30px;
+    grid-auto-rows: 1fr;
+
+    @include screen-size(large) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @include screen-size(medium) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include screen-size(small) {
+        grid-template-columns: 1fr 1fr;
+    }
 
     .flag {
         text-align: center;
 
         a {
             display: block;
+            font-size: 16px;
+            line-height: 1.3;
         
             &:before {
                 width: 100%;
