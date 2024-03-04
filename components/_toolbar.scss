@@ -516,6 +516,7 @@ $pat-toolbar-z-index: 2 !default;
 		white-space: nowrap;
 	    overflow: hidden;
 		height: $pat-toolbar-button-line-height;
+		text-decoration: none !important;
 	}
 	
 	.pat-button,

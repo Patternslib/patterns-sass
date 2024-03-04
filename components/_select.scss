@@ -33,7 +33,7 @@ $pat-select-arrow-space: 29px !default;
 
     &:hover,
     &.focus { 
-      text-decoration: none;
+      text-decoration: none !important;
     }
 
     @media print { 
