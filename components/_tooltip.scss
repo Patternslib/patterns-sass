@@ -60,6 +60,7 @@ $menu-list-line-height: 22px !default;
         font-family: $body-font-family;
         padding-left: calc(#{$bullet-space} + 8px);
         border-radius: $tooltip-border-radii;
+        text-decoration: none !important;
 
         body[dir=rtl] & { 
           padding-left: 0;
@@ -67,8 +68,8 @@ $menu-list-line-height: 22px !default;
           text-align: right;
         }
 
-        > a:hover,
-        &:hover {
+        > a:not(.current):not(.active):hover,
+        &:not(.current):not(.active):hover {
           color: black;
           text-decoration: none !important;
           background-color: $menu-list-item-background-colour-hover;
@@ -129,7 +130,7 @@ $menu-list-line-height: 22px !default;
       }
 
       &:hover {
-        text-decoration: none;
+        text-decoration: none !important;
         color: black;
       }
 
