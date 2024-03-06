@@ -6,6 +6,10 @@ $pat-checklist-label-padding-left: 22px !default;
 
 :root {
 	--pat-checklist-label-padding-left: #{$pat-checklist-label-padding-left};
+	--pat-checklist-label-padding-top: 0.6em;
+	--pat-checklist-label-padding-bottom: 0.6em;
+	--pat-checklist-item-separation-top: #{$pat-checklist-item-separation};
+	--pat-checklist-item-separation-bottom: #{$pat-checklist-item-separation};
 }
 
 @mixin checkbox() {
@@ -113,8 +117,8 @@ label.pat-checklist {
 			position: relative;
 			@include checkbox();
 			@include clear-fix();
-			margin-top: $pat-checklist-item-separation;
-			margin-bottom: $pat-checklist-item-separation;
+			margin-top: var(--pat-checklist-item-separation-top);
+			margin-bottom: var(--pat-checklist-item-separation-bottom);
 			white-space: normal;
 		}
 	}
@@ -131,13 +135,13 @@ label.pat-checklist {
 			position: relative;
 			@include checkbox();
 			// @include clear-fix();
-			margin-top: $pat-checklist-item-separation;
-			margin-bottom: $pat-checklist-item-separation;
+			margin-top: var(--pat-checklist-item-separation-top);
+			margin-bottom: var(--pat-checklist-item-separation-bottom);
 			white-space: normal;
 			font-weight: $font-weight-normal;
 
 			&:first-of-type { 
-				margin-top: 0;
+				--pat-checklist-item-separation-top: 0;
 			}	
 		}
 	}
@@ -172,7 +176,7 @@ label.pat-checklist {
 
 		label {
 	    	border-radius: 0.75 * $border-radii;
-	    	padding: 0.6em 0.6em 0.6em 40px;
+	    	padding: var(--pat-checklist-label-padding-top) 0.6em var(--pat-checklist-label-padding-bottom) 40px;
 	    	margin-bottom: 5px; 
 
 	    	&:before,
