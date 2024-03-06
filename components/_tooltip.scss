@@ -49,6 +49,7 @@ $menu-list-line-height: 22px !default;
       > button,
       > form > button,
       > fieldset.pat-checklist label,
+      > form > fieldset.pat-checklist label,
       > a {
         // background: none;
         display: block;
@@ -85,7 +86,8 @@ $menu-list-line-height: 22px !default;
 
       > *,
       > form > *,
-      > form > label > * {
+      > form > label > *,
+      > form > fieldset > label > * {
 
         &.disabled,
         &[disabled] {
