@@ -6,9 +6,10 @@ $backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
 $bullet-space: 22px !default;
 $tooltip-border-radii: $border-radii !default;
 $tooltip-background-colour: white !default;
-$bullet-space: 22px !default;
 $menu-background-colour-current: $colour-accent !default;
 $menu-text-colour-current: white !default;
+$pat-checklist-label-padding-left: 32px !default;
+$menu-list-item-left-padding: $pat-checklist-label-padding-left !default;
 $menu-list-item-background-colour-hover: rgba(0, 0, 0, 0.08) !default;
 $menu-list-item-text-colour: #666 !default;
 $menu-list-item-text-colour-hover: black !default;
@@ -54,16 +55,16 @@ $menu-list-line-height: 22px !default;
         color: $menu-list-item-text-colour;
         // line-height: 1.5em;
         cursor: default;
-        // padding: 0.1em 0 0.1em $bullet-space;
+        // padding: 0.1em 0 0.1em $menu-list-item-left-padding;
         box-shadow: none;
         font-size: 1em;
         font-family: $body-font-family;
-        padding-left: calc(#{$bullet-space} + 8px);
+        padding-left: #{$menu-list-item-left-padding} !important;
         border-radius: $tooltip-border-radii;
 
         body[dir=rtl] & { 
           padding-left: 0;
-          padding-right: $bullet-space;
+          padding-right: $menu-list-item-left-padding;
           text-align: right;
         }
 
@@ -102,14 +103,15 @@ $menu-list-line-height: 22px !default;
 
       a:before, 
       button:before {
-        margin-left: -1 * $bullet-space;
+        margin-left: calc(-1 * var(--pat-checklist-label-padding-left));
+        margin-right: 0;
         float: left;
-        width: $bullet-space;
+        width: var(--pat-checklist-label-padding-left);
         line-height: $menu-list-line-height;
 
         body[dir=rtl] & { 
           float: right;
-          margin-right: -1 * $bullet-space;
+          margin-right: calc(-1 * var(--pat-checklist-label-padding-left));
           margin-left: 0;
         }
       }

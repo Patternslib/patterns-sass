@@ -2,13 +2,18 @@
 
 $pat-checklist-item-separation: 0.2em !default;
 $checklist-label-line-height: 1.2em !default;
+$pat-checklist-label-padding-left: 32px !default;
+
+:root {
+	--pat-checklist-label-padding-left: #{$pat-checklist-label-padding-left};
+}
 
 @mixin checkbox() {
-	padding-left: 1.5em;
+	padding-left: var(--pat-checklist-label-padding-left);
 	position: relative;
 
     body[dir=rtl] & { 
-      padding-right: 1.5em;
+      padding-right: var(--pat-checklist-label-padding-left);
       padding-left: 0;
     }
 	
@@ -73,7 +78,7 @@ $checklist-label-line-height: 1.2em !default;
 
 label.pat-checklist {
 	@include checkbox();
-	padding-left: 1.1em;
+	padding-left: var(--pat-checklist-label-padding-left);
 	padding-right: 0.5em;
 
 	&.checked:before,
