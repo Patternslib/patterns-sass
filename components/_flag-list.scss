@@ -34,6 +34,15 @@
                 box-shadow: $default-box-shadow;
                 background-repeat: no-repeat;
                 box-sizing: border-box;
+                border-radius: $border-radii;
+                transition: all 0.15s ease-out;
+            }
+
+            &:hover {
+                &:before {
+                    transform: scale(1.08);
+                    box-shadow: $default-box-shadow-hover;
+                }
             }
         }
     }
