@@ -116,6 +116,7 @@ $menu-list-line-height: 22px !default;
         float: left;
         width: var(--pat-checklist-label-padding-left);
         line-height: $menu-list-line-height;
+        text-align: center;
 
         body[dir=rtl] & { 
           float: right;

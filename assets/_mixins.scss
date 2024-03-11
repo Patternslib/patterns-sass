@@ -22,7 +22,7 @@ $pat-table-sorting-icon-position: right !default;
 :root {
   --select-box-arrow-width: 35px;
   --select-box-padding-top-bottom: #{$form-input-field-padding-top-bottom};
-  --select-box-padding-right-left: 0.5em;
+  --select-box-padding-right-left: 0.75em;
   --select-box-box-shadow: #{$form-input-field-box-shadow};
   --select-box-background-color: #{$colour-form-fields-background};
   --select-box-arrow-background-colour: rgba(0,0,0,0.1);
