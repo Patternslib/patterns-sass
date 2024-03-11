@@ -755,6 +755,12 @@ $pat-table-sorting-icon-position: right !default;
       transition: padding 0.4s;
       padding: 0;
 
+      .panel-content {
+        > *:last-child {
+            margin-bottom: 0;
+          }
+      }
+
       > .well-header,
       > .well-title-group > .well-header {
         padding-right: 50px;
