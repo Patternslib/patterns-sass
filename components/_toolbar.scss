@@ -553,7 +553,8 @@ $pat-toolbar-z-index: 2 !default;
 		}
 
 		&:not(.active):not(.current):not([disabled]):not(.default):hover {
-			color: black
+			color: $pat-toolbar-icon-text-colour-hover;
+			background-color: $pat-toolbar-icon-background-colour-hover;
 		}
 	}
 
