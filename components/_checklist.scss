@@ -2,39 +2,43 @@
 
 $pat-checklist-item-separation: 0.2em !default;
 $checklist-label-line-height: 1.2em !default;
+$pat-checklist-padding-start: 1.5em !default;
+$pat-checklist-padding-end: 0 !default;
+
+:root {
+	--pat-checklist-label-padding-start: #{$pat-checklist-padding-start};
+	--pat-checklist-label-padding-end: #{$pat-checklist-padding-end};
+	--pat-checklist-item-separation: ${$pat-checklist-item-separation};
+}
 
 @mixin checkbox() {
-	padding-left: 1.5em;
-	position: relative;
+	display: grid;
+	grid-template-columns: var(--pat-checklist-label-padding-start) auto;
+	grid-template-areas: "icon label";
+	padding-right: var(--pat-checklist-label-padding-end);
 
-    body[dir=rtl] & { 
-      padding-right: 1.5em;
-      padding-left: 0;
-    }
+	body[dir=rtl] & { 
+		padding-left: var(--pat-checklist-label-padding-end);
+	}
+
+	> * {
+		grid-area: label;
+	}
 	
 	&.checked:before,
 	&.unchecked:before {
 		font-family: fontello;
 		content: '#{$glyph-checkbox}';
-		float: left;
-		position: absolute;
-		left: 0;
-		top: 0.5 * $checklist-label-line-height;
-		fieldset.fancy & { top: 0.7em; }
-		transform: translateY(-50%);
-		line-height: 0.8em;
-		// margin-top: -2px;
-		font-size: 1em;
 		font-weight: normal;
 		background-color: white;
 		height: 0.75em;
 		width: 0.75em;
+		line-height: 0.75em;
 		border-radius: 7%;
-
-	    body[dir=rtl] & { 
-	      left: auto;
-	      right: 0;
-	    }
+		justify-self: center;
+		align-self: start;
+	    margin-top: calc(0.22* 1em);
+		grid-area: icon;
 	}
 
 	&.disabled,
@@ -127,7 +131,7 @@ label.pat-checklist {
 			@include checkbox();
 			// @include clear-fix();
 			margin-top: $pat-checklist-item-separation;
-			margin-bottom: $pat-checklist-item-separation;
+			margin-bottom: var(--pat-checklist-item-separation);
 			white-space: normal;
 			font-weight: $font-weight-normal;
 

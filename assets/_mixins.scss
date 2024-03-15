@@ -27,6 +27,83 @@ $pat-table-sorting-icon-position: right !default;
   --select-box-background-color: #{$colour-form-fields-background};
   --select-box-arrow-background-colour: rgba(0,0,0,0.1);
   --select-box-arrow-text-colour: inherit;
+
+  --pat-checklist-label-padding-start: 1.5em;
+  --pat-checklist-label-padding-end: 0;
+  --pat-checklist-item-separation: 0.2em;
+
+  --pat-menu-list-item-padding-start: 34px;
+}
+
+@mixin pat-menu-list {
+  margin: 0 0 1em 0;
+  list-style-type: none;
+
+  --pat-checklist-label-padding-start: var(--pat-menu-list-item-padding-start);
+  --pat-checklist-label-padding-end: 0.2em;
+  --pat-checklist-item-separation: 0;
+
+  li {
+    padding-left: 0;
+
+    > a,
+    > label,
+    > form > label,
+    > form > button,
+    > form > fieldset > label,
+    > fieldset.pat-checklist label,
+    > button {
+      display: block;
+      padding: 0.3em 0 0.3em 0;
+      color: black;
+      line-height: 24px;
+      cursor: default;
+      overflow: hidden;
+      border: none;
+      width: 100%;
+      background: none;
+      box-sizing: border-box;
+      font-size: $base-font-size;
+      display: grid;
+      grid-template-columns: var(--pat-menu-list-item-padding-start) auto;
+
+      &:before {
+        align-self: start;
+        justify-self: center;
+        line-height: inherit;
+        display: block;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: rgba(0,0,0,0.05);
+        color: black;
+      }
+
+      .pat-message {
+        display: block;
+        margin-top: 0.4em;
+        margin-bottom: 0.5em;
+        padding: 0.3em 0.5em;
+      }
+
+      input[type="file"] {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1.8em;
+        width: 100%;
+      }
+
+      &:not([class*=icon-]):not([class*=checked]) {
+        &:before {
+          font-family: fontello;
+          content: '#{$glyph-angle-right}';
+        }
+      }
+    }
+  }
 }
 
 @mixin button-drop-down-segment {
