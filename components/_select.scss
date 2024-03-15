@@ -10,9 +10,17 @@ $pat-select-arrow-space: 29px !default;
   }
 
   a.pat-select {
-    display: inline-block;
-    position: relative;
-    padding-right: 35px;
+    // display: inline-block;
+    // position: relative;
+    // padding-right: 35px;
+    // padding-left: 10px;
+    // border-radius: $border-radii;
+
+    @include select-box;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     &:after {
       @include button-drop-down-segment;
@@ -33,7 +41,7 @@ $pat-select-arrow-space: 29px !default;
 
     &:hover,
     &.focus { 
-      text-decoration: none;
+      text-decoration: none !important;
     }
 
     @media print { 

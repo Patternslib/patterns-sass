@@ -696,6 +696,12 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     }
   }
 
+  .code-field {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
   .currency-field {
     display: inline-block;
     position: relative;

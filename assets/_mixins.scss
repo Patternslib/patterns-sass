@@ -10,6 +10,7 @@ $default-tail-white: 25px !default;
 $collapsible-button-height: 31px !default;
 $colour-select-box-arrow: black !default;
 $form-input-field-box-shadow: none !default;
+$select-box-box-shadow: $form-input-field-box-shadow !default;
 $form-input-field-padding-top-bottom: 0.2em !default;
 $button-small-font-weight: 600 !default;
 $pat-form-panel-padding-large: 40px !default;
@@ -22,7 +23,7 @@ $pat-table-sorting-icon-position: right !default;
 :root {
   --select-box-arrow-width: 35px;
   --select-box-padding-top-bottom: #{$form-input-field-padding-top-bottom};
-  --select-box-padding-right-left: 0.5em;
+  --select-box-padding-right-left: 0.75em;
   --select-box-box-shadow: #{$form-input-field-box-shadow};
   --select-box-background-color: #{$colour-form-fields-background};
   --select-box-arrow-background-colour: rgba(0,0,0,0.1);
@@ -773,6 +774,10 @@ $pat-table-sorting-icon-position: right !default;
         content: '#{$glyph-help}';
       }
 
+      &.add:after {
+        content: '#{$glyph-plus}';
+      }
+
       &.download:after {
         content: '#{$glyph-download}';
       }
@@ -831,6 +836,12 @@ $pat-table-sorting-icon-position: right !default;
     &.pat-collapsible {
       transition: padding 0.4s;
       padding: 0;
+
+      .panel-content {
+        > *:last-child {
+            margin-bottom: 0;
+          }
+      }
 
       > .well-header,
       > .well-title-group > .well-header {

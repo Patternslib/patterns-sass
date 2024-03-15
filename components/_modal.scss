@@ -357,6 +357,7 @@ div.pat-modal {
           .container > .button-bar:last-child,
           .container .main.button-bar {
             position: relative !important;
+            
             bottom: 0;
             border-top: 1px solid silver;
           }
@@ -510,7 +511,7 @@ div.pat-modal {
           position: -webkit-sticky !important;
           position: sticky !important;
           bottom: -21px;
-          margin-bottom: -20px;
+          // margin-bottom: -20px;
           background: white;
           padding-bottom: 10px;
           padding-top: 20px;
