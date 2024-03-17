@@ -21,19 +21,30 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 $pat-table-sorting-icon-position: right !default;
 
 :root {
-  --select-box-arrow-width: 35px;
-  --select-box-padding-top-bottom: #{$form-input-field-padding-top-bottom};
-  --select-box-padding-right-left: 0.75em;
-  --select-box-box-shadow: #{$form-input-field-box-shadow};
-  --select-box-background-color: #{$colour-form-fields-background};
-  --select-box-arrow-background-colour: rgba(0,0,0,0.1);
-  --select-box-arrow-text-colour: inherit;
+  --border-radii: #{$border-radii};
+
+  --pat-select-box-arrow-width: 35px;
+  --pat-select-box-padding-top-bottom: #{$form-input-field-padding-top-bottom};
+  --pat-select-box-padding-right-left: 0.75em;
+  --pat-select-box-box-shadow: #{$form-input-field-box-shadow};
+  --pat-select-box-background-color: #{$colour-form-fields-background};
+  --pat-select-box-arrow-background-colour: rgba(0,0,0,0.1);
+  --pat-select-box-arrow-text-colour: inherit;
+  --pat-select-box-font-size: #{$base-font-size};
+  --pat-select-box-arrow-size: 18px;
 
   --pat-checklist-label-padding-start: 1.5em;
   --pat-checklist-label-padding-end: 0;
   --pat-checklist-item-separation: 0.2em;
 
   --pat-menu-list-item-padding-start: 34px;
+}
+
+@mixin floating-ui-element-background {
+  box-shadow: $pat-toolbar-box-shadow;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
+  backdrop-filter: blur(10px) saturate(4) brightness(1.2);
 }
 
 @mixin pat-menu-list {
@@ -67,12 +78,14 @@ $pat-table-sorting-icon-position: right !default;
       font-size: $base-font-size;
       display: grid;
       grid-template-columns: var(--pat-menu-list-item-padding-start) auto;
+      border-radius: var(--border-radii);
 
       &:before {
         align-self: start;
         justify-self: center;
         line-height: inherit;
         display: block;
+        margin-right: 0; // Compensate for 'Iconified';
       }
 
       &:hover {
@@ -110,14 +123,14 @@ $pat-table-sorting-icon-position: right !default;
 @mixin button-drop-down-segment {
   font-family: fontello;
   content: '#{$glyph-down-open}';
-  width: var(--select-box-arrow-width);
-  background-color: var(--select-box-arrow-background-colour);
+  width: var(--pat-select-box-arrow-width);
+  background-color: var(--pat-select-box-arrow-background-colour);
   display: block;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  font-size: 18px;
+  font-size: var(--pat-select-box-arrow-size);
   border-top-right-radius: $form-fields-border-radius;
   border-bottom-right-radius: $form-fields-border-radius;
   padding: 0;
@@ -141,29 +154,27 @@ $pat-table-sorting-icon-position: right !default;
 }
 
 @mixin select-box() {
-
   padding: 0 75px 0 12px;
   display: inline-block;
-  height: var(--select-box-height);
-  line-height: var(--select-box-height);  
-  padding-top: var(--select-box-padding-top-bottom);
-  padding-bottom: var(--select-box-padding-top-bottom);
-  padding-left: var(--select-box-padding-right-left);
-  padding-right: calc((var(--select-box-arrow-width) + var(--select-box-padding-right-left) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
+  height: var(--pat-select-box-height);
+  line-height: var(--pat-select-box-height);  
+  padding-top: var(--pat-select-box-padding-top-bottom);
+  padding-bottom: var(--pat-select-box-padding-top-bottom);
+  padding-left: var(--pat-select-box-padding-right-left);
+  padding-right: calc((var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-right-left) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
   position: relative;
   font-weight: normal !important;
-  font-size: 0;
   position: relative;
   box-sizing: border-box;
   border: $form-input-field-border;
-  box-shadow: var(--select-box-box-shadow);
+  box-shadow: var(--pat-select-box-box-shadow);
   outline: $form-input-field-outline;
   outline-offset: $form-input-field-outline-offset;
-  color: var(--select-box-arrow-text-colour);
-  font-size: 100%;
+  color: var(--pat-select-box-arrow-text-colour);
+  font-size: var(--pat-select-box-font-size);
   border-radius: 0;
   max-width: 100%;
-  background-color: var(--select-box-background-color);
+  background-color: var(--pat-select-box-background-color);
   border-radius: $form-fields-border-radius;
   overflow: hidden;
   white-space: nowrap;
@@ -286,9 +297,9 @@ $pat-table-sorting-icon-position: right !default;
 
   &:not([class*="icon-"]) {
     &:before {
-      font-size: 20px;
+      font-size: var(--pat-select-font-size);
       content: attr(data-option);
-      // padding-right: var(--select-box-arrow-width);
+      // padding-right: var(--pat-select-box-arrow-width);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

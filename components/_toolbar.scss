@@ -25,31 +25,43 @@ $pat-toolbar-z-index: 2 !default;
 	--pat-toolbar-button-line-height: #{$pat-toolbar-button-line-height};
 	--pat-toolbar-font-size: #{$pat-toolbar-font-size};
 	--pat-toolbar-search-field-width-open: 350px;
+	--pat-toolbar-element-separation: #{$pat-toolbar-element-separation};
+	--pat-toolbar-bump-distance: #{$pat-toolbar-bump-distance};
+	--pat-toolbar-bump-distance-scroll-down: #{$pat-toolbar-bump-distance-scroll-down};
+	--pat-toolbar-padding: 10px;
+
+	@include screen-size(small) {
+		--pat-toolbar-auto-hide-offset: -15px;
+	}
+
+	@include screen-size(medium-large) {
+		--pat-toolbar-auto-hide-offset: -40px;
+	}
 }
 
 .pat-toolbar {
 	@include screen-size(small) {
-		--toolbar-auto-hide-offset: -15px;
-		--pat-toolbar-element-separation: 0;
-
-		margin: -10px -10px 0;
+		margin: 
+			calc(-1 * var(--pat-toolbar-padding)) 
+			calc(-1 * var(--pat-toolbar-padding)) 
+			0;
 	}
 
 	@include screen-size(medium-large) {
-		--toolbar-auto-hide-offset: -40px;
-		--pat-toolbar-element-separation: #{$pat-toolbar-element-separation};
-
 		height: var(--pat-toolbar-button-height);
-		margin: 0 -10px 40px;
+		margin: 
+			0 
+			calc(-1 *  var(--pat-toolbar-padding)) 
+			40px;
 	}
 
 	@include clear-fix();
 	color: rgba(0,0,0,0.6);
 	position: relative;
-	z-index: $pat-toolbar-z-index;
-	padding: 10px;
+	z-index: #{$pat-toolbar-z-index};
+	padding: var(--pat-toolbar-padding);
 	border-radius: $border-radii;
-	font-size: var(--pat-toolbar-font-size);
+	font-size: 0; // Removes spaces between buttons.
 
 	.toolbar-title {
 		font-size: calc(0.6 * var(--pat-toolbar-button-height));
@@ -132,23 +144,23 @@ $pat-toolbar-z-index: 2 !default;
 	&.pat-bumper {
 		-webkit-position: sticky;
 		position: sticky;
-		padding-top: $pat-toolbar-bump-distance;
-		margin-top: calc(-1 * $pat-toolbar-bump-distance);
-		top: $pat-toolbar-top-distance;
+		padding-top: var(--pat-toolbar-bump-distance);
+		margin-top: calc(-1 * var(--pat-toolbar-bump-distance));
+		top: var(--pat-toolbar-top-distance);
 		transition: top $pat-toolbar-hiding-speed;
 
 		.scrolling-down &,
 		.scroll-down & {
-			top: $pat-toolbar-top-distance-scroll-down;
-			padding-top: $pat-toolbar-bump-distance-scroll-down;
+			top: var(--pat-toolbar-top-distance-scroll-down);
+			padding-top: var(--pat-toolbar-bump-distance-scroll-down);
 		}
 
 		&:before {
 			position: absolute;
-			left: -5px;
-			right: -5px;
-			top: $pat-toolbar-bump-distance - 15px;
-			bottom: -4px;
+			left: calc(-0.5 * var(--pat-toolbar-padding));
+			right: calc(-0.5 * var(--pat-toolbar-padding));
+			top: calc(var(--pat-toolbar-bump-distance) - 1.5 * var(--pat-toolbar-padding));
+			bottom: calc(-0.5 * var(--pat-toolbar-padding));
 			border-radius: $border-radii;
 			transition: all 1s;
 	      	box-shadow: 0 0 3px rgba(0, 0, 0, 0);
@@ -182,33 +194,26 @@ $pat-toolbar-z-index: 2 !default;
 		transition: box-shadow 1s;
 		transition: all 1s;
 
-		top: var(--toolbar-auto-hide-offset);
+		top: var(--pat-toolbar-auto-hide-offset);
 
 		&.auto-hide {
 			top: -150px;
 			transition: all 0.4s;
 
 			&.tiptap-focus {
-				top: var(--toolbar-auto-hide-offset);
+				top: var(--pat-toolbar-auto-hide-offset);
 			}
 
 			@media screen and ( min-height: 601px ) {
 				.scroll-up & {
-					top: var(--toolbar-auto-hide-offset);
+					top: var(--pat-toolbar-auto-hide-offset);
 				}
 			}
 		}
 
 	    .pat-scroll-box:not(.scroll-position-top) &,
 	    &.tiptap-focus {
-	      	box-shadow: $pat-toolbar-box-shadow;
-			background-color: rgba(255,255,255,0.9);
-
-			.backdropfilter & {
-				background-color: rgba(255,255,255,0.8);
-				-webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
-				backdrop-filter: blur(10px) saturate(4) brightness(1.2);
-			}
+	      	@include floating-ui-element-background;
 	    }
 	}
 
@@ -238,6 +243,7 @@ $pat-toolbar-z-index: 2 !default;
 		display: grid;
 		grid-template-columns: 1fr 4fr 1fr;
 		grid-template-areas: "left middle right";
+		gap: 0;
 	}
 
 	&.type-document {
@@ -268,6 +274,10 @@ $pat-toolbar-z-index: 2 !default;
 	.toolbar-section {
 		vertical-align: top;
 		box-sizing: border-box;
+
+		> * {
+			font-size: var(--pat-toolbar-font-size);	
+		}
 
 		* {
 			white-space: normal;
@@ -493,6 +503,7 @@ $pat-toolbar-z-index: 2 !default;
 		vertical-align: top;
 		height:  var(--pat-toolbar-button-height);
 		line-height: var(--pat-toolbar-button-line-height);
+		font-size: var(--pat-toolbar-font-size);
 
 		&.bare {
 			&:before {
@@ -503,6 +514,7 @@ $pat-toolbar-z-index: 2 !default;
 
 		select {
 			line-height: var(--pat-toolbar-button-line-height);
+			font-size: var(--pat-toolbar-font-size);
 			height: var(--pat-toolbar-button-height);
 			padding-top: 0;
 			padding-bottom: 0;
@@ -510,13 +522,14 @@ $pat-toolbar-z-index: 2 !default;
 	}
 
 	> .pat-select:not(.bare),
-	.toolbar-section > .pat-select:not(.bare) {	
-		--select-box-padding-top-bottom: 0;
-		--select-box-box-shadow: none;
-		--select-box-background-color: #{$button-background-colour};
-		--select-box-arrow-text-colour: #{$colour-link};
-		--select-box-height: var(--pat-toolbar-button-line-height);
-		--select-box-padding-right-left: 20px;
+	.toolbar-section > .pat-select:not(.bare),
+	.toolbar-section > .extras > .pat-select:not(.bare) {	
+		--pat-select-box-padding-top-bottom: 0;
+		--pat-select-box-box-shadow: none;
+		--pat-select-box-background-color: #{$button-background-colour};
+		--pat-select-box-arrow-text-colour: #{$colour-link};
+		--pat-select-box-height: var(--pat-toolbar-button-line-height);
+		--pat-select-box-padding-right-left: 20px;
 
 	    @include select-box;
 	    line-height: var(--pat-toolbar-button-line-height);
@@ -701,6 +714,18 @@ $pat-toolbar-z-index: 2 !default;
 			&:before {
 				content: "#{$glyph-plus}";
 				font-size: 1.3em;
+			}
+		}
+		
+		&.settings {
+			&:before {
+				content: "#{$glyph-cog}";
+			}
+		}
+		
+		&.resize-full {
+			&:before {
+				content: "#{$glyph-resize-full}";
 			}
 		}
 		
