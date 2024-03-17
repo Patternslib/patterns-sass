@@ -523,6 +523,7 @@ $pat-toolbar-z-index: 2 !default;
 
 	> .pat-select:not(.bare),
 	.toolbar-section > .pat-select:not(.bare),
+	.pat-context-menu > .context-menu-label,
 	.toolbar-section > .extras > .pat-select:not(.bare) {	
 		--pat-select-box-padding-top-bottom: 0;
 		--pat-select-box-box-shadow: none;

@@ -125,6 +125,7 @@ $pat-table-sorting-icon-position: right !default;
   content: '#{$glyph-down-open}';
   width: var(--pat-select-box-arrow-width);
   background-color: var(--pat-select-box-arrow-background-colour);
+  background-image: none;
   display: block;
   position: absolute;
   top: 0;
