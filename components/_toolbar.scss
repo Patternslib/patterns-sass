@@ -569,6 +569,10 @@ $pat-toolbar-z-index: 2 !default;
 			color: $pat-toolbar-icon-text-colour-hover;
 			background-color: $pat-toolbar-icon-background-colour-hover;
 		}
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	.pat-button {
