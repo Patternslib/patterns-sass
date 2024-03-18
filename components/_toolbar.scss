@@ -124,7 +124,10 @@ $pat-toolbar-z-index: 2 !default;
 
 		&.tooltip-active-click {
 			background-color: $colour-accent;
-			color: white;
+			
+			&:before {
+				color: white;
+			}
 		}
 	}
 
@@ -479,12 +482,6 @@ $pat-toolbar-z-index: 2 !default;
 		display: inline-block;
 		vertical-align: top;
 
-		&.no-label:before {
-			background-color: $pat-toolbar-icon-background-colour;
-			color: $pat-toolbar-icon-text-colour;
-			border-radius: $border-radii;
-		}
-
 		&:hover {
 			&.no-label:before {
 				color: $pat-toolbar-icon-text-colour-hover;
@@ -492,11 +489,29 @@ $pat-toolbar-z-index: 2 !default;
 				background-color: $pat-toolbar-icon-background-colour-hover;
 			}
 		}
+		
+		.context-menu-label {
+			height: var(--pat-toolbar-button-height);
+		}
+
+		&.no-label { 
+			&:before {
+				background-color: $pat-toolbar-icon-background-colour;
+				color: $pat-toolbar-icon-text-colour;
+				border-radius: $border-radii;
+			}
+
+			&.open:before,
+			&.closed.in-progress:before {
+				background-color: var(--colour-accent);
+				color: white;
+			}
+		}
 	}
 
 	> .pat-select,
 	.toolbar-section > .pat-select,
-	.pat-context-menu > .context-menu-label,
+	.pat-context-menu:not(.no-label) > .context-menu-label,
 	> input[type="search"],
 	.toolbar-section label.pat-checklist {
 		display: inline-block;
@@ -523,7 +538,7 @@ $pat-toolbar-z-index: 2 !default;
 
 	> .pat-select:not(.bare),
 	.toolbar-section > .pat-select:not(.bare),
-	.pat-context-menu > .context-menu-label,
+	.pat-context-menu:not(.no-label) > .context-menu-label,
 	.toolbar-section > .extras > .pat-select:not(.bare) {	
 		--pat-select-box-padding-top-bottom: 0;
 		--pat-select-box-box-shadow: none;

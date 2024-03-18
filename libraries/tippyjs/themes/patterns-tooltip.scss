@@ -6,9 +6,9 @@ $origins: bottom, top, right, left;
 $backdrop-origins: 0% 25%, 0% -50%, 50% 0%, -50% 0%;
 $backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
 $color: white;
-$transparent-light: rgba(0, 8, 16, 0.08);
-$transparent-dark: rgba(0, 8, 16, 0.15);
-$transparent-darker: rgba(0, 8, 16, 0.2);
+$transparent-light: rgba(0, 8, 16, 0.08) !default;
+$transparent-dark: rgba(0, 8, 16, 0.15) !default;
+$transparent-darker: rgba(0, 8, 16, 0.2) !default;
 
 $tooltip-padding: 18px !default;
 
@@ -18,12 +18,16 @@ $arrow-distance: 3px;
 
 $tooltip-border-radii: $border-radii !default;
 
+:root {
+  --pat-tooltip-box-shadow: 0 4px 14px -2px $transparent-light;
+}
+
 .#{$namespace-prefix}-box {
   background-color: $color;
   background-clip: padding-box;
   border: 1px solid $transparent-dark;
   color: black;
-  box-shadow: 0 4px 14px -2px $transparent-light;
+  box-shadow: var(--pat-tooltip-box-shadow);
   color: $body-font-color;
   font-size: $base-font-size;
   border-radius: $tooltip-border-radii;
