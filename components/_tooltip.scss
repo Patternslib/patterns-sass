@@ -22,6 +22,7 @@ $menu-list-line-height: 22px !default;
   overflow: visible;
   font-size: 1rem;
   padding: 0;
+  user-select: none;
 
   @media print {
     display: none !important;
@@ -135,6 +136,8 @@ $menu-list-line-height: 22px !default;
   }
 
   &.rich {
+    user-select: auto;
+    
     .tippy-content {
       @include pat-rich();
       p,h1,h2,h3,ul,ol,table {

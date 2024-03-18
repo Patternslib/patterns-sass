@@ -62,6 +62,7 @@ $pat-toolbar-z-index: 2 !default;
 	padding: var(--pat-toolbar-padding);
 	border-radius: $border-radii;
 	font-size: 0; // Removes spaces between buttons.
+	user-select: none;
 
 	.toolbar-title {
 		font-size: calc(0.6 * var(--pat-toolbar-button-height));
