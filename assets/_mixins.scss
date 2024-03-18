@@ -86,6 +86,16 @@ $pat-table-sorting-icon-position: right !default;
         justify-self: center !important; // Overrules justify-self: start inherited from pat-checklist;
         display: block;
         margin-right: 0; // Compensate for 'Iconified';
+        line-height: inherit;
+        
+      }
+
+      &:has(input[type="checkbox"]) {
+        line-height: var(--pat-checklist-checkbox-size); // To align the checkbox symbol within the box.÷
+      }
+
+      &:has(input[type="file"]) {
+        position: relative; // To allow the file input to be positioned over the label.
       }
 
       &:hover {
