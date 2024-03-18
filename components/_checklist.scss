@@ -24,6 +24,7 @@ $pat-checklist-padding-end: 0 !default;
 	grid-template-areas: "icon label";
 	align-items: start;
 	padding-right: var(--pat-checklist-label-padding-end);
+	-webkit-user-select: none;
 	user-select: none;
 
 	body[dir=rtl] & { 
