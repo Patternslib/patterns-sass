@@ -9,13 +9,21 @@ $pat-checklist-padding-end: 0 !default;
 	--pat-checklist-label-padding-start: #{$pat-checklist-padding-start};
 	--pat-checklist-label-padding-end: #{$pat-checklist-padding-end};
 	--pat-checklist-item-separation: ${$pat-checklist-item-separation};
+	--pat-checklist-checkbox-size: 18px;
+	--pat-checklist-checkbox-background-colour: var(--colour-link); 
+	--pat-checklist-checkbox-box-shadow: none;
+	--pat-checklist-checkbox-box-shadow-checked: none;
+	--pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px #{$colour-link}, inset 0 0 0 5px white;
+	--pat-checklist-checkbox-background-colour-checked: #{$colour-link};
 }
 
 @mixin checkbox() {
 	display: grid;
 	grid-template-columns: var(--pat-checklist-label-padding-start) auto;
 	grid-template-areas: "icon label";
+	align-items: start;
 	padding-right: var(--pat-checklist-label-padding-end);
+	user-select: none;
 
 	body[dir=rtl] & { 
 		padding-left: var(--pat-checklist-label-padding-end);
@@ -27,23 +35,40 @@ $pat-checklist-padding-end: 0 !default;
 	
 	&.checked:before,
 	&.unchecked:before {
-		font-family: fontello;
-		content: '#{$glyph-checkbox}';
+		box-shadow: var(--pat-checklist-checkbox-box-shadow);
+		content: '';
 		font-weight: normal;
-		background-color: white;
-		height: 0.75em;
-		width: 0.75em;
-		line-height: 0.75em;
+		background-color: var(--pat-checklist-checkbox-background-colour);
+		font-size: 0.7em;
+		text-align: center;
+		height: var(--pat-checklist-checkbox-size);
+		width: var(--pat-checklist-checkbox-size);
+		line-height: var(--pat-checklist-checkbox-size);
 		border-radius: 7%;
-		justify-self: center;
-		align-self: start;
-	    margin-top: 0.22lh;
+		justify-self: start;
 		grid-area: icon;
+		position: relative;
+		top: 50%;
+		transform: translateY(calc(-0.55 * var(--pat-checklist-checkbox-size)));
 	}
 
-	&.disabled,
-	&.disabled .label-fragment-description {
-		color: rgba(0,0,0,0.3);
+	&.checked:before {
+		background-color: var(--pat-checklist-checkbox-background-colour-checked);
+		box-shadow: var(--pat-checklist-checkbox-box-shadow-checked);
+		color: white;
+		font-family: fontello;
+		content: '\e90e';
+	}
+
+	&:has([disabled]),
+	&:has([disabled]) .label-fragment-description {
+		// color: rgba(0,0,0,0.3);
+
+		&.checked:before,
+		&.unchecked:before {
+			background-color: rgba(0,0,0,0.2);
+			color: rgba(0,0,0,0.3);
+		}
 	}
 
 	.label-fragment-title {
@@ -61,12 +86,9 @@ $pat-checklist-padding-end: 0 !default;
 		}
 	}
 
-	&.checked:before {
-		content: '#{$glyph-checkbox-active}'
-	}
-
 	input[type="checkbox"],
 	input[type="radio"] {
+		// Hide but keep accessible for screen readers.
 		opacity: 0;
 		position: absolute;
 		left: 0;
@@ -152,14 +174,13 @@ label.pat-checklist {
 	&.radio-bars label {
 
 		&.unchecked:before {
-			content: '#{$glyph-radio-button}';
+			content: '';
 			border-radius: 50%;
-			font-size: 1em;
 		}
 		&.checked:before {
-			content: '#{$glyph-radio-button-active}';
+			content: '';
 			border-radius: 50%;
-			font-size: 1em;
+			box-shadow: var(--pat-checklist-checkbox-box-shadow-radio-checked);
 		}
 	}
 

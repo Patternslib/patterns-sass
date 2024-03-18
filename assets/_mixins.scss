@@ -83,7 +83,7 @@ $pat-table-sorting-icon-position: right !default;
 
       &:before {
         align-self: start;
-        justify-self: center;
+        justify-self: center !important; // Overrules justify-self: start inherited from pat-checklist;
         line-height: inherit;
         display: block;
         margin-right: 0; // Compensate for 'Iconified';
