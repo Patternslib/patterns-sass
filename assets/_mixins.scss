@@ -79,6 +79,7 @@ $pat-table-sorting-icon-position: right !default;
       display: grid;
       grid-template-columns: var(--pat-menu-list-item-padding-start) auto;
       border-radius: var(--border-radii);
+      user-select: none;
 
       &:before {
         align-self: start;
