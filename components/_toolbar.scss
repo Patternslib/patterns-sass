@@ -56,7 +56,7 @@ $pat-toolbar-z-index: 2 !default;
 	}
 
 	@include clear-fix();
-	color: rgba(0,0,0,0.6);
+	// color: rgba(0,0,0,0.6);
 	position: relative;
 	z-index: #{$pat-toolbar-z-index};
 	padding: var(--pat-toolbar-padding);
