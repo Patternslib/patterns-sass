@@ -435,7 +435,8 @@ $pat-toolbar-z-index: 2 !default;
 			> .icon,
 			> .pat-subform .icon,
 			> .pat-button,
-			> .context-menu > .pat-button {
+			> .context-menu > .pat-button,
+			> .pat-context-menu > .pat-button {
 				margin-left: var(--pat-toolbar-element-separation);
 				margin-right: 0;
 				position: relative; // Raise above the :before element of bumpy toolbars.
@@ -493,6 +494,14 @@ $pat-toolbar-z-index: 2 !default;
 		
 		.context-menu-label {
 			height: var(--pat-toolbar-button-height);
+		}
+
+		&.open {
+			.label {
+				&.default {
+					color: white;
+				}
+			}
 		}
 
 		&.no-label { 

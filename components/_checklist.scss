@@ -57,7 +57,7 @@ $pat-checklist-padding-end: 0 !default;
 		box-shadow: var(--pat-checklist-checkbox-box-shadow-checked);
 		color: white;
 		font-family: fontello;
-		content: '\e90e';
+		content: '#{$glyph-ok}';
 	}
 
 	&:has([disabled]),
