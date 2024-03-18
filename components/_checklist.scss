@@ -41,7 +41,7 @@ $pat-checklist-padding-end: 0 !default;
 		content: '';
 		font-weight: normal;
 		background-color: var(--pat-checklist-checkbox-background-colour);
-		font-size: 0.7em;
+		font-size: calc(0.7 * var(--pat-checklist-checkbox-size));
 		text-align: center;
 		height: var(--pat-checklist-checkbox-size);
 		width: var(--pat-checklist-checkbox-size);
