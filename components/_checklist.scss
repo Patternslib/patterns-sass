@@ -23,6 +23,7 @@ $pat-checklist-padding-end: 0 !default;
 	grid-template-areas: "icon label";
 	align-items: start;
 	padding-right: var(--pat-checklist-label-padding-end);
+	-webkit-user-select: none;
 	user-select: none;
 
 	body[dir=rtl] & { 
@@ -50,6 +51,7 @@ $pat-checklist-padding-end: 0 !default;
 		position: relative;
 		top: 50%;
 		transform: translateY(calc(-0.55 * var(--pat-checklist-checkbox-size)));
+		transition: all 0.2s ease-out;
 	}
 
 	&.checked:before {
