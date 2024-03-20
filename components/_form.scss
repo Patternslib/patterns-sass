@@ -46,6 +46,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   --pat-form-horizontal-extra-width: 26px;
   --pat-form-horizontal-column-gap: 25px;
 
+  --pat-form-form-fields-background-colour: #{$colour-form-fields-background};
+
   @include screen-size(small) {
     --pat-form-pane-padding: #{$pat-form-panel-padding-small};
   }
@@ -221,7 +223,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     font-size: 100%;
     border-radius: 0;
     max-width: 100%;
-    background-color: $colour-form-fields-background;
+    background-color: var(--colour-form-fields-background);
     border-radius: $form-fields-border-radius;
     line-height: $form-input-field-line-height;
     

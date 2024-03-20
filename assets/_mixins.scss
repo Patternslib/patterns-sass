@@ -826,6 +826,8 @@ $pat-table-sorting-icon-position: right !default;
     background-color: $colour-form-panel;
     margin-bottom: $default-tail-white;
 
+    --pat-toolbar-margin-bottom: 15px;
+
     .well-title-group {
       @include panel-title-group;
     }
@@ -1243,13 +1245,15 @@ $pat-table-sorting-icon-position: right !default;
   &.no-label {
     padding-left: 0;
     padding-right: 0;
-    width: 1.7em;
+    aspect-ratio: 1 / 1;
     text-overflow: clip;
+    height: $button-height;
 
     &:before {
       width: 100%;
       text-align: center;
       margin: 0 1em 0 0;
+      line-height: $button-height;
     }
   }
 }

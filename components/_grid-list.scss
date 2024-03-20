@@ -17,13 +17,13 @@
   @include screen-size(medium-large) {
     display: grid;
     grid-column-gap: 0;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
   }
 
   @media print {
     display: grid;
     grid-column-gap: 0;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
   }
 
   dt {
@@ -61,11 +61,26 @@
     padding-bottom: 0.5em;
     margin-left: 0;
 
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "value icons";
+    gap: 15px;
+
     @media print {
       display: block;
       border: none;
       clear: both;
       width: 100%;
+    }
+
+    > * {
+      grid-area: value;
+    }
+
+    > .icon {
+      grid-area: icons;
+      align-self: start;
+      justify-self: end;
     }
 
     > *:last-child {

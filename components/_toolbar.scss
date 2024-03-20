@@ -29,6 +29,7 @@ $pat-toolbar-z-index: 2 !default;
 	--pat-toolbar-bump-distance: #{$pat-toolbar-bump-distance};
 	--pat-toolbar-bump-distance-scroll-down: #{$pat-toolbar-bump-distance-scroll-down};
 	--pat-toolbar-padding: 10px;
+	--pat-toolbar-margin-bottom: 40px;
 
 	@include screen-size(small) {
 		--pat-toolbar-auto-hide-offset: -15px;
@@ -52,7 +53,7 @@ $pat-toolbar-z-index: 2 !default;
 		margin: 
 			0 
 			calc(-1 *  var(--pat-toolbar-padding)) 
-			40px;
+			var(--pat-toolbar-margin-bottom);
 	}
 
 	@include clear-fix();
@@ -75,7 +76,7 @@ $pat-toolbar-z-index: 2 !default;
 	    text-overflow: ellipsis;
 	    text-decoration: none;
 	    display: inline-block;
-	    padding: 0 10px;
+	    padding: 0;
 	    color: black;
 
 	    &.auto-hide {
