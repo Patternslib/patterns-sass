@@ -92,7 +92,7 @@ $pat-table-sorting-icon-position: right !default;
         
       }
 
-      &:has(input[type="checkbox"]) {
+      &:has(input[type="checkbox"]):before {
         line-height: var(--pat-checklist-checkbox-size); // To align the checkbox symbol within the box.÷
       }
 
