@@ -63,7 +63,7 @@
 
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-areas: "value icons";
+    grid-template-areas: "value functions";
     gap: 15px;
 
     @media print {
@@ -77,10 +77,13 @@
       grid-area: value;
     }
 
-    > .icon {
-      grid-area: icons;
+    > .functions {
+      grid-area: functions;
       align-self: start;
       justify-self: end;
+
+      // display: inline-flex;
+      // gap: 10px;
     }
 
     > *:last-child {
