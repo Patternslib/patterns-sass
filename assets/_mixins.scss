@@ -1127,7 +1127,7 @@ $pat-table-sorting-icon-position: right !default;
 
 @mixin pat-button() {
   font-family: $body-font-family;
-  margin: 0 0.5em 0 0;
+  margin: 0;
   border: $button-border;
   cursor: default;
   border-radius: $button-border-radius;
@@ -1248,6 +1248,7 @@ $pat-table-sorting-icon-position: right !default;
     aspect-ratio: 1 / 1;
     text-overflow: clip;
     height: $button-height;
+    min-width: $button-height;
 
     &:before {
       width: 100%;

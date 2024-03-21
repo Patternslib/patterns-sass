@@ -81,9 +81,9 @@
       grid-area: functions;
       align-self: start;
       justify-self: end;
-
-      // display: inline-flex;
-      // gap: 10px;
+      gap: 10px;
+      display: flex;
+      flex-wrap: nowrap;
     }
 
     > *:last-child {
