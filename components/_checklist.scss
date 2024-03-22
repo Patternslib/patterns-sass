@@ -13,8 +13,8 @@ $pat-checklist-padding-end: 0 !default;
     --pat-checklist-checkbox-background-colour: white;
     --pat-checklist-checkbox-box-shadow: inset 0 0 0 2px black;
     --pat-checklist-checkbox-box-shadow-checked: none;
-    --pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px var(--colour-link), inset 0 0 0 5px white;
-    --pat-checklist-checkbox-background-colour-checked: var(--colour-link);
+    --pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px var(--colour-accent), inset 0 0 0 5px white;
+    --pat-checklist-checkbox-background-colour-checked: var(--colour-accent);
 	--pat-checklist-checkbox-border-radius: calc(0.25 * var(--pat-checklist-checkbox-size));
 }
 
@@ -174,9 +174,8 @@ label.pat-checklist {
 		}
 	}
 
-	&.radio label,
+	&:has(input[type="radio"]) label,
 	&.radio-bars label {
-
 		&.unchecked:before {
 			content: '';
 			border-radius: 50%;
