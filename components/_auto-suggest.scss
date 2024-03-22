@@ -9,12 +9,18 @@ $glyph-remove-tag: $glyph-remove;
 $colour-auto-suggest-pills: $colour-accent !default;
 $colour-input-field-text: inherit !default;
 $colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
-$form-input-field-padding-top-bottom: 0.2em !default;
+$form-input-field-padding-top-bottom: 0.2rem !default;
 $form-input-field-padding-left-right: 0.5em !default;
 $form-input-field-outline-offset: 0 !default;
 $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 $colour-input-field-text: inherit !default;
 $colour-placeholder: rgba(0,0,0,0.35) !default;
+
+:root {
+  --pat-auto-suggest-pill-height: 1.6rem;
+  --pat-auto-suggest-padding-top-bottom: 0.2rem;
+  --pat-auto-suggest-padding-start-end: 10px;
+}
 
 .select2-hidden-accessible {
   opacity: 0;
@@ -35,7 +41,7 @@ $colour-placeholder: rgba(0,0,0,0.35) !default;
   vertical-align: middle;
   width: 100%;
   font-weight: normal;
-  padding: 0 0 8px 0;
+  padding: 0;
 }
 
 .lt-ie10 .select2-container {
@@ -474,6 +480,7 @@ disabled look for disabled choices in the results dropdown
   cursor: text;
   overflow: hidden;
   width: 100%;
+  min-height: calc( var(--pat-auto-suggest-pill-height) + ( 2 * var(--pat-auto-suggest-padding-top-bottom) ) );
 }
 
 .select2-locked {
@@ -482,7 +489,11 @@ disabled look for disabled choices in the results dropdown
 
 .select2-container-multi {
   .select2-choices {
-    /*min-height: 26px;*/
+    padding: 
+      var(--pat-auto-suggest-padding-top-bottom) 
+      var(--pat-auto-suggest-padding-start-end) 
+      0 
+      var(--pat-auto-suggest-padding-top-bottom);
   }
 
   &.select2-container-disabled {
@@ -546,10 +557,10 @@ disabled look for disabled choices in the results dropdown
 .select2-container-multi .select2-choices {
   .select2-search-choice {
     padding: 0 0.6em 0 1.5em;
-    margin: 0.1em 0.5em 0.1em 0;
+    margin: 0 0.5em var(--pat-auto-suggest-padding-top-bottom) 0;
     position: relative;
-    line-height: 1.7em;
-    height: 1.6em;
+    line-height: var(pat-auto-suggest-pill-height);
+    height: var(pat-auto-suggest-pill-height);
     color: white;
     cursor: default;
     border-radius: $border-radii;

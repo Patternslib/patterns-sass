@@ -1,17 +1,7 @@
-@charset "UTF-8";
-
 .file-upload-button, {
   @include pat-button;
-  font-weight: $button-font-weight !important;
   position: relative;
   overflow: hidden;
-  width: auto;
-  display: inline-block;
-
-  form fieldset.vertical .group & {
-    width: auto;
-    display: inline-block;
-  }
 
   input {
     position: absolute;

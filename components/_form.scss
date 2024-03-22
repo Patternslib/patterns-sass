@@ -7,8 +7,8 @@ $form-proportion-name: 30% !default;
 $form-proportion-value: 100% !default;
 $form-proportion-gutter: 15px !default;
 $form-input-field-line-height: inherit !default;
-$form-input-field-padding-top-bottom: 0.2em !default;
-$form-input-field-padding-left-right: 0.5em !default;
+$form-input-field-padding-top-bottom: 4px !default;
+$form-input-field-padding-left-right: 10px !default;
 $form-input-field-padding-top-bottom-disabled: 0 !default;
 $form-input-field-padding-left-right-disabled: 0 !default;
 $form-field-tail-white: 1em !default;
@@ -45,8 +45,17 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   --pat-form-horizontal-label-width: 27%;
   --pat-form-horizontal-extra-width: 26px;
   --pat-form-horizontal-column-gap: 25px;
+  --pat-form-input-field-line-height: #{$form-input-field-line-height};
+  --pat-form-fields-background-colour: #{$colour-form-fields-background};
+  --pat-form-field-padding-top-bottom: #{$form-input-field-padding-top-bottom};
+  --pat-form-field-padding-start-end: #{$form-input-field-padding-left-right};
 
-  --pat-form-form-fields-background-colour: #{$colour-form-fields-background};
+  --pat-select-box-height: #{$form-input-field-line-height};
+
+  --pat-button-height: #{$form-input-field-line-height};
+
+  --pat-auto-suggest-pill-height: 28px;
+  --pat-auto-suggest-padding-top-bottom: #{$form-input-field-padding-top-bottom};
 
   @include screen-size(small) {
     --pat-form-pane-padding: #{$pat-form-panel-padding-small};
@@ -223,7 +232,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     font-size: 100%;
     border-radius: 0;
     max-width: 100%;
-    background-color: var(--pat-form-form-fields-background-colour);
+    background-color: var(--pat-form-fields-background-colour);
     border-radius: $form-fields-border-radius;
     line-height: $form-input-field-line-height;
     
@@ -346,17 +355,37 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     }
   }
 
-  input[type=time] {
-    padding-top: 0;
-    padding-bottom: 0;
+  .date-time-extended {
+    legend,
+    .legend {
+      padding-bottom: 5px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .row {
+      margin-bottom: 5px !important;
+    }
+
+    .pat-checklist {
+      padding-left: 0;
+      line-height: var(--pat-form-input-field-line-height); // Align with the select next to it.
+    }
   }
 
-  ::-webkit-datetime-edit {
-    padding-top: $form-input-field-padding-top-bottom;
-    padding-bottom: $form-input-field-padding-top-bottom;
-    margin-bottom: -1.5 * $form-input-field-padding-top-bottom;
-    line-height: $form-input-field-line-height;
+  input[type=time] {
+    height: calc( var(--pat-form-input-field-line-height) + ( 2 * var(--pat-form-field-padding-top-bottom) ) ); // Forces Safari to display the field with the right height.
+  }
+
+  ::-webkit-datetime-edit,
+  ::datetime-edit,
+  ::-internal-datetime-container,
+  ::-webkit-datetime-edit-fields {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: inherit;
     font-size: inherit;
+    display: inline;
 
     > * {
       padding-top: 0;
@@ -371,6 +400,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
+    display: inline;
   }
 
   ::-webkit-input-placeholder {
@@ -424,9 +454,15 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
   .file-upload-button,
   fieldset.horizontal fieldset.group .file-upload-button{
-    margin: -1 * $form-input-field-padding-top-bottom 0 0;
+    font-weight: $button-font-weight !important;
     display: inline-block !important; // Temporary !important till rewrite of form.scss.
     justify-self: start;
+    margin-top: calc(-1 * #{$form-input-field-padding-top-bottom});
+    margin-bottom: calc(-1 * #{$form-input-field-padding-top-bottom});
+    padding-top: #{$form-input-field-padding-top-bottom};
+    padding-bottom: #{$form-input-field-padding-top-bottom};
+    line-height: var(--pat-form-input-field-line-height);
+    height: var(--pat-form-input-field-line-height);
   }
 
   .attachment-list + .file-upload-button {
@@ -462,13 +498,17 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   }
 
   .select2-container {
-    margin: -0.5 * $form-input-field-padding-top-bottom 0;
+    // margin: -0.5 * $form-input-field-padding-top-bottom 0;
 
     .select2-choice,
     .select2-choices {
-      padding-top: $form-input-field-padding-top-bottom;
-      padding-bottom: $form-input-field-padding-top-bottom;
-      margin: 0 0 -8px 0;
+      // padding-top: $form-input-field-padding-top-bottom;
+      // padding-bottom: $form-input-field-padding-top-bottom;
+      // margin: 0 0 -8px 0;
+    }
+
+    .select2-choices {
+      padding-bottom: 0;
     }
   }
 
@@ -495,15 +535,9 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
     &::file-selector-button {
       @include pat-button();
-      font-size: 16px;
-      padding: $button-small-paddings;
-      height: 22px;
-      line-height: 21px;
-      box-shadow: $button-small-shadow;
-      font-weight: 600;
-      vertical-align: middle;
-      margin: 3px 0 2px 0;
-      display: inline-block;
+      line-height: var(--pat-form-input-field-line-height);
+      margin-right: 10px;
+      float: left;
     }
   }
 
@@ -596,19 +630,32 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       background: #ccc;
   }
 
+  .pat-button {
+    display: inline-block;
+    text-align: center;
+    margin-right: 0;
+    box-sizing: border-box;
+    line-height: var(--pat-form-input-field-line-height);
+    margin-top: calc(-1 * var(--pat-form-field-padding-top-bottom) );
+    margin-bottom: calc(-1 * var(--pat-form-field-padding-top-bottom) );
+    padding-top: var(--pat-form-field-padding-top-bottom);
+    padding-bottom: var(--pat-form-field-padding-top-bottom);
+    float: left; // Kill whitespaces.
+
+    &#portal-header-colour-chooser-trigger {
+      background-color: #{$colour-chooser-default};
+    }
+  }
+
   .colour-chooser-launcher {
     margin: 0;
 
     .pat-button {
-      display: inline-block;
       text-align: center;
-      margin-right: 0;
-      // font-size: 18px;
       color: white !important;
-      margin-top: -5px;
 
       &#portal-header-colour-chooser-trigger {
-        background-color: $colour-chooser-default;
+        background-color: #{$colour-chooser-default};
       }
     }
   }
@@ -801,7 +848,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     
     // border-right: 0.35em solid rgba(0, 0, 0, 0);
     padding-right: $pat-select-arrow-space;
-
+    line-height: var(--pat-select-box-height);
+    height: auto !important;
     background-repeat: no-repeat;
     background-position: calc(100% - #{$pat-select-arrow-edge-distance}) center;
     background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
@@ -887,7 +935,6 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
         > label {
           position: relative;
-          display: block;
           display: grid;
           grid-template-columns: var(--pat-form-horizontal-label-width) auto 0 var(--pat-form-horizontal-extra-width);
           grid-template-areas: 
@@ -898,7 +945,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
           column-gap: var(--pat-form-horizontal-column-gap);
           clear: left;
           border-style: none;
-          margin: 0 0 $form-field-tail-white 0;
+          margin: 0 0 #{$form-field-tail-white} 0;
+          line-height: #{$form-input-field-line-height};
 
           > {
             * {
@@ -970,9 +1018,9 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
           &.video-upload {
             justify-items: start;
 
-            .pat-button {
-                margin: 0 0 -9px 0;
-            }
+            // .pat-button {
+            //     margin: 0 0 -9px 0;
+            // }
 
             input,
             .pat-screenshot,

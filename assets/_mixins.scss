@@ -10,8 +10,9 @@ $default-tail-white: 25px !default;
 $collapsible-button-height: 31px !default;
 $colour-select-box-arrow: black !default;
 $form-input-field-box-shadow: none !default;
+$form-input-field-line-height: inherit !default;
 $select-box-box-shadow: $form-input-field-box-shadow !default;
-$form-input-field-padding-top-bottom: 0.2em !default;
+$form-input-field-padding-top-bottom: 0.2rem !default;
 $button-small-font-weight: 600 !default;
 $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
@@ -19,6 +20,7 @@ $pat-form-panel-padding-small: 20px !default;
 $pat-message-box-shadow: 0 0 0 2px white !default;
 $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 $pat-table-sorting-icon-position: right !default;
+$button-height: 35px !default;
 
 :root {
   --border-radii: #{$border-radii};
@@ -32,12 +34,15 @@ $pat-table-sorting-icon-position: right !default;
   --pat-select-box-arrow-text-colour: inherit;
   --pat-select-box-font-size: #{$base-font-size};
   --pat-select-box-arrow-size: 18px;
+  --pat-select-box-height: #{$form-input-field-line-height};
 
   --pat-checklist-label-padding-start: 1.5em;
   --pat-checklist-label-padding-end: 0;
   --pat-checklist-item-separation: 0.2em;
 
   --pat-menu-list-item-padding-start: 34px;
+
+  --pat-button-height: #{$button-height};
 }
 
 @mixin floating-ui-element-background {
