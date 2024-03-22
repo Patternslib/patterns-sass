@@ -35,8 +35,8 @@ $pat-checklist-padding-end: 0 !default;
 		grid-area: label;
 	}
 	
-	&.checked:before,
-	&.unchecked:before {
+	&:has(input[type="checkbox"]):before,
+	&:has(input[type="radio"]):before {
 		box-shadow: var(--pat-checklist-checkbox-box-shadow);
 		content: '';
 		font-weight: normal;
@@ -55,7 +55,11 @@ $pat-checklist-padding-end: 0 !default;
 		transition: all 0.2s ease-out;
 	}
 
-	&.checked:before {
+	&:has(input[type="radio"]):before {
+		border-radius: 50%;
+	}
+
+	&:has(input:checked):before {
 		background-color: var(--pat-checklist-checkbox-background-colour-checked);
 		box-shadow: var(--pat-checklist-checkbox-box-shadow-checked);
 		color: white;
@@ -68,8 +72,8 @@ $pat-checklist-padding-end: 0 !default;
 	&:has([disabled]) .label-fragment-description {
 		// color: rgba(0,0,0,0.3);
 
-		&.checked:before,
-		&.unchecked:before {
+		&:has(input[type="checkbox"]):before,
+		&:has(input[type="radio"]):before {
 			background-color: rgba(0,0,0,0.2);
 			color: rgba(0,0,0,0.3);
 		}
@@ -106,8 +110,8 @@ label.pat-checklist {
 	padding-left: 1.1em;
 	padding-right: 0.5em;
 
-	&.checked:before,
-	&.unchecked:before {
+	&:has(input[type="checkbox"]):before,
+	&:has(input[type="radio"]):before {
 		top: 50%;
 		transform: translateY(-50%);
 	}
@@ -176,13 +180,8 @@ label.pat-checklist {
 
 	&:has(input[type="radio"]) label,
 	&.radio-bars label {
-		&.unchecked:before {
+		&:has(input:checked):before {
 			content: '';
-			border-radius: 50%;
-		}
-		&.checked:before {
-			content: '';
-			border-radius: 50%;
 			box-shadow: var(--pat-checklist-checkbox-box-shadow-radio-checked);
 		}
 	}
@@ -209,7 +208,7 @@ label.pat-checklist {
 				background: rgba(0,0,0,0.05);
 	    	}
 
-			&.checked {
+			&:has(input:checked):before {
 				background: $colour-accent;
 				color: white;
 
