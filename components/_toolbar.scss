@@ -458,6 +458,7 @@ $pat-toolbar-z-index: 2 !default;
 
 		&.navigation {
 			grid-area: middle;
+			justify-content: center;
 
 			@include screen-size(small) {
 				.pat-tabs {
