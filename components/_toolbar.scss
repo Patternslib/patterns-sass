@@ -281,6 +281,17 @@ $pat-toolbar-z-index: 2 !default;
 	.toolbar-section {
 		vertical-align: top;
 		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		gap: var(--pat-toolbar-element-separation);
+
+		&:first-child {
+			justify-content: flex-start;
+		}
+
+		&:last-child {
+			justify-content: flex-end;
+		}
 
 		> * {
 			font-size: var(--pat-toolbar-font-size);	
@@ -418,11 +429,11 @@ $pat-toolbar-z-index: 2 !default;
 			// overflow: hidden; // Required for truncation of .pat-select.bare
 			min-width: 0; // Required for truncation of .pat-select.bare
 
-			.pat-button-cluster,
-			.pat-buttton,
-			> .icon {
-				margin-right: var(--pat-toolbar-element-separation);
-			}
+			// .pat-button-cluster,
+			// .pat-buttton,
+			// > .icon {
+			// 	margin-right: var(--pat-toolbar-element-separation);
+			// }
 
 			@include screen-size(small) {
 				float: left;
@@ -432,7 +443,7 @@ $pat-toolbar-z-index: 2 !default;
 		}
 
 		&.quick-functions {
-			text-align: right;
+			// text-align: right;
 			grid-area: right;
 
 			> .icon,
@@ -440,8 +451,7 @@ $pat-toolbar-z-index: 2 !default;
 			> .pat-button,
 			> .context-menu > .pat-button,
 			> .pat-context-menu > .pat-button {
-				margin-left: var(--pat-toolbar-element-separation);
-				margin-right: 0;
+				margin: 0;
 				position: relative; // Raise above the :before element of bumpy toolbars.
 			}
 		}
@@ -449,16 +459,15 @@ $pat-toolbar-z-index: 2 !default;
 		&.navigation {
 			grid-area: middle;
 
-
 			@include screen-size(small) {
 				.pat-tabs {
 					z-index: 2;
 				}
 			}
 
-			@include screen-size(medium-large) {
-				text-align: center;
-			}
+			// @include screen-size(medium-large) {
+			// 	text-align: center;
+			// }
 
 			.pat-select {
 				margin: 0;
@@ -587,7 +596,7 @@ $pat-toolbar-z-index: 2 !default;
 		}
 
 		@include screen-size(small) {
-			margin: 0 var(--pat-toolbar-element-separation) 0 0;
+			margin: 0;
 		}
 
 		&:active {
@@ -637,17 +646,17 @@ $pat-toolbar-z-index: 2 !default;
 		}
 	}
 
-	>,
-	.toolbar-section >,
-	.pat-toolbar-section > {
-		.pat-button,
-		.pat-icon,
-		.pat-back-button,
-		.pat-select,
-		.pat-context-menu {
-			margin-right: var(--pat-toolbar-element-separation);
-		}
-	}
+	// >,
+	// .toolbar-section >,
+	// .pat-toolbar-section > {
+	// 	.pat-button,
+	// 	.pat-icon,
+	// 	.pat-back-button,
+	// 	.pat-select,
+	// 	.pat-context-menu {
+	// 		margin-right: var(--pat-toolbar-element-separation);
+	// 	}
+	// }
 
 	.pat-progress-bar {
 		margin-top: 9px;
@@ -888,7 +897,7 @@ $pat-toolbar-z-index: 2 !default;
 
 	.pat-toolbar-local-search-box {
 		width: var(--pat-toolbar-button-height);
-		margin-right: var(--pat-toolbar-element-separation);
+		margin: 0;
 		display: inline-block;
 		padding: 0;
 
