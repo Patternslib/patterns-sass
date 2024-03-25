@@ -220,7 +220,7 @@
   width: 18px;
   height: 100%;
   position: absolute;
-  right: $pat-auto-suggest-cancel-button-edge-distance;
+  right: var(--pat-pat-auto-suggest-cancel-button-edge-distance);
   top: 0;
   background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
   background-size: auto 10px;

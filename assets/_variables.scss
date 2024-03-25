@@ -15,23 +15,20 @@
     --pat-form-horizontal-extra-width: 26px;
     --pat-form-horizontal-column-gap: 25px;
 
-
     --pat-form-proportion-gutter: 15px;
-    --pat-form-input-field-line-height: inherit;
-    --pat-form-input-field-padding-top-bottom: 4px;
-    --pat-form-input-field-padding-left-right: 10px;
+    --pat-form-input-field-line-height: 28px;
     --pat-form-input-field-padding-top-bottom-disabled: 0;
     --pat-form-input-field-padding-left-right-disabled: 0;
     --pat-form-input-field-font-size: 1em;
     --pat-form-input-field-tail-white: 1.2rem;
-    --pat-form-fields-background-colour: #efefef;
-    --pat-form-fields-background-colour-disabled: transparent;
+    --pat-form-input-field-background-colour: #{$colour-form-fields-background};
+    --pat-form-input-field-background-colour-disabled: transparent;
     --pat-form-input-field-text-colour: black;
     --pat-form-fields-border-radius: $border-radii;
     --pat-form-placeholder-colour: rgba(0, 0, 0, 0.35);
     --pat-form-input-field-text: inherit;
     --pat-form-input-field-text-disabled: rgba(0, 0, 0, 0.5);
-    --pat-form-panel: var(--pat-portlet-background-colour);
+    --pat-form-panel-colour: #{$colour-portlet-background};
     --pat-form-panel-collapsible-button-height: $collapsible-button-height;
     --pat-form-input-field-outline: none;
     --pat-form-input-field-outline-offset: 0;
@@ -55,9 +52,10 @@
     --pat-form-panel-padding-small: 20px;
 
     --pat-form-input-field-padding-top-bottom: 4px;
-    --pat-form-input-field-padding-start-end: 8x;
+    --pat-form-input-field-padding-start-end: 10px;
     --pat-form-input-field-border: none;
     --pat-form-input-field-box-shadow: none;
+    --pat-form-input-field-border-radius: #{$border-radii};
 
     --pat-form-proportion-ceiling: 260%;
     --pat-form-proportion-name: 30%;
@@ -67,32 +65,29 @@
     --pat-form-input-field-tail-white: 26px;
 
     // Select 
-
     --pat-select-box-arrow-width: 35px;
     --pat-select-box-arrow-size: 18px;
     --pat-select-arrow-space: 29px;
     --pat-select-box-padding-top-bottom: var(--pat-form-input-field-padding-top-bottom);
     --pat-select-box-padding-start: var(--pat-form-input-field-padding-start-end);
     --pat-select-box-box-shadow: var(--pat-form-input-field-box-shadow);
-    --pat-select-box-background-colour: var(--pat-form-fields-background-colour);
+    --pat-select-box-background-colour: var(--pat-form-input-field-background-colour);
     --pat-select-box-arrow-background-colour: rgba(0, 0, 0, 0.1);
     --pat-select-box-arrow-text-colour: inherit;
     --pat-select-box-font-size: var(--pat-form-input-field-font-size);
     --pat-select-arrow-edge-distance: 10px;
     --pat-select-box-height: var(--pat-form-input-field-line-height);
+    --pat-select-box-font-size: 1rem;
 
     // Checklist
-
     --pat-checklist-label-padding-start: 1.5em;
     --pat-checklist-label-padding-end: 0;
     --pat-checklist-item-separation: 0.2em;
 
     // Menu list
-
     --pat-menu-list-item-padding-start: 34px;
 
     // Buttons
-
     --pat-button-height: 35px;
     --pat-button-line-height: 35px;
     --pat-button-font-size: 1em;

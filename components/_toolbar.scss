@@ -56,6 +56,8 @@ $pat-toolbar-z-index: 2 !default;
 			var(--pat-toolbar-margin-bottom);
 	}
 
+	--pat-select-box-font-size: var(--pat-toolbar-font-size);
+
 	@include clear-fix();
 	// color: rgba(0,0,0,0.6);
 	position: relative;

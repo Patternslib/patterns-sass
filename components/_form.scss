@@ -281,23 +281,25 @@
 
   input[type=time] {
     height: calc( var(--pat-form-input-field-line-height) + ( 2 * var(--pat-form-input-field-padding-top-bottom) ) ); // Forces Safari to display the field with the right height.
-  }
-
-  ::-webkit-datetime-edit,
-  ::datetime-edit,
-  ::-internal-datetime-container,
-  ::-webkit-datetime-edit-fields {
-    padding-top: 0;
-    padding-bottom: 0;
-    line-height: inherit;
-    font-size: inherit;
-    display: inline;
-
-    > * {
-      padding-top: 0;
+  
+    &::-webkit-datetime-edit,
+    &::datetime-edit,
+    &::-internal-datetime-container,
+    &::-webkit-datetime-edit-fields {
+      padding-top: 0 !important;
       padding-bottom: 0;
+      line-height: inherit;
+      font-size: inherit;
+      display: inline;
+  
+      > * {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
   }
+
+
 
   ::-webkit-datetime-edit-minute-field,
   ::-webkit-datetime-edit-hour-field,
@@ -339,7 +341,7 @@
     .select2-search-choice-close {
       position: absolute;
       top: 50%;
-      right: $pat-auto-suggest-cancel-button-edge-distance;
+      right: var(--pat-auto-suggest-cancel-button-edge-distance);
       transform: translateY(-50%);
 
       &:before {
@@ -744,16 +746,16 @@
     text-overflow: '';
     
     // border-right: 0.35em solid rgba(0, 0, 0, 0);
-    padding-right: $pat-select-arrow-space;
+    padding-right: var(--pat-select-arrow-space);
     line-height: var(--pat-select-box-height);
     height: auto !important;
     background-repeat: no-repeat;
-    background-position: calc(100% - #{$pat-select-arrow-edge-distance}) center;
+    background-position: calc(100% - var(--pat-select-arrow-edge-distance)) center;
     background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
     background-size: auto 10px;
 
     body[dir=rtl] & { 
-      background-position: $pat-select-arrow-edge-distance center;
+      background-position: var(--pat-select-arrow-edge-distance) center;
     }
 
     &::-ms-expand{

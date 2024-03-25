@@ -37,8 +37,8 @@ $pat-table-sorting-icon-position: right !default;
   color: var(--pat-form-input-field-text-colour);
   font-size: var(--pat-form-input-field-font-size);
   max-width: 100%;
-  background-color: var(--pat-form-fields-background-colour);
-  border-radius: var(--pat-form-fields-border-radius);
+  background-color: var(--pat-form-input-field-background-colour);
+  border-radius: var(--pat-form-input-field-border-radius);
   line-height: var(--pat-form-input-field-line-height);
 
   &:focus {
@@ -56,7 +56,7 @@ $pat-table-sorting-icon-position: right !default;
     padding-right: var(--pat-form-input-field-padding-left-right-disabled);
     padding-top: var(--pat-form-input-field-padding-top-bottom-disabled);
     padding-bottom: var(--pat-form-input-field-padding-top-bottom-disabled);
-    background: var(--pat-form-fields-background-colour-disabled);
+    background: var(--pat-form-input-field-background-colour-disabled);
     box-shadow: var(--pat-form-input-field-box-shadow-disabled);
     color: var(--pat-form-input-field-text-colour-disabled);
   }
@@ -209,15 +209,14 @@ $pat-table-sorting-icon-position: right !default;
   position: relative;
   box-sizing: border-box;
   border: var(--pat-form-input-field-border);
+  border-radius: var(--pat-form-input-field-border-radius);
   box-shadow: var(--pat-select-box-box-shadow);
   outline: var(--pat-form-input-field-outline);
   outline-offset: var(--pat-form-input-field-outline-offset);
   color: var(--pat-select-box-arrow-text-colour);
   font-size: var(--pat-select-box-font-size);
-  border-radius: 0;
   max-width: 100%;
   background-color: var(--pat-select-box-background-colour);
-  border-radius: var(--pat-form-fields-border-radius);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
