@@ -36,7 +36,7 @@ div.ProseMirror {
 		left: 0;
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
-		padding: 4px $form-input-field-padding-left-right;
+		padding: 4px var(--pat-form-input-field-padding-start-end);
 		font-size: 18px;
 
 		.canvas-toolbar-section.editor {

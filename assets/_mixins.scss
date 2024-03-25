@@ -12,7 +12,7 @@ $colour-select-box-arrow: black !default;
 $form-input-field-box-shadow: none !default;
 $form-input-field-line-height: inherit !default;
 $select-box-box-shadow: $form-input-field-box-shadow !default;
-$form-input-field-padding-top-bottom: 0.2rem !default;
+
 $button-small-font-weight: 600 !default;
 $pat-form-panel-padding-large: 40px !default;
 $pat-form-panel-padding-medium: 30px !default;
@@ -20,29 +20,53 @@ $pat-form-panel-padding-small: 20px !default;
 $pat-message-box-shadow: 0 0 0 2px white !default;
 $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 $pat-table-sorting-icon-position: right !default;
-$button-height: 35px !default;
 
-:root {
-  --border-radii: #{$border-radii};
+@mixin pat-form-input-field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  display: block;
+  @include box-sizing();
+  padding: var(--pat-form-input-field-padding-top-bottom) var(--pat-form-input-field-padding-start-end);
+  margin: calc(-1 * var(--pat-form-input-field-padding-top-bottom)) 0;
+  border: var(--pat-form-input-field-border);
+  box-shadow: var(--pat-form-input-field-box-shadow);
+  outline: var(--pat-form-input-field-outline);
+  outline-offset: var(--pat-form-input-field-outline-offset);
+  color: var(--pat-form-input-field-text-colour);
+  font-size: var(--pat-form-input-field-font-size);
+  max-width: 100%;
+  background-color: var(--pat-form-fields-background-colour);
+  border-radius: var(--pat-form-fields-border-radius);
+  line-height: var(--pat-form-input-field-line-height);
 
-  --pat-select-box-arrow-width: 35px;
-  --pat-select-box-padding-top-bottom: #{$form-input-field-padding-top-bottom};
-  --pat-select-box-padding-right-left: 0.75em;
-  --pat-select-box-box-shadow: #{$form-input-field-box-shadow};
-  --pat-select-box-background-color: #{$colour-form-fields-background};
-  --pat-select-box-arrow-background-colour: rgba(0,0,0,0.1);
-  --pat-select-box-arrow-text-colour: inherit;
-  --pat-select-box-font-size: #{$base-font-size};
-  --pat-select-box-arrow-size: 18px;
-  --pat-select-box-height: #{$form-input-field-line-height};
+  &:focus {
+    outline: var(--pat-form-input-field-outline-focus);
+    border: var(--pat-form-input-field-border-focus);
+    box-shadow: var(--pat-form-input-field-box-shadow-focus);
+  }
 
-  --pat-checklist-label-padding-start: 1.5em;
-  --pat-checklist-label-padding-end: 0;
-  --pat-checklist-item-separation: 0.2em;
+  &:disabled,
+  &.disabled {
+    border: transparent;
+    outline: none;
+    opacity: 1;
+    padding-left: var(--pat-form-input-field-padding-left-right-disabled);
+    padding-right: var(--pat-form-input-field-padding-left-right-disabled);
+    padding-top: var(--pat-form-input-field-padding-top-bottom-disabled);
+    padding-bottom: var(--pat-form-input-field-padding-top-bottom-disabled);
+    background: var(--pat-form-fields-background-colour-disabled);
+    box-shadow: var(--pat-form-input-field-box-shadow-disabled);
+    color: var(--pat-form-input-field-text-colour-disabled);
+  }
 
-  --pat-menu-list-item-padding-start: 34px;
-
-  --pat-button-height: #{$button-height};
+  @media print {
+    border: transparent;
+    opacity: 1;
+    padding: 0;
+    background-color: transparent;
+  }
 }
 
 @mixin floating-ui-element-background {
@@ -149,8 +173,8 @@ $button-height: 35px !default;
   right: 0;
   bottom: 0;
   font-size: var(--pat-select-box-arrow-size);
-  border-top-right-radius: $form-fields-border-radius;
-  border-bottom-right-radius: $form-fields-border-radius;
+  border-top-right-radius: var(--pat-form-fields-border-radius);
+  border-bottom-right-radius: var(--pat-form-fields-border-radius);
   padding: 0;
   display: flex;
   align-items: center;
@@ -178,22 +202,22 @@ $button-height: 35px !default;
   line-height: var(--pat-select-box-height);  
   padding-top: var(--pat-select-box-padding-top-bottom);
   padding-bottom: var(--pat-select-box-padding-top-bottom);
-  padding-left: var(--pat-select-box-padding-right-left);
-  padding-right: calc((var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-right-left) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
+  padding-left: var(--pat-select-box-padding-start);
+  padding-right: calc((var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-start) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
   position: relative;
   font-weight: normal !important;
   position: relative;
   box-sizing: border-box;
-  border: $form-input-field-border;
+  border: var(--pat-form-input-field-border);
   box-shadow: var(--pat-select-box-box-shadow);
-  outline: $form-input-field-outline;
-  outline-offset: $form-input-field-outline-offset;
+  outline: var(--pat-form-input-field-outline);
+  outline-offset: var(--pat-form-input-field-outline-offset);
   color: var(--pat-select-box-arrow-text-colour);
   font-size: var(--pat-select-box-font-size);
   border-radius: 0;
   max-width: 100%;
-  background-color: var(--pat-select-box-background-color);
-  border-radius: $form-fields-border-radius;
+  background-color: var(--pat-select-box-background-colour);
+  border-radius: var(--pat-form-fields-border-radius);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -308,10 +332,10 @@ $button-height: 35px !default;
     }
   }
 
-  &:hover,
-  &.tooltip-active-click {
-    background-color: $button-background-colour-hover;
-  }
+  // &:hover,
+  // &.tooltip-active-click {
+  //   background-color: $button-background-colour-hover;
+  // }
 
   &:not([class*="icon-"]) {
     &:before {
@@ -391,7 +415,7 @@ $button-height: 35px !default;
     background-color: $button-background-colour;
     color: $button-text-colour;
     position: absolute;
-    right: var(--pat-form-pane-padding);
+    right: var(--pat-form-panel-padding);
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
@@ -752,7 +776,7 @@ $button-height: 35px !default;
 
   .buttons {
     position: absolute;
-    right: calc(var(--pat-form-pane-padding) + #{$collapsible-button-height} + 15px);
+    right: calc(var(--pat-form-panel-padding) + #{$collapsible-button-height} + 15px);
     top: 50%;
     transform: translateY(-50%);
   
@@ -828,7 +852,7 @@ $button-height: 35px !default;
     box-sizing: border-box;
     box-shadow: $default-box-shadow;
     border-radius: $border-radii;
-    background-color: $colour-form-panel;
+    background-color: var(--pat-form-panel-colour);
     margin-bottom: $default-tail-white;
 
     --pat-toolbar-margin-bottom: 15px;
@@ -898,7 +922,7 @@ $button-height: 35px !default;
 
       &.closed {
         &:hover {
-          box-shadow: $form-panels-box-shadow-hover;
+          box-shadow: var(--pat-form-panels-box-shadow-hover);
         }
       }
 
@@ -1138,7 +1162,7 @@ $button-height: 35px !default;
   border-radius: $button-border-radius;
   background-image: $button-background-image;
   text-decoration: none;
-  line-height: $button-height;
+  line-height: var(--pat-button-height);
   white-space: nowrap;
   display: inline-block;
   padding: $button-paddings;
@@ -1251,14 +1275,14 @@ $button-height: 35px !default;
     padding: 0;
     aspect-ratio: 1 / 1;
     text-overflow: clip;
-    height: $button-height;
-    min-width: $button-height;
+    height: var(--pat-button-height);
+    min-width: var(--pat-button-height);
 
     &:before {
       width: 100%;
       text-align: center;
       margin: 0 1em 0 0;
-      line-height: $button-height;
+      line-height: var(--pat-button-height);
     }
   }
 }

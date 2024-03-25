@@ -1,72 +1,24 @@
 @import "../components/checklist";
 @import "../components/file-upload-button";
 
-$colour-portlet-background: rgba(255,255,255,0.5) !default;
-$form-proportion-ceiling: 170% !default;
-$form-proportion-name: 30% !default;
-$form-proportion-value: 100% !default;
-$form-proportion-gutter: 15px !default;
-$form-input-field-line-height: inherit !default;
-$form-input-field-padding-top-bottom: 4px !default;
-$form-input-field-padding-left-right: 10px !default;
-$form-input-field-padding-top-bottom-disabled: 0 !default;
-$form-input-field-padding-left-right-disabled: 0 !default;
-$form-field-tail-white: 1em !default;
-$colour-form-fields-background: #efefef !default;
-$colour-form-fields-background-disabled: transparent !default;
-$form-fields-border-radius: $border-radii !default;
-$colour-placeholder: rgba(0,0,0,0.35) !default;
-$colour-input-field-text: inherit !default;
-$colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
-$colour-form-panel: $colour-portlet-background !default;
-$form-panel-collapsible-button-height: $collapsible-button-height !default;
-$form-input-field-outline: none !default;
-$form-input-field-outline-offset: 0 !default;
-$form-input-field-outline-focus: none !default;
-$form-input-field-border: none !default;
-$form-input-field-border-focus: none !default;
-$form-input-field-box-shadow: none !default;
-$form-input-field-box-shadow-disabled: none !default;
-$form-input-field-box-shadow-focus: none !default;
-$form-help-button-height: 37px !default;
-$form-help-button-width: 26px !default;
-$form-help-button-icon-height: 37px !default;
-$form-help-button-icon-glyph: $glyph-question-mark !default;
-$form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5) !default;
-$pat-form-panel-padding-large: 40px !default;
-$pat-form-panel-padding-medium: 30px !default;
-$pat-form-panel-padding-small: 20px !default;
-$pat-select-arrow-edge-distance: 10px !default;
-$pat-select-arrow-space: 29px !default;
-$pat-auto-suggest-cancel-button-edge-distance: 12px !default;
-
 .pat-form {
+  --pat-select-box-height: var(--pat-form-input-field-line-height);
 
-  --pat-form-horizontal-label-width: 27%;
-  --pat-form-horizontal-extra-width: 26px;
-  --pat-form-horizontal-column-gap: 25px;
-  --pat-form-input-field-line-height: #{$form-input-field-line-height};
-  --pat-form-fields-background-colour: #{$colour-form-fields-background};
-  --pat-form-field-padding-top-bottom: #{$form-input-field-padding-top-bottom};
-  --pat-form-field-padding-start-end: #{$form-input-field-padding-left-right};
-
-  --pat-select-box-height: #{$form-input-field-line-height};
-
-  --pat-button-height: #{$form-input-field-line-height};
+  --pat-button-height: var(--pat-form-input-field-line-height);
 
   --pat-auto-suggest-pill-height: 28px;
-  --pat-auto-suggest-padding-top-bottom: #{$form-input-field-padding-top-bottom};
+  --pat-auto-suggest-padding-top-bottom: var(--pat-form-input-field-padding-top-bottom);
 
   @include screen-size(small) {
-    --pat-form-pane-padding: #{$pat-form-panel-padding-small};
+    --pat-form-panel-padding: var(--pat-form-panel-padding-small);
   }
 
   @include screen-size(medium) {
-    --pat-form-pane-padding: #{$pat-form-panel-padding-medium};
+    --pat-form-panel-padding: var(--pat-form-panel-padding-medium);
   }
 
   @include screen-size(large) {
-    --pat-form-pane-padding: #{$pat-form-panel-padding-large};
+    --pat-form-panel-padding: var(--pat-form-panel-padding-large);
   }
 
   section.help .panel-content {  
@@ -86,11 +38,11 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   }
 
   &.panel-style .form-panel {   
-    padding: var(--pat-form-pane-padding);
+    padding: var(--pat-form-panel-padding);
     box-sizing: border-box;
     box-shadow: $default-box-shadow;
     border-radius: $border-radii;
-    background-color: $colour-form-panel;
+    background-color: var(--pat-form-panel-background-colour);
     margin-bottom: $default-tail-white;
 
     .panel-content > *:last-child {
@@ -118,10 +70,10 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       .form-separation-header,
       .form-panel-title {
         padding-right: 50px;
-        padding-left: var(--pat-form-pane-padding);
+        padding-left: var(--pat-form-panel-padding);
         body[dir=rtl] & { 
             padding-left: 50px;
-            padding-right: var(--pat-form-pane-padding); 
+            padding-right: var(--pat-form-panel-padding); 
         }
         position: relative;
         margin: 0;
@@ -135,14 +87,14 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
         .form-separation-header,
         .form-panel-title {
-          padding-top: var(--pat-form-pane-padding);
-          padding-bottom: var(--pat-form-pane-padding);
+          padding-top: var(--pat-form-panel-padding);
+          padding-bottom: var(--pat-form-panel-padding);
         }
       }
 
       &.closed {
         &:hover {
-          box-shadow: $form-panels-box-shadow-hover;
+          box-shadow: var(--pat-form-panels-box-shadow-hover);
         }
       }
 
@@ -163,7 +115,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       }
 
       .panel-content {
-        padding: 0 var(--pat-form-pane-padding) var(--pat-form-pane-padding);
+        padding: 0 var(--pat-form-panel-padding) var(--pat-form-panel-padding);
         box-sizing: border-box;
       }
     }
@@ -201,7 +153,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
   .field-cluster,
   .field-list {
-    margin: -0.5 * $form-input-field-padding-top-bottom 0;
+    margin: calc(-0.5 * var(--pat-form-input-field-padding-top-bottom)) 0;
     max-width: 100%;
     line-height: $form-input-field-line-height;
   }
@@ -214,62 +166,16 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   .select2-container .select2-choices,
   .md-editor .md-render,
   .pat-rich-editor,
-  .output-field
-    {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-family: $body-font-family;
-    display: block;
-    @include box-sizing();
-    padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
-    margin: -1 * $form-input-field-padding-top-bottom 0;
-    border: $form-input-field-border;
-    box-shadow: $form-input-field-box-shadow;
-    outline: $form-input-field-outline;
-    outline-offset: $form-input-field-outline-offset;
-    color: $colour-input-field-text;
-    font-size: 100%;
-    border-radius: 0;
-    max-width: 100%;
-    background-color: var(--pat-form-fields-background-colour);
-    border-radius: $form-fields-border-radius;
-    line-height: $form-input-field-line-height;
-    
-    &:focus {
-      outline: $form-input-field-outline-focus;
-      border: $form-input-field-border-focus;
-      box-shadow: $form-input-field-box-shadow-focus;
-    }
-
-    &:disabled,
-    &.disabled {
-      border: transparent;
-      outline: none;
-      opacity: 1;
-      padding-left: $form-input-field-padding-left-right-disabled;
-      padding-right: $form-input-field-padding-left-right-disabled;
-      padding-top: $form-input-field-padding-top-bottom-disabled;
-      padding-bottom: $form-input-field-padding-top-bottom-disabled;
-      background: $colour-form-fields-background-disabled;
-      box-shadow: $form-input-field-box-shadow-disabled;
-      color: $colour-input-field-text-disabled;
-    }
-
-    @media print { 
-      border: transparent;
-      opacity: 1;
-      padding: 0;
-      background-color: transparent;
-    }
+  .output-field {
+    @include pat-form-input-field;
   }
 
   .select2-container-active {
     .select2-choice, 
     .select2-choices {
-      outline: $form-input-field-outline-focus;
-      border: $form-input-field-border-focus;
-      box-shadow: $form-input-field-box-shadow-focus;
+      outline: var(--pat-form-input-field-outline-focus);
+      border: var(--pat-form-input-field-border-focus);
+      box-shadow: var(--form-input-field-box-shadow-focus);
     }
   }
 
@@ -374,7 +280,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   }
 
   input[type=time] {
-    height: calc( var(--pat-form-input-field-line-height) + ( 2 * var(--pat-form-field-padding-top-bottom) ) ); // Forces Safari to display the field with the right height.
+    height: calc( var(--pat-form-input-field-line-height) + ( 2 * var(--pat-form-input-field-padding-top-bottom) ) ); // Forces Safari to display the field with the right height.
   }
 
   ::-webkit-datetime-edit,
@@ -404,12 +310,12 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   }
 
   ::-webkit-input-placeholder {
-    color: $colour-placeholder; 
+    color: var(--pat-form-placeholder-colour); 
   }
 
   ::placeholder,
   .select2-container .select2-choice.select2-default {
-    color: $colour-placeholder; 
+    color: var(--pat-form-placeholder-colour); 
   }
 
   .output-field {
@@ -417,7 +323,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     padding-right: 27px;
 
     span.placeholder {
-      color: $colour-placeholder;
+      color: var(--pat-form-placeholder-colour);
     }
 
     &:after {
@@ -454,15 +360,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
 
   .file-upload-button,
   fieldset.horizontal fieldset.group .file-upload-button{
-    font-weight: $button-font-weight !important;
-    display: inline-block !important; // Temporary !important till rewrite of form.scss.
     justify-self: start;
-    margin-top: calc(-1 * #{$form-input-field-padding-top-bottom});
-    margin-bottom: calc(-1 * #{$form-input-field-padding-top-bottom});
-    padding-top: #{$form-input-field-padding-top-bottom};
-    padding-bottom: #{$form-input-field-padding-top-bottom};
-    line-height: var(--pat-form-input-field-line-height);
-    height: var(--pat-form-input-field-line-height);
+    float: left;
   }
 
   .attachment-list + .file-upload-button {
@@ -498,12 +397,10 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
   }
 
   .select2-container {
-    // margin: -0.5 * $form-input-field-padding-top-bottom 0;
-
     .select2-choice,
     .select2-choices {
-      // padding-top: $form-input-field-padding-top-bottom;
-      // padding-bottom: $form-input-field-padding-top-bottom;
+      // padding-top: var(--pat-form-input-field-padding-top-bottom);
+      // padding-bottom: var(--pat-form-input-field-padding-top-bottom);
       // margin: 0 0 -8px 0;
     }
 
@@ -636,10 +533,10 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
     margin-right: 0;
     box-sizing: border-box;
     line-height: var(--pat-form-input-field-line-height);
-    margin-top: calc(-1 * var(--pat-form-field-padding-top-bottom) );
-    margin-bottom: calc(-1 * var(--pat-form-field-padding-top-bottom) );
-    padding-top: var(--pat-form-field-padding-top-bottom);
-    padding-bottom: var(--pat-form-field-padding-top-bottom);
+    margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom) );
+    margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom) );
+    padding-top: var(--pat-form-input-field-padding-top-bottom);
+    padding-bottom: var(--pat-form-input-field-padding-top-bottom);
     float: left; // Kill whitespaces.
 
     &#portal-header-colour-chooser-trigger {
@@ -879,10 +776,10 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
         content: '#{$glyph-question-mark}';
         font-family: fontello;
         position: relative;
-        margin: -1 * $form-input-field-padding-top-bottom 0;
-        line-height: $form-input-field-line-height;
-        height: $form-help-button-height;
-        width: $form-help-button-width;
+        margin: calc(-1 * var(--pat-form-input-field-padding-top-bottom)) 0;
+        line-height: var(--pat-form-input-field-line-height);
+        height: var(--pat-form-help-button-height);
+        width: var(--pat-form-help-button-width);
         overflow: hidden; // Prevents click surface stretching out too much because of its content.
 
         &:hover:before,
@@ -891,7 +788,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
         }
 
         &:before {
-          content: '#{$form-help-button-icon-glyph}';
+          content: '#{$glyph-help}';
           border-radius: $border-radii;
           background-color: $button-background-colour-default;
           transform: none;
@@ -902,8 +799,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
           top: 50%;
           right: 0;
           transform: translateY(-50%);
-          line-height: $form-help-button-icon-height;
-          height: $form-help-button-icon-height;
+          line-height: var(--pat-form-help-button-icon-height);
+          height: var(--pat-form-help-button-icon-height);
           width: 100%;
           text-align: center;
           font-weight: normal;
@@ -945,8 +842,8 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
           column-gap: var(--pat-form-horizontal-column-gap);
           clear: left;
           border-style: none;
-          margin: 0 0 #{$form-field-tail-white} 0;
-          line-height: #{$form-input-field-line-height};
+          margin: 0 0 var(--pat-form-input-field-tail-white) 0;
+          line-height: var(--pat-form-input-field-line-height);
 
           > {
             * {
@@ -1004,7 +901,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
         div.group,
         > .pat-checklist {
           // padding-left: var(--pat-form-horizontal-label-width);
-          margin: 0 0 $form-field-tail-white 0;
+          margin: 0 0 var(--pat-form-input-field-tail-white) 0;
           display: grid;
           grid-template-areas: 
             "label field . extra";
@@ -1072,7 +969,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
             }
           }
 
-          > label { // Add child selector to prevent collisions with deper nested labels. Test thouroughly.
+          > label:not(.pat-button):not(.file-upload-button) { // Add child selector to prevent collisions with deper nested labels. Test thouroughly.
             font-weight: $font-weight-normal;
             font-style: normal;
             position: relative;
@@ -1088,7 +985,7 @@ $pat-auto-suggest-cancel-button-edge-distance: 12px !default;
       dfn.help {
         @include box-sizing;
         margin: 0;
-        width: calc(#{$form-proportion-name} * 100% / (100% - #{$form-proportion-name}));
+        width: calc(var(--pat-form-proportion-name) * 100% / (100% - var(--pat-form-proportion-name)));
         width: 80%;
       }
 

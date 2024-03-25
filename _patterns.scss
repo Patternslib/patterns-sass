@@ -2,6 +2,7 @@
 
 // Assets
 
+@import "assets/variables";
 @import "assets/animations";
 @import "assets/glyphs";
 @import "assets/colours";
@@ -50,7 +51,6 @@ $button-text-colour-disabled-hover: rgba(black, 0.3) !default;
 $button-background-colour-disabled: $button-background-colour !default;
 $button-background-colour-disabled-hover: $button-background-colour !default;
 
-
 $button-height: 35px !default;
 $button-line-height: 35px !default;
 $button-font-size: 1em !default;
@@ -86,15 +86,15 @@ $collapsible-button-height: 31px !default;
 
 body {
   @include screen-size(small) {
-    --pat-form-pane-padding: #{$pat-form-panel-padding-small};
+    --pat-form-panel-padding: #{$pat-form-panel-padding-small};
   }
 
   @include screen-size(medium) {
-    --pat-form-pane-padding: #{$pat-form-panel-padding-medium};
+    --pat-form-panel-padding: #{$pat-form-panel-padding-medium};
   }
 
   @include screen-size(large) {
-    --pat-form-pane-padding: #{$pat-form-panel-padding-large};
+    --pat-form-panel-padding: #{$pat-form-panel-padding-large};
   }
 }
 

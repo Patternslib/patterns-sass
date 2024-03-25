@@ -1,22 +1,8 @@
-$form-input-field-outline: none !default;
-$form-input-field-outline-focus: none !default;
-$form-input-field-border: none !default;
-$form-input-field-border-focus: none !default;
-$form-input-field-box-shadow: none !default;
-$form-input-field-box-shadow-focus: none !default;
-$pat-auto-suggest-search-field-colour: $colour-form-fields-background !default;
-$glyph-remove-tag: $glyph-remove;
-$colour-auto-suggest-pills: $colour-accent !default;
-$colour-input-field-text: inherit !default;
-$colour-input-field-text-disabled: rgba(0,0,0,0.5) !default;
-$form-input-field-padding-top-bottom: 0.2rem !default;
-$form-input-field-padding-left-right: 0.5em !default;
-$form-input-field-outline-offset: 0 !default;
-$pat-auto-suggest-cancel-button-edge-distance: 12px !default;
-$colour-input-field-text: inherit !default;
-$colour-placeholder: rgba(0,0,0,0.35) !default;
-
 :root {
+  --pat-auto-suggest-search-field-colour: var(--colour-form-fields-background);
+  --pat-glyph-remove-tag: #{$glyph-remove};
+  --pat-auto-suggest-pills-colour: var(--colour-accent);
+  --pat-auto-suggest-cancel-button-edge-distance: 12px;
   --pat-auto-suggest-pill-height: 1.6rem;
   --pat-auto-suggest-padding-top-bottom: 0.2rem;
   --pat-auto-suggest-padding-start-end: 10px;
@@ -54,7 +40,7 @@ $colour-placeholder: rgba(0,0,0,0.35) !default;
 }
 
 .select2-search {
-  border-radius: $form-fields-border-radius;
+  border-radius: var(--pat-form-fields-border-radius);
   @include box-sizing();
 
 
@@ -186,16 +172,16 @@ $colour-placeholder: rgba(0,0,0,0.35) !default;
   border-top: 0;
   // border-radius: 0 0 4px 4px;
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  border-bottom-left-radius: $form-fields-border-radius;
-  border-bottom-right-radius: $form-fields-border-radius;
+  border-bottom-left-radius: var(--_pat-form-field-border-radius);
+  border-bottom-right-radius:var(--_pat-form-field-border-radius);
 
   .select2-search input {
-    padding: $form-input-field-padding-top-bottom $form-input-field-padding-left-right;
-    border: $form-input-field-border;
-    box-shadow: $form-input-field-box-shadow;
-    outline: $form-input-field-outline;
-    outline-offset: $form-input-field-outline-offset;
-    color: $colour-input-field-text;
+    padding: var(--pat-form-input-field-padding-top-bottom) var(--pat-form-input-field-padding-start-end);
+    border: var(--pat-form-input-field-border);
+    box-shadow: var(--pat-form-input-field-box-shadow);
+    outline: var(--pat-form-input-field-outline);
+    outline-offset: var(--pat-form-input-field-outline-offset);
+    color: var(--pat-form-input-field-text-colour);
   }
 }
 
@@ -214,8 +200,8 @@ $colour-placeholder: rgba(0,0,0,0.35) !default;
   // border-radius: 4px 4px 0 0;
   -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.15);
-  border-bottom-top-radius: $form-fields-border-radius;
-  border-bottom-top-radius: $form-fields-border-radius;
+  border-top-right-radius: var(--pat-form-field-border-radius);
+  border-top-right-radius: var(--pat-form-field-border-radius);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -270,8 +256,8 @@ $colour-placeholder: rgba(0,0,0,0.35) !default;
     font-family: sans-serif;
     font-size: 1em;
     border: none;
-    background: $pat-auto-suggest-search-field-colour;
-    border-radius: $form-fields-border-radius;
+    background: var(--pat-auto-suggest-search-field-colour);
+    border-radius: var(--pat-form-fields-border-radius);
 
     &:focus {
       // background: rgba(0,0,0,0.04);
@@ -323,8 +309,8 @@ $colour-placeholder: rgba(0,0,0,0.35) !default;
     .select2-choices {
       border-top-color: transparent;
       @include box-sizing();
-      border-bottom-left-radius: $form-fields-border-radius !important;
-      border-bottom-right-radius: $form-fields-border-radius !important;
+      border-bottom-left-radius: var(--pat-form-fields-border-radius) !important;
+      border-bottom-right-radius:var(--pat-form-fields-border-radius) !important;
       border-top-left-radius: 0 !important;
       border-top-right-radius: 0 !important;
     }
@@ -400,7 +386,7 @@ $colour-placeholder: rgba(0,0,0,0.35) !default;
   .select2-highlighted {
     background: $colour-accent;
     color: #fff;
-    border-radius: $form-fields-border-radius;
+    border-radius: var(--pat-form-fields-border-radius);
   }
 
   li em {
@@ -506,15 +492,18 @@ disabled look for disabled choices in the results dropdown
 
   &.select2-container-active .select2-choices {
     // border: 1px solid #5897fb;
-    outline: $form-input-field-outline-focus;
+    outline: var(--pat-form-input-field-outline-focus);
     // -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
   .select2-choices {
+    outline-offset: var(--pat-form-input-field-outline-offset);
+
     li {
       float: left;
       list-style: none;
     }
+    
     .select2-search-field {
       margin: 0;
       padding: 0 0.5em 0 0;
@@ -536,10 +525,10 @@ disabled look for disabled choices in the results dropdown
         display: inline;
         width: 20px;
         background-color: transparent;
-        color: $colour-placeholder;
+        color: var(--pat-form-placeholder-colour);
 
         &.has-value {
-          color: $colour-input-field-text;
+          color: var(--pat-form-input-field-text-colour);
         }
 
         &.select2-active {
@@ -559,8 +548,8 @@ disabled look for disabled choices in the results dropdown
     padding: 0 0.6em 0 1.5em;
     margin: 0 0.5em var(--pat-auto-suggest-padding-top-bottom) 0;
     position: relative;
-    line-height: var(pat-auto-suggest-pill-height);
-    height: var(pat-auto-suggest-pill-height);
+    line-height: var(--pat-auto-suggest-pill-height);
+    height: var(--pat-auto-suggest-pill-height);
     color: white;
     cursor: default;
     border-radius: $border-radii;
@@ -570,7 +559,7 @@ disabled look for disabled choices in the results dropdown
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: $colour-auto-suggest-pills;
+    background-color: var(--pat-auto-suggest-pills-colour);
     font-size: 0.9em;
     max-width: calc(95% - 1em);
 
@@ -696,7 +685,7 @@ disabled look for disabled choices in the results dropdown
   &.users .select2-choices .select2-search-choice div:before,
   &.user-groups .select2-choices .select2-search-choice.user div:before,
   .select2-choices .select2-search-choice.user div:before {
-    content: "#{$glyph-icon-user}";
+    content: "#{$glyph-user}";
     display: inline-block;
     margin-right: 3px;
     font: 0.8em / 2.1em fontello;
@@ -706,7 +695,7 @@ disabled look for disabled choices in the results dropdown
   &.user-groups .select2-choices .select2-search-choice div:before,
   &.users .select2-choices .select2-search-choice.user-group div:before,
   .select2-choices .select2-search-choice.user-group div:before {
-    content: "#{$glyph-icon-user-group}";
+    content: "#{$glyph-user-group}";
     display: inline-block;
     margin-right: 3px;
     font: 0.8em / 2.1em fontello;
@@ -740,7 +729,7 @@ disabled look for disabled choices in the results dropdown
     // margin-bottom: -2px;
   }
   &.users .select2-choices .select2-search-choice.group div:before {
-    content: "$glyph-icon-users";
+    content: "#{$glyph-users}";
     display: inline-block;
     margin-right: 3px;
     font: 0.8em / 2.1em fontello;
