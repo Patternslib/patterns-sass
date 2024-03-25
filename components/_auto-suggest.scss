@@ -1,3 +1,5 @@
+$glyph-remove-tag: $glyph-remove;
+
 :root {
   --pat-auto-suggest-search-field-colour: var(--colour-form-fields-background);
   --pat-glyph-remove-tag: #{$glyph-remove};
@@ -220,11 +222,11 @@
   width: 18px;
   height: 100%;
   position: absolute;
-  right: var(--pat-pat-auto-suggest-cancel-button-edge-distance);
+  right: var(--pat-auto-suggest-cancel-button-edge-distance);
   top: 0;
   background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
   background-size: auto 10px;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   
   b {

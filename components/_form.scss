@@ -540,6 +540,7 @@
     padding-top: var(--pat-form-input-field-padding-top-bottom);
     padding-bottom: var(--pat-form-input-field-padding-top-bottom);
     float: left; // Kill whitespaces.
+    height: calc(var(--pat-form-input-field-line-height) + (2 * var(--pat-form-input-field-padding-top-bottom))); // Forces Safari to display the field with the right height.
 
     &#portal-header-colour-chooser-trigger {
       background-color: #{$colour-chooser-default};
