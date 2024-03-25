@@ -28,7 +28,7 @@
     --pat-form-placeholder-colour: rgba(0, 0, 0, 0.35);
     --pat-form-input-field-text: inherit;
     --pat-form-input-field-text-disabled: rgba(0, 0, 0, 0.5);
-    --pat-form-panel-colour: #{$colour-portlet-background};
+    --pat-form-panel-background-colour: #{$colour-well-background};
     --pat-form-panel-collapsible-button-height: $collapsible-button-height;
     --pat-form-input-field-outline: none;
     --pat-form-input-field-outline-offset: 0;
@@ -44,7 +44,6 @@
     --pat-form-help-button-icon-glyph: $glyph-question-mark;
 
     --pat-form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5);
-    --pat-form-panel-background-colour: #efefef;
 
     --pat-form-panel-padding: 40px;
     --pat-form-panel-padding-large: 40px;

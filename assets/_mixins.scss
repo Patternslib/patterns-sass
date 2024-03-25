@@ -851,7 +851,7 @@ $pat-table-sorting-icon-position: right !default;
     box-sizing: border-box;
     box-shadow: $default-box-shadow;
     border-radius: $border-radii;
-    background-color: var(--pat-form-panel-colour);
+    background-color: var(--pat-form-panel-background-colour);
     margin-bottom: $default-tail-white;
 
     --pat-toolbar-margin-bottom: 15px;
