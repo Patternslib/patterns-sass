@@ -966,7 +966,7 @@ $pat-toolbar-z-index: 2 !default;
 		// float: left;
 		display: inline-block;
 		z-index: 10;
-		margin-left: var(--pat-toolbar-element-separation);
+		// margin-left: var(--pat-toolbar-element-separation);
 		vertical-align: top;
 		font-size: var(--pat-toolbar-font-size);
 		background-color: $pat-toolbar-icon-background-colour;

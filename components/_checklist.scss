@@ -16,16 +16,21 @@ $pat-checklist-padding-end: 0 !default;
     --pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px var(--colour-accent), inset 0 0 0 5px white;
     --pat-checklist-checkbox-background-colour-checked: var(--colour-accent);
 	--pat-checklist-checkbox-border-radius: calc(0.25 * var(--pat-checklist-checkbox-size));
+	--pat-checklist-line-height: 24px;
+	--pat-checklist-checkbox-vertical-position: 12px;
 }
 
 @mixin checkbox() {
 	display: grid;
 	grid-template-columns: var(--pat-checklist-label-padding-start) auto;
-	grid-template-areas: "icon label";
+	grid-template-areas: 
+		"icon label"
+		".    description";
 	align-items: start;
 	padding-right: var(--pat-checklist-label-padding-end);
 	-webkit-user-select: none;
 	user-select: none;
+	line-height: var(--pat-checklist-line-height);
 
 	body[dir=rtl] & { 
 		padding-left: var(--pat-checklist-label-padding-end);
@@ -50,8 +55,8 @@ $pat-checklist-padding-end: 0 !default;
 		justify-self: start;
 		grid-area: icon;
 		position: relative;
-		top: 50%;
-		transform: translateY(calc(-0.55 * var(--pat-checklist-checkbox-size)));
+		top: var(--pat-checklist-checkbox-vertical-position);
+		transform: translateY(-50%);
 		transition: all 0.2s ease-out;
 	}
 
@@ -89,6 +94,7 @@ $pat-checklist-padding-end: 0 !default;
 		color: rgba(0,0,0,0.7);
 		font-size: 0.9em;
 		line-height: 1.4;
+		grid-area: description;
 
 		> * {
 			color: black;
@@ -113,8 +119,8 @@ label.pat-checklist {
 
 	&:has(input[type="checkbox"]):before,
 	&:has(input[type="radio"]):before {
-		top: 50%;
-		transform: translateY(-50%);
+		// top: 50%;
+		// transform: translateY(-50%);
 	}
 }
 

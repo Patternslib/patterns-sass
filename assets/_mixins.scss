@@ -222,6 +222,10 @@ $pat-table-sorting-icon-position: right !default;
   text-overflow: ellipsis;
   cursor: default;
 
+  &:hover {
+    background-color: var(--pat-select-box-background-colour-hover);
+  }
+
   &[data-value="draft"],
   &.state-draft {
     background-color: $colour-orange-xl;

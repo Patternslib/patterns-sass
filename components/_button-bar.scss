@@ -1,0 +1,14 @@
+@mixin pat-button-bar {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+
+    .pat-button {
+        margin: 0;
+        
+    }
+}
+
+.pat-button-bar {
+    @include pat-button-bar;
+}

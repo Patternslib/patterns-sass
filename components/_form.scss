@@ -3,8 +3,10 @@
 
 .pat-form {
   --pat-select-box-height: var(--pat-form-input-field-line-height);
-
+  --pat-select-box-background-colour: #{$button-background-colour};
+  --pat-select-box-background-colour-hover: #{$button-background-colour-hover};
   --pat-button-height: var(--pat-form-input-field-line-height);
+  --pat-select-box-padding-start: 18px;
 
   --pat-auto-suggest-pill-height: 28px;
   --pat-auto-suggest-padding-top-bottom: var(--pat-form-input-field-padding-top-bottom);
@@ -962,7 +964,8 @@
           }
 
           &.button-bar {
-            display: block;
+            display: flex;
+            gap: 15px;
             padding-left: calc(var(--pat-form-horizontal-label-width) + var(--pat-form-horizontal-column-gap));
           }
 
