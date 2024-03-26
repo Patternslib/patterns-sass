@@ -1,4 +1,213 @@
-@charset "UTF-8";
+@mixin button-drop-down-segment {
+  font-family: fontello;
+  content: '#{$glyph-down-open}';
+  width: var(--pat-select-box-arrow-width);
+  background-color: var(--pat-select-box-arrow-background-colour);
+  background-image: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: var(--pat-select-box-arrow-size);
+  border-top-right-radius: var(--pat-form-fields-border-radius);
+  border-bottom-right-radius: var(--pat-form-fields-border-radius);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin select-box() {
+  padding: 0 75px 0 12px;
+  display: inline-block;
+  height: var(--pat-select-box-height);
+  line-height: var(--pat-select-box-height);
+  padding-top: var(--pat-select-box-padding-top-bottom);
+  padding-bottom: var(--pat-select-box-padding-top-bottom);
+  padding-left: var(--pat-select-box-padding-start);
+  padding-right: calc((var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-start) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
+  position: relative;
+  font-weight: normal !important;
+  position: relative;
+  box-sizing: border-box;
+  border: var(--pat-form-input-field-border);
+  border-radius: var(--pat-form-input-field-border-radius);
+  box-shadow: var(--pat-select-box-box-shadow);
+  outline: var(--pat-form-input-field-outline);
+  outline-offset: var(--pat-form-input-field-outline-offset);
+  color: var(--pat-select-box-arrow-text-colour);
+  font-size: var(--pat-select-box-font-size);
+  max-width: 100%;
+  background-color: var(--pat-select-box-background-colour);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+
+  &:hover {
+    background-color: var(--pat-select-box-background-colour-hover);
+  }
+
+  &[data-value="draft"],
+  &.state-draft {
+    background-color: $colour-orange-xl;
+    color: $colour-orange-xd;
+
+    &:after {
+      background-color: $colour-orange-l;
+    }
+
+    &:before,
+    &:after {
+      color: darken($colour-orange, 20%);
+    }
+
+    &:hover,
+    &.tooltip-active-click {
+      background-color: darken($colour-orange-xl, 5%);
+
+      &:after {
+        background-color: darken($colour-orange-l, 5%);
+      }
+    }
+  }
+
+  &[data-value="for-review"],
+  &.state-for-review {
+    background-color: $colour-violette-xl;
+    color: $colour-violette;
+
+    &:after {
+      background-color: $colour-violette-l;
+    }
+
+    &:before,
+    &:after {
+      color: darken($colour-violette, 15%);
+    }
+
+    &:hover,
+    &.tooltip-active-click {
+      background-color: darken($colour-violette-xl, 5%);
+
+      &:after {
+        background-color: darken($colour-violette-l, 5%);
+      }
+    }
+  }
+
+  &[data-value="approved"],
+  &.state-approved {
+    background-color: $colour-green-xl;
+    color: $colour-green-d;
+
+    &:after {
+      background-color: $colour-green-l;
+    }
+
+    &:before,
+    &:after {
+      color: darken($colour-green, 15%);
+    }
+
+    &:hover,
+    &.tooltip-active-click {
+      background-color: darken($colour-green-xl, 5%);
+
+      &:after {
+        background-color: darken($colour-green-l, 5%);
+      }
+    }
+  }
+
+  &[data-value="published"],
+  &[data-value="sent"],
+  &.state-published,
+  &.state-sent {
+    background-color: $colour-dark-blue-xl;
+    color: darken($colour-dark-blue, 15%);
+
+    &:after {
+      background-color: $colour-dark-blue-l;
+    }
+
+    &:before,
+    &:after {
+      color: darken($colour-dark-blue, 15%);
+    }
+
+    &:hover,
+    &.tooltip-active-click {
+      background-color: darken($colour-dark-blue-xl, 5%);
+
+      &:after {
+        background-color: darken($colour-dark-blue-l, 5%);
+      }
+    }
+  }
+
+  &.locked {
+    &:before {
+      font-family: fontello;
+      content: "#{$glyph-lock}";
+      display: inline-block;
+      margin-right: 5px;
+      float: left;
+      font-size: inherit;
+    }
+  }
+
+  // &:hover,
+  // &.tooltip-active-click {
+  //   background-color: $button-background-colour-hover;
+  // }
+
+  &:not([class*="icon-"]) {
+    &:before {
+      font-size: var(--pat-select-font-size);
+      content: attr(data-option);
+      // padding-right: var(--pat-select-box-arrow-width);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+  }
+
+  &[class*=icon-] {
+    &:before {
+      margin-left: -5px;
+      margin-right: 8px;
+    }
+  }
+
+  select {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100% !important;
+    width: 100% !important;
+    opacity: 0;
+    margin: 0;
+    z-index: 1;
+
+    option {
+      font-size: initial;
+      color: black;
+    }
+  }
+
+  &:after {
+    @include button-drop-down-segment;
+  }
+
+  option:disabled {
+    color: silver;
+  }
+}
 
 .js { 
   select.pat-select,
@@ -7,12 +216,6 @@
   }
 
   a.pat-select {
-    // display: inline-block;
-    // position: relative;
-    // padding-right: 35px;
-    // padding-left: 10px;
-    // border-radius: $border-radii;
-
     @include select-box;
 
     &:hover {
