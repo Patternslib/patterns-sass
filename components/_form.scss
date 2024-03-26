@@ -2,14 +2,6 @@
 @import "../components/file-upload-button";
 
 .pat-form {
-  --pat-select-box-height: var(--pat-form-input-field-line-height);
-  --pat-select-box-background-colour: #{$button-background-colour};
-  --pat-select-box-background-colour-hover: #{$button-background-colour-hover};
-  --pat-button-height: var(--pat-form-input-field-line-height);
-  --pat-select-box-padding-start: 18px;
-
-  --pat-auto-suggest-pill-height: 28px;
-  --pat-auto-suggest-padding-top-bottom: var(--pat-form-input-field-padding-top-bottom);
 
   @include screen-size(small) {
     --pat-form-panel-padding: var(--pat-form-panel-padding-small);
@@ -803,6 +795,12 @@
       &.horizontal,
       &.horizontal > .panel-content {
         @include screen-size(medium-large) { 
+
+        --pat-select-box-height: var(--pat-form-input-field-line-height);
+        --pat-button-height: var(--pat-form-input-field-line-height);
+
+        --pat-auto-suggest-pill-height: 28px;
+        --pat-auto-suggest-padding-top-bottom: var(--pat-form-input-field-padding-top-bottom);
           
         .pat-button {
             display: inline-block;

@@ -41,6 +41,12 @@ $pat-toolbar-z-index: 2 !default;
 }
 
 .pat-toolbar {
+
+	--pat-select-box-font-size: var(--pat-toolbar-font-size);
+	--pat-select-box-background-colour: #{$button-background-colour};
+	--pat-select-box-background-colour-hover: #{$button-background-colour-hover};
+	--pat-select-box-padding-start: 18px;
+	
 	@include screen-size(small) {
 		margin: 
 			calc(-1 * var(--pat-toolbar-padding)) 
@@ -55,8 +61,6 @@ $pat-toolbar-z-index: 2 !default;
 			calc(-1 *  var(--pat-toolbar-padding)) 
 			var(--pat-toolbar-margin-bottom);
 	}
-
-	--pat-select-box-font-size: var(--pat-toolbar-font-size);
 
 	@include clear-fix();
 	// color: rgba(0,0,0,0.6);
