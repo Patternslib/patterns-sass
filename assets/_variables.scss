@@ -21,7 +21,7 @@
     --pat-form-input-field-padding-left-right-disabled: 0;
     --pat-form-input-field-font-size: 1em;
     --pat-form-input-field-tail-white: 1.2rem;
-    --pat-form-input-field-background-colour: #{$colour-form-fields-background};
+    --pat-form-input-field-background-colour: var(--colour-form-fields-background);
     --pat-form-input-field-background-colour-disabled: transparent;
     --pat-form-input-field-text-colour: black;
     --pat-form-fields-border-radius: $border-radii;
