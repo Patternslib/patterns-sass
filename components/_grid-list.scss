@@ -61,10 +61,14 @@
     padding-bottom: 0.5em;
     margin-left: 0;
 
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: "value functions";
-    gap: 15px;
+    .pat-grid-list {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-areas: "value functions";
+      grid-auto-rows: auto;
+      grid-auto-flow: dense; // Add this line to automatically add extra child elements to new rows
+      gap: 15px;
+    }
 
     @media print {
       display: block;
