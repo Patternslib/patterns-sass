@@ -66,14 +66,15 @@ $pat-button-cluster-text-colour: $colour-link !default;
           opacity: 0;
         }
 
-        &:not(.active):not(.current):not(.checked):hover {
-          text-decoration: none;;
-          // background-color: rgba(255,255,255,0.4);
+        &:not(:has(:checked)):not(.active):not(.current):hover {
+          text-decoration: underline;
+          text-underline-offset: 4px;
           color: black;
-        } 
+          cursor: pointer;
+        }
 
         &[href]:not(.current):hover,
-        &.unchecked:hover {
+        &:has(input:unchecked):hover {
           color: darken($pat-button-cluster-text-colour, 10%);
           text-decoration: underline !important;
           text-underline-offset: 3px;
@@ -103,12 +104,13 @@ $pat-button-cluster-text-colour: $colour-link !default;
           box-shadow: 0 1px 6px rgba(0,0,0,0.15);
         }
 
-        &.checked,
+        &:has(input:checked),
         &.active,
         &.current {
           background-color: transparent;
-          color: white;
-          text-decoration: none;
+          color: white !important;
+          text-decoration: none !important;
+          cursor: default !important;
           box-shadow: none;
 
           &:after {
@@ -409,20 +411,20 @@ $pat-button-cluster-text-colour: $colour-link !default;
       padding: 0 5px;
     }
 
-      input {
-        position: absolute;
-        opacity: 0;
-      }
+    input {
+      position: absolute;
+      opacity: 0;
+    }
 
-      &[href]:not(.current):not(.active):not(.current):hover {
-        color: black;
-      }
+    &[href]:not(.current):not(.active):not(.current):hover {
+      color: black;
+    }
 
-      &:not(.active):not(.current):not(.checked):not([disabled]):hover {
-        text-decoration: none;;
-        // background-color: rgba(255,255,255,0.4);
-        color: black;
-      } 
+    // &:not(.active):not(.current):not(:has(input:checked)):not([disabled]):hover {
+    //   text-decoration: none;;
+    //   // background-color: rgba(255,255,255,0.4);
+    //   color: black;
+    // } 
 
     &:before {
       margin-right: 0;
@@ -430,7 +432,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
         color: rgba(0,0,0,0.7);
     }
 
-      &.checked,
+      &:has(input:checked),
       &.active,
       &.current {
         background: var(--colour-accent);
