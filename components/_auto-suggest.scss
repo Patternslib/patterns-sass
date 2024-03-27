@@ -1,7 +1,7 @@
 $glyph-remove-tag: $glyph-remove;
 
 :root {
-  --pat-auto-suggest-search-field-colour: var(--colour-form-fields-background);
+  --pat-auto-suggest-search-field-colour: var(--pat-form-input-field-background-colour);
   --pat-glyph-remove-tag: #{$glyph-remove};
   --pat-auto-suggest-pills-colour: var(--colour-accent);
   --pat-auto-suggest-cancel-button-edge-distance: 12px;
