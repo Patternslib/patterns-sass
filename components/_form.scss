@@ -273,7 +273,9 @@
     }
   }
 
-  input[type=time] {
+  input[type=time],
+  input[type=datetime],
+  input[type=datetime-local] {
     height: calc( var(--pat-form-input-field-line-height) + ( 2 * var(--pat-form-input-field-padding-top-bottom) ) ); // Forces Safari to display the field with the right height.
   
     &::-webkit-datetime-edit,
