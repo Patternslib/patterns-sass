@@ -1,0 +1,86 @@
+:root {
+    --form-field-range-size: 20px;
+    --form-field-range-track-thickness: 2px;
+}
+
+.pat-form {
+    input[type=range] {
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 0.2em 0;
+        background: transparent !important;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        border-radius: 1em;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: var(--form-field-range-track-thickness);
+        background: black;
+        border: none;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+        border-radius: 1em;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: var(--form-field-range-size);
+        width: var(--form-field-range-size);
+        border-radius: 50%;
+        background: #{$colour-link};
+        transform: translateY(-50%);
+        margin-top: calc(0.5 * var(--form-field-range-track-thickness));
+    }
+
+    input[type=range]::-moz-range-track {
+        height: var(--form-field-range-track-thickness);
+        background: black;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+        border: none;
+        border-radius: 1em;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        border: none;
+        height: var(--form-field-range-size);
+        width: var(--form-field-range-size);
+        border-radius: 50%;
+        background: $colour-accent;
+    }
+
+    input[type=range]:-moz-focusring {
+        // outline: 1px solid white;
+        outline-offset: -1px;
+    }
+
+    input[type=range]::-ms-track {
+        height: 0.3em;
+        background: $colour-base;
+        border-color: transparent;
+        border-width: 0.5em 0;
+        color: transparent;
+    }
+
+    input[type=range]::-ms-thumb {
+        border: none;
+        height: var(--form-field-range-size);
+        width: var(--form-field-range-size);
+        border-radius: 50%;
+        background: $colour-accent;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+        background: #888;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+        background: #ccc;
+    }
+}

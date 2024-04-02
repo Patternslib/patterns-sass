@@ -6,8 +6,11 @@
     --pat-toggle-toggle-distance: 2px;
     --pat-toggle-toggle-border-radius: 50%;
     --pat-toggle-toggle-background-colour: white;
+    --pat-toggle-toggle-background-colour-on: white;
     --pat-toggle-text-colour: white;
     --pat-toggle-padding-start-end: 10px;
+    --pat-toggle-box-shadow: none;
+    --pat-toggle-box-shadow-on: none;
 }
 
 .pat-toggle-switch {
@@ -25,6 +28,9 @@
         padding: 0 calc( ( var(--pat-toggle-height) - 2 * var(--pat-toggle-toggle-distance) ) + 0.5 * var(--pat-toggle-padding-start-end) ) 0 var(--pat-toggle-padding-start-end);
         line-height: var(--pat-toggle-height);
         color: transparent;
+        box-shadow: var(--pat-toggle-box-shadow);
+        -webkit-user-select: none;
+        user-select: none;
         
         input {
             position: absolute;
@@ -48,9 +54,11 @@
         &:has(input:checked) {
             background-color: var(--pat-toggle-background-colour-on);
             color: var(--pat-toggle-text-colour);
+            box-shadow: var(--pat-toggle-box-shadow-on);
 
             &::after {
                 left: calc(100% - ( var(--pat-toggle-height) - var(--pat-toggle-toggle-distance) ) );
+                background-color: var(--pat-toggle-toggle-background-colour-on);
             }
         }
     }
