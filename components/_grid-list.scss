@@ -61,7 +61,7 @@
     padding-bottom: 0.5em;
     margin-left: 0;
 
-    .pat-grid-list {
+    &:has(.functions) {
       display: grid;
       grid-template-columns: auto auto;
       grid-template-areas: "value functions";
