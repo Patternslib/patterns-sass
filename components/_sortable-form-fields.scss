@@ -1,4 +1,6 @@
---sortable-form-fields-handle-colour: $colour-accent !default;
+:root {
+	--sortable-form-fields-handle-colour: #{$colour-accent};
+}
 
 .sortable-form-fields {
 	counter-reset: count;
@@ -90,7 +92,9 @@
 			cursor: grab;
 
 			&:hover {
-				background: darken(var(--sortable-form-fields-handle-colour), 10%);
+				filter: 
+					brightness(0.9), 
+					contrast(1.1);
 			}
 				
 			&:active,
