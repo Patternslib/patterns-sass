@@ -1,0 +1,170 @@
+.pat-sortable-blocks {
+	position: relative;
+	margin-bottom: 0.5rem;
+
+	.sortable-item {
+		padding: 0;
+		position: relative;
+		display: grid;
+		grid-template-columns: auto 30px;
+		grid-auto-rows: auto;
+		grid-template-areas: 
+			"content functions";
+		grid-auto-rows: auto;
+		align-items: center;
+
+		.title {
+			margin: 0;
+			font-size: 1.2em;
+		}
+
+		.description {
+			margin-top: 8px;
+		}	
+
+		.item-info {
+			transition: all 0.2s;
+			margin: 9px 15px 9px 0;
+			padding: 23px;
+			box-sizing: border-box;
+			clear: both;
+			overflow: hidden;
+			border-radius: #{$border-radii};
+			background-color: #{$colour-base};
+
+			.pat-rich *:last-child {
+				margin-bottom: 0;
+			} 
+		}
+
+		&.dragged {
+			opacity: 0.5;
+		}
+
+		&:not(.dragged) {
+			animation: fadeIn 1s;
+		}
+
+		&:not(.drop-target-above):not(.drop-target-below) {
+			overflow: hidden;
+		}
+
+		&:before {
+			display: block;
+			width: calc(100% - 40px);
+			opacity: 0;
+			height: 2px;
+			content: ' ';
+			background: $colour-link;
+			position: absolute;
+			left: 0;
+		}
+
+		&.drop-target-above,
+		&.drop-target-below { 
+			&:before {
+				opacity: 1;
+			}
+
+			// .sortable-handle {
+			// 	margin-top: -24px;
+			// }
+		}
+
+		&.drop-target-above:before {
+			top: -1px;
+		}
+
+		&.drop-target-below:before {
+			bottom: -1px;
+		}
+
+		.label {
+			background: $colour-post;
+			line-height: 1.3em;
+			// color: $colour-accent;
+		}
+
+		.sortable-handle {
+			cursor: grab;
+			z-index: 1;
+
+			&:before {
+				content: "#{$glyph-arrow-combo}";
+			}
+
+			&:active,
+			&:focus {
+				cursor: grabbing;
+			}
+		}
+
+		.sortable-handle,
+		.delete-button,
+		.edit-button {
+			text-align: center;
+			color: transparent;
+			display: block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			background: rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			border-radius: #{$border-radii};
+			grid-area: functions;
+            grid-row: 1 / last;
+			position: absolute;
+			top: 50%;
+
+			&:hover {
+				background: rgba(0, 0, 0, 0.15);
+			}
+
+			&:before {
+				display: block;
+				font-family: fontello;
+				top: 0;
+				left: 0;
+				width: 100%;
+				line-height: 30px;
+				text-align: center;
+				font-size: 0.8em;
+				color: $colour-link;
+			}
+
+			@media print {
+				display: none;
+			}
+		}
+
+		.edit-button {
+			margin-top: -36px;
+
+			&:before {
+				content: "#{$glyph-pencil}";
+			}
+		}
+
+		.delete-button {
+			margin-top: 6px;
+
+			input {
+				opacity: 0;
+				position: absolute;
+			}
+
+			&:before {
+				content: "#{$glyph-trash}";
+			}
+		}
+
+		.sortable-handle {
+			margin-top: 6px;
+		}
+
+		.button-cluster {
+			display: none;
+		}
+	}
+
+}
