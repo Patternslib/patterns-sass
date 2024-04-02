@@ -823,6 +823,13 @@ $pat-table-sorting-icon-position: right !default;
     }
 }
 
+@mixin assistive-text {
+    position: absolute;
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    opacity: 0;
+}
+
 @mixin pat-separator($height: 0.05em, $margin: 1em 10% 2em, $colour: gray) {
   background-color: $colour;
   height: $height;

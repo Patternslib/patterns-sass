@@ -73,8 +73,7 @@
 			bottom: 5px;
 			width: 36px;
 			background: var(--sortable-form-fields-handle-colour);
-			border-top-left-radius: $border-radii;
-			border-bottom-left-radius: $border-radii;
+			border-radius: $border-radii;
 			overflow: hidden;
 
 			@media print {
@@ -132,6 +131,10 @@
 			}
 		}
 
+		> .button-cluster {
+			@include assistive-text;
+		}
+
         .remove-clone {
             border: none;
             background: none;
@@ -153,7 +156,7 @@
 
             &:before {
                 font-family: fontello;
-                content: '#{$glyph-icon-remove}';
+                content: '#{$glyph-remove}';
                 color: $colour-link;
                 position: absolute;
                 right: 0;
