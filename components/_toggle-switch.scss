@@ -25,7 +25,7 @@
         justify-self: start;
         position: relative;
         box-sizing: border-box;
-        padding: 0 calc( ( var(--pat-toggle-height) - 2 * var(--pat-toggle-toggle-distance) ) + 0.5 * var(--pat-toggle-padding-start-end) ) 0 var(--pat-toggle-padding-start-end);
+        padding: 0 calc( ( var(--pat-toggle-height) - 1 * var(--pat-toggle-toggle-distance) ) + 0.5 * var(--pat-toggle-padding-start-end) ) 0 var(--pat-toggle-padding-start-end);
         line-height: var(--pat-toggle-height);
         color: transparent;
         box-shadow: var(--pat-toggle-box-shadow);
