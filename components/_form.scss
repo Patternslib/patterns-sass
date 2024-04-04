@@ -428,7 +428,7 @@
   input[type="file"] {
     align-items: center;
     column-gap: 15px;
-    display: inline-flex !important; // !important can go after the next rewrite ofr form.scss
+    display: inline-flex; // !important can go after the next rewrite of form.scss
 
     &::file-selector-button {
       @include pat-button();
