@@ -8,6 +8,10 @@ $glyph-remove-tag: $glyph-remove;
   --pat-auto-suggest-pill-height: 1.6rem;
   --pat-auto-suggest-padding-top-bottom: 0.2rem;
   --pat-auto-suggest-padding-start-end: 10px;
+  --pat-auto-suggest-drop-sheet-box-shadow: 
+    -1px 1px 0 0 dimgray, 
+    1px 1px 0 0 dimgray,
+    -1px 0 0 0 dimgray;
 }
 
 .select2-hidden-accessible {
@@ -169,13 +173,12 @@ $glyph-remove-tag: $glyph-remove;
   top: 100%;
   background: #fff;
   color: #000;
-  border: 1px solid silver;
-  // box-shadow: 0 0 0 1px gray;
-  border-top: 0;
-  // border-radius: 0 0 4px 4px;
-  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  border-bottom-left-radius: var(--_pat-form-field-border-radius);
-  border-bottom-right-radius:var(--_pat-form-field-border-radius);
+  // border: 1px solid dimgray;
+  // border-top: 0;
+  // border: none;
+  box-shadow: var(--pat-auto-suggest-drop-sheet-box-shadow);
+  border-bottom-left-radius: var(--pat-form-field-border-radius);
+  border-bottom-right-radius:var(--pat-form-field-border-radius);
 
   .select2-search input {
     padding: var(--pat-form-input-field-padding-top-bottom) var(--pat-form-input-field-padding-start-end);
