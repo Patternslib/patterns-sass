@@ -97,6 +97,7 @@ $glyph-remove-tag: $glyph-remove;
   }
   .select2-choice {
     text-decoration: none;
+    cursor: default;
 
     abbr.select2-search-choice-close {
       width: 16px;
@@ -178,8 +179,8 @@ $glyph-remove-tag: $glyph-remove;
   // border-top: 0;
   // border: none;
   box-shadow: var(--pat-auto-suggest-drop-sheet-box-shadow);
-  border-bottom-left-radius: var(--pat-form-field-border-radius);
-  border-bottom-right-radius:var(--pat-form-field-border-radius);
+  border-bottom-left-radius: var(--pat-form-input-field-border-radius);
+  border-bottom-right-radius:var(--pat-form-input-field-border-radius);
 
   .select2-search input {
     padding: var(--pat-form-input-field-padding-top-bottom) var(--pat-form-input-field-padding-start-end);
@@ -444,15 +445,9 @@ disabled look for disabled choices in the results dropdown
 /* disabled styles */
 
 .select2-container.select2-container-disabled .select2-choice {
-  // background-color: #f4f4f4;
   background-image: none;
-  // border: 1px solid #ddd;
   cursor: default;
-  // .select2-arrow {
-  //   background-color: #f4f4f4;
-  //   background-image: none;
-  //   border-left: 0;
-  // }
+
   abbr {
     display: none;
   }
@@ -469,7 +464,6 @@ disabled look for disabled choices in the results dropdown
   position: relative;
   // border: 1px solid #aaa;
   // background-color: rgba(0,0,0,0.09);
-  cursor: text;
   overflow: hidden;
   width: 100%;
   min-height: calc( var(--pat-auto-suggest-pill-height) + ( 2 * var(--pat-auto-suggest-padding-top-bottom) ) );
@@ -504,6 +498,7 @@ disabled look for disabled choices in the results dropdown
   }
   .select2-choices {
     outline-offset: var(--pat-form-input-field-outline-offset);
+    cursor: text;
 
     li {
       float: left;
@@ -655,6 +650,7 @@ disabled look for disabled choices in the results dropdown
     border: none;
     cursor: default;
     padding: 0;
+
     .select2-search-choice {
       margin-left: 0;
       margin-right: 5px;
