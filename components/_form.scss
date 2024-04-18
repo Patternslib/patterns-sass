@@ -119,7 +119,7 @@
   .message {
     @include pat-message();
     @include box-sizing();
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     display: block;
     clear: both;
     margin-top: 0.5em;
