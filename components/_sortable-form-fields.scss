@@ -6,6 +6,7 @@
 	counter-reset: count;
 	-webkit-user-select: none;
 	user-select: none;
+	margin-top: -9px;
 
     & + .button-bar {
         margin-top: 0px;
@@ -89,6 +90,7 @@
 			text-indent: -10em;
 			background: var(--sortable-form-fields-handle-colour);
 			cursor: grab;
+			color: transparent;
 
 			&:hover {
 				filter: 
@@ -111,6 +113,7 @@
 				width: 100%;
 				text-align: center;
 				font-size: 0.8em;
+				color: white;
 			}
 		}
 
@@ -136,42 +139,52 @@
 		}
 
         .remove-clone {
-            border: none;
-            background: none;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            color: rgba(0,0,0,0);
-            position: absolute;
-            right: -30px;
-            top: 10px;
-            text-indent: -1000px;
+			color: transparent;
+			font-family: fontello;
+			position: relative;
+			margin: 0;
+			line-height: var(--pat-form-input-field-line-height);
+			height: var(--sortable-form-fields-remove-button-height);
+			width: var(--sortable-form-fields-remove-button-width);
+			overflow: hidden; // Prevents click surface stretching out too much because of its content.
+			background: transparent;
+			position: absolute;
+			right: -31px;
+			top: calc(var(--pat-form-input-field-padding-top-bottom) + 2px );
 
-            &:active {
-                box-shadow: none !important;
-            }
+			&:hover:before,
+			&.tooltip-active-click:before {
+				background-color: $button-background-colour-default-hover;
+			}
 
-            &:before {
-                font-family: fontello;
-                content: '#{$glyph-remove}';
-                color: $colour-link;
-                position: absolute;
-                right: 0;
-                text-indent: -1em;
-
-                .header.home & {
-                    color: white;
-                }
-            }
-
-            &:hover {
-                &:before {
-                    color: $colour-link;
-                }
-            }
+			&:before {
+				content: '#{$glyph-minus}';
+				border-radius: var(--sortable-form-fields-remove-button-icon-border-radius);
+				background-color: $button-background-colour;
+				color: #{$button-text-colour};
+				transform: none;
+				margin: 0;
+				font-family: fontello;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				line-height: var(--sortable-form-fields-remove-button-icon-height);
+				height: var(--sortable-form-fields-remove-button-icon-height);
+				width: 100%;
+				text-align: center;
+				font-weight: normal;
+				font-style: normal;
+				font-size: 0.8em;
+				transition: opacity 0.8s;
+				transition-delay: 0.3s;
+				overflow: hidden;
+			}
+			
+			&:hover:before {
+				background-color: $button-background-colour-hover;
+				color: #{$button-text-colour-hover};
+			}
         }
 	}
 

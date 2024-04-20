@@ -24,7 +24,7 @@
     --pat-form-input-field-background-colour: var(--colour-form-fields-background);
     --pat-form-input-field-background-colour-disabled: transparent;
     --pat-form-input-field-text-colour: black;
-    --pat-form-fields-border-radius: $border-radii;
+    --pat-form-fields-border-radius: var(--border-radii);
     --pat-form-placeholder-colour: rgba(0, 0, 0, 0.35);
     --pat-form-input-field-text: inherit;
     --pat-form-input-field-text-disabled: rgba(0, 0, 0, 0.5);
@@ -42,6 +42,7 @@
     --pat-form-help-button-width: 26px;
     --pat-form-help-button-icon-height: 37px;
     --pat-form-help-button-icon-glyph: $glyph-question-mark;
+    --pat-form-help-button-icon-border-radius: #{$border-radii};
 
     --pat-form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5);
 

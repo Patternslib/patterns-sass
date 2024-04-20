@@ -125,6 +125,10 @@
     margin-top: 0.5em;
     font-style: normal;
     font-weight: $font-weight-normal;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   h2 {
@@ -206,7 +210,8 @@
 
       input,
       .output-field,
-      select {
+      select,
+      textarea {
         position: absolute;
         top: 0;
         left: 0;
@@ -243,6 +248,25 @@
 
     &.layout-postal-code-place-line-nl {
       grid-template-columns: 100px auto;   
+    }
+
+    &.layout-image-caption {  
+      grid-template-columns: 35% auto;   
+  
+      textarea {
+        height: 100%;
+        height: calc(100% + 2 * var(--pat-form-input-field-padding-top-bottom));
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+        margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+        border-radius: var(--pat-form-fields-border-radius);
+        display: block;
+      }
     }
   }
 
@@ -683,7 +707,7 @@
 
         &:before {
           content: '#{$glyph-help}';
-          border-radius: $border-radii;
+          border-radius: var(--pat-form-help-button-icon-border-radius);
           background-color: $button-background-colour-default;
           transform: none;
           margin: 0;
@@ -840,14 +864,20 @@
             input,
             .pat-screenshot,
             video,
-            img {
+            img,
+            .caption {
               width: 100%;
+              min-width: 100%;
+              max-width: 100%;
+              display: block;
+              border-radius: var(--pat-form-input-field-border-radius)
             }
 
             input,
             video,
-            img {
-              margin-bottom: 5px;
+            img,
+            .caption {
+              margin-bottom: 10px;
             }
           }
 
