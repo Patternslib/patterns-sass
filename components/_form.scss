@@ -251,11 +251,13 @@
     }
 
     &.layout-image-caption {  
-      grid-template-columns: 35% auto;   
+      grid-template-columns: 35% auto;
+      min-height: 87px;
   
       textarea {
         height: 100%;
         height: calc(100% + 2 * var(--pat-form-input-field-padding-top-bottom));
+        resize: none;
       }
 
       img {
