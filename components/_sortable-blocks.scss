@@ -6,19 +6,24 @@
 	counter-reset: count;
 	-webkit-user-select: none;
 	user-select: none;
-	margin-top: -9px;
+	margin-top:    calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
+	margin-bottom: calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
 	margin-right: 36px;
 
 	.horizontal & {
 		margin-right: 0;
 	}
 
-	& + .button-bar {
+	& + .pat-button-bar {
 		margin-top: 0px;
+
+		.horizontal & {
+			margin-bottom: 0;
+		}
 	}
 
-	&:has(.sortable-item) + .button-bar {
-		margin-top: 10px;
+	&:has(.sortable-item) + .pat-button-bar {
+		margin-top: calc(2 * var(--pat-sortable-blocks-gap) + var(--pat-form-input-field-padding-top-bottom));
 	}
 
 	.sortable-item {
@@ -75,15 +80,13 @@
 			display: block;
 			position: absolute;
 			left: calc(-1 * var(--pat-sortable-blocks-padding-start));
-			top: 	calc(var(--pat-sortable-blocks-gap) - 0.5 * var(--pat-form-input-field-padding-top-bottom) );
-			bottom: calc(var(--pat-sortable-blocks-gap) - 0.5 * var(--pat-form-input-field-padding-top-bottom) );
+			top: 	var(--pat-sortable-blocks-gap);
+			bottom: var(--pat-sortable-blocks-gap);
 			width: var(--pat-sortable-blocks-button-width);
 			background: var(--pat-sortable-blocks-handle-colour);
 			border-radius: $border-radii;
 			overflow: hidden;
-
-			margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
-			margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+			margin: 0;
 
 			@media print {
 				background: transparent;
@@ -185,8 +188,7 @@
 			height: 100%;
 			border-radius: var(--pat-form-input-field-border-radius);
 			padding: 20px;
-			margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
-			margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+			margin: 0;
 			box-shadow: var(--pat-sortable-blocks-item-info-box-shadow);
 
 			.title {
@@ -196,6 +198,17 @@
 
 			*:last-child {
 				margin-bottom: 0;
+			}
+		}
+
+		.field-cluster {
+			margin-top: 0;
+			margin-bottom: 0;
+			min-height: calc(var(--pat-form-input-field-line-height) + var(--pat-form-input-field-padding-top-bottom) * 2);
+
+			textarea,
+			input {
+				margin: 0;
 			}
 		}
 

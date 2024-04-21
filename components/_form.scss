@@ -256,16 +256,17 @@
   
       textarea {
         height: 100%;
-        height: calc(100% + 2 * var(--pat-form-input-field-padding-top-bottom));
+        // height: calc(100% + 2 * var(--pat-form-input-field-padding-top-bottom));
         resize: none;
+        margin: 0;
       }
 
       img {
         max-width: 100%;
         width: 100%;
         object-fit: cover;
-        margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
-        margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+        // margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+        // margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
         border-radius: var(--pat-form-fields-border-radius);
         display: block;
       }
@@ -455,12 +456,16 @@
     align-items: center;
     column-gap: 15px;
     display: inline-flex; // !important can go after the next rewrite of form.scss
+    font-size: var(--pat-form-input-field-font-size);
+    font-weight: var(--pat-button-font-weight);
 
     &::file-selector-button {
       @include pat-button();
       line-height: var(--pat-form-input-field-line-height);
       margin-right: 10px;
       float: left;
+      font-size: var(--pat-form-input-field-font-size);
+      font-weight: var(--pat-button-font-weight);
     }
   }
 
@@ -755,6 +760,8 @@
             padding-bottom: var(--pat-form-input-field-padding-top-bottom);
             float: left; // Kill whitespaces.
             height: calc(var(--pat-form-input-field-line-height) + (2 * var(--pat-form-input-field-padding-top-bottom))); // Forces Safari to display the field with the right height.
+            font-size: var(--pat-form-input-field-font-size);
+            font-weight: var(--pat-button-font-weight);
 
             &#portal-header-colour-chooser-trigger {
               background-color: #{$colour-chooser-default};
@@ -994,6 +1001,7 @@
       textarea,
       select,
       .sortable-items-list,
+      .pat-sortable-blocks,
       .select2-container,
       .button-field,
       .group.textarea,

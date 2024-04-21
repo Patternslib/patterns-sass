@@ -20,6 +20,7 @@
     --pat-form-input-field-padding-top-bottom-disabled: 0;
     --pat-form-input-field-padding-left-right-disabled: 0;
     --pat-form-input-field-font-size: 1em;
+    --pat-form-input-field-font-weight: normal;
     --pat-form-input-field-tail-white: 1.2rem;
     --pat-form-input-field-background-colour: var(--colour-form-fields-background);
     --pat-form-input-field-background-colour-disabled: transparent;
@@ -98,6 +99,6 @@
     // Sortable blocks
     --pat-sortable-blocks-padding-start: 44px;
     --pat-sortable-blocks-button-width: 36px;
-    --pat-sortable-blocks-gap: 11px;
+    --pat-sortable-blocks-gap: 6px;
     --pat-sortable-blocks-item-info-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
