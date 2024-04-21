@@ -1,8 +1,8 @@
 :root {
-	--sortable-form-fields-handle-colour: #{$colour-accent};
+	--pat-sortable-form-fields-handle-colour: #{$colour-accent};
 }
 
-.sortable-form-fields {
+.pat-sortable-form-fields {
 	counter-reset: count;
 	-webkit-user-select: none;
 	user-select: none;
@@ -21,7 +21,7 @@
 		counter-increment: count;
 		padding: 11px 0;
 		position: relative;
-		margin: 0 0 0 44px;
+		margin: 0 0 0 var(--pat-sortable-blocks-padding-start);
 
 		&.dragged {
 			opacity: 0.5;
@@ -65,15 +65,15 @@
 		.sortable-handle {
 			content: counter(count);
 			text-align: center;
-            line-height: 36px;
+            line-height: var(--pat-sortable-blocks-button-width);
 			color: white;
 			display: block;
 			position: absolute;
-			left: -44px;
+			left: calc(-1 * var(--pat-sortable-blocks-padding-start));
 			top: 5px;
 			bottom: 5px;
-			width: 36px;
-			background: var(--sortable-form-fields-handle-colour);
+			width: var(--pat-sortable-blocks-button-width);
+			background: var(--pat-sortable-form-fields-handle-colour);
 			border-radius: $border-radii;
 			overflow: hidden;
 
@@ -88,7 +88,7 @@
 		.sortable-handle {
 			opacity: 0;
 			text-indent: -10em;
-			background: var(--sortable-form-fields-handle-colour);
+			background: var(--pat-sortable-form-fields-handle-colour);
 			cursor: grab;
 			color: transparent;
 
@@ -144,8 +144,8 @@
 			position: relative;
 			margin: 0;
 			line-height: var(--pat-form-input-field-line-height);
-			height: var(--sortable-form-fields-remove-button-height);
-			width: var(--sortable-form-fields-remove-button-width);
+			height: var(--pat-sortable-form-fields-remove-button-height);
+			width: var(--pat-sortable-form-fields-remove-button-width);
 			overflow: hidden; // Prevents click surface stretching out too much because of its content.
 			background: transparent;
 			position: absolute;
@@ -159,7 +159,7 @@
 
 			&:before {
 				content: '#{$glyph-minus}';
-				border-radius: var(--sortable-form-fields-remove-button-icon-border-radius);
+				border-radius: var(--pat-sortable-form-fields-remove-button-icon-border-radius);
 				background-color: $button-background-colour;
 				color: #{$button-text-colour};
 				transform: none;
@@ -169,8 +169,8 @@
 				top: 50%;
 				right: 0;
 				transform: translateY(-50%);
-				line-height: var(--sortable-form-fields-remove-button-icon-height);
-				height: var(--sortable-form-fields-remove-button-icon-height);
+				line-height: var(--pat-sortable-form-fields-remove-button-icon-height);
+				height: var(--pat-sortable-form-fields-remove-button-icon-height);
 				width: 100%;
 				text-align: center;
 				font-weight: normal;
