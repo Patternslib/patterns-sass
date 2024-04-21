@@ -1,5 +1,5 @@
 :root {
-	--pat-sortable-form-fields-handle-colour: #{$colour-accent};
+	--pat-sortable-blocks-handle-colour: #{$colour-accent};
 }
 
 .pat-sortable-blocks {
@@ -75,10 +75,10 @@
 			display: block;
 			position: absolute;
 			left: calc(-1 * var(--pat-sortable-blocks-padding-start));
-			top: 	var(--pat-sortable-blocks-gap);
-			bottom: var(--pat-sortable-blocks-gap);
+			top: 	calc(var(--pat-sortable-blocks-gap) - 0.5 * var(--pat-form-input-field-padding-top-bottom) );
+			bottom: calc(var(--pat-sortable-blocks-gap) - 0.5 * var(--pat-form-input-field-padding-top-bottom) );
 			width: var(--pat-sortable-blocks-button-width);
-			background: var(--pat-sortable-form-fields-handle-colour);
+			background: var(--pat-sortable-blocks-handle-colour);
 			border-radius: $border-radii;
 			overflow: hidden;
 
@@ -130,7 +130,7 @@
 		.sortable-handle {
 			opacity: 0;
 			text-indent: -10em;
-			background: var(--pat-sortable-form-fields-handle-colour);
+			background: var(--pat-sortable-blocks-handle-colour);
 			cursor: grab;
 			color: transparent;
 
@@ -184,9 +184,19 @@
 			background-color: white;
 			height: 100%;
 			border-radius: var(--pat-form-input-field-border-radius);
-			padding: 15px;
+			padding: 20px;
 			margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
 			margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+			box-shadow: var(--pat-sortable-blocks-item-info-box-shadow);
+
+			.title {
+				font-size: 1.2em;
+				margin-bottom: 10px;
+			}
+
+			*:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		.remove-clone {
@@ -195,8 +205,8 @@
 			position: relative;
 			margin: 0;
 			line-height: var(--pat-form-input-field-line-height);
-			height: var(--pat-sortable-form-fields-remove-button-height);
-			width: var(--pat-sortable-form-fields-remove-button-width);
+			height: var(--pat-sortable-blocks-remove-button-height);
+			width: var(--pat-sortable-blocks-remove-button-width);
 			overflow: hidden; // Prevents click surface stretching out too much because of its content.
 			background: transparent;
 			position: absolute;
@@ -210,7 +220,7 @@
 
 			&:before {
 				content: '#{$glyph-minus}';
-				border-radius: var(--pat-sortable-form-fields-remove-button-icon-border-radius);
+				border-radius: var(--pat-sortable-blocks-remove-button-icon-border-radius);
 				background-color: $button-background-colour;
 				color: #{$button-text-colour};
 				transform: none;
@@ -220,8 +230,8 @@
 				top: 50%;
 				right: 0;
 				transform: translateY(-50%);
-				line-height: var(--pat-sortable-form-fields-remove-button-icon-height);
-				height: var(--pat-sortable-form-fields-remove-button-icon-height);
+				line-height: var(--pat-sortable-blocks-remove-button-icon-height);
+				height: var(--pat-sortable-blocks-remove-button-icon-height);
 				width: 100%;
 				text-align: center;
 				font-weight: normal;
