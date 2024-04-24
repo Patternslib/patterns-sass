@@ -206,9 +206,10 @@
 			margin-top: 0;
 			margin-bottom: 0;
 			min-height: calc(var(--pat-form-input-field-line-height) + var(--pat-form-input-field-padding-top-bottom) * 2);
-
+			
 			textarea,
-			input {
+			input,
+			.output-field {
 				margin: 0;
 			}
 		}
