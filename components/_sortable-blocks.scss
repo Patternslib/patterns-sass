@@ -116,6 +116,7 @@
 
 			.pat-button {
 				margin-bottom: 15px;
+				width: var(--pat-sortable-blocks-button-width);
 				
 				&::before {
 					font-family: fontello;

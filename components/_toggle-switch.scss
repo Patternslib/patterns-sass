@@ -1,18 +1,3 @@
-:root {
-    --pat-toggle-height: 26px;
-    --pat-toggle-switch-border-radius: 14px;
-    --pat-toggle-background-colour-off: silver;
-    --pat-toggle-background-colour-on: #{$colour-success};
-    --pat-toggle-toggle-distance: 2px;
-    --pat-toggle-toggle-border-radius: 50%;
-    --pat-toggle-toggle-background-colour: white;
-    --pat-toggle-toggle-background-colour-on: white;
-    --pat-toggle-text-colour: white;
-    --pat-toggle-padding-start-end: 10px;
-    --pat-toggle-box-shadow: none;
-    --pat-toggle-box-shadow-on: none;
-}
-
 .pat-toggle-switch {
     label {
         display: inline-block;
@@ -55,6 +40,7 @@
             background-color: var(--pat-toggle-background-colour-on);
             color: var(--pat-toggle-text-colour);
             box-shadow: var(--pat-toggle-box-shadow-on);
+            text-shadow: var(--pat-toggle-text-shadow-on);
 
             &::after {
                 left: calc(100% - ( var(--pat-toggle-height) - var(--pat-toggle-toggle-distance) ) );
