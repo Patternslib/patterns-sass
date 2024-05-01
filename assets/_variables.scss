@@ -75,7 +75,6 @@ $collapsible-button-height: 31px !default;
     --border-radii: $border-radii;
 
     // Toggle
-
     --pat-toggle-height: 26px;
     --pat-toggle-switch-border-radius: 14px;
     --pat-toggle-background-colour-off: silver;
@@ -92,19 +91,15 @@ $collapsible-button-height: 31px !default;
     --pat-toggle-text-shadow-on: none;
 
     // Auto suggest
-
     --pat-auto-suggest-cancel-button-edge-distance: 12px;
 
     // Portlet
-
     --pat-portlet-background-colour: rgba(255, 255, 255, 0.5);
 
     // Form
-
     --pat-form-horizontal-label-width: 27%;
     --pat-form-horizontal-extra-width: 26px;
     --pat-form-horizontal-column-gap: 25px;
-
     --pat-form-proportion-gutter: 15px;
     --pat-form-input-field-line-height: 28px;
     --pat-form-input-field-padding-top-bottom-disabled: 0;
@@ -134,25 +129,20 @@ $collapsible-button-height: 31px !default;
     --pat-form-help-button-icon-height: 37px;
     --pat-form-help-button-icon-glyph: $glyph-question-mark;
     --pat-form-help-button-icon-border-radius: #{$border-radii};
-
     --pat-form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5);
-
     --pat-form-panel-padding: 40px;
     --pat-form-panel-padding-large: 40px;
     --pat-form-panel-padding-medium: 30px;
     --pat-form-panel-padding-small: 20px;
-
     --pat-form-input-field-padding-top-bottom: 4px;
     --pat-form-input-field-padding-start-end: 10px;
     --pat-form-input-field-border: none;
     --pat-form-input-field-box-shadow: none;
     --pat-form-input-field-border-radius: #{$border-radii};
-
     --pat-form-proportion-ceiling: 260%;
     --pat-form-proportion-name: 30%;
     --pat-form-proportion-value: 80%;
     --pat-form-proportion-value-small: 100%;
-
     --pat-form-input-field-tail-white: 26px;
 
     // Select 
@@ -191,4 +181,5 @@ $collapsible-button-height: 31px !default;
     --pat-sortable-blocks-button-width: 36px;
     --pat-sortable-blocks-gap: 6px;
     --pat-sortable-blocks-item-info-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+    --pat-sortable-blocks-handle-colour: #{$colour-accent};
 }

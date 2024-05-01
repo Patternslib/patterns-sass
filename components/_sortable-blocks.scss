@@ -1,7 +1,3 @@
-:root {
-	--pat-sortable-blocks-handle-colour: #{$colour-accent};
-}
-
 .pat-sortable-blocks {
 	counter-reset: count;
 	-webkit-user-select: none;
