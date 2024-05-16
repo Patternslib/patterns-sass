@@ -182,4 +182,8 @@ $collapsible-button-height: 31px !default;
     --pat-sortable-blocks-gap: 6px;
     --pat-sortable-blocks-item-info-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
     --pat-sortable-blocks-handle-colour: #{$colour-accent};
+
+    // Context menu
+    --pat-context-menu-panel-distance: 1.7em;
+    --pat-context-menu-panel-width: 250px;
 }
