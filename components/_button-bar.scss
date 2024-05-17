@@ -7,6 +7,9 @@
     .pat-button {
         margin: 0;
         
+        &.float-after {
+            margin-left: auto;
+        }
     }
 }
 
