@@ -3,6 +3,7 @@
 $glyph-resize-full: '\e832' !default;
 $modal-panel-body-top-padding: 5px !default;
 $modal-panel-body-left-right-padding: 30px !default;
+$modal-panel-body-bottom-padding: 30px !default;
 $modal-panel-width-small: 640px !default;
 $modal-panel-width-medium: 840px !default;
 $modal-panel-width-large: 1100px !default;
@@ -89,7 +90,7 @@ $modal-panel-width-large: 1100px !default;
       bottom: 0;
       margin-bottom: 1px;
       background: white;
-      padding-bottom: 10px;
+      padding-bottom: $modal-panel-body-bottom-padding;
       padding-top: 25px;
       border-top: 1px solid white;
       z-index: 10;
@@ -130,6 +131,7 @@ $modal-panel-width-large: 1100px !default;
       left: 30px;
       margin: 0;
       padding-top: 20px;
+      padding-bottom: 20px;
       border-top: 1px silver solid;
       background-color: white;
     }
@@ -294,7 +296,7 @@ div.pat-modal {
             user-select: none;
           }
 
-          &.has-button-bar {
+          &:has(.pat-button-bar) {
             padding-bottom: 20px;
           }
 
@@ -324,7 +326,7 @@ div.pat-modal {
                     position: static;
 
                     .sheet-content {
-                      &.has-button-bar {
+                      &:has(.pat-button-bar) {
                         padding-bottom: 80px;
                       }
 
@@ -354,15 +356,15 @@ div.pat-modal {
             }
           }
 
-          .container > .button-bar:last-child,
-          .container .main.button-bar {
+          .container > .pat-button-bar:last-child,
+          .container .main.pat-button-bar {
             position: relative !important;
             
             bottom: 0;
             border-top: 1px solid silver;
           }
 
-          .slick-slide:not(.slick-active) .sheet-content > .button-bar:last-child {
+          .slick-slide:not(.slick-active) .sheet-content > .pat-button-bar:last-child {
             opacity: 0;
           }
         }
@@ -504,16 +506,16 @@ div.pat-modal {
         overflow-y: auto; 
         padding-top: $modal-panel-body-top-padding;       
 
-        > .button-bar:last-child,
-        .container > .button-bar:last-child,
-        .container > form > .button-bar:last-child,
-        .container > .panel-sheets > .sheet-content > form > .button-bar:last-child {
+        > .pat-button-bar:last-child,
+        .container > .pat-button-bar:last-child,
+        .container > form > .pat-button-bar:last-child,
+        .container > .panel-sheets > .sheet-content > form > .pat-button-bar:last-child {
           position: -webkit-sticky !important;
           position: sticky !important;
           bottom: -21px;
           // margin-bottom: -20px;
           background: white;
-          padding-bottom: 10px;
+          padding-bottom: 20px;
           padding-top: 20px;
           border-top: 1px solid white;
           z-index: 10;
@@ -524,8 +526,8 @@ div.pat-modal {
         }
       }
 
-      > .button-bar,
-        .container > .button-bar {
+      > .pat-button-bar,
+        .container > .pat-button-bar {
         margin: 0;
         padding-bottom: 5px;
       }

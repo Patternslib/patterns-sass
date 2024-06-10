@@ -184,7 +184,7 @@ $transparent-light: rgba(0, 8, 16, 0.08) !default;
 		}
 
 		.panel-content {
-			top: 53px;
+			top: var(--pat-context-menu-panel-distance, 1.7em);
 		}
 	}
 
@@ -210,12 +210,12 @@ $transparent-light: rgba(0, 8, 16, 0.08) !default;
 
 	.panel-content {
 		position: absolute;
-		top: 1.8em;
+		top: var(--pat-context-menu-panel-distance, 1.7em);
 		left: 0;
 		display: none;
 		background-color: white;
 		padding: 15px !important; // !important overrules inline styles by .js
-		width: 250px;
+		width: var(--pat-context-menu-panel-width, 250px);;
 		z-index: 10;
 		border-radius: $border-radii;
 		font-size: $base-font-size;

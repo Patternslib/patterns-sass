@@ -49,6 +49,7 @@ $pat-toolbar-z-index: 2 !default;
 	--pat-select-box-background-colour: #{$button-background-colour};
 	--pat-select-box-background-colour-hover: #{$button-background-colour-hover};
 	--pat-select-box-padding-start: 18px;
+	--pat-context-menu-panel-distance: 52px;
 	
 	@include screen-size(small) {
 		margin: 
@@ -460,6 +461,10 @@ $pat-toolbar-z-index: 2 !default;
 			> .pat-context-menu > .pat-button {
 				margin: 0;
 				position: relative; // Raise above the :before element of bumpy toolbars.
+			}
+
+			.save-button {
+				--pat-context-menu-panel-width: 450px;
 			}
 		}
 

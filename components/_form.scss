@@ -88,7 +88,7 @@
 
       &.closed {
         &:hover {
-          box-shadow: var(--pat-form-panels-box-shadow-hover);
+          box-shadow: var(--pat-form-panel-box-shadow-hover);
         }
       }
 
@@ -119,12 +119,16 @@
   .message {
     @include pat-message();
     @include box-sizing();
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     display: block;
     clear: both;
     margin-top: 0.5em;
     font-style: normal;
     font-weight: $font-weight-normal;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   h2 {
@@ -206,7 +210,8 @@
 
       input,
       .output-field,
-      select {
+      select,
+      textarea {
         position: absolute;
         top: 0;
         left: 0;
@@ -243,6 +248,28 @@
 
     &.layout-postal-code-place-line-nl {
       grid-template-columns: 100px auto;   
+    }
+
+    &.layout-image-caption {  
+      grid-template-columns: 35% auto;
+      min-height: 87px;
+  
+      textarea {
+        height: 100%;
+        // height: calc(100% + 2 * var(--pat-form-input-field-padding-top-bottom));
+        resize: none;
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        // margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+        // margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+        border-radius: var(--pat-form-fields-border-radius);
+        display: block;
+      }
     }
   }
 
@@ -331,9 +358,9 @@
       display: inline-block;
     }
 
-    &:hover {
-      box-shadow: inset 0 0 1px 1px $colour-accent;
-    }
+    // &:hover {
+    //   box-shadow: inset 0 0 1px 1px $colour-accent;
+    // }
 
     .cancel-button,
     .select2-search-choice-close {
@@ -429,12 +456,16 @@
     align-items: center;
     column-gap: 15px;
     display: inline-flex; // !important can go after the next rewrite of form.scss
+    font-size: var(--pat-form-input-field-font-size);
+    font-weight: var(--pat-button-font-weight);
 
     &::file-selector-button {
       @include pat-button();
       line-height: var(--pat-form-input-field-line-height);
       margin-right: 10px;
       float: left;
+      font-size: var(--pat-form-input-field-font-size);
+      font-weight: var(--pat-button-font-weight);
     }
   }
 
@@ -683,7 +714,7 @@
 
         &:before {
           content: '#{$glyph-help}';
-          border-radius: $border-radii;
+          border-radius: var(--pat-form-help-button-icon-border-radius);
           background-color: $button-background-colour-default;
           transform: none;
           margin: 0;
@@ -729,6 +760,8 @@
             padding-bottom: var(--pat-form-input-field-padding-top-bottom);
             float: left; // Kill whitespaces.
             height: calc(var(--pat-form-input-field-line-height) + (2 * var(--pat-form-input-field-padding-top-bottom))); // Forces Safari to display the field with the right height.
+            font-size: var(--pat-form-input-field-font-size);
+            font-weight: var(--pat-button-font-weight);
 
             &#portal-header-colour-chooser-trigger {
               background-color: #{$colour-chooser-default};
@@ -840,14 +873,20 @@
             input,
             .pat-screenshot,
             video,
-            img {
+            img,
+            .caption {
               width: 100%;
+              min-width: 100%;
+              max-width: 100%;
+              display: block;
+              border-radius: var(--pat-form-input-field-border-radius)
             }
 
             input,
             video,
-            img {
-              margin-bottom: 5px;
+            img,
+            .caption {
+              margin-bottom: 10px;
             }
           }
 
@@ -962,6 +1001,7 @@
       textarea,
       select,
       .sortable-items-list,
+      .pat-sortable-blocks,
       .select2-container,
       .button-field,
       .group.textarea,

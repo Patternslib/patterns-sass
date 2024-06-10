@@ -2,10 +2,14 @@
     display: flex;
     justify-content: start;
     gap: 15px;
+    margin: 15px 0;
 
     .pat-button {
         margin: 0;
         
+        &.float-after {
+            margin-left: auto;
+        }
     }
 }
 

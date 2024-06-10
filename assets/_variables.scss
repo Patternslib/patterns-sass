@@ -1,30 +1,116 @@
+$body-font-family: 'Source Sans Pro', sans-serif !default;
+$font-weight-normal: normal !default;
+
+$break-small: 768px !default;
+$break-large: 1280px !default;
+$pat-tail-white: 15px !default;
+
+// Menu list
+
+$menu-list-top-bottom-padding: 2px !default;
+
+// Buttons
+
+$button-border: none !default;
+$button-border-radius: $border-radii !default;
+$button-background-image: none !default;
+$button-font-weight: bold !default;
+
+$button-text-colour: white !default;
+$button-text-colour-hover: white !default;
+$button-background-colour: $colour-accent !default;
+$button-background-colour-hover: darken($colour-accent, 10%) !default;
+$button-shadow: none !default;
+
+$button-text-colour-subdued: rgba(0, 0, 0, 0.6) !default;
+$button-text-colour-subdued-hover: rgba(0, 0, 0, 1) !default;
+$button-background-colour-subdued: rgba(0, 0, 0, 0.1) !default;
+$button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15) !default;
+
+$button-background-colour-default: $colour-accent !default;
+$button-background-colour-default-hover: darken($colour-accent, 10%) !default;
+$button-text-colour-default: white !default;
+$button-text-colour-default-hover: white !default;
+$button-shadow-default: none !default;
+
+$button-text-colour-disabled: rgba(black, 0.3) !default;
+$button-text-colour-disabled-hover: rgba(black, 0.3) !default;
+$button-background-colour-disabled: $button-background-colour !default;
+$button-background-colour-disabled-hover: $button-background-colour !default;
+
+$button-height: 35px !default;
+$button-line-height: 35px !default;
+$button-font-size: 1em !default;
+$button-paddings: 0 1em !default;
+
+$button-small-height: 20px !default;
+$button-small-line-height: 20px !default;
+$button-small-font-size: 0.8em !default;
+$button-small-paddings: 0 0.8em !default;
+$button-small-shadow: none !default;
+
+$pat-toolbar-button-height: $button-height !default;
+$pat-toolbar-button-line-height: $button-line-height !default;
+
+$grid-gutter: '1em' !default;
+
+$default-screen-padding: 40px !default;
+$default-screen-padding-small: 15px !default;
+
+$default-tail-white: 25px !default;
+
+$border-radii: 10px !default;
+$tooltip-border-radii: #{$border-radii} !default;
+$tooltip-padding: 18px !default;
+$default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) !default;
+$default-box-shadow-hover: 0 0 15px rgba(0, 0, 0, 0.2) !default;
+$default-box-shadow-active: inset 0 0 10px rgba(0, 0, 0, 0.4) !default;
+$default-focus-marking: 0 0 2px rgba(0, 0, 0, 0.5) !default;
+$form-fields-border-radius: #{$border-radii} !default;
+$form-input-field-line-height: inherit !default;
+
+$collapsible-button-height: 31px !default;
+
 :root {
-    --border-radii: 10px;
+    --border-radii: #{$border-radii};
+
+    // Toggle
+    --pat-toggle-height: 26px;
+    --pat-toggle-switch-border-radius: 14px;
+    --pat-toggle-background-colour-off: silver;
+    --pat-toggle-background-colour-on: #{$colour-success};
+    --pat-toggle-toggle-distance: 2px;
+    --pat-toggle-toggle-border-radius: 50%;
+    --pat-toggle-toggle-background-colour: white;
+    --pat-toggle-toggle-background-colour-on: white;
+    --pat-toggle-text-colour: white;
+    --pat-toggle-padding-start-end: 10px;
+    --pat-toggle-box-shadow: none;
+    --pat-toggle-box-shadow-on: none;
+    --pat-toggle-text-colour: white;
+    --pat-toggle-text-shadow-on: none;
 
     // Auto suggest
-
     --pat-auto-suggest-cancel-button-edge-distance: 12px;
 
     // Portlet
-
     --pat-portlet-background-colour: rgba(255, 255, 255, 0.5);
 
     // Form
-
     --pat-form-horizontal-label-width: 27%;
     --pat-form-horizontal-extra-width: 26px;
     --pat-form-horizontal-column-gap: 25px;
-
     --pat-form-proportion-gutter: 15px;
     --pat-form-input-field-line-height: 28px;
     --pat-form-input-field-padding-top-bottom-disabled: 0;
     --pat-form-input-field-padding-left-right-disabled: 0;
     --pat-form-input-field-font-size: 1em;
+    --pat-form-input-field-font-weight: normal;
     --pat-form-input-field-tail-white: 1.2rem;
     --pat-form-input-field-background-colour: var(--colour-form-fields-background);
     --pat-form-input-field-background-colour-disabled: transparent;
     --pat-form-input-field-text-colour: black;
-    --pat-form-fields-border-radius: $border-radii;
+    --pat-form-fields-border-radius: var(--border-radii);
     --pat-form-placeholder-colour: rgba(0, 0, 0, 0.35);
     --pat-form-input-field-text: inherit;
     --pat-form-input-field-text-disabled: rgba(0, 0, 0, 0.5);
@@ -42,25 +128,21 @@
     --pat-form-help-button-width: 26px;
     --pat-form-help-button-icon-height: 37px;
     --pat-form-help-button-icon-glyph: $glyph-question-mark;
-
-    --pat-form-panels-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5);
-
+    --pat-form-help-button-icon-border-radius: #{$border-radii};
+    --pat-form-panel-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5);
     --pat-form-panel-padding: 40px;
     --pat-form-panel-padding-large: 40px;
     --pat-form-panel-padding-medium: 30px;
     --pat-form-panel-padding-small: 20px;
-
     --pat-form-input-field-padding-top-bottom: 4px;
     --pat-form-input-field-padding-start-end: 10px;
     --pat-form-input-field-border: none;
     --pat-form-input-field-box-shadow: none;
     --pat-form-input-field-border-radius: #{$border-radii};
-
     --pat-form-proportion-ceiling: 260%;
     --pat-form-proportion-name: 30%;
     --pat-form-proportion-value: 80%;
     --pat-form-proportion-value-small: 100%;
-
     --pat-form-input-field-tail-white: 26px;
 
     // Select 
@@ -93,4 +175,20 @@
     --pat-button-font-size: 1em;
     --pat-button-font-weight: bold;
     --pat-button-paddings: 0 1em;
+
+    // Sortable blocks
+    --pat-sortable-blocks-padding-start: 44px;
+    --pat-sortable-blocks-button-width: 36px;
+    --pat-sortable-blocks-gap: 6px;
+    --pat-sortable-blocks-item-info-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+    --pat-sortable-blocks-handle-colour: #{$colour-accent};
+    --pat-sortable-blocks-remove-button-width: 20px;
+    --pat-sortable-blocks-remove-button-height: 34px;
+    --pat-sortable-blocks-remove-button-icon-height: 20px;
+    --pat-sortable-blocks-remove-button-icon-border-radius: 50%;
+    --pat-sortable-blocks-item-info-box-shadow: #{$default-box-shadow};
+
+    // Context menu
+    --pat-context-menu-panel-distance: 1.7em;
+    --pat-context-menu-panel-width: 250px;
 }
