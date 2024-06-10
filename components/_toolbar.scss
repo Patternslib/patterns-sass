@@ -30,6 +30,9 @@ $pat-toolbar-z-index: 2 !default;
 	--pat-toolbar-bump-distance-scroll-down: #{$pat-toolbar-bump-distance-scroll-down};
 	--pat-toolbar-padding: 10px;
 	--pat-toolbar-margin-bottom: 40px;
+	--pat-toolbar-top-distance: #{$pat-toolbar-top-distance};
+	--pat-toolbar-top-distance-scroll-down: #{$pat-toolbar-top-distance-scroll-down};
+	--pat-toolbar-hiding-speed: #{$pat-toolbar-hiding-speed};
 
 	@include screen-size(small) {
 		--pat-toolbar-auto-hide-offset: -15px;
