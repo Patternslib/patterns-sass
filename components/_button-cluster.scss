@@ -237,7 +237,8 @@ $pat-button-cluster-text-colour: $colour-link !default;
         padding-bottom: 15px;
         padding-top: $button-height + 25px;
 
-        a {
+        a,
+        label {
           animation: fadeIn 0.5s;
           animation-delay: 0.2s;
           animation-fill-mode: forwards;
@@ -270,7 +271,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
           float: left;
         }
 
-        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
 
         &:before {
           font-family: fontello;
@@ -320,7 +321,8 @@ $pat-button-cluster-text-colour: $colour-link !default;
             }
         }
 
-        a {
+        a,
+        label {
           display: block;
           float: none;
           padding: 0.4em 0.7em;
@@ -332,6 +334,12 @@ $pat-button-cluster-text-colour: $colour-link !default;
           border: none !important;
           opacity: 0;
           border-radius: 0 !important;
+          height: auto;
+
+          &:after {
+            left: 0;
+            right: 0;
+          }
 
           &:hover {
             background-color: rgba(0,0,0,0.05);
