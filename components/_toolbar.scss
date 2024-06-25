@@ -616,11 +616,6 @@ $pat-toolbar-z-index: 2 !default;
 			box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
 		}
 
-		&:not(.active):not(.current):not([disabled]):not(.default):hover {
-			color: $pat-toolbar-icon-text-colour-hover;
-			background-color: $pat-toolbar-icon-background-colour-hover;
-		}
-
 		&:hover {
 			text-decoration: none;
 		}
@@ -630,8 +625,6 @@ $pat-toolbar-z-index: 2 !default;
 		&.locked {
 			position: relative;
 			padding-right: 3em;
-			// border: 1px $colour-orange solid;
-			// color: $colour-orange;
 
 			&:after {
 				display: block;
@@ -659,18 +652,6 @@ $pat-toolbar-z-index: 2 !default;
 		}
 	}
 
-	// >,
-	// .toolbar-section >,
-	// .pat-toolbar-section > {
-	// 	.pat-button,
-	// 	.pat-icon,
-	// 	.pat-back-button,
-	// 	.pat-select,
-	// 	.pat-context-menu {
-	// 		margin-right: var(--pat-toolbar-element-separation);
-	// 	}
-	// }
-
 	.pat-progress-bar {
 		margin-top: 9px;
 		width: 540px;
@@ -686,12 +667,16 @@ $pat-toolbar-z-index: 2 !default;
 		color: rgba(0,0,0,0.6);
 		cursor: default;
 		line-height: var(--pat-toolbar-button-line-height);
-		// float: left;
 		border-radius: $button-border-radius;
 		display: inline-block;
 		text-align: left; body[dir=rtl] & { text-align: right; }
 		background-color: $pat-toolbar-icon-background-colour;
-		color: $pat-toolbar-icon-text-colour;
+		color: #{$pat-toolbar-icon-text-colour};
+
+		&:not(.active):not(.current):not([disabled]):not(.default):hover {
+			color: #{$pat-toolbar-icon-text-colour-hover};
+			background-color: #{$pat-toolbar-icon-background-colour-hover};
+		}
 
 		&.progress {
 			.pie-graph {
@@ -746,11 +731,11 @@ $pat-toolbar-z-index: 2 !default;
 		}
 	
 		&.warning {
-			color: $colour-warning;
+			color: #{$colour-warning};
 			box-shadow: none;
 		
 			&:before {
-				color: $colour-warning;
+				color: #{$colour-warning};
 			}
 		}
 

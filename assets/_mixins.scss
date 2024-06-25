@@ -974,46 +974,41 @@ $pat-table-sorting-icon-position: right !default;
   color: $button-text-colour;
   background-color: $button-background-colour;
     
-  &:not([disabled]):hover {
-    color: $button-text-colour-hover;
-    background-color: $button-background-colour-hover;
-    // -webkit-filter: brightness(1.15);
-    // filter: brightness(1.15);
+  &:hover {
+    color: #{$button-text-colour-hover};
+    background-color: #{$button-background-colour-hover};
+    text-decoration: none;
+    color: #{$button-text-colour-hover};
   }
 
   &.default {
-    color: $button-text-colour-default;
-    background-color: $button-background-colour-default;
-    box-shadow: $button-shadow-default;
+    color: #{$button-text-colour-default};
+    background-color: #{$button-background-colour-default};
+    box-shadow: #{$button-shadow-default};
     
-    &:not([disabled]):hover {
-      background-color: $button-background-colour-default-hover;
-      color: $button-text-colour-default-hover;
-      // -webkit-filter: brightness(1.15);
-      // filter: brightness(1.15);
+    &:hover {
+      background-color: #{$button-background-colour-default-hover};
+      color: #{$button-text-colour-default-hover};
     }
   }
 
   &[disabled],
   &.disabled,
+  &:not([name]):not([href]),
   &.default[disabled],
-  &.default.disabled {
-    color: $button-text-colour-disabled;
-    background-color: $button-background-colour-disabled;
+  &.default.disabled,
+  &.default:not([name]):not([href]) {
+    color: #{$button-text-colour-disabled};
+    background-color: #{$button-background-colour-disabled};
 
     &:hover {
-      color: $button-text-colour-disabled-hover;
-      background-color: $button-background-colour-disabled-hover;
+      color: #{$button-text-colour-disabled-hover};
+      background-color: #{$button-background-colour-disabled-hover};
     }
   }
 
   @media print {
     display: none;
-  }
-
-  &:not(.icon):not(.iconified):not(.link):not(.active):not(.default):not(.current):not(.checked):not([disabled]):hover {
-    text-decoration: none;
-    color: $button-text-colour-hover;
   }
 
   max-width: 100%;
