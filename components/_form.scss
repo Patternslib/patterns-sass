@@ -1019,7 +1019,7 @@
         display: block;
         margin-top: 0.2em;
         width: 100%;
-        font-weight: $font-weight-normal;
+        font-weight: #{$font-weight-normal};
       }   
     }
 
@@ -1040,7 +1040,7 @@
     .legend,
     > label,
     .group:not(.pat-checklist) > label {
-      font-weight: bold;
+      font-weight: #{$font-weight-normal};
       display: block;
       margin-bottom: 1em;
     }
