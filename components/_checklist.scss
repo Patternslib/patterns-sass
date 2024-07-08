@@ -194,31 +194,50 @@ label.pat-checklist {
 		}
 	}
 
-    &.radio-bars:not(.free-form) {
+    &.radio-bars:not(.free-form),
+	&.bars:not(.free-form) {
+		--pat-checklist-label-padding-start: 50px;
+
     	border-radius: $border-radii;
 		box-shadow: inset 0 1px 6px rgba(0,0,0,0.15);
 		padding: 5px 5px 0 5px;
 		background: $colour-base;
 
-		label {
+		> label {
 	    	border-radius: 0.75 * $border-radii;
-	    	padding: 0.6em 0.6em 0.6em 40px;
+	    	padding: 0.6em 0.6em 0.6em 0;
 	    	margin-bottom: 5px; 
 
-	    	&:before,
-	    	&:after {
-	    		left: 12px !important;
-	    		top: 50%;
-	    		margin-top: 0;
-	    	}
+			.label-fragment-description {
+				margin-bottom: 0;
+			}
+
+			&:before {
+				justify-self: center !important;
+				align-self: center;
+				grid-row: 1 / last !important;
+				top: auto !important;
+				transform: none !important;
+			}
+
+	    	// &:before,
+	    	// &:after {
+	    	// 	left: 12px !important;
+	    	// 	top: 50%;
+	    	// 	margin-top: 0;
+	    	// }
 
 	    	&:hover {
 				background: rgba(0,0,0,0.05);
 	    	}
 
-			&:has(input:checked):before {
+			&:has(input:checked) {
 				background: $colour-accent;
 				color: white;
+
+				> * {
+					color: white;
+				}
 
 				&:before {
 					color: black;
