@@ -157,6 +157,16 @@ $pat-table-sorting-icon-position: right !default;
           content: '#{$glyph-angle-right}';
         }
       }
+
+      &.current {
+        // background-color: white;
+        color: $colour-accent;
+
+        a {
+          color: $colour-accent;
+          cursor: default;
+        }
+      }
     }
   }
 }
