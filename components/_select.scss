@@ -165,7 +165,7 @@
 
   &:not([class*="icon-"]) {
     &:before {
-      font-size: var(--pat-select-font-size);
+      font-size: var(--pat-select-box-font-size);
       content: attr(data-option);
       // padding-right: var(--pat-select-box-arrow-width);
       white-space: nowrap;
