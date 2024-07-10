@@ -106,7 +106,7 @@ $pat-table-sorting-icon-position: right !default;
       width: 100%;
       background: none;
       box-sizing: border-box;
-      font-size: $base-font-size;
+      font-size: #{$base-font-size};
       display: grid;
       grid-template-columns: var(--pat-menu-list-item-padding-start) auto;
       border-radius: var(--border-radii);

@@ -42,8 +42,8 @@ $button-background-colour-disabled-hover: $button-background-colour !default;
 
 $button-height: 35px !default;
 $button-line-height: 35px !default;
-$button-font-size: 1rem !default;
-$button-paddings: 0 1rem !default;
+$button-font-size: #{$base-font-size} !default;
+$button-paddings: 0 #{$base-font-size} !default;
 
 $button-small-height: 20px !default;
 $button-small-line-height: 20px !default;
@@ -54,7 +54,7 @@ $button-small-shadow: none !default;
 $pat-toolbar-button-height: $button-height !default;
 $pat-toolbar-button-line-height: $button-line-height !default;
 
-$grid-gutter: '1rem' !default;
+$grid-gutter: '#{$base-font-size}' !default;
 
 $default-screen-padding: 40px !default;
 $default-screen-padding-small: 15px !default;
@@ -106,7 +106,7 @@ $collapsible-button-height: 31px !default;
     --pat-form-input-field-line-height: 28px;
     --pat-form-input-field-padding-top-bottom-disabled: 0;
     --pat-form-input-field-padding-left-right-disabled: 0;
-    --pat-form-input-field-font-size: 1rem;
+    --pat-form-input-field-font-size: #{$base-font-size};
     --pat-form-input-field-font-weight: normal;
     --pat-form-input-field-tail-white: 1.2rem;
     --pat-form-input-field-background-colour: var(--colour-form-fields-background);
@@ -173,9 +173,9 @@ $collapsible-button-height: 31px !default;
     // Buttons
     --pat-button-height: 35px;
     --pat-button-line-height: 35px;
-    --pat-button-font-size: 1rem;
+    --pat-button-font-size: #{$base-font-size};
     --pat-button-font-weight: bold;
-    --pat-button-paddings: 0 1rem;
+    --pat-button-paddings: 0 #{$base-font-size};
 
     // Sortable blocks
     --pat-sortable-blocks-padding-start: 44px;
