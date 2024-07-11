@@ -47,7 +47,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
         float: left; body[dir=rtl] & { float: right }
         border: none;
         background: transparent;
-        padding: 0 12px;
+        padding: 0 10px;
         color: $pat-button-cluster-text-colour;
         cursor: default;
         line-height: $pat-button-cluster-button-line-height;
@@ -71,6 +71,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
           text-underline-offset: 4px;
           color: black;
           cursor: pointer;
+          background-color: transparent !important;
         }
 
         &[href]:not(.current):hover,

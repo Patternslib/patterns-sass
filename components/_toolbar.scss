@@ -1032,7 +1032,7 @@ $pat-toolbar-z-index: 2 !default;
 				// transform: scale(0.8);
 
 				@include screen-size(medium-large) {
-					left: calc(-1 * var(--pat-toolbar-search-field-width-open) - 5px);
+					left: calc(-1 * var(--pat-toolbar-search-field-width-open));
 					padding-left: var(--pat-toolbar-button-height);
 				}
 
