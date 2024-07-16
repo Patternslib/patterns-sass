@@ -860,6 +860,14 @@
           column-gap: 25px;
           grid-auto-columns: var(--pat-form-horizontal-label-width) auto 0 var(--pat-form-horizontal-extra-width);
 
+          > *:last-child {
+            margin-bottom: 0;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
           &.image-selection,
           &.object-upload,
           &.image-upload,
