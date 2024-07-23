@@ -979,10 +979,14 @@ $pat-table-sorting-icon-position: right !default;
   padding: $button-paddings;
   font-size: $button-font-size;
   vertical-align: text-bottom;
-  font-weight: $button-font-weight;
+  font-weight: var(--pat-button-font-size);
   box-shadow: $button-shadow;
   color: $button-text-colour;
   background-color: $button-background-colour;
+
+  &:before {
+    line-height: inherit;
+  }
     
   &:hover {
     color: #{$button-text-colour-hover};
