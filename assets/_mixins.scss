@@ -20,6 +20,7 @@ $pat-form-panel-padding-small: 20px !default;
 $pat-message-box-shadow: 0 0 0 2px white !default;
 $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 $pat-table-sorting-icon-position: right !default;
+$bullet-space: 22px !default;
 
 @mixin pat-form-input-field {
   -webkit-appearance: none;
@@ -853,8 +854,8 @@ $pat-table-sorting-icon-position: right !default;
 
 @mixin pat-message() {
     color: black;
-    padding: 0.8em;
-    margin-bottom: 1em;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
     background-color: #efefef;
     border-radius: $border-radii;
     line-height: 1.3;
@@ -876,9 +877,17 @@ $pat-table-sorting-icon-position: right !default;
       }
     }
 
+    .pat-button {
+      text-decoration: none;
+    }
+
     > p,
     .message-title {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.4rem;
+    }
+
+    .message-title {
+      font-size: 1.5rem;
     }
 
     > *:last-child {
@@ -899,10 +908,18 @@ $pat-table-sorting-icon-position: right !default;
         &:before {
           color: $colour-notice;
         }
+
+        .pat-button {
+          @include button-default;
+        }
     }
 
     &.info {
         background-color: $colour-info-background;
+
+        .pat-button {
+          @include button-default;
+        }
     }
 
     &.error {
@@ -918,9 +935,8 @@ $pat-table-sorting-icon-position: right !default;
           color: $colour-warning;
         }
 
-        a:not(.pat-button) { 
-          color: rgba(0,0,0,0.6); 
-          text-decoration: underline;
+        .pat-button {
+          @include button-default;
         }
     }
 }
@@ -965,6 +981,17 @@ $pat-table-sorting-icon-position: right !default;
   }
 }
 
+@mixin button-default {
+  color: #{$button-text-colour-default};
+  background-color: #{$button-background-colour-default};
+  box-shadow: #{$button-shadow-default};
+
+  &:hover {
+    background-color: #{$button-background-colour-default-hover};
+    color: #{$button-text-colour-default-hover};
+  }
+}
+
 @mixin pat-button() {
   font-family: $body-font-family;
   margin: 0;
@@ -992,14 +1019,7 @@ $pat-table-sorting-icon-position: right !default;
   }
 
   &.default {
-    color: #{$button-text-colour-default};
-    background-color: #{$button-background-colour-default};
-    box-shadow: #{$button-shadow-default};
-    
-    &:hover {
-      background-color: #{$button-background-colour-default-hover};
-      color: #{$button-text-colour-default-hover};
-    }
+    @include button-default;
   }
 
   &[disabled],
