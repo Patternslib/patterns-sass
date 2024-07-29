@@ -19,7 +19,7 @@ $pat-notifications-top-distance: 0 !default;
     @include box-sizing;
   }
 
-  padding: 13px;
+  padding: 1rem;
   margin-bottom: 1em;
   box-shadow: 0 1px 10px rgba(0,0,0,0.2);
   display: block;
@@ -40,10 +40,10 @@ $pat-notifications-top-distance: 0 !default;
 
   &.success {
     background-color: $colour-success-background;
-    color: darken($colour-success, 50%);
+    color: black;
     
     * {
-      color: darken($colour-success, 50%) !important;
+      color: black !important;
       //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     }
   }
