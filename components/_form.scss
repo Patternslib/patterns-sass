@@ -832,6 +832,12 @@
           }
         }
 
+        .group {
+          &.pat-form-field-button-bar {
+            --pat-button-bar-margin-top-bottom: 0;
+          }
+        }
+
         fieldset.group,
         div.group,
         > .pat-checklist {
