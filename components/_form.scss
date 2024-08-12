@@ -835,6 +835,8 @@
         .group {
           &.pat-form-field-button-bar {
             --pat-button-bar-margin-top-bottom: 0;
+            --pat-button-height: var(--pat-form-input-field-line-height);
+            --pat-form-input-field-line-height: var(--pat-form-input-field-line-height);
           }
         }
 
