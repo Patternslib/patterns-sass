@@ -796,6 +796,7 @@ $pat-toolbar-z-index: 2 !default;
 
 		&.level-up {
 			&:before {
+				font-family: fontello;
 				content: "#{$glyph-level-up}";
 				transform: scaleX(-100%);
 			}
