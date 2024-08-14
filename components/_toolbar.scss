@@ -76,10 +76,10 @@ $pat-toolbar-z-index: 2 !default;
 	user-select: none;
 
 	.toolbar-title {
-		font-size: calc(0.6 * var(--pat-toolbar-button-height));
+		font-size: calc(0.7 * var(--pat-toolbar-button-height)) !important;
 		line-height: var(--pat-toolbar-button-line-height);
 		margin: 0;
-		font-weight: bold;
+		font-weight: normal;
 		white-space: nowrap !important;
 		max-width: 100%;
 		box-sizing: border-box;
