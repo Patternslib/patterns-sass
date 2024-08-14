@@ -1,8 +1,12 @@
+:root {
+    --pat-button-bar-margin-top-bottom: 15px;
+}
+
 @mixin pat-button-bar {
     display: flex;
     justify-content: start;
-    gap: 15px;
-    margin: 15px 0;
+    gap: 1rem;
+    margin: var(--pat-button-bar-margin-top-bottom) 0;
 
     .pat-button {
         margin: 0;

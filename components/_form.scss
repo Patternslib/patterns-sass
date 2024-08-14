@@ -231,7 +231,7 @@
     }
 
     &.layout-title-names {
-      grid-template-columns: 50px auto auto;
+      grid-template-columns: 80px auto auto;
     }
 
     &.layout-date-time {
@@ -239,7 +239,7 @@
     }
 
     &.layout-date {
-      grid-template-columns: 100px 150px 100px;
+      grid-template-columns: 100px auto 140px;
     }
 
     &.layout-address-line-nl {  
@@ -405,22 +405,6 @@
     // .scheduler ~ .day-title {
     //   margin-top: 10px;
     // }
-  }
-
-  .group {
-    &.layout-date {
-      label {
-        display: inline-block;
-
-        &.day {
-          width: 80px;
-        }
-
-        &.year {
-          width: 83px;
-        }
-      }
-    }
   }
 
   .select2-container {
@@ -845,6 +829,14 @@
 
           textarea {
             resize: vertical;
+          }
+        }
+
+        .group {
+          &.pat-form-field-button-bar {
+            --pat-button-bar-margin-top-bottom: 0;
+            --pat-button-height: var(--pat-form-input-field-line-height);
+            --pat-form-input-field-line-height: var(--pat-form-input-field-line-height);
           }
         }
 
