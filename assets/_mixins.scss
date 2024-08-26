@@ -115,6 +115,7 @@ $bullet-space: 22px !default;
       user-select: none;
 
       &:before {
+        font-family: fontello;
         align-self: start;
         justify-self: center !important; // Overrules justify-self: start inherited from pat-checklist;
         display: block;
