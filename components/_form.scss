@@ -903,7 +903,6 @@
 
           > .legend,
           legend {
-            display: inline;
             text-align: left; body[dir=rtl] & { text-align: right; }
             padding: 0;
             box-sizing: border-box;
@@ -915,6 +914,7 @@
             letter-spacing: 0;
             grid-column-start: 1;
             grid-row: 1 / last;
+            margin: 0;
           }
 
           &.button-bar {
@@ -1048,7 +1048,7 @@
     }
 
     .legend {
-      margin-bottom: 0em;
+      margin-bottom: 0;
       margin-top: 8px;
     }
 
