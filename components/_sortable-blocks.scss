@@ -11,7 +11,9 @@
 	}
 
 	& + .pat-button-bar {
-		margin-top: 0px;
+		.horizontal & {
+			margin-top: 0px;
+		}
 
 		.horizontal & {
 			margin-bottom: 0;
