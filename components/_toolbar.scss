@@ -883,7 +883,7 @@ $pat-toolbar-z-index: 2 !default;
 				content: "#{$glyph-checkboxes-double-checked}";
 			}
 
-			#content.mode-select & {
+			#product-space.mode-select & {
 				background-color: $colour-accent;
 				
 				&:before {
