@@ -76,10 +76,10 @@ $pat-toolbar-z-index: 2 !default;
 	user-select: none;
 
 	.toolbar-title {
-		font-size: calc(0.6 * var(--pat-toolbar-button-height));
+		font-size: calc(0.7 * var(--pat-toolbar-button-height)) !important;
 		line-height: var(--pat-toolbar-button-line-height);
 		margin: 0;
-		font-weight: bold;
+		font-weight: normal;
 		white-space: nowrap !important;
 		max-width: 100%;
 		box-sizing: border-box;
@@ -796,6 +796,7 @@ $pat-toolbar-z-index: 2 !default;
 
 		&.level-up {
 			&:before {
+				font-family: fontello;
 				content: "#{$glyph-level-up}";
 				transform: scaleX(-100%);
 			}
@@ -882,7 +883,7 @@ $pat-toolbar-z-index: 2 !default;
 				content: "#{$glyph-checkboxes-double-checked}";
 			}
 
-			#content.mode-select & {
+			#product-space.mode-select & {
 				background-color: $colour-accent;
 				
 				&:before {
@@ -902,12 +903,12 @@ $pat-toolbar-z-index: 2 !default;
 		.spotlight-sentinel {
 			overflow: hidden;
 			width: var(--pat-toolbar-button-height);
-			padding-top: var(--pat-toolbar-button-height) + 16px;
+			padding-top: calc(var(--pat-toolbar-button-height) + 16px);
 			padding-right: 10px;
 			padding-bottom: 6px;
 			padding-left: 10px;
 			float: right;
-			margin: -54px -25px;
+			margin: -52px -10px;
 			transition: all 0.5s;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 

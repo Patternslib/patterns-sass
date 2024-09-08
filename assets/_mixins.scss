@@ -57,6 +57,7 @@ $bullet-space: 22px !default;
     padding-right: var(--pat-form-input-field-padding-left-right-disabled);
     padding-top: var(--pat-form-input-field-padding-top-bottom-disabled);
     padding-bottom: var(--pat-form-input-field-padding-top-bottom-disabled);
+    margin: calc(-1 * var(--pat-form-input-field-padding-top-bottom-disabled)) 0;
     background: var(--pat-form-input-field-background-colour-disabled);
     box-shadow: var(--pat-form-input-field-box-shadow-disabled);
     color: var(--pat-form-input-field-text-colour-disabled);
@@ -114,6 +115,7 @@ $bullet-space: 22px !default;
       user-select: none;
 
       &:before {
+        font-family: fontello;
         align-self: start;
         justify-self: center !important; // Overrules justify-self: start inherited from pat-checklist;
         display: block;
