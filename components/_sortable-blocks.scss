@@ -20,8 +20,13 @@
 		}
 	}
 
+	.pat-button-bar {
+		transition: padding-left 0.4s;
+	}
+
 	&:has(.sortable-item) + .pat-button-bar {
 		margin-top: calc(2 * var(--pat-sortable-blocks-gap) + var(--pat-form-input-field-padding-top-bottom));
+		padding-left: var(--pat-sortable-blocks-padding-start);
 	}
 
 	.sortable-item {
