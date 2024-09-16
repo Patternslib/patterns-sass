@@ -132,6 +132,10 @@
 						content: "#{$glyph-pencil}";
 					}
 				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -201,8 +205,17 @@
 				margin-bottom: 10px;
 			}
 
-			*:last-child {
+			.tag-cloud {
+				margin-top: 10px;
+			}
+
+			> *:last-child {
 				margin-bottom: 0;
+			}
+
+			.meta {
+				margin-top: 10px;
+				@include meta-bar;
 			}
 		}
 
@@ -264,6 +277,12 @@
 			&:hover:before {
 				background-color: $button-background-colour-hover;
 				color: #{$button-text-colour-hover};
+			}
+		}
+
+		&:not(.clone) {
+			.remove-clone {
+				display: none;
 			}
 		}
 	}
