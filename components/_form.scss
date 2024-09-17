@@ -1051,6 +1051,10 @@
       }   
     }
 
+    .pat-checklist {
+      margin-top: 8px;
+    }
+
     label >,
     .group > {
       .composed {
@@ -1066,11 +1070,21 @@
     }
 
     .legend,
-    > label,
-    .group:not(.pat-checklist) > label {
+    > label:not(.pat-toggle-switch),
+    .group:not(.pat-checklist):not(.pat-toggle-switch) > label {
       font-weight: #{$font-weight-normal};
       display: block;
       margin-bottom: 1em;
+    }
+
+    .group.pat-form-field-toggle {
+      display: flex;
+      justify-content: space-between;
+
+      .pat-toggle-switch {
+        margin-bottom: 0em;
+        margin-top: 8px;
+      }
     }
 
     .legend {

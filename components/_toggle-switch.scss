@@ -1,51 +1,49 @@
 .pat-toggle-switch {
-    label {
-        display: inline-block;
-        font-size: calc(0.6 * var(--pat-toggle-height));
-        position: relative;
-        height: var(--pat-toggle-height);
-        background-color: var(--pat-toggle-background-colour-off);
-        border-radius: var(--pat-toggle-switch-border-radius);
-        transition: all 0.3s;
-        justify-self: start;
-        position: relative;
-        box-sizing: border-box;
-        padding: 0 calc( ( var(--pat-toggle-height) - 1 * var(--pat-toggle-toggle-distance) ) + 0.5 * var(--pat-toggle-padding-start-end) ) 0 var(--pat-toggle-padding-start-end);
-        line-height: var(--pat-toggle-height);
-        color: transparent;
-        box-shadow: var(--pat-toggle-box-shadow);
-        -webkit-user-select: none;
-        user-select: none;
-        
-        input {
-            position: absolute;
-            opacity: 0; // Hide with opacity instead of display: none; for accessibility.
-        }
+    display: inline-block;
+    font-size: calc(0.6 * var(--pat-toggle-height));
+    position: relative;
+    height: var(--pat-toggle-height);
+    background-color: var(--pat-toggle-background-colour-off);
+    border-radius: var(--pat-toggle-switch-border-radius);
+    transition: all 0.3s;
+    justify-self: start;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 calc( ( var(--pat-toggle-height) - 1 * var(--pat-toggle-toggle-distance) ) + 0.5 * var(--pat-toggle-padding-start-end) ) 0 var(--pat-toggle-padding-start-end);
+    line-height: var(--pat-toggle-height);
+    color: transparent;
+    box-shadow: var(--pat-toggle-box-shadow);
+    -webkit-user-select: none;
+    user-select: none;
     
-        &::after {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            left: var(--pat-toggle-toggle-distance);
-            width: calc(var(--pat-toggle-height) - (var(--pat-toggle-toggle-distance) * 2));
-            height: calc(var(--pat-toggle-height) - (var(--pat-toggle-toggle-distance) * 2));
-            border-radius: var(--pat-toggle-toggle-border-radius);
-            transition: all 0.2s;
-            background-color: var(--pat-toggle-toggle-background-colour);
-            top: 50%;
-            transform: translateY(-50%);;
-        }
-    
-        &:has(input:checked) {
-            background-color: var(--pat-toggle-background-colour-on);
-            color: var(--pat-toggle-text-colour);
-            box-shadow: var(--pat-toggle-box-shadow-on);
-            text-shadow: var(--pat-toggle-text-shadow-on);
+    input {
+        position: absolute;
+        opacity: 0; // Hide with opacity instead of display: none; for accessibility.
+    }
 
-            &::after {
-                left: calc(100% - ( var(--pat-toggle-height) - var(--pat-toggle-toggle-distance) ) );
-                background-color: var(--pat-toggle-toggle-background-colour-on);
-            }
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: var(--pat-toggle-toggle-distance);
+        width: calc(var(--pat-toggle-height) - (var(--pat-toggle-toggle-distance) * 2));
+        height: calc(var(--pat-toggle-height) - (var(--pat-toggle-toggle-distance) * 2));
+        border-radius: var(--pat-toggle-toggle-border-radius);
+        transition: all 0.2s;
+        background-color: var(--pat-toggle-toggle-background-colour);
+        top: 50%;
+        transform: translateY(-50%);;
+    }
+
+    &:has(input:checked) {
+        background-color: var(--pat-toggle-background-colour-on);
+        color: var(--pat-toggle-text-colour);
+        box-shadow: var(--pat-toggle-box-shadow-on);
+        text-shadow: var(--pat-toggle-text-shadow-on);
+
+        &::after {
+            left: calc(100% - ( var(--pat-toggle-height) - var(--pat-toggle-toggle-distance) ) );
+            background-color: var(--pat-toggle-toggle-background-colour-on);
         }
     }
 }
