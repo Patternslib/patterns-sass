@@ -2,9 +2,8 @@
 	counter-reset: count;
 	-webkit-user-select: none;
 	user-select: none;
-	margin-top:    calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
-	margin-bottom: calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
 	margin-right: 36px;
+	display: none;
 
 	.horizontal & {
 		margin-right: 0;
@@ -22,6 +21,12 @@
 
 	.pat-button-bar {
 		transition: padding-left 0.4s;
+	}
+
+	&:has(.sortable-item) {
+		display: block;
+		margin-top:    calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
+		margin-bottom: calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
 	}
 
 	&:has(.sortable-item) + .pat-button-bar {
