@@ -259,7 +259,7 @@
     &.layout-min-max-decimal {
       width: 100%;
       max-width: 100%;
-      grid-template-columns: auto 80px auto 80px;
+      grid-template-columns: auto 4px 54px 15px auto 4px 54px;
       justify-self: start;
     }
 
@@ -610,6 +610,7 @@
   .currency-field {
     display: inline-block;
     position: relative;
+
     &:after {
       content: " ";
       display: block;
@@ -619,14 +620,16 @@
 
     .currency {
       position: absolute;
-      left: 0.5em;
+      left: 0.45rem;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 1;
+      color: black;
     }
 
     input,
     output {
-      padding-left: 1.5em;
+      padding-left: 1.4rem;
       display: inline-block;
     } 
   }
