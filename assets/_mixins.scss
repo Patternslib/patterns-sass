@@ -1044,6 +1044,11 @@ $bullet-space: 22px !default;
   &:before {
     line-height: inherit;
   }
+
+  &:focus {
+    outline: var(--pat-form-input-field-outline-focus);
+    outline-offset: var(--pat-form-input-field-outline-offset);
+  }
     
   &:hover {
     color: #{$button-text-colour-hover};
@@ -1092,11 +1097,6 @@ $bullet-space: 22px !default;
     &:before {
       font-size: 15px;
     }
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
   }
 
   &:not[disabled]:active {
