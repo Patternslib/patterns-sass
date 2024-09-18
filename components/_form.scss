@@ -230,6 +230,20 @@
       justify-self: start;
     }
 
+    &.layout-min-max {
+      width: 260px;
+      max-width: 100%;
+      grid-template-columns: 50% 50%;
+      justify-self: start;
+    }
+
+    &.layout-min-max-decimal {
+      width: 100%;
+      max-width: 100%;
+      grid-template-columns: auto 80px auto 80px;
+      justify-self: start;
+    }
+
     &.layout-title-names {
       grid-template-columns: 80px auto auto;
     }
