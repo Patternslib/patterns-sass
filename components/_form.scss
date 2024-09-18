@@ -168,9 +168,13 @@
     @include pat-form-input-field;
   }
 
-  .select2-container-active {
-    .select2-choice, 
-    .select2-choices {
+  .horizontal,
+  .vertical {
+    .select2-container-active .select2-choice, 
+    .select2-container-active .select2-choices,
+    .pat-rich-editor:has(.ProseMirror-focused),
+    .pat-select.focus:before,
+    select:focus {
       outline: var(--pat-form-input-field-outline-focus);
       border: var(--pat-form-input-field-border-focus);
       box-shadow: var(--pat-form-input-field-box-shadow-focus);
