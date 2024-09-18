@@ -10,7 +10,7 @@
 		}
 	}
 
-    #content:not(.spotlight-on) & {
+    #product-space:not(.spotlight-on) & {
   		&:not(.pat-modal-pop-over) {
   			animation: fadeIn 1s;
   		}

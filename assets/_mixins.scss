@@ -22,6 +22,34 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 $pat-table-sorting-icon-position: right !default;
 $bullet-space: 22px !default;
 
+@mixin meta-bar() {
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+  font-weight: normal;
+  color: #535353;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include screen-size(small) {
+    display: inline;
+  }
+
+  .meta-item {
+    @include screen-size(medium-large) {
+      @include byline-item;
+    }
+
+    @include screen-size(small) {
+      &:after {
+        content: ', ';
+      }
+    }
+  }
+}
+
 @mixin pat-form-input-field {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1005,10 +1033,10 @@ $bullet-space: 22px !default;
   line-height: var(--pat-button-height);
   white-space: nowrap;
   display: inline-block;
-  padding: $button-paddings;
+  padding: var(--pat-button-paddings);
   font-size: $button-font-size;
   vertical-align: text-bottom;
-  font-weight: var(--pat-button-font-size);
+  font-weight: var(--pat-button-font-weight);
   box-shadow: $button-shadow;
   color: $button-text-colour;
   background-color: $button-background-colour;
