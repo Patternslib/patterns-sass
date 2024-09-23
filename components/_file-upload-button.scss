@@ -2,6 +2,10 @@
   position: relative;
   overflow: hidden;
 
+  &:has(:focus) {
+    outline: var(--pat-form-input-field-outline-focus);
+  }
+
   input {
     position: absolute;
     top: 0;

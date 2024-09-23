@@ -1049,6 +1049,10 @@ $bullet-space: 22px !default;
     outline: var(--pat-form-input-field-outline-focus);
     outline-offset: var(--pat-form-input-field-outline-offset);
   }
+
+  &:focus {
+    outline: var(--pat-form-input-field-outline-focus);
+  }
     
   &:hover {
     color: #{$button-text-colour-hover};
