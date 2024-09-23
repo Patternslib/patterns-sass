@@ -752,6 +752,11 @@
           background-color: $button-background-colour-default-hover;
         }
 
+        &:focus {
+          outline: var(--pat-form-input-field-outline-focus);
+          outline-offset: var(--pat-form-input-field-outline-offset);
+        }
+
         &:before {
           content: '#{$glyph-help}';
           border-radius: var(--pat-form-help-button-icon-border-radius);
