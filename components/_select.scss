@@ -230,6 +230,9 @@
 
   label.pat-select.bare,
   a.pat-select.bare {
+    --pat-select-arrow-edge-distance: 1px;
+    --pat-select-arrow-space: 10px;
+
     position: relative;
     cursor: default;
     @include box-sizing();
