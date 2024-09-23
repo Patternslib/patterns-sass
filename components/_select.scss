@@ -241,6 +241,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    border-radius: var(--pat-form-fields-border-radius);
+    outline-offset: var(--pat-form-input-field-outline-offset);
 
     &:hover,
     &.focus { 
@@ -289,6 +291,10 @@
       overflow: hidden;
       // white-space: nowrap;
       text-overflow: ellipsis;
+    }
+
+    &:has(:focus) {
+      outline: var(--pat-form-input-field-outline-focus);
     }
 
     select {
