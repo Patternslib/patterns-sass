@@ -39,6 +39,11 @@ $pat-checklist-padding-end: 0 !default;
 	> * {
 		grid-area: label;
 	}
+
+	&:has(:focus):before {
+		outline: var(--pat-form-input-field-outline-focus);
+		outline-offset: var(--pat-form-input-field-outline-offset);
+	}
 	
 	&:has(input[type="checkbox"]):before,
 	&:has(input[type="radio"]):before {
