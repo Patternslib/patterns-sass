@@ -9,8 +9,7 @@ $modal-panel-width-medium: 840px !default;
 $modal-panel-width-large: 1100px !default;
 
 .pat-modal-panel {
-
-  // This is code for the new, experimental, dialog tag based modals.
+  --pat-button-bar-margin-top-bottom: 0;
 
   position: fixed;
   z-index: 9998;
@@ -77,7 +76,7 @@ $modal-panel-width-large: 1100px !default;
     width: $modal-panel-width-medium;
     overflow: auto;
     max-height: calc(100vh - 270px);
-    padding: 20px 30px 0;
+    padding: var(--pat-form-input-field-padding-top-bottom) 30px 30px;
     box-sizing: border-box;
 
     > .form-fields {
