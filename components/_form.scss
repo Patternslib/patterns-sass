@@ -181,6 +181,31 @@
     }
   }
 
+  .item-info {
+    @include pat-well;
+    padding: 1rem;
+    margin-bottom: 0;
+    background-color: white;
+
+    .title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .tag-cloud {
+      margin-top: 10px;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta {
+      margin-top: 10px;
+      @include meta-bar;
+    }
+  }
+
   .field-list {
     > label {
       position: relative;

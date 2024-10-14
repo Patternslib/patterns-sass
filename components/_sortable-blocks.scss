@@ -197,31 +197,8 @@
 			@include assistive-text;
 		}
 
-		.item-info {
-			background-color: white;
-			height: 100%;
-			border-radius: var(--pat-form-input-field-border-radius);
-			padding: 20px;
-			margin: 0;
-			box-shadow: var(--pat-sortable-blocks-item-info-box-shadow);
-
-			.title {
-				font-size: 1.2em;
-				margin-bottom: 10px;
-			}
-
-			.tag-cloud {
-				margin-top: 10px;
-			}
-
-			> *:last-child {
-				margin-bottom: 0;
-			}
-
-			.meta {
-				margin-top: 10px;
-				@include meta-bar;
-			}
+		.pat-well {
+			margin-bottom: 0;
 		}
 
 		.field-cluster {
