@@ -76,7 +76,7 @@ $modal-panel-width-large: 1100px !default;
     width: $modal-panel-width-medium;
     overflow: auto;
     max-height: calc(100vh - 270px);
-    padding: var(--pat-form-input-field-padding-top-bottom) 30px 30px;
+    padding: #{$modal-panel-body-top-padding} 30px 30px;
     box-sizing: border-box;
 
     > .form-fields {
