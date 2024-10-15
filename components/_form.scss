@@ -189,11 +189,11 @@
 
     .title {
       font-size: 1.2rem;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .tag-cloud {
-      margin-top: 10px;
+      margin-top: 5px;
     }
 
     > *:last-child {
@@ -201,7 +201,7 @@
     }
 
     .meta {
-      margin-top: 10px;
+      margin-top: 5px;
       @include meta-bar;
     }
   }
