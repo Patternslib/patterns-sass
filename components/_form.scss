@@ -819,24 +819,29 @@
         --pat-auto-suggest-padding-top-bottom: var(--pat-form-input-field-padding-top-bottom);
           
         .pat-button {
-            display: inline-block;
-            text-align: center;
-            margin-right: 0;
-            box-sizing: border-box;
-            line-height: var(--pat-form-input-field-line-height);
-            margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
-            margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
-            padding-top: var(--pat-form-input-field-padding-top-bottom);
-            padding-bottom: var(--pat-form-input-field-padding-top-bottom);
-            float: left; // Kill whitespaces.
-            height: calc(var(--pat-form-input-field-line-height) + (2 * var(--pat-form-input-field-padding-top-bottom))); // Forces Safari to display the field with the right height.
-            font-size: var(--pat-form-input-field-font-size);
-            font-weight: var(--pat-button-font-weight);
+          display: inline-block;
+          text-align: center;
+          margin-right: 0;
+          box-sizing: border-box;
+          line-height: var(--pat-form-input-field-line-height);
+          margin-top: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+          margin-bottom: calc(-1 * var(--pat-form-input-field-padding-top-bottom));
+          padding-top: var(--pat-form-input-field-padding-top-bottom);
+          padding-bottom: var(--pat-form-input-field-padding-top-bottom);
+          float: left; // Kill whitespaces.
+          height: calc(var(--pat-form-input-field-line-height) + (2 * var(--pat-form-input-field-padding-top-bottom))); // Forces Safari to display the field with the right height.
+          font-size: var(--pat-form-input-field-font-size);
+          font-weight: var(--pat-button-font-weight);
 
-            &#portal-header-colour-chooser-trigger {
-              background-color: #{$colour-chooser-default};
-            }
+          &#portal-header-colour-chooser-trigger {
+            background-color: #{$colour-chooser-default};
           }
+        }
+
+        legend + .pat-button-bar,
+        .legend + .pat-button-bar {
+          margin-top: 0;
+        }
 
         > br {
           display: none;
