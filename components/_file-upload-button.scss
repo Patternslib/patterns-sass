@@ -4,6 +4,7 @@
 
   &:has(:focus) {
     outline: var(--pat-form-input-field-outline-focus);
+    outline-offset: var(--pat-form-input-field-outline-offset);
   }
 
   input {

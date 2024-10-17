@@ -22,6 +22,32 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 $pat-table-sorting-icon-position: right !default;
 $bullet-space: 22px !default;
 
+@mixin copyright {
+	position: absolute;
+	z-index: 10;
+	bottom: 0.5rem;
+	left: 0.5rem;
+	margin: 0;
+	color: #fff;
+	text-shadow: 0px 0px 1px rgba(0,0,0,.5),-1px 0px 1px rgba(0,0,0,.5),1px 0px 1px rgba(0,0,0,.5),0px -1px 1px rgba(0,0,0,.5),0px 1px 1px rgba(0,0,0,.5),2px 2px 6px rgba(0,0,0,.5);
+	font-size: 0.8888888889rem;
+	line-height: 1.125;
+	display: block;
+	opacity: 0.7;
+
+	&:before {
+		font-family: fontello;
+	}
+
+	&.type-copyright:before {
+		content: '#{$glyph-copyright} ';
+	}
+
+	&.type-creative-commons:before {
+		content: '#{$glyph-creative-commons} ';
+	}
+}
+
 @mixin meta-bar() {
   font-size: 1.125rem;
   line-height: 1.3333333333;
@@ -1048,10 +1074,6 @@ $bullet-space: 22px !default;
   &:focus {
     outline: var(--pat-form-input-field-outline-focus);
     outline-offset: var(--pat-form-input-field-outline-offset);
-  }
-
-  &:focus {
-    outline: var(--pat-form-input-field-outline-focus);
   }
     
   &:hover {

@@ -946,7 +946,9 @@
           &.image-selection,
           &.object-upload,
           &.image-upload,
-          &.video-upload {
+          &.video-upload,
+          &.pat-form-field-image,
+          &.pat-form-field-video {
             justify-items: start;
 
             // .pat-button {
@@ -969,7 +971,7 @@
             video,
             img,
             .caption {
-              margin-bottom: 10px;
+              // margin-bottom: 10px;
             }
           }
 

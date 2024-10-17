@@ -1,0 +1,8 @@
+.pat-picture {
+	position: relative;
+	display: block;
+
+	.copyright-mention {
+		@include copyright;
+	}
+}
