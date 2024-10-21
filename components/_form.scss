@@ -770,14 +770,15 @@
         line-height: var(--pat-form-input-field-line-height);
         height: var(--pat-form-help-button-height);
         width: var(--pat-form-help-button-width);
-        overflow: hidden; // Prevents click surface stretching out too much because of its content.
+        // overflow: hidden; // Prevents click surface stretching out too much because of its content.
+        font-size: 0;
 
         &:hover:before,
         &.tooltip-active-click:before {
           background-color: $button-background-colour-default-hover;
         }
 
-        &:focus {
+        &:focus:before {
           outline: var(--pat-form-input-field-outline-focus);
           outline-offset: var(--pat-form-input-field-outline-offset);
         }
@@ -800,7 +801,7 @@
           text-align: center;
           font-weight: normal;
           font-style: normal;
-          font-size: 0.8em;
+          font-size: 0.8rem;
           transition: opacity 0.8s;
           transition-delay: 0.3s;
           overflow: hidden;
