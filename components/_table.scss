@@ -317,7 +317,7 @@ $pat-table-icon-colour:                     gray !default;
                         font-weight: normal;
                     }
         
-                    &:hover {
+                    &[href]:hover {
                         text-decoration: underline;
         
                         &:has(.link-title) {
@@ -403,7 +403,7 @@ $pat-table-icon-colour:                     gray !default;
             }
 
             a {
-                &:hover {
+                &[href]:hover {
                     text-decoration: underline;
                 }
             }
