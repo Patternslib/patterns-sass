@@ -152,6 +152,7 @@ $pat-table-icon-colour:                     gray !default;
         padding: 0 0.8rem;
         margin-left: 0.2rem;
         font-style: normal;
+        text-decoration: none;
 
         &.warning {
             color: $colour-warning-background;
