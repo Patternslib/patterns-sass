@@ -192,6 +192,13 @@ $bullet-space: 22px !default;
         color: black;
       }
 
+      &.tooltip-active-click,
+      &:active
+        {
+        background-color: $colour-accent;
+        color: white;
+      }
+
       .pat-message {
         display: block;
         margin-top: 0.4em;
