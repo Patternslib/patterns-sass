@@ -878,6 +878,12 @@ $pat-toolbar-z-index: 2 !default;
 			}
 		}
 
+		&.metadata {
+			&:before {
+				content: "#{$glyph-cog-many}";
+			}
+		}
+
 		&.select {
 			&:before {
 				content: "#{$glyph-checkboxes-double-checked}";
