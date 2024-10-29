@@ -716,6 +716,7 @@ $bullet-space: 22px !default;
 }
 
 @mixin pat-well() {
+    display: block;
     padding: 40px;
     box-sizing: border-box;
     box-shadow: $default-box-shadow;

@@ -185,7 +185,10 @@
     @include pat-well;
     padding: 1rem;
     margin-bottom: 0;
-    background-color: white;
+
+    .horizontal & {
+      --pat-form-panel-background-colour: white;
+    }
 
     .title {
       font-size: 1.2rem;
