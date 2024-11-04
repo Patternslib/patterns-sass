@@ -90,6 +90,34 @@
       flex-wrap: nowrap;
     }
 
+    .item-info-card {
+      @include pat-well;
+      padding: 1rem;
+      margin-bottom: 0;
+
+      .horizontal & {
+        --pat-form-panel-background-colour: white;
+      }
+
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .tag-cloud {
+        margin-top: 5px;
+      }
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+
+      .meta {
+        margin-top: 5px;
+        @include meta-bar;
+      }
+    }
+
     > *:last-child {
       margin-bottom: 0;
     }
