@@ -1179,4 +1179,16 @@ $bullet-space: 22px !default;
       line-height: var(--pat-button-height);
     }
   }
+
+  &:before {
+    font-weight: normal;
+    margin-right: 5px;
+  }
+
+  &.add {
+    &:before {
+      font-family: fontello;
+      content: '#{$glyph-plus}';
+    }
+  }
 }
