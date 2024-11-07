@@ -33,6 +33,8 @@ $pat-toolbar-z-index: 2 !default;
 	--pat-toolbar-top-distance: #{$pat-toolbar-top-distance};
 	--pat-toolbar-top-distance-scroll-down: #{$pat-toolbar-top-distance-scroll-down};
 	--pat-toolbar-hiding-speed: #{$pat-toolbar-hiding-speed};
+	--pat-toolbar-icon-background-colour: #{$button-background-colour};
+	--pat-toolbar-icon-background-colour-hover: #{$button-background-colour-hover};
 
 	@include screen-size(small) {
 		--pat-toolbar-auto-hide-offset: -15px;
@@ -672,15 +674,16 @@ $pat-toolbar-z-index: 2 !default;
 		color: rgba(0,0,0,0.6);
 		cursor: default;
 		line-height: var(--pat-toolbar-button-line-height);
-		border-radius: $button-border-radius;
+		border-radius: #{$button-border-radius};
 		display: inline-block;
 		text-align: left; body[dir=rtl] & { text-align: right; }
-		background-color: $pat-toolbar-icon-background-colour;
+		background-color: var(--pat-toolbar-icon-background-colour);
 		color: #{$pat-toolbar-icon-text-colour};
+		backdrop-filter: blur(5px) saturate(200%);
 
 		&:not(.active):not(.current):not([disabled]):not(.default):hover {
 			color: #{$pat-toolbar-icon-text-colour-hover};
-			background-color: #{$pat-toolbar-icon-background-colour-hover};
+			background-color: var(--pat-toolbar-icon-background-colour-hover);
 		}
 
 		&.progress {

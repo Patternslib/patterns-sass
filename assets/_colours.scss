@@ -31,8 +31,7 @@ $colour-header-elements: #666 !default;
 $colour-post: #e4f2f8 !default;
 $colour-alert: red !default;
 $colour-workspace-default: #869EBF !default;
-$colour-accent: #5d91ff !default;
-:root { --colour-accent: #{$colour-accent}; }
+$colour-accent: darkgoldenrod !default;
 $colour-success: #5bb75b !default;
 $colour-success-background: #e1eddb !default;
 $colour-warning: orange !default;
@@ -52,4 +51,5 @@ $colour-well-background: rgba(255,255,255,0.5) !default;
 :root {
     --colour-link: #{$colour-link};
     --colour-form-fields-background: #{$colour-form-fields-background};
+    --colour-accent: #{$colour-accent};
 }
