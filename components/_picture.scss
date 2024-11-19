@@ -1,6 +1,11 @@
 .pat-picture {
 	position: relative;
 	display: block;
+	
+	img {
+		display: block;
+		width: 100%;
+	}
 
 	.copyright-mention {
 		@include copyright;
