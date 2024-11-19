@@ -22,6 +22,11 @@ $mutation-sentinel-colour: rgb(104, 192, 255) !default;
 $pat-table-sorting-icon-position: right !default;
 $bullet-space: 22px !default;
 
+@mixin focus-outline {
+  outline: var(--pat-form-input-field-outline-focus);
+  outline-offset: var(--pat-form-input-field-outline-offset);
+}
+
 @mixin copyright {
 	position: absolute;
 	z-index: 10;
