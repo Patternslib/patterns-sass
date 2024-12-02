@@ -240,6 +240,7 @@ $pat-toolbar-z-index: 2 !default;
 		pointer-events: none;
 		position: relative;
 		z-index: 1;
+		white-space: nowrap !important;
 
 		&.tiptap-focus {
 			opacity: 1;
@@ -293,6 +294,7 @@ $pat-toolbar-z-index: 2 !default;
 		box-sizing: border-box;
 		display: flex;
 		justify-content: center;
+		align-items: start;
 		gap: var(--pat-toolbar-element-separation);
 
 		&:first-child {
