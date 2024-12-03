@@ -2,8 +2,11 @@
 	counter-reset: count;
 	-webkit-user-select: none;
 	user-select: none;
-	margin-right: 36px;
 	display: none;
+
+	&:has(.remove-clone) {
+		margin-right: 36px;
+	}
 
 	.horizontal & {
 		margin-right: 0;
