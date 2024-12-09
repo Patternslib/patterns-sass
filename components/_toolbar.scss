@@ -667,7 +667,8 @@ $pat-toolbar-z-index: 2 !default;
 		float: left;
 	}
 
-	.toolbar-section > .icon {
+	.toolbar-section > .icon,
+	.toolbar-section > .pat-subform > .icon {
 		font-family: fontello;
 		text-indent: -1000em;
 		width: var(--pat-toolbar-button-height);
