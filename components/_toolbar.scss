@@ -667,7 +667,7 @@ $pat-toolbar-z-index: 2 !default;
 		float: left;
 	}
 
-	.icon {
+	.toolbar-section > .icon {
 		font-family: fontello;
 		text-indent: -1000em;
 		width: var(--pat-toolbar-button-height);
@@ -681,7 +681,7 @@ $pat-toolbar-z-index: 2 !default;
 		text-align: left; body[dir=rtl] & { text-align: right; }
 		background-color: var(--pat-toolbar-icon-background-colour);
 		color: #{$pat-toolbar-icon-text-colour};
-		backdrop-filter: blur(5px) saturate(200%);
+		// backdrop-filter: blur(5px) saturate(200%);
 
 		&:not(.active):not(.current):not([disabled]):not(.default):hover {
 			color: #{$pat-toolbar-icon-text-colour-hover};
