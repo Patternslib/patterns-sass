@@ -8,6 +8,8 @@ $pat-button-cluster-font-size: 18px !default;
 $pat-button-cluster-text-colour: $colour-link !default;
 
 .pat-button-cluster {
+  --pat-toolbar-icon-background-colour: transparent;
+
   display: inline-flex;
   border-radius: $border-radii;
   background: $button-background-colour-subdued;

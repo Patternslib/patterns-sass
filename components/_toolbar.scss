@@ -667,7 +667,7 @@ $pat-toolbar-z-index: 2 !default;
 		float: left;
 	}
 
-	.toolbar-section :not(has:(.pat-button-cluser)) .icon {
+	.toolbar-section .icon {
 		font-family: fontello;
 		text-indent: -1000em;
 		width: var(--pat-toolbar-button-height);
