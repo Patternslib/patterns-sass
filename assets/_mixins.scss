@@ -149,6 +149,7 @@ $bullet-space: 22px !default;
 
   li {
     padding-left: 0;
+    --pat-checklist-margin-bottom: 0;
 
     > a,
     > label,
