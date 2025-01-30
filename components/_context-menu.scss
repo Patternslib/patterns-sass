@@ -228,12 +228,6 @@ $transparent-light: rgba(0, 8, 16, 0.08) !default;
 		*:last-child {
 			margin-bottom: 0;
 		}
-
-		.batch-functions & {
-			width: 85%;
-			right: 0;
-			left: inherit;
-		}
 	}
 
 	&.align-right {
