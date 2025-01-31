@@ -532,6 +532,7 @@
     display: inline-flex; // !important can go after the next rewrite of form.scss
     font-size: var(--pat-form-input-field-font-size);
     font-weight: var(--pat-button-font-weight);
+    overflow: hidden;
 
     &::file-selector-button {
       @include pat-button();
