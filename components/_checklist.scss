@@ -201,6 +201,39 @@ label.pat-checklist {
 		}
 	}
 
+	&.show-and-hide {
+		label:has(input[type=checkbox]) {
+			color: rgba(0,0,0,0.5);
+
+			&:before {
+				font-family: fontello;
+				content: '#{$glyph-eye-off}';
+				text-decoration: none;
+				background-color: transparent;
+				color: rgba(0,0,0,0.5);
+				font-size: 1.3rem;
+				box-shadow: none;
+			}
+
+			&:hover {
+				color: black;
+				
+				&:before {
+					color: black;
+				}
+			}
+
+			&:has(input:checked) {
+				color: black;
+
+				&:before {
+					color: black;
+					content: '#{$glyph-eye}';
+				}
+			}
+		}
+	}
+
     &.radio-bars:not(.free-form),
 	&.bars:not(.free-form) {
 		--pat-checklist-label-padding-start: 50px;
