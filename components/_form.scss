@@ -1,6 +1,112 @@
 @import "../components/checklist";
 @import "../components/file-upload-button";
 
+@mixin form-vertical {
+  > br,
+  .group > br {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: block;
+
+    &.columns,
+    &.column {
+      display: inline-block;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .group.pat-checklist {
+
+    legend,
+    .legend {
+      margin-bottom: 0.2em;
+    }
+  }
+
+  label > ,
+  .group > {
+
+    input,
+    textarea,
+    select,
+    .sortable-items-list,
+    .pat-sortable-blocks,
+    .select2-container,
+    .button-field,
+    .group.textarea,
+    .field-value,
+    .group.md-editor,
+    .colour-chooser-launcher,
+    .read-only-field,
+    .pat-rich-editor,
+    .pat-miller-columns,
+    .output-field,
+    .composed,
+    .field-cluster,
+    .pat-checklist {
+      // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
+      display: block;
+      margin-top: 0.2em;
+      width: 100%;
+      font-weight: #{$font-weight-normal};
+    }
+  }
+
+  .pat-checklist {
+    margin-top: 8px;
+  }
+
+  label > ,
+  .group > {
+    .composed {
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  textarea.pat-content-mirror,
+  .group.md-editor .md-render {
+    margin-top: 0;
+  }
+
+  .legend,
+  legend,
+  > label:not(.pat-toggle-switch),
+  .group:not(.pat-checklist):not(.pat-toggle-switch) > label {
+    font-weight: #{$font-weight-bold};
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .group.pat-form-field-toggle {
+    display: flex;
+    justify-content: space-between;
+
+    .pat-toggle-switch {
+      margin-bottom: 0em;
+      margin-top: 8px;
+    }
+  }
+
+  .legend {
+    margin-bottom: 0em;
+    margin-top: 8px;
+  }
+
+  // .currency-field {
+  //   display: block;
+
+  //   abbr {font-weight: normal; top: 0.2em}
+  // }
+}
+
 .pat-form {
 
   @include screen-size(small) {
@@ -1056,126 +1162,23 @@
     }
   }
 
-  .row {
-    margin: 0 -5px 0.8em;
+    .row {
+      margin: 0 -5px 0.8em;
 
-    .column,
-    .columns {
-      margin-bottom: 0;
-      padding: 0 5px;
+      .column,
+      .columns {
+        margin-bottom: 0;
+        padding: 0 5px;
 
-      > * {
+        > * {
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
         margin-bottom: 0;
       }
     }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @mixin form-vertical () {
-    > br,
-    .group > br {
-      display: none;
-    }
-
-    label {
-      position: relative;
-      display: block;
-
-      &.columns,
-      &.column {
-        display: inline-block;
-      }
-
-      img {
-        max-width: 100%;
-      }
-    }
-
-    .group.pat-checklist {
-      legend,
-      .legend {
-        margin-bottom: 0.2em;
-      }
-    }
-
-    label >,
-    .group > {
-      input,
-      textarea,
-      select,
-      .sortable-items-list,
-      .pat-sortable-blocks,
-      .select2-container,
-      .button-field,
-      .group.textarea,
-      .field-value,
-      .group.md-editor,
-      .colour-chooser-launcher,
-      .read-only-field,
-      .pat-rich-editor,
-      .pat-miller-columns,
-      .output-field,
-      .composed,
-      .field-cluster,
-      .pat-checklist {
-        // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
-        display: block;
-        margin-top: 0.2em;
-        width: 100%;
-        font-weight: #{$font-weight-normal};
-      }   
-    }
-
-    .pat-checklist {
-      margin-top: 8px;
-    }
-
-    label >,
-    .group > {
-      .composed {
-        input {
-          width: 100%;
-        }
-      }
-    }
-
-    textarea.pat-content-mirror,
-    .group.md-editor .md-render {
-      margin-top: 0;
-    }
-
-    .legend,
-    > label:not(.pat-toggle-switch),
-    .group:not(.pat-checklist):not(.pat-toggle-switch) > label {
-      font-weight: #{$font-weight-normal};
-      display: block;
-      margin-bottom: 1em;
-    }
-
-    .group.pat-form-field-toggle {
-      display: flex;
-      justify-content: space-between;
-
-      .pat-toggle-switch {
-        margin-bottom: 0em;
-        margin-top: 8px;
-      }
-    }
-
-    .legend {
-      margin-bottom: 0em;
-      margin-top: 8px;
-    }
-
-    // .currency-field {
-    //   display: block;
-
-    //   abbr {font-weight: normal; top: 0.2em}
-    // }
-  }
 
 
     @include screen-size(small) {
@@ -1185,7 +1188,7 @@
     }
 
     &.vertical {
-      @include form-vertical();
+      @include form-vertical;
     }
   }
 }
