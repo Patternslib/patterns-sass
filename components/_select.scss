@@ -228,11 +228,20 @@
     }
   }
 
+  select.bare {
+    background-color: transparent !important;
+    background-position: calc(100% - var(--pat-select-arrow-edge-distance)) center;
+    background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+    background-size: auto 10px;
+    background-repeat: no-repeat;
+  }
+
   label.pat-select.bare,
-  a.pat-select.bare {
+  a.pat-select.bare,
+  select.bare {
     --pat-select-arrow-edge-distance: 1px;
     --pat-select-arrow-space: 20px;
-
+    appearance: none;
     position: relative;
     cursor: default;
     @include box-sizing();

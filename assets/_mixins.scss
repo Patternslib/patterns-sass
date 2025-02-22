@@ -181,7 +181,7 @@ $bullet-space: 22px !default;
       display: block;
       padding: 0.3em 0 0.3em 0;
       color: black;
-      line-height: 24px;
+      line-height: var(--pat-menu-list-item-line-height);
       cursor: default;
       overflow: hidden;
       border: none;
@@ -193,6 +193,14 @@ $bullet-space: 22px !default;
       grid-template-columns: var(--pat-menu-list-item-padding-start) auto;
       border-radius: var(--border-radii);
       user-select: none;
+
+      --pat-select-box-height: var(--pat-menu-list-item-line-height);
+
+      .pat-select {
+        &.bare {
+          margin-right: 8px;
+        }
+      }
 
       &:before {
         font-family: fontello;
@@ -241,7 +249,7 @@ $bullet-space: 22px !default;
         width: 100%;
       }
 
-      &:not([class*=icon-]):not([class*=checked]) {
+      &:not([class*=icon-]):not([class*=checked]):not(.pat-select) {
         &:before {
           font-family: fontello;
           content: '#{$glyph-angle-right}';
