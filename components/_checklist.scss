@@ -115,7 +115,8 @@ $pat-checklist-padding-end: 0 !default;
 		position: absolute;
 		left: 0;
 		width: 0;
-		margin-top: 0.6px;
+		// margin-top: 0.6px;
+		height: 100%;
 	}
 }
 
@@ -198,6 +199,39 @@ label.pat-checklist {
 		&:has(input:checked):before {
 			content: '';
 			box-shadow: var(--pat-checklist-checkbox-box-shadow-radio-checked);
+		}
+	}
+
+	&.show-and-hide {
+		label:has(input[type=checkbox]) {
+			color: rgba(0,0,0,0.5);
+
+			&:before {
+				font-family: fontello;
+				content: '#{$glyph-eye-off}';
+				text-decoration: none;
+				background-color: transparent;
+				color: rgba(0,0,0,0.5);
+				font-size: 1.3rem;
+				box-shadow: none;
+			}
+
+			&:hover {
+				color: black;
+				
+				&:before {
+					color: black;
+				}
+			}
+
+			&:has(input:checked) {
+				color: black;
+
+				&:before {
+					color: black;
+					content: '#{$glyph-eye}';
+				}
+			}
 		}
 	}
 
