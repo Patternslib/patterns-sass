@@ -301,7 +301,7 @@ $pat-toolbar-z-index: 2 !default;
 			justify-content: flex-start;
 		}
 
-		&:last-child {
+		&:last-of-type {
 			justify-content: flex-end;
 		}
 
