@@ -1,6 +1,3 @@
-$body-font-family: 'Source Sans Pro', sans-serif !default;
-$font-weight-normal: normal !default;
-
 $colour-well-background: rgba(255, 255, 255, 0.5) !default;
 
 $break-small: 768px !default;
@@ -10,6 +7,12 @@ $pat-tail-white: 15px !default;
 // Menu list
 
 $menu-list-top-bottom-padding: 2px !default;
+
+// Typography
+
+$body-font-family: 'Source Sans Pro', sans-serif !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
 
 // Buttons
 
