@@ -4,6 +4,12 @@
 	user-select: none;
 	display: none;
 
+	.pat-modal & {
+		&:first-of-type {
+			padding-top: 20px; // Prevents the the problem that items cannot easily be schlepped to the first position on modals.
+		}
+	}
+
 	&:has(.remove-clone) {
 		margin-right: 36px;
 	}
@@ -28,8 +34,7 @@
 
 	&:has(.sortable-item) {
 		display: block;
-		padding-top: 20px;
-		margin-top:    calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom)) - 20px;
+		margin-top:    calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
 		margin-bottom: calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
 	}
 
