@@ -28,7 +28,8 @@
 
 	&:has(.sortable-item) {
 		display: block;
-		margin-top:    calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
+		padding-top: 20px;
+		margin-top:    calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom)) - 20px;
 		margin-bottom: calc(-1 * var(--pat-sortable-blocks-gap) + -1 * var(--pat-form-input-field-padding-top-bottom));
 	}
 
