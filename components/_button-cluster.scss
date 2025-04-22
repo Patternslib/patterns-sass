@@ -466,7 +466,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
         box-shadow: none;
 
         &:before {
-          color: white;
+          color: #{$colour-accent};
         }
 
         .counter {
