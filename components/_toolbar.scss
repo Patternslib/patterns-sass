@@ -302,7 +302,9 @@ $pat-toolbar-z-index: 2 !default;
 		}
 
 		&:last-of-type {
-			justify-content: flex-end;
+			&:not(:first-child) {
+				justify-content: flex-end;
+			}
 		}
 
 		> * {
