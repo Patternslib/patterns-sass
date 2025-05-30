@@ -1009,7 +1009,7 @@
 
             .help-icon {
               grid-area: extra;
-              grid-row: 1 / last;
+              grid-row: 1 / -1;
             }
 
             .message,
@@ -1107,7 +1107,7 @@
 
           .help-icon {
             grid-area: extra;
-            grid-row: 1 / last;
+            grid-row: 1 / -1;
           }
 
           > .legend,
@@ -1123,7 +1123,7 @@
             text-transform: none;
             letter-spacing: 0;
             grid-column-start: 1;
-            grid-row: 1 / last;
+            grid-row: 1 / -1;
             margin-bottom: 0;
           }
 
