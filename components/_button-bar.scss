@@ -10,9 +10,14 @@
 
     .pat-button {
         margin: 0;
-        
+
+        // This will push all following buttons to the right
         &.float-after {
             margin-left: auto;
+
+            & + .pat-button.float-after {
+                margin-left: 0;
+            }
         }
     }
 }
