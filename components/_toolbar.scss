@@ -457,7 +457,7 @@ $pat-toolbar-z-index: 2 !default;
 		}
 
 		&.quick-functions {
-			// text-align: right;
+			justify-content: flex-end;
 			grid-area: right;
 
 			> .icon,
