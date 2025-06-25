@@ -52,6 +52,21 @@ $pat-toolbar-z-index: 2 !default;
 	--pat-select-box-background-colour-hover: #{$button-background-colour-hover};
 	--pat-select-box-padding-start: 18px;
 	--pat-context-menu-panel-distance: 52px;
+
+	&:before {
+		position: absolute;
+		left: calc(-1 * var(--pat-toolbar-padding));
+		right: calc(-1 * var(--pat-toolbar-padding));
+		top: 0;
+		bottom: 0;
+		border-radius: $border-radii;
+		transition: all 1s;
+		content: ' ';
+		display: block;
+		z-index: -1;
+		opacity: 0;
+		@include floating-ui-element-background;
+	}
 	
 	@include screen-size(small) {
 		margin: 
@@ -61,7 +76,7 @@ $pat-toolbar-z-index: 2 !default;
 	}
 
 	@include screen-size(medium-large) {
-		height: var(--pat-toolbar-button-height);
+		height: calc(var(--pat-toolbar-button-height) + 2 * var(--pat-toolbar-padding));
 		margin: 
 			0 
 			calc(-1 *  var(--pat-toolbar-padding)) 
@@ -72,10 +87,12 @@ $pat-toolbar-z-index: 2 !default;
 	// color: rgba(0,0,0,0.6);
 	position: relative;
 	z-index: #{$pat-toolbar-z-index};
-	padding: var(--pat-toolbar-padding);
+	padding-top: var(--pat-toolbar-padding);
+	padding-bottom: var(--pat-toolbar-padding);
 	border-radius: $border-radii;
 	font-size: 0; // Removes spaces between buttons.
 	user-select: none;
+	box-sizing: border-box;
 
 	.toolbar-title {
 		font-size: calc(0.7 * var(--pat-toolbar-button-height)) !important;
@@ -174,8 +191,8 @@ $pat-toolbar-z-index: 2 !default;
 
 		&:before {
 			position: absolute;
-			left: calc(-0.5 * var(--pat-toolbar-padding));
-			right: calc(-0.5 * var(--pat-toolbar-padding));
+			left: calc(-1 * var(--pat-toolbar-padding));
+			right: calc(-1 * var(--pat-toolbar-padding));
 			top: calc(var(--pat-toolbar-bump-distance) - 1.5 * var(--pat-toolbar-padding));
 			bottom: calc(-0.5 * var(--pat-toolbar-padding));
 			border-radius: $border-radii;
@@ -196,7 +213,7 @@ $pat-toolbar-z-index: 2 !default;
 	    &.bumped,
 	    &.tiptap-focus {
 	    	&:before {
-	    		box-shadow: $pat-toolbar-box-shadow;
+	    		opacity: 1;
 	    	}
 
 	    	.toolbar-title.auto-hide {
@@ -208,10 +225,11 @@ $pat-toolbar-z-index: 2 !default;
 	&.sticky {
 		-webkit-position: sticky;
 		position: sticky;
-		transition: box-shadow 1s;
-		transition: all 1s;
-
 		top: var(--pat-toolbar-auto-hide-offset);
+
+		&:before {
+			transition: all 1s;
+		}
 
 		&.auto-hide {
 			top: -150px;
@@ -230,7 +248,9 @@ $pat-toolbar-z-index: 2 !default;
 
 	    .pat-scroll-box:not(.scroll-position-top) &,
 	    &.tiptap-focus {
-	      	@include floating-ui-element-background;
+			&:before {
+				opacity: 1;
+			}	
 	    }
 	}
 
