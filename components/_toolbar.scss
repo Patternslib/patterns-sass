@@ -70,8 +70,8 @@ $pat-toolbar-z-index: 2 !default;
 	
 	@include screen-size(small) {
 		margin: 
-			calc(-1 * var(--pat-toolbar-padding)) 
-			calc(-1 * var(--pat-toolbar-padding)) 
+			0
+			0
 			0;
 	}
 
@@ -79,7 +79,7 @@ $pat-toolbar-z-index: 2 !default;
 		height: calc(var(--pat-toolbar-button-height) + 2 * var(--pat-toolbar-padding));
 		margin: 
 			0 
-			calc(-1 *  var(--pat-toolbar-padding)) 
+			0
 			var(--pat-toolbar-margin-bottom);
 	}
 
