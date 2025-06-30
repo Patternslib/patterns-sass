@@ -226,6 +226,7 @@ $pat-toolbar-z-index: 2 !default;
 		-webkit-position: sticky;
 		position: sticky;
 		top: var(--pat-toolbar-auto-hide-offset);
+		transition: top 0.4s;
 
 		&:before {
 			transition: all 1s;
