@@ -175,58 +175,64 @@ $pat-toolbar-z-index: 2 !default;
 		padding: 0;
 	}
 
-	&.pat-bumper {
+	// &.pat-bumper {
+	// 	-webkit-position: sticky;
+	// 	position: sticky;
+	// 	padding-top: var(--pat-toolbar-bump-distance);
+	// 	margin-top: calc(-1 * var(--pat-toolbar-bump-distance));
+	// 	top: var(--pat-toolbar-top-distance);
+	// 	transition: top $pat-toolbar-hiding-speed;
+
+	// 	.scrolling-down &,
+	// 	.scroll-down & {
+	// 		top: var(--pat-toolbar-top-distance-scroll-down);
+	// 		padding-top: var(--pat-toolbar-bump-distance-scroll-down);
+	// 	}
+
+	// 	&:before {
+	// 		position: absolute;
+	// 		left: calc(-1 * var(--pat-toolbar-padding));
+	// 		right: calc(-1 * var(--pat-toolbar-padding));
+	// 		top: calc(var(--pat-toolbar-bump-distance) - 1.5 * var(--pat-toolbar-padding));
+	// 		bottom: calc(-0.5 * var(--pat-toolbar-padding));
+	// 		border-radius: $border-radii;
+	// 		transition: all 1s;
+	//       	box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+	//       	content: ' ';
+	//       	display: block;
+	// 		background-color: rgba(255,255,255,0.9);
+	// 		z-index: -1;
+
+	// 		.backdropfilter & {
+	// 			background-color: rgba(255,255,255,0.8);
+	// 			-webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
+	// 			backdrop-filter: blur(10px) saturate(4) brightness(1.2);
+	// 		}
+	// 	}
+
+	//     &.bumped,
+	//     &.tiptap-focus {
+	//     	&:before {
+	//     		opacity: 1;
+	//     	}
+
+	//     	.toolbar-title.auto-hide {
+	//     		opacity: 1;
+	//     	}
+	//     }
+	// }
+
+	&.sticky {
 		-webkit-position: sticky;
 		position: sticky;
-		padding-top: var(--pat-toolbar-bump-distance);
-		margin-top: calc(-1 * var(--pat-toolbar-bump-distance));
 		top: var(--pat-toolbar-top-distance);
-		transition: top $pat-toolbar-hiding-speed;
+		transition: top #{$pat-toolbar-hiding-speed};
 
 		.scrolling-down &,
 		.scroll-down & {
 			top: var(--pat-toolbar-top-distance-scroll-down);
 			padding-top: var(--pat-toolbar-bump-distance-scroll-down);
 		}
-
-		&:before {
-			position: absolute;
-			left: calc(-1 * var(--pat-toolbar-padding));
-			right: calc(-1 * var(--pat-toolbar-padding));
-			top: calc(var(--pat-toolbar-bump-distance) - 1.5 * var(--pat-toolbar-padding));
-			bottom: calc(-0.5 * var(--pat-toolbar-padding));
-			border-radius: $border-radii;
-			transition: all 1s;
-	      	box-shadow: 0 0 3px rgba(0, 0, 0, 0);
-	      	content: ' ';
-	      	display: block;
-			background-color: rgba(255,255,255,0.9);
-			z-index: -1;
-
-			.backdropfilter & {
-				background-color: rgba(255,255,255,0.8);
-				-webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
-				backdrop-filter: blur(10px) saturate(4) brightness(1.2);
-			}
-		}
-
-	    &.bumped,
-	    &.tiptap-focus {
-	    	&:before {
-	    		opacity: 1;
-	    	}
-
-	    	.toolbar-title.auto-hide {
-	    		opacity: 1;
-	    	}
-	    }
-	}
-
-	&.sticky {
-		-webkit-position: sticky;
-		position: sticky;
-		top: var(--pat-toolbar-auto-hide-offset);
-		transition: top 0.4s;
 
 		&:before {
 			transition: all 1s;
