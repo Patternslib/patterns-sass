@@ -223,7 +223,6 @@ $pat-toolbar-z-index: 2 !default;
 	// }
 
 	&.sticky {
-		-webkit-position: sticky;
 		position: sticky;
 		top: var(--pat-toolbar-top-distance);
 		transition: top #{$pat-toolbar-hiding-speed};
@@ -231,7 +230,7 @@ $pat-toolbar-z-index: 2 !default;
 		.scrolling-down &,
 		.scroll-down & {
 			top: var(--pat-toolbar-top-distance-scroll-down);
-			padding-top: var(--pat-toolbar-bump-distance-scroll-down);
+			// padding-top: var(--pat-toolbar-bump-distance-scroll-down);
 		}
 
 		&:before {
