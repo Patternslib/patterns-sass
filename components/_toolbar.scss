@@ -222,6 +222,12 @@ $pat-toolbar-z-index: 2 !default;
 	//     }
 	// }
 
+	&.bordered {
+		&:before {
+			opacity: 1;
+		}
+	}
+
 	&.sticky {
 		position: sticky;
 		top: var(--pat-toolbar-top-distance);
