@@ -942,6 +942,13 @@ $pat-toolbar-z-index: 2 !default;
 			}
 		}
 
+		&.zoom-in:before {
+			content: '#{$glyph-zoom-in}'
+		}
+
+		&.zoom-out:before {
+			content: '#{$glyph-zoom-out}'
+		}
 	}
 
 	.pat-toolbar-local-search-box {
