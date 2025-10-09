@@ -1,0 +1,9 @@
+@import "libraries/family-chart/family-chart.css";
+
+.pat-family-tree {
+    --female-color: rgb(196, 138, 146);
+    --male-color: rgb(120, 159, 172);
+    --genderless-color: lightgray;
+    --background-color: rgb(33, 33, 33);
+    --text-color: #fff;
+}

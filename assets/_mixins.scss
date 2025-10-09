@@ -929,6 +929,12 @@ $bullet-space: 22px !default;
       align-content: center;
     }
 
+    &:has(img) {
+      &:before {
+        display: none;
+      }
+    }
+
     img {
         border: none;
         width: 100%;
