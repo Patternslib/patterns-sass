@@ -19,6 +19,7 @@ $pat-checklist-padding-end: 0 !default;
 	--pat-checklist-line-height: 24px;
 	--pat-checklist-checkbox-vertical-position: 12px;
 	--pat-checklist-margin-bottom: 1rem;
+	--pat-checklist-font-size: inherit;
 }
 
 @mixin checkbox() {
@@ -32,6 +33,7 @@ $pat-checklist-padding-end: 0 !default;
 	-webkit-user-select: none;
 	user-select: none;
 	line-height: var(--pat-checklist-line-height);
+	font-size: var(--pat-checklist-font-size);
 
 	body[dir=rtl] & { 
 		padding-left: var(--pat-checklist-label-padding-end);
