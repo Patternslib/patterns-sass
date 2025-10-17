@@ -968,13 +968,13 @@ $bullet-space: 22px !default;
 
 @mixin pat-message() {
     color: black;
-    padding: 1.3rem;
+    padding: var(--pat-message-padding);
     margin-bottom: 1rem;
     background-color: #efefef;
-    border-radius: $border-radii;
+    border-radius: #{$border-radii};
     line-height: 1.3;
-    font-family: $body-font-family;
-    box-shadow: $pat-message-box-shadow;
+    font-family: #{$body-font-family};
+    box-shadow: #{$pat-message-box-shadow};
 
     &[class*=icon-] {
       display: flex;
@@ -1009,18 +1009,18 @@ $bullet-space: 22px !default;
     }
 
     &.success {
-        background-color: $colour-success-background;
+        background-color: #{$colour-success-background};
 
         &:before {
-          color: $colour-success;
+          color: #{$colour-success};
         }
     }
 
     &.notice {
-        background-color: $colour-notice-background;
+        background-color: #{$colour-notice-background};
 
         &:before {
-          color: $colour-notice;
+          color: #{$colour-notice};
         }
 
         .pat-button {
@@ -1029,7 +1029,7 @@ $bullet-space: 22px !default;
     }
 
     &.info {
-        background-color: $colour-info-background;
+        background-color: #{$colour-info-background};
 
         .pat-button {
           @include button-default;
@@ -1037,12 +1037,12 @@ $bullet-space: 22px !default;
     }
 
     &.error {
-      background-color: $colour-error-background;
-      color: $colour-error;
+      background-color: #{$colour-error-background};
+      color: #{$colour-error};
     }
 
     &.warning {
-        background-color: $colour-warning-background;
+        background-color: #{$colour-warning-background};
         color: black;
 
         &:before {
