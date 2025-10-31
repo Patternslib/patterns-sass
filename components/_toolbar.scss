@@ -928,6 +928,12 @@ $pat-toolbar-z-index: 2 !default;
 			}
 		}
 
+		&.help {
+			&:before {
+				content: "#{$glyph-help}";
+			}
+		}
+
 		&.select {
 			&:before {
 				content: "#{$glyph-checkboxes-double-checked}";
