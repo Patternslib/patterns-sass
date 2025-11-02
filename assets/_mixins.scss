@@ -676,22 +676,26 @@ $bullet-space: 22px !default;
 
   .buttons {
     position: absolute;
-    right: calc(var(--pat-form-panel-padding) + #{$collapsible-button-height} + 15px);
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
+
+    .pat-button {
+      --pat-button-height: #{$collapsible-button-height};
+    }
   
     .icon {
       overflow: hidden;
-      width: $collapsible-button-height;
-      height: $collapsible-button-height;
+      width: #{$collapsible-button-height};
+      height: #{$collapsible-button-height};
       cursor: default;
-      background-color: $button-background-colour;
+      background-color: #{$button-background-colour};
       color: transparent;
       position: relative;
       // display: inline-block; // Float below
       float: right;
       margin-left: 15px;
-      border-radius: $border-radii;
+      border-radius: #{$border-radii};
       font-style: normal;
       font-weight: normal;
 
@@ -699,27 +703,27 @@ $bullet-space: 22px !default;
         font-family: fontello;
         font-size: 1em;
         z-index: 1;
-        width: $collapsible-button-height;
-        height: $collapsible-button-height;
+        width: #{$collapsible-button-height};
+        height: #{$collapsible-button-height};
         text-align: center;
-        line-height: $collapsible-button-height;
+        line-height: #{$collapsible-button-height};
         display: block;
         position: absolute;
-        color: $button-text-colour;
+        color: #{$button-text-colour};
         top: 0;
         left: 0;
       }
 
       &:hover {
-        background-color: $button-background-colour-hover;
+        background-color: #{$button-background-colour-hover};
         
         &:after {
-          color: $button-text-colour-hover;
+          color: #{$button-text-colour-hover};
         }
       }
 
       &.tooltip-active-click {
-        background-color: $colour-accent;
+        background-color: #{$colour-accent};
         &:after {
           color: white
         }
@@ -762,6 +766,12 @@ $bullet-space: 22px !default;
 
     .well-title-group {
       @include panel-title-group;
+    }
+
+    &.pat-collapsible {
+      .well-title-group .buttons {
+        right: calc(var(--pat-form-panel-padding) + #{$collapsible-button-height} + 15px);
+      }
     }
 
     .well-header {
@@ -1233,6 +1243,7 @@ $bullet-space: 22px !default;
   &:before {
     font-weight: normal;
     margin-right: 5px;
+    float: left; // Prevents a 1px margin above the icon.
   }
 
   &.add {
