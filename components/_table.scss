@@ -35,6 +35,8 @@ $pat-table-icon-colour:                     gray !default;
     box-sizing: border-box;
     transition: padding-left 1s;
 
+    --pat-table-avatar-height: 32px;
+
     input {
         position: absolute;
         opacity: 0;
@@ -300,7 +302,8 @@ $pat-table-icon-colour:                     gray !default;
                 a {
                     display: block;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-start;
+                    align-items: flex-start;
 
                     @include screen-size(medium-large) {
                         padding-top: $pat-table-cell-padding-top;
@@ -361,6 +364,32 @@ $pat-table-icon-colour:                     gray !default;
                     grid-column-end: 1;
                     font-size: 1.3em;
                     padding-top: 8px; // Align with icons.
+                }
+
+                &:has(.avatar) {
+                    .name {
+                        display: grid;
+                        grid-template-columns: calc(var(--pat-table-avatar-height) + 9px) auto auto;
+                        grid-template-areas: "avatar label markers";
+                        align-items: center;
+                        justify-content: initial;
+
+                        .avatar {
+                            margin: -8px 7px -6px 0;
+                            height: var(--pat-table-avatar-height);
+                            width: var(--pat-table-avatar-height);
+                            object-fit: cover;
+                            border-radius: 50%;
+                            justify-self: end;
+                            grid-area: avatar;
+                            display: block;
+                            box-sizing: border-box;
+                        }
+
+                        .label {
+                            grid-area: label;
+                        }
+                    }
                 }
             }
 
@@ -877,7 +906,8 @@ $pat-table-icon-colour:                     gray !default;
     }
 
     &.hd {
-        
+        --pat-table-avatar-height: 31px;
+
         @include screen-size (medium-large) { 
             padding: $pat-table-padding-hd;
         }
