@@ -10,9 +10,10 @@ $pat-table-cell-padding-hd-bottom:          8px  !default;
 $pat-table-cell-padding-hd-left:            8px  !default;
 $pat-table-thead-cell-padding-top:          0 !default;
 $pat-table-thead-cell-padding-bottom:       0 !default;
-$pat-table-line-height:                     27px !default;
+$pat-table-line-height:                     1.4 !default;
 $pat-table-padding:                         5px 10px 5px 10px !default;
 $pat-table-padding-hd:                      5px 10px 5px 10px !default;
+$pat-table-checkbox-vertical-position:      20px !default;
 $pat-table-row-outline:                     none !default;
 $pat-table-thead-row-outline:               none !default;
 $pat-table-border-bottom:                   none !default;
@@ -99,7 +100,7 @@ $pat-table-icon-colour:                     gray !default;
 }
 
 .pat-table {
-    --pat-checklist-checkbox-vertical-position: 24px;
+    --pat-checklist-checkbox-vertical-position: #{$pat-table-checkbox-vertical-position};
     --pat-checklist-checkbox-horizontal-position: 18px;
     --pat-checklist-line-height: #{$pat-table-line-height};
 
