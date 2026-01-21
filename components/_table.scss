@@ -438,6 +438,11 @@ $pat-table-icon-colour:                     gray !default;
 
                         .icon {
                             border-radius: $border-radii;
+
+                            &:before {
+                                font-size: 24px;
+                                font-weight: normal;
+                            }
                         }   
 
                         .label {
