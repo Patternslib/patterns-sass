@@ -29,6 +29,8 @@ $pat-table-icon-colour:                     gray !default;
 
 :root {
     --table-avatar-height: 34px;
+    --pat-table-icon-height: 48px;
+    --pat-table-icon-width: 48px;
 }
 
 @mixin table-row-selection-mechanism {
@@ -101,7 +103,7 @@ $pat-table-icon-colour:                     gray !default;
 
 .pat-table {
     --pat-checklist-checkbox-vertical-position: #{$pat-table-checkbox-vertical-position};
-    --pat-checklist-checkbox-horizontal-position: 18px;
+    --pat-checklist-checkbox-horizontal-position: 19px;
     --pat-checklist-line-height: #{$pat-table-line-height};
 
     border-collapse: separate;
@@ -404,25 +406,37 @@ $pat-table-icon-colour:                     gray !default;
                     padding-top: 8px; // Align with icons.
                 }
 
-                &:has(.avatar) {
+                &:has(.avatar),
+                &:has(.icon) {
+                    --pat-checklist-checkbox-vertical-position: 34px;
+
                     .name {
                         display: grid;
-                        grid-template-columns: calc(var(--pat-table-avatar-height) + 9px) auto auto;
-                        grid-template-areas: "avatar label markers";
-                        align-items: center;
+                        grid-template-columns: var(--pat-table-icon-width) auto auto;
+                        grid-template-areas: "icon label markers";
+                        align-items: start;
                         justify-content: initial;
+                        column-gap: 9px;
 
-                        .avatar {
-                            margin: -8px 7px -6px 0;
-                            height: var(--pat-table-avatar-height);
-                            width: var(--pat-table-avatar-height);
+                        .avatar,
+                        .icon {
+                            margin: 0;
                             object-fit: cover;
-                            border-radius: 50%;
                             justify-self: end;
-                            grid-area: avatar;
+                            grid-area: icon;
                             display: block;
                             box-sizing: border-box;
+                            height: var(--pat-table-icon-height);
+                            width: var(--pat-table-icon-width);
                         }
+
+                        .avatar {
+                            border-radius: 50%;
+                        }
+
+                        .icon {
+                            border-radius: $border-radii;
+                        }   
 
                         .label {
                             grid-area: label;
@@ -444,7 +458,7 @@ $pat-table-icon-colour:                     gray !default;
                 user-select: none;
 
                 &:hover {
-                    background-color: #dbdbdb;
+                    background-color: rgba($color: #000000, $alpha: 0.1);
                 }
 
                 label {
