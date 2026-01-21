@@ -175,9 +175,11 @@ $pat-table-icon-colour:                     gray !default;
 
 
         &:has(.value:hover) {
-            th,
-            td {
-                background-color: #dbdbdb;
+            .mode-select & {
+                th,
+                td {
+                    background-color: #dbdbdb;
+                }
             }
         }
         
@@ -328,7 +330,7 @@ $pat-table-icon-colour:                     gray !default;
                 .value {
                     color: black;
 
-                    a {
+                    &[href] {
                         color: #{$colour-link};
                     }
                 }
