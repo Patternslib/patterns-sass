@@ -189,7 +189,8 @@ $pat-table-icon-colour:                     gray !default;
                 background-color: #{$colour-accent} !important;
                 color: white;
 
-                .value {
+                .value,
+                .byline {
                     color: white;
                 }
             }
@@ -356,7 +357,7 @@ $pat-table-icon-colour:                     gray !default;
                     }
         
                     .byline {
-                        color: rgba(0, 0, 0, 0.7);
+                        opacity: 0.7;
                         font-size: 0.8em;
                         display: block;
                         line-height: 1.3;
