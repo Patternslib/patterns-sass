@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 $pat-checklist-item-separation: 0.2em !default;
-$checklist-label-line-height: 1.2em !default;
+$checklist-label-line-height: 24px !default;
 $pat-checklist-padding-start: 1.5em !default;
 $pat-checklist-padding-end: 0 !default;
 
@@ -16,7 +16,7 @@ $pat-checklist-padding-end: 0 !default;
     --pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px var(--colour-accent), inset 0 0 0 5px white;
     --pat-checklist-checkbox-background-colour-checked: var(--colour-accent);
 	--pat-checklist-checkbox-border-radius: calc(0.25 * var(--pat-checklist-checkbox-size));
-	--pat-checklist-line-height: 24px;
+	--pat-checklist-line-height: #{$checklist-label-line-height};
 	--pat-checklist-checkbox-vertical-position: 12px;
 	--pat-checklist-margin-bottom: 1rem;
 	--pat-checklist-font-size: inherit;
@@ -136,7 +136,7 @@ label.pat-checklist {
 }
 
 .pat-checklist:not(.free-form) {
-	line-height: $checklist-label-line-height;
+	line-height: var(--pat-checklist-line-height);
 	min-height: 0.7em; // Important for single checkboxes with the class pat-checklist on the label.
 	margin-bottom: var(--pat-checklist-margin-bottom);
 

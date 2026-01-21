@@ -10,7 +10,7 @@ $pat-table-cell-padding-hd-bottom:          8px  !default;
 $pat-table-cell-padding-hd-left:            8px  !default;
 $pat-table-thead-cell-padding-top:          0 !default;
 $pat-table-thead-cell-padding-bottom:       0 !default;
-$pat-table-line-height:                     1.5 !default;
+$pat-table-line-height:                     27px !default;
 $pat-table-padding:                         5px 10px 5px 10px !default;
 $pat-table-padding-hd:                      5px 10px 5px 10px !default;
 $pat-table-row-outline:                     none !default;
@@ -26,6 +26,10 @@ $pat-table-cell-icons:                      rgba(0, 0, 0, 0.6) !default;
 $pat-table-cell-icons-hover:                black !default;
 $pat-table-icon-colour:                     gray !default;
 
+:root {
+    --table-avatar-height: 34px;
+}
+
 @mixin table-row-selection-mechanism {
     overflow: hidden;
     display: block;
@@ -33,21 +37,18 @@ $pat-table-icon-colour:                     gray !default;
     padding: 0;
     color: transparent;
     box-sizing: border-box;
-    transition: padding-left 1s;
-
-    --pat-table-avatar-height: 32px;
+    transition: grid 0.2s;
+    overflow: hidden;
 
     input {
         position: absolute;
         opacity: 0;
     }
 
-    .mode-select & {
-        padding-left: 20px;
+    grid-template-columns: 0 auto;
 
-        &:hover {
-            background-color: #dbdbdb;
-        }
+    .mode-select & {
+        grid-template-columns: 20px auto;
 
         a {
             -webkit-pointer-events: none;
@@ -57,17 +58,17 @@ $pat-table-icon-colour:                     gray !default;
 
     &:before {
         position: absolute;
-        top: 50% !important;
-        left: -5px !important;
+        left: -15px !important;
         transform: translate(-50%, -50%) !important;
-        font-size: 18px !important;
+        // font-size: 18px !important;
         color: black;
         opacity: 0;
         transition: all 1s;
+        margin-top: 0 !important;
 
         .mode-select & {
             opacity: 1;
-            left: 15px !important;
+            left: var(--pat-checklist-checkbox-horizontal-position) !important;
         }
     }
 }
@@ -98,6 +99,10 @@ $pat-table-icon-colour:                     gray !default;
 }
 
 .pat-table {
+    --pat-checklist-checkbox-vertical-position: 24px;
+    --pat-checklist-checkbox-horizontal-position: 18px;
+    --pat-checklist-line-height: #{$pat-table-line-height};
+
     border-collapse: separate;
     border-spacing: $pat-table-border-spacing;
     vertical-align: top;
@@ -166,6 +171,26 @@ $pat-table-icon-colour:                     gray !default;
         outline: $pat-table-row-outline;
         border-radius: calc(1.1 * #{$border-radii});
         overflow: hidden;
+
+
+        &:has(.value:hover) {
+            th,
+            td {
+                background-color: #dbdbdb;
+            }
+        }
+        
+        &:has(input:checked) {
+            th,
+            td {
+                background-color: #{$colour-accent} !important;
+                color: white;
+
+                .value {
+                    color: white;
+                }
+            }
+        }
 
         > *:last-child {
             border-top-right-radius: calc(1.1 * #{$border-radii});
@@ -298,8 +323,17 @@ $pat-table-icon-colour:                     gray !default;
                 @include screen-size(medium-large) {
                     padding: 0;
                 }
+
+                .value {
+                    color: black;
+
+                    a {
+                        color: #{$colour-link};
+                    }
+                }
         
-                a {
+                a,
+                .value {
                     display: block;
                     display: flex;
                     justify-content: flex-start;
@@ -902,7 +936,7 @@ $pat-table-icon-colour:                     gray !default;
 
     @include screen-size(medium-large) {
         padding: 10px 15px 10px 15px;
-        line-height: $pat-table-line-height;
+        line-height: #{$pat-table-line-height};
     }
 
     &.hd {
