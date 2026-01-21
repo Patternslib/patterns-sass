@@ -111,6 +111,8 @@ $pat-table-icon-colour:                     gray !default;
     vertical-align: top;
     width: 100%;
     margin: calc(-1 * #{$pat-table-border-spacing});
+    // padding: 10px 15px 10px 15px;
+    line-height: #{$pat-table-line-height};
 
     @include screen-size(small) {
         background-color: transparent;
@@ -176,11 +178,11 @@ $pat-table-icon-colour:                     gray !default;
         overflow: hidden;
 
 
-        &:has(.value:hover) {
+        &:has(.item-name:hover) {
             .mode-select & {
                 th,
                 td {
-                    background-color: #dbdbdb;
+                    background-color: rgba($color: #000000, $alpha: 0.05);
                 }
             }
         }
@@ -458,7 +460,7 @@ $pat-table-icon-colour:                     gray !default;
                 user-select: none;
 
                 &:hover {
-                    background-color: rgba($color: #000000, $alpha: 0.1);
+                    background-color: rgba($color: #000000, $alpha: 0.05);
                 }
 
                 label {
@@ -950,11 +952,6 @@ $pat-table-icon-colour:                     gray !default;
                 }
             }    
         }
-    }
-
-    @include screen-size(medium-large) {
-        padding: 10px 15px 10px 15px;
-        line-height: #{$pat-table-line-height};
     }
 
     &.hd {
