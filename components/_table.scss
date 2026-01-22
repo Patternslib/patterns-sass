@@ -114,6 +114,10 @@ $pat-table-icon-colour:                     gray !default;
     // padding: 10px 15px 10px 15px;
     line-height: #{$pat-table-line-height};
 
+    .infinite-scrolling-trigger  {
+        z-index: 0;
+    }
+
     @include screen-size(small) {
         background-color: transparent;
     }
@@ -194,6 +198,7 @@ $pat-table-icon-colour:                     gray !default;
                 color: white;
 
                 *,
+                .value,
                 .segment:after {
                     color: white;
                 }
