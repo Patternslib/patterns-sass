@@ -31,6 +31,9 @@ $pat-table-icon-colour:                     gray !default;
     --table-avatar-height: 34px;
     --pat-table-icon-height: 48px;
     --pat-table-icon-width: 48px;
+    --table-avatar-height-hd: 17px;
+    --pat-table-icon-height-hd: 24px;
+    --pat-table-icon-width-hd: 24px;
 }
 
 @mixin table-row-selection-mechanism {
@@ -982,6 +985,8 @@ $pat-table-icon-colour:                     gray !default;
 
     &.hd {
         --pat-table-avatar-height: 31px;
+        --pat-table-icon-height: var(--pat-table-icon-height-hd);
+        --pat-table-icon-width: var(--pat-table-icon-width-hd);
 
         @include screen-size (medium-large) { 
             padding: $pat-table-padding-hd;
