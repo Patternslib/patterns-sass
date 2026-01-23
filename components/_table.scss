@@ -757,7 +757,8 @@ $pat-table-icon-colour:                     gray !default;
 
                     &.validated {
                         &:before {
-                            content: '#{$glyph-lock}';
+                            font-size: 24px;
+                            content: '#{$glyph-approved}';
                             color: $colour-success;
                         }
 
@@ -772,10 +773,13 @@ $pat-table-icon-colour:                     gray !default;
 
                     &.under-review {
                         &:before {
-                            color: $colour-warning;
+                            font-size: 24px;
+                            content: '#{$glyph-under-review}';
+                            color: #{$colour-warning};
                         }
 
                         &.tooltip-active-click {
+                            // content: '#{$glyph-approved}';
                             background-color: $colour-warning-background;
 
                             &:before {
