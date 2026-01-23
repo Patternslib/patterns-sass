@@ -49,6 +49,16 @@
     background-color: var(--pat-select-box-background-colour-hover);
   }
 
+  &.success {
+    --pat-select-box-background-colour: #{$colour-success-background};
+    --pat-select-box-arrow-text-colour: #{$colour-success-dark};
+
+    &:hover {
+      --pat-select-box-background-colour-hover: #{$colour-success-background-dark};
+      --pat-select-box-arrow-text-colour: black;
+    }
+  }
+
   &[data-value="draft"],
   &.state-draft {
     background-color: $colour-orange-xl;

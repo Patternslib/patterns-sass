@@ -846,7 +846,7 @@ $bullet-space: 22px !default;
         > .well-title-group > .well-header {
           padding-top: 20px;
           padding-bottom: 20px;
-          border-radius: $border-radii;
+          border-radius: #{$border-radii};
 
           &:after {
             content: '#{$glyph-down-open}';
@@ -875,24 +875,23 @@ $bullet-space: 22px !default;
     }
 
     &.success {
-        background-color: $colour-success-background;
+        background-color: #{$colour-success-background};
 
-        input { color: $body-font-color};
+        input { color: #{$body-font-color}; }
     }
 
     &.notice {
-        background-color: $colour-notice-background;
+        background-color: #{$colour-notice-background};
     }
 
     &.warning {
-        background-color: $colour-warning-background;
-
+        background-color: #{$colour-warning-background};
         input { color: $body-font-color};
         // select { border: white, color: white;}
     }
 
     &.info {
-        background-color: $colour-info-background;
+        background-color: #{$colour-info-background};
     }
 
     &.success,
@@ -919,7 +918,7 @@ $bullet-space: 22px !default;
     display: inline-grid;
     grid-template-areas: "avatar-image";
     padding: 2px;
-    border-radius: $border-radius;
+    border-radius: #{$border-radius};
 
     &.inactive {
       img {
