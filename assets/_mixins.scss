@@ -312,24 +312,24 @@ $bullet-space: 22px !default;
     font-family: fontello;
     content: '#{$glyph-up-open}';
     font-size: 0.65em;
-    background-color: $button-background-colour;
-    color: $button-text-colour;
+    background-color: #{$button-background-colour};
+    color: #{$button-text-colour};
     position: absolute;
     right: var(--pat-form-panel-padding);
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    width: $collapsible-button-height;
-    height: $collapsible-button-height;
+    width: #{$collapsible-button-height};
+    height: #{$collapsible-button-height};
     text-align: center;
-    line-height: $collapsible-button-height;
-    border-radius: $border-radii;
+    line-height: #{$collapsible-button-height};
+    border-radius: #{$border-radii};
     display: inline-block;
   }
 
   &:hover:after {
-    background-color: $button-background-colour-hover;
-    color: $button-text-colour-hover;
+    background-color: #{$button-background-colour-hover};
+    color: #{$button-text-colour-hover};
   }
 }
 
@@ -1118,21 +1118,21 @@ $bullet-space: 22px !default;
 @mixin pat-button() {
   font-family: $body-font-family;
   margin: 0;
-  border: $button-border;
+  border: #{$button-border};
   cursor: default;
-  border-radius: $button-border-radius;
-  background-image: $button-background-image;
+  border-radius: #{$button-border-radius};
+  background-image: #{$button-background-image};
   text-decoration: none;
   line-height: var(--pat-button-height);
   white-space: nowrap;
   display: inline-block;
   padding: var(--pat-button-paddings);
-  font-size: $button-font-size;
+  font-size: #{$button-font-size};
   vertical-align: text-bottom;
   font-weight: var(--pat-button-font-weight);
-  box-shadow: $button-shadow;
-  color: $button-text-colour;
-  background-color: $button-background-colour;
+  box-shadow: #{$button-shadow};
+  color: #{$button-text-colour};
+  background-color: #{$button-background-colour};
 
   &:before {
     line-height: inherit;
