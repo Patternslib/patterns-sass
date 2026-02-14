@@ -265,6 +265,14 @@ $bullet-space: 22px !default;
           cursor: default;
         }
       }
+
+      &.select {
+        :has(.mode-select) & {
+          &:before {
+            color: #{$colour-accent};
+          }
+        }
+      }
     }
   }
 }
