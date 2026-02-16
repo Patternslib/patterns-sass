@@ -332,7 +332,8 @@ $pat-toolbar-z-index: 2 !default;
 		align-items: start;
 		gap: var(--pat-toolbar-element-separation);
 
-		&:first-child {
+		&:first-child,
+		&.batch-operations {
 			justify-content: flex-start;
 		}
 
