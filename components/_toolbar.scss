@@ -976,17 +976,6 @@ $pat-toolbar-z-index: 2 !default;
 			content: '#{$glyph-checkboxes-triple-unchecked}'
 		}
 
-		&.deselect-all,
-		&.select-all {
-			&[disabled] {
-				opacity: 1;
-
-				&:before {
-					color: var(--colour-accent);
-				}
-			}
-		}
-
 		&.under-review {
 			&:before {
 				content: '#{$glyph-under-review}';

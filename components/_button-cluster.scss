@@ -405,17 +405,17 @@ $pat-button-cluster-text-colour: $colour-link !default;
     font-size: $base-font-size;
     font-weight: normal;
 
-    &.select-all[disabled],
-    &.deselect-all[disabled] {
-      // background-color: var(--colour-accent);
-      // color: white;
-      // opacity: 1;
+		&.deselect-all,
+		&.select-all {
+			&[disabled],
+      &[disabled]:hover {
+				opacity: 1 !important;
 
-      // &:hover {
-      //   background-color: var(--colour-accent);
-      //   color: white;
-      // }
-    }
+				&:before {
+					color: var(--colour-accent);
+				}
+			}
+		}
 
     &.icon {
       padding: 0;
