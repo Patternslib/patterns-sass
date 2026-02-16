@@ -713,7 +713,7 @@ disabled look for disabled choices in the results dropdown
     margin-bottom: -1px;
   }
   &.tags .select2-choices .select2-search-choice div:before {
-    content: "\e70c";
+    content: "#{$glyph-tag}";
     display: inline-block;
     margin-right: 4px;
     margin-left: 7px;
