@@ -407,14 +407,14 @@ $pat-button-cluster-text-colour: $colour-link !default;
 
     &.select-all[disabled],
     &.deselect-all[disabled] {
-      background-color: var(--colour-accent);
-      color: white;
-      opacity: 1;
+      // background-color: var(--colour-accent);
+      // color: white;
+      // opacity: 1;
 
-      &:hover {
-        background-color: var(--colour-accent);
-        color: white;
-      }
+      // &:hover {
+      //   background-color: var(--colour-accent);
+      //   color: white;
+      // }
     }
 
     &.icon {
