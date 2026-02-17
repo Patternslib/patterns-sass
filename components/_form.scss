@@ -2,6 +2,10 @@
 @import "../components/file-upload-button";
 
 @mixin form-vertical {
+  --pat-form-help-button-height: 19px;
+  --pat-form-help-button-width: 19px;
+  --pat-form-help-button-icon-height: 19px;
+
   > br,
   .group > br {
     display: none;
@@ -9,7 +13,29 @@
 
   label {
     position: relative;
-    display: block;
+    display: grid;
+    min-width: 0; 
+    min-height: 0;
+    gap: 0.2em;
+    grid-template-areas: 
+      "label icons"
+      "field field"
+      "message message";
+
+    > * {
+      grid-area: field;
+    }
+
+    .help-icon {
+      grid-area: icons;
+      justify-self: end;
+      align-self: center;
+      margin: 0;
+    }
+
+    .message {
+      grid-area: message;
+    }
 
     &.columns,
     &.column {
@@ -52,10 +78,11 @@
     .pat-checklist {
       // Output field differs from read only field in the sense that an output field still looks like an input field, albeit uneditable.
       display: block;
-      margin-top: 0.2em;
+      margin-top: 0;
       width: 100%;
       box-sizing: border-box;
       font-weight: #{$font-weight-normal};
+      min-width: 0;
     }
   }
 
@@ -82,9 +109,14 @@
   > label:not(.pat-toggle-switch),
   .group:not(.pat-checklist):not(.pat-toggle-switch) > label {
     font-weight: #{$font-weight-bold};
-    display: block;
     margin-bottom: 1em;
   }
+
+  .legend,
+  legend {
+    display: block;
+  }
+
 
   .group.pat-form-field-toggle {
     display: flex;
@@ -624,6 +656,7 @@
   }
 
   textarea {
+    resize: vertical;
     @media print {
       display: block;
       height: auto;
@@ -893,7 +926,7 @@
         font-family: fontello;
         position: relative;
         margin: calc(-1 * var(--pat-form-input-field-padding-top-bottom)) 0;
-        line-height: var(--pat-form-input-field-line-height);
+        line-height: var(--pat-form-help-button-height);
         height: var(--pat-form-help-button-height);
         width: var(--pat-form-help-button-width);
         // overflow: hidden; // Prevents click surface stretching out too much because of its content.

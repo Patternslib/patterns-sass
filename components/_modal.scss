@@ -10,6 +10,12 @@ $modal-panel-width-large: 1100px !default;
 
 :root {
   --modal-panel-close-button-height: #{$button-height};
+  --modal-panel-width-small: #{$modal-panel-width-small};
+  --modal-panel-width-medium: #{$modal-panel-width-medium};
+  --modal-panel-width-large: #{$modal-panel-width-large};
+  --modal-panel-body-bottom-padding: #{$modal-panel-body-bottom-padding};
+  --modal-panel-body-top-padding: #{$modal-panel-body-top-padding};
+  --modal-panel-body-left-right-padding: #{$modal-panel-body-left-right-padding};
 }
 
 #pat-modal-panel-space {
@@ -41,7 +47,7 @@ $modal-panel-width-large: 1100px !default;
   position: fixed;
   z-index: 9998;
   max-width: 95%;
-  width: $modal-panel-width-medium;
+  width: var(--modal-panel-width-medium);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -50,14 +56,13 @@ $modal-panel-width-large: 1100px !default;
   margin: 0;
   z-index: 9998;
   border: none;
-  
-  
+  background-color: transparent;  
 
   &.small {
-    width: $modal-panel-width-small;
+    width: var(--modal-panel-width-small);
 
     .modal-panel-body {
-      width: $modal-panel-width-small;
+      width: var(--modal-panel-width-small);
     }
   }
 
@@ -102,10 +107,10 @@ $modal-panel-width-large: 1100px !default;
   }
 
   .modal-panel-body {
-    width: $modal-panel-width-medium;
+    width: var(--$modal-panel-width-medium);
     overflow: auto;
     max-height: calc(100vh - 270px);
-    padding: #{$modal-panel-body-top-padding} 30px 0;
+    padding: var(--modal-panel-body-top-padding) var(--modal-panel-body-left-right-padding) 0;
     box-sizing: border-box;
 
     > .form-fields {
@@ -118,7 +123,7 @@ $modal-panel-width-large: 1100px !default;
       bottom: 0;
       margin-bottom: 1px;
       background: white;
-      padding-bottom: $modal-panel-body-bottom-padding;
+      padding-bottom: var(--modal-panel-body-bottom-padding);
       padding-top: 25px;
       border-top: 1px solid white;
       z-index: 10;
@@ -178,10 +183,10 @@ $modal-panel-width-large: 1100px !default;
   }
 
   &.large {
-    width: $modal-panel-width-large;
+    width: var(--modal-panel-width-large);
 
     .modal-panel-body {
-      width: $modal-panel-width-large;
+      width: var(--modal-panel-width-large);
     }
   }
 }
@@ -335,8 +340,8 @@ div.pat-modal {
 
           .panel-sheets {
             &.pat-carousel {
-              margin-left: -1 * $modal-panel-body-left-right-padding;
-              margin-right: -1 * $modal-panel-body-left-right-padding;
+              margin-left: calc(-1 * var(--modal-panel-body-left-right-padding));
+              margin-right: calc(-1 * var(--modal-panel-body-left-right-padding));
               margin-top: 0;
               margin-bottom: 0;
 
@@ -348,7 +353,7 @@ div.pat-modal {
                   transform: none !important;
 
                   .slick-slide {
-                    padding: 0 $modal-panel-body-left-right-padding;
+                    padding: 0 var(--modal-panel-body-left-right-padding);
                     max-height: calc(100vh - 390px);
                     overflow-y: auto;
                     position: static;
@@ -459,7 +464,7 @@ div.pat-modal {
         color: transparent;
 
         &:hover {
-           background-color: $button-background-colour-default-hover;
+           background-color: #{$button-background-colour-default-hover};
         }
 
         &:before {
@@ -527,12 +532,12 @@ div.pat-modal {
       box-shadow: 0 2px 50px rgba(0,0,0,0.7);
       border: 1px solid rgba(0,0,0,0.15);
       padding-top: 68px;
-      border-radius: $border-radii;
+      border-radius: #{$border-radii};
 
       .panel-body {
         max-height: calc(100vh - 250px);
         overflow-y: auto; 
-        padding-top: $modal-panel-body-top-padding;       
+        padding-top: var(--modal-panel-body-top-padding);       
 
         > .pat-button-bar:last-child,
         .container > .pat-button-bar:last-child,
