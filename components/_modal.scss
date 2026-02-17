@@ -9,18 +9,7 @@ $modal-panel-width-medium: 840px !default;
 $modal-panel-width-large: 1100px !default;
 
 #pat-modal-panel-space {
-  @include injection;
   transition: all 0.4s;
-
-  &.injecting {
-    background-color: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(3px) saturate(0.5);
-
-    &:before {
-      @include throbber();
-    }
-  }
-
   position: fixed;
   top: 0;
   left: 0;
@@ -29,16 +18,22 @@ $modal-panel-width-large: 1100px !default;
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0);
 
-  &:has(dialog[open]) {
+  &.injecting {
+    &:before {
+      @include throbber();
+    }
+  }
+
+  &:has(dialog[open],
+  &.injecting) {
     background-color: rgba(0,0,0,0.15);
     backdrop-filter: blur(3px) saturate(0.5);
+    pointer-events: initial;
   }  
 }
 
 .pat-modal-panel {
   // --pat-button-bar-margin-top-bottom: 0;
-
-  pointer-events: initial;
   position: fixed;
   z-index: 9998;
   max-width: 95%;
