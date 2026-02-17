@@ -12,13 +12,13 @@ $modal-panel-width-large: 1100px !default;
   @include injection;
   transition: all 0.4s;
 
-  &:before {
-    animation-delay: 0;
-  }
-
   &.injecting {
     background-color: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(3px) saturate(0.5);
+
+    &:before {
+      @include throbber();
+    }
   }
 
   position: fixed;
