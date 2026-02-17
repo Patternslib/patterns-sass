@@ -8,6 +8,10 @@ $modal-panel-width-small: 640px !default;
 $modal-panel-width-medium: 840px !default;
 $modal-panel-width-large: 1100px !default;
 
+:root {
+  --modal-panel-close-button-height: #{$button-height};
+}
+
 #pat-modal-panel-space {
   transition: all 0.4s;
   position: fixed;
@@ -243,12 +247,12 @@ div.pat-modal {
         color: white;
         border-radius: 50%;
         background-color: rgba(black, 0.3);
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
+        width: var(--modal-panel-close-button-height);
+        height: var(--modal-panel-close-button-height);
+        line-height: var(--modal-panel-close-button-height);
         text-align: center;
         display: block;
-        font-size: 31px;
+        font-size: 28px;
       }
 
       @media print {
@@ -448,9 +452,9 @@ div.pat-modal {
         display: none;
         position: absolute;
         top: 15px;
-        height: 40px;
-        width: 40px;
-        line-height: 40px;
+        height: var(--image-details-social-button-bar-height);
+        width: var(--image-details-social-button-bar-height);
+        line-height: var(--image-details-social-button-bar-height);
         background-color: $button-background-colour-default;
         color: transparent;
 
