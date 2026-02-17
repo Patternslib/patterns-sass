@@ -8,9 +8,37 @@ $modal-panel-width-small: 640px !default;
 $modal-panel-width-medium: 840px !default;
 $modal-panel-width-large: 1100px !default;
 
+#pat-modal-panel-space {
+  @include injection;
+  transition: all 0.4s;
+
+  &:before {
+    animation-delay: 0;
+  }
+
+  &.injecting {
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(3px) saturate(0.5);
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0);
+
+  &:has(dialog[open]) {
+    background-color: rgba(0,0,0,0.15);
+    backdrop-filter: blur(3px) saturate(0.5);
+  }  
+}
+
 .pat-modal-panel {
   // --pat-button-bar-margin-top-bottom: 0;
 
+  pointer-events: initial;
   position: fixed;
   z-index: 9998;
   max-width: 95%;
@@ -23,6 +51,8 @@ $modal-panel-width-large: 1100px !default;
   margin: 0;
   z-index: 9998;
   border: none;
+  
+  
 
   &.small {
     width: $modal-panel-width-small;
@@ -32,19 +62,19 @@ $modal-panel-width-large: 1100px !default;
     }
   }
 
-  &:after {
-    position: fixed;
-    top: -2000px;
-    right: -2000px;
-    bottom: -2000px;
-    left: -2000px;
-    content: ' ';
-    z-index: -1;
-    background-color: rgba(0,0,0,0.15);
-    -webkit-backdrop-filter: blur(3px) saturate(0.5);
-    backdrop-filter: blur(3px) saturate(0.5);
-    animation: fadeIn 1s;
-  }
+  // &:after {
+  //   position: fixed;
+  //   top: -2000px;
+  //   right: -2000px;
+  //   bottom: -2000px;
+  //   left: -2000px;
+  //   content: ' ';
+  //   z-index: -1;
+  //   background-color: rgba(0,0,0,0.15);
+  //   -webkit-backdrop-filter: blur(3px) saturate(0.5);
+  //   backdrop-filter: blur(3px) saturate(0.5);
+  //   animation: fadeIn 1s;
+  // }
 
   .modal-panel-contents {
     position: relative;
