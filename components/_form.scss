@@ -19,8 +19,14 @@
     gap: 0.2em;
     grid-template-areas: 
       "label icons"
-      "field field"
-      "message message";
+      "field field";
+
+    &:has(.message) {
+      grid-template-areas:
+        "label icons"
+        "field field"
+        "message message";
+    }
 
     > * {
       grid-area: field;
