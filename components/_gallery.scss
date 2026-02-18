@@ -1,9 +1,5 @@
 $pswp__assets-path: '/assets/quaive/style/photoswipe/' !default;
-
-$gallery-button-distance: 10px !default;
-$gallery-button-width: 40px !default;
-$gallery-button-height: 40px !default;
-$gallery-default-height: 400px !default;
+$gallery-button-distance: 10px;
 
 @import "../libraries/photoswipe/main";
 @import "../libraries/photoswipe/default-skin/default-skin";
@@ -20,12 +16,12 @@ $gallery-default-height: 400px !default;
 
 .pswp__button--arrow--left:before, 
 .pswp__button--arrow--right:before {
-	width: $gallery-button-width;
-	height: $gallery-button-height;
-	line-height: $gallery-button-height;
+	width: var(--gallery-button-width);
+	height: var(--gallery-button-height);
+	line-height: var(--gallery-button-height);
     box-shadow: 0 0 0 2px rgba(white, 0.7); 
     background: rgba(0, 0, 0, 0.3) !important;
-	border-radius: $border-radii;
+	border-radius: #{$border-radii};
 	color: white;
 	text-align: center;
 	font-size: 15px;

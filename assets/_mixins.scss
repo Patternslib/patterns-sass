@@ -425,46 +425,53 @@ $bullet-space: 22px !default;
   position: absolute;
   top: 1.5em;
   right: 1.5em;
-  width: 3em;
-  height: 3em;
+  width: var(--close-button-height);
+  height: var(--close-button-height);
+  border-radius: #{$border-radii};
   color: transparent !important;
   filter: none;
   border: none;
   background: none;
   outline: none;
   display: block;
-  overflow: visible;
   padding: 0;
   margin: 0;
-  opacity: 0.7;
   transition: transform 0.2s ease-out;
   z-index: 2;
-  font-size: 10px;
+  font-size: 0;
 
-  @include screen-size(small) {
-    // font-size: 20px;
+  &:focus {
+    outline: var(--pat-form-input-field-outline-focus);
+    outline-offset: var(--pat-form-input-field-outline-offset);
   }
 
   &:active {
     box-shadow: inherit;
-    transform: scale(0.6);
+    transform: scale(0.9);
     box-shadow: none;
-  }
-
-  &:hover {
-    opacity: 1;
   }
 
   &:before {
     font-family: fontello;
     content: '#{$glyph-cancel}';
     display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 2.5em;
-    color: black;
-    text-indent: 0;
+    width: var(--close-button-height);
+    text-align: center;
+    font-size: calc(0.7 * var(--close-button-height));
+    margin: 0;
+    display: block;
+    border-radius: #{$border-radii};
+    text-indent: 1%;
+    line-height: calc(0.95 * var(--close-button-height));
+    height: var(--close-button-height);
+    color: #{$button-text-colour};
+    background-color: #{$button-background-colour};
+
+    &:hover {
+      color: #{$button-text-colour-hover};
+      background-color: #{$button-background-colour-hover};
+      text-decoration: none;
+    }
   }
 }
 

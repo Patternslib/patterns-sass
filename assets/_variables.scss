@@ -200,4 +200,19 @@ $collapsible-button-height: 31px !default;
     // Message
 
     --pat-message-padding: 1.3rem;
+
+    // Modal
+
+    --close-button-height: #{$button-height};
+    --modal-panel-width-small: 640px;
+    --modal-panel-width-medium: 840px;
+    --modal-panel-width-large: 1100px;
+    --modal-panel-body-bottom-padding: 30px;
+    --modal-panel-body-top-padding: 5px;
+    --modal-panel-body-left-right-padding: 30px;
+
+    // Gallery
+
+    --gallery-button-width: 40px;
+    --gallery-button-height: 40px;
 }
