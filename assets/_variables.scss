@@ -208,7 +208,7 @@ $collapsible-button-height: 31px !default;
     --modal-panel-width-medium: 840px;
     --modal-panel-width-large: 1100px;
     --modal-panel-body-bottom-padding: 30px;
-    --modal-panel-body-top-padding: 5px;
+    --modal-panel-body-top-padding: 8px; // Leaves some space for focus outline of first form field.
     --modal-panel-body-left-right-padding: 30px;
 
     // Gallery
