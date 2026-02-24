@@ -23,8 +23,8 @@ $button-font-weight: bold !default;
 
 $button-text-colour: white !default;
 $button-text-colour-hover: white !default;
-$button-background-colour: $colour-accent !default;
-$button-background-colour-hover: darken($colour-accent, 10%) !default;
+$button-background-colour: #{$colour-accent} !default;
+$button-background-colour-hover: color-mix(in srgb, $colour-accent 90%, black) !default;
 $button-shadow: none !default;
 
 $button-text-colour-subdued: rgba(0, 0, 0, 0.6) !default;
@@ -32,8 +32,8 @@ $button-text-colour-subdued-hover: rgba(0, 0, 0, 1) !default;
 $button-background-colour-subdued: rgba(0, 0, 0, 0.1) !default;
 $button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15) !default;
 
-$button-background-colour-default: $colour-accent !default;
-$button-background-colour-default-hover: darken($colour-accent, 10%) !default;
+$button-background-colour-default: #{$colour-accent} !default;
+$button-background-colour-default-hover: color-mix(in srgb, $colour-accent 90%, black) !default;
 $button-text-colour-default: white !default;
 $button-text-colour-default-hover: white !default;
 $button-shadow-default: none !default;

@@ -61,72 +61,72 @@
 
   &[data-value="draft"],
   &.state-draft {
-    background-color: $colour-orange-xl;
-    color: $colour-orange-xd;
+    background-color: #{$colour-orange-xl};
+    color: #{$colour-orange-xd};
 
     &:after {
-      background-color: $colour-orange-l;
+      background-color: #{$colour-orange-l};
     }
 
     &:before,
     &:after {
-      color: darken($colour-orange, 20%);
+      color: #{$colour-orange-xd};
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: darken($colour-orange-xl, 5%);
+      background-color: color-mix(in srgb, #{$colour-orange-xl} 95%, black);
 
       &:after {
-        background-color: darken($colour-orange-l, 5%);
+        background-color: color-mix(in srgb, #{$colour-orange-l} 95%, black);
       }
     }
   }
 
   &[data-value="for-review"],
   &.state-for-review {
-    background-color: $colour-violette-xl;
-    color: $colour-violette;
+    background-color: #{$colour-violette-xl};
+    color: #{$colour-violette};
 
     &:after {
-      background-color: $colour-violette-l;
+      background-color: #{$colour-violette-l};
     }
 
     &:before,
     &:after {
-      color: darken($colour-violette, 15%);
+      color: color-mix(in srgb, #{$colour-violette} 85%, black);
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: darken($colour-violette-xl, 5%);
+      background-color: color-mix(in srgb, #{$colour-violette-xl} 95%, black);
 
       &:after {
-        background-color: darken($colour-violette-l, 5%);
+        background-color: color-mix(in srgb, #{$colour-violette-l} 95%, black);
       }
     }
   }
 
   &[data-value="approved"],
   &.state-approved {
-    background-color: $colour-green-xl;
-    color: $colour-green-d;
+    background-color: #{$colour-green-xl};
+    color: #{$colour-green-d};
 
     &:after {
-      background-color: $colour-green-l;
+      background-color: #{$colour-green-l};
     }
 
     &:before,
     &:after {
-      color: darken($colour-green, 15%);
+      color: color-mix(in srgb, #{$colour-green} 85%, black);
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: darken($colour-green-xl, 5%);
+      background-color: color-mix(in srgb, #{$colour-green-xl} 95%, black);
 
       &:after {
-        background-color: darken($colour-green-l, 5%);
+        background-color: color-mix(in srgb, #{$colour-green-l} 95%, black);
       }
     }
   }
@@ -135,24 +135,24 @@
   &[data-value="sent"],
   &.state-published,
   &.state-sent {
-    background-color: $colour-dark-blue-xl;
-    color: darken($colour-dark-blue, 15%);
+    background-color: #{$colour-dark-blue-xl};
+    color: color-mix(in srgb, #{$colour-dark-blue} 85%, black);
 
     &:after {
-      background-color: $colour-dark-blue-l;
+      background-color: #{$colour-dark-blue-l};
     }
 
     &:before,
     &:after {
-      color: darken($colour-dark-blue, 15%);
+      color: color-mix(in srgb, #{$colour-dark-blue} 85%, black);
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: darken($colour-dark-blue-xl, 5%);
+      background-color: color-mix(in srgb, #{$colour-dark-blue-xl} 95%, black);
 
       &:after {
-        background-color: darken($colour-dark-blue-l, 5%);
+        background-color: color-mix(in srgb, #{$colour-dark-blue-l} 95%, black);
       }
     }
   }

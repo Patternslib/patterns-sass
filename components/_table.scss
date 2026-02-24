@@ -818,43 +818,43 @@ $pat-table-icon-colour:                     gray !default;
                     }
 
                    &.state-draft {
-                        background-color: $colour-orange-xl;
-                        color: $colour-orange-xd;
+                        background-color: #{$colour-orange-xl};
+                        color: #{$colour-orange-xd};
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: darken($colour-orange-xl, 5%);
+                            background-color: color-mix(in srgb, #{$colour-orange-xl} 95%, black);
                         }
                     }
 
                    &.state-for-review {
-                        background-color: $colour-purple-xl;
-                        color: $colour-purple;
+                        background-color: #{$colour-purple-xl};
+                        color: #{$colour-purple};
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: darken($colour-purple-xl, 5%);
+                            background-color: color-mix(in srgb, #{$colour-purple-xl} 95%, black);
                         }
                     }
 
                    &.state-sent,
                    &.state-published {
-                        background-color: $colour-dark-blue-xl;
-                        color: $colour-dark-blue-d;
+                        background-color: #{$colour-dark-blue-xl};
+                        color: #{$colour-dark-blue-d};
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: darken($colour-dark-blue-xl, 5%);
+                            background-color: color-mix(in srgb, #{$colour-dark-blue-xl} 95%, black);
                         }
                     }
 
                    &.state-approved {
-                        background-color: $colour-green-xl;
-                        color: $colour-green-d;
+                        background-color: #{$colour-green-xl};
+                        color: #{$colour-green-d};
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: darken($colour-green-xl, 5%);
+                            background-color: color-mix(in srgb, #{$colour-green-xl} 95%, black);
                         }
                     }
                 }

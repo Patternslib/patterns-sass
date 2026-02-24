@@ -77,7 +77,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
 
         &[href]:not(.current):hover,
         &:has(input:unchecked):hover {
-          color: darken($pat-button-cluster-text-colour, 10%);
+          color: color-mix(in srgb, $pat-button-cluster-text-colour 90%, black);
           text-decoration: underline !important;
           text-underline-offset: 3px;
           cursor: pointer;
