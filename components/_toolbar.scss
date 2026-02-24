@@ -868,6 +868,13 @@ $pat-toolbar-z-index: 2 !default;
 			}
 		}
 
+		&.cancel,
+		&.close {
+			&:before {
+				content: "#{$glyph-cancel}";
+			}
+		}
+
 		&.preview {
 			&:before {
 				content: "#{$glyph-eye}";
