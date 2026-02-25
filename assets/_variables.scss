@@ -215,4 +215,13 @@ $collapsible-button-height: 31px !default;
 
     --gallery-button-width: 40px;
     --gallery-button-height: 40px;
+
+    // Button
+
+    --button-font-size: #{$button-font-size};
+    --button-text-colour: #{$button-text-colour};
+    --button-background-colour: #{$button-background-colour};
+    --button-text-colour-hover: #{$button-text-colour-hover};
+    --button-background-colour-hover: #{$button-background-colour-hover};
+    
 }

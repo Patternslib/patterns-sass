@@ -1142,7 +1142,7 @@ $bullet-space: 22px !default;
   white-space: nowrap;
   display: inline-block;
   padding: var(--pat-button-paddings);
-  font-size: #{$button-font-size};
+  font-size: var(--button-font-size);
   vertical-align: text-bottom;
   font-weight: var(--pat-button-font-weight);
   box-shadow: #{$button-shadow};
