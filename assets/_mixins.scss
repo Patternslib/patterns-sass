@@ -704,7 +704,7 @@ $bullet-space: 22px !default;
       width: #{$collapsible-button-height};
       height: #{$collapsible-button-height};
       cursor: default;
-      background-color: #{$button-background-colour};
+      background-color: var(--pat-button-background-colour);
       color: transparent;
       position: relative;
       // display: inline-block; // Float below
@@ -730,10 +730,10 @@ $bullet-space: 22px !default;
       }
 
       &:hover {
-        background-color: #{$button-background-colour-hover};
+        background-color: var(--pat-button-background-colour-hover);
         
         &:after {
-          color: #{$button-text-colour-hover};
+          color: var(--pat-button-text-colour-hover);
         }
       }
 
@@ -1142,12 +1142,12 @@ $bullet-space: 22px !default;
   white-space: nowrap;
   display: inline-block;
   padding: var(--pat-button-paddings);
-  font-size: var(--button-font-size);
+  font-size: var(--pat-button-font-size);
   vertical-align: text-bottom;
   font-weight: var(--pat-button-font-weight);
   box-shadow: #{$button-shadow};
-  color: var(--button-text-colour);
-  background-color: var(--button-background-colour);
+  color: var(--pat-button-text-colour);
+  background-color: var(--pat-button-background-colour);
 
   &:before {
     line-height: inherit;
@@ -1159,8 +1159,8 @@ $bullet-space: 22px !default;
   }
     
   &:hover {
-    color: var(--button-text-colour-hover);
-    background-color: var(--button-background-colour-hover);
+    color: var(--pat-button-text-colour-hover);
+    background-color: var(--pat-button-background-colour-hover);
     text-decoration: none;
   }
 
@@ -1217,7 +1217,7 @@ $bullet-space: 22px !default;
     &:before {
       width: 100%;
       text-align: center;
-      line-height: $button-height;
+      line-height: var(--pat-button-height);
     }
   }
 
