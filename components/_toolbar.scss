@@ -668,52 +668,7 @@ $pat-toolbar-z-index: 2 !default;
 		}
 	}
 
-	.pat-button {
-
-		&.locked {
-			position: relative;
-			padding-right: 3em;
-
-			&:after {
-				display: block;
-				font-family: fontello;
-				content: '#{$glyph-lock}';
-				position: absolute;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				height: 100%;
-				width: 2em;
-				text-align: center;
-				background: $colour-warning;
-				color: white;
-				// border-top-right-radius: 10px;
-				// border-bottom-right-radius: 10px;
-				line-height: var(--pat-toolbar-button-height);
-			}
-
-			&.validated,
-			&.validated.active {
-				&:after {
-					content: '#{$glyph-approved}';
-				}
-			}
-
-			&.active {
-				&:after {
-					content: '#{$glyph-lock-open}';
-				}
-			}
-		}
-	}
-
-	.pat-progress-bar {
-		margin-top: 9px;
-		width: 540px;
-		float: left;
-	}
-
-	.toolbar-section .icon {
+	.icon {
 		font-family: fontello;
 		text-indent: -1000em;
 		width: var(--pat-toolbar-button-height);
@@ -997,6 +952,51 @@ $pat-toolbar-z-index: 2 !default;
 				paint-order: stroke fill;
 			}
 		}
+	}
+
+	.pat-button {
+
+		&.locked {
+			position: relative;
+			padding-right: 3em;
+
+			&:after {
+				display: block;
+				font-family: fontello;
+				content: '#{$glyph-lock}';
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				height: 100%;
+				width: 2em;
+				text-align: center;
+				background: $colour-warning;
+				color: white;
+				// border-top-right-radius: 10px;
+				// border-bottom-right-radius: 10px;
+				line-height: var(--pat-toolbar-button-height);
+			}
+
+			&.validated,
+			&.validated.active {
+				&:after {
+					content: '#{$glyph-approved}';
+				}
+			}
+
+			&.active {
+				&:after {
+					content: '#{$glyph-lock-open}';
+				}
+			}
+		}
+	}
+
+	.pat-progress-bar {
+		margin-top: 9px;
+		width: 540px;
+		float: left;
 	}
 
 	.pat-toolbar-local-search-box {
