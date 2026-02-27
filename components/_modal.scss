@@ -21,7 +21,7 @@
     pointer-events: initial;
 
     &:first-child {
-      background: white;
+      background: #{$colour-base};
     }
   }  
 }
