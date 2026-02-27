@@ -21,10 +21,10 @@ $button-border-radius: $border-radii !default;
 $button-background-image: none !default;
 $button-font-weight: bold !default;
 
-$button-text-colour: white !default;
-$button-text-colour-hover: white !default;
+$button-text-colour: #{$colour-link} !default;
+$button-text-colour-hover: color-mix(in srgb, #{$colour-link} 90%, black) !default;
 $button-background-colour: #{$colour-accent} !default;
-$button-background-colour-hover: color-mix(in srgb, $colour-accent 90%, black) !default;
+$button-background-colour-hover: color-mix(in srgb, #{$colour-accent} 90%, black) !default;
 $button-shadow: none !default;
 
 $button-text-colour-subdued: rgba(0, 0, 0, 0.6) !default;
@@ -33,9 +33,9 @@ $button-background-colour-subdued: rgba(0, 0, 0, 0.1) !default;
 $button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15) !default;
 
 $button-background-colour-default: #{$colour-accent} !default;
-$button-background-colour-default-hover: color-mix(in srgb, $colour-accent 90%, black) !default;
-$button-text-colour-default: white !default;
-$button-text-colour-default-hover: white !default;
+$button-background-colour-default-hover: color-mix(in srgb, #{$colour-accent} 90%, black) !default;
+$button-text-colour-default: rgba(255, 255, 255, 0.9) !default;
+$button-text-colour-default-hover: rgba(255, 255, 255, 1) !default;
 $button-shadow-default: none !default;
 
 $button-text-colour-disabled: rgba(black, 0.3) !default;
@@ -174,13 +174,6 @@ $collapsible-button-height: 31px !default;
     --pat-menu-list-item-padding-start: 34px;
     --pat-menu-list-item-line-height: 24px;
 
-    // Buttons
-    --pat-button-height: 35px;
-    --pat-button-line-height: 35px;
-    --pat-button-font-size: #{$base-font-size};
-    --pat-button-font-weight: bold;
-    --pat-button-paddings: 0 #{$base-font-size};
-
     // Sortable blocks
     --pat-sortable-blocks-padding-start: 44px;
     --pat-sortable-blocks-button-width: 36px;
@@ -216,8 +209,9 @@ $collapsible-button-height: 31px !default;
     --gallery-button-width: 40px;
     --gallery-button-height: 40px;
 
-    // Button
+    // Buttons
 
+    --pat-button-paddings: 0 #{$base-font-size};
     --pat-button-font-size: #{$button-font-size};
     --pat-button-text-colour: #{$button-text-colour};
     --pat-button-background-colour: #{$button-background-colour};
@@ -226,5 +220,16 @@ $collapsible-button-height: 31px !default;
     --pat-button-height: #{$button-height};
     --pat-button-line-height: #{$button-line-height};
     --pat-button-paddings: #{$button-paddings};
+    --pat-button-font-weight: #{$button-font-weight};
+    --pat-button-border: #{$button-border};
+    --pat-button-border-radius: #{$button-border-radius};
+    --pat-button-background-image: #{$button-background-image};
+    --pat-button-shadow: #{$button-shadow};
+    --pat-button-small-height: #{$button-small-height};
+    --pat-button-small-line-height: #{$button-small-line-height};
+    --pat-button-small-font-size: #{$button-small-font-size};
+    --pat-button-small-paddings: #{$button-small-paddings};
+    --pat-button-small-shadow: #{$button-small-shadow};
     
 }
+
