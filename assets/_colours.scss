@@ -39,6 +39,7 @@ $colour-success-background-dark: #cddec4 !default;
 $colour-warning: orange !default;
 $colour-warning-background: #fbead9 !default; 
 $colour-for-review: #a90061 !default;
+$colour-for-review-background: #f4d3e5 !default;
 $colour-notice: tuscanbrown !default;
 $colour-notice-background: #fdfdc8 !default;
 $colour-info: #d9edf7 !default;
@@ -99,12 +100,33 @@ $colour-well-background: rgba(255,255,255,0.5) !default;
     --colour-warning-text-hover: color-mix(in srgb, var(--colour-warning-text) 98%, black);
 
     --colour-for-review: #{$colour-for-review};
+    --colour-for-review-background: #{$colour-for-review-background};
+    --colour-for-review-text: color-mix(in srgb, var(--colour-for-review) 50%, black);
+    --colour-for-review-hover: color-mix(in srgb, var(--colour-for-review) 98%, black);
+    --colour-for-review-background-hover: color-mix(in srgb, var(--colour-for-review-background) 98%, black);
+    --colour-for-review-text-hover: color-mix(in srgb, var(--colour-for-review-text) 98%, black);
+
     --colour-notice: #{$colour-notice};
     --colour-notice-background: #{$colour-notice-background};
+    --colour-notice-text: color-mix(in srgb, var(--colour-notice) 50%, black);
+    --colour-notice-hover: color-mix(in srgb, var(--colour-notice) 98%, black);
+    --colour-notice-background-hover: color-mix(in srgb, var(--colour-notice-background) 98%, black);
+    --colour-notice-text-hover: color-mix(in srgb, var(--colour-notice-text) 98%, black);
+
     --colour-info: #{$colour-info};
     --colour-info-background: #{$colour-info-background};
+    --colour-info-text: color-mix(in srgb, var(--colour-info) 50%, black);
+    --colour-info-hover: color-mix(in srgb, var(--colour-info) 98%, black);
+    --colour-info-background-hover: color-mix(in srgb, var(--colour-info-background) 98%, black);
+    --colour-info-text-hover: color-mix(in srgb, var(--colour-info-text) 98%, black);
+
     --colour-error: #{$colour-error};
     --colour-error-background: #{$colour-error-background};
+    --colour-error-text: color-mix(in srgb, var(--colour-error) 50%, black);
+    --colour-error-hover: color-mix(in srgb, var(--colour-error) 98%, black);
+    --colour-error-background-hover: color-mix(in srgb, var(--colour-error-background) 98%, black);
+    --colour-error-text-hover: color-mix(in srgb, var(--colour-error-text) 98%, black);
+
     --colour-base-light: #{$colour-base-light};
     --colour-chooser-default: #{$colour-chooser-default};
     --colour-form-fields-background: #{$colour-form-fields-background};

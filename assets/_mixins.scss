@@ -1033,18 +1033,20 @@ $bullet-space: 22px !default;
     }
 
     &.success {
-        background-color: #{$colour-success-background};
+        background-color: var(--colour-success-background);
+        color: var(--colour-success-text);
 
         &:before {
-          color: #{$colour-success};
+          color: var(--colour-success);
         }
     }
 
     &.notice {
-        background-color: #{$colour-notice-background};
+        background-color: var(--colour-notice-background);
+        color: var(--colour-notice-text);
 
         &:before {
-          color: #{$colour-notice};
+          color: var(--colour-notice);
         }
 
         .pat-button {
@@ -1053,7 +1055,8 @@ $bullet-space: 22px !default;
     }
 
     &.info {
-        background-color: #{$colour-info-background};
+        background-color: var(--colour-info-background);
+        color: var(--colour-info-text);
 
         .pat-button {
           @include button-default;
@@ -1061,16 +1064,16 @@ $bullet-space: 22px !default;
     }
 
     &.error {
-      background-color: #{$colour-error-background};
-      color: #{$colour-error};
+      background-color: var(--colour-error-background);
+      color: var(--colour-error-text);
     }
 
     &.warning {
-        background-color: #{$colour-warning-background};
-        color: black;
+        background-color: var(--colour-warning-background);
+        color: var(--colour-warning-text);
 
         &:before {
-          color: $colour-warning;
+          color: var(--colour-warning);
         }
 
         .pat-button {
