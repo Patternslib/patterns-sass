@@ -1172,22 +1172,22 @@ $bullet-space: 22px !default;
   }
 
   &.warning {
-    color: var(--colour-warning-text);
-    background-color: var(--colour-warning-background);
+    color:rgba(255,255,255,0.9);
+    background-color: var(--colour-warning);
 
     &:hover {
-      color: var(--colour-warning-text-hover);
-      background-color: var(--colour-warning-background-hover);
+      color: white;
+      background-color: var(--colour-warning-hover);
     }
   }
   
   &.success {
-    color: var(--colour-success);
-    background-color: var(--colour-success-background);
-  
+    color:rgba(255,255,255,0.9);
+    background-color: var(--colour-success);
+
     &:hover {
-      color: var(--colour-success-hover);
-      background-color: var(--colour-success-background-hover);
+      color: white;
+      background-color: var(--colour-success-hover);
     }
   }
 
