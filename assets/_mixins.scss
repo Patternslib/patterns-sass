@@ -1168,6 +1168,26 @@ $bullet-space: 22px !default;
     @include button-default;
   }
 
+  &.warning {
+    color: var(--colour-warning-text);
+    background-color: var(--colour-warning-background);
+
+    &:hover {
+      color: var(--colour-warning-text-hover);
+      background-color: var(--colour-warning-background-hover);
+    }
+  }
+  
+  &.success {
+    color: var(--colour-success);
+    background-color: var(--colour-success-background);
+  
+    &:hover {
+      color: var(--colour-success-hover);
+      background-color: var(--colour-success-background-hover);
+    }
+  }
+
   &[disabled],
   &.disabled,
   &:is(a):not([href]),

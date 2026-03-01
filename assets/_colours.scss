@@ -80,12 +80,24 @@ $colour-well-background: rgba(255,255,255,0.5) !default;
     --colour-alert: #{$colour-alert};
     --colour-workspace-default: #{$colour-workspace-default};
     --colour-accent: #{$colour-accent};
+
     --colour-success: #{$colour-success};
-    --colour-success-dark: #{$colour-success-dark};
     --colour-success-background: #{$colour-success-background};
-    --colour-success-background-dark: #{$colour-success-background-dark};
+    --colour-success-dark: color-mix(in srgb, var(--colour-success) 50%, black);
+    --colour-success-text: var(--colour-success-dark);
+
+    --colour-success-hover: color-mix(in srgb, var(--colour-success) 98%, black);
+    --colour-success-background-hover: color-mix(in srgb, var(--colour-success-background) 98%, black);
+    --colour-success-text-hover: color-mix(in srgb, var(--colour-success-text) 98%, black);
+
     --colour-warning: #{$colour-warning};
     --colour-warning-background: #{$colour-warning-background};
+    --colour-warning-text: color-mix(in srgb, var(--colour-warning) 50%, black);
+
+    --colour-warning-hover: color-mix(in srgb, var(--colour-warning) 98%, black);
+    --colour-warning-background-hover: color-mix(in srgb, var(--colour-warning-background) 98%, black);
+    --colour-warning-text-hover: color-mix(in srgb, var(--colour-warning-text) 98%, black);
+
     --colour-for-review: #{$colour-for-review};
     --colour-notice: #{$colour-notice};
     --colour-notice-background: #{$colour-notice-background};
