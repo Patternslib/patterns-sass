@@ -42,7 +42,7 @@ $colour-for-review: #a90061 !default;
 $colour-for-review-background: #f4d3e5 !default;
 $colour-notice: tuscanbrown !default;
 $colour-notice-background: #fdfdc8 !default;
-$colour-info: #d9edf7 !default;
+$colour-info: #4dc4ff !default;
 $colour-info-background: #d9edf7 !default;
 $colour-error: red !default;
 $colour-error-background: #FFC8C8 !default;
@@ -115,7 +115,7 @@ $colour-well-background: rgba(255,255,255,0.5) !default;
 
     --colour-info: #{$colour-info};
     --colour-info-background: #{$colour-info-background};
-    --colour-info-text: color-mix(in srgb, var(--colour-info) 50%, black);
+    --colour-info-text: color-mix(in srgb, var(--colour-info) 20%, black);
     --colour-info-hover: color-mix(in srgb, var(--colour-info) 98%, black);
     --colour-info-background-hover: color-mix(in srgb, var(--colour-info-background) 98%, black);
     --colour-info-text-hover: color-mix(in srgb, var(--colour-info-text) 98%, black);

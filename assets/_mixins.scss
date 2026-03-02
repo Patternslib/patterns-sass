@@ -1058,6 +1058,10 @@ $bullet-space: 22px !default;
         background-color: var(--colour-info-background);
         color: var(--colour-info-text);
 
+        &:before {
+          color: var(--colour-info);
+        }
+
         .pat-button {
           @include button-default;
         }
@@ -1066,6 +1070,10 @@ $bullet-space: 22px !default;
     &.error {
       background-color: var(--colour-error-background);
       color: var(--colour-error-text);
+
+      &:before {
+        color: var(--colour-error);
+      }
     }
 
     &.warning {
