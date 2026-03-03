@@ -1214,14 +1214,13 @@ $bullet-space: 22px !default;
     }
   }
 
-  @media print {
-    display: none;
-  }
-
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  @media print {
+    display: none;
+  }
 
   &.small {
     font-size: $button-small-font-size;

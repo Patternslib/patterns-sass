@@ -23,10 +23,10 @@ $carousel-default-dot-colour: #f73558 !default;
         .slick-slide {
             img {
                 height: $carousel-default-height-large;
+                object-fit: cover;
                 @include screen-size(small) {
                     height: $carousel-default-height-small;
                 }
-                object-fit: cover;
             }
         }
     }

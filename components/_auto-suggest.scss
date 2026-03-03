@@ -26,7 +26,6 @@ $glyph-remove-tag: $glyph-remove;
   margin: 0;
   position: relative;
   display: inline-block;
-  @media print { display: inline; }
   /* inline-block for ie7 */
   zoom: 1;
   *display: inline;
@@ -34,6 +33,7 @@ $glyph-remove-tag: $glyph-remove;
   width: 100%;
   font-weight: normal;
   padding: 0;
+  @media print { display: inline; }
 }
 
 .lt-ie10 .select2-container {
