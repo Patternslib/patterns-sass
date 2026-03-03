@@ -6,9 +6,9 @@ $pat-checklist-padding-start: 1.5em !default;
 $pat-checklist-padding-end: 0 !default;
 
 :root {
-	--pat-checklist-label-padding-start: #{$pat-checklist-padding-start};
-	--pat-checklist-label-padding-end: #{$pat-checklist-padding-end};
-	--pat-checklist-item-separation: #{$pat-checklist-item-separation};
+	--pat-checklist-label-padding-start: var(--pat-checklist-padding-start);
+	--pat-checklist-label-padding-end: var(--pat-checklist-padding-end);
+	--pat-checklist-item-separation: var(--pat-checklist-item-separation);
 	--pat-checklist-checkbox-size: 18px;
     --pat-checklist-checkbox-background-colour: white;
     --pat-checklist-checkbox-box-shadow: inset 0 0 0 2px black;
@@ -16,7 +16,7 @@ $pat-checklist-padding-end: 0 !default;
     --pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px var(--colour-accent), inset 0 0 0 5px white;
     --pat-checklist-checkbox-background-colour-checked: var(--colour-accent);
 	--pat-checklist-checkbox-border-radius: calc(0.25 * var(--pat-checklist-checkbox-size));
-	--pat-checklist-line-height: #{$checklist-label-line-height};
+	--pat-checklist-line-height: var(--checklist-label-line-height);
 	--pat-checklist-checkbox-vertical-position: 12px;
 	--pat-checklist-margin-bottom: 1rem;
 	--pat-checklist-font-size: inherit;

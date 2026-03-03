@@ -1,5 +1,5 @@
 :root {
-	--pat-sortable-blocks-handle-colour: #{$colour-accent};
+	--pat-sortable-blocks-handle-colour: var(--colour-accent);
 }
 
 .pat-sortable-form-fields {

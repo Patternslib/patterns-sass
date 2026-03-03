@@ -50,11 +50,11 @@
   }
 
   &.success {
-    --pat-select-box-background-colour: #{$colour-success-background};
-    --pat-select-box-arrow-text-colour: #{$colour-success-dark};
+    --pat-select-box-background-colour: var(--colour-success-background);
+    --pat-select-box-arrow-text-colour: var(--colour-success-dark);
 
     &:hover {
-      --pat-select-box-background-colour-hover: #{$colour-success-background-dark};
+      --pat-select-box-background-colour-hover: var(--colour-success-background-dark);
       --pat-select-box-arrow-text-colour: black;
     }
   }

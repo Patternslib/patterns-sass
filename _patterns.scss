@@ -11,15 +11,15 @@
 
 body {
   @include screen-size(small) {
-    --pat-form-panel-padding: #{$pat-form-panel-padding-small};
+    --pat-form-panel-padding: var(--pat-form-panel-padding-small);
   }
 
   @include screen-size(medium) {
-    --pat-form-panel-padding: #{$pat-form-panel-padding-medium};
+    --pat-form-panel-padding: var(--pat-form-panel-padding-medium);
   }
 
   @include screen-size(large) {
-    --pat-form-panel-padding: #{$pat-form-panel-padding-large};
+    --pat-form-panel-padding: var(--pat-form-panel-padding-large);
   }
 }
 

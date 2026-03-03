@@ -105,9 +105,9 @@ $pat-table-icon-colour:                     gray !default;
 }
 
 .pat-table {
-    --pat-checklist-checkbox-vertical-position: #{$pat-table-checkbox-vertical-position};
+    --pat-checklist-checkbox-vertical-position: var(--pat-table-checkbox-vertical-position);
     --pat-checklist-checkbox-horizontal-position: 19px;
-    --pat-checklist-line-height: #{$pat-table-line-height};
+    --pat-checklist-line-height: var(--pat-table-line-height);
 
     border-collapse: separate;
     border-spacing: $pat-table-border-spacing;
@@ -734,7 +734,7 @@ $pat-table-icon-colour:                     gray !default;
 
 						.pie-graph {
 							border: 2px white solid;
-                            --pie-graph-segment-colour: #{$colour-accent};
+                            --pie-graph-segment-colour: var(--colour-accent);
 						}
                     }
 
@@ -748,7 +748,7 @@ $pat-table-icon-colour:                     gray !default;
                         justify-content: center;
 
                         .pie-graph {
-                            --pie-graph-segment-colour: #{$pat-table-icon-colour};
+                            --pie-graph-segment-colour: var(--pat-table-icon-colour);
                         }
                     }
 

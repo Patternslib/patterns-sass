@@ -694,7 +694,7 @@ $bullet-space: 22px !default;
     transform: translateY(-50%);
 
     .pat-button {
-      --pat-button-height: #{$collapsible-button-height};
+      --pat-button-height: var(--collapsible-button-height);
     }
   
     .icon {

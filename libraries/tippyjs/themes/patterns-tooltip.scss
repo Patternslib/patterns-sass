@@ -19,13 +19,13 @@ $arrow-distance: 3px;
 $tooltip-border-radii: $border-radii !default;
 
 :root {
-  --pat-tooltip-box-shadow: 0 4px 14px -2px $transparent-light;
+  --pat-tooltip-box-shadow: 0 4px 14px -2px #{$transparent-light};
 }
 
 .#{$namespace-prefix}-box {
   background-color: $color;
   background-clip: padding-box;
-  border: 1px solid $transparent-dark;
+  border: 1px solid #{$transparent-dark};
   color: black;
   box-shadow: var(--pat-tooltip-box-shadow);
   color: $body-font-color;

@@ -21,20 +21,20 @@ $pat-button-cluster-button-height: $button-height !default;
 $pat-toolbar-z-index: 2 !default;
 
 :root {
-	--pat-toolbar-button-height: #{$pat-toolbar-button-height};
-	--pat-toolbar-button-line-height: #{$pat-toolbar-button-line-height};
-	--pat-toolbar-font-size: #{$pat-toolbar-font-size};
+	--pat-toolbar-button-height: var(--pat-toolbar-button-height);
+	--pat-toolbar-button-line-height: var(--pat-toolbar-button-line-height);
+	--pat-toolbar-font-size: var(--pat-toolbar-font-size);
 	--pat-toolbar-search-field-width-open: 350px;
-	--pat-toolbar-element-separation: #{$pat-toolbar-element-separation};
-	--pat-toolbar-bump-distance: #{$pat-toolbar-bump-distance};
-	--pat-toolbar-bump-distance-scroll-down: #{$pat-toolbar-bump-distance-scroll-down};
+	--pat-toolbar-element-separation: var(--pat-toolbar-element-separation);
+	--pat-toolbar-bump-distance: var(--pat-toolbar-bump-distance);
+	--pat-toolbar-bump-distance-scroll-down: var(--pat-toolbar-bump-distance-scroll-down);
 	--pat-toolbar-padding: 10px;
 	--pat-toolbar-margin-bottom: 40px;
-	--pat-toolbar-top-distance: #{$pat-toolbar-top-distance};
-	--pat-toolbar-top-distance-scroll-down: #{$pat-toolbar-top-distance-scroll-down};
-	--pat-toolbar-hiding-speed: #{$pat-toolbar-hiding-speed};
-	--pat-toolbar-icon-background-colour: #{$button-background-colour};
-	--pat-toolbar-icon-background-colour-hover: #{$button-background-colour-hover};
+	--pat-toolbar-top-distance: var(--pat-toolbar-top-distance);
+	--pat-toolbar-top-distance-scroll-down: var(--pat-toolbar-top-distance-scroll-down);
+	--pat-toolbar-hiding-speed: var(--pat-toolbar-hiding-speed);
+	--pat-toolbar-icon-background-colour: var(--button-background-colour);
+	--pat-toolbar-icon-background-colour-hover: var(--button-background-colour-hover);
 
 	@include screen-size(small) {
 		--pat-toolbar-auto-hide-offset: -15px;
@@ -48,8 +48,8 @@ $pat-toolbar-z-index: 2 !default;
 .pat-toolbar {
 
 	--pat-select-box-font-size: var(--pat-toolbar-font-size);
-	--pat-select-box-background-colour: #{$button-background-colour};
-	--pat-select-box-background-colour-hover: #{$button-background-colour-hover};
+	--pat-select-box-background-colour: var(--button-background-colour);
+	--pat-select-box-background-colour-hover: var(--button-background-colour-hover);
 	--pat-select-box-padding-start: 18px;
 	--pat-context-menu-panel-distance: 52px;
 
@@ -620,8 +620,8 @@ $pat-toolbar-z-index: 2 !default;
 	.toolbar-section > .extras > .pat-select:not(.bare) {	
 		--pat-select-box-padding-top-bottom: 0;
 		--pat-select-box-box-shadow: none;
-		--pat-select-box-background-color: #{$button-background-colour};
-		--pat-select-box-arrow-text-colour: #{$colour-link};
+		--pat-select-box-background-color: var(--button-background-colour);
+		--pat-select-box-arrow-text-colour: var(--colour-link);
 		--pat-select-box-height: var(--pat-toolbar-button-line-height);
 		--pat-select-box-padding-right-left: 20px;
 

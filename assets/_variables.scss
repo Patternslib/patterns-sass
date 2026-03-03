@@ -77,13 +77,13 @@ $form-input-field-line-height: inherit !default;
 $collapsible-button-height: 31px !default;
 
 :root {
-    --border-radii: #{$border-radii};
+    --border-radii: var(--border-radii);
 
     // Toggle
     --pat-toggle-height: 26px;
     --pat-toggle-switch-border-radius: 14px;
     --pat-toggle-background-colour-off: silver;
-    --pat-toggle-background-colour-on: #{$colour-success};
+    --pat-toggle-background-colour-on: var(--colour-success);
     --pat-toggle-toggle-distance: 2px;
     --pat-toggle-toggle-border-radius: 50%;
     --pat-toggle-toggle-background-colour: white;
@@ -109,7 +109,7 @@ $collapsible-button-height: 31px !default;
     --pat-form-input-field-line-height: 28px;
     --pat-form-input-field-padding-top-bottom-disabled: 0;
     --pat-form-input-field-padding-left-right-disabled: 0;
-    --pat-form-input-field-font-size: #{$base-font-size};
+    --pat-form-input-field-font-size: var(--base-font-size);
     --pat-form-input-field-font-weight: normal;
     --pat-form-input-field-tail-white: 1.2rem;
     --pat-form-input-field-background-colour: var(--colour-form-fields-background);
@@ -119,8 +119,8 @@ $collapsible-button-height: 31px !default;
     --pat-form-placeholder-colour: rgba(0, 0, 0, 0.35);
     --pat-form-input-field-text: inherit;
     --pat-form-input-field-text-disabled: rgba(0, 0, 0, 0.5);
-    --pat-form-panel-background-colour: #{$colour-well-background};
-    --pat-form-panel-collapsible-button-height: $collapsible-button-height;
+    --pat-form-panel-background-colour: var(--colour-well-background);
+    --pat-form-panel-collapsible-button-height: var(--collapsible-button-height);
     --pat-form-input-field-outline: none;
     --pat-form-input-field-outline-offset: 2px;
     --pat-form-input-field-outline-focus: dodgerblue 2px solid;
@@ -132,8 +132,8 @@ $collapsible-button-height: 31px !default;
     --pat-form-help-button-height: 37px;
     --pat-form-help-button-width: 26px;
     --pat-form-help-button-icon-height: 37px;
-    --pat-form-help-button-icon-glyph: $glyph-question-mark;
-    --pat-form-help-button-icon-border-radius: #{$border-radii};
+    --pat-form-help-button-icon-glyph: var(--glyph-question-mark);
+    --pat-form-help-button-icon-border-radius: var(--border-radii);
     --pat-form-panel-box-shadow-hover: 0 0 1px 1px rgba(0, 0, 0, 0.5);
     --pat-form-panel-padding: 40px;
     --pat-form-panel-padding-large: 40px;
@@ -143,7 +143,7 @@ $collapsible-button-height: 31px !default;
     --pat-form-input-field-padding-start-end: 10px;
     --pat-form-input-field-border: none;
     --pat-form-input-field-box-shadow: none;
-    --pat-form-input-field-border-radius: #{$border-radii};
+    --pat-form-input-field-border-radius: var(--border-radii);
     --pat-form-proportion-ceiling: 260%;
     --pat-form-proportion-name: 30%;
     --pat-form-proportion-value: 80%;
@@ -179,12 +179,12 @@ $collapsible-button-height: 31px !default;
     --pat-sortable-blocks-button-width: 36px;
     --pat-sortable-blocks-gap: 6px;
     --pat-sortable-blocks-item-info-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
-    --pat-sortable-blocks-handle-colour: #{$colour-accent};
+    --pat-sortable-blocks-handle-colour: var(--colour-accent);
     --pat-sortable-blocks-remove-button-width: 20px;
     --pat-sortable-blocks-remove-button-height: 34px;
     --pat-sortable-blocks-remove-button-icon-height: 20px;
     --pat-sortable-blocks-remove-button-icon-border-radius: 50%;
-    --pat-sortable-blocks-item-info-box-shadow: #{$default-box-shadow};
+    --pat-sortable-blocks-item-info-box-shadow: var(--default-box-shadow);
 
     // Context menu
     --pat-context-menu-panel-distance: 1.7em;
@@ -196,7 +196,7 @@ $collapsible-button-height: 31px !default;
 
     // Modal
 
-    --close-button-height: #{$button-height};
+    --close-button-height: var(--button-height);
     --modal-panel-width-small: 640px;
     --modal-panel-width-medium: 840px;
     --modal-panel-width-large: 1100px;
@@ -211,25 +211,24 @@ $collapsible-button-height: 31px !default;
 
     // Buttons
 
-    --pat-button-paddings: 0 #{$base-font-size};
-    --pat-button-font-size: #{$button-font-size};
-    --pat-button-text-colour: #{$button-text-colour};
-    --pat-button-background-colour: #{$button-background-colour};
-    --pat-button-text-colour-hover: #{$button-text-colour-hover};
-    --pat-button-background-colour-hover: #{$button-background-colour-hover};
-    --pat-button-height: #{$button-height};
-    --pat-button-line-height: #{$button-line-height};
-    --pat-button-paddings: #{$button-paddings};
-    --pat-button-font-weight: #{$button-font-weight};
-    --pat-button-border: #{$button-border};
-    --pat-button-border-radius: #{$button-border-radius};
-    --pat-button-background-image: #{$button-background-image};
-    --pat-button-shadow: #{$button-shadow};
-    --pat-button-small-height: #{$button-small-height};
-    --pat-button-small-line-height: #{$button-small-line-height};
-    --pat-button-small-font-size: #{$button-small-font-size};
-    --pat-button-small-paddings: #{$button-small-paddings};
-    --pat-button-small-shadow: #{$button-small-shadow};
+    --pat-button-paddings: var(--button-paddings);
+    --pat-button-font-size: var(--button-font-size);
+    --pat-button-text-colour: var(--button-text-colour);
+    --pat-button-background-colour: var(--button-background-colour);
+    --pat-button-text-colour-hover: var(--button-text-colour-hover);
+    --pat-button-background-colour-hover: var(--button-background-colour-hover);
+    --pat-button-height: var(--button-height);
+    --pat-button-line-height: var(--button-line-height);
+    --pat-button-paddings: var(--button-paddings);
+    --pat-button-font-weight: var(--button-font-weight);
+    --pat-button-border: var(--button-border);
+    --pat-button-border-radius: var(--button-border-radius);
+    --pat-button-background-image: var(--button-background-image);
+    --pat-button-shadow: var(--button-shadow);
+    --pat-button-small-height: var(--button-small-height);
+    --pat-button-small-line-height: var(--button-small-line-height);
+    --pat-button-small-font-size: var(--button-small-font-size);
+    --pat-button-small-paddings: var(--button-small-paddings);
+    --pat-button-small-shadow: var(--button-small-shadow);
     
 }
-
