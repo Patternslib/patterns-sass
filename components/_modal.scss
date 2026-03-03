@@ -730,10 +730,6 @@ div.pat-modal {
         }
       }
 
-      @include screen-size(small) {
-          padding: 5em 1.5rem;
-      }
-
       -moz-transform: scale(1.5) translate(-50%,-50%);
       -webkit-transform: scale(1.5) translate(-50%,-50%);
       transform: scale(1.5) translate(-50%,-50%);
@@ -755,6 +751,10 @@ div.pat-modal {
       
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
+
+      @include screen-size(small) {
+          padding: 5em 1.5rem;
+      }
     }
 
     &.max-height > .panel-content {
