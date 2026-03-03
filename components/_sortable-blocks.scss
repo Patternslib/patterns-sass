@@ -39,7 +39,7 @@
 	}
 
 	&:has(.sortable-item) + .pat-button-bar {
-		margin-top: calc(2 * var(--pat-sortable-blocks-gap) + var(--pat-form-input-field-padding-top-bottom));
+		margin-top: calc(2 * calc(var(--pat-sortable-blocks-gap) + var(--pat-form-input-field-padding-top-bottom)));
 		padding-left: var(--pat-sortable-blocks-padding-start);
 	}
 
@@ -143,7 +143,7 @@
 
 				&.edit {
 					&::before {
-						content: "#{$glyph-pencil}";
+						content: var(--glyph-pencil);
 					}
 				}
 
@@ -172,7 +172,7 @@
 			}
 
 			&:before {
-				content: "#{$glyph-arrow-combo}";
+				content: var(--glyph-arrow-combo);
 				display: block;
 				font-family: fontello;
 				text-indent: 0.1em;
@@ -213,7 +213,7 @@
 		.field-cluster {
 			margin-top: 0;
 			margin-bottom: 0;
-			min-height: calc(var(--pat-form-input-field-line-height) + var(--pat-form-input-field-padding-top-bottom) * 2);
+			min-height: calc(var(--pat-form-input-field-line-height) + calc(var(--pat-form-input-field-padding-top-bottom) * 2));
 			
 			textarea,
 			input,
@@ -242,7 +242,7 @@
 			}
 
 			&:before {
-				content: '#{$glyph-minus}';
+				content: var(--glyph-minus);
 				border-radius: var(--pat-sortable-blocks-remove-button-icon-border-radius);
 				background-color: $button-background-colour;
 				color: #{$button-text-colour};
