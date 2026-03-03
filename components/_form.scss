@@ -327,8 +327,10 @@
 
   .item-info-card {
     @include pat-well;
-    padding: 1rem;
-    margin-bottom: 0;
+    & {
+      padding: 1rem;
+      margin-bottom: 0;
+    }
 
     .horizontal & {
       --pat-form-panel-background-colour: white;
