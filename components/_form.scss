@@ -1196,7 +1196,7 @@
       }  
 
       dfn.help {
-        @include box-sizing;
+        box-sizing: border-box;
         margin: 0;
         width: calc(var(--pat-form-proportion-name) * 100% / (100% - var(--pat-form-proportion-name)));
         width: 80%;

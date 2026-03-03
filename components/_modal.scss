@@ -703,7 +703,7 @@ div.pat-modal {
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
-      @include box-sizing;
+      box-sizing: border-box;
 
       > * {
         max-width: $break-large;
@@ -719,7 +719,7 @@ div.pat-modal {
         margin-bottom: 0.7em;
         padding: 0 3em;
 
-        @include box-sizing;
+        box-sizing: border-box;
 
         @include screen-size(small) {
           display: none;

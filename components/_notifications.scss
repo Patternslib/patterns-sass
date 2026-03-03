@@ -28,7 +28,7 @@ $pat-notifications-top-distance: 0 !default;
 
   @include screen-size(small) {
     width: 100%;
-    @include box-sizing;
+    box-sizing: border-box;
   }
 
   p {
