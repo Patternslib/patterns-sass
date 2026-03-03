@@ -687,11 +687,13 @@
 
     &::file-selector-button {
       @include pat-button();
-      line-height: var(--pat-form-input-field-line-height);
-      margin-right: 10px;
-      float: left;
-      font-size: var(--pat-form-input-field-font-size);
-      font-weight: var(--pat-button-font-weight);
+      & {
+        line-height: var(--pat-form-input-field-line-height);
+        margin-right: 10px;
+        float: left;
+        font-size: var(--pat-form-input-field-font-size);
+        font-weight: var(--pat-button-font-weight);
+      }
     }
   }
 
