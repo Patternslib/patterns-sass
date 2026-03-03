@@ -277,7 +277,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
 
         &:before {
           font-family: fontello;
-          content: '#{$glyph-angle-double-right}';
+          content: var(--glyph-angle-double-right);
           display: block;
           height: $button-height;
           lie-height: $button-height + 1px;
@@ -290,7 +290,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
           border-bottom-right-radius: $border-radii;
 
           body[dir=rtl] & { 
-            content: '#{$glyph-angle-double-left}';
+            content: var(--glyph-angle-double-left);
             right: auto;
             left: 0;
           }

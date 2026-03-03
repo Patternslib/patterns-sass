@@ -110,7 +110,7 @@ $canvas-toolbar-button-height: $button-height !default;
 				  content: "\e60e";
 				}
 				&.re-image:before {
-				  content: "#{$glyph-icon-picture}";
+				  content: var(--glyph-icon-picture);
 				}
 				&.re-fullscreen:before {
 				  content: "\e744";

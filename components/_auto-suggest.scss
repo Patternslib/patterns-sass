@@ -119,7 +119,7 @@ $glyph-remove-tag: $glyph-remove;
         width: 16px;
         height: 16px;
         line-height: 16px;
-        content: '#{$glyph-cancel}';
+        content: var(--glyph-cancel);
         font-family: fontello;
         position: absolute;
         top: 0;
@@ -466,7 +466,7 @@ disabled look for disabled choices in the results dropdown
   // background-color: rgba(0,0,0,0.09);
   overflow: hidden;
   width: 100%;
-  min-height: calc( var(--pat-auto-suggest-pill-height) + ( 2 * var(--pat-auto-suggest-padding-top-bottom) ) );
+  min-height: calc( var(--pat-auto-suggest-pill-height) + ( calc(2 * var(--pat-auto-suggest-padding-top-bottom)) ) );
 }
 
 .select2-locked {
@@ -626,7 +626,7 @@ disabled look for disabled choices in the results dropdown
     }
     
     &:before {
-      content: "#{$glyph-remove-tag}";
+      content: var(--glyph-remove-tag);
       color: white;
       font: 1em fontello;
     }
@@ -687,7 +687,7 @@ disabled look for disabled choices in the results dropdown
   &.users .select2-choices .select2-search-choice div:before,
   &.user-groups .select2-choices .select2-search-choice.user div:before,
   .select2-choices .select2-search-choice.user div:before {
-    content: "#{$glyph-user}";
+    content: var(--glyph-user);
     display: inline-block;
     margin-right: 3px;
     font: 0.8em / 2.1em fontello;
@@ -697,7 +697,7 @@ disabled look for disabled choices in the results dropdown
   &.user-groups .select2-choices .select2-search-choice div:before,
   &.users .select2-choices .select2-search-choice.user-group div:before,
   .select2-choices .select2-search-choice.user-group div:before {
-    content: "#{$glyph-user-group}";
+    content: var(--glyph-user-group);
     display: inline-block;
     margin-right: 3px;
     font: 0.8em / 2.1em fontello;
@@ -713,7 +713,7 @@ disabled look for disabled choices in the results dropdown
     margin-bottom: -1px;
   }
   &.tags .select2-choices .select2-search-choice div:before {
-    content: "#{$glyph-tag}";
+    content: var(--glyph-tag);
     display: inline-block;
     margin-right: 4px;
     margin-left: 7px;
@@ -731,7 +731,7 @@ disabled look for disabled choices in the results dropdown
     // margin-bottom: -2px;
   }
   &.users .select2-choices .select2-search-choice.group div:before {
-    content: "#{$glyph-users}";
+    content: var(--glyph-users);
     display: inline-block;
     margin-right: 3px;
     font: 0.8em / 2.1em fontello;

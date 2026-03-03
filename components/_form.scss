@@ -247,7 +247,7 @@
           border-radius: $border-radii;
 
           &:after {
-            content: '#{$glyph-down-open}';
+            content: var(--glyph-down-open);
           }
 
         }
@@ -531,7 +531,7 @@
   input[type=date],
   input[type=datetime],
   input[type=datetime-local] {
-    height: calc( var(--pat-form-input-field-line-height) + ( 2 * var(--pat-form-input-field-padding-top-bottom) ) ); // Forces Safari to display the field with the right height.
+    height: calc( var(--pat-form-input-field-line-height) + ( calc(2 * var(--pat-form-input-field-padding-top-bottom)) ) ); // Forces Safari to display the field with the right height.
   
     &::-webkit-datetime-edit,
     &::datetime-edit,
@@ -599,7 +599,7 @@
         font-family: fontello;
         text-align: center;
         display: block;
-        content: '#{$glyph-cancel}';
+        content: var(--glyph-cancel);
         color: rgba(0,0,0,0.5);
       }
 
@@ -892,7 +892,7 @@
     }
 
     &.type-url > .follow:before {
-      content: '#{$glyph-icon-right-circled}';
+      content: var(--glyph-icon-right-circled);
     }
   }
 
@@ -931,7 +931,7 @@
 
       .help-icon {
         color: transparent;
-        content: '#{$glyph-question-mark}';
+        content: var(--glyph-question-mark);
         font-family: fontello;
         position: relative;
         margin: calc(-1 * var(--pat-form-input-field-padding-top-bottom)) 0;
@@ -952,7 +952,7 @@
         }
 
         &:before {
-          content: '#{$glyph-help}';
+          content: var(--glyph-help);
           border-radius: var(--pat-form-help-button-icon-border-radius);
           background-color: $button-background-colour-default;
           transform: none;
@@ -998,7 +998,7 @@
           padding-top: var(--pat-form-input-field-padding-top-bottom);
           padding-bottom: var(--pat-form-input-field-padding-top-bottom);
           float: left; // Kill whitespaces.
-          height: calc(var(--pat-form-input-field-line-height) + (2 * var(--pat-form-input-field-padding-top-bottom))); // Forces Safari to display the field with the right height.
+          height: calc(var(--pat-form-input-field-line-height) + (calc(2 * var(--pat-form-input-field-padding-top-bottom)))); // Forces Safari to display the field with the right height.
           font-size: var(--pat-form-input-field-font-size);
           font-weight: var(--pat-button-font-weight);
 

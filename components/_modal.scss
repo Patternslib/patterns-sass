@@ -241,7 +241,7 @@ div.pat-modal {
 
       &:before {
         font-family: fontello;
-        content: '#{$glyph-cancel}';
+        content: var(--glyph-cancel);
         color: white;
         border-radius: 50%;
         background-color: rgba(black, 0.3);
@@ -462,7 +462,7 @@ div.pat-modal {
 
         &:before {
           font-family: fontello;
-          content: '#{$glyph-close}';
+          content: var(--glyph-close);
           color: #{$button-text-colour-default};
           font-size: 24px;
           width: 100%;
@@ -475,7 +475,7 @@ div.pat-modal {
         right: 65px;
 
         &:before {
-          content: '#{$glyph-resize-full}';
+          content: var(--glyph-resize-full);
         }
       }
 
@@ -483,7 +483,7 @@ div.pat-modal {
         right: 15px;
 
         &:before {
-          content: '#{$glyph-close}';
+          content: var(--glyph-close);
         }
       }
     }

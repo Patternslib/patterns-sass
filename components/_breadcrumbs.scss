@@ -95,7 +95,7 @@
       &:before {
         display: inline-block;
         // font-family: fontello;
-        content: '#{$glyph-angle-right}';
+        content: var(--glyph-angle-right);
         padding: 0 0.5em;
         font-family: fontello;
         font-weight: normal;

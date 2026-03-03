@@ -1,6 +1,6 @@
 @mixin button-drop-down-segment {
   font-family: fontello;
-  content: '#{$glyph-down-open}';
+  content: var(--glyph-down-open);
   width: var(--pat-select-box-arrow-width);
   background-color: var(--pat-select-box-arrow-background-colour);
   background-image: none;
@@ -26,7 +26,7 @@
   padding-top: var(--pat-select-box-padding-top-bottom);
   padding-bottom: var(--pat-select-box-padding-top-bottom);
   padding-left: var(--pat-select-box-padding-start);
-  padding-right: calc((var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-start) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
+  padding-right: calc((calc(var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-start)) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
   position: relative;
   font-weight: normal !important;
   position: relative;
@@ -160,7 +160,7 @@
   &.locked {
     &:before {
       font-family: fontello;
-      content: "#{$glyph-lock}";
+      content: var(--glyph-lock);
       display: inline-block;
       margin-right: 5px;
       float: left;

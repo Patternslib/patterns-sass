@@ -104,7 +104,7 @@
 			}
 
 			&:before {
-				content: "#{$glyph-arrow-combo}";
+				content: var(--glyph-arrow-combo);
 				display: block;
 				font-family: fontello;
 				text-indent: 0.1em;
@@ -158,7 +158,7 @@
 			}
 
 			&:before {
-				content: '#{$glyph-minus}';
+				content: var(--glyph-minus);
 				border-radius: var(--pat-sortable-blocks-remove-button-icon-border-radius);
 				background-color: $button-background-colour;
 				color: #{$button-text-colour};

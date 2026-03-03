@@ -33,11 +33,11 @@ $gallery-button-distance: 10px;
 }
 
 .pswp__button--arrow--left:before {
-	content: '#{$glyph-left-big}';
+	content: var(--glyph-left-big);
 }
 
 .pswp__button--arrow--right:before {
-	content: '#{$glyph-right-big}';
+	content: var(--glyph-right-big);
 }
 
 .pswp__bg {

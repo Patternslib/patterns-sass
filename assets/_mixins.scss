@@ -252,7 +252,7 @@ $bullet-space: 22px !default;
       &:not([class*=icon-]):not([class*=checked]):not(.pat-select) {
         &:before {
           font-family: fontello;
-          content: '#{$glyph-angle-right}';
+          content: var(--glyph-angle-right);
         }
       }
 
@@ -318,7 +318,7 @@ $bullet-space: 22px !default;
 @mixin pat-collapsible-button() {
   &:after {
     font-family: fontello;
-    content: '#{$glyph-up-open}';
+    content: var(--glyph-up-open);
     font-size: 0.65em;
     background-color: #{$button-background-colour};
     color: #{$button-text-colour};
@@ -395,14 +395,14 @@ $bullet-space: 22px !default;
     &.sorting_asc,
     &.sorting-asc {
       &:after {
-        content: '#{$glyph-icon-up-circle}';
+        content: var(--glyph-icon-up-circle);
       }
     }
 
     &.sorting_desc,
     &.sorting-desc {
       &:after {
-        content: '#{$glyph-icon-down-circle}';
+        content: var(--glyph-icon-down-circle);
       }
     }
 }
@@ -453,7 +453,7 @@ $bullet-space: 22px !default;
 
   &:before {
     font-family: fontello;
-    content: '#{$glyph-cancel}';
+    content: var(--glyph-cancel);
     display: block;
     width: var(--close-button-height);
     text-align: center;
@@ -498,7 +498,7 @@ $bullet-space: 22px !default;
   position: absolute;
   top: 50%;
   left: 50%;
-  content: '#{$glyph-spinner}';
+  content: var(--glyph-spinner);
   width: 50px;
   height: 50px;
   margin-top: -25px;
@@ -743,23 +743,23 @@ $bullet-space: 22px !default;
       }
 
       &.help:after {
-        content: '#{$glyph-help}';
+        content: var(--glyph-help);
       }
 
       &.add:after {
-        content: '#{$glyph-plus}';
+        content: var(--glyph-plus);
       }
 
       &.download:after {
-        content: '#{$glyph-download}';
+        content: var(--glyph-download);
       }
 
       &.settings:after {
-        content: '#{$glyph-cog}';
+        content: var(--glyph-cog);
       }
 
       &.more:after {
-        content: '#{$glyph-icon-ellipsis}';
+        content: var(--glyph-icon-ellipsis);
         line-height: calc(#{$collapsible-button-height} + 3px);
       }
     }
@@ -862,7 +862,7 @@ $bullet-space: 22px !default;
           border-radius: #{$border-radii};
 
           &:after {
-            content: '#{$glyph-down-open}';
+            content: var(--glyph-down-open);
           }
 
         }
@@ -1290,7 +1290,7 @@ $bullet-space: 22px !default;
   &.add {
     &:before {
       font-family: fontello;
-      content: '#{$glyph-plus}';
+      content: var(--glyph-plus);
     }
   }
 }

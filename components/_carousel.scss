@@ -131,12 +131,12 @@ $carousel-default-dot-colour: #f73558 !default;
     }
     .slick-prev:before
     {
-        content: '#{$glyph-left-big}';
+        content: var(--glyph-left-big);
         font-size: 15px;
     }
     [dir='rtl'] .slick-prev:before
     {
-        content: '#{$glyph-left-big}';
+        content: var(--glyph-left-big);
     }
 
     .slick-next
@@ -150,12 +150,12 @@ $carousel-default-dot-colour: #f73558 !default;
     }
     .slick-next:before
     {
-        content: '#{$glyph-right-big}';
+        content: var(--glyph-right-big);
         font-size: 15px;
     }
     [dir='rtl'] .slick-next:before
     {
-        content: '#{$glyph-left-big}';
+        content: var(--glyph-left-big);
     }
 
     /* Dots */

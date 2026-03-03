@@ -77,7 +77,7 @@ $pat-checklist-padding-end: 0 !default;
 		box-shadow: var(--pat-checklist-checkbox-box-shadow-checked);
 		color: white;
 		font-family: fontello;
-		content: '#{$glyph-ok}';
+		content: var(--glyph-ok);
 		font-size: calc(0.7 * var(--pat-checklist-checkbox-size));
 	}
 
@@ -213,7 +213,7 @@ label.pat-checklist {
 
 			&:before {
 				font-family: fontello;
-				content: '#{$glyph-eye-off}';
+				content: var(--glyph-eye-off);
 				text-decoration: none;
 				background-color: transparent;
 				color: rgba(0,0,0,0.5);
@@ -234,7 +234,7 @@ label.pat-checklist {
 
 				&:before {
 					color: black;
-					content: '#{$glyph-eye}';
+					content: var(--glyph-eye);
 				}
 			}
 		}

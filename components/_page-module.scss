@@ -173,7 +173,7 @@
 // 			top: 50%;
 // 			transform: translateY(-50%);
 // 			font-family: fontello;
-// 			content: '#{$glyph-down-open}';
+// 			content: var(--glyph-down-open);
 // 			display: inline-block;
 // 			width: 40px;
 // 			text-align: center;
@@ -188,7 +188,7 @@
 // 			background-color: $colour-link;
 
 // 			&:before {
-// 				content: '#{$glyph-up-open}';
+// 				content: var(--glyph-up-open);
 // 			}
 // 		}
 // 	}
@@ -196,7 +196,7 @@
 // 	&.open {
 // 		.page-module-title {
 // 			&:before {
-// 				content: '#{$glyph-up-open}';
+// 				content: var(--glyph-up-open);
 // 			}
 // 		}
 // 	}
@@ -220,7 +220,7 @@
 // 			&[href] {
 // 				&:not(.follow):not(.icon):after {
 // 					font-family: fontello;
-// 					content: '#{$glyph-link-internal}';
+// 					content: var(--glyph-link-internal);
 // 					margin-left: 0.5em;
 // 					font-size: 1em;
 // 					text-decoration: none !important;

@@ -9,7 +9,7 @@
     justify-self: start;
     position: relative;
     box-sizing: border-box;
-    padding: 0 calc( ( var(--pat-toggle-height) - 1 * var(--pat-toggle-toggle-distance) ) + 0.5 * var(--pat-toggle-padding-start-end) ) 0 var(--pat-toggle-padding-start-end);
+    padding: 0 calc( ( var(--pat-toggle-height) - calc(1 * var(--pat-toggle-toggle-distance)) ) + calc(0.5 * var(--pat-toggle-padding-start-end)) ) 0 var(--pat-toggle-padding-start-end);
     line-height: var(--pat-toggle-height);
     color: transparent;
     box-shadow: var(--pat-toggle-box-shadow);
@@ -31,8 +31,8 @@
         display: inline-block;
         position: absolute;
         left: var(--pat-toggle-toggle-distance);
-        width: calc(var(--pat-toggle-height) - (var(--pat-toggle-toggle-distance) * 2));
-        height: calc(var(--pat-toggle-height) - (var(--pat-toggle-toggle-distance) * 2));
+        width: calc(var(--pat-toggle-height) - (calc(var(--pat-toggle-toggle-distance) * 2)));
+        height: calc(var(--pat-toggle-height) - (calc(var(--pat-toggle-toggle-distance) * 2)));
         border-radius: var(--pat-toggle-toggle-border-radius);
         transition: all 0.2s;
         background-color: var(--pat-toggle-toggle-background-colour);
@@ -47,7 +47,7 @@
         text-shadow: var(--pat-toggle-text-shadow-on);
 
         &::after {
-            left: calc(100% - ( var(--pat-toggle-height) - var(--pat-toggle-toggle-distance) ) );
+            left: calc(100% - ( calc(var(--pat-toggle-height) - var(--pat-toggle-toggle-distance)) ) );
             background-color: var(--pat-toggle-toggle-background-colour-on);
         }
     }
