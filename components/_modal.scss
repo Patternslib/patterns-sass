@@ -697,6 +697,12 @@ div.pat-modal {
       left: 50%;
       opacity: 0;
       padding: 5em 3em;
+      transform: scale(1.5) translate(-50%, -50%);
+      transform-origin: 0;
+      transition: 0.2s all;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      overflow-scrolling: touch;
       @include box-sizing;
 
       > * {
@@ -730,27 +736,10 @@ div.pat-modal {
         }
       }
 
-      -moz-transform: scale(1.5) translate(-50%,-50%);
-      -webkit-transform: scale(1.5) translate(-50%,-50%);
-      transform: scale(1.5) translate(-50%,-50%);
-
-      transform-origin: 0;
-
       .modal-active & {
-      -moz-transform: scale(1) translate(-50%,-50%);
-      -webkit-transform: scale(1) translate(-50%,-50%);
-      transform: scale(1) translate(-50%,-50%);
+        transform: scale(1) translate(-50%,-50%);
         opacity: 1;
       }
-
-      -moz-transition: 0.2s all;
-      -webkit-transition: 0.2s all;
-      transition: 0.2s all;
-      
-      overflow: auto;
-      
-      -webkit-overflow-scrolling: touch;
-      overflow-scrolling: touch;
 
       @include screen-size(small) {
           padding: 5em 1.5rem;

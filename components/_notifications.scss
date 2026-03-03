@@ -5,20 +5,6 @@ $pat-notifications-top-distance: 0 !default;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-
-  button {
-    @include pat-button;
-    font-size: $button-small-font-size;
-    padding: $button-small-paddings;
-    line-height: $button-small-height;
-    vertical-align: baseline;
-  }
-
-  @include screen-size(small) {
-    width: 100%;
-    @include box-sizing;
-  }
-
   padding: 1rem 2rem 1rem 1rem;
   margin-bottom: 1em;
   box-shadow: 0 1px 10px rgba(0,0,0,0.2);
@@ -29,6 +15,21 @@ $pat-notifications-top-distance: 0 !default;
   border: 1px solid white;
   -webkit-backdrop-filter: blur(3px) saturate(0.5);
   backdrop-filter: blur(3px) saturate(0.5);
+
+  button {
+    @include pat-button;
+    & {
+      font-size: $button-small-font-size;
+      padding: $button-small-paddings;
+      line-height: $button-small-height;
+      vertical-align: baseline;
+    }
+  }
+
+  @include screen-size(small) {
+    width: 100%;
+    @include box-sizing;
+  }
 
   p {
     hyphens: auto;

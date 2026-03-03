@@ -84,15 +84,16 @@ $pat-toolbar-z-index: 2 !default;
 	}
 
 	@include clear-fix();
-	// color: rgba(0,0,0,0.6);
-	position: relative;
-	z-index: #{$pat-toolbar-z-index};
-	padding-top: var(--pat-toolbar-padding);
-	padding-bottom: var(--pat-toolbar-padding);
-	border-radius: $border-radii;
-	font-size: 0; // Removes spaces between buttons.
-	user-select: none;
-	box-sizing: border-box;
+	& {
+		position: relative;
+		z-index: #{$pat-toolbar-z-index};
+		padding-top: var(--pat-toolbar-padding);
+		padding-bottom: var(--pat-toolbar-padding);
+		border-radius: $border-radii;
+		font-size: 0; // Removes spaces between buttons.
+		user-select: none;
+		box-sizing: border-box;
+	}
 
 	.toolbar-title {
 		font-size: calc(0.7 * var(--pat-toolbar-button-height)) !important;
