@@ -110,12 +110,12 @@ $pat-table-icon-colour:                     gray !default;
     --pat-checklist-line-height: var(--pat-table-line-height);
 
     border-collapse: separate;
-    border-spacing: $pat-table-border-spacing;
+    border-spacing: var(--pat-table-border-spacing);
     vertical-align: top;
     width: 100%;
-    margin: calc(-1 * #{$pat-table-border-spacing});
+    margin: calc(-1 * var(--pat-table-border-spacing));
     // padding: 10px 15px 10px 15px;
-    line-height: #{$pat-table-line-height};
+    line-height: var(--pat-table-line-height);
 
     .infinite-scrolling-trigger  {
         z-index: 0;
@@ -126,9 +126,9 @@ $pat-table-icon-colour:                     gray !default;
     }
 
     @include screen-size(medium-large) {
-        background-color: $pat-table-background-colour;
-        border-bottom: $pat-table-border-bottom;
-        padding: $pat-table-padding;
+        background-color: var(--pat-table-background-colour);
+        border-bottom: var(--pat-table-border-bottom);
+        padding: var(--pat-table-padding);
     }
     
     .mode-select & {
@@ -174,14 +174,14 @@ $pat-table-icon-colour:                     gray !default;
         text-decoration: none;
 
         &.warning {
-            color: $colour-warning-background;
+            color: var(--colour-warning-background);
         }
     }
 
     tr {
         width: 100%;
-        outline: $pat-table-row-outline;
-        border-radius: calc(1.1 * #{$border-radii});
+        outline: var(--pat-table-row-outline);
+        border-radius: calc(1.1 * var(--border-radii));
         overflow: hidden;
 
 
@@ -197,7 +197,7 @@ $pat-table-icon-colour:                     gray !default;
         &:has(input:checked) {
             th,
             td {
-                background-color: #{$colour-accent} !important;
+                background-color: var(--colour-accent) !important;
                 color: white;
 
                 *,
@@ -209,22 +209,22 @@ $pat-table-icon-colour:                     gray !default;
         }
 
         > *:last-child {
-            border-top-right-radius: calc(1.1 * #{$border-radii});
-            border-bottom-right-radius: calc(1.1 * #{$border-radii});
+            border-top-right-radius: calc(1.1 * var(--border-radii));
+            border-bottom-right-radius: calc(1.1 * var(--border-radii));
         }
 
         > *:first-child {
-            border-top-left-radius: calc(1.1 * #{$border-radii});
-            border-bottom-left-radius: calc(1.1 * #{$border-radii});
+            border-top-left-radius: calc(1.1 * var(--border-radii));
+            border-bottom-left-radius: calc(1.1 * var(--border-radii));
         }
 
         @include screen-size(small) {
             display: block;
             padding: 15px;
-            border-radius: $border-radii;
+            border-radius: var(--border-radii);
             margin-bottom: 20px;
             overflow: hidden;
-            box-shadow: $default-box-shadow;
+            box-shadow: var(--default-box-shadow);
             background-color: white;
             box-sizing: border-box;
 
@@ -264,7 +264,7 @@ $pat-table-icon-colour:                     gray !default;
 
         &.state-draft th,
         &.state-draft th a {
-            color: $colour-warning;
+            color: var(--colour-warning);
         }
 
         &.state-archived th a {
@@ -305,12 +305,12 @@ $pat-table-icon-colour:                     gray !default;
             vertical-align: top;
 
             @include screen-size(medium-large) {
-                padding-top: $pat-table-cell-padding-top;
-                padding-right: $pat-table-cell-padding-right;
-                padding-bottom: $pat-table-cell-padding-bottom;
-                padding-left: $pat-table-cell-padding-left;
-                background-color: $pat-table-cell-background-colour;
-                border-top: $pat-table-cell-border-top;
+                padding-top: var(--pat-table-cell-padding-top);
+                padding-right: var(--pat-table-cell-padding-right);
+                padding-bottom: var(--pat-table-cell-padding-bottom);
+                padding-left: var(--pat-table-cell-padding-left);
+                background-color: var(--pat-table-cell-background-colour);
+                border-top: var(--pat-table-cell-border-top);
             }
             
             @include screen-size(small) {
@@ -344,7 +344,7 @@ $pat-table-icon-colour:                     gray !default;
                     color: black;
 
                     &[href] {
-                        color: #{$colour-link};
+                        color: var(--colour-link);
                     }
                 }
         
@@ -356,10 +356,10 @@ $pat-table-icon-colour:                     gray !default;
                     align-items: flex-start;
 
                     @include screen-size(medium-large) {
-                        padding-top: $pat-table-cell-padding-top;
-                        padding-bottom: $pat-table-cell-padding-bottom;
-                        padding-left: $pat-table-cell-padding-left;
-                        padding-right: $pat-table-cell-padding-right;
+                        padding-top: var(--pat-table-cell-padding-top);
+                        padding-bottom: var(--pat-table-cell-padding-bottom);
+                        padding-left: var(--pat-table-cell-padding-left);
+                        padding-right: var(--pat-table-cell-padding-right);
                     }
         
                     .addition {
@@ -382,7 +382,7 @@ $pat-table-icon-colour:                     gray !default;
                     .byline {
                         &.pat-comma-separated {
                             opacity: 1;
-                            color: #{ $colour-accent};
+                            color: var(--colour-accent);
                     
                             .segment {
                                 font-weight: bold;
@@ -457,7 +457,7 @@ $pat-table-icon-colour:                     gray !default;
                         }
 
                         .icon {
-                            border-radius: $border-radii;
+                            border-radius: var(--border-radii);
 
                             &:before {
                                 font-size: 24px;
@@ -529,7 +529,7 @@ $pat-table-icon-colour:                     gray !default;
                 max-width: 50px;
                 font-size: 0;
                 background-color: white;
-                background-color: $colour-info !important;
+                background-color: var(--colour-info) !important;
 
                 &:before {
                     display: none;
@@ -548,7 +548,7 @@ $pat-table-icon-colour:                     gray !default;
                     height: 78px;
                     color: rgba(0,0,0,0.5);
                     display: block;
-                    background: $colour-info;
+                    background: var(--colour-info);
                     padding-left: 15px;
                     font-weight: normal;
                     overflow: hidden;
@@ -590,7 +590,7 @@ $pat-table-icon-colour:                     gray !default;
             .suggested-content {
                 margin-bottom: 5px;
                 margin-top: 10px;
-                background-color: $colour-info;
+                background-color: var(--colour-info);
                 position: relative;
 
                 p.buttons {
@@ -680,10 +680,10 @@ $pat-table-icon-colour:                     gray !default;
                 }
 
                 .icon {
-                    padding-top: $pat-table-cell-padding-top;
-                    padding-right: $pat-table-cell-padding-right;
-                    padding-bottom: $pat-table-cell-padding-bottom;
-                    padding-left: $pat-table-cell-padding-left;
+                    padding-top: var(--pat-table-cell-padding-top);
+                    padding-right: var(--pat-table-cell-padding-right);
+                    padding-bottom: var(--pat-table-cell-padding-bottom);
+                    padding-left: var(--pat-table-cell-padding-left);
                     margin: 0;
                     padding: 0;
                     width: 48px;
@@ -697,7 +697,7 @@ $pat-table-icon-colour:                     gray !default;
                     vertical-align: middle;
                     // top: calc(50% - 24px);
                     // position: relative;
-                    border-radius: $border-radii;
+                    border-radius: var(--border-radii);
 
                     @include screen-size(small) {
                         display: inline-block;
@@ -720,12 +720,12 @@ $pat-table-icon-colour:                     gray !default;
                         line-height: 48px;
                         width: 100%;
                         text-align: center;
-                        color: $pat-table-icon-colour;
+                        color: var(--pat-table-icon-colour);
                         margin: 0;
                     }
 
                     &.tooltip-active-click {
-                        background-color: $colour-accent;
+                        background-color: var(--colour-accent);
                         // border-radius: $border-radii;
 
                         &:before {
@@ -762,14 +762,14 @@ $pat-table-icon-colour:                     gray !default;
                         &:before {
                             font-size: 24px;
                             content: var(--glyph-approved);
-                            color: $colour-success;
+                            color: var(--colour-success);
                         }
 
                         &.tooltip-active-click {
-                            background-color: $colour-success-background;
+                            background-color: var(--colour-success-background);
 
                             &:before {
-                                color: $colour-success !important;
+                                color: var(--colour-success) !important;
                             }
                         }
                     }
@@ -778,15 +778,15 @@ $pat-table-icon-colour:                     gray !default;
                         &:before {
                             font-size: 24px;
                             content: var(--glyph-under-review);
-                            color: #{$colour-warning};
+                            color: var(--colour-warning);
                         }
 
                         &.tooltip-active-click {
                             // content: var(--glyph-approved);
-                            background-color: $colour-warning-background;
+                            background-color: var(--colour-warning-background);
 
                             &:before {
-                                color: $colour-warning !important;
+                                color: var(--colour-warning) !important;
                             }
                         }
                     }
@@ -808,53 +808,53 @@ $pat-table-icon-colour:                     gray !default;
                 white-space: nowrap;
 
                 a {                   
-                    background-color: $button-background-colour;
+                    background-color: var(--button-background-colour);
                     color: black;
                     cursor: default;
 
                     &:hover {
-                        background-color: $button-background-colour-hover;
+                        background-color: var(--button-background-colour-hover);
                         text-decoration: none;
                     }
 
                    &.state-draft {
-                        background-color: #{$colour-orange-xl};
-                        color: #{$colour-orange-xd};
+                        background-color: var(--colour-orange-xl);
+                        color: var(--colour-orange-xd);
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: color-mix(in srgb, #{$colour-orange-xl} 95%, black);
+                            background-color: color-mix(in srgb, var(--colour-orange-xl) 95%, black);
                         }
                     }
 
                    &.state-for-review {
-                        background-color: #{$colour-purple-xl};
-                        color: #{$colour-purple};
+                        background-color: var(--colour-purple-xl);
+                        color: var(--colour-purple);
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: color-mix(in srgb, #{$colour-purple-xl} 95%, black);
+                            background-color: color-mix(in srgb, var(--colour-purple-xl) 95%, black);
                         }
                     }
 
                    &.state-sent,
                    &.state-published {
-                        background-color: #{$colour-dark-blue-xl};
-                        color: #{$colour-dark-blue-d};
+                        background-color: var(--colour-dark-blue-xl);
+                        color: var(--colour-dark-blue-d);
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: color-mix(in srgb, #{$colour-dark-blue-xl} 95%, black);
+                            background-color: color-mix(in srgb, var(--colour-dark-blue-xl) 95%, black);
                         }
                     }
 
                    &.state-approved {
-                        background-color: #{$colour-green-xl};
-                        color: #{$colour-green-d};
+                        background-color: var(--colour-green-xl);
+                        color: var(--colour-green-d);
 
                         &:hover,
                         &.tooltip-active-click {
-                            background-color: color-mix(in srgb, #{$colour-green-xl} 95%, black);
+                            background-color: color-mix(in srgb, var(--colour-green-xl) 95%, black);
                         }
                     }
                 }
@@ -936,7 +936,7 @@ $pat-table-icon-colour:                     gray !default;
 		}
 
         tr {
-            outline: $pat-table-thead-row-outline;
+            outline: var(--pat-table-thead-row-outline);
         }
 
         th {
@@ -944,9 +944,9 @@ $pat-table-icon-colour:                     gray !default;
             text-align: left;
             hyphens: none;
             position: relative;
-            padding-bottom: $pat-table-thead-cell-padding-bottom;
-            padding-top: $pat-table-thead-cell-padding-top;
-            background-color: $pat-table-thead-cell-background-colour;
+            padding-bottom: var(--pat-table-thead-cell-padding-bottom);
+            padding-top: var(--pat-table-thead-cell-padding-top);
+            background-color: var(--pat-table-thead-cell-background-colour);
 
             .select-all-items {
                 padding: 0;
@@ -989,7 +989,7 @@ $pat-table-icon-colour:                     gray !default;
         --pat-table-icon-width: var(--pat-table-icon-width-hd);
 
         @include screen-size (medium-large) { 
-            padding: $pat-table-padding-hd;
+            padding: var(--pat-table-padding-hd);
         }
 
         tbody,
@@ -1001,10 +1001,10 @@ $pat-table-icon-colour:                     gray !default;
             .item-name a,
             .item-state > a {
                 @include screen-size (medium-large) { 
-                    padding-top: $pat-table-cell-padding-hd-top;
-                    padding-right: $pat-table-cell-padding-hd-right;
-                    padding-bottom: $pat-table-cell-padding-hd-bottom;
-                    padding-left: $pat-table-cell-padding-hd-left;
+                    padding-top: var(--pat-table-cell-padding-hd-top);
+                    padding-right: var(--pat-table-cell-padding-hd-right);
+                    padding-bottom: var(--pat-table-cell-padding-hd-bottom);
+                    padding-left: var(--pat-table-cell-padding-hd-left);
                 }
             }
             
@@ -1014,10 +1014,10 @@ $pat-table-icon-colour:                     gray !default;
             font-size: 0.8em;
 
             th {
-                padding-top: $pat-table-thead-cell-padding-top;
-                padding-right: $pat-table-cell-padding-hd-right;
-                padding-bottom: $pat-table-thead-cell-padding-bottom;
-                padding-left: $pat-table-cell-padding-hd-left;
+                padding-top: var(--pat-table-thead-cell-padding-top);
+                padding-right: var(--pat-table-cell-padding-hd-right);
+                padding-bottom: var(--pat-table-thead-cell-padding-bottom);
+                padding-left: var(--pat-table-cell-padding-hd-left);
             }
         }
         
