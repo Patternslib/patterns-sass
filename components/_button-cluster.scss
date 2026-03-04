@@ -1,36 +1,36 @@
 @charset "UTF-8";
 
 $pat-button-cluster-toggle-margin: 3px !default;
-$pat-button-cluster-button-height: $button-height !default;
-$pat-button-cluster-button-line-height: $button-line-height !default;
+$pat-button-cluster-button-height: var(--button-height) !default;
+$pat-button-cluster-button-line-height: var(--button-line-height) !default;
 $pat-button-cluster-background-colour-active: var(--colour-accent) !default;
 $pat-button-cluster-font-size: 18px !default;
-$pat-button-cluster-text-colour: $colour-link !default;
+$pat-button-cluster-text-colour: var(--colour-link) !default;
 
 .pat-button-cluster {
   --pat-toolbar-icon-background-colour: transparent;
 
   display: inline-flex;
-  border-radius: $border-radii;
-  background: $button-background-colour-subdued;
+  border-radius: var(--border-radii);
+  background: var(--button-background-colour-subdued);
   // white-space: nowrap;
 
   &.pat-tabs {
     position: relative;
-    height: $button-height;
-    line-height: $button-height;
-    border-radius: $border-radii;
+    height: var(--button-height);
+    line-height: var(--button-height);
+    border-radius: var(--border-radii);
     overflow: visible;
     float: none;
     white-space: nowrap;
     max-width: 100%;
     font-size: 0;
     vertical-align: top;
-    border-radius: $border-radii;
+    border-radius: var(--border-radii);
     background: rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 6px rgba(0,0,0,0.12);
     // white-space: nowrap;
-    padding: 0 calc(2 * #{$pat-button-cluster-toggle-margin});
+    padding: 0 calc(2 * var(--pat-button-cluster-toggle-margin));
     display: inline-block;
 
     @include screen-size(small) {
@@ -49,12 +49,12 @@ $pat-button-cluster-text-colour: $colour-link !default;
         border: none;
         background: transparent;
         padding: 0 10px;
-        color: $pat-button-cluster-text-colour;
+        color: var(--pat-button-cluster-text-colour);
         cursor: default;
-        line-height: $pat-button-cluster-button-line-height;
-        height: $pat-button-cluster-button-height;
+        line-height: var(--pat-button-cluster-button-line-height);
+        height: var(--pat-button-cluster-button-height);
         box-shadow: none;
-        font-size: $pat-button-cluster-font-size;
+        font-size: var(--pat-button-cluster-font-size);
         font-weight: normal;
         position: relative;
 
@@ -77,7 +77,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
 
         &[href]:not(.current):hover,
         &:has(input:unchecked):hover {
-          color: color-mix(in srgb, $pat-button-cluster-text-colour 90%, black);
+          color: color-mix(in srgb, var(--pat-button-cluster-text-colour) 90%, black);
           text-decoration: underline !important;
           text-underline-offset: 3px;
           cursor: pointer;
@@ -87,20 +87,20 @@ $pat-button-cluster-text-colour: $colour-link !default;
         &:before {
           margin-right: 5px;
           margin-left: 0;
-          color: $pat-button-cluster-text-colour;
+          color: var(--pat-button-cluster-text-colour);
         }
 
         &:after {
-          background: $pat-button-cluster-background-colour-active;
+          background: var(--pat-button-cluster-background-colour-active);
           position: absolute;
-          top: $pat-button-cluster-toggle-margin;
-          right: calc(-1 * #{$pat-button-cluster-toggle-margin});
-          bottom: $pat-button-cluster-toggle-margin;
-          left: calc(-1 * #{$pat-button-cluster-toggle-margin});
+          top: var(--pat-button-cluster-toggle-margin);
+          right: calc(-1 * var(--pat-button-cluster-toggle-margin));
+          bottom: var(--pat-button-cluster-toggle-margin);
+          left: calc(-1 * var(--pat-button-cluster-toggle-margin));
           z-index: -1;
           display: block;
           content: ' ';
-          border-radius: 0.75 * $border-radii;
+          border-radius: calc(0.75 * var(--border-radii));
           opacity: 0;
           // transition: opacity 0.8s;
           // box-shadow: 0 1px 6px rgba(0,0,0,0.15);
@@ -129,14 +129,14 @@ $pat-button-cluster-text-colour: $colour-link !default;
       }
 
       &:first-child {
-        border-top-left-radius: $border-radii;
-        border-bottom-left-radius: $border-radii;
+        border-top-left-radius: var(--border-radii);
+        border-bottom-left-radius: var(--border-radii);
         // padding-left: 2em;
       }
 
       &:last-child {
-        border-top-right-radius: $border-radii;
-        border-bottom-right-radius: $border-radii;
+        border-top-right-radius: var(--border-radii);
+        border-bottom-right-radius: var(--border-radii);
         // padding-right: 2em;
       }
 
@@ -205,7 +205,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
     a {
       float: none;
       display: inline-block;
-      font-size: $pat-button-cluster-font-size;
+      font-size: var(--pat-button-cluster-font-size);
       vertical-align: top;
 
       &.icon {
@@ -237,7 +237,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
         height: auto;
         width: 300px;
         padding-bottom: 15px;
-        padding-top: $button-height + 25px;
+        padding-top: calc(var(--button-height) + 25px);
 
         a,
         label {
@@ -251,13 +251,13 @@ $pat-button-cluster-text-colour: $colour-link !default;
     & {
 
       span.extra-tabs {
-        font-size: $base-font-size;
+        font-size: var(--base-font-size);
         width: 300px;
-        padding-top: $button-height + 10px;
+        padding-top: calc(var(--button-height) + 10px);
         display: inline-block;
         float: right;
         height: 0;
-        width: $button-height + 20px;
+        width: calc(var(--button-height) + 20px);
         overflow: hidden;
         position: absolute;
         top: 0;
@@ -279,15 +279,15 @@ $pat-button-cluster-text-colour: $colour-link !default;
           font-family: fontello;
           content: var(--glyph-angle-double-right);
           display: block;
-          height: $button-height;
-          lie-height: $button-height + 1px;
-          width: $button-height + 20px;
+          height: var(--button-height);
+          lie-height: calc(var(--button-height) + 1px);
+          width: calc(var(--button-height) + 20px);
           text-align: center;
           position: absolute;
           top: 0;
           right: 0;
-          border-top-right-radius: $border-radii;
-          border-bottom-right-radius: $border-radii;
+          border-top-right-radius: var(--border-radii);
+          border-bottom-right-radius: var(--border-radii);
 
           body[dir=rtl] & { 
             content: var(--glyph-angle-double-left);
@@ -300,13 +300,13 @@ $pat-button-cluster-text-colour: $colour-link !default;
           content: ' ';
           display: block;
           position: absolute;
-          top: $button-height + 10px;
+          top: calc(var(--button-height) + 10px);
           right: 0;
           bottom: 0;
           left: 0;
           border: 1px solid rgba(0,0,0,0);
           box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-          border-radius: $border-radii;
+          border-radius: var(--border-radii);
           background: white;
           transition: border 0.2s;
 
@@ -370,11 +370,11 @@ $pat-button-cluster-text-colour: $colour-link !default;
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: $button-background-colour;
+      background-color: var(--button-background-colour);
     }
 
     > a {
-      width: $pat-button-cluster-button-height - 4 * $pat-button-cluster-toggle-margin;
+      width: calc(var(--pat-button-cluster-button-height) - 4 * var(--pat-button-cluster-toggle-margin));
       box-sizing: border-box;
       text-align: center;
       padding: 0;
@@ -399,10 +399,10 @@ $pat-button-cluster-text-colour: $colour-link !default;
     padding: 0 1.2em;
     color: rgba(0,0,0,0.7);
     cursor: default;
-    line-height: $pat-button-cluster-button-height;
-    height: $pat-button-cluster-button-height;
+    line-height: var(--pat-button-cluster-button-height);
+    height: var(--pat-button-cluster-button-height);
     box-shadow: none;
-    font-size: $base-font-size;
+    font-size: var(--base-font-size);
     font-weight: normal;
 
 		&.deselect-all,
@@ -426,7 +426,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
       }
 
       &:before {
-        font-size: #{$pat-button-cluster-font-size};
+        font-size: var(--pat-button-cluster-font-size);
         line-height: inherit;
         display: block;
         text-align: center;
@@ -465,7 +465,7 @@ $pat-button-cluster-text-colour: $colour-link !default;
         box-shadow: none;
 
         &:before {
-          color: #{$colour-accent};
+          color: var(--colour-accent);
         }
 
         .counter {
@@ -475,14 +475,14 @@ $pat-button-cluster-text-colour: $colour-link !default;
       }
 
     &:first-child {
-      border-top-left-radius: $border-radii;
-      border-bottom-left-radius: $border-radii;
+      border-top-left-radius: var(--border-radii);
+      border-bottom-left-radius: var(--border-radii);
       // padding-left: 2em;
     }
 
     &:last-child {
-      border-top-right-radius: $border-radii;
-      border-bottom-right-radius: $border-radii;
+      border-top-right-radius: var(--border-radii);
+      border-bottom-right-radius: var(--border-radii);
       // padding-right: 2em;
     }
 

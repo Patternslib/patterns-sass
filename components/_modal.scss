@@ -21,7 +21,7 @@
     pointer-events: initial;
 
     &:first-child {
-      background: #{$colour-base};
+      background: var(--colour-base);
     }
   }  
 }
@@ -67,7 +67,7 @@
   .modal-panel-contents {
     position: relative;
     background-color: white;
-    border-radius: #{$border-radii};
+    border-radius: var(--border-radii);
     box-shadow: 0 2px 50px rgba(0,0,0,0.7);
     // border: 1px solid rgba(0,0,0,0.15);
     @include clear;
@@ -263,8 +263,8 @@ div.pat-modal {
         overflow: auto;
         padding: 80px;
         background-color: white;
-        border-top-left-radius: $border-radii;
-        border-top-right-radius: $border-radii; 
+        border-top-left-radius: var(--border-radii);
+        border-top-right-radius: var(--border-radii); 
         position: absolute;
         top: 0;
         right: 0;
@@ -307,7 +307,7 @@ div.pat-modal {
     transform: translate(-50%, -50%);
     animation: fadeIn 0.2s;
     background-color: transparent;
-    border-radius: $border-radii;
+    border-radius: var(--border-radii);
 
     &.carousel {
 
@@ -453,17 +453,17 @@ div.pat-modal {
         height: var(--image-details-social-button-bar-height);
         width: var(--image-details-social-button-bar-height);
         line-height: var(--image-details-social-button-bar-height);
-        background-color: $button-background-colour-default;
+          background-color: var(--button-background-colour-default);
         color: transparent;
 
         &:hover {
-           background-color: #{$button-background-colour-default-hover};
+            background-color: var(--button-background-colour-default-hover);
         }
 
         &:before {
           font-family: fontello;
           content: var(--glyph-close);
-          color: #{$button-text-colour-default};
+          color: var(--button-text-colour-default);
           font-size: 24px;
           width: 100%;
           display: block;
@@ -525,7 +525,7 @@ div.pat-modal {
       box-shadow: 0 2px 50px rgba(0,0,0,0.7);
       border: 1px solid rgba(0,0,0,0.15);
       padding-top: 68px;
-      border-radius: #{$border-radii};
+      border-radius: var(--border-radii);
 
       .panel-body {
         max-height: calc(100vh - 250px);
@@ -706,7 +706,7 @@ div.pat-modal {
       box-sizing: border-box;
 
       > * {
-        max-width: $break-large;
+        max-width: var(--break-large);
         margin-left: auto;
         margin-right: auto;
       }

@@ -87,7 +87,7 @@
       margin-top: 0;
       width: 100%;
       box-sizing: border-box;
-      font-weight: #{$font-weight-normal};
+      font-weight: var(--font-weight-normal);
       min-width: 0;
     }
   }
@@ -114,7 +114,7 @@
   legend,
   > label:not(.pat-toggle-switch),
   .group:not(.pat-checklist):not(.pat-toggle-switch) > label {
-    font-weight: #{$font-weight-bold};
+    font-weight: var(--font-weight-bold);
     margin-bottom: 1em;
   }
 
@@ -179,10 +179,10 @@
   .form-panel {   
     padding: var(--pat-form-panel-padding);
     box-sizing: border-box;
-    box-shadow: $default-box-shadow;
-    border-radius: $border-radii;
+    box-shadow: var(--default-box-shadow);
+    border-radius: var(--border-radii);
     background-color: var(--pat-form-panel-background-colour);
-    margin-bottom: $default-tail-white;
+    margin-bottom: var(--default-tail-white);
 
     .panel-content > *:last-child {
       margin-bottom: 0;
@@ -244,7 +244,7 @@
         .form-panel-title {
           padding-top: 20px;
           padding-bottom: 20px;
-          border-radius: $border-radii;
+          border-radius: var(--border-radii);
 
           &:after {
             content: var(--glyph-down-open);
@@ -268,7 +268,7 @@
     clear: both;
     margin: 1em 0;
     font-style: normal;
-    font-weight: $font-weight-normal;
+    font-weight: var(--font-weight-normal);
 
     &:first-child {
       margin-top: 0;
@@ -297,7 +297,7 @@
   .field-list {
     margin: calc(-0.5 * var(--pat-form-input-field-padding-top-bottom)) 0;
     max-width: 100%;
-    line-height: $form-input-field-line-height;
+    line-height: var(--form-input-field-line-height);
   }
 
   input,
@@ -707,7 +707,7 @@
       color: white !important;
 
       &#portal-header-colour-chooser-trigger {
-        background-color: #{$colour-chooser-default};
+        background-color: var(--colour-chooser-default);
       }
     }
   }
@@ -851,8 +851,8 @@
 
     > .follow {
       border-radius: 0;
-      border-top-right-radius: $border-radii;
-      border-bottom-right-radius: $border-radii;
+      border-top-right-radius: var(--border-radii);
+      border-bottom-right-radius: var(--border-radii);
       width: 40px;
       overflow: hidden;
       color: transparent;
@@ -943,7 +943,7 @@
 
         &:hover:before,
         &.tooltip-active-click:before {
-          background-color: $button-background-colour-default-hover;
+          background-color: var(--button-background-colour-default-hover);
         }
 
         &:focus:before {
@@ -954,7 +954,7 @@
         &:before {
           content: var(--glyph-help);
           border-radius: var(--pat-form-help-button-icon-border-radius);
-          background-color: $button-background-colour-default;
+          background-color: var(--button-background-colour-default);
           transform: none;
           margin: 0;
           font-family: fontello;
@@ -1003,7 +1003,7 @@
           font-weight: var(--pat-button-font-weight);
 
           &#portal-header-colour-chooser-trigger {
-            background-color: #{$colour-chooser-default};
+            background-color: var(--colour-chooser-default);
           }
         }
 
@@ -1161,7 +1161,7 @@
             box-sizing: border-box;
             position: relative;
             display: block;
-            font-weight: $font-weight-normal;
+            font-weight: var(--font-weight-normal);
             font-style: normal;
             text-transform: none;
             letter-spacing: 0;
@@ -1183,7 +1183,7 @@
           }
 
           > label:not(.pat-button):not(.file-upload-button) { // Add child selector to prevent collisions with deper nested labels. Test thouroughly.
-            font-weight: $font-weight-normal;
+            font-weight: var(--font-weight-normal);
             font-style: normal;
             position: relative;
             border-style: none;

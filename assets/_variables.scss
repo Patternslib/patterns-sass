@@ -1,82 +1,87 @@
+$colour-well-background: rgba(255, 255, 255, 0.5) !default;
+
+$break-small: 768px !default;
+$break-large: 1280px !default;
+$pat-tail-white: 15px !default;
+
+// Menu list
+
+$menu-list-top-bottom-padding: 2px !default;
+
+// Typography
+
+$body-font-family: 'Source Sans Pro', sans-serif !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+$border-radii: 10px !default;
+$base-font-size: 18px !default;
+$colour-link: var(--colour-link) !default;
+$colour-accent: var(--colour-accent) !default;
+
+// Buttons
+
+$button-border: none !default;
+$button-border-radius: var(--border-radii) !default;
+$button-background-image: none !default;
+$button-font-weight: bold !default;
+
+$button-text-colour: var(--colour-link) !default;
+$button-text-colour-hover: color-mix(in srgb, var(--colour-link) 90%, black) !default;
+$button-background-colour: var(--colour-accent) !default;
+$button-background-colour-hover: color-mix(in srgb, var(--colour-accent) 90%, black) !default;
+$button-shadow: none !default;
+
+$button-text-colour-subdued: rgba(0, 0, 0, 0.6) !default;
+$button-text-colour-subdued-hover: rgba(0, 0, 0, 1) !default;
+$button-background-colour-subdued: rgba(0, 0, 0, 0.1) !default;
+$button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15) !default;
+
+$button-background-colour-default: var(--colour-accent) !default;
+$button-background-colour-default-hover: color-mix(in srgb, var(--colour-accent) 90%, black) !default;
+$button-text-colour-default: rgba(255, 255, 255, 0.9) !default;
+$button-text-colour-default-hover: rgba(255, 255, 255, 1) !default;
+$button-shadow-default: none !default;
+
+$button-text-colour-disabled: rgba(black, 0.3) !default;
+$button-text-colour-disabled-hover: rgba(black, 0.3) !default;
+$button-background-colour-disabled: $button-background-colour !default;
+$button-background-colour-disabled-hover: $button-background-colour !default;
+
+$button-height: 35px !default;
+$button-line-height: 35px !default;
+$button-font-size: var(--base-font-size) !default;
+$button-paddings: 0 var(--base-font-size) !default;
+
+$button-small-height: 20px !default;
+$button-small-line-height: 20px !default;
+$button-small-font-size: 0.8rem !default;
+$button-small-paddings: 0 0.8rem !default;
+$button-small-shadow: none !default;
+
+$pat-toolbar-button-height: $button-height !default;
+$pat-toolbar-button-line-height: $button-line-height !default;
+
+$grid-gutter: var(--base-font-size) !default;
+
+$default-screen-padding: 40px !default;
+$default-screen-padding-small: 15px !default;
+
+$default-tail-white: 25px !default;
+
+$border-radii: 10px !default;
+$tooltip-border-radii: #{$border-radii} !default;
+$tooltip-padding: 18px !default;
+$default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) !default;
+$default-box-shadow-hover: 0 0 15px rgba(0, 0, 0, 0.2) !default;
+$default-box-shadow-active: inset 0 0 10px rgba(0, 0, 0, 0.4) !default;
+$default-focus-marking: 0 0 2px rgba(0, 0, 0, 0.5) !default;
+$form-fields-border-radius: #{$border-radii} !default;
+$form-input-field-line-height: inherit !default;
+
+$collapsible-button-height: 31px !default;
+
 :root {
-    --colour-well-background: rgba(255, 255, 255, 0.5);
-
-    --break-small: 768px;
-    --break-large: 1280px;
-    --pat-tail-white: 15px;
-
-    // Menu list
-    --menu-list-top-bottom-padding: 2px;
-
-    // Typography
-    --body-font-family: 'Source Sans Pro', sans-serif;
-    --font-weight-normal: normal;
-    --font-weight-bold: bold;
-    --base-font-size: 18px;
-
-    --border-radii: 10px;
-    --colour-link: var(--colour-link);
-    --colour-accent: var(--colour-accent);
-
-    // Buttons
-    --button-border: none;
-    --button-border-radius: var(--border-radii);
-    --button-background-image: none;
-    --button-font-weight: bold;
-
-    --button-text-colour: var(--colour-link);
-    --button-text-colour-hover: color-mix(in srgb, var(--colour-link) 90%, black);
-    --button-background-colour: var(--colour-accent);
-    --button-background-colour-hover: color-mix(in srgb, var(--colour-accent) 90%, black);
-    --button-shadow: none;
-
-    --button-text-colour-subdued: rgba(0, 0, 0, 0.6);
-    --button-text-colour-subdued-hover: rgba(0, 0, 0, 1);
-    --button-background-colour-subdued: rgba(0, 0, 0, 0.1);
-    --button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15);
-
-    --button-background-colour-default: var(--colour-accent);
-    --button-background-colour-default-hover: color-mix(in srgb, var(--colour-accent) 90%, black);
-    --button-text-colour-default: rgba(255, 255, 255, 0.9);
-    --button-text-colour-default-hover: rgba(255, 255, 255, 1);
-    --button-shadow-default: none;
-
-    --button-text-colour-disabled: rgba(0, 0, 0, 0.3);
-    --button-text-colour-disabled-hover: rgba(0, 0, 0, 0.3);
-    --button-background-colour-disabled: var(--button-background-colour);
-    --button-background-colour-disabled-hover: var(--button-background-colour);
-
-    --button-height: 35px;
-    --button-line-height: 35px;
-    --button-font-size: 18px;
-    --button-paddings: 0 18px;
-
-    --button-small-height: 20px;
-    --button-small-line-height: 20px;
-    --button-small-font-size: 0.8rem;
-    --button-small-paddings: 0 0.8rem;
-    --button-small-shadow: none;
-
-    --pat-toolbar-button-height: var(--button-height);
-    --pat-toolbar-button-line-height: var(--button-line-height);
-
-    --grid-gutter: var(--base-font-size);
-
-    --default-screen-padding: 40px;
-    --default-screen-padding-small: 15px;
-
-    --default-tail-white: 25px;
-
-    --tooltip-border-radii: var(--border-radii);
-    --tooltip-padding: 18px;
-    --default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
-    --default-box-shadow-hover: 0 0 15px rgba(0, 0, 0, 0.2);
-    --default-box-shadow-active: inset 0 0 10px rgba(0, 0, 0, 0.4);
-    --default-focus-marking: 0 0 2px rgba(0, 0, 0, 0.5);
-    --form-fields-border-radius: var(--border-radii);
-    --form-input-field-line-height: inherit;
-
-    --collapsible-button-height: 31px;
+    --border-radii: var(--border-radii);
 
     // Toggle
     --pat-toggle-height: 26px;
@@ -91,6 +96,7 @@
     --pat-toggle-padding-start-end: 10px;
     --pat-toggle-box-shadow: none;
     --pat-toggle-box-shadow-on: none;
+    --pat-toggle-text-colour: white;
     --pat-toggle-text-shadow-on: none;
 
     // Auto suggest
@@ -139,6 +145,8 @@
     --pat-form-panel-padding-small: 20px;
     --pat-form-input-field-padding-top-bottom: 4px;
     --pat-form-input-field-padding-start-end: 10px;
+    --pat-form-input-field-border: none;
+    --pat-form-input-field-box-shadow: none;
     --pat-form-input-field-border-radius: var(--border-radii);
     --pat-form-proportion-ceiling: 260%;
     --pat-form-proportion-name: 30%;
@@ -174,34 +182,39 @@
     --pat-sortable-blocks-padding-start: 44px;
     --pat-sortable-blocks-button-width: 36px;
     --pat-sortable-blocks-gap: 6px;
-    --pat-sortable-blocks-item-info-box-shadow: var(--default-box-shadow);
+    --pat-sortable-blocks-item-info-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
     --pat-sortable-blocks-handle-colour: var(--colour-accent);
     --pat-sortable-blocks-remove-button-width: 20px;
     --pat-sortable-blocks-remove-button-height: 34px;
     --pat-sortable-blocks-remove-button-icon-height: 20px;
     --pat-sortable-blocks-remove-button-icon-border-radius: 50%;
+    --pat-sortable-blocks-item-info-box-shadow: var(--default-box-shadow);
 
     // Context menu
     --pat-context-menu-panel-distance: 1.7em;
     --pat-context-menu-panel-width: 250px;
 
     // Message
+
     --pat-message-padding: 1.3rem;
 
     // Modal
+
     --close-button-height: var(--button-height);
     --modal-panel-width-small: 640px;
     --modal-panel-width-medium: 840px;
     --modal-panel-width-large: 1100px;
     --modal-panel-body-bottom-padding: 30px;
-    --modal-panel-body-top-padding: 8px;
+    --modal-panel-body-top-padding: 8px; // Leaves some space for focus outline of first form field.
     --modal-panel-body-left-right-padding: 30px;
 
     // Gallery
+
     --gallery-button-width: 40px;
     --gallery-button-height: 40px;
 
-    // Buttons (CSS custom properties)
+    // Buttons
+
     --pat-button-paddings: var(--button-paddings);
     --pat-button-font-size: var(--button-font-size);
     --pat-button-text-colour: var(--button-text-colour);
@@ -210,6 +223,7 @@
     --pat-button-background-colour-hover: var(--button-background-colour-hover);
     --pat-button-height: var(--button-height);
     --pat-button-line-height: var(--button-line-height);
+    --pat-button-paddings: var(--button-paddings);
     --pat-button-font-weight: var(--button-font-weight);
     --pat-button-border: var(--button-border);
     --pat-button-border-radius: var(--button-border-radius);
@@ -220,4 +234,5 @@
     --pat-button-small-font-size: var(--button-small-font-size);
     --pat-button-small-paddings: var(--button-small-paddings);
     --pat-button-small-shadow: var(--button-small-shadow);
+    
 }

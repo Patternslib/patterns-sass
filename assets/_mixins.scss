@@ -151,7 +151,7 @@ $bullet-space: 22px !default;
 }
 
 @mixin floating-ui-element-background {
-  box-shadow: $pat-toolbar-box-shadow;
+  box-shadow: var(--pat-toolbar-box-shadow);
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
   backdrop-filter: blur(10px) saturate(4) brightness(1.2);
@@ -188,7 +188,7 @@ $bullet-space: 22px !default;
       width: 100%;
       background: none;
       box-sizing: border-box;
-      font-size: #{$base-font-size};
+      font-size: var(--base-font-size);
       display: grid;
       grid-template-columns: var(--pat-menu-list-item-padding-start) auto;
       border-radius: var(--border-radii);
@@ -229,7 +229,7 @@ $bullet-space: 22px !default;
       &.tooltip-active-click,
       &:active
         {
-        background-color: $colour-accent;
+        background-color: var(--colour-accent);
         color: white;
       }
 
@@ -258,10 +258,10 @@ $bullet-space: 22px !default;
 
       &.current {
         // background-color: white;
-        color: $colour-accent;
+        color: var(--colour-accent);
 
         a {
-          color: $colour-accent;
+          color: var(--colour-accent);
           cursor: default;
         }
       }
@@ -269,7 +269,7 @@ $bullet-space: 22px !default;
       &.select {
         :has(.mode-select) & {
           &:before {
-            color: #{$colour-accent};
+            color: var(--colour-accent);
           }
         }
       }
@@ -285,7 +285,7 @@ $bullet-space: 22px !default;
   border: 2px solid white;
   padding: 0;
   border-radius: 50%;
-  background-color: $mutation-sentinel-colour;
+  background-color: var(--mutation-sentinel-colour);
   background: linear-gradient(to bottom, #8fcae7 0%, #007bc7 100%);
   display: inline-block;
   margin-top: 0;
@@ -293,25 +293,25 @@ $bullet-space: 22px !default;
 
 @mixin screen-size($media) {
   @if $media == small {
-    @media only screen and (max-width: $break-small) { @content; }
+    @media only screen and (max-width: var(--break-small)) { @content; }
   }
   @else if $media == small-medium {
-    @media only screen and (max-width: $break-large - 1) { @content; }
+    @media only screen and (max-width: calc(var(--break-large) - 1px)) { @content; }
   }
   @else if $media == medium {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    @media only screen and (min-width: calc(var(--break-small) + 1px)) and (max-width: calc(var(--break-large) - 1px)) { @content; }
   }
   @else if $media == medium-portrait {
-    @media only screen and (orientation: portrait) and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    @media only screen and (orientation: portrait) and (min-width: calc(var(--break-small) + 1px)) and (max-width: calc(var(--break-large) - 1px)) { @content; }
   }
   @else if $media == medium-landscape {
-    @media only screen and (orientation: landscape) and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    @media only screen and (orientation: landscape) and (min-width: calc(var(--break-small) + 1px)) and (max-width: calc(var(--break-large) - 1px)) { @content; }
   }
   @else if $media == medium-large {
-    @media only screen and (min-width: $break-small + 1) { @content; }
+    @media only screen and (min-width: calc(var(--break-small) + 1px)) { @content; }
   }
   @else if $media == large {
-    @media only screen and (min-width: $break-large) { @content; }
+    @media only screen and (min-width: var(--break-large)) { @content; }
   }
 }
 
@@ -320,24 +320,24 @@ $bullet-space: 22px !default;
     font-family: fontello;
     content: var(--glyph-up-open);
     font-size: 0.65em;
-    background-color: #{$button-background-colour};
-    color: #{$button-text-colour};
+    background-color: var(--button-background-colour);
+    color: var(--button-text-colour);
     position: absolute;
     right: var(--pat-form-panel-padding);
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    width: #{$collapsible-button-height};
-    height: #{$collapsible-button-height};
+    width: var(--collapsible-button-height);
+    height: var(--collapsible-button-height);
     text-align: center;
-    line-height: #{$collapsible-button-height};
-    border-radius: #{$border-radii};
+    line-height: var(--collapsible-button-height);
+    border-radius: var(--border-radii);
     display: inline-block;
   }
 
   &:hover:after {
-    background-color: #{$button-background-colour-hover};
-    color: #{$button-text-colour-hover};
+    background-color: var(--button-background-colour-hover);
+    color: var(--button-text-colour-hover);
   }
 }
 
@@ -427,7 +427,7 @@ $bullet-space: 22px !default;
   right: 1.5em;
   width: var(--close-button-height);
   height: var(--close-button-height);
-  border-radius: #{$border-radii};
+  border-radius: var(--border-radii);
   color: transparent !important;
   filter: none;
   border: none;
@@ -460,16 +460,16 @@ $bullet-space: 22px !default;
     font-size: calc(0.7 * var(--close-button-height));
     margin: 0;
     display: block;
-    border-radius: #{$border-radii};
+    border-radius: var(--border-radii);
     text-indent: 1%;
     line-height: calc(0.95 * var(--close-button-height));
     height: var(--close-button-height);
-    color: #{$button-text-colour};
-    background-color: #{$button-background-colour};
+    color: var(--button-text-colour);
+    background-color: var(--button-background-colour);
 
     &:hover {
-      color: #{$button-text-colour-hover};
-      background-color: #{$button-background-colour-hover};
+      color: var(--button-text-colour-hover);
+      background-color: var(--button-background-colour-hover);
       text-decoration: none;
     }
   }
@@ -699,8 +699,8 @@ $bullet-space: 22px !default;
   
     .icon {
       overflow: hidden;
-      width: #{$collapsible-button-height};
-      height: #{$collapsible-button-height};
+      width: var(--collapsible-button-height);
+      height: var(--collapsible-button-height);
       cursor: default;
       background-color: var(--pat-button-background-colour);
       color: transparent;
@@ -708,7 +708,7 @@ $bullet-space: 22px !default;
       // display: inline-block; // Float below
       float: right;
       margin-left: 15px;
-      border-radius: #{$border-radii};
+      border-radius: var(--border-radii);
       font-style: normal;
       font-weight: normal;
 
@@ -716,13 +716,13 @@ $bullet-space: 22px !default;
         font-family: fontello;
         font-size: 1em;
         z-index: 1;
-        width: #{$collapsible-button-height};
-        height: #{$collapsible-button-height};
+        width: var(--collapsible-button-height);
+        height: var(--collapsible-button-height);
         text-align: center;
-        line-height: #{$collapsible-button-height};
+        line-height: var(--collapsible-button-height);
         display: block;
         position: absolute;
-        color: #{$button-text-colour};
+        color: var(--button-text-colour);
         top: 0;
         left: 0;
       }
@@ -736,7 +736,7 @@ $bullet-space: 22px !default;
       }
 
       &.tooltip-active-click {
-        background-color: #{$colour-accent};
+        background-color: var(--colour-accent);
         &:after {
           color: white
         }
@@ -760,7 +760,7 @@ $bullet-space: 22px !default;
 
       &.more:after {
         content: var(--glyph-icon-ellipsis);
-        line-height: calc(#{$collapsible-button-height} + 3px);
+        line-height: calc(var(--collapsible-button-height) + 3px);
       }
     }
   }
@@ -770,10 +770,10 @@ $bullet-space: 22px !default;
     display: block;
     padding: 40px;
     box-sizing: border-box;
-    box-shadow: $default-box-shadow;
-    border-radius: $border-radii;
+    box-shadow: var(--default-box-shadow);
+    border-radius: var(--border-radii);
     background-color: var(--pat-form-panel-background-colour);
-    margin-bottom: $default-tail-white;
+    margin-bottom: var(--default-tail-white);
 
     --pat-toolbar-margin-bottom: 15px;
 
@@ -783,7 +783,7 @@ $bullet-space: 22px !default;
 
     &.pat-collapsible {
       .well-title-group .buttons {
-        right: calc(var(--pat-form-panel-padding) + #{$collapsible-button-height} + 15px);
+        right: calc(var(--pat-form-panel-padding) + var(--collapsible-button-height) + 15px);
       }
     }
 
@@ -859,7 +859,7 @@ $bullet-space: 22px !default;
         > .well-title-group > .well-header {
           padding-top: 20px;
           padding-bottom: 20px;
-          border-radius: #{$border-radii};
+          border-radius: var(--border-radii);
 
           &:after {
             content: var(--glyph-down-open);
@@ -888,23 +888,23 @@ $bullet-space: 22px !default;
     }
 
     &.success {
-        background-color: #{$colour-success-background};
+        background-color: var(--colour-success-background);
 
-        input { color: #{$body-font-color}; }
+        input { color: var(--body-font-color); }
     }
 
     &.notice {
-        background-color: #{$colour-notice-background};
+        background-color: var(--colour-notice-background);
     }
 
     &.warning {
-        background-color: #{$colour-warning-background};
-        input { color: $body-font-color};
+        background-color: var(--colour-warning-background);
+        input { color: var(--body-font-color)};
         // select { border: white, color: white;}
     }
 
     &.info {
-        background-color: #{$colour-info-background};
+        background-color: var(--colour-info-background);
     }
 
     &.success,
@@ -923,7 +923,7 @@ $bullet-space: 22px !default;
 }
 
 @mixin avatar($border-radius: 50%, $border: 0.055556em solid rgba(0,0,0,0.2), $height: 2em, $width: 2em) {
-    background-color: #{$colour-accent};
+    background-color: var(--colour-accent);
     border: none;
     color: white;
     box-shadow: inset 0 0 5% rgba(0, 0, 0, 0.4);
@@ -993,10 +993,10 @@ $bullet-space: 22px !default;
     padding: var(--pat-message-padding);
     margin-bottom: 1rem;
     background-color: #efefef;
-    border-radius: #{$border-radii};
+    border-radius: var(--border-radii);
     line-height: 1.3;
-    font-family: #{$body-font-family};
-    box-shadow: #{$pat-message-box-shadow};
+    font-family: var(--body-font-family);
+    box-shadow: var(--pat-message-box-shadow);
 
     &[class*=icon-] {
       display: flex;
@@ -1117,35 +1117,35 @@ $bullet-space: 22px !default;
 }
 
 @mixin button-colouration-subdued() {
-  color: $button-text-colour-subdued;
-  background-color: $button-background-colour-subdued;
+  color: var(--button-text-colour-subdued);
+  background-color: var(--button-background-colour-subdued);
 
   // This mixin becomes obsolete when all default button have gotten a class 'default'.
   
   &:not([disabled]):not(.link):not(.icon):not(.iconified):not(.default):not(.active):hover {
-    background-color: $button-background-colour-subdued-hover;
-    color: $button-text-colour-subdued-hover;
+    background-color: var(--button-background-colour-subdued-hover);
+    color: var(--button-text-colour-subdued-hover);
   }
 }
 
 @mixin button-default {
-  color: #{$button-text-colour-default};
-  background-color: #{$button-background-colour-default};
-  box-shadow: #{$button-shadow-default};
+  color: var(--button-text-colour-default);
+  background-color: var(--button-background-colour-default);
+  box-shadow: var(--button-shadow-default);
 
   &:hover {
-    background-color: #{$button-background-colour-default-hover};
-    color: #{$button-text-colour-default-hover};
+    background-color: var(--button-background-colour-default-hover);
+    color: var(--button-text-colour-default-hover);
   }
 }
 
 @mixin pat-button() {
-  font-family: #{$body-font-family};
+  font-family: var(--body-font-family);
   margin: 0;
-  border: #{$button-border};
+  border: var(--button-border);
   cursor: default;
-  border-radius: #{$button-border-radius};
-  background-image: #{$button-background-image};
+  border-radius: var(--button-border-radius);
+  background-image: var(--button-background-image);
   text-decoration: none;
   line-height: var(--pat-button-height);
   white-space: nowrap;
@@ -1154,7 +1154,7 @@ $bullet-space: 22px !default;
   font-size: var(--pat-button-font-size);
   vertical-align: text-bottom;
   font-weight: var(--pat-button-font-weight);
-  box-shadow: #{$button-shadow};
+  box-shadow: var(--button-shadow);
   color: var(--pat-button-text-colour);
   background-color: var(--pat-button-background-colour);
 
@@ -1203,12 +1203,12 @@ $bullet-space: 22px !default;
   &.default[disabled],
   &.default.disabled,
   &:is(a).default:not([href]) {
-    color: #{$button-text-colour-disabled};
-    background-color: #{$button-background-colour-disabled};
+    color: var(--button-text-colour-disabled);
+    background-color: var(--button-background-colour-disabled);
 
     &:hover {
-      color: #{$button-text-colour-disabled-hover};
-      background-color: #{$button-background-colour-disabled-hover};
+      color: var(--button-text-colour-disabled-hover);
+      background-color: var(--button-background-colour-disabled-hover);
     }
   }
 
@@ -1221,13 +1221,13 @@ $bullet-space: 22px !default;
   }
 
   &.small {
-    font-size: $button-small-font-size;
-    padding: $button-small-paddings;
-    height: $button-small-height;
-    line-height: $button-small-line-height;
+    font-size: var(--button-small-font-size);
+    padding: var(--button-small-paddings);
+    height: var(--button-small-height);
+    line-height: var(--button-small-line-height);
     vertical-align: baseline;
-    box-shadow: $button-small-shadow;
-    font-weight:  $button-small-font-weight;
+    box-shadow: var(--button-small-shadow);
+    font-weight:  var(--button-small-font-weight);
 
     &:before {
       font-size: 15px;
@@ -1253,7 +1253,7 @@ $bullet-space: 22px !default;
     padding: 0;
     display: inline;
     background: none;
-    color: $colour-link;
+    color: var(--colour-link);
     line-height: inherit;
     text-decoration: underline;
     vertical-align: baseline;
@@ -1262,7 +1262,7 @@ $bullet-space: 22px !default;
     &:hover {
       background: none;
       text-decoration: underline !important;
-      color: $colour-link-hover;
+      color: var(--colour-link-hover);
     }
   }
 

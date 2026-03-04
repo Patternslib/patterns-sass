@@ -3,21 +3,21 @@
 .pat-icon {
   font-family: fontello;
   text-indent: -1000em;
-  width: $pat-toolbar-button-height;
-  height: $pat-toolbar-button-height;
+  width: var(--pat-toolbar-button-height);
+  height: var(--pat-toolbar-button-height);
   position: relative;
   color: rgba(0,0,0,0.6);
   cursor: default;
-  line-height: $pat-toolbar-button-height;
+  line-height: var(--pat-toolbar-button-height);
   // float: left;
-  border-radius: $button-border-radius;
+  border-radius: var(--button-border-radius);
   display: inline-block;
   text-align: left; body[dir=rtl] & { text-align: right; }
 
   &:before {
     font-family: fontello;
     text-indent: 0;
-    line-height: $pat-toolbar-button-height + 1px;
+    line-height: calc(var(--pat-toolbar-button-height) + 1px);
     text-align: center;
     position: absolute;
     margin: 0;
@@ -26,7 +26,7 @@
     width: 100%;
     height: 100%;
     display: inline-block;
-    border-radius: $button-border-radius;
+    border-radius: var(--button-border-radius);
     box-sizing: border-box;
   }
 
@@ -40,11 +40,11 @@
   }
 
   &.active {
-    color: $colour-accent;
+    color: var(--colour-accent);
       box-shadow: none;
 
     &:before {
-      color: $colour-accent;
+      color: var(--colour-accent);
     }
   }
 

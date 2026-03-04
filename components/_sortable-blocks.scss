@@ -63,7 +63,7 @@
 			opacity: 0;
 			height: 2px;
 			content: ' ';
-			background: $colour-link;
+			background: var(--colour-link);
 			position: absolute;
 			left: -15px;
 			right: 15px;
@@ -101,7 +101,7 @@
 			bottom: var(--pat-sortable-blocks-gap);
 			width: var(--pat-sortable-blocks-button-width);
 			background: var(--pat-sortable-blocks-handle-colour);
-			border-radius: $border-radii;
+			border-radius: var(--border-radii);
 			overflow: hidden;
 			margin: 0;
 
@@ -238,14 +238,14 @@
 
 			&:hover:before,
 			&.tooltip-active-click:before {
-				background-color: $button-background-colour-default-hover;
+				background-color: var(--button-background-colour-default-hover);
 			}
 
 			&:before {
 				content: var(--glyph-minus);
 				border-radius: var(--pat-sortable-blocks-remove-button-icon-border-radius);
-				background-color: $button-background-colour;
-				color: #{$button-text-colour};
+				background-color: var(--button-background-colour);
+				color: var(--button-text-colour);
 				transform: none;
 				margin: 0;
 				font-family: fontello;
@@ -266,8 +266,8 @@
 			}
 
 			&:hover:before {
-				background-color: $button-background-colour-hover;
-				color: #{$button-text-colour-hover};
+				background-color: var(--button-background-colour-hover);
+				color: var(--button-text-colour-hover);
 			}
 		}
 

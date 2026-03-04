@@ -5,14 +5,14 @@ $pat-container-width: 1280px !default;
 @mixin container {
    display: block;
    margin: 0 auto;
-   max-width: $pat-container-width;
-   padding: 0 $default-screen-padding;
+   max-width: var(--pat-container-width);
+   padding: 0 var(--default-screen-padding);
    -moz-box-sizing: border-box;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
 
    @include screen-size(small) {
-      padding: 0 $default-screen-padding-small;
+      padding: 0 var(--default-screen-padding-small);
    }
 
    @include screen-size(medium) {

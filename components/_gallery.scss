@@ -21,7 +21,7 @@ $gallery-button-distance: 10px;
 	line-height: var(--gallery-button-height);
     box-shadow: 0 0 0 2px rgba(white, 0.7); 
     background: rgba(0, 0, 0, 0.3) !important;
-	border-radius: #{$border-radii};
+	border-radius: var(--border-radii);
 	color: white;
 	text-align: center;
 	font-size: 15px;

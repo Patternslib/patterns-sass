@@ -39,7 +39,7 @@
         height: var(--form-field-range-size);
         width: var(--form-field-range-size);
         border-radius: 50%;
-        background: #{$colour-link};
+        background: var(--colour-link);
         transform: translateY(-50%);
         margin-top: calc(0.5 * var(--form-field-range-track-thickness));
     }
@@ -57,7 +57,7 @@
         height: var(--form-field-range-size);
         width: var(--form-field-range-size);
         border-radius: 50%;
-        background: $colour-accent;
+        background: var(--colour-accent);
     }
 
     input[type=range]:-moz-focusring {
@@ -67,7 +67,7 @@
 
     input[type=range]::-ms-track {
         height: 0.3em;
-        background: $colour-base;
+        background: var(--colour-base);
         border-color: transparent;
         border-width: 0.5em 0;
         color: transparent;
@@ -78,7 +78,7 @@
         height: var(--form-field-range-size);
         width: var(--form-field-range-size);
         border-radius: 50%;
-        background: $colour-accent;
+        background: var(--colour-accent);
     }
 
     input[type=range]:focus::-ms-fill-lower {
