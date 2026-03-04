@@ -1,26 +1,23 @@
-@charset "UTF-8";
-
-var(--pat-toolbar-button-height): var(--button-height) !default;
-var(--pat-toolbar-button-line-height): var(--button-line-height) !default;
-$colour-toolbar-button: transparent !default;
-$pat-toolbar-element-separation: 10px !default;
-var(--pat-tail-white): 15px !default;
-$pat-toolbar-font-size: 18px !default;
-$pat-toolbar-icon-background-colour: transparent !default;
-$pat-toolbar-icon-background-colour-hover: transparent !default;
-$pat-toolbar-icon-text-colour: rgba(0,0,0,0.6) !default;
-$pat-toolbar-icon-text-colour-hover: black !default;
-$pat-toolbar-bump-distance: 100px !default;
-$pat-toolbar-bump-distance-scroll-down: 100px !default;
-$pat-toolbar-top-distance: 20px !default;
-$pat-toolbar-top-distance-scroll-down: 20px !default;
-$pat-toolbar-hiding-speed: 0.3s !default;
-$pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0) !default;
-$pat-button-cluster-toggle-margin: 3px !default;
-var(--button-height): var(--button-height) !default;
-$pat-toolbar-z-index: 2 !default;
-
 :root {
+	--pat-toolbar-button-height: var(--button-height);
+	--pat-toolbar-button-line-height: var(--button-line-height);
+	--colour-toolbar-button: transparent;
+	--pat-toolbar-element-separation: 10px;
+	--pat-tail-white: 15px;
+	--pat-toolbar-font-size: 18px;
+	--pat-toolbar-icon-background-colour: transparent;
+	--pat-toolbar-icon-background-colour-hover: transparent;
+	--pat-toolbar-icon-text-colour: rgba(0, 0, 0, 0.6);
+	--pat-toolbar-icon-text-colour-hover: black;
+	--pat-toolbar-bump-distance: 100px;
+	--pat-toolbar-bump-distance-scroll-down: 100px;
+	--pat-toolbar-top-distance: 20px;
+	--pat-toolbar-top-distance-scroll-down: 20px;
+	--pat-toolbar-hiding-speed: 0.3s;
+	--pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+	--pat-button-cluster-toggle-margin: 3px;
+	--button-height: var(--button-height);
+	--pat-toolbar-z-index: 2;
 	--pat-toolbar-search-field-width-open: 350px;
 	--pat-toolbar-padding: 10px;
 	--pat-toolbar-margin-bottom: 40px;
@@ -77,7 +74,7 @@ $pat-toolbar-z-index: 2 !default;
 	@include clear-fix();
 	& {
 		position: relative;
-		z-index: #{$pat-toolbar-z-index};
+		z-index: var(--pat-toolbar-z-index);
 		padding-top: var(--pat-toolbar-padding);
 		padding-bottom: var(--pat-toolbar-padding);
 		border-radius: var(--border-radii);
@@ -112,7 +109,7 @@ $pat-toolbar-z-index: 2 !default;
 		    padding-right: 1.5em;
 		    background-repeat: no-repeat;
 		    background-position: calc(100% - 10px) center;
-		    background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+			background-image: url(data:image/svg+xml;base64,var(--arrow-down-dark));
 		    background-size: auto 10px;
 		    @media print { background-image: none; }
 
@@ -226,7 +223,7 @@ $pat-toolbar-z-index: 2 !default;
 	&.sticky {
 		position: sticky;
 		top: var(--pat-toolbar-top-distance);
-		transition: top #{$pat-toolbar-hiding-speed};
+		transition: top var(--pat-toolbar-hiding-speed);
 
 		.scrolling-down &,
 		.scroll-down & {
@@ -545,9 +542,9 @@ $pat-toolbar-z-index: 2 !default;
 
 		&:hover {
 			&.no-label:before {
-				color: $pat-toolbar-icon-text-colour-hover;
+				color: var(--pat-toolbar-icon-text-colour-hover);
 				text-decoration: none;
-				background-color: $pat-toolbar-icon-background-colour-hover;
+				background-color: var(--pat-toolbar-icon-background-colour-hover);
 			}
 		}
 		
@@ -565,8 +562,8 @@ $pat-toolbar-z-index: 2 !default;
 
 		&.no-label { 
 			&:before {
-				background-color: $pat-toolbar-icon-background-colour;
-				color: $pat-toolbar-icon-text-colour;
+				background-color: var(--pat-toolbar-icon-background-colour);
+				color: var(--pat-toolbar-icon-text-colour);
 				border-radius: var(--border-radii);
 			}
 
@@ -673,16 +670,16 @@ $pat-toolbar-z-index: 2 !default;
 		display: inline-block;
 		text-align: left; body[dir=rtl] & { text-align: right; }
 		background-color: var(--pat-toolbar-icon-background-colour);
-		color: #{$pat-toolbar-icon-text-colour};
+		color: var(--pat-toolbar-icon-text-colour);
 		// backdrop-filter: blur(5px) saturate(200%);
 
 		&:hover {
-			color: #{$pat-toolbar-icon-text-colour-hover};
+			color: var(--pat-toolbar-icon-text-colour-hover);
 			background-color: var(--pat-toolbar-icon-background-colour-hover);
 			text-decoration: none;
 
 			&:before {
-				color: #{$pat-toolbar-icon-text-colour-hover};
+				color: var(--pat-toolbar-icon-text-colour-hover);
 			}
 		}
 
@@ -690,7 +687,7 @@ $pat-toolbar-z-index: 2 !default;
 			cursor: not-allowed;
 			opacity: 0.5;
 			background-color: var(--pat-toolbar-icon-background-colour);
-			color: #{$pat-toolbar-icon-text-colour};
+			color: var(--pat-toolbar-icon-text-colour);
 		}
 
 		&:before {
@@ -744,11 +741,11 @@ $pat-toolbar-z-index: 2 !default;
 		}
 	
 		&.warning {
-			color: #{$colour-warning};
+			color: var(--colour-warning);
 			box-shadow: none;
 		
 			&:before {
-				color: #{$colour-warning};
+				color: var(--colour-warning);
 			}
 		}
 
@@ -963,7 +960,7 @@ $pat-toolbar-z-index: 2 !default;
 				height: 100%;
 				width: 2em;
 				text-align: center;
-				background: $colour-warning;
+				background: var(--colour-warning);
 				color: white;
 				// border-top-right-radius: 10px;
 				// border-bottom-right-radius: 10px;
@@ -1064,7 +1061,7 @@ $pat-toolbar-z-index: 2 !default;
 		// margin-left: var(--pat-toolbar-element-separation);
 		vertical-align: top;
 		font-size: var(--pat-toolbar-font-size);
-		background-color: $pat-toolbar-icon-background-colour;
+		background-color: var(--pat-toolbar-icon-background-colour);
 		border-radius: var(--border-radii);
 
 		&:after {
@@ -1078,14 +1075,14 @@ $pat-toolbar-z-index: 2 !default;
 			content: var(--glyph-icon-search);
 			font-size: var(--pat-toolbar-font-size);
 			transition: left 0.5s, padding-left 0.5s, transform 1s;
-			color: $pat-toolbar-icon-text-colour;
+			color: var(--pat-toolbar-icon-text-colour);
 		}
 
 		&:hover {
-			background-color: $pat-toolbar-icon-background-colour-hover;
+			background-color: var(--pat-toolbar-icon-background-colour-hover);
 
 			&:after {
-				color: $pat-toolbar-icon-text-colour-hover;
+				color: var(--pat-toolbar-icon-text-colour-hover);
 			}
 		}
 

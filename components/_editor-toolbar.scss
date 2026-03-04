@@ -1,6 +1,6 @@
-@charset "UTF-8";
-
-var(--button-height): var(--button-height) !default;
+:root {
+	--button-height: var(--button-height);
+}
 
 #editor-toolbar,
 .editor-toolbar,
