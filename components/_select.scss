@@ -26,7 +26,7 @@
   padding-top: var(--pat-select-box-padding-top-bottom);
   padding-bottom: var(--pat-select-box-padding-top-bottom);
   padding-left: var(--pat-select-box-padding-start);
-  padding-right: calc((calc(var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-start)) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
+  padding-right: calc((var(--pat-select-box-arrow-width) + var(--pat-select-box-padding-start) / 2)); // -5px to put the text a little closer to the arrow on the right hand side.
   position: relative;
   font-weight: normal !important;
   position: relative;
