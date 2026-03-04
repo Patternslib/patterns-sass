@@ -1,26 +1,30 @@
-$colour-well-background: rgba(255,255,255,0.5) !default;
-$default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) !default;
-$default-box-shadow-hover: 0 0 15px rgba(0,0,0,0.2) !default;
-$default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4) !default;
-$well-box-shadow: $default-box-shadow !default;
-$well-box-shadow-hover: $default-box-shadow-hover !default;
-$well-headers: $colour-link !default;
-$well-background: $colour-well-background !default;
-$default-tail-white: 25px !default;
-$collapsible-button-height: 31px !default;
-$colour-select-box-arrow: black !default;
-$form-input-field-box-shadow: none !default;
-$form-input-field-line-height: inherit !default;
-$select-box-box-shadow: $form-input-field-box-shadow !default;
+:root {
+  --colour-well-background: rgba(255,255,255,0.5);
+  --default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  --default-box-shadow-hover: 0 0 15px rgba(0,0,0,0.2);
+  --default-box-shadow-active: inset 0 0 10px rgba(0,0,0,0.4);
+  --well-box-shadow: var(--default-box-shadow);
+  --well-box-shadow-hover: var(--default-box-shadow-hover);
+  --well-headers: var(--colour-link);
+  --well-background: var(--colour-well-background);
+  --default-tail-white: 25px;
+  --collapsible-button-height: 31px;
+  --colour-select-box-arrow: black;
+  --form-input-field-box-shadow: none;
+  --form-input-field-line-height: inherit;
+  --select-box-box-shadow: var(--form-input-field-box-shadow);
+  --button-small-font-weight: 600;
+  --pat-form-panel-padding-large: 40px;
+  --pat-form-panel-padding-medium: 30px;
+  --pat-form-panel-padding-small: 20px;
+  --pat-message-box-shadow: 0 0 0 2px white;
+  --mutation-sentinel-colour: rgb(104, 192, 255);
+  --bullet-space: 22px;
+}
 
-$button-small-font-weight: 600 !default;
-$pat-form-panel-padding-large: 40px !default;
-$pat-form-panel-padding-medium: 30px !default;
-$pat-form-panel-padding-small: 20px !default;
-$pat-message-box-shadow: 0 0 0 2px white !default;
-$mutation-sentinel-colour: rgb(104, 192, 255) !default;
-$pat-table-sorting-icon-position: right !default;
-$bullet-space: 22px !default;
+$pat-table-sorting-icon-position: right;
+$break-small: 768px !default;
+$break-large: 1024px !default;
 
 @mixin focus-outline {
   outline: var(--pat-form-input-field-outline-focus);
@@ -293,25 +297,25 @@ $bullet-space: 22px !default;
 
 @mixin screen-size($media) {
   @if $media == small {
-    @media only screen and (max-width: var(--break-small)) { @content; }
+    @media only screen and (max-width: $break-small) { @content; }
   }
   @else if $media == small-medium {
-    @media only screen and (max-width: calc(var(--break-large) - 1px)) { @content; }
+    @media only screen and (max-width: calc(#{$break-large} - 1px)) { @content; }
   }
   @else if $media == medium {
-    @media only screen and (min-width: calc(var(--break-small) + 1px)) and (max-width: calc(var(--break-large) - 1px)) { @content; }
+    @media only screen and (min-width: calc(#{$break-small} + 1px)) and (max-width: calc(#{$break-large} - 1px)) { @content; }
   }
   @else if $media == medium-portrait {
-    @media only screen and (orientation: portrait) and (min-width: calc(var(--break-small) + 1px)) and (max-width: calc(var(--break-large) - 1px)) { @content; }
+    @media only screen and (orientation: portrait) and (min-width: calc(#{$break-small} + 1px)) and (max-width: calc(#{$break-large} - 1px)) { @content; }
   }
   @else if $media == medium-landscape {
-    @media only screen and (orientation: landscape) and (min-width: calc(var(--break-small) + 1px)) and (max-width: calc(var(--break-large) - 1px)) { @content; }
+    @media only screen and (orientation: landscape) and (min-width: calc(#{$break-small} + 1px)) and (max-width: calc(#{$break-large} - 1px)) { @content; }
   }
   @else if $media == medium-large {
-    @media only screen and (min-width: calc(var(--break-small) + 1px)) { @content; }
+    @media only screen and (min-width: calc(#{$break-small} + 1px)) { @content; }
   }
   @else if $media == large {
-    @media only screen and (min-width: var(--break-large)) { @content; }
+    @media only screen and (min-width: $break-large) { @content; }
   }
 }
 
