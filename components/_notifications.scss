@@ -40,11 +40,11 @@ $pat-notifications-top-distance: 0 !default;
   }
 
   &.notice {
-    background-color: $colour-notice-background;
+    background-color: var(--colour-notice-background);
   }
 
   &.success {
-    background-color: $colour-success-background;
+    background-color: var(--colour-success-background);
     color: black;
     
     * {
@@ -54,7 +54,7 @@ $pat-notifications-top-distance: 0 !default;
   }
 
   &.warning {
-    background-color: $colour-warning-background;
+    background-color: var(--colour-warning-background);
 
     * {
       color: black !important;
@@ -62,7 +62,7 @@ $pat-notifications-top-distance: 0 !default;
   }
 
   &.error {
-    background-color: $colour-error-background;
+    background-color: var(--colour-error-background);
 
     * {
       color: black !important;
@@ -70,7 +70,7 @@ $pat-notifications-top-distance: 0 !default;
   }
 
   &.info {
-    background-color: $colour-info-background;
+    background-color: var(--colour-info-background);
     color: #154963;
   }
 

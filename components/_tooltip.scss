@@ -4,7 +4,6 @@ $origins: bottom, top, right, left;
 $backdrop-origins: 0% 25%, 0% -50%, 50% 0%, -50% 0%;
 $backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
 $bullet-space: 22px !default;
-var(--tooltip-border-radii): var(--border-radii) !default;
 $tooltip-background-colour: white !default;
 $menu-background-colour-current: var(--colour-accent) !default;
 $menu-text-colour-current: white !default;
@@ -89,7 +88,7 @@ $menu-list-line-height: 22px !default;
 
   &.info {
     .tippy-content {
-      background-color: $colour-notice-background;
+      background-color: var(--colour-notice-background);
       -webkit-hyphens: auto;
       hyphens: auto;
       padding: 18px;
@@ -103,34 +102,34 @@ $menu-list-line-height: 22px !default;
     }
 
     [data-placement^='bottom'] .tippy-arrow {
-      border-bottom-color: $colour-notice-background;
+      border-bottom-color: var(--colour-notice-background);
 
       &::before {
-        border-bottom-color: $colour-notice-background;
+        border-bottom-color: var(--colour-notice-background);
       }
     }
 
     [data-placement^='left'] .tippy-arrow {
-      border-left-color: $colour-notice-background;
+      border-left-color: var(--colour-notice-background);
 
       &::before {
-        border-left-color: $colour-notice-background;
+        border-left-color: var(--colour-notice-background);
       }
     }
 
     [data-placement^='right'] .tippy-arrow {
-      border-right-color: $colour-notice-background;
+      border-right-color: var(--colour-notice-background);
 
       &::before {
-        border-right-color: $colour-notice-background;
+        border-right-color: var(--colour-notice-background);
       }
     }
 
     [data-placement^='top'] .tippy-arrow {
-      border-top-color: $colour-notice-background;
+      border-top-color: var(--colour-notice-background);
 
       &::before {
-        border-top-color: $colour-notice-background;
+        border-top-color: var(--colour-notice-background);
       }
     }
   }

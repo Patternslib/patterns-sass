@@ -81,7 +81,7 @@
 				    // border-bottom: 1px solid rgba(0,0,0,0.2);
 				    overflow: hidden;
 				    position: relative;
-				    color: $colour-primary;
+					color: var(--colour-primary);
 				    -webkit-user-select: none;
 				    user-select: none;
 				    padding: 0.5em 2em 0.5em 3.6em;
@@ -159,14 +159,14 @@
 						opacity: 0.3;
 
 						.dz-upload {
-							background: $colour-success;
+							background: var(--colour-success);
 							display: block;
 							height: 4em;
 						}
 					}
 
 					&.dz-error .dz-progress .dz-upload {
-						background-color: $colour-alert;
+						background-color: var(--colour-alert);
 					}
 
 					.dz-success-mark,
@@ -189,7 +189,7 @@
 					}
 
 					.dz-error-mark {
-						color: $colour-alert;
+						color: var(--colour-alert);
 					}
 				}
 			}

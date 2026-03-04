@@ -109,7 +109,8 @@
 		    padding-right: 1.5em;
 		    background-repeat: no-repeat;
 		    background-position: calc(100% - 10px) center;
-			background-image: url(data:image/svg+xml;base64,var(--arrow-down-dark));
+			/* CSS custom properties cannot be used directly in url(). Use a static value or set via JS if needed. */
+			background-image: none;
 		    background-size: auto 10px;
 		    @media print { background-image: none; }
 
