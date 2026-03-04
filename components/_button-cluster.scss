@@ -1,11 +1,11 @@
-@charset "UTF-8";
-
-$pat-button-cluster-toggle-margin: 3px !default;
-$pat-button-cluster-button-height: var(--button-height) !default;
-$pat-button-cluster-button-line-height: var(--button-line-height) !default;
-$pat-button-cluster-background-colour-active: var(--colour-accent) !default;
-$pat-button-cluster-font-size: 18px !default;
-$pat-button-cluster-text-colour: var(--colour-link) !default;
+:root {
+  --pat-button-cluster-toggle-margin: 3px;
+  --pat-button-cluster-button-height: var(--button-height);
+  --pat-button-cluster-button-line-height: var(--button-line-height);
+  --pat-button-cluster-background-colour-active: var(--colour-accent);
+  --pat-button-cluster-font-size: 18px;
+  --pat-button-cluster-text-colour: var(--colour-link);
+}
 
 .pat-button-cluster {
   --pat-toolbar-icon-background-colour: transparent;
@@ -59,7 +59,9 @@ $pat-button-cluster-text-colour: var(--colour-link) !default;
         position: relative;
 
         &.icon {
-          padding: 0 5px;
+          padding: 0;
+          width: 40px;
+          
         }
 
         input {
@@ -431,7 +433,7 @@ $pat-button-cluster-text-colour: var(--colour-link) !default;
         display: block;
         text-align: center;
         margin: 0;
-        width: 2em;
+        width: 100%;
       }
     }
 
