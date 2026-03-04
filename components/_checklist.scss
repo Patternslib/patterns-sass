@@ -1,11 +1,10 @@
-@charset "UTF-8";
 
-$pat-checklist-item-separation: 0.2em !default;
-$checklist-label-line-height: 24px !default;
-$pat-checklist-padding-start: 1.5em !default;
-$pat-checklist-padding-end: 0 !default;
 
 :root {
+	--checklist-label-line-height: 24px;
+	--pat-checklist-item-separation: 0.2em;
+	--pat-checklist-padding-start: 1.5em;
+	--pat-checklist-padding-end: 0;
 	--pat-checklist-label-padding-start: var(--pat-checklist-padding-start);
 	--pat-checklist-label-padding-end: var(--pat-checklist-padding-end);
 	--pat-checklist-checkbox-size: 18px;
