@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-$pat-toolbar-button-height: $button-height !default;
-$pat-toolbar-button-line-height: $button-line-height !default;
+var(--pat-toolbar-button-height): var(--button-height) !default;
+var(--pat-toolbar-button-line-height): var(--button-line-height) !default;
 $colour-toolbar-button: transparent !default;
 $pat-toolbar-element-separation: 10px !default;
-$pat-tail-white: 15px !default;
+var(--pat-tail-white): 15px !default;
 $pat-toolbar-font-size: 18px !default;
 $pat-toolbar-icon-background-colour: transparent !default;
 $pat-toolbar-icon-background-colour-hover: transparent !default;
@@ -17,7 +17,7 @@ $pat-toolbar-top-distance-scroll-down: 20px !default;
 $pat-toolbar-hiding-speed: 0.3s !default;
 $pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0) !default;
 $pat-button-cluster-toggle-margin: 3px !default;
-$pat-button-cluster-button-height: $button-height !default;
+var(--button-height): var(--button-height) !default;
 $pat-toolbar-z-index: 2 !default;
 
 :root {
@@ -50,7 +50,7 @@ $pat-toolbar-z-index: 2 !default;
 		right: calc(-1 * var(--pat-toolbar-padding));
 		top: 0;
 		bottom: 0;
-		border-radius: $border-radii;
+		border-radius: var(--border-radii);
 		transition: all 1s;
 		content: ' ';
 		display: block;
@@ -80,7 +80,7 @@ $pat-toolbar-z-index: 2 !default;
 		z-index: #{$pat-toolbar-z-index};
 		padding-top: var(--pat-toolbar-padding);
 		padding-bottom: var(--pat-toolbar-padding);
-		border-radius: $border-radii;
+		border-radius: var(--border-radii);
 		font-size: 0; // Removes spaces between buttons.
 		user-select: none;
 		box-sizing: border-box;
@@ -133,8 +133,8 @@ $pat-toolbar-z-index: 2 !default;
 		line-height: var(--pat-toolbar-button-line-height);
 		display: inline-block;
 		cursor: default;
-		border-radius: #{$button-border-radius};
-		padding: #{$button-paddings};
+		border-radius: var(--button-border-radius);
+		padding: var(--button-paddings);
 		// margin: 0 -15px;
 
 		&:before {
@@ -146,7 +146,7 @@ $pat-toolbar-z-index: 2 !default;
 		}
 
 		&.tooltip-active-click {
-			background-color: #{$colour-accent};
+			background-color: var(--colour-accent);
 			color: white;
 			
 			&:before {
@@ -190,7 +190,7 @@ $pat-toolbar-z-index: 2 !default;
 	// 		right: calc(-1 * var(--pat-toolbar-padding));
 	// 		top: calc(var(--pat-toolbar-bump-distance) - 1.5 * var(--pat-toolbar-padding));
 	// 		bottom: calc(-0.5 * var(--pat-toolbar-padding));
-	// 		border-radius: $border-radii;
+	// 		border-radius: var(--border-radii);
 	// 		transition: all 1s;
 	//       	box-shadow: 0 0 3px rgba(0, 0, 0, 0);
 	//       	content: ' ';
@@ -567,7 +567,7 @@ $pat-toolbar-z-index: 2 !default;
 			&:before {
 				background-color: $pat-toolbar-icon-background-colour;
 				color: $pat-toolbar-icon-text-colour;
-				border-radius: $border-radii;
+				border-radius: var(--border-radii);
 			}
 
 			&.open:before,
@@ -669,7 +669,7 @@ $pat-toolbar-z-index: 2 !default;
 		color: rgba(0,0,0,0.6);
 		cursor: default;
 		line-height: var(--pat-toolbar-button-line-height);
-		border-radius: #{$button-border-radius};
+		border-radius: var(--button-border-radius);
 		display: inline-block;
 		text-align: left; body[dir=rtl] & { text-align: right; }
 		background-color: var(--pat-toolbar-icon-background-colour);
@@ -705,7 +705,7 @@ $pat-toolbar-z-index: 2 !default;
 			width: 100%;
 			height: 100%;
 			display: inline-block;
-			border-radius: #{$button-border-radius};
+			border-radius: var(--button-border-radius);
 			box-sizing: border-box;
 		}
 
@@ -906,7 +906,7 @@ $pat-toolbar-z-index: 2 !default;
 			}
 
 			#product-space.mode-select & {
-				background-color: $colour-accent;
+				background-color: var(--colour-accent);
 				
 				&:before {
 					color: white;
@@ -1065,7 +1065,7 @@ $pat-toolbar-z-index: 2 !default;
 		vertical-align: top;
 		font-size: var(--pat-toolbar-font-size);
 		background-color: $pat-toolbar-icon-background-colour;
-		border-radius: $border-radii;
+		border-radius: var(--border-radii);
 
 		&:after {
 			position: absolute;
@@ -1092,7 +1092,7 @@ $pat-toolbar-z-index: 2 !default;
 		input {
 			width: var(--pat-toolbar-button-height);
 			height: var(--pat-toolbar-button-height);
-			border-radius: $border-radii;
+			border-radius: var(--border-radii);
 			background: white;
 			border: 1px silver solid;
 			max-width: 1000px;

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-$canvas-toolbar-button-height: $button-height !default;
+var(--button-height): var(--button-height) !default;
 
 #editor-toolbar,
 .editor-toolbar,
@@ -25,15 +25,15 @@ $canvas-toolbar-button-height: $button-height !default;
 				-webkit-box-sizing: content-box;
 				-moz-box-sizing: content-box;
 				box-sizing: content-box;
-				height: $canvas-toolbar-button-height;
-				width: $canvas-toolbar-button-height;
-				line-height: $canvas-toolbar-button-height;
+				height: var(--button-height);
+				width: var(--button-height);
+				line-height: var(--button-height);
 				padding: 0;
 				color: transparent;
 				float: left;
 				margin: 0;
 				background: transparent;
-				border-radius: $border-radii;
+				border-radius: var(--border-radii);
 
 				&:hover {
 				  outline: none;
@@ -46,7 +46,7 @@ $canvas-toolbar-button-height: $button-height !default;
 				}
 
 				&.redactor-button-active {
-					background-color: $colour-accent !important;
+					background-color: var(--colour-accent) !important;
 
 					&:before {
 						color: white;

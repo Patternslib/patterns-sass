@@ -1,39 +1,29 @@
-$back-button-border-radius: $border-radii !default;
-$back-button-border-radius-left: 8px !default;
-
-$back-button-background-colour: $button-background-colour;
-$back-button-background-colour-hover: $button-background-colour-hover;
-$back-button-text-colour: $button-text-colour;
-$back-button-text-colour-hover: $button-text-colour-hover;
-$back-button-height: $button-height !default;
-$back-button-line-height: $button-line-height !default;
-$back-button-font-size: 18px !default;
-
-$back-button-arrow-height-top: (0.5 * $back-button-height) - (0.26 * $back-button-border-radius-left) !default;
-$back-button-arrow-height-bottom: (0.5 * $back-button-height) - (0.26 * $back-button-border-radius-left) !default;
-
-$back-button-background-colour-dp: rgba(255,255,255,0.5);
-$back-button-text-colour-dp: rgba(255,255,255,0.9);
-$back-button-text-colour-dp-hover: white;
-
-$back-button-font-weight: bold !default;
+:root {
+	--back-button-border-radius: var(--border-radii);
+	--back-button-border-radius-left: 8px;
+	--back-button-background-colour: var(--button-background-colour);
+	--back-button-background-colour-hover: var(--button-background-colour-hover);
+	--back-button-text-colour: var(--button-text-colour);
+	--back-button-text-colour-hover: var(--button-text-colour-hover);
+	--back-button-height: var(--button-height);
+	--back-button-line-height: var(--button-line-height);
+	--back-button-font-size: 18px;
+	--back-button-background-colour-dp: rgba(255, 255, 255, 0.5);
+	--back-button-text-colour-dp: rgba(255, 255, 255, 0.9);
+	--back-button-text-colour-dp-hover: white;
+	--back-button-font-weight: bold;
+}
 
 .pat-back-button {
 	display: inline-block;
-	line-height: $back-button-line-height;
-
-	.pat-toolbar & {
-		line-height: $pat-toolbar-button-line-height;
-	}
-
-	height: $back-button-height;
-	// background: $colour-button;
-	color: $back-button-text-colour;
-	font-size: $back-button-font-size;
+	line-height: var(--back-button-line-height);
+	height: var(--back-button-height);
+	color: var(--back-button-text-colour);
+	font-size: var(--back-button-font-size);
 	padding: 0 1.5em 0 2em;
 	position: relative;
 	margin-left: 0;
-	font-weight: $back-button-font-weight;
+	font-weight: var(--back-button-font-weight);
 	max-width: 100%;
 	white-space: nowrap !important;
 	overflow: hidden;
@@ -41,6 +31,10 @@ $back-button-font-weight: bold !default;
 	box-sizing: border-box;
 	text-decoration: none !important;
 	cursor: default;
+
+	.pat-toolbar & {
+		line-height: var(--pat-toolbar-button-line-height);
+	}
 
 	.overflow-protector {
 		width: 100%;
@@ -51,7 +45,7 @@ $back-button-font-weight: bold !default;
 
 	@include screen-size(small) {
 		#app-space & {
-			display: none; // Use level up back button instead.
+			display: none;
 		}
 	}
 
@@ -60,16 +54,16 @@ $back-button-font-weight: bold !default;
 		width: 0;
 		height: 0;
 		border-style: solid;
-		border-width: $back-button-arrow-height-top 15px $back-button-arrow-height-bottom 0;
-		border-color: transparent $back-button-background-colour transparent transparent;
+		border-width: calc(0.5 * var(--back-button-height) - 0.26 * var(--back-button-border-radius-left)) 15px calc(0.5 * var(--back-button-height) - 0.26 * var(--back-button-border-radius-left)) 0;
+		border-color: transparent var(--back-button-background-colour) transparent transparent;
 		position: absolute;
 		left: 0;
-		top: 0.3 * $back-button-border-radius-left;
+		top: calc(0.3 * var(--back-button-border-radius-left));
 	}
 
 	&:after {
 		content: ' ';
-		background: $back-button-background-colour;
+		background: var(--back-button-background-colour);
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -77,39 +71,33 @@ $back-button-font-weight: bold !default;
 		left: 13px;
 		clip-path: inset(0 0 0 2px);
 		display: block;
-		border-top-right-radius: $back-button-border-radius;
-		border-bottom-right-radius: $back-button-border-radius;
-		border-top-left-radius: $back-button-border-radius-left;
-		border-bottom-left-radius: $back-button-border-radius-left;
+		border-top-right-radius: var(--back-button-border-radius);
+		border-bottom-right-radius: var(--back-button-border-radius);
+		border-top-left-radius: var(--back-button-border-radius-left);
+		border-bottom-left-radius: var(--back-button-border-radius-left);
 		z-index: -1;
 	}
 
 	&.dp {
-		// color: $back-button-text-colour-dp;
-
-		// &:hover {
-		// 	color: $back-button-text-colour-dp-hover;
-		// }
-
 		&:before {
-			border-color: transparent $back-button-background-colour-dp transparent transparent;
+			border-color: transparent var(--back-button-background-colour-dp) transparent transparent;
 		}
 
 		&:after {
-			background: $back-button-background-colour-dp;
+			background: var(--back-button-background-colour-dp);
 		}
 	}
 
 	&:hover {
-		color: $button-text-colour-hover;
+		color: var(--button-text-colour-hover);
 		text-decoration: none;
 
 		&:before {
-			border-color: transparent $back-button-background-colour-hover transparent transparent;
+			border-color: transparent var(--back-button-background-colour-hover) transparent transparent;
 		}
 
 		&:after {
-			background: $back-button-background-colour-hover;
+			background: var(--back-button-background-colour-hover);
 		}
 	}
 }

@@ -10,13 +10,13 @@ $transparent-light: rgba(0, 8, 16, 0.08) !default;
 $transparent-dark: rgba(0, 8, 16, 0.15) !default;
 $transparent-darker: rgba(0, 8, 16, 0.2) !default;
 
-$tooltip-padding: 18px !default;
+var(--tooltip-padding): 18px !default;
 
 $arrow-size: 8px;
 $arrow-box-size: 22px;
 $arrow-distance: 3px;
 
-$tooltip-border-radii: $border-radii !default;
+var(--tooltip-border-radii): var(--border-radii) !default;
 
 :root {
   --pat-tooltip-box-shadow: 0 4px 14px -2px #{$transparent-light};
@@ -29,8 +29,8 @@ $tooltip-border-radii: $border-radii !default;
   color: black;
   box-shadow: var(--pat-tooltip-box-shadow);
   color: $body-font-color;
-  font-size: $base-font-size;
-  border-radius: $tooltip-border-radii;
+  font-size: var(--base-font-size);
+  border-radius: var(--tooltip-border-radii);
 
   > .#{$namespace-prefix}-backdrop {
     background-color: $color;
@@ -52,7 +52,7 @@ $tooltip-border-radii: $border-radii !default;
   }
 
   .tippy-content {
-    padding: $tooltip-padding;
+    padding: var(--tooltip-padding);
     max-height: calc(100vh - 100px);
     overflow: auto;
   }

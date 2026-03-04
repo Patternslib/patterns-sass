@@ -35,7 +35,7 @@
 				padding: 3em 1em;
 				margin-bottom: 1em !important;
 				border: 0.2em rgba(0,0,0,0.2) dashed;
-				border-radius: $border-radii;
+				border-radius: var(--border-radii);
 				text-align: center;
 				color: gray;
 				cursor: default;
@@ -48,7 +48,7 @@
 				}
 
 				&:active {
-					background-color: $colour-base;
+					background-color: var(--colour-base);
 				}
 			}
 		}
@@ -58,7 +58,7 @@
 			.dz-message {
 
 				p {
-					background-color: $colour-base;
+					background-color: var(--colour-base);
 				}
 			}
 		}
@@ -87,7 +87,7 @@
 				    padding: 0.5em 2em 0.5em 3.6em;
 				    margin: 0 0 10px 0;
 				    position: relative;
-				    border-radius: $border-radii;
+				    border-radius: var(--border-radii);
 				    box-shadow: inset 0 0 5px rgba(0,0,0,0.15);
 
 					.info {

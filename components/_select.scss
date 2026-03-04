@@ -61,24 +61,24 @@
 
   &[data-value="draft"],
   &.state-draft {
-    background-color: #{$colour-orange-xl};
-    color: #{$colour-orange-xd};
+    background-color: #{var(--colour-orange)-xl};
+    color: #{var(--colour-orange)-xd};
 
     &:after {
-      background-color: #{$colour-orange-l};
+      background-color: #{var(--colour-orange)-l};
     }
 
     &:before,
     &:after {
-      color: #{$colour-orange-xd};
+      color: #{var(--colour-orange)-xd};
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: color-mix(in srgb, #{$colour-orange-xl} 95%, black);
+      background-color: color-mix(in srgb, #{var(--colour-orange)-xl} 95%, black);
 
       &:after {
-        background-color: color-mix(in srgb, #{$colour-orange-l} 95%, black);
+        background-color: color-mix(in srgb, #{var(--colour-orange)-l} 95%, black);
       }
     }
   }
@@ -170,7 +170,7 @@
 
   // &:hover,
   // &.tooltip-active-click {
-  //   background-color: $button-background-colour-hover;
+  //   background-color: var(--button-background-colour)-hover;
   // }
 
   &:not([class*="icon-"]) {

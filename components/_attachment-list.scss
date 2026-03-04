@@ -37,7 +37,7 @@
 
 			.icon.icon-rename:before,
 			.icon.icon-rename:hover:before {
-				color: $colour-accent;
+				color: var(--colour-accent);
 			}
 
 			.flex-field {
@@ -50,7 +50,7 @@
 		&.mode-view {
 			.title-group {
 				.name:before {	
-					color: $colour-link;
+					color: var(--colour-link);
 				}
 
 				&:hover {

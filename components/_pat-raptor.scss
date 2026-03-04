@@ -36,7 +36,7 @@
     box-shadow: none;
 
     &.ui-state-highlight {
-      color: $colour-accent;
+      color: var(--colour-accent);
     }
 
     * {

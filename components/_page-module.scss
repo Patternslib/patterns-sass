@@ -63,7 +63,7 @@
 // 	.page-module-title {
 // 		min-height: 60px;
 // 		font-weight: normal;
-// 		color: $colour-link;
+// 		color: var(--colour-link);
 // 		padding: 10px 40px 10px 39px;
 // 		margin: -1px 0 0;
 // 		position: relative;
@@ -78,8 +78,8 @@
 // 		border-bottom: $pat-page-module-collapsible-border-bottom;
 
 // 		&:hover {
-// 			background-color: $colour-base;
-// 			color: $colour-link;
+// 			background-color: var(--colour-base);
+// 			color: var(--colour-link);
 // 		}
 
 // 		.title-segment {
@@ -103,7 +103,7 @@
 // 				top: 5px;
 // 				height: 32px;
 // 				margin-right: 10px;
-// 				background: $colour-base;
+// 				background: var(--colour-base);
 // 				filter: brightness(0.92);
 // 				font-weight: normal;
 // 				font-family: monospace;
@@ -135,7 +135,7 @@
 // 				height: 39px;
 // 				line-height: 39px;
 // 				position: relative;
-// 				background: $button-background-colour-default;
+// 				background: var(--button-background-colour)-default;
 // 				display: inline-block;
 // 				margin-left: 5px;
 // 				cursor: default;
@@ -143,7 +143,7 @@
 
 // 				&:hover {
 // 					text-decoration: none;
-// 					background: $button-background-colour-default-hover;
+// 					background: var(--button-background-colour)-default-hover;
 // 				}
 
 // 				&:before {
@@ -185,7 +185,7 @@
 // 		&.collapsible-open,
 // 		&.collapsible-closed.collapsible-in-progress {
 // 			border-bottom: none;
-// 			background-color: $colour-link;
+// 			background-color: var(--colour-link);
 
 // 			&:before {
 // 				content: var(--glyph-up-open);
@@ -238,7 +238,7 @@
 
 // 			&.follow {
 // 				font-size: 1.7rem;
-// 				color: $colour-link;
+// 				color: var(--colour-link);
 // 				text-decoration: underline;
 // 				opacity: 0.6;
 

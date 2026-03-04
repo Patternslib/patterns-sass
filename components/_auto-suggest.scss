@@ -391,7 +391,7 @@ $glyph-remove-tag: $glyph-remove;
   }
 
   .select2-highlighted {
-    background: $colour-accent;
+    background: var(--colour-accent);
     color: #fff;
     border-radius: var(--pat-form-fields-border-radius);
   }
@@ -553,7 +553,7 @@ disabled look for disabled choices in the results dropdown
     height: var(--pat-auto-suggest-pill-height);
     color: white;
     cursor: default;
-    border-radius: $border-radii;
+    border-radius: var(--border-radii);
     background-clip: padding-box;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -602,7 +602,7 @@ disabled look for disabled choices in the results dropdown
     // background: #156998;
     box-shadow:
         0 0 0 1px white,
-        0 0 0 3px $colour-accent;
+        0 0 0 3px var(--colour-accent);
   }
 }
 
@@ -676,7 +676,7 @@ disabled look for disabled choices in the results dropdown
   }
 
   &.state-draft {
-		background-color: $colour-orange;
+		background-color: var(--colour-orange);
     color: white;
   }
 }

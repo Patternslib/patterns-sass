@@ -15,7 +15,7 @@
       font-weight: normal;
 
       &[href] {
-        color: $colour-link;
+        color: var(--colour-link);
 
         &:after {
           content: ' > ';
@@ -37,10 +37,7 @@
       width: 2em;
       height: 2em;
       content: " ";
-    
-      background-image: -webkit-linear-gradient(left, $colour-base-light 0%, rgba(240,240,240,0) 100%);
-      background-image: -o-linear-gradient(left, $colour-base-light 0%, rgba(240,240,240,0) 100%);
-      background-image: linear-gradient(to left, $colour-base-light 0%, rgba(240,240,240,0) 100%);
+      background-image: linear-gradient(to left, var(--colour-base-light) 0%, rgba(240,240,240,0) 100%);
     
     }
 
@@ -50,7 +47,7 @@
       left: 0;
       width: 1em;
       height: 1.2em;
-      background-color: $colour-base-light;
+      background-color: var(--colour-base-light);
       border-right: 1px solid silver;
       overflow: hidden;
       line-height: 1em;
@@ -105,7 +102,7 @@
       text-decoration: none;
 
       &[href] {
-        color: $colour-link;
+        color: var(--colour-link);
         font-weight: normal;
 
         &:hover {

@@ -9,7 +9,7 @@ $pat-notifications-top-distance: 0 !default;
   margin-bottom: 1em;
   box-shadow: 0 1px 10px rgba(0,0,0,0.2);
   display: block;
-  border-radius: $border-radii;
+  border-radius: var(--border-radii);
   background-color: rgba(255,255,255,0.5);
   color: rgba(0,0,0,0.8);
   border: 1px solid white;
@@ -19,9 +19,9 @@ $pat-notifications-top-distance: 0 !default;
   button {
     @include pat-button;
     & {
-      font-size: $button-small-font-size;
-      padding: $button-small-paddings;
-      line-height: $button-small-height;
+      font-size: var(--button-small-font-size);
+      padding: var(--button-small-paddings);
+      line-height: var(--button-small-height);
       vertical-align: baseline;
     }
   }

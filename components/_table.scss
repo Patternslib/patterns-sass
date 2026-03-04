@@ -726,7 +726,7 @@ $pat-table-icon-colour:                     gray !default;
 
                     &.tooltip-active-click {
                         background-color: var(--colour-accent);
-                        // border-radius: $border-radii;
+                        // border-radius: var(--border-radii);
 
                         &:before {
                             color: white;
@@ -872,7 +872,7 @@ $pat-table-icon-colour:                     gray !default;
             .table-body-title {
                 display: block;
                 padding-top: 1.5em;
-                // color: $colour-orange;
+                // color: var(--colour-orange);
                 font-weight: bold;
                 font-size: 1.125em;
                 line-height: 1.4444;

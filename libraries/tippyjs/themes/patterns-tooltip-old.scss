@@ -19,7 +19,7 @@ $transparent-darker: rgba(0, 8, 16, 0.2);
 
   .tippy-content {
     padding: 18px;
-    border-radius: $border-radii;
+    border-radius: var(--border-radii);
     max-height: calc(100vh - 100px);
     overflow: auto;
   }

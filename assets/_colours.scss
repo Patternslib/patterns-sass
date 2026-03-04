@@ -1,57 +1,60 @@
-$colour-green: #39870c !default; 										
-$colour-green-d: #2b6709 !default;	 							
-$colour-green-l: #c4dbb6 !default;						
-$colour-green-xl: #e1eddb !default; 						
-
-$colour-orange: #e17000 !default;  										
-$colour-orange-l: #f6d4b2 !default; 
-$colour-orange-xl: #fbead9 !default; 
-$colour-orange-d: #c06000 !default;
-$colour-orange-xd: #6f3700 !default;
-
-$colour-violette: #a90061 !default;
-$colour-violette-l: #e5b3d0 !default; 
-$colour-violette-xl: #f2d9e7 !default;
-
-$colour-purple-l: #c6b8cf; 
-$colour-purple-xl: #e3dce7; 
-$colour-purple: #42145f; 
-
-$colour-dark-blue: #01689b; 
-$colour-dark-blue-d: #01527a !default;
-$colour-dark-blue-l: #cce0f1; 
-$colour-dark-blue-xd: #002c43 !default;
-$colour-dark-blue-xl: #e5f0f9; 
-
-$colour-link: DodgerBlue !default;
-$colour-link-hover: navy !default;
-$colour-base: #efefef !default;
-$colour-primary: black !default;
-$colour-header-elements: #666 !default;
-$colour-post: #e4f2f8 !default;
-$colour-alert: red !default;
-$colour-workspace-default: #869EBF !default;
-$colour-accent: darkgoldenrod !default;
-$colour-success: #4a964a !default;
-$colour-success-dark: #397339 !default;
-$colour-success-background: #e1eddb !default;
-$colour-success-background-dark: #cddec4 !default;
-$colour-warning: orange !default;
-$colour-warning-background: #fbead9 !default; 
-$colour-for-review: #a90061 !default;
-$colour-for-review-background: #f4d3e5 !default;
-$colour-notice: tuscanbrown !default;
-$colour-notice-background: #fdfdc8 !default;
-$colour-info: #4dc4ff !default;
-$colour-info-background: #d9edf7 !default;
-$colour-error: red !default;
-$colour-error-background: #ffe7e7 !default;
-$colour-base-light: #efefef !default;
-$colour-chooser-default: $colour-accent !default;
-$colour-form-fields-background: rgba(0,0,0,0.1) !default;
-$colour-well-background: rgba(255,255,255,0.5) !default;
 
 :root {
+    --colour-green: #39870c;
+    --colour-green-d: #2b6709;
+    --colour-green-l: #c4dbb6;
+    --colour-green-xl: #e1eddb;
+
+    --colour-orange: #e17000;
+    --colour-orange-l: #f6d4b2;
+    --colour-orange-xl: #fbead9;
+    --colour-orange-d: #c06000;
+    --colour-orange-xd: #6f3700;
+
+    --colour-violette: #a90061;
+    --colour-violette-l: #e5b3d0;
+    --colour-violette-xl: #f2d9e7;
+
+    --colour-purple-l: #c6b8cf;
+    --colour-purple-xl: #e3dce7;
+    --colour-purple: #42145f;
+
+    --colour-dark-blue: #01689b;
+    --colour-dark-blue-d: #01527a;
+    --colour-dark-blue-l: #cce0f1;
+    --colour-dark-blue-xd: #002c43;
+    --colour-dark-blue-xl: #e5f0f9;
+
+    --colour-link: DodgerBlue;
+    --colour-link-hover: navy;
+    --colour-base: #efefef;
+    --colour-primary: black;
+    --colour-header-elements: #666;
+    --colour-post: #e4f2f8;
+    --colour-alert: red;
+    --colour-workspace-default: #869EBF;
+    --colour-accent: darkgoldenrod;
+    --colour-success: #4a964a;
+    --colour-success-dark: #397339;
+    --colour-success-background: #e1eddb;
+    --colour-success-background-dark: #cddec4;
+    --colour-warning: orange;
+    --colour-warning-background: #fbead9;
+    --colour-for-review: #a90061;
+    --colour-for-review-background: #f4d3e5;
+    --colour-notice: tuscanbrown;
+    --colour-notice-background: #fdfdc8;
+    --colour-info: #4dc4ff;
+    --colour-info-background: #d9edf7;
+    --colour-error: red;
+    --colour-error-background: #ffe7e7;
+    --colour-base-light: #efefef;
+    --colour-chooser-default: var(--colour-accent);
+    --colour-form-fields-background: rgba(0,0,0,0.1);
+    --colour-well-background: rgba(255,255,255,0.5);
+
+
+    // ...existing code...
     --colour-success-dark: color-mix(in srgb, var(--colour-success) 50%, black);
     --colour-success-text: var(--colour-success-dark);
 

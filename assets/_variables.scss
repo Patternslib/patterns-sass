@@ -1,86 +1,76 @@
-$colour-well-background: rgba(255, 255, 255, 0.5) !default;
-
+// Sass variables kept for use in @media queries (CSS custom properties cannot be used there)
 $break-small: 768px !default;
 $break-large: 1280px !default;
-$pat-tail-white: 15px !default;
-
-// Menu list
-
-$menu-list-top-bottom-padding: 2px !default;
-
-// Typography
-
-$body-font-family: 'Source Sans Pro', sans-serif !default;
-$font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
-$border-radii: 10px !default;
-$base-font-size: 18px !default;
-$colour-link: var(--colour-link) !default;
-$colour-accent: var(--colour-accent) !default;
-
-// Buttons
-
-$button-border: none !default;
-$button-border-radius: var(--border-radii) !default;
-$button-background-image: none !default;
-$button-font-weight: bold !default;
-
-$button-text-colour: var(--colour-link) !default;
-$button-text-colour-hover: color-mix(in srgb, var(--colour-link) 90%, black) !default;
-$button-background-colour: var(--colour-accent) !default;
-$button-background-colour-hover: color-mix(in srgb, var(--colour-accent) 90%, black) !default;
-$button-shadow: none !default;
-
-$button-text-colour-subdued: rgba(0, 0, 0, 0.6) !default;
-$button-text-colour-subdued-hover: rgba(0, 0, 0, 1) !default;
-$button-background-colour-subdued: rgba(0, 0, 0, 0.1) !default;
-$button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15) !default;
-
-$button-background-colour-default: var(--colour-accent) !default;
-$button-background-colour-default-hover: color-mix(in srgb, var(--colour-accent) 90%, black) !default;
-$button-text-colour-default: rgba(255, 255, 255, 0.9) !default;
-$button-text-colour-default-hover: rgba(255, 255, 255, 1) !default;
-$button-shadow-default: none !default;
-
-$button-text-colour-disabled: rgba(black, 0.3) !default;
-$button-text-colour-disabled-hover: rgba(black, 0.3) !default;
-$button-background-colour-disabled: $button-background-colour !default;
-$button-background-colour-disabled-hover: $button-background-colour !default;
-
-$button-height: 35px !default;
-$button-line-height: 35px !default;
-$button-font-size: var(--base-font-size) !default;
-$button-paddings: 0 var(--base-font-size) !default;
-
-$button-small-height: 20px !default;
-$button-small-line-height: 20px !default;
-$button-small-font-size: 0.8rem !default;
-$button-small-paddings: 0 0.8rem !default;
-$button-small-shadow: none !default;
-
-$pat-toolbar-button-height: $button-height !default;
-$pat-toolbar-button-line-height: $button-line-height !default;
-
-$grid-gutter: var(--base-font-size) !default;
-
-$default-screen-padding: 40px !default;
-$default-screen-padding-small: 15px !default;
-
-$default-tail-white: 25px !default;
-
-$border-radii: 10px !default;
-$tooltip-border-radii: #{$border-radii} !default;
-$tooltip-padding: 18px !default;
-$default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) !default;
-$default-box-shadow-hover: 0 0 15px rgba(0, 0, 0, 0.2) !default;
-$default-box-shadow-active: inset 0 0 10px rgba(0, 0, 0, 0.4) !default;
-$default-focus-marking: 0 0 2px rgba(0, 0, 0, 0.5) !default;
-$form-fields-border-radius: #{$border-radii} !default;
-$form-input-field-line-height: inherit !default;
-
-$collapsible-button-height: 31px !default;
 
 :root {
+    // General
+    --colour-well-background: rgba(255, 255, 255, 0.5);
+    --pat-tail-white: 15px;
+
+    // Menu list
+    --menu-list-top-bottom-padding: 2px;
+
+    // Typography
+    --body-font-family: 'Source Sans Pro', sans-serif;
+    --font-weight-normal: normal;
+    --font-weight-bold: bold;
+    --border-radii: 10px;
+    --base-font-size: 18px;
+
+    // Buttons
+    --button-border: none;
+    --button-border-radius: var(--border-radii);
+    --button-background-image: none;
+    --button-font-weight: bold;
+    --button-text-colour: var(--colour-link);
+    --button-text-colour-hover: color-mix(in srgb, var(--colour-link) 90%, black);
+    --button-background-colour: var(--colour-accent);
+    --button-background-colour-hover: color-mix(in srgb, var(--colour-accent) 90%, black);
+    --button-shadow: none;
+    --button-text-colour-subdued: rgba(0, 0, 0, 0.6);
+    --button-text-colour-subdued-hover: rgba(0, 0, 0, 1);
+    --button-background-colour-subdued: rgba(0, 0, 0, 0.1);
+    --button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15);
+    --button-background-colour-default: var(--colour-accent);
+    --button-background-colour-default-hover: color-mix(in srgb, var(--colour-accent) 90%, black);
+    --button-text-colour-default: rgba(255, 255, 255, 0.9);
+    --button-text-colour-default-hover: rgba(255, 255, 255, 1);
+    --button-shadow-default: none;
+    --button-text-colour-disabled: rgba(0, 0, 0, 0.3);
+    --button-text-colour-disabled-hover: rgba(0, 0, 0, 0.3);
+    --button-background-colour-disabled: var(--button-background-colour);
+    --button-background-colour-disabled-hover: var(--button-background-colour);
+    --button-height: 35px;
+    --button-line-height: 35px;
+    --button-font-size: var(--base-font-size);
+    --button-paddings: 0 var(--base-font-size);
+    --button-small-height: 20px;
+    --button-small-line-height: 20px;
+    --button-small-font-size: 0.8rem;
+    --button-small-paddings: 0 0.8rem;
+    --button-small-shadow: none;
+    --pat-toolbar-button-height: var(--button-height);
+    --pat-toolbar-button-line-height: var(--button-line-height);
+
+    // Grid
+    --grid-gutter: var(--base-font-size);
+
+    // Layout
+    --default-screen-padding: 40px;
+    --default-screen-padding-small: 15px;
+    --default-tail-white: 25px;
+
+    // Borders & shadows
+    --tooltip-border-radii: var(--border-radii);
+    --tooltip-padding: 18px;
+    --default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    --default-box-shadow-hover: 0 0 15px rgba(0, 0, 0, 0.2);
+    --default-box-shadow-active: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    --default-focus-marking: 0 0 2px rgba(0, 0, 0, 0.5);
+    --form-fields-border-radius: var(--border-radii);
+    --form-input-field-line-height: inherit;
+    --collapsible-button-height: 31px;
+
     // Toggle
     --pat-toggle-height: 26px;
     --pat-toggle-switch-border-radius: 14px;
@@ -166,6 +156,7 @@ $collapsible-button-height: 31px !default;
     --pat-select-box-font-size: var(--pat-form-input-field-font-size);
     --pat-select-arrow-edge-distance: 12px;
     --pat-select-box-height: var(--pat-form-input-field-line-height);
+    --pat-select-box-padding-right-left: var(--pat-form-input-field-padding-start-end);
 
     // Checklist
     --pat-checklist-label-padding-start: 1.5em;
