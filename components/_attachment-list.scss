@@ -192,7 +192,7 @@
 					width: 30px;
 					line-height: 30px;
 					margin: 0;
-					font-size: $base-font-size;
+					font-size: var(--base-font-size);
 				}
 
 				&:hover:before {

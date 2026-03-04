@@ -13,18 +13,22 @@ $menu-list-top-bottom-padding: 2px !default;
 $body-font-family: 'Source Sans Pro', sans-serif !default;
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
+$border-radii: 10px !default;
+$base-font-size: 18px !default;
+$colour-link: var(--colour-link) !default;
+$colour-accent: var(--colour-accent) !default;
 
 // Buttons
 
 $button-border: none !default;
-$button-border-radius: $border-radii !default;
+$button-border-radius: var(--border-radii) !default;
 $button-background-image: none !default;
 $button-font-weight: bold !default;
 
-$button-text-colour: #{$colour-link} !default;
-$button-text-colour-hover: color-mix(in srgb, #{$colour-link} 90%, black) !default;
-$button-background-colour: #{$colour-accent} !default;
-$button-background-colour-hover: color-mix(in srgb, #{$colour-accent} 90%, black) !default;
+$button-text-colour: var(--colour-link) !default;
+$button-text-colour-hover: color-mix(in srgb, var(--colour-link) 90%, black) !default;
+$button-background-colour: var(--colour-accent) !default;
+$button-background-colour-hover: color-mix(in srgb, var(--colour-accent) 90%, black) !default;
 $button-shadow: none !default;
 
 $button-text-colour-subdued: rgba(0, 0, 0, 0.6) !default;
@@ -32,8 +36,8 @@ $button-text-colour-subdued-hover: rgba(0, 0, 0, 1) !default;
 $button-background-colour-subdued: rgba(0, 0, 0, 0.1) !default;
 $button-background-colour-subdued-hover: rgba(0, 0, 0, 0.15) !default;
 
-$button-background-colour-default: #{$colour-accent} !default;
-$button-background-colour-default-hover: color-mix(in srgb, #{$colour-accent} 90%, black) !default;
+$button-background-colour-default: var(--colour-accent) !default;
+$button-background-colour-default-hover: color-mix(in srgb, var(--colour-accent) 90%, black) !default;
 $button-text-colour-default: rgba(255, 255, 255, 0.9) !default;
 $button-text-colour-default-hover: rgba(255, 255, 255, 1) !default;
 $button-shadow-default: none !default;
@@ -45,8 +49,8 @@ $button-background-colour-disabled-hover: $button-background-colour !default;
 
 $button-height: 35px !default;
 $button-line-height: 35px !default;
-$button-font-size: #{$base-font-size} !default;
-$button-paddings: 0 #{$base-font-size} !default;
+$button-font-size: var(--base-font-size) !default;
+$button-paddings: 0 var(--base-font-size) !default;
 
 $button-small-height: 20px !default;
 $button-small-line-height: 20px !default;
@@ -57,7 +61,7 @@ $button-small-shadow: none !default;
 $pat-toolbar-button-height: $button-height !default;
 $pat-toolbar-button-line-height: $button-line-height !default;
 
-$grid-gutter: '#{$base-font-size}' !default;
+$grid-gutter: var(--base-font-size) !default;
 
 $default-screen-padding: 40px !default;
 $default-screen-padding-small: 15px !default;

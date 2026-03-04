@@ -5,7 +5,7 @@
     padding: 10px 15px;
     overflow: auto;
     font-size: 18px;
-    border-radius: $border-radii;
+    border-radius: var(--border-radii);
   }
 
 .pat-syntax-highlight {
