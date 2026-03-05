@@ -40,8 +40,6 @@
     --colour-success-background-dark: #cddec4;
     --colour-warning: orange;
     --colour-warning-background: #fbead9;
-    --colour-for-review: #a90061;
-    --colour-for-review-background: #f4d3e5;
     --colour-notice: tuscanbrown;
     --colour-notice-background: #fdfdc8;
     --colour-info: #4dc4ff;
@@ -52,32 +50,49 @@
     --colour-chooser-default: var(--colour-accent);
     --colour-form-fields-background: rgba(0,0,0,0.1);
     --colour-well-background: rgba(255,255,255,0.5);
+    
+    --colour-draft: var(--colour-warning);
+    --colour-draft-text: var(--colour-warning-text);
+    --colour-draft-background: var(--colour-warning-background);
+    --colour-for-review: #a90061;
+    --colour-for-review-text: var(--colour-for-review-text);
+    --colour-for-review-background: var(--colour-for-review-background);
+    --colour-public: teal;
+    --colour-published: var(--colour-success);
+    --colour-published-text: var(--colour-success-text);
+    --colour-published-background: var(--colour-success-background);
+    --colour-running: #65c981;
+    --colour-closed: red;
+    --colour-expired: tan;
 
 
     // ...existing code...
     --colour-success-dark: color-mix(in srgb, var(--colour-success) 50%, black);
     --colour-success-text: var(--colour-success-dark);
-
     --colour-success-hover: color-mix(in srgb, var(--colour-success) 98%, black);
     --colour-success-background-hover: color-mix(in srgb, var(--colour-success-background) 98%, black);
     --colour-success-text-hover: color-mix(in srgb, var(--colour-success-text) 98%, black);
-    --colour-warning-text: color-mix(in srgb, var(--colour-warning) 50%, black);
 
+    --colour-warning-text: color-mix(in srgb, var(--colour-warning) 50%, black);
     --colour-warning-hover: color-mix(in srgb, var(--colour-warning) 98%, black);
     --colour-warning-background-hover: color-mix(in srgb, var(--colour-warning-background) 98%, black);
     --colour-warning-text-hover: color-mix(in srgb, var(--colour-warning-text) 98%, black);
+
     --colour-for-review-text: color-mix(in srgb, var(--colour-for-review) 50%, black);
     --colour-for-review-hover: color-mix(in srgb, var(--colour-for-review) 98%, black);
     --colour-for-review-background-hover: color-mix(in srgb, var(--colour-for-review-background) 98%, black);
     --colour-for-review-text-hover: color-mix(in srgb, var(--colour-for-review-text) 98%, black);
+
     --colour-notice-text: color-mix(in srgb, var(--colour-notice) 50%, black);
     --colour-notice-hover: color-mix(in srgb, var(--colour-notice) 98%, black);
     --colour-notice-background-hover: color-mix(in srgb, var(--colour-notice-background) 98%, black);
     --colour-notice-text-hover: color-mix(in srgb, var(--colour-notice-text) 98%, black);
+
     --colour-info-text: color-mix(in srgb, var(--colour-info) 20%, black);
     --colour-info-hover: color-mix(in srgb, var(--colour-info) 98%, black);
     --colour-info-background-hover: color-mix(in srgb, var(--colour-info-background) 98%, black);
     --colour-info-text-hover: color-mix(in srgb, var(--colour-info-text) 98%, black);
+ 
     --colour-error-text: color-mix(in srgb, var(--colour-error) 20%, black);
     --colour-error-hover: color-mix(in srgb, var(--colour-error) 98%, black);
     --colour-error-background-hover: color-mix(in srgb, var(--colour-error-background) 98%, black);

@@ -41,6 +41,18 @@
 	--pat-select-box-padding-start: 18px;
 	--pat-context-menu-panel-distance: 52px;
 
+	position: relative;
+	z-index: var(--pat-toolbar-z-index);
+	padding-top: var(--pat-toolbar-padding);
+	padding-bottom: var(--pat-toolbar-padding);
+	border-radius: var(--border-radii);
+	font-size: 0; // Removes spaces between buttons.
+	user-select: none;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+
 	&:before {
 		position: absolute;
 		left: calc(-1 * var(--pat-toolbar-padding));
@@ -65,22 +77,7 @@
 
 	@include screen-size(medium-large) {
 		height: calc(var(--pat-toolbar-button-height) + calc(2 * var(--pat-toolbar-padding)));
-		margin: 
-			0 
-			0
-			var(--pat-toolbar-margin-bottom);
-	}
-
-	@include clear-fix();
-	& {
-		position: relative;
-		z-index: var(--pat-toolbar-z-index);
-		padding-top: var(--pat-toolbar-padding);
-		padding-bottom: var(--pat-toolbar-padding);
-		border-radius: var(--border-radii);
-		font-size: 0; // Removes spaces between buttons.
-		user-select: none;
-		box-sizing: border-box;
+		margin-bottom: var(--pat-toolbar-margin-bottom);
 	}
 
 	.toolbar-title {

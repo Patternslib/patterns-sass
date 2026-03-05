@@ -61,48 +61,48 @@
 
   &[data-value="draft"],
   &.state-draft {
-    background-color: #{var(--colour-orange)-xl};
-    color: #{var(--colour-orange)-xd};
+    background-color: var(--colour-draft-background);
+    color: var(--colour-draft-text);
 
     &:after {
-      background-color: #{var(--colour-orange)-l};
+      background-color: var(--colour-draft-background);
     }
 
     &:before,
     &:after {
-      color: #{var(--colour-orange)-xd};
+      color: var(--colour-draft-text);
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: color-mix(in srgb, #{var(--colour-orange)-xl} 95%, black);
+      background-color: color-mix(in srgb, var(--colour-draft-background) 95%, black);
 
       &:after {
-        background-color: color-mix(in srgb, #{var(--colour-orange)-l} 95%, black);
+        background-color: color-mix(in srgb, var(--colour-draft-background) 95%, black);
       }
     }
   }
 
   &[data-value="for-review"],
   &.state-for-review {
-    background-color: var(--colour-violette-xl);
-    color: var(--colour-violette);
+    background-color: var(--colour-for-review-background);
+    color: var(--colour-for-review-text);
 
     &:after {
-      background-color: var(--colour-violette-l);
+      background-color: var(--colour-for-review-background);
     }
 
     &:before,
     &:after {
-      color: color-mix(in srgb, var(--colour-violette) 85%, black);
+      color: var(--colour-for-review-text);
     }
 
     &:hover,
     &.tooltip-active-click {
-      background-color: color-mix(in srgb, var(--colour-violette-xl) 95%, black);
+      background-color: color-mix(in srgb, var(--colour-for-review-background) 95%, black);
 
       &:after {
-        background-color: color-mix(in srgb, var(--colour-violette-l) 95%, black);
+        background-color: color-mix(in srgb, var(--colour-for-review-background) 95%, black);
       }
     }
   }
