@@ -49,8 +49,35 @@ $break-large: 1280px !default;
     --button-small-font-size: 0.8rem;
     --button-small-paddings: 0 0.8rem;
     --button-small-shadow: none;
+
+    // Toolbar
     --pat-toolbar-button-height: var(--button-height);
-    --pat-toolbar-button-line-height: var(--button-line-height);
+    --pat-toolbar-auto-hide-offset-screen-small: -15px;
+    --pat-toolbar-auto-hide-offset: -40px;
+	--pat-toolbar-button-height: var(--button-height);
+	--pat-toolbar-button-line-height: var(--button-line-height);
+	--colour-toolbar-button: transparent;
+	--pat-toolbar-element-separation: 10px;
+	--pat-tail-white: 15px;
+	--pat-toolbar-font-size: 18px;
+	--pat-toolbar-icon-background-colour: transparent;
+	--pat-toolbar-icon-background-colour-hover: transparent;
+	--pat-toolbar-icon-text-colour: rgba(0, 0, 0, 0.6);
+	--pat-toolbar-icon-text-colour-hover: black;
+	--pat-toolbar-bump-distance: 100px;
+	--pat-toolbar-bump-distance-scroll-down: 100px;
+	--pat-toolbar-top-distance: 20px;
+	--pat-toolbar-top-distance-scroll-down: 20px;
+	--pat-toolbar-hiding-speed: 0.3s;
+	--pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+	--pat-button-cluster-toggle-margin: 3px;
+	--button-height: var(--button-height);
+	--pat-toolbar-z-index: 2;
+	--pat-toolbar-search-field-width-open: 350px;
+	--pat-toolbar-padding: 10px;
+	--pat-toolbar-margin-bottom: 40px;
+	--pat-toolbar-icon-background-colour: var(--button-background-colour);
+	--pat-toolbar-icon-background-colour-hover: var(--button-background-colour-hover);
 
     // Grid
     --grid-gutter: var(--base-font-size);
