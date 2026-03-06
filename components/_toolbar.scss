@@ -680,6 +680,12 @@
 				font-size: 1.3em;
 			}
 		}
+
+		&.visibility {
+			&:before {
+				content: var(--glyph-user-secret);
+			}
+		}
 		
 		&.settings {
 			&:before {
