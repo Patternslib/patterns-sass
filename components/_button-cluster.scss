@@ -188,6 +188,7 @@
 
         &:after {
           --pat-button-cluster-background-colour-active: var(--colour-accent);
+          
           background: var(--pat-button-cluster-background-colour-active);
           position: absolute;
           top: var(--pat-button-cluster-toggle-margin);
