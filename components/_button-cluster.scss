@@ -4,7 +4,110 @@
   display: inline-flex;
   border-radius: var(--border-radii);
   background: var(--button-background-colour-subdued);
-  // white-space: nowrap;
+
+  &.cal-controls {
+      box-shadow: none;
+
+      button {
+        &:before {
+          font-family: fontello;
+          display: block;
+          text-align: center;
+          content: '';
+          content: ' ';
+          font-size: 15px;
+          margin: 0;
+        }
+
+        &.active:before {
+          color: white;
+        }
+
+        &.view-month:before {
+          content: var(--glyph-month-view);
+        }
+
+        &.view-day:before {
+          content: var(--glyph-day-view);
+        }
+
+        &.view-week:before {
+          content: var(--glyph-week-view);
+        }
+
+        &.jump-prev:before {
+          content: var(--glyph-left-open);
+        }
+
+        &.jump-next:before {
+          content: var(--glyph-right-open);
+        }
+
+        &.view-listDay:before,
+        &.view-listMonth:before {
+          content: var(--glyph-list);
+          margin-right: 4px;
+        }
+
+        &.jump-today {
+          @include screen-size(small) {
+            width: 0.6em;
+            color: transparent;
+            line-height: 1.4;
+
+            &:before {
+              font-family: fontello;
+              content: var(--glyph-circle);
+              text-align: center;
+              color: black;
+              font-size: 0.6em;
+            }
+          }
+        }
+
+        &.jump-prev,
+        &.jump-next {
+          padding-left: 0;
+          padding-right: 0;
+          color: transparent;
+          font-size: 0;
+          width: 32px;
+          text-align: center;
+        }
+
+        &.jump-today {
+          position: relative;
+          width: 32px;
+          padding-left: 0;
+          padding-right: 0;
+          color: transparent !important;
+
+          &:before {
+            content: ' ';
+            display: block;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+          }
+
+          &:after {
+            left: 0;
+            right: 0;
+          }
+
+          &.active {
+            &:before {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
 
   &.pat-tabs {
     position: relative;
@@ -84,6 +187,7 @@
         }
 
         &:after {
+          --pat-button-cluster-background-colour-active: var(--colour-accent);
           background: var(--pat-button-cluster-background-colour-active);
           position: absolute;
           top: var(--pat-button-cluster-toggle-margin);
@@ -398,17 +502,17 @@
     font-size: var(--base-font-size);
     font-weight: normal;
 
-		&.deselect-all,
-		&.select-all {
-			&[disabled],
+    &.deselect-all,
+    &.select-all {
+      &[disabled],
       &[disabled]:hover {
-				opacity: 1 !important;
+        opacity: 1 !important;
 
-				&:before {
-					color: var(--colour-accent);
-				}
-			}
-		}
+        &:before {
+          color: var(--colour-accent);
+        }
+      }
+    }
 
     &.icon {
       padding: 0;
@@ -449,23 +553,28 @@
         color: rgba(0,0,0,0.7);
     }
 
-      &:has(input:checked),
-      &.active,
-      &.current {
-        background: var(--colour-accent);
-        color: white;
-        text-decoration: none;
-        box-shadow: none;
+    &:hover {
+      background-color: var(--button-background-colour-hover);
+      color: var(--button-text-colour-hover);
+    }
 
-        &:before {
-          color: var(--colour-accent);
-        }
+    &:has(input:checked),
+    &.active,
+    &.current {
+      background: var(--colour-accent);
+      color: white;
+      text-decoration: none;
+      box-shadow: none;
 
-        .counter {
-          background: red;
-          // border: 1px solid white;
-        }
+      &:before {
+        color: var(--colour-accent);
       }
+
+      .counter {
+        background: red;
+        // border: 1px solid white;
+      }
+    }
 
     &:first-child {
       border-top-left-radius: var(--border-radii);
