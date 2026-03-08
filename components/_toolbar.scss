@@ -613,6 +613,12 @@
 			}
 		}
 
+		&.share {
+			&:before {
+				content: var(--glyph-share);
+			}
+		}
+
 		&.edit {
 			&:before {
 				content: var(--glyph-pencil);
