@@ -17,6 +17,21 @@ $break-large: 1280px !default;
     --border-radii: 10px;
     --base-font-size: 18px;
 
+    // Back button        
+    --back-button-border-radius: var(--border-radii);
+    --back-button-border-radius-left: 8px;
+    --back-button-background-colour: var(--button-background-colour);
+    --back-button-background-colour-hover: var(--button-background-colour-hover);
+    --back-button-text-colour: var(--button-text-colour);
+    --back-button-text-colour-hover: var(--button-text-colour-hover);
+    --back-button-height: var(--button-height);
+    --back-button-line-height: var(--button-line-height);
+    --back-button-font-size: 18px;
+    --back-button-background-colour-dp: rgba(255, 255, 255, 0.5);
+    --back-button-text-colour-dp: rgba(255, 255, 255, 0.9);
+    --back-button-text-colour-dp-hover: white;
+    --back-button-font-weight: bold;
+
     // Buttons
     --button-border: none;
     --button-border-radius: var(--border-radii);
@@ -43,7 +58,7 @@ $break-large: 1280px !default;
     --button-height: 35px;
     --button-line-height: 35px;
     --button-font-size: var(--base-font-size);
-    --button-paddings: 0 var(--base-font-size);
+    --button-paddings: 0 var(--button-paddings);
     --button-small-height: 20px;
     --button-small-line-height: 20px;
     --button-small-font-size: 0.8rem;
@@ -232,7 +247,7 @@ $break-large: 1280px !default;
     // Buttons
 
     --pat-button-paddings: var(--button-paddings);
-    --pat-button-font-size: var(--button-font-size);
+    --pat-button-font-size: var(--base-font-size);
     --pat-button-text-colour: var(--button-text-colour);
     --pat-button-background-colour: var(--button-background-colour);
     --pat-button-text-colour-hover: var(--button-text-colour-hover);
