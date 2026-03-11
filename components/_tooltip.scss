@@ -1,18 +1,3 @@
-$namespace-prefix: 'tippy';
-$placements: 'top', 'bottom', 'left', 'right';
-$origins: bottom, top, right, left;
-$backdrop-origins: 0% 25%, 0% -50%, 50% 0%, -50% 0%;
-$backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
-$bullet-space: 22px !default;
-$tooltip-background-colour: white !default;
-$menu-background-colour-current: var(--colour-accent) !default;
-$menu-text-colour-current: white !default;
-$menu-list-item-background-colour-hover: rgba(0, 0, 0, 0.08) !default;
-$menu-list-item-text-colour: #666 !default;
-$menu-list-item-text-colour-hover: black !default;
-$menu-list-item-margin: 2px 0 !default;
-$menu-list-line-height: 22px !default;
-
 @import "../libraries/tippyjs/index";
 @import "../libraries/tippyjs/themes/patterns-tooltip";
 // @import "../libraries/tippyjs/themes/light-border";
@@ -51,38 +36,38 @@ $menu-list-line-height: 22px !default;
   }
 
   .tippy-content {
-    background-color: $tooltip-background-colour;
+    background-color: var(--tooltip-background-colour);
   }
 
   [data-placement^='bottom'] .tippy-arrow {
-    border-bottom-color: $tooltip-background-colour;
+    border-bottom-color: var(--tooltip-background-colour);
 
     &::before {
-      border-bottom-color: $tooltip-background-colour;
+      border-bottom-color: var(--tooltip-background-colour);
     }
   }
 
   [data-placement^='left'] .tippy-arrow {
-    border-left-color: $tooltip-background-colour;
+    border-left-color: var(--tooltip-background-colour);
 
     &::before {
-      border-left-color: $tooltip-background-colour;
+      border-left-color: var(--tooltip-background-colour);
     }
   }
 
   [data-placement^='right'] .tippy-arrow {
-    border-right-color: $tooltip-background-colour;
+    border-right-color: var(--tooltip-background-colour);
 
     &::before {
-      border-right-color: $tooltip-background-colour;
+      border-right-color: var(--tooltip-background-colour);
     }
   }
 
   [data-placement^='top'] .tippy-arrow {
-    border-top-color: $tooltip-background-colour;
+    border-top-color: var(--tooltip-background-colour);
 
     &::before {
-      border-top-color: $tooltip-background-colour;
+      border-top-color: var(--tooltip-background-colour);
     }
   }
 

@@ -101,7 +101,7 @@
 
 			background-repeat: no-repeat;
 			background-position: right center;
-			background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+			background-image: var(--arrow-down-dark-image);
 			background-size: auto 10px;
 		}
 

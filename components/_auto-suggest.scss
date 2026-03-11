@@ -1,6 +1,5 @@
-$glyph-remove-tag: $glyph-remove;
-
 :root {
+  --glyph-remove-tag: var(--glyph-remove);
   --pat-auto-suggest-search-field-colour: var(--pat-form-input-field-background-colour);
   --pat-glyph-remove-tag: var(--glyph-remove);
   --pat-auto-suggest-pills-colour: var(--colour-accent);
@@ -229,7 +228,7 @@ $glyph-remove-tag: $glyph-remove;
   position: absolute;
   right: var(--pat-auto-suggest-cancel-button-edge-distance);
   top: 0;
-  background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+  background-image: var(--arrow-down-dark-image);
   background-size: auto 10px;
   background-position: right;
   background-repeat: no-repeat;

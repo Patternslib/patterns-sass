@@ -132,6 +132,17 @@ $break-large: 1280px !default;
     // Auto suggest
     --pat-auto-suggest-cancel-button-edge-distance: 12px;
 
+    // Carousel
+    --carousel-button-distance: 10px;
+    --carousel-button-width: 40px;
+    --carousel-button-height: 40px;
+    --carousel-default-height-large: 500px;
+    --carousel-default-height-small: 200px;
+    --carousel-default-dot-colour: #f73558;
+
+    // Container
+    --pat-container-width: 1280px;
+
     // Portlet
     --pat-portlet-background-colour: rgba(255, 255, 255, 0.5);
 
@@ -229,6 +240,9 @@ $break-large: 1280px !default;
 
     --pat-message-padding: 1.3rem;
 
+    // Notifications
+    --pat-notifications-top-distance: 0;
+
     // Modal
 
     --close-button-height: var(--button-height);
@@ -243,6 +257,38 @@ $break-large: 1280px !default;
 
     --gallery-button-width: 40px;
     --gallery-button-height: 40px;
+    --tooltip-background-colour: white;
+
+    // Screenshot
+    --browser-window-border-radii: 8px;
+
+    // Table
+    --pat-table-cell-padding-top: 10px;
+    --pat-table-cell-padding-right: 15px;
+    --pat-table-cell-padding-bottom: 10px;
+    --pat-table-cell-padding-left: 15px;
+    --pat-table-cell-padding-hd-top: 8px;
+    --pat-table-cell-padding-hd-right: 8px;
+    --pat-table-cell-padding-hd-bottom: 8px;
+    --pat-table-cell-padding-hd-left: 8px;
+    --pat-table-thead-cell-padding-top: 0;
+    --pat-table-thead-cell-padding-bottom: 0;
+    --pat-table-line-height: 1.4;
+    --pat-table-padding: 5px 10px 5px 10px;
+    --pat-table-padding-hd: 5px 10px 5px 10px;
+    --pat-table-checkbox-vertical-position: 20px;
+    --pat-table-row-outline: none;
+    --pat-table-thead-row-outline: none;
+    --pat-table-border-bottom: none;
+    --pat-table-border-spacing: 0;
+    --pat-table-cell-border-top: none;
+    --pat-table-background-colour: transparent;
+    --pat-table-cell-border-bottom: none;
+    --pat-table-cell-background-colour: white;
+    --pat-table-thead-cell-background-colour: transparent;
+    --pat-table-cell-icons: rgba(0, 0, 0, 0.6);
+    --pat-table-cell-icons-hover: black;
+    --pat-table-icon-colour: gray;
 
     // Buttons
 

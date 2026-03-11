@@ -6820,7 +6820,7 @@ Form Style
   border-right: none;
   border-bottom: none;
   padding: 0 0.8em;
-  background-color: $colour-notice;
+  background-color: var(--colour-notice);
   -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;

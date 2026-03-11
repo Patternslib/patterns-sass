@@ -79,7 +79,7 @@
 		}
 
 		.title-group {
-			color: $body-font-color;
+			color: var(--body-font-color);
 			grid-area: title;
 			position: relative;
 			margin-bottom: 15px;
@@ -92,7 +92,7 @@
 				}
 	
 				.time-stamp {
-					color: rgba(black, 0.4);
+					color: rgba(var(--body-font-color), 0.4);
 					font-size: 0.8em;
 					clear: both;
 					display: block;
@@ -104,7 +104,7 @@
 
 		.description {
 			display: block;
-			color: black;
+			color: var(--body-font-color);
 			font-weight: normal;
 			font-size: 0.9em;
 			line-height: 1.25;
@@ -145,7 +145,7 @@
 				right: 0;
 				bottom: 0;
 				left: 0;
-				color: black;
+				color: var(--body-font-color);
 				margin: 0;
 				resize: none;
 				overflow: hidden;
@@ -186,7 +186,7 @@
 				}
 
 				&::before {
-					color:rgba(black, 0.5);
+					color: var(--pat-button-text-colour);
 					text-align: center;
 					display: block;
 					width: 30px;
@@ -196,7 +196,7 @@
 				}
 
 				&:hover:before {
-					color: black;
+					color: var(--pat-button-text-colour-hover);
 					text-decoration: none;
 				}
 			}

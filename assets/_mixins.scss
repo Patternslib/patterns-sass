@@ -49,11 +49,11 @@ $break-large: 1024px !default;
 	}
 
 	&.type-copyright:before {
-		content: '#{$glyph-copyright} ';
+		content: var(--glyph-copyright);
 	}
 
 	&.type-creative-commons:before {
-		content: '#{$glyph-creative-commons} ';
+		content: var(--glyph-creative-commons);
 	}
 }
 

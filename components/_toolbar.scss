@@ -650,6 +650,12 @@
 			}
 		}
 
+		&.filter {
+			&:before {
+				content: var(--glyph-filter);
+			}
+		}
+
 		&.more {
 			&:before {
 				content: var(--glyph-icon-ellipsis);

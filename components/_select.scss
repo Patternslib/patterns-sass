@@ -241,7 +241,7 @@
   select.bare {
     background-color: transparent !important;
     background-position: calc(100% - var(--pat-select-arrow-edge-distance)) center;
-    background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+    background-image: var(--arrow-down-dark-image);
     background-size: auto 10px;
     background-repeat: no-repeat;
   }
@@ -289,7 +289,7 @@
 
       background-repeat: no-repeat;
       background-position: calc(100% - var(--pat-select-arrow-edge-distance)) center;
-      background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+      background-image: var(--arrow-down-dark-image);
       background-size: auto 10px;
     }
 
