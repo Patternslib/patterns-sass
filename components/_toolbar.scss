@@ -25,8 +25,17 @@
 		grid-template-columns: 1fr minmax(0, 100%) 1fr;
 	}
 
-	&:not:has(.toolbar-section.navigation) {
-		grid-template-columns: minmax(0, auto) auto auto;
+	&:not(:has(.toolbar-section.navigation)) {
+		grid-template-columns: minmax(0, 100%) auto auto;
+
+		.toolbar-section {
+			&:first-child,
+			&.view-options,
+			&.quick-navigation,
+			&.batch-operations {
+				max-width: 100%;
+			}
+		}
 	}
 
 	.toolbar-area,
@@ -52,9 +61,8 @@
 			grid-area: middle;
 			justify-self: center;
 			justify-content: center;
-			width: -moz-available;
-			width: -webkit-fill-available;
-			width: fill-available;
+			max-width: 100%;
+			width: 100%;
 		}
 
 		&.quick-functions,
