@@ -874,7 +874,6 @@
 			right: 0;
 			transition: all 0.5s;
 			opacity: 0;
-			padding-left: 34px;
 			margin: 0;
 
 			&:focus {
@@ -888,6 +887,7 @@
 		&.fixed {
 			input {
 				opacity: 1;
+				padding-left: 34px;
 
 				@include screen-size(medium-large) {
 					width: var(--pat-toolbar-search-field-width-open);
