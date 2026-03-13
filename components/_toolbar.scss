@@ -17,6 +17,57 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-template-areas: "first middle last";
+	gap: var(--pat-toolbar-element-separation);
+
+	.toolbar-area,
+	> *:not(.toolbar-section) {
+		display: contents;
+	}	
+	
+	.toolbar-section {
+		vertical-align: top;
+		box-sizing: border-box;
+		display: flex;
+		gap: var(--pat-toolbar-element-separation);
+
+		&:first-child,
+		&.view-options,
+		&.quick-navigation,
+		&.batch-operations {
+			grid-area: first;
+			justify-self: start;
+		}
+
+		&.navigation {
+			grid-area: middle;
+			justify-self: center;
+			min-width: 0;
+			width: 100%;
+		}
+
+		&.quick-functions,
+		&:last-of-type:not(:first-child) {
+			grid-area: last;
+			justify-self: end;
+			white-space: nowrap;
+
+			> .icon,
+			> .pat-subform .icon,
+			> .pat-button,
+			> .context-menu > .pat-button,
+			> .pat-context-menu > .pat-button {
+				margin: 0;
+				position: relative; // Raise above the :before element of bumpy toolbars.
+			}
+
+			.save-button {
+				--pat-context-menu-panel-width: 450px;
+			}
+		}
+	}
 
 	@include screen-size(small) {
 		--pat-toolbar-auto-hide-offset: var(--pat-toolbar-auto-hide-offset-screen-small);
@@ -199,67 +250,6 @@
 		.editor-toolbar {
 			opacity: 1;
 			pointer-events: all;
-		}
-	}
-
-	// .toolbar-navigation-area,
-	// .toolbar-functions-area {
-	// 	display: grid;
-	// 	grid-template-columns: 1fr auto 1fr;
-	// 	grid-template-areas: "left middle right";
-	// 	gap: var(--pat-toolbar-element-separation);
-	// }
-
-	& {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		grid-template-areas: "first middle last";
-		gap: var(--pat-toolbar-element-separation);
-
-		.toolbar-functions-area,
-		.toolbar-navigation-area {
-			display: contents;
-		}		
-	}
-
-	.toolbar-section {
-		vertical-align: top;
-		box-sizing: border-box;
-		display: flex;
-		gap: var(--pat-toolbar-element-separation);
-
-		&:first-child,
-		&.view-options,
-		&.quick-navigation,
-		&.batch-operations {
-			grid-area: first;
-			justify-self: start;
-		}
-
-		&.navigation {
-			grid-area: middle;
-			justify-self: center;
-			min-width: 0;
-		}
-
-		&.quick-functions,
-				&:last-of-type:not(:first-child) {
-			grid-area: last;
-			justify-self: end;
-			white-space: nowrap;
-
-			> .icon,
-			> .pat-subform .icon,
-			> .pat-button,
-			> .context-menu > .pat-button,
-			> .pat-context-menu > .pat-button {
-				margin: 0;
-				position: relative; // Raise above the :before element of bumpy toolbars.
-			}
-
-			.save-button {
-				--pat-context-menu-panel-width: 450px;
-			}
 		}
 	}
 
