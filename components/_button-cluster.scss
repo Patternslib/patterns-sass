@@ -118,14 +118,24 @@
     float: none;
     white-space: nowrap;
     max-width: 100%;
+    box-sizing: border-box;
     font-size: 0;
     vertical-align: top;
     border-radius: var(--border-radii);
     background: rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 6px rgba(0,0,0,0.12);
     // white-space: nowrap;
-    padding: 0 calc(2 * var(--pat-button-cluster-toggle-margin));
-    display: inline-block;
+    padding: 0 var(--pat-button-cluster-toggle-space) 0 var(--pat-button-cluster-toggle-margin);
+    display: inline-flex;
+
+    &.tabs-wrapped {
+      --pat-button-cluster-toggle-space: 60px;
+    }
+
+    body[dir=rtl] & { 
+      padding-left: var(--pat-button-cluster-toggle-space);
+      padding-right: 0;
+    }
 
     @include screen-size(small) {
       display: block;
@@ -139,7 +149,6 @@
         margin: 0;
         border-radius: 0;
         border-left-style: none;
-        float: left; body[dir=rtl] & { float: right }
         border: none;
         background: transparent;
         padding: 0 10px;
@@ -288,15 +297,6 @@
 
       &.tabs-ready {
         opacity: 1;
-      }
-    }
-
-    &.tabs-wrapped {
-      padding-right: 60px;      
-
-      body[dir=rtl] & { 
-        padding-left: 60px;
-        padding-right: 0;
       }
     }
 
