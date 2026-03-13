@@ -62,7 +62,10 @@
 			justify-self: center;
 			justify-content: center;
 			max-width: 100%;
-			width: 100%;
+			
+			&:has(.tabs-wrapped) {
+				width: 100%;
+			}
 		}
 
 		&.quick-functions,
