@@ -22,7 +22,11 @@
 	gap: var(--pat-toolbar-element-separation);
 
 	&:has(.toolbar-section.navigation) {
-		grid-template-columns: 1fr minmax(0, 100%) 1fr;
+		grid-template-columns: 1fr minmax(0, auto) 1fr;
+
+		&:has(.tabs-wrapped) {
+			grid-template-columns: 1fr minmax(0, 100%) 1fr;
+		}
 	}
 
 	&:not(:has(.toolbar-section.navigation)) {
