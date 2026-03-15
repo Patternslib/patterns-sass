@@ -86,6 +86,8 @@ $break-large: 1280px !default;
 	--pat-toolbar-hiding-speed: 0.3s;
 	--pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
 	--pat-button-cluster-toggle-margin: 3px;
+    --pat-button-cluster-box-shadow: inset 0 1px 6px rgba(0,0,0,0.12);
+    --pat-button-cluster-background: rgba(0, 0, 0, 0.05);
 	--button-height: var(--button-height);
 	--pat-toolbar-z-index: 2;
 	--pat-toolbar-search-field-width-open: 350px;
@@ -93,6 +95,7 @@ $break-large: 1280px !default;
 	--pat-toolbar-margin-bottom: 40px;
 	--pat-toolbar-icon-background-colour: var(--button-background-colour);
 	--pat-toolbar-icon-background-colour-hover: var(--button-background-colour-hover);
+    --pat-toolbar-button-box-shadow: none;
 
     // Grid
     --grid-gutter: var(--base-font-size);
@@ -252,6 +255,7 @@ $break-large: 1280px !default;
     --modal-panel-body-bottom-padding: 30px;
     --modal-panel-body-top-padding: 8px; // Leaves some space for focus outline of first form field.
     --modal-panel-body-left-right-padding: 30px;
+    --pat-modal-panel-panel-box-shadow: 0 0 70px rgba(0, 0, 0, 0.5);
 
     // Gallery
 
