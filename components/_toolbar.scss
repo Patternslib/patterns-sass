@@ -1,5 +1,5 @@
 .pat-toolbar {
-	--pat-button-cluster-text-colour: rgba(0, 0, 0, 0.7);
+	--pat-button-cluster-text-colour: var(--pat-toolbar-button-text-colour);
 	--pat-select-box-font-size: var(--pat-toolbar-font-size);
 	--pat-select-box-background-colour: var(--button-background-colour);
 	--pat-select-box-background-colour-hover: var(--button-background-colour-hover);
