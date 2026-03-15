@@ -156,7 +156,7 @@ $break-large: 1024px !default;
 
 @mixin floating-ui-element-background {
   box-shadow: var(--pat-toolbar-box-shadow);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--colour-floating-ui-elements-background);
   -webkit-backdrop-filter: blur(10px) saturate(4) brightness(1.2);
   backdrop-filter: blur(10px) saturate(4) brightness(1.2);
 }
