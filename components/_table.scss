@@ -1,12 +1,10 @@
-@charset "UTF-8";
-
 :root {
     --table-avatar-height: 34px;
     --pat-table-icon-height: 48px;
     --pat-table-icon-width: 48px;
-    --table-avatar-height-hd: 17px;
-    --pat-table-icon-height-hd: 24px;
-    --pat-table-icon-width-hd: 24px;
+    --pat-table-icon-height-hd: 32px;
+    --pat-table-icon-width-hd: 32px;
+    --pat-table-avatar-height-hd: 31px;
 }
 
 @mixin table-row-selection-mechanism {
@@ -88,7 +86,8 @@
     width: 100%;
     margin: calc(-1 * var(--pat-table-border-spacing));
     // padding: 10px 15px 10px 15px;
-    line-height: var(--pat-table-line-height);
+    line-height: var(--base-line-height);
+    font-size: var(--base-font-size);
 
     .infinite-scrolling-trigger  {
         z-index: 0;
@@ -659,8 +658,8 @@
                     padding-left: var(--pat-table-cell-padding-left);
                     margin: 0;
                     padding: 0;
-                    width: 48px;
-                    height: 48px;
+                    width: var(--pat-table-icon-width);
+                    height: var(--pat-table-icon-height);
                     overflow: hidden;
                     color: transparent;
                     cursor: default;
@@ -690,7 +689,7 @@
                     &:before {
                         font-family: fontello;
                         display: block;
-                        line-height: 48px;
+                        line-height: var(--pat-table-icon-height);
                         width: 100%;
                         text-align: center;
                         color: var(--pat-table-icon-colour);
@@ -715,6 +714,12 @@
                         margin: 0;
                     }
 
+                    &:more {
+                        &:before {
+                            content: var(--glyph-icon-ellipsis);
+                        }
+                    }
+
                     &.progress {
                         display: inline-flex;
                         align-items: center;
@@ -733,7 +738,7 @@
 
                     &.validated {
                         &:before {
-                            font-size: 24px;
+                            font-size: var(--pat-table-icon-height);
                             content: var(--glyph-approved);
                             color: var(--colour-success);
                         }
@@ -749,7 +754,7 @@
 
                     &.under-review {
                         &:before {
-                            font-size: 24px;
+                            font-size: var(--pat-table-icon-height);
                             content: var(--glyph-under-review);
                             color: var(--colour-warning);
                         }
@@ -957,7 +962,7 @@
     }
 
     &.hd {
-        --pat-table-avatar-height: 31px;
+        --pat-table-avatar-height: var(--pat-table-avatar-height-hd);
         --pat-table-icon-height: var(--pat-table-icon-height-hd);
         --pat-table-icon-width: var(--pat-table-icon-width-hd);
 

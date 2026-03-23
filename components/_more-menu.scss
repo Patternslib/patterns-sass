@@ -1,0 +1,5 @@
+.pat-more-menu {
+    &:before {
+        content: var(--glyph-icon-ellipsis);
+    }
+}
