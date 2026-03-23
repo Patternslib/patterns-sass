@@ -260,7 +260,7 @@
 
 	.editor-toolbar {
 		opacity: 0;
-		transition: opacity 0.4s;
+		transition: opacity var(--base-animation-duration);
 		pointer-events: none;
 		position: relative;
 		z-index: 1;
@@ -392,7 +392,7 @@
 		font-size: var(--pat-toolbar-font-size);
 
 		&.meta-data-toggle {
-			transition: transform 0.3s;
+			transition: transform var(--base-animation-duration);
 
 			.more-metadata & {
 				transform: scaleY(-1);
@@ -782,12 +782,12 @@
 			padding-left: 10px;
 			float: right;
 			margin: -52px -10px;
-			transition: all 0.5s;
+			transition: all var(--base-animation-duration);
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 
 			.instance-counter {
 				margin-top: calc(-1 * var(--pat-toolbar-button-height));
-				transition: all 0.5s;
+				transition: all var(--base-animation-duration);
 				opacity: 0;
 
 				a {
@@ -853,7 +853,7 @@
 			font-family: fontello;
 			content: var(--glyph-icon-search);
 			font-size: var(--pat-toolbar-font-size);
-			transition: left 0.5s, padding-left 0.5s, transform 1s;
+			transition: left var(--base-animation-duration), padding-left var(--base-animation-duration), transform var(--base-animation-duration);
 			color: var(--pat-toolbar-icon-text-colour);
 		}
 
@@ -875,7 +875,7 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			transition: all 0.5s;
+			transition: all var(--base-animation-duration);
 			opacity: 0;
 			margin: 0;
 

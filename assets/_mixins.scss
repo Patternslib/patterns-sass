@@ -440,7 +440,7 @@ $break-large: 1024px !default;
   display: block;
   padding: 0;
   margin: 0;
-  transition: transform 0.2s ease-out;
+  transition: transform var(--base-animation-duration) ease-out;
   z-index: 2;
   font-size: 0;
 
@@ -779,6 +779,7 @@ $break-large: 1024px !default;
     background-color: var(--pat-form-panel-background-colour);
     margin-bottom: var(--default-tail-white);
 
+    --pat-form-panel-padding: var(--pat-well-padding);
     --pat-toolbar-margin-bottom: 15px;
 
     .well-title-group {
@@ -819,7 +820,7 @@ $break-large: 1024px !default;
     }
 
     &.pat-collapsible {
-      transition: padding 0.4s;
+      transition: padding var(--base-animation-duration);
       padding: 0;
 
       .panel-content {
@@ -831,22 +832,22 @@ $break-large: 1024px !default;
       > .well-header,
       > .well-title-group > .well-header {
         padding-right: 50px;
-        padding-left: 40px;
+        padding-left: var(--pat-well-padding);
         position: relative;
         margin: 0;
-        transition: padding 0.4s;
+        transition: padding var(--base-animation-duration);
 
         @include pat-collapsible-button;
       }
 
       &.open,
       &.closed.in-progress {
-        transition: box-shadow 2s;
+        transition: box-shadow var(--base-animation-duration);
 
         > .well-header,
         > .well-title-group > .well-header {
-          padding-top: 40px;
-          padding-bottom: 40px;
+          padding-top: var(--pat-well-padding);
+          padding-bottom: var(--pat-well-padding);
         }
       }
 
@@ -861,8 +862,8 @@ $break-large: 1024px !default;
 
         > .well-header,
         > .well-title-group > .well-header {
-          padding-top: 20px;
-          padding-bottom: 20px;
+          padding-top: calc(0.5 * var(--pat-well-padding));
+          padding-bottom: calc(0.5 * var(--pat-well-padding));
           border-radius: var(--border-radii);
 
           &:after {
@@ -873,7 +874,7 @@ $break-large: 1024px !default;
       }
 
       > .panel-content {
-        padding: 0 40px 40px;
+        padding: 0 var(--pat-well-padding) var(--pat-well-padding);
         box-sizing: border-box;
       }
     }
