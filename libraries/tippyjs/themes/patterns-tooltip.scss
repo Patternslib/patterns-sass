@@ -23,7 +23,7 @@ $arrow-distance: 3px;
 .#{$namespace-prefix}-box {
   background-color: $color;
   background-clip: padding-box;
-  border: 1px solid #{$transparent-dark};
+  border: var(--pat-tooltip-border);
   color: black;
   box-shadow: var(--pat-tooltip-box-shadow);
   color: var(--body-font-color);

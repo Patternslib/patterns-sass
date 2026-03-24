@@ -321,7 +321,7 @@
         }
 
         &:after {
-          border-color: silver;
+          border: var(--pat-tooltip-border);
         }
 
         height: auto;
@@ -370,7 +370,7 @@
           content: var(--glyph-angle-double-right);
           display: block;
           height: var(--button-height);
-          lie-height: calc(var(--button-height) + 1px);
+          line-height: calc(var(--button-height) + 1px);
           width: calc(var(--button-height) + 20px);
           text-align: center;
           position: absolute;
@@ -418,7 +418,7 @@
             box-shadow: var(--button-shadow);
             color: var(--pat-button-text-colour);
             background-color: var(--pat-button-background-colour);
-            border: var(--button-border);
+            // border: var(--button-border);
             align: center;
             width: var(--pat-button-height);
             content: var(--glyph-menu);

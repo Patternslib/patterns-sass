@@ -118,13 +118,18 @@ $break-large: 1280px !default;
     --default-screen-padding-small: 15px;
     --default-tail-white: 25px;
 
-    // Borders & shadows
+    // Tooltip
     --tooltip-border-radii: var(--border-radii);
     --tooltip-padding: 18px;
+    --pat-tooltip-border: 1px solid rgba(0, 8, 16, 0.15);
+
+    // Default shadows
     --default-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
     --default-box-shadow-hover: 0 0 15px rgba(0, 0, 0, 0.2);
     --default-box-shadow-active: inset 0 0 10px rgba(0, 0, 0, 0.4);
     --default-focus-marking: 0 0 2px rgba(0, 0, 0, 0.5);
+
+    // Form
     --form-fields-border-radius: var(--border-radii);
     --form-input-field-line-height: inherit;
     --collapsible-button-height: 31px;
