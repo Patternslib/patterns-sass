@@ -89,7 +89,9 @@ $break-large: 1280px !default;
 	--pat-toolbar-bump-distance: 100px;
 	--pat-toolbar-bump-distance-scroll-down: 100px;
 	--pat-toolbar-top-distance: 20px;
+    --pat-toolbar-top-distance-small: 0;
 	--pat-toolbar-top-distance-scroll-down: 20px;
+	--pat-toolbar-top-distance-scroll-down-small: -80px;
 	--pat-toolbar-hiding-speed: 0.3s;
 	--pat-toolbar-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
 	--pat-button-cluster-toggle-margin: 3px;
@@ -153,6 +155,8 @@ $break-large: 1280px !default;
 
     // Container
     --pat-container-width: 1280px;
+    --pat-container-padding: var(--default-screen-padding);
+    --pat-container-padding-small: var(--default-screen-padding-small);
 
     // Portlet
     --pat-portlet-background-colour: rgba(255, 255, 255, 0.5);

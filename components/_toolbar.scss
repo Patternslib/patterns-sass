@@ -71,9 +71,11 @@
 			grid-area: first;
 			justify-self: start;
 
-			@include screen-size(small) {
-				grid-area: middle;
-				justify-content: start;
+			:has(.toolbar-section.navigation) & {
+				@include screen-size(small) {
+					grid-area: middle;
+					justify-content: start;
+				}
 			}
 		}
 
@@ -140,8 +142,7 @@
 	}
 	
 	@include screen-size(small) {
-		margin: 
-			var(--screen-paddings-small);
+		margin: 0 0 var(--default-screen-padding-small) 0;
 	}
 
 	@include screen-size(medium-large) {
@@ -245,10 +246,18 @@
 		top: var(--pat-toolbar-top-distance);
 		transition: top var(--pat-toolbar-hiding-speed);
 
+		@include screen-size(small) {
+			top: var(--pat-toolbar-top-distance-small);
+		}
+
 		.scrolling-down &,
 		.scroll-down & {
 			top: var(--pat-toolbar-top-distance-scroll-down);
 			// padding-top: var(--pat-toolbar-bump-distance-scroll-down);
+
+			@include screen-size(small) {
+				top: var(--pat-toolbar-top-distance-scroll-down-small);
+			}
 		}
 
 		&:before {
