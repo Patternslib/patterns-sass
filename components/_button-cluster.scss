@@ -395,7 +395,7 @@
           bottom: 0;
           left: 0;
           border: 1px solid rgba(0,0,0,0);
-          box-shadow: var(--pat-tooltip-box-shadow)
+          box-shadow: var(--pat-tooltip-box-shadow);
           border-radius: var(--border-radii);
           background: white;
           transition: border var(--base-animation-duration);
