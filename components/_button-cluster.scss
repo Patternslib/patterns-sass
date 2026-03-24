@@ -126,15 +126,17 @@
     padding: 0 var(--pat-button-cluster-toggle-space) 0 calc(2 * var(--pat-button-cluster-toggle-margin));
     display: inline-flex;
 
+    &.tabs-wrapped {
+        --pat-button-cluster-toggle-space: 60px;
+    }
+
     @include screen-size(small) {
+      --pat-button-cluster-toggle-space: 0;
+
       width: var(--pat-button-width);
       background: none;
       box-shadow: none;
       display: block;
-
-      &.tabs-wrapped {
-        --pat-button-cluster-toggle-space: 0;
-      }
     }
 
     body[dir=rtl] & { 
@@ -329,7 +331,7 @@
         overflow: visible;
 
         &:before,
-        &:before:hover {
+        &:hover:before {
             color: white;
             background-color: var(--colour-accent);
         }
