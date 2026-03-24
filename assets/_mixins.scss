@@ -183,7 +183,7 @@ $break-large: 1024px !default;
     > fieldset.pat-checklist label,
     > button {
       display: block;
-      padding: 0.3em 0 0.3em 0;
+      padding: var(--pat-menu-list-item-padding-top-bottom) var(--pat-menu-list-item-padding-left-right);
       color: black;
       line-height: var(--pat-menu-list-item-line-height);
       cursor: default;

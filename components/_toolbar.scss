@@ -64,7 +64,11 @@
 		display: flex;
 		gap: var(--pat-toolbar-element-separation);
 
-		&:first-child,
+		&:first-child {
+			grid-area: first;
+			justify-self: start;
+		}
+
 		&.view-options,
 		&.quick-navigation,
 		&.batch-operations {

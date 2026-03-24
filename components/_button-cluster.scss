@@ -308,22 +308,6 @@
       display: inline-block;
       font-size: var(--pat-button-cluster-font-size);
       vertical-align: top;
-
-      &.icon {
-        width: 14px;
-        // overflow: hidden;
-        padding: 0 20px;
-        color: transparent;
-
-        @include screen-size(small) {
-          margin-left: var(--pat-menu-padding-left-right);
-          margin-bottom: var(--pat-menu-padding-left-right);
-        }
-
-        &:before {
-          margin-right: 20px;
-        }
-      }
     }
 
     &.open {
@@ -347,7 +331,7 @@
 
         a,
         label {
-          animation: fadeIn 0.5s;
+          animation: fadeIn var(--base-animation-duration);
           animation-delay: 0.2s;
           animation-fill-mode: forwards;
         }
@@ -359,7 +343,7 @@
       span.extra-tabs {
         font-size: var(--base-font-size);
         width: 300px;
-        padding-top: calc(var(--button-height) + 10px);
+        padding: var(--tooltip-padding);
         display: inline-block;
         float: right;
         height: 0;
@@ -459,6 +443,8 @@
 
         a,
         label {
+          --pat-button-cluster-toggle-margin: 0;
+
           display: block;
           float: none;
           padding: var(--pat-menu-menu-item-padding-top-bottom) var(--pat-menu-padding-left-right);
@@ -469,16 +455,57 @@
           z-index: 1;
           border: none !important;
           opacity: 0;
-          border-radius: 0;
           height: auto;
+          border-radius: var(--border-radii);
 
           &.icon {
-            border-radius: var(--border-radii);
+            width: var(--pat-button-height);
+            height: var(--pat-button-height);
+            line-height: var(--pat-button-height);
+            padding: 0;
+            margin-right: var(--tooltip-padding);
+            margin-bottom: var(--tooltip-padding);
+            margin-left: 0;
+            color: transparent;
+            margin-left: 0;
+            margin-right: 10px;
+            display: inline-block;
+
+            &:after,
+            &:before {
+              width: var(--pat-button-height);
+              height: var(--pat-button-height);
+              line-height: var(--pat-button-height);
+              text-align: center;
+              border-radius: var(--border-radii);
+              top: 0;
+              background-color: var(--button-background-colour);
+              color: var(--button-text-colour);
+            }
+
+            &:hover {
+              text-decoration: none !important;
+            }
+
+            &.current,
+            &:has(input:checked) {
+              &:after,
+              &:before {
+                background-color: var(--colour-accent);
+                color: white;
+              }
+            }
+
+            @include screen-size(small) {
+              margin-right: var(--pat-menu-padding-left-right);
+              margin-bottom: var(--pat-menu-padding-left-right);
+            }
           }
 
           &:after {
             left: 0;
             right: 0;
+            border-radius: var(--border-radii);
           }
 
           &:hover {

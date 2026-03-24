@@ -15,7 +15,9 @@ $break-large: 1280px !default;
     --pat-well-separation-header-font-size: 24px;
 
     // Menu list
-    --menu-list-top-bottom-padding: 2px;
+    --pat-menu-list-top-bottom-padding: 2px;
+    --pat-menu-list-item-padding-left-right: 0;
+    --pat-menu-list-item-padding-top-bottom: 0.3em;
 
     // Typography
     --body-font-family: 'Source Sans Pro', sans-serif;
