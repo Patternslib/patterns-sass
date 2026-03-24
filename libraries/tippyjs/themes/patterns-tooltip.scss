@@ -100,7 +100,7 @@ $arrow-distance: 3px;
       }
 
       &::after {
-        border-bottom-color: $transparent-darker;
+        border-bottom-color: var(--pat-tooltip-arrow-border-colour, $transparent-darker);
         border-width: 0 $arrow-size $arrow-size;
         bottom: $arrow-box-size + 1;
         left: $arrow-distance;
@@ -125,7 +125,7 @@ $arrow-distance: 3px;
       }
 
       &::after {
-        border-left-color: $transparent-darker;
+        border-left-color: var(--pat-tooltip-arrow-border-colour, $transparent-darker);
         border-width: $arrow-size 0 $arrow-size $arrow-size;
         left: $arrow-size + 14px;
         top: 0;
@@ -178,7 +178,7 @@ $arrow-distance: 3px;
         border-width: $arrow-size $arrow-size $arrow-size 0;
         right: $arrow-box-size + 1;
         top: $arrow-distance;
-        border-right-color: $transparent-darker;
+        border-right-color: var(--pat-tooltip-arrow-border-colour, $transparent-darker);
       }
     }
 
