@@ -1146,22 +1146,22 @@ $break-large: 1024px !default;
 
 @mixin pat-button() {
   font-family: var(--body-font-family);
-  margin: 0;
-  border: var(--button-border);
-  cursor: default;
   border-radius: var(--button-border-radius);
-  background-image: var(--button-background-image);
-  text-decoration: none;
   line-height: var(--pat-button-height);
-  white-space: nowrap;
-  display: inline-block;
-  padding: var(--pat-button-paddings);
-  font-size: var(--pat-button-font-size);
-  vertical-align: text-bottom;
-  font-weight: var(--pat-button-font-weight);
   box-shadow: var(--button-shadow);
   color: var(--pat-button-text-colour);
   background-color: var(--pat-button-background-colour);
+  border: var(--button-border);
+  padding: var(--pat-button-paddings);
+  font-size: var(--pat-button-font-size);
+  font-weight: var(--pat-button-font-weight);
+  background-image: var(--button-background-image);
+  margin: 0;
+  cursor: default;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: text-bottom;
 
   &:before {
     line-height: inherit;

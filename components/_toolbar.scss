@@ -20,14 +20,23 @@
 	margin-right: auto;
 	width: 100%;
 	display: grid;
-	grid-template-areas: "first middle last";
+	grid-template-areas: var(--pat-toolbar-grid-template-areas);
 	gap: var(--pat-toolbar-element-separation);
 
 	&:has(.toolbar-section.navigation) {
 		grid-template-columns: 1fr minmax(0, auto) 1fr;
 
+		@include screen-size(small) {
+			grid-template-columns: var(--pat-button-height) minmax(0, auto) minmax(0, auto);
+		}
+
 		&:has(.tabs-wrapped) {
 			grid-template-columns: 1fr minmax(0, 100%) 1fr;
+
+			@include screen-size(small) {
+				// --pat-toolbar-grid-template-areas: "middle first last";
+				grid-template-columns: var(--pat-button-height) minmax(0, auto) minmax(0, auto);
+			}
 		}
 	}
 
@@ -61,6 +70,11 @@
 		&.batch-operations {
 			grid-area: first;
 			justify-self: start;
+
+			@include screen-size(small) {
+				grid-area: middle;
+				justify-content: start;
+			}
 		}
 
 		&.navigation {
@@ -68,6 +82,12 @@
 			justify-self: center;
 			justify-content: center;
 			max-width: 100%;
+
+			@include screen-size(small) {
+				grid-area: first;
+				justify-content: start;
+				justify-self: start;;
+			}
 			
 			&:has(.tabs-wrapped) {
 				width: 100%;

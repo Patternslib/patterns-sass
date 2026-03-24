@@ -72,6 +72,7 @@ $break-large: 1280px !default;
     --button-small-shadow: none;
 
     // Toolbar
+    --pat-toolbar-grid-template-areas: "first middle last";
     --pat-toolbar-button-height: var(--button-height);
     --pat-toolbar-auto-hide-offset-screen-small: -15px;
     --pat-toolbar-auto-hide-offset: -40px;

@@ -126,17 +126,20 @@
     padding: 0 var(--pat-button-cluster-toggle-space) 0 calc(2 * var(--pat-button-cluster-toggle-margin));
     display: inline-flex;
 
-    &.tabs-wrapped {
-      --pat-button-cluster-toggle-space: 60px;
+    @include screen-size(small) {
+      width: var(--pat-button-width);
+      background: none;
+      box-shadow: none;
+      display: block;
+
+      &.tabs-wrapped {
+        --pat-button-cluster-toggle-space: 0;
+      }
     }
 
     body[dir=rtl] & { 
       padding-left: var(--pat-button-cluster-toggle-space);
       padding-right: 0;
-    }
-
-    @include screen-size(small) {
-      display: block;
     }
 
     button, 
@@ -308,8 +311,12 @@
         width: 14px;
         // overflow: hidden;
         padding: 0 20px;
-
         color: transparent;
+
+        @include screen-size(small) {
+          margin-left: var(--pat-menu-padding-left-right);
+          margin-bottom: var(--pat-menu-padding-left-right);
+        }
 
         &:before {
           margin-right: 20px;
@@ -321,9 +328,10 @@
       span.extra-tabs {
         overflow: visible;
 
-        &:before {
-            color: black;
-            background-color: rgba(255,255,255,0.4);
+        &:before,
+        &:before:hover {
+            color: white;
+            background-color: var(--colour-accent);
         }
 
         &:after {
@@ -412,6 +420,34 @@
           }
         }
 
+        @include screen-size(small) {
+          left: 0;
+          right: auto;
+          width: var(--pat-button-height);
+          max-width: calc(100vw - 2 * var(--pat-button-cluster-toggle-margin));
+
+          &:before{
+            border-radius: var(--button-border-radius);
+            line-height: var(--pat-button-height);
+            box-shadow: var(--button-shadow);
+            color: var(--pat-button-text-colour);
+            background-color: var(--pat-button-background-colour);
+            border: var(--button-border);
+            align: center;
+            width: var(--pat-button-height);
+            content: var(--glyph-menu);
+
+            left: 0;
+            right: auto;
+          
+            body[dir=rtl] & {
+              right: 0;
+              left: auto;
+            }
+          }
+
+        }
+
         &:hover {
             &:before {
               // background-color: rgba(255,255,255,0.4);
@@ -423,7 +459,7 @@
         label {
           display: block;
           float: none;
-          padding: 0.4em 0.7em;
+          padding: var(--pat-menu-menu-item-padding-top-bottom) var(--pat-menu-padding-left-right);
           line-height: 1.5;
           text-align: left; body[dir=rtl] & { text-align: right; }
           color: black;
@@ -431,8 +467,12 @@
           z-index: 1;
           border: none !important;
           opacity: 0;
-          border-radius: 0 !important;
+          border-radius: 0;
           height: auto;
+
+          &.icon {
+            border-radius: var(--border-radii);
+          }
 
           &:after {
             left: 0;
