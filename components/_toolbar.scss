@@ -9,6 +9,10 @@
 	--pat-select-box-padding-start: 18px;
 	--pat-context-menu-panel-distance: 52px;
 	--button-box-shadow: var(--pat-toolbar-button-box-shadow);
+	--ueber-back-button-text-colour: var(--pat-toolbar-button-text-colour);
+	--ueber-back-button-text-colour-hover: var(--pat-toolbar-button-text-colour-hover);
+	--ueber-back-button-background-colour: var(--pat-toolbar-button-background-colour);
+	--ueber-back-button-background-colour-hover: var(--pat-toolbar-button-background-colour-hover);
 
 	position: relative;
 	z-index: var(--pat-toolbar-z-index);
