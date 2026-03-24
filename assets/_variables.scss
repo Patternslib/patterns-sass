@@ -10,6 +10,7 @@ $break-large: 1280px !default;
 
     // Well
     --pat-well-padding: 40px;
+    --pat-well-padding-small: var(--default-screen-padding-small);
     --pat-well-well-header-font-size: 28px;
     --pat-well-separation-header-font-size: 24px;
 

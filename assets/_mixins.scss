@@ -782,6 +782,10 @@ $break-large: 1024px !default;
     --pat-form-panel-padding: var(--pat-well-padding);
     --pat-toolbar-margin-bottom: 15px;
 
+    @include screen-size(small) {
+      --pat-form-panel-padding: var(--pat-well-padding-small);
+    }
+
     .well-title-group {
       @include panel-title-group;
     }
@@ -837,6 +841,10 @@ $break-large: 1024px !default;
         margin: 0;
         transition: padding var(--base-animation-duration);
 
+        @include screen-size(small) {
+          padding-left: var(--pat-well-padding-small);
+        }
+
         @include pat-collapsible-button;
       }
 
@@ -848,6 +856,11 @@ $break-large: 1024px !default;
         > .well-title-group > .well-header {
           padding-top: var(--pat-well-padding);
           padding-bottom: var(--pat-well-padding);
+
+          @include screen-size(small) {
+            padding-top: var(--pat-well-padding-small);
+            padding-bottom: var(--pat-well-padding-small);
+          }
         }
       }
 
@@ -876,6 +889,10 @@ $break-large: 1024px !default;
       > .panel-content {
         padding: 0 var(--pat-well-padding) var(--pat-well-padding);
         box-sizing: border-box;
+
+        @include screen-size(small) {
+          padding: 0 var(--pat-well-padding-small) var(--pat-well-padding-small);
+        }
       }
     }
 
