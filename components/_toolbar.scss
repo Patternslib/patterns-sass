@@ -877,6 +877,10 @@
 		background-color: var(--pat-toolbar-icon-background-colour);
 		border-radius: var(--border-radii);
 
+		@include screen-size(small) {
+			order: 1;
+		}
+
 		&:after {
 			position: absolute;
 			top: 0;
@@ -931,7 +935,7 @@
 				}
 
 				@include screen-size(small) {
-					width: calc(100vw - 40px);
+					width: calc(100vw - calc(2 * var(--default-screen-padding-small)));
 				}
 			}
 
