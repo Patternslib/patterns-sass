@@ -212,7 +212,7 @@
           content: ' ';
           border-radius: calc(0.75 * var(--border-radii));
           opacity: 0;
-          // transition: opacity 0.8s;
+          // transition: opacity var(--base-animation-duration);
           // box-shadow: 0 1px 6px rgba(0,0,0,0.15);
         }
 
@@ -261,8 +261,8 @@
         min-width: 1.8em;
         box-sizing: border-box;
         padding: 0 0.5em;
-        transition: opacity 0.5s;
-        animation: zoomIn 0.6s;
+        transition: opacity var(--base-animation-duration);
+        animation: zoomIn var(--base-animation-duration);
         float: right;
         vertical-align: baseline;
         line-height: 1.7em;
@@ -296,7 +296,7 @@
       
     .js & {
       opacity: 0;
-      transition: opacity 1s;
+      transition: opacity var(--base-animation-duration);
 
       &.tabs-ready {
         opacity: 1;
@@ -363,7 +363,7 @@
           float: left;
         }
 
-        transition: all 0.1s;
+        transition: all var(--base-animation-duration);
 
         &:before {
           font-family: fontello;
@@ -395,10 +395,10 @@
           bottom: 0;
           left: 0;
           border: 1px solid rgba(0,0,0,0);
-          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: var(--pat-tooltip-box-shadow)
           border-radius: var(--border-radii);
           background: white;
-          transition: border 0.2s;
+          transition: border var(--base-animation-duration);
 
           body[dir=rtl] & { 
             right: auto;
@@ -667,8 +667,8 @@
       min-width: 1.8em;
       box-sizing: border-box;
       padding: 0 0.5em;
-      transition: opacity 0.5s;
-      animation: zoomIn 0.6s;
+      transition: opacity var(--base-animation-duration);
+      animation: zoomIn var(--base-animation-duration);
       float: right; body[dir=rtl] & { float: left }
       vertical-align: baseline;
       line-height: 1.7em;
