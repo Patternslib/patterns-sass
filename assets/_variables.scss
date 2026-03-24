@@ -134,7 +134,8 @@ $break-large: 1280px !default;
     --default-focus-marking: 0 0 2px rgba(0, 0, 0, 0.5);
 
     // Borders
-    --default-border: 1px solid rgba(0, 0, 0, 0.15);
+    --default-border-colour: rgba(0, 0, 0, 0.15);
+    --default-border: 1px solid var(--default-border-colour);
 
     // Form
     --form-fields-border-radius: var(--border-radii);
@@ -283,6 +284,7 @@ $break-large: 1280px !default;
     --modal-panel-body-top-padding: 8px; // Leaves some space for focus outline of first form field.
     --modal-panel-body-left-right-padding: 30px;
     --pat-modal-panel-panel-box-shadow: 0 0 70px rgba(0, 0, 0, 0.5);
+    --pat-modal-panel-footer-border-colour: var(--default-border-colour);
 
     // Gallery
 
