@@ -220,7 +220,7 @@
 		border-radius: var(--border-radii);
 		font-size: var(--base-font-size);
 		height: auto !important; // !important overrules inline styles by .js
-	    border: 1px solid silver;
+		border: var(--pat-tooltip-border);
 	    box-shadow: var(--pat-tooltip-box-shadow);
 		max-height: var(--context-menu-max-height);
 		overflow: auto;
