@@ -67,7 +67,7 @@
 			--pat-select-box-box-shadow: var(--pat-toolbar-button-box-shadow);
 			--pat-select-box-padding-start: 18px;
 		}
-		
+
 		vertical-align: top;
 		box-sizing: border-box;
 		display: flex;
@@ -654,6 +654,17 @@
 		&.filter {
 			&:before {
 				content: var(--glyph-filter);
+			}
+
+			&.collapsible-open:after {
+				content: ' ';
+				position: fixed;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				height: 100%;
+				width: 100%;
 			}
 		}
 
