@@ -65,7 +65,7 @@
 			--pat-select-box-arrow-text-colour: var(--pat-toolbar-button-text-colour);
 			--pat-select-box-arrow-text-colour-hover: var(--pat-toolbar-button-text-colour-hover);
 			--pat-select-box-box-shadow: var(--pat-toolbar-button-box-shadow);
-			--pat-select-box-padding-start: 18px;
+			// --pat-select-box-padding-start: 18px;
 		}
 
 		vertical-align: top;
@@ -511,6 +511,7 @@
 		&.current {
 			&:before {
 				color: white;
+				background-color: var(--colour-accent);
 			}
 		}
 
