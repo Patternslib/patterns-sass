@@ -665,6 +665,10 @@
 						content: var(--glyph-sidebar-left-open);
 					}
 				}
+
+				.sidebar-normal .sidebar & {
+					order: -1;
+				}
 			}
 
 			@include screen-size(small) {
