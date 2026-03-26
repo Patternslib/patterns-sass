@@ -343,7 +343,7 @@
       span.extra-tabs {
         font-size: var(--base-font-size);
         width: 300px;
-        padding: var(--tooltip-padding);
+        padding: var(--pat-tooltip-padding);
         display: inline-block;
         float: right;
         height: 0;
@@ -463,8 +463,8 @@
             height: var(--pat-button-height);
             line-height: var(--pat-button-height);
             padding: 0;
-            margin-right: var(--tooltip-padding);
-            margin-bottom: var(--tooltip-padding);
+            margin-right: var(--pat-tooltip-padding);
+            margin-bottom: var(--pat-tooltip-padding);
             margin-left: 0;
             color: transparent;
             margin-left: 0;

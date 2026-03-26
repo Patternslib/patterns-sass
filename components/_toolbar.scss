@@ -433,6 +433,19 @@
 		white-space: nowrap;
 		font-size: var(--pat-toolbar-font-size);
 
+
+		&.collapsible-open:after {
+			display: block;
+			content: ' ';
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+		}
+
 		&.meta-data-toggle {
 			transition: transform var(--base-animation-duration);
 
@@ -655,17 +668,6 @@
 		&.filter {
 			&:before {
 				content: var(--glyph-filter);
-			}
-
-			&.collapsible-open:after {
-				content: ' ';
-				position: fixed;
-				left: 0;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				height: 100%;
-				width: 100%;
 			}
 		}
 

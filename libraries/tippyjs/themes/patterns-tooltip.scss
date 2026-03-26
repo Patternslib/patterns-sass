@@ -50,7 +50,7 @@ $arrow-distance: 3px;
   }
 
   .tippy-content {
-    padding: var(--tooltip-padding);
+    padding: var(--pat-tooltip-padding);
     max-height: calc(100vh - 100px);
     overflow: auto;
   }

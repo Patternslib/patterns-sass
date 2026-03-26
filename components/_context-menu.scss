@@ -36,17 +36,10 @@
 	}
 
 	.context-menu-label {
-		-webkit-user-select: none;
-		-moz-user-select: none;
 		user-select: none;
 		font-weight: normal;
 		cursor: default;
 		display: inline-block;
-
-		.canvas-subnav & {
-			// margin-right: 10px;
-		}
-		
 
 		&.collapsible-closed,
 		&.collapsible-open {
@@ -86,7 +79,7 @@
 		&:not(.iconified):after,
 		&.iconified.pat-button:after {
 			content: ' ';
-			padding-right: 1em;
+			padding-right: var(--pat-tooltip-padding);
 			box-shadow: none !important;  
 
 			overflow: hidden;
@@ -118,7 +111,7 @@
 					position: absolute;
 					right: 0.3em;
 					width: 100%;
-					height: 1em;
+					height: 0.8em;
 					top: 0.2em;
 				}
 
@@ -214,12 +207,12 @@
 		left: 0;
 		display: none;
 		background-color: white;
-		padding: 15px !important; // !important overrules inline styles by .js
+		padding: var(--pat-tooltip-padding); 
 		width: var(--pat-context-menu-panel-width, 250px);;
 		z-index: 10;
 		border-radius: var(--border-radii);
 		font-size: var(--base-font-size);
-		height: auto !important; // !important overrules inline styles by .js
+		height: auto !important;
 		border: var(--pat-tooltip-border);
 	    box-shadow: var(--pat-tooltip-box-shadow);
 		max-height: var(--context-menu-max-height);

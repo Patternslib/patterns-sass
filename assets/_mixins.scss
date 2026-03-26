@@ -419,12 +419,6 @@ $break-large: 1024px !default;
   }
 }
 
-@mixin selectable() {
-  -webkit-user-select: text;
-  user-select: text;
-  cursor: auto;
-}
-
 @mixin close-button() {
   position: absolute;
   top: 1.5em;
