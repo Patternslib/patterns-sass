@@ -154,9 +154,9 @@
 		@include floating-ui-element-background;
 	}
 	
-	@include screen-size(small) {
-		margin: 0 0 var(--default-screen-padding-small) 0;
-	}
+	// @include screen-size(small) {
+	// 	margin: 0 0 var(--default-screen-padding-small) 0;
+	// }
 
 	@include screen-size(medium-large) {
 		height: calc(var(--pat-toolbar-button-height) + calc(2 * var(--pat-toolbar-padding)));
@@ -307,6 +307,8 @@
 		position: relative;
 		z-index: 1;
 		white-space: nowrap !important;
+		display: flex;
+		gap: calc(0.5 * var(--pat-toolbar-element-separation));
 
 		&.tiptap-focus {
 			opacity: 1;
@@ -597,6 +599,10 @@
 			&:before {
 				content: var(--glyph-resize-full);
 			}
+
+			@include screen-size(small) {
+				display: none;
+			}
 		}
 		
 		&.back {
@@ -659,6 +665,10 @@
 						content: var(--glyph-sidebar-left-open);
 					}
 				}
+			}
+
+			@include screen-size(small) {
+				display: none;
 			}
 		}
 
