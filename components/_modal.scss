@@ -101,16 +101,17 @@
       position: -webkit-sticky !important;
       position: sticky !important;
       bottom: 0;
-      // margin-bottom: 1px;
       margin-bottom: 0;
+      margin-bottom: 1px;
       background: white;
-      padding-bottom: var(--modal-panel-body-bottom-padding);
+      padding-bottom: calc(var(--modal-panel-body-bottom-padding) - 1px);
       padding-top: 25px;
       border-top: 1px solid white;
       z-index: 10;
 
       &.bumped-bottom {
         border-top: var(--default-border);
+        padding-bottom: var(--modal-panel-body-bottom-padding);
       }
     }
   }

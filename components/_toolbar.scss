@@ -342,6 +342,14 @@
 		display: inline-block;
 		vertical-align: top;
 
+		@include screen-size(small) {
+			order: -1;
+		}
+
+		.sidebar-normal .sidebar & {
+			order: -1;
+		}
+
 		&:hover {
 			&.no-label:before {
 				color: var(--pat-toolbar-icon-text-colour-hover);
