@@ -54,11 +54,18 @@
     --colour-draft: var(--colour-warning);
     --colour-draft-text: var(--colour-warning-text);
     --colour-draft-background: var(--colour-warning-background);
+    --colour-draft-text-hover: var(--colour-warning-text-hover);
+    --colour-draft-background-hover: var(--colour-warning-background-hover);
     --colour-for-review: #a90061;
     --colour-for-review-background: #fff2f9;
     --colour-public: teal;
     --colour-published: var(--colour-success);
     --colour-published-background: var(--colour-success-background);
+    --colour-published-text: var(--colour-success-text);
+    --colour-published-hover: var(--colour-success-hover);
+    --colour-published-background-hover: var(--colour-success-background-hover);
+    --colour-published-text-hover: var(--colour-success-text-hover);
+
     --colour-running: #65c981;
     --colour-closed: red;
     --colour-expired: tan;

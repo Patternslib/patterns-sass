@@ -45,116 +45,85 @@
   text-overflow: ellipsis;
   cursor: default;
 
-  &:hover {
+  &:hover,
+  &.tooltip-active-click {
     background-color: var(--pat-select-box-background-colour-hover);
+    color: var(--pat-select-box-arrow-text-colour-hover);
+
+    &:after {
+      color: var(--pat-select-box-arrow-text-colour-hover);
+    }
   }
 
   &.success {
     --pat-select-box-background-colour: var(--colour-success-background);
     --pat-select-box-arrow-text-colour: var(--colour-success-dark);
-
-    &:hover {
-      --pat-select-box-background-colour-hover: var(--colour-success-background-dark);
-      --pat-select-box-arrow-text-colour: black;
-    }
+    --pat-select-box-background-colour-hover: var(--colour-success-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-success-text-hover);
   }
 
   &[data-value="draft"],
   &.state-draft {
-    background-color: var(--colour-draft-background);
-    color: var(--colour-draft-text);
+    --pat-select-box-background-colour: var(--colour-draft-background);
+    --pat-select-box-arrow-text-colour: var(--colour-draft-text);
+    --pat-select-box-background-colour-hover: var(--colour-draft-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-draft-text-hover);
+  }
 
-    &:after {
-      background-color: var(--colour-draft-background);
-    }
+  &[data-value="open"],
+  &.state-open {
+    --pat-select-box-background-colour: var(--colour-warning-background);
+    --pat-select-box-arrow-text-colour: var(--colour-warning-text);
+    --pat-select-box-background-colour-hover: var(--colour-warning-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-warning-text-hover);
+  }
 
-    &:before,
-    &:after {
-      color: var(--colour-draft-text);
-    }
+  &[data-value="in-progress"],
+  &.state-in-progress {
+    --pat-select-box-background-colour: var(--colour-for-review-background);
+    --pat-select-box-arrow-text-colour: var(--colour-for-review-text);
+    --pat-select-box-background-colour-hover: var(--colour-for-review-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-for-review-text-hover);
+  }
 
-    &:hover,
-    &.tooltip-active-click {
-      background-color: color-mix(in srgb, var(--colour-draft-background) 95%, black);
+  &[data-value="published"],
+  &.state-published {
+    --pat-select-box-background-colour: var(--colour-published-background);
+    --pat-select-box-arrow-text-colour: var(--colour-published-text);
+    --pat-select-box-background-colour-hover: var(--colour-published-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-published-text-hover);
+  }
 
-      &:after {
-        background-color: color-mix(in srgb, var(--colour-draft-background) 95%, black);
-      }
-    }
+  &[data-value="done"],
+  &.state-done {
+    --pat-select-box-background-colour: var(--colour-published-background);
+    --pat-select-box-arrow-text-colour: var(--colour-published-text);
+    --pat-select-box-background-colour-hover: var(--colour-published-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-published-text-hover);
   }
 
   &[data-value="for-review"],
   &.state-for-review {
-    background-color: var(--colour-for-review-background);
-    color: var(--colour-for-review-text);
+    --pat-select-box-background-colour: var(--colour-for-review-background);
+    --pat-select-box-arrow-text-colour: var(--colour-for-review-text);
+    --pat-select-box-background-colour-hover: var(--colour-for-review-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-for-review-text-hover)
+  }
 
-    &:after {
-      background-color: var(--colour-for-review-background);
-    }
-
-    &:before,
-    &:after {
-      color: var(--colour-for-review-text);
-    }
-
-    &:hover,
-    &.tooltip-active-click {
-      background-color: color-mix(in srgb, var(--colour-for-review-background) 95%, black);
-
-      &:after {
-        background-color: color-mix(in srgb, var(--colour-for-review-background) 95%, black);
-      }
-    }
+  &[data-value="in-progress"],
+  &.state-in-progress {
+    --pat-select-box-background-colour: var(--colour-for-review-background);
+    --pat-select-box-arrow-text-colour: var(--colour-for-review-text);
+    --pat-select-box-background-colour-hover: var(--colour-for-review-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-for-review-text-hover)
   }
 
   &[data-value="approved"],
   &.state-approved {
-    background-color: var(--colour-green-xl);
-    color: var(--colour-green-d);
-
-    &:after {
-      background-color: var(--colour-green-l);
-    }
-
-    &:before,
-    &:after {
-      color: color-mix(in srgb, var(--colour-green) 85%, black);
-    }
-
-    &:hover,
-    &.tooltip-active-click {
-      background-color: color-mix(in srgb, var(--colour-green-xl) 95%, black);
-
-      &:after {
-        background-color: color-mix(in srgb, var(--colour-green-l) 95%, black);
-      }
-    }
-  }
-
-  &[data-value="published"],
-  &[data-value="sent"],
-  &.state-published,
-  &.state-sent {
-    background-color: var(--colour-dark-blue-xl);
-    color: color-mix(in srgb, var(--colour-dark-blue) 85%, black);
-
-    &:after {
-      background-color: var(--colour-dark-blue-l);
-    }
-
-    &:before,
-    &:after {
-      color: color-mix(in srgb, var(--colour-dark-blue) 85%, black);
-    }
-
-    &:hover,
-    &.tooltip-active-click {
-      background-color: color-mix(in srgb, var(--colour-dark-blue-xl) 95%, black);
-
-      &:after {
-        background-color: color-mix(in srgb, var(--colour-dark-blue-l) 95%, black);
-      }
-    }
+    --pat-select-box-background-colour: var(--colour-approved-background);
+    --pat-select-box-arrow-text-colour: var(--colour-approved-text);
+    --pat-select-box-background-colour-hover: var(--colour-approved-background-hover);
+    --pat-select-box-arrow-text-colour-hover: var(--colour-approved-text-hover);
   }
 
   &.locked {
@@ -167,11 +136,6 @@
       font-size: inherit;
     }
   }
-
-  // &:hover,
-  // &.tooltip-active-click {
-  //   background-color: var(--button-background-colour)-hover;
-  // }
 
   &:not([class*="icon-"]) {
     &:before {

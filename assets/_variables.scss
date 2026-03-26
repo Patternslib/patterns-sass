@@ -236,14 +236,21 @@ $break-large: 1280px !default;
     --pat-select-box-padding-top-bottom: var(--pat-form-input-field-padding-top-bottom);
     --pat-select-box-padding-start: var(--pat-form-input-field-padding-start-end);
     --pat-select-box-box-shadow: var(--pat-form-input-field-box-shadow);
-    --pat-select-box-background-colour: var(--pat-form-input-field-background-colour);
-    --pat-select-box-background-colour-hover: var(--pat-form-input-field-background-colour);
+
+    // --pat-select-box-background-colour: var(--pat-form-input-field-background-colour);
+    // --pat-select-box-background-colour-hover: var(--pat-form-input-field-background-colour);
     --pat-select-box-arrow-background-colour: rgba(0, 0, 0, 0.1);
-    --pat-select-box-arrow-text-colour: inherit;
+    // --pat-select-box-arrow-text-colour: inherit;
+
     --pat-select-box-font-size: var(--pat-form-input-field-font-size);
     --pat-select-arrow-edge-distance: 12px;
     --pat-select-box-height: var(--pat-form-input-field-line-height);
     --pat-select-box-padding-right-left: var(--pat-form-input-field-padding-start-end);
+
+    --pat-select-box-background-colour: var(--pat-toolbar-button-background-colour);
+    --pat-select-box-background-colour-hover: var(--pat-toolbar-button-background-colour-hover);
+    --pat-select-box-arrow-text-colour: var(--pat-toolbar-button-text-colour);
+    --pat-select-box-arrow-text-colour-hover: var(--pat-toolbar-button-text-colour-hover);
 
     // Checklist
     --checklist-label-line-height: 24px;
