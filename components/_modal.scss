@@ -50,20 +50,6 @@
     }
   }
 
-  // &:after {
-  //   position: fixed;
-  //   top: -2000px;
-  //   right: -2000px;
-  //   bottom: -2000px;
-  //   left: -2000px;
-  //   content: ' ';
-  //   z-index: -1;
-  //   background-color: rgba(0,0,0,0.15);
-  //   -webkit-backdrop-filter: blur(3px) saturate(0.5);
-  //   backdrop-filter: blur(3px) saturate(0.5);
-  //   animation: fadeIn 1s;
-  // }
-
   .modal-panel-contents {
     position: relative;
     background-color: white;
@@ -102,6 +88,7 @@
   .modal-panel-body {
     width: var(--modal-panel-width-medium);
     overflow: auto;
+    overscroll-behavior: none;
     max-height: calc(100vh - 190px);
     padding: var(--modal-panel-body-top-padding) var(--modal-panel-body-left-right-padding) 0;
     box-sizing: border-box;
@@ -114,7 +101,8 @@
       position: -webkit-sticky !important;
       position: sticky !important;
       bottom: 0;
-      margin-bottom: 1px;
+      // margin-bottom: 1px;
+      margin-bottom: 0;
       background: white;
       padding-bottom: var(--modal-panel-body-bottom-padding);
       padding-top: 25px;
@@ -523,7 +511,7 @@ div.pat-modal {
     .panel-content {
       background: white;
       box-shadow: var(--pat-modal-panel-panel-box-shadow);
-      border: var(--default-border);
+      // border: var(--default-border);
       padding-top: 68px;
       border-radius: var(--border-radii);
 
