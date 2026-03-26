@@ -648,6 +648,20 @@
 			}
 		}
 
+		&.sidebar-toggle {
+			&.left {
+				&:before {
+					content: var(--glyph-sidebar-left-close);
+				}
+				
+				.sidebar-left-closed & {
+					&:before {
+						content: var(--glyph-sidebar-left-open);
+					}
+				}
+			}
+		}
+
 		&.cancel,
 		&.close {
 			&:before {
