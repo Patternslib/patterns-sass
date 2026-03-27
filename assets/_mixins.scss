@@ -509,7 +509,7 @@ $break-large: 1024px !default;
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
-    --glypph-spinner: var(--glyph-hour-glass-1);
+    content: var(--glyph-hour-glass-1);
   }
 }
 
