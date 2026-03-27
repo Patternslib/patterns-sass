@@ -171,6 +171,10 @@
           width: 40px;
           min-width: 40px;
           box-shadow: none;
+
+          &.current:before {
+            background-color: transparent;
+          }
         }
 
         input {
