@@ -34,6 +34,9 @@
     --colour-alert: red;
     --colour-workspace-default: #869EBF;
     --colour-accent: darkgoldenrod;
+    --colour-accent-high-contrast: var(--colour-accent);
+    @media (prefers-reduced-motion: reduce) { --colour-accent-high-contrast: black; }
+    --colour-workspace-default: #869EBF;
     --colour-success: #4a964a;
     --colour-success-dark: #397339;
     --colour-success-background: #e1eddb;
