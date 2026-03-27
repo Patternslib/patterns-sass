@@ -29,10 +29,13 @@
     --colour-link-hover: rgb(24, 119, 215);
     --colour-link-high-contrast: var(--colour-link);
     --colour-link-high-contrast-hover: var(--colour-link-hover);
-    @media (prefers-reduced-motion: reduce) { 
-        --colour-link: var(--colour-link-high-contrast); 
-        --colour-link-hover: var(--colour-link-high-contrast-hover);
+
+    @media (prefers-reduced-motion: reduce) {
+        --colour-link: var(--colour-link-high-contrast) !important;
+        --colour-link-hover: var(--colour-link-high-contrast-hover) !important;
+    
     }
+
     --colour-base: #efefef;
     --colour-primary: black;
     --colour-header-elements: #666;
@@ -40,9 +43,11 @@
     --colour-alert: red;
     --colour-workspace-default: #869EBF;
     --colour-accent: darkgoldenrod;
-    --colour-accent-high-contrast: black;
-    @media (prefers-reduced-motion: reduce) { --colour-accent: var(--colour-accent-high-contrast); }
-    --colour-workspace-default: #869EBF;
+
+    @media (prefers-reduced-motion: reduce) {
+        --colour-accent: var(--colour-accent-high-contrast) !important;
+    }
+    
     --colour-success: #4a964a;
     --colour-success-dark: #397339;
     --colour-success-background: #e1eddb;
