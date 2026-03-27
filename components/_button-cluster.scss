@@ -323,7 +323,7 @@
         height: auto;
         width: 300px;
         padding-bottom: 15px;
-        padding-top: var(--pat-context-menu-panel-distance);
+        padding-top: calc(var(--pat-context-menu-panel-distance) + var(--pat-tooltip-padding));
 
         a,
         label {
@@ -692,6 +692,7 @@
   .application-body.sidebar-normal .sidebar & {
     &.pat-tabs {
       --pat-button-cluster-toggle-space: 0;
+
       box-shadow: var(--pat-toolbar-button-box-shadow);
       width: var(--pat-button-width);
       background: none;
@@ -700,8 +701,17 @@
       width: var(--pat-button-height);
       height: var(--pat-button-height);
 
+      a,
+      label {
+        pointer-events: none;
+      }
+
       &.open {
         overflow: visible;
+
+        a {
+          pointer-events: auto;
+        }
 
         span.extra-tabs {
           &:before {

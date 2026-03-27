@@ -1,6 +1,6 @@
 .pat-toolbar {
 	--pat-button-cluster-text-colour: var(--pat-toolbar-button-text-colour);
-	--pat-context-menu-panel-distance: 52px;
+	--pat-context-menu-panel-distance: calc(var(--pat-toolbar-button-height) + 12px);
 	// --button-box-shadow: var(--pat-toolbar-button-box-shadow);
 	--ueber-back-button-text-colour: var(--pat-toolbar-button-text-colour);
 	--ueber-back-button-text-colour-hover: var(--pat-toolbar-button-text-colour-hover);
