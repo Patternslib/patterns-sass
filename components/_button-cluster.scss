@@ -1,6 +1,4 @@
 .pat-button-cluster {
-  --pat-toolbar-icon-background-colour: transparent;
-
   display: inline-flex;
   border-radius: var(--border-radii);
   background: var(--button-background-colour-subdued);
@@ -691,5 +689,70 @@
       }
     }
 
+  }
+
+  .application-body.sidebar-normal .sidebar & {
+    &.pat-tabs {
+      --pat-button-cluster-toggle-space: 0;
+
+      width: var(--pat-button-width);
+      background: none;
+      box-shadow: none;
+      display: block;
+      overflow: hidden;
+      width: var(--pat-button-height);
+
+      &.open {
+        overflow: visible;
+
+        span.extra-tabs {
+          &:before {
+            background-color: var(--colour-accent);
+            color: white;
+          }
+        }
+      }
+
+      & {
+        span.extra-tabs {
+          left: 0;
+          right: auto;
+          width: 300px;
+          max-width: calc(100vw - 2 * var(--pat-button-cluster-toggle-margin));
+
+          &:before {
+            border-radius: var(--button-border-radius);
+            line-height: var(--pat-button-height);
+            width: var(--pat-button-height);
+            content: var(--glyph-menu);
+            left: 0;
+            right: auto;
+            height: var(--pat-button-height);
+            background-color: var(--pat-toolbar-icon-background-colour);
+            color: var(--pat-toolbar-icon-text-colour);
+            box-shadow: var(--pat-toolbar-button-box-shadow);
+
+            body[dir=rtl] & {
+              right: 0;
+              left: auto;
+            }
+          }
+
+          &:hover {
+            --pat-toolbar-icon-background-colour: var(--pat-toolbar-icon-background-colour-hover);
+            --pat-toolbar-icon-text-colour: var(--pat-toolbar-icon-text-colour-hover);
+            text-decoration: none;
+          }
+
+          a,
+          label {
+            &.icon {
+              margin-right: var(--pat-menu-padding-left-right);
+              margin-bottom: var(--pat-menu-padding-left-right);
+            }
+          }
+        }
+      }
+    }
   }
 }

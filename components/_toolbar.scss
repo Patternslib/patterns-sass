@@ -443,7 +443,6 @@
 		white-space: nowrap;
 		font-size: var(--pat-toolbar-font-size);
 
-
 		&.collapsible-open:after {
 			display: block;
 			content: ' ';
@@ -1017,6 +1016,76 @@
 
 			&:after {
 				left: -123px;
+			}
+		}
+	}
+
+	.application-body.sidebar-normal .sidebar & {
+		--pat-toolbar-auto-hide-offset: var(--pat-toolbar-auto-hide-offset-screen-small);
+
+		&:has(.toolbar-section.navigation) {
+			grid-template-columns: var(--pat-button-height) minmax(0, auto) minmax(0, auto);
+
+			&:has(.tabs-wrapped) {
+				grid-template-columns: var(--pat-button-height) minmax(0, auto) minmax(0, auto);
+			}
+		}
+
+		.toolbar-section {
+			&.view-options,
+			&.quick-navigation,
+			&.batch-operations {
+				:has(.toolbar-section.navigation) & {
+					grid-area: middle;
+					justify-content: start;
+				}
+			}
+
+			&.navigation {
+				grid-area: first;
+				justify-content: start;
+				justify-self: start;
+			}
+		}
+
+		&.sticky {
+			top: var(--pat-toolbar-top-distance-small);
+
+			.scrolling-down &,
+			.scroll-down & {
+				top: var(--pat-toolbar-top-distance-scroll-down-small);
+			}
+		}
+
+		.pat-button,
+		.icon {
+			margin: 0;
+		}
+
+		.icon {
+			&.resize-full {
+				display: none;
+			}
+
+			&.sidebar-toggle {
+				display: none;
+			}
+		}
+
+		.pat-toolbar-search-field {
+			order: 1;
+
+			&.focus,
+			&.has-value,
+			&.fixed {
+				input {
+					width: calc(100vw - calc(2 * var(--default-screen-padding-small)));
+				}
+
+				&:after {
+					left: calc(-1 * (100vw - var(--pat-toolbar-button-height)));
+					padding-left: var(--pat-toolbar-button-height);
+				}
 			}
 		}
 	}
