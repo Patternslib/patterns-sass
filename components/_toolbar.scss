@@ -1057,36 +1057,27 @@
 			}
 		}
 
-		.pat-button,
 		.icon {
-			margin: 0;
-		}
-
-		.icon {
-			&.resize-full {
-				display: none;
-			}
-
-			&.sidebar-toggle {
-				display: none;
+			&.toggle-sidebar-size {
+				order: 1;
 			}
 		}
 
 		.pat-toolbar-search-field {
 			order: 1;
 
-			&.focus,
-			&.has-value,
-			&.fixed {
-				input {
-					width: calc(100vw - calc(2 * var(--default-screen-padding-small)));
-				}
+			// &.focus,
+			// &.has-value,
+			// &.fixed {
+			// 	input {
+			// 		width: calc(100% - var(--pat-toolbar-button-height));
+			// 	}
 
-				&:after {
-					left: calc(-1 * (100vw - var(--pat-toolbar-button-height)));
-					padding-left: var(--pat-toolbar-button-height);
-				}
-			}
+			// 	&:after {
+			// 		left: calc(-1 * (100% - var(--pat-toolbar-button-height)));
+			// 		padding-left: var(--pat-toolbar-button-height);
+			// 	}
+			// }
 		}
 	}
 }
