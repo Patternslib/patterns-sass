@@ -1,5 +1,5 @@
 #pat-modal-panel-space {
-  transition: all 0.4s;
+  transition: all var(--base-animation-duration);
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +35,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: fadeIn 0.2s;
+  animation: fadeIn var(--base-animation-duration);
   padding: 0;
   margin: 0;
   z-index: 9998;
@@ -688,7 +688,7 @@ div.pat-modal {
       padding: 5em 3em;
       transform: scale(1.5) translate(-50%, -50%);
       transform-origin: 0;
-      transition: 0.2s all;
+      transition: var(--base-animation-duration) all;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
