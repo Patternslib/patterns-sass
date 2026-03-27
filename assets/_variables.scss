@@ -375,5 +375,9 @@ $break-large: 1280px !default;
     --pat-button-small-paddings: var(--button-small-paddings);
     --pat-button-small-shadow: var(--button-small-shadow);
     --pat-button-box-shadow: none;
+    --pat-button-box-shadow-default: var(--pat-button-box-shadow);
+    --pat-button-box-shadow-hover: var(--pat-button-box-shadow);
+    --pat-button-box-shadow-active: var(--pat-button-box-shadow-hover);
+    --pat-button-box-shadow-focus: var(--pat-button-box-shadow-hover);
     
 }

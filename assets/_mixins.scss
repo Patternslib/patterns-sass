@@ -1153,7 +1153,7 @@ $break-large: 1024px !default;
 @mixin button-default {
   color: var(--button-text-colour-default);
   background-color: var(--button-background-colour-default);
-  box-shadow: var(--button-shadow-default);
+  box-shadow: var(--pat-button-box-shadow-default);
 
   &:hover {
     background-color: var(--button-background-colour-default-hover);
