@@ -126,14 +126,19 @@
 
     &.tabs-wrapped {
         --pat-button-cluster-toggle-space: 60px;
+
+        @include screen-size(small) {
+          --pat-button-cluster-toggle-space: 0;
+        }
     }
 
     @include screen-size(small) {
       --pat-button-cluster-toggle-space: 0;
 
-      width: var(--pat-button-width);
+      width: var(--pat-button-height);
+      height: var(--pat-button-height);
       background: none;
-      box-shadow: none;
+      // box-shadow: none;
       display: block;
     }
 
@@ -353,6 +358,12 @@
         box-shadow: none !important;
         box-sizing: border-box;
 
+        @include screen-size(small) {
+          box-shadow: var(--pat-tooltip-box-shadow);
+        width: var(--pat-button-height);
+        height: var(--pat-button-height);
+        }
+
         body[dir=rtl] & { 
           right: auto;
           left: 0;
@@ -391,7 +402,7 @@
           bottom: 0;
           left: 0;
           border: 1px solid rgba(0,0,0,0);
-          box-shadow: var(--pat-tooltip-box-shadow);
+          // box-shadow: var(--pat-tooltip-box-shadow);
           border-radius: var(--border-radii);
           background: white;
           transition: border var(--base-animation-duration);
@@ -408,16 +419,25 @@
           width: var(--pat-button-height);
           max-width: calc(100vw - 2 * var(--pat-button-cluster-toggle-margin));
 
+          a {
+            pointer-events: none;
+          }
+
           &:before{
             border-radius: var(--button-border-radius);
             line-height: var(--pat-button-height);
-            box-shadow: var(--pat-toolbar-button-box-shadowshadow);
-            color: var(--pat-button-text-colour);
-            background-color: var(--pat-button-background-colour);
+            box-shadow: var(--pat-toolbar-button-box-shadow);
             // border: var(--button-border);
             align: center;
             width: var(--pat-button-height);
             content: var(--glyph-menu);
+            background-color: var(--pat-toolbar-icon-background-colour);
+            color: var(--pat-toolbar-icon-text-colour);
+
+            &:hover {
+              background-color: var(--pat-toolbar-icon-background-colour-hover);
+              color: var(--pat-toolbar-icon-text-colour-hover);
+            }
 
             left: 0;
             right: auto;
@@ -708,6 +728,10 @@
 
       &.open {
         overflow: visible;
+
+        @include screen-size(small) {
+          pointer-events: all;
+        }
 
         a {
           pointer-events: auto;
