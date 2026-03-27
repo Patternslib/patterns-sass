@@ -510,6 +510,7 @@ $break-large: 1024px !default;
   @media (prefers-reduced-motion: reduce) {
     animation: none;
     content: var(--glyph-hour-glass-1);
+    font-size: 35px;
   }
 }
 
