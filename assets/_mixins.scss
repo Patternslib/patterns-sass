@@ -505,10 +505,12 @@ $break-large: 1024px !default;
   font: 50px/50px fontello;
   text-shadow: white 0 0 2px;
   text-align: center;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    --glypph-spinner: var(--glyph-hour-glass-1);
+  }
 }
 
 @mixin toggle-button-iconified {
@@ -551,7 +553,6 @@ $break-large: 1024px !default;
       animation: spin 2s infinite linear, fadeIn 1s linear 1s 1 forwards;
       @media (prefers-reduced-motion: reduce ) {
         animation: none;
-        --glyph-spinner: var(--glyph-hour-glass-1);
       }
     }
   }
