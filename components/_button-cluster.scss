@@ -157,7 +157,6 @@
         cursor: default;
         line-height: var(--pat-button-cluster-button-line-height);
         height: var(--pat-button-cluster-button-height);
-        box-shadow: none;
         font-size: var(--pat-button-cluster-font-size);
         font-weight: normal;
         position: relative;
@@ -221,7 +220,6 @@
           color: white !important;
           text-decoration: none !important;
           cursor: default !important;
-          box-shadow: none;
 
           &:after {
             opacity: 1;
@@ -325,7 +323,7 @@
         height: auto;
         width: 300px;
         padding-bottom: 15px;
-        padding-top: calc(var(--button-height) + 25px);
+        padding-top: var(--pat-context-menu-panel-distance);
 
         a,
         label {
@@ -388,7 +386,7 @@
           content: ' ';
           display: block;
           position: absolute;
-          top: calc(var(--button-height) + 10px);
+          top: var(--pat-context-menu-panel-distance);
           right: 0;
           bottom: 0;
           left: 0;
@@ -413,7 +411,7 @@
           &:before{
             border-radius: var(--button-border-radius);
             line-height: var(--pat-button-height);
-            box-shadow: var(--button-shadow);
+            box-shadow: var(--pat-toolbar-button-box-shadowshadow);
             color: var(--pat-button-text-colour);
             background-color: var(--pat-button-background-colour);
             // border: var(--button-border);
@@ -694,13 +692,13 @@
   .application-body.sidebar-normal .sidebar & {
     &.pat-tabs {
       --pat-button-cluster-toggle-space: 0;
-
+      box-shadow: var(--pat-toolbar-button-box-shadow);
       width: var(--pat-button-width);
       background: none;
-      box-shadow: none;
       display: block;
       overflow: hidden;
       width: var(--pat-button-height);
+      height: var(--pat-button-height);
 
       &.open {
         overflow: visible;
@@ -730,7 +728,6 @@
             height: var(--pat-button-height);
             background-color: var(--pat-toolbar-icon-background-colour);
             color: var(--pat-toolbar-icon-text-colour);
-            box-shadow: var(--pat-toolbar-button-box-shadow);
 
             body[dir=rtl] & {
               right: 0;

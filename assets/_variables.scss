@@ -121,7 +121,7 @@ $break-large: 1280px !default;
     --pat-toolbar-icon-text-colour: var(--pat-toolbar-button-text-colour);
     --pat-toolbar-icon-text-colour-hover: var(--pat-toolbar-button-text-colour-hover);
 
-    --pat-toolbar-button-box-shadow: none;
+    --pat-toolbar-button-box-shadow: var(--pat-button-box-shadow);
 
     // Grid
     --grid-gutter: var(--base-font-size);
@@ -368,11 +368,12 @@ $break-large: 1280px !default;
     --pat-button-border: var(--button-border);
     --pat-button-border-radius: var(--button-border-radius);
     --pat-button-background-image: var(--button-background-image);
-    --pat-button-shadow: var(--button-shadow);
+    --pat-button-shadow: none;
     --pat-button-small-height: var(--button-small-height);
     --pat-button-small-line-height: var(--button-small-line-height);
     --pat-button-small-font-size: var(--button-small-font-size);
     --pat-button-small-paddings: var(--button-small-paddings);
     --pat-button-small-shadow: var(--button-small-shadow);
+    --pat-button-box-shadow: none;
     
 }

@@ -1159,7 +1159,7 @@ $break-large: 1024px !default;
   font-family: var(--body-font-family);
   border-radius: var(--button-border-radius);
   line-height: var(--pat-button-height);
-  box-shadow: var(--button-shadow);
+  box-shadow: var(--pat-button-box-shadow);
   color: var(--pat-button-text-colour);
   background-color: var(--pat-button-background-colour);
   border: var(--button-border);
@@ -1181,12 +1181,18 @@ $break-large: 1024px !default;
   &:focus {
     outline: var(--pat-form-input-field-outline-focus);
     outline-offset: var(--pat-form-input-field-outline-offset);
+    box-shadow: var(--pat-button-box-shadow-focus);
   }
     
   &:hover {
     color: var(--pat-button-text-colour-hover);
     background-color: var(--pat-button-background-colour-hover);
     text-decoration: none;
+    box-shadow: var(--pat-button-box-shadow-hover);
+  }
+
+  &:active {
+    box-shadow: var(--pat-button-box-shadow-active);
   }
 
   &.default {

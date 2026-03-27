@@ -1,7 +1,7 @@
 .pat-toolbar {
 	--pat-button-cluster-text-colour: var(--pat-toolbar-button-text-colour);
 	--pat-context-menu-panel-distance: 52px;
-	--button-box-shadow: var(--pat-toolbar-button-box-shadow);
+	// --button-box-shadow: var(--pat-toolbar-button-box-shadow);
 	--ueber-back-button-text-colour: var(--pat-toolbar-button-text-colour);
 	--ueber-back-button-text-colour-hover: var(--pat-toolbar-button-text-colour-hover);
 	--ueber-back-button-background-colour: var(--pat-toolbar-button-background-colour);
@@ -924,7 +924,6 @@
 		width: var(--pat-toolbar-button-height);
 		height: var(--pat-toolbar-button-height);
 		position: relative;
-		// float: left;
 		display: inline-block;
 		z-index: 10;
 		// margin-left: var(--pat-toolbar-element-separation);
@@ -932,6 +931,7 @@
 		font-size: var(--pat-toolbar-font-size);
 		background-color: var(--pat-toolbar-icon-background-colour);
 		border-radius: var(--border-radii);
+		box-shadow: var(--pat-toolbar-button-box-shadow);
 
 		@include screen-size(small) {
 			order: 1;
