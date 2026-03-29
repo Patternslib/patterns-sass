@@ -19,6 +19,10 @@ body {
   @include screen-size(large) {
     --pat-form-panel-padding: var(--pat-form-panel-padding-large);
   }
+
+  *:not(:defined) {
+    display: contents;
+  }
 }
 
 // Libraries
