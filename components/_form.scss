@@ -21,7 +21,8 @@
       "label icons"
       "field field";
 
-    &:has(.message) {
+    &:has(.message),
+    &:has(.pat-message) {
       grid-template-areas:
         "label icons"
         "field field"
@@ -39,7 +40,8 @@
       margin: 0;
     }
 
-    .message {
+    .message,
+    .pat-message {
       grid-area: message;
     }
 
