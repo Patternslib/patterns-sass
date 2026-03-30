@@ -964,7 +964,8 @@
 			height: var(--pat-toolbar-button-height);
 			border-radius: var(--border-radii);
 			background: white;
-			border: var(--pat-toolbar-search-field-border);
+			// border: var(--pat-toolbar-search-field-border);
+			box-shadow: var(--pat-toolbar-button-box-shadow);
 			max-width: 1000px;
 			position: absolute;
 			top: 0;
@@ -974,8 +975,8 @@
 			margin: 0;
 
 			&:focus {
-				outline: none;
-				box-shadow: none;
+				// outline: none;
+				// box-shadow: none;
 			}
 		}
 
