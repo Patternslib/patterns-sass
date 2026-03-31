@@ -60,12 +60,7 @@
 	.toolbar-section {
 		> .pat-select {
 			--pat-select-box-font-size: var(--pat-toolbar-font-size);
-			// --pat-select-box-background-colour: var(--pat-toolbar-button-background-colour);
-			// --pat-select-box-background-colour-hover: var(--pat-toolbar-button-background-colour-hover);
-			// --pat-select-box-arrow-text-colour: var(--pat-toolbar-button-text-colour);
-			// --pat-select-box-arrow-text-colour-hover: var(--pat-toolbar-button-text-colour-hover);
 			--pat-select-box-box-shadow: var(--pat-toolbar-button-box-shadow);
-			// --pat-select-box-padding-start: 18px;
 		}
 
 		vertical-align: top;
@@ -83,11 +78,6 @@
 		&.batch-operations {
 			grid-area: first;
 			justify-self: start;
-
-			// .application-body.state-on.sidebar-normal:has(.sidebar.left .toolbar-section.navigation) & {
-			// 	grid-area: middle;
-			// 	justify-content: start;
-			// }
 
 			.application-body.state-on:has(.toolbar-section.navigation) & {
 				@include screen-size(small) {
@@ -331,9 +321,7 @@
 
 	@media print { display: none; }
 
-	.toolbar-section > label.pat-checklist {
-		// This needs rewriting.
-		
+	.toolbar-section > label.pat-checklist {	
 		margin-left: 1em;
 
 		&:before {
@@ -598,6 +586,12 @@
 		&.resize-full {
 			&:before {
 				content: var(--glyph-resize-full);
+			}
+
+			.application-body.state-on.sidebar-large & {
+				&:before {
+					content: var(--glyph-resize-small);
+				}
 			}
 
 			@include screen-size(small) {
