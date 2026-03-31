@@ -981,6 +981,7 @@
 			input {
 				opacity: 1;
 				padding-left: 34px;
+				box-shadow: var(--pat-toolbar-search-field-input-field-box-shadow-focus);
 
 				@include screen-size(medium-large) {
 					width: var(--pat-toolbar-search-field-width-open);
