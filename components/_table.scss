@@ -317,6 +317,12 @@
 
                     &[href] {
                         color: var(--colour-link);
+                        cursor: default;
+
+                        &.current,
+                        &.current:hover {
+                            text-decoration: none;
+                        }
                     }
 
                     &[class*='priority-']:before {
@@ -381,8 +387,9 @@
                         }
                     }
         
-                    &[href]:not(.icon):hover {
+                    &[href]:not(.icon):not(.current):hover {
                         text-decoration: underline;
+                        cursor: pointer;
         
                         &:has(.link-title) {
                             text-decoration: none;
@@ -510,8 +517,9 @@
             }
 
             a {
-                &[href]:not(.icon):hover {
+                &[href]:not(.icon):not(.current):hover {
                     text-decoration: underline;
+                    cursor: pointer;
                 }
             }
 
