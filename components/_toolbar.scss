@@ -84,10 +84,10 @@
 			grid-area: first;
 			justify-self: start;
 
-			.sidebar.left.state-normal:has(.toolbar-section.navigation) & {
-				grid-area: middle;
-				justify-content: start;
-			}
+			// .application-body.state-on.sidebar-normal:has(.sidebar.left .toolbar-section.navigation) & {
+			// 	grid-area: middle;
+			// 	justify-content: start;
+			// }
 
 			.application-body.state-on:has(.toolbar-section.navigation) & {
 				@include screen-size(small) {
@@ -1031,22 +1031,20 @@
 			&:has(.tabs-wrapped) {
 				grid-template-columns: var(--pat-button-height) minmax(0, auto) minmax(0, auto);
 			}
-		}
 
-		.toolbar-section {
-			&.view-options,
-			&.quick-navigation,
-			&.batch-operations {
-				.application-body.state-on:has(.toolbar-section.navigation) & {
+			.toolbar-section {
+				&.view-options,
+				&.quick-navigation,
+				&.batch-operations {
 					grid-area: middle;
 					justify-content: start;
 				}
-			}
 
-			&.navigation {
-				grid-area: first;
-				justify-content: start;
-				justify-self: start;
+				&.navigation {
+					grid-area: first;
+					justify-content: start;
+					justify-self: start;
+				}
 			}
 		}
 
