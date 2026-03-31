@@ -26,6 +26,28 @@
     grid-template-columns: 30% 70%;
   }
 
+  dt,
+  dd {
+    &[class*='priority-']:before {
+        display: inline-block;
+        margin-right: 0.2em;
+        font-weight: bold;
+        color: red;
+      }
+
+      &.priority-high:before {
+        content: '!!!';
+      }
+
+      &.priority-medium:before {
+        content: '!!';
+      }
+
+      &.priority-low:before {
+        content: '!';
+      }
+  }
+
   dt {
     font-weight: bold;
     border-top: 1px solid var(--default-border-colour);

@@ -318,6 +318,25 @@
                     &[href] {
                         color: var(--colour-link);
                     }
+
+                    &[class*='priority-']:before {
+                        display: inline-block;
+                        margin-right: 0.2em;
+                        font-weight: bold;
+                        color: red;
+                    }
+
+                    &.priority-high:before {
+                        content: '!!!';
+                    }
+
+                    &.priority-medium:before {
+                        content: '!!';
+                    }
+
+                    &.priority-low:before {
+                        content: '!';
+                    }
                 }
         
                 a,
