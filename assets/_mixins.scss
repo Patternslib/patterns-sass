@@ -994,7 +994,7 @@ $break-large: 1024px !default;
     }
 }
 
-@mixin assistive-text {
+@mixin assistive-element {
     position: absolute;
     -webkit-pointer-events: none;
     pointer-events: none;

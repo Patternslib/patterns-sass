@@ -135,7 +135,7 @@
 		}
 
 		> .button-cluster {
-			@include assistive-text;
+			@include assistive-element;
 		}
 
         .remove-clone {
