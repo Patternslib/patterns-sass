@@ -205,10 +205,8 @@
           color: var(--pat-button-cluster-text-colour);
         }
 
-        &:after {
-          --pat-button-cluster-background-colour-active: var(--colour-accent);
-          
-          background: var(--pat-button-cluster-background-colour-active);
+        &:after {          
+          background: var(--pat-button-cluster-item-background-colour-active);
           position: absolute;
           top: var(--pat-button-cluster-toggle-margin);
           right: calc(-1 * var(--pat-button-cluster-toggle-margin));
@@ -219,8 +217,6 @@
           content: ' ';
           border-radius: calc(0.75 * var(--border-radii));
           opacity: 0;
-          // transition: opacity var(--base-animation-duration);
-          // box-shadow: 0 1px 6px rgba(0,0,0,0.15);
         }
 
         &:has(input:checked),
@@ -683,7 +679,7 @@
       background-color: red;
       color: white;
       border-radius: 1em;
-        border: 1px solid rgba(255,255,255,1);
+      border: 1px solid rgba(255,255,255,1);
       height: 1.8em;
       min-width: 1.8em;
       box-sizing: border-box;
