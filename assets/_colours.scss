@@ -27,12 +27,12 @@
 
     --colour-link: DodgerBlue;
     --colour-link-hover: rgb(24, 119, 215);
-    --colour-link-high-contrast: var(--colour-link);
-    --colour-link-high-contrast-hover: var(--colour-link-hover);
+    --colour-link-auto-contrast: var(--colour-link);
+    --colour-link-auto-contrast-hover: var(--colour-link-hover);
 
     @media (prefers-reduced-motion: reduce) {
-        --colour-link: var(--colour-link-high-contrast) !important;
-        --colour-link-hover: var(--colour-link-high-contrast-hover) !important;
+        --colour-link: var(--colour-link-auto-contrast) !important;
+        --colour-link-hover: var(--colour-link-auto-contrast-hover) !important;
     
     }
 
