@@ -43,9 +43,10 @@
     --colour-alert: red;
     --colour-workspace-default: #869EBF;
     --colour-accent: darkgoldenrod;
+    --colour-accent-auto-contrast: var(--colour-accent);
 
     @media (prefers-reduced-motion: reduce) {
-        --colour-accent: var(--colour-accent-high-contrast) !important;
+        --colour-accent: var(--colour-accent-auto-contrast) !important;
     }
     
     --colour-success: #4a964a;
