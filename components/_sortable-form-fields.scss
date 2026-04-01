@@ -135,7 +135,7 @@
 		}
 
 		> .button-cluster {
-			@include assistive-element;
+			@include pat-assistive-element;
 		}
 
         .remove-clone {
