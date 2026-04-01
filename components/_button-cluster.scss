@@ -650,13 +650,13 @@
     &:has(input:checked),
     &.active,
     &.current {
-      background: var(--colour-accent);
+      background: var(--pat-button-cluster-item-background-colour-active);
       color: white;
       text-decoration: none;
       box-shadow: none;
 
       &:before {
-        color: var(--colour-accent);
+        color: var(--pat-button-cluster-item-background-colour-active);
       }
 
       .counter {
