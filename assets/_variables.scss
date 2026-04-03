@@ -14,11 +14,17 @@ $break-large: 1280px !default;
         --base-animation-duration: 0s;
     }
 
+    // Rich
+    --pat-rich-header-level-1-font-size: 2.7rem;
+    --pat-rich-header-level-1-font-weight: bold;
+
     // Well
     --pat-well-padding: 40px;
     --pat-well-padding-small: var(--default-screen-padding-small);
     --pat-well-well-header-font-size: 28px;
     --pat-well-separation-header-font-size: 24px;
+    --pat-well-well-header-font-weight: normal;
+    --pat-well-panel-background-colour: var(--colour-well-background);
 
     // Menu list
     --pat-menu-list-top-bottom-padding: 2px;
