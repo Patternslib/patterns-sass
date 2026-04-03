@@ -772,7 +772,10 @@ $break-large: 1024px !default;
 
 @mixin pat-well() {
     display: block;
-    padding: 40px;
+    padding-left: var(--pat-well-padding-left);
+    padding-right: var(--pat-well-padding-right);
+    padding-bottom: var(--pat-well-padding-bottom);
+    padding-top: var(--pat-well-padding-top);
     box-sizing: border-box;
     box-shadow: var(--default-box-shadow);
     border-radius: var(--border-radii);
@@ -854,8 +857,8 @@ $break-large: 1024px !default;
 
         > .well-header,
         > .well-title-group > .well-header {
-          padding-top: var(--pat-well-padding);
-          padding-bottom: var(--pat-well-padding);
+          padding-top: var(--pat-well-padding-top);
+          padding-bottom: var(--pat-well-padding-top);
 
           @include screen-size(small) {
             padding-top: var(--pat-well-padding-small);
