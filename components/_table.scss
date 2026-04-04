@@ -601,10 +601,10 @@
                 }
             }
 
-            .pat-button {
-                padding: 0 0.5em;
-                line-height: 1.2em;
-            }
+            // .pat-button {
+            //     padding: 0 0.5em;
+            //     line-height: 1.2em;
+            // }
 
             &.data {
                 // text-align: right;
@@ -795,6 +795,18 @@
                             }
                         }
                     }
+
+                    // .user-status {
+                    //     &:before {
+                    //         content: var(--glyph-user);
+                    //     }
+
+                    //     &.inactive {
+                    //         &:before {
+                    //             content: var(--glyph-user) ' ' var(--glyph-cancel);
+                    //         }
+                    //     }
+                    // }
 
                     &.unlocked {
                         &:before {
