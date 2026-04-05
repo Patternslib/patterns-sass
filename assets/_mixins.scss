@@ -777,7 +777,7 @@ $break-large: 1024px !default;
     padding-bottom: var(--pat-well-padding-bottom);
     padding-top: var(--pat-well-padding-top);
     box-sizing: border-box;
-    box-shadow: var(--default-box-shadow);
+    box-shadow: var(--pat-well-box-shadow);
     border-radius: var(--border-radii);
     background-color: var(--pat-well-panel-background-colour);
     margin-bottom: var(--default-tail-white);
