@@ -3,6 +3,10 @@ $break-small: 768px !default;
 $break-large: 1280px !default;
 
 :root {
+    // Breakpoints
+    --break-small: #{$break-small};
+    --break-large: #{$break-large};
+
     // General
     --colour-well-background: rgba(255, 255, 255, 0.5);
     --pat-tail-white: 15px;
