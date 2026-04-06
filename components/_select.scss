@@ -103,6 +103,7 @@
   }
 
   &[data-value="for-review"],
+  &[data-value="review"],
   &.state-for-review {
     --pat-select-box-background-colour: var(--colour-for-review-background);
     --pat-select-box-arrow-text-colour: var(--colour-for-review-text);
