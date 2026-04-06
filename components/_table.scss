@@ -1,7 +1,8 @@
 :root {
     --table-avatar-height: 34px;
-    --pat-table-icon-height: 38px;
-    --pat-table-icon-width: 38px;
+    --pat-table-icon-height: 34px;
+    --pat-table-icon-width: 34px;
+    --pat-table-avatar-margin: -2px 0;
     --pat-table-icon-height-hd: 32px;
     --pat-table-icon-width-hd: 32px;
     --pat-table-avatar-height-hd: 31px;
@@ -440,7 +441,7 @@
 
                         .avatar,
                         .icon {
-                            margin: 0;
+                            margin: var(--pat-table-avatar-margin, 0);
                             object-fit: cover;
                             justify-self: end;
                             grid-area: icon;
