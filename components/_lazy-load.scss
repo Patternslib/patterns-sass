@@ -1,0 +1,20 @@
+.pat-lazy-load {
+	display: block;
+	color: rgba(0,0,0,0.5);
+	text-align: center;
+	position: relative;
+  	color: rgba(0,0,0,0.6);
+	box-sizing: border-box;
+	clear: both;
+	padding-top: 180px;
+	text-decoration: none !important;
+	cursor: default;
+	align-self: center;
+	justify-self: center;
+
+	&:before {
+  		@include throbber();
+		top: 150px;
+		color: rgba(0,0,0,0.5);
+	}
+}
