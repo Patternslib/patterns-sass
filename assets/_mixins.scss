@@ -785,6 +785,8 @@ $break-large: 1024px !default;
     --pat-form-panel-padding: var(--pat-well-padding);
     --pat-toolbar-margin-bottom: 15px;
 
+    --pat-form-input-field-background-colour: var(--pat-well-form-field-background-colour);
+
     @include screen-size(small) {
       --pat-form-panel-padding: var(--pat-well-padding-small);
     }
