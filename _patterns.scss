@@ -20,7 +20,8 @@ body {
     --pat-form-panel-padding: var(--pat-form-panel-padding-large);
   }
 
-  *:not(:defined) {
+  *:not(:defined),
+  slot {
     display: contents;
   }
 }
