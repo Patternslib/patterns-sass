@@ -230,8 +230,7 @@ $break-large: 1024px !default;
         color: black;
       }
 
-      &.tooltip-active-click,
-      &:active
+      &.tooltip-active-click
         {
         background-color: var(--colour-accent);
         color: white;

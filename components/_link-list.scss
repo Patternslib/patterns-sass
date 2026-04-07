@@ -1,0 +1,124 @@
+.pat-link-list {
+  display: block;
+
+  column-width: calc(var(--break-large) / 4);
+  column-count: 4;
+
+  li {
+    a {
+      display: grid;
+      grid-template-columns: var(--bullet-space) 1fr;
+      gap: 0.2rem;
+      grid-template-areas: 
+        "icon title"
+        "icon byline";
+
+      .item-title,
+      .link-title,
+      .group-title {
+        display: block;
+        font-weight: bold;
+      }
+  
+      .item-summary,
+      .item-byline {
+        display: block;
+        font-weight: normal;
+        color: black;
+        margin-bottom: 0.3rem;
+        grid-area: byline;
+      }
+    
+      &[href] {
+        color: var(--colour-link);
+  
+        &:hover {
+          text-decoration: underline;
+          color: var(--colour-dark-blue-d);
+  
+          .classification-tags {
+  
+            .classification-tag {
+              text-decoration: none;
+            }
+          }
+  
+          &:has(.link-title),
+          &:has(.item-title) {
+            text-decoration: none;
+          }
+  
+          .link-byline,
+          .item-byline {
+            text-decoration: none !important;
+          }
+  
+          .link-title,
+          .item-title {
+            text-decoration: underline;
+          }
+  
+        }
+      }
+    
+      &:before {
+        font-family: fontello;
+        font-weight: normal;
+        text-decoration: none;
+        speak: none;
+        display: inline-block;
+        grid-area: icon;
+      }
+
+      &:before,
+      &.item-title {
+        line-height: var(--pat-link-list-title-line-height);
+        font-size: var(--pat-link-list-title-font-size);
+      }
+
+      &.pat-avatar {
+        grid-area: icon;
+        width: 100%;
+      }
+  
+      &:not([class*="icon-"]) {
+        &:before {
+          content: var(--glyph-angle-right);
+        }
+      }
+    
+      &.type-link-external {
+        &:before {
+          content: var(--glyph-link-external);
+        }
+      }
+  
+      &.type-link-internal {
+        &:before {
+          content: var(--glyph-link-internal);
+        }
+      }
+  
+      &.type-tag {
+        &:before {
+          content: var(--glyph-tag);
+        }
+      }
+      
+      &.warning {
+        a {
+          &:not([class*="icon-"])::before {
+            font-family: fontello;
+            content: var(--glyph-icon-attention);
+            color: var(--colour-orange);
+            line-height: 1.5;
+            font-size: 0.7em;
+
+          }
+        }
+      }
+
+      break-inside: avoid;
+    }
+  }
+}
