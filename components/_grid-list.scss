@@ -119,10 +119,6 @@
         margin-bottom: 0;
       }
 
-      .horizontal & {
-        --pat-form-panel-background-colour: white;
-      }
-
       .title {
         font-size: 1.2rem;
         margin-bottom: 5px;
@@ -147,10 +143,6 @@
     }
 
     @include screen-size(medium-large) {
-      // width: 60%;
-      // display: inline-block;
-      // float: left;
-      // margin-right: -100%;
       border-top: 1px solid var(--default-border-colour);
     }
 
