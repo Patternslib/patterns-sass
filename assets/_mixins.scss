@@ -844,6 +844,11 @@ $break-large: 1024px !default;
         position: relative;
         margin: 0;
         transition: padding var(--base-animation-duration);
+        display: flex;
+
+        &:before {
+          align-self: center;
+        }
 
         @include screen-size(small) {
           padding-left: var(--pat-well-padding-small);
